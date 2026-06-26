@@ -6,17 +6,25 @@ import FadeDown from "./FadeDown";
 import FadeUp from "./FadeUp";
 import FadeRight from "./FadeRight";
 
-const systems = [
-  { title: "MARKETING\nSTRATEGY", icon: "/assets/marketingGrowths/marketingSvg.png", angle: -90 },
-  { title: "SOCIAL MEDIA\nMARKETING", icon: "/assets/marketingGrowths/socialMediaIcon.png", angle: -50 },
-  { title: "META\nADS", icon: "/assets/marketingGrowths/metaIcon.png", angle: -10 },
-  { title: "GOOGLE\nADWORDS", icon: "/assets/marketingGrowths/googleIcon.png", angle: 30 },
-  { title: "CONTENT\nCREATION", icon: "/assets/marketingGrowths/contentIcon.png", angle: 70 },
-  { title: "EMAIL\nMARKETING", icon: "/assets/marketingGrowths/emailIcon.png", angle: 110 },
-  { title: "WHATSAPP\n& SMS", icon: "/assets/marketingGrowths/whatsappIcon.png", angle: 150 },
-  { title: "TALENT\nMANAGEMENT", icon: "/assets/marketingGrowths/talentIcon.png", angle: 190 },
-  { title: "WEBSITE\nTRANSFORMATION", icon: "/assets/marketingGrowths/websiteTransformationIcon.png", angle: 230 },
+const rawSystems = [
+  { title: "MARKETING\nSTRATEGY", icon: "/assets/marketingGrowths/marketingSvg.png" },
+  { title: "SOCIAL MEDIA\nMARKETING", icon: "/assets/marketingGrowths/socialMediaIcon.png" },
+  { title: "META\nADS", icon: "/assets/marketingGrowths/metaIcon.png" },
+  { title: "GOOGLE\nADWORDS", icon: "/assets/marketingGrowths/googleIcon.png" },
+  { title: "CONTENT\nCREATION", icon: "/assets/marketingGrowths/contentIcon.png" },
+  { title: "EMAIL\nMARKETING", icon: "/assets/marketingGrowths/emailIcon.png" },
+  { title: "WHATSAPP\n& SMS", icon: "/assets/marketingGrowths/whatsappIcon.png" },
+  { title: "TALENT\nMANAGEMENT", icon: "/assets/marketingGrowths/talentIcon.png" },
+  { title: "WEBSITE\nTRANSFORMATION", icon: "/assets/marketingGrowths/websiteTransformationIcon.png" },
 ];
+
+// Evenly distribute angles around the full circle so spacing never drifts
+// no matter how many items you add/remove later. Starts at -90deg (top),
+// same as the original first item, then steps by 360/length degrees.
+const systems = rawSystems.map((sys, i) => ({
+  ...sys,
+  angle: -90 + (360 / rawSystems.length) * i,
+}));
 
 export function MarketingSystems() {
   return (
@@ -87,7 +95,7 @@ export function MarketingSystems() {
       `}</style>
 
       {/* Circular Diagram */}
-      <div className="relative w-full max-w-[340px] sm:max-w-[500px] md:max-w-[750px] aspect-square mx-auto">
+      <div className="relative w-full max-w-[340px] sm:max-w-[500px] md:max-w-[750px] aspect-square mx-auto mt-8 md:mt-12">
 
         {/* Faint Concentric Circles — centered with translate, not flex-on-absolute */}
         <div className="absolute inset-0 pointer-events-none opacity-10">
