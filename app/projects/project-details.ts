@@ -390,10 +390,7 @@ export const projectDetails = [
       alt: "Blurred video preview of the Picksperience launch campaign",
       position: "50% 44%",
     },
-    videoSrcs: [
-      "https://emmanuelcolewilliams.com/uss-assets/picksperience/pick-1.mp4",
-      "https://emmanuelcolewilliams.com/uss-assets/picksperience/pick-2.mov",
-    ],
+    videoSrc: "https://emmanuelcolewilliams.com/uss-assets/picksperience/pick-1.mp4",
     metadata: {
       title: "Picksperience Sampling Agency Launch | USS Projects",
       description:
