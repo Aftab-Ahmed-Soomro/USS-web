@@ -35,13 +35,27 @@ function CornerFrame() {
 
 function LineIcon({ type }: { type: OutcomeIcon }) {
   return (
-    <Image src={outcomeIconAssets[type]} alt="" width={31} height={31} aria-hidden className="size-[31px] object-contain" />
+    <Image
+      src={outcomeIconAssets[type]}
+      alt=""
+      width={31}
+      height={31}
+      aria-hidden
+      className="size-[31px] object-contain"
+    />
   );
 }
 
 function WorkIconView({ type }: { type: WorkIcon }) {
   return (
-    <Image src={workIconAssets[type]} alt="" width={17} height={17} aria-hidden className="size-[17px] object-contain" />
+    <Image
+      src={workIconAssets[type]}
+      alt=""
+      width={17}
+      height={17}
+      aria-hidden
+      className="size-[17px] object-contain"
+    />
   );
 }
 
@@ -53,10 +67,8 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
       {/* ── HERO SECTION ── */}
       <section className="bg-[#f7f7f5] px-6 pb-[38px] pt-[42px] sm:pb-[44px] sm:pt-[55px] lg:pt-[64px]">
         <div className="mx-auto grid max-w-[1150px] items-start justify-between gap-10 lg:grid-cols-[470px_428px] lg:gap-[74px]">
-
           {/* Left — back link, title, description */}
           <div className="lg:pt-[11px]">
-
             {/* Back link — slides in from left */}
             <FadeLeft delay={0.1}>
               <Link
@@ -64,7 +76,11 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
                 className="font-[var(--font-inter)] flex items-center gap-2 text-[12px] font-normal leading-none tracking-[-0.05px] text-[#777] transition hover:text-[#ff5500]"
               >
                 <span>
-                  <img className="w-[14px] h-[14px]" src="/assets/leftArrow.png" alt="" />
+                  <img
+                    className="w-[14px] h-[14px]"
+                    src="/assets/leftArrow.png"
+                    alt=""
+                  />
                 </span>
                 Back to Projects
               </Link>
@@ -72,7 +88,7 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
 
             {/* Product pill — drops down */}
             <FadeDown delay={0.2}>
-              <p className="mt-[59px] w-28 text-center block rounded-full bg-[#e9e9e7] px-[12px] py-[8px] font-[var(--font-inter)] text-[10px] font-medium uppercase leading-none tracking-[0.4px] text-[#242424] lg:mt-[58px]">
+              <p className="mt-[59px] inline-flex w-fit max-w-[220px] items-center justify-center rounded-full bg-[#e9e9e7] px-3 py-2 text-center font-[var(--font-inter)] text-[10px] font-medium uppercase leading-none tracking-[0.4px] text-[#242424] lg:mt-[58px]">
                 {project.productName}
               </p>
             </FadeDown>
@@ -90,7 +106,6 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
                 {project.description}
               </p>
             </FadeUp>
-
           </div>
 
           {/* Right — hero image — slides in from right */}
@@ -103,19 +118,19 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
                 priority
                 sizes="(min-width: 1024px) 428px, 92vw"
                 className="object-cover"
-                style={{ objectPosition: project.heroImage.position ?? "center" }}
+                style={{
+                  objectPosition: project.heroImage.position ?? "center",
+                }}
               />
               <CornerFrame />
             </div>
           </FadeRight>
-
         </div>
       </section>
 
       {/* ── OVERVIEW SECTION ── */}
       <section className="bg-black px-5 pb-[40px] pt-[68px] text-white sm:px-8 sm:pb-[43px] lg:px-12">
         <div className="mx-auto max-w-[1150px] text-center">
-
           {/* Heading — drops down */}
           <FadeDown delay={0.1}>
             <h2 className="font-[var(--font-be-vietnam)] text-[30px] font-bold lowercase leading-none tracking-[-1.6px] sm:text-[43px]">
@@ -153,14 +168,12 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
               </FadeUp>
             ))}
           </div>
-
         </div>
       </section>
 
       {/* ── GOAL / WORK / OUTCOME SECTION ── */}
       <section className="bg-[#f7f7f5] px-6 pb-[70px] pt-[72px] sm:pb-[82px] sm:pt-[82px]">
         <div className="mx-auto grid max-w-[1150px] gap-14 lg:grid-cols-[840px_226px] lg:gap-[96px]">
-
           <div>
             {/* The Goal — slides in from left */}
             <FadeLeft delay={0.1}>
@@ -236,7 +249,6 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
                 </div>
               </div>
             </FadeUp>
-
           </div>
 
           {/* Aside — slides in from right */}
@@ -263,14 +275,12 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
               </Link>
             </aside>
           </FadeRight>
-
         </div>
       </section>
 
       {/* ── VIDEO SECTION ── */}
       <section className="bg-black px-5 pb-[80px] pt-[80px] text-center text-white sm:px-8 sm:pb-[107px] sm:pt-[83px] lg:px-12">
         <div className="mx-auto max-w-[1180px]">
-
           {/* Heading — drops down */}
           <FadeDown delay={0.1}>
             <h2 className="font-[var(--font-be-vietnam)] text-[31px] font-bold lowercase leading-none tracking-[-1.5px] sm:text-[43px]">
@@ -294,7 +304,9 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
                 fill
                 sizes="(min-width: 1024px) 1014px, 92vw"
                 className="scale-[1.03] object-cover blur-[8px]"
-                style={{ objectPosition: project.videoPreview.position ?? "center" }}
+                style={{
+                  objectPosition: project.videoPreview.position ?? "center",
+                }}
               />
               <div className="absolute inset-0 bg-black/12" />
               <button
@@ -306,7 +318,6 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
               </button>
             </div>
           </FadeUp>
-
         </div>
       </section>
 
