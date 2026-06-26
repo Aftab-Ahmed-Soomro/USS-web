@@ -31,6 +31,8 @@ export type ProjectDetail = {
   videoTitle: string;
   videoSubtitle: string;
   videoPreview: ProjectImage;
+  videoSrc?: string;
+  videoSrcs?: string[];
   metadata: {
     title: string;
     description: string;
@@ -388,6 +390,10 @@ export const projectDetails = [
       alt: "Blurred video preview of the Picksperience launch campaign",
       position: "50% 44%",
     },
+    videoSrcs: [
+      "https://emmanuelcolewilliams.com/uss-assets/picksperience/pick-1.mp4",
+      "https://emmanuelcolewilliams.com/uss-assets/picksperience/pick-2.mov",
+    ],
     metadata: {
       title: "Picksperience Sampling Agency Launch | USS Projects",
       description:
@@ -477,6 +483,11 @@ export const projectDetails = [
       alt: "Blurred video preview of the SupperClub membership campaign",
       position: "50% 53%",
     },
+    videoSrcs: [
+      "https://emmanuelcolewilliams.com/uss-assets/supperclub/sup-1.mp4",
+      "https://emmanuelcolewilliams.com/uss-assets/supperclub/sup-2.MOV",
+      "https://emmanuelcolewilliams.com/uss-assets/supperclub/supper-3.mp4",
+    ],
     metadata: {
       title: "SupperClub Membership Growth | USS Projects",
       description:
@@ -567,6 +578,11 @@ export const projectDetails = [
       alt: "Blurred video preview of the Cinnamood Mall of Emirates launch",
       position: "50% 44%",
     },
+    videoSrcs: [
+      "https://emmanuelcolewilliams.com/uss-assets/cinamood/cinamood-1.mov",
+      "https://emmanuelcolewilliams.com/uss-assets/cinamood/cinamood-2.mov",
+      "https://emmanuelcolewilliams.com/uss-assets/cinamood/cinamood-3.mov",
+    ],
     metadata: {
       title: "Cinnamood UAE Launch | USS Projects",
       description:
@@ -656,6 +672,7 @@ export const projectDetails = [
       alt: "Blurred video preview of the Yula Lounge rebrand campaign",
       position: "50% 42%",
     },
+    videoSrc: "https://emmanuelcolewilliams.com/uss-assets/yula/yula.mov",
     metadata: {
       title: "Yula Beach Lounge Rebrand | USS Projects",
       description:
@@ -745,6 +762,11 @@ export const projectDetails = [
       alt: "Blurred video preview of the Flowork launch campaign",
       position: "50% 48%",
     },
+    videoSrcs: [
+      "https://emmanuelcolewilliams.com/uss-assets/flowork/flow-1.m4v",
+      "https://emmanuelcolewilliams.com/uss-assets/flowork/flow-2.mp4",
+      "https://emmanuelcolewilliams.com/uss-assets/flowork/flow-3.mp4",
+    ],
     metadata: {
       title: "Flowork Dubai Launch | USS Projects",
       description:
@@ -1012,6 +1034,7 @@ export const projectDetails = [
       alt: "Blurred video preview of the Adidas Middle East product launch",
       position: "50% 40%",
     },
+    videoSrc: "https://emmanuelcolewilliams.com/uss-assets/adidas/adidas.mp4",
     metadata: {
       title: "Adidas Middle East Product Launch | USS Projects",
       description:

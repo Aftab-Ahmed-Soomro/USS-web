@@ -7,6 +7,8 @@ import FadeDown from "../components/FadeDown";
 import FadeUp from "../components/FadeUp";
 import FadeRight from "../components/FadeRight";
 import type { OutcomeIcon, ProjectDetail, WorkIcon } from "./project-details";
+import { TripleVideoPlayer } from "./TripleVideoPlayer";
+import { DoubleVideoPlayer } from "./DoubleVideoPlayer";
 
 const outcomeIconAssets: Record<OutcomeIcon, string> = {
   megaphone: "/assets/outcome1.png",
@@ -297,26 +299,52 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
 
           {/* Video player — rises up last */}
           <FadeUp delay={0.3}>
-            <div className="relative mx-auto mt-[48px] aspect-[1014/540] max-w-[1014px] overflow-hidden rounded-[10px] bg-[#181818] shadow-[0_0_65px_rgba(255,255,255,0.23)]">
-              <Image
-                src={project.videoPreview.src}
-                alt={project.videoPreview.alt}
-                fill
-                sizes="(min-width: 1024px) 1014px, 92vw"
-                className="scale-[1.03] object-cover blur-[8px]"
-                style={{
-                  objectPosition: project.videoPreview.position ?? "center",
-                }}
+            {project.videoSrcs && project.videoSrcs.length === 3 ? (
+              <TripleVideoPlayer
+                srcs={project.videoSrcs}
+                productName={project.productName}
               />
-              <div className="absolute inset-0 bg-black/12" />
-              <button
-                aria-label={`Play ${project.productName} campaign video`}
-                className="absolute left-1/2 top-1/2 grid size-[82px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-[#f47700] text-white transition hover:bg-[#ff861b] sm:size-[94px]"
-                type="button"
-              >
-                <span className="ml-[5px] h-0 w-0 border-y-[13px] border-l-[19px] border-y-transparent border-l-white sm:border-y-[15px] sm:border-l-[22px]" />
-              </button>
-            </div>
+            ) : project.videoSrcs && project.videoSrcs.length === 2 ? (
+              <DoubleVideoPlayer
+                srcs={project.videoSrcs as [string, string]}
+                productName={project.productName}
+              />
+            ) : (
+              <div className="relative mx-auto mt-[48px] aspect-[1014/540] max-w-[1014px] overflow-hidden rounded-[10px] bg-[#181818] shadow-[0_0_65px_rgba(255,255,255,0.23)]">
+                {project.videoSrc ? (
+                  <video
+                    src={project.videoSrc}
+                    controls
+                    muted
+                    playsInline
+                    preload="metadata"
+                    className="absolute inset-0 h-full w-full object-cover"
+                    aria-label={`${project.productName} campaign video`}
+                  />
+                ) : (
+                  <>
+                    <Image
+                      src={project.videoPreview.src}
+                      alt={project.videoPreview.alt}
+                      fill
+                      sizes="(min-width: 1024px) 1014px, 92vw"
+                      className="scale-[1.03] object-cover blur-[8px]"
+                      style={{
+                        objectPosition: project.videoPreview.position ?? "center",
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-black/12" />
+                    <button
+                      aria-label={`Play ${project.productName} campaign video`}
+                      className="absolute left-1/2 top-1/2 grid size-[82px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-[#f47700] text-white transition hover:bg-[#ff861b] sm:size-[94px]"
+                      type="button"
+                    >
+                      <span className="ml-[5px] h-0 w-0 border-y-[13px] border-l-[19px] border-y-transparent border-l-white sm:border-y-[15px] sm:border-l-[22px]" />
+                    </button>
+                  </>
+                )}
+              </div>
+            )}
           </FadeUp>
         </div>
       </section>
