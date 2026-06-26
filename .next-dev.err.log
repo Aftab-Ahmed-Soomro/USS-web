@@ -1,0 +1,1146 @@
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/about" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{rsc:{...}, ...}}>
+                    <__next_viewport_boundary__>
+                    <MetadataWrapper>
+                      <div
+                        hidden={true}
+-                       bis_skin_checked="1"
+                      >
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <RootLayout>
+                        <html lang="en" className="__variable...">
+                          <body
+                            className="min-h-full flex flex-col"
+-                           cz-shortcut-listen="true"
+-                           __processed_d17aea89-74ed-4462-938b-d9383e5e256d__="true"
+-                           bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
+                          >
+                            ...
+                              <SegmentViewNode type="page" pagePath="about/page...">
+                                <SegmentTrieNode>
+                                <AboutPage>
+                                  <div
+                                    className="min-h-screen bg-[#080808] text-white"
+-                                   bis_skin_checked="1"
+                                  >
+                                    <Header>
+                                      <div
+                                        className="bg-black"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <header className={"relative..."}>
+                                          <div
+                                            className="flex w-full items-center justify-between gap-3 md:order-2 md:w-..."
+-                                           bis_skin_checked="1"
+                                          >
+                                          ...
+                                    <main>
+                                      <section className="relative b...">
+                                        <div
+                                          className="bg-black text-white"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="relative mx-auto min-h-[293px] max-w-[1150px] px-6 pt-[50px]"
+-                                           bis_skin_checked="1"
+                                          >
+                                        <div
+                                          className="relative mx-auto max-w-[1150px] px-6 py-[40px]  lg:min-h-[225px]"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <p>
+                                          <div
+                                            className="relative mt-8 aspect-[345/393] w-full overflow-hidden sm:max-w-..."
+-                                           bis_skin_checked="1"
+                                          >
+                                      <section className="relative o...">
+                                        <div
+                                          className="pointer-events-none absolute left-[-90px] top-[-110px] h-[360px] ..."
+-                                         bis_skin_checked="1"
+                                        >
+                                        <div
+                                          className="pointer-events-none absolute bottom-[-120px] right-[-80px] h-[360..."
+-                                         bis_skin_checked="1"
+                                        >
+                                        <div
+                                          className="relative mx-auto grid max-w-[1150px] gap-12 md:grid-cols-[424px_m..."
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="relative mx-auto aspect-[424/505] w-full max-w-[424px] overflow..."
+-                                           bis_skin_checked="1"
+                                          >
+                                          <div
+                                            className="max-w-[420px]"
+-                                           bis_skin_checked="1"
+                                          >
+                                      <section className="bg-[#08080...">
+                                        <div
+                                          className="mx-auto max-w-[1150px]"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <h2>
+                                          <div
+                                            className="mt-[38px] flex items-center gap-3"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <button>
+                                            <div
+                                              className="grid min-w-0 flex-1 grid-cols-1 gap-[14px] sm:grid-cols-2 lg:..."
+-                                             bis_skin_checked="1"
+                                            >
+                                            ...
+                                      <section className="bg-[#f7f7f...">
+                                        <div
+                                          className="mx-auto max-w-[1150px]"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="text-center"
+-                                           bis_skin_checked="1"
+                                          >
+                                          <div
+                                            className="mt-[93px] grid gap-y-12 md:grid-cols-3 md:gap-y-0"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <article className={"relative..."}>
+                                              <div
+                                                className="flex items-start justify-between gap-6"
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="mt-[48px] h-px w-9 bg-[#ff5500]"
+-                                               bis_skin_checked="1"
+                                              >
+                                              ...
+                                            <article className="relative p...">
+                                              <div
+                                                className="flex items-start justify-between gap-6"
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="mt-[48px] h-px w-9 bg-[#ff5500]"
+-                                               bis_skin_checked="1"
+                                              >
+                                              ...
+                                            <article className="relative p...">
+                                              <div
+                                                className="flex items-start justify-between gap-6"
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="mt-[48px] h-px w-9 bg-[#ff5500]"
+-                                               bis_skin_checked="1"
+                                              >
+                                              ...
+                                          <div
+                                            className="mx-auto mt-[107px] grid max-w-[800px] overflow-hidden rounded-[..."
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="flex items-center gap-[21px] px-8 py-7 md:px-[38px]"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <span>
+                                              <div
+-                                               bis_skin_checked="1"
+                                              >
+                                            <div
+                                              className="flex items-center border-t border-black/[0.06] px-8 py-7 md:b..."
+-                                             bis_skin_checked="1"
+                                            >
+                                    <Footer>
+                                      <footer className={"relative..."}>
+                                        <div
+                                          className="mx-auto flex max-w-[1150px] flex-col gap-[82px]"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="grid gap-10 md:grid-cols-[minmax(0,380px)_180px_minmax(0,260px)..."
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="flex max-w-[410px] flex-col"
+-                                             bis_skin_checked="1"
+                                            >
+                                            <nav>
+                                            <div
+                                              className="flex flex-col"
+-                                             bis_skin_checked="1"
+                                            >
+                                          <div
+                                            className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:..."
+-                                           bis_skin_checked="1"
+                                          >
+                                            <p>
+                                            <div
+                                              className="flex items-center gap-[11px]"
+-                                             bis_skin_checked="1"
+                                            >
+                              ...
+                  ...
+ 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/email-mar..." notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{rsc:{...}, ...}}>
+                    <__next_viewport_boundary__>
+                    <MetadataWrapper>
+                      <div
+                        hidden={true}
+-                       bis_skin_checked="1"
+                      >
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <RootLayout>
+                        <html lang="en" className="__variable...">
+                          <body
+                            className="min-h-full flex flex-col"
+-                           cz-shortcut-listen="true"
+-                           __processed_66da58a9-6f23-4f2e-85d2-3bd8fafc0be3__="true"
+-                           bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
+                          >
+                            ...
+                              <SegmentViewNode type="page" pagePath="email-mark...">
+                                <SegmentTrieNode>
+                                <EmailMarketingPage>
+                                  <main className="min-h-scre...">
+                                    <Header>
+                                      <div
+                                        className="bg-black"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <header className={"relative..."}>
+                                          <div
+                                            className="flex w-full items-center justify-between gap-3 md:order-2 md:w-..."
+-                                           bis_skin_checked="1"
+                                          >
+                                          ...
+                                    <Hero>
+                                      <section className="relative o...">
+                                        <div
+                                          className="pointer-events-none absolute left-[-80px] top-[80px] h-[260px] w-..."
+-                                         bis_skin_checked="1"
+                                        >
+                                        <div
+                                          className="mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[minmax(0,560px)_..."
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+-                                           bis_skin_checked="1"
+                                          >
+                                          <ConsultationForm>
+                                            <section className="w-full max...">
+                                              <h2>
+                                              <p>
+                                              <form className="mt-[22px] ...">
+                                                <div
+                                                  className="grid gap-[12px] sm:grid-cols-2"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                <div
+                                                  className="grid gap-[12px] sm:grid-cols-2"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                ...
+                                              ...
+                                    <Numbers>
+                                      <section className="relative z...">
+                                        <img>
+                                        <div
+                                          className="absolute inset-0 bg-gradient-to-r from-black via-black/45 to-blac..."
+-                                         bis_skin_checked="1"
+                                        >
+                                        <div
+                                          className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to..."
+-                                         bis_skin_checked="1"
+                                        >
+                                        <div
+                                          className="relative mx-auto max-w-[1150px]"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+-                                             bis_skin_checked="1"
+                                            >
+                                            ...
+                                          <div
+                                            className="mt-[58px] border-t border-white/12 pt-[43px]"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-[54px]"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="flex items-center gap-[16px]"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <span>
+                                                <div
+-                                                 bis_skin_checked="1"
+                                                >
+                                              <div
+                                                className="flex items-center gap-[16px]"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <span>
+                                                <div
+-                                                 bis_skin_checked="1"
+                                                >
+                                              <div
+                                                className="flex items-center gap-[16px]"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <span>
+                                                <div
+-                                                 bis_skin_checked="1"
+                                                >
+                                              <div
+                                                className="flex items-center gap-[16px]"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <span>
+                                                <div
+-                                                 bis_skin_checked="1"
+                                                >
+                                    <EmailOverview>
+                                      <section className="relative o...">
+                                        <div
+                                          className="absolute inset-x-0 top-0 h-[47%] bg-[#f5f5f4]"
+-                                         bis_skin_checked="1"
+                                        >
+                                        <div
+                                          className="relative mx-auto grid max-w-[1150px] px-6 lg:grid-cols-[minmax(0,..."
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="py-[64px] text-black lg:py-[78px]"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="max-w-[500px]"
+-                                             bis_skin_checked="1"
+                                            >
+                                          <div
+                                            className="order-3 -mx-1 pb-[54px] sm:mx-0 lg:order-none lg:col-start-2 lg..."
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="relative mx-auto aspect-[800/1650] w-full max-w-[430px] overf..."
+-                                             bis_skin_checked="1"
+                                            >
+                                          <div
+                                            className="py-[70px] text-white lg:py-[82px]"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <p>
+                                            <h2>
+                                            <div
+                                              className={"mt-[48px] grid border-white/20 sm:grid-cols-2 sm:[&>*:nth-c..."}
+-                                             bis_skin_checked="1"
+                                            >
+                                    <Brands>
+                                      <section className="relative z...">
+                                        <h2>
+                                        <div
+                                          className="mx-auto mt-[26px] grid max-w-[1150px] grid-cols-1 gap-[20px] sm:g..."
+-                                         bis_skin_checked="1"
+                                        >
+                                        <div
+                                          className="mt-[158px] text-center"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <h2>
+                                          <div
+                                            className="mx-auto mt-[39px] flex max-w-[1150px] flex-wrap items-center ju..."
+-                                           bis_skin_checked="1"
+                                          >
+                                    <Services>
+                                      <section id="services" className={"relative..."}>
+                                        <div
+                                          className="mx-auto grid max-w-[1150px] gap-12 lg:grid-cols-[minmax(0,520px)_..."
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+-                                           bis_skin_checked="1"
+                                          >
+                                            <h2>
+                                            <div
+                                              className="mt-[46px] border-t border-white/35"
+-                                             bis_skin_checked="1"
+                                            >
+                                          <div
+                                            className="relative aspect-[430/520] overflow-hidden bg-[#141414]"
+-                                           bis_skin_checked="1"
+                                          >
+                                    <EmailVisuals>
+                                      <section className="relative z...">
+                                        <div
+                                          className="mx-auto flex w-full max-w-[1150px] flex-col gap-[44px]"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="grid gap-8 lg:grid-cols-[360px_minmax(0,520px)] lg:items-start ..."
+-                                           bis_skin_checked="1"
+                                          >
+                                          <div
+                                            className="w-full"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="grid grid-cols-1 items-start justify-items-center gap-8 sm:gr..."
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="relative h-[460px] w-full max-w-[190px] overflow-hidden bg-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="relative h-[460px] w-full max-w-[190px] overflow-hidden bg-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="relative h-[460px] w-full max-w-[190px] overflow-hidden bg-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="relative h-[460px] w-full max-w-[190px] overflow-hidden bg-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                    <WorkWithUs>
+                                      <section className="bg-[#f5f5f...">
+                                        <div
+                                          className="mx-auto grid max-w-[1150px] gap-12 lg:grid-cols-[330px_minmax(0,1..."
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="lg:pt-2"
+-                                           bis_skin_checked="1"
+                                          >
+                                          <div
+                                            className={"grid border-y border-black/10 sm:grid-cols-2 sm:[&>*:nth-chil..."}
+-                                           bis_skin_checked="1"
+                                          >
+                                    <Team>
+                                      <section className="relative z...">
+                                        <div
+                                          className="mx-auto flex max-w-[1150px] flex-col items-center gap-8 py-[82px]"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <h2>
+                                          <div
+                                            className="relative w-full"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="grid w-full gap-[15px] sm:grid-cols-2 xl:grid-cols-4"
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="pointer-events-none absolute left-[-36px] right-[-36px] top-1..."
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="pointer-events-auto"
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="pointer-events-auto"
+-                                               bis_skin_checked="1"
+                                              >
+                                            <div
+                                              className="mt-8 flex justify-center gap-5 xl:hidden"
+-                                             bis_skin_checked="1"
+                                            >
+                                    <Testimonials>
+                                      <section className="relative z...">
+                                        <div
+                                          className="mx-auto flex w-full max-w-[1150px] flex-col items-center"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="flex h-[15px] items-center gap-2"
+-                                           bis_skin_checked="1"
+                                          >
+                                          <h2>
+                                          <div
+                                            className="mt-[58px] grid w-full grid-cols-1 gap-6 md:grid-cols-3"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <article className="relative">
+                                              <div
+                                                className={"absolute left-[24px] top-[-45px] z-10 size-[75px] rounded..."}
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="min-h-[210px] rounded-[16px] border border-[#ede9fc] bg-[#f..."
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="w-full"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                <div
+                                                  className="my-[17px] w-full border-t border-dashed border-[#e2dbfa]"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                ...
+                                            <article className="relative">
+                                              <div
+                                                className={"absolute left-[24px] top-[-45px] z-10 size-[75px] rounded..."}
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="min-h-[210px] rounded-[16px] border border-[#ede9fc] bg-[#f..."
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="w-full"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                <div
+                                                  className="my-[17px] w-full border-t border-dashed border-[#e2dbfa]"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                ...
+                                            <article className="relative">
+                                              <div
+                                                className={"absolute left-[24px] top-[-45px] z-10 size-[75px] rounded..."}
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="min-h-[210px] rounded-[16px] border border-[#ede9fc] bg-[#f..."
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="w-full"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                <div
+                                                  className="my-[17px] w-full border-t border-dashed border-[#e2dbfa]"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                ...
+                                          <div
+                                            className="mt-[38px] flex items-center justify-center gap-6"
+-                                           bis_skin_checked="1"
+                                          >
+                                    <FinalCta>
+                                      <section className="bg-black p...">
+                                        <div
+                                          className="mx-auto max-w-[1150px] text-center"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <p>
+                                          <h2>
+                                          <div
+                                            className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row"
+-                                           bis_skin_checked="1"
+                                          >
+                                    <Footer>
+                                      <footer className={"relative..."}>
+                                        <div
+                                          className="mx-auto flex max-w-[1150px] flex-col gap-[82px]"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="grid gap-10 md:grid-cols-[minmax(0,380px)_180px_minmax(0,260px)..."
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="flex max-w-[410px] flex-col"
+-                                             bis_skin_checked="1"
+                                            >
+                                            <nav>
+                                            <div
+                                              className="flex flex-col"
+-                                             bis_skin_checked="1"
+                                            >
+                                          <div
+                                            className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:..."
+-                                           bis_skin_checked="1"
+                                          >
+                                            <p>
+                                            <div
+                                              className="flex items-center gap-[11px]"
+-                                             bis_skin_checked="1"
+                                            >
+                  ...
+ 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/projects" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{rsc:{...}, ...}}>
+                    <__next_viewport_boundary__>
+                    <MetadataWrapper>
+                      <div
+                        hidden={true}
+-                       bis_skin_checked="1"
+                      >
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <RootLayout>
+                        <html lang="en" className="__variable...">
+                          <body
+                            className="min-h-full flex flex-col"
+-                           __processed_fa9b83a7-a1f6-41e4-ab2b-3b2039f7ca65__="true"
+-                           bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
+-                           cz-shortcut-listen="true"
+                          >
+                            ...
+                              <SegmentViewNode type="page" pagePath="projects/p...">
+                                <SegmentTrieNode>
+                                <ProjectsPage>
+                                  <main className="min-h-scre...">
+                                    <Header>
+                                      <div
+                                        className="bg-black"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <header className={"relative..."}>
+                                          <div
+                                            className="flex w-full items-center justify-between gap-3 md:order-2 md:w-..."
+-                                           bis_skin_checked="1"
+                                          >
+                                          ...
+                                    <section className="bg-black p...">
+                                      <div
+                                        className="mx-auto max-w-[1150px]"
+-                                       bis_skin_checked="1"
+                                      >
+                                    <section className="bg-[#f7f7f...">
+                                      <div
+                                        className="mx-auto max-w-[1150px]"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+                                          className={"flex gap-[10px] overflow-x-auto pb-[28px] [scrollbar-width:none..."}
+-                                         bis_skin_checked="1"
+                                        >
+                                        <div
+                                          className="grid gap-x-[31px] gap-y-[35px] sm:grid-cols-2 lg:grid-cols-3"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <ProjectCard>
+                                            <article className="min-w-0">
+                                              <div
+                                                className="relative aspect-[376/280] overflow-hidden rounded-[7px] bg-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <h2>
+                                              <p>
+                                              <div
+                                                className="mt-[18px] flex flex-wrap gap-[7px]"
+-                                               bis_skin_checked="1"
+                                              >
+                                          <ProjectCard>
+                                            <article className="min-w-0">
+                                              <div
+                                                className="relative aspect-[376/280] overflow-hidden rounded-[7px] bg-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <h2>
+                                              <p>
+                                              <div
+                                                className="mt-[18px] flex flex-wrap gap-[7px]"
+-                                               bis_skin_checked="1"
+                                              >
+                                          <ProjectCard>
+                                            <article className="min-w-0">
+                                              <div
+                                                className="relative aspect-[376/280] overflow-hidden rounded-[7px] bg-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <h2>
+                                              <p>
+                                              <div
+                                                className="mt-[18px] flex flex-wrap gap-[7px]"
+-                                               bis_skin_checked="1"
+                                              >
+                                          <ProjectCard>
+                                            <LinkComponent>
+                                              <LinkComponent aria-label="View Cinna..." className="block roun..." ...>
+                                                <a aria-label="View Cinna..." className="block roun..." ref={function} ...>
+                                                  <article className="min-w-0">
+                                                    <div
+                                                      className="relative aspect-[376/280] overflow-hidden rounded-[7p..."
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                    <h2>
+                                                    <p>
+                                                    <div
+                                                      className="mt-[18px] flex flex-wrap gap-[7px]"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                          <ProjectCard>
+                                            <article className="min-w-0">
+                                              <div
+                                                className="relative aspect-[376/280] overflow-hidden rounded-[7px] bg-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <h2>
+                                              <p>
+                                              <div
+                                                className="mt-[18px] flex flex-wrap gap-[7px]"
+-                                               bis_skin_checked="1"
+                                              >
+                                          <ProjectCard>
+                                            <article className="min-w-0">
+                                              <div
+                                                className="relative aspect-[376/280] overflow-hidden rounded-[7px] bg-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <h2>
+                                              <p>
+                                              <div
+                                                className="mt-[18px] flex flex-wrap gap-[7px]"
+-                                               bis_skin_checked="1"
+                                              >
+                                          <ProjectCard>
+                                            <article className="min-w-0">
+                                              <div
+                                                className="relative aspect-[376/280] overflow-hidden rounded-[7px] bg-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <h2>
+                                              <p>
+                                              <div
+                                                className="mt-[18px] flex flex-wrap gap-[7px]"
+-                                               bis_skin_checked="1"
+                                              >
+                                          <ProjectCard>
+                                            <article className="min-w-0">
+                                              <div
+                                                className="relative aspect-[376/280] overflow-hidden rounded-[7px] bg-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <h2>
+                                              <p>
+                                              <div
+                                                className="mt-[18px] flex flex-wrap gap-[7px]"
+-                                               bis_skin_checked="1"
+                                              >
+                                          <ProjectCard>
+                                            <article className="min-w-0">
+                                              <div
+                                                className="relative aspect-[376/280] overflow-hidden rounded-[7px] bg-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <h2>
+                                              <p>
+                                              <div
+                                                className="mt-[18px] flex flex-wrap gap-[7px]"
+-                                               bis_skin_checked="1"
+                                              >
+                                          <ProjectCard>
+                                            <article className="min-w-0">
+                                              <div
+                                                className="relative aspect-[376/280] overflow-hidden rounded-[7px] bg-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <h2>
+                                              <p>
+                                              <div
+                                                className="mt-[18px] flex flex-wrap gap-[7px]"
+-                                               bis_skin_checked="1"
+                                              >
+                                          <ProjectCard>
+                                            <article className="min-w-0">
+                                              <div
+                                                className="relative aspect-[376/280] overflow-hidden rounded-[7px] bg-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <h2>
+                                              <p>
+                                              <div
+                                                className="mt-[18px] flex flex-wrap gap-[7px]"
+-                                               bis_skin_checked="1"
+                                              >
+                                          <ProjectCard>
+                                            <article className="min-w-0">
+                                              <div
+                                                className="relative aspect-[376/280] overflow-hidden rounded-[7px] bg-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <h2>
+                                              <p>
+                                              <div
+                                                className="mt-[18px] flex flex-wrap gap-[7px]"
+-                                               bis_skin_checked="1"
+                                              >
+                                    <ProjectsCta>
+                                      <section className="bg-[#08080...">
+                                        <div
+                                          className="mx-auto flex max-w-[650px] flex-col items-center text-center"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <p>
+                                          <h2>
+                                          <p>
+                                          <p>
+                                          <div
+                                            className="mt-[29px] flex w-full max-w-[512px] flex-col items-center justi..."
+-                                           bis_skin_checked="1"
+                                          >
+                                    <Footer>
+                                      <footer className={"relative..."}>
+                                        <div
+                                          className="mx-auto flex max-w-[1150px] flex-col gap-[82px]"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="grid gap-10 md:grid-cols-[minmax(0,380px)_180px_minmax(0,260px)..."
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="flex max-w-[410px] flex-col"
+-                                             bis_skin_checked="1"
+                                            >
+                                            <nav>
+                                            <div
+                                              className="flex flex-col"
+-                                             bis_skin_checked="1"
+                                            >
+                                          <div
+                                            className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:..."
+-                                           bis_skin_checked="1"
+                                          >
+                                            <p>
+                                            <div
+                                              className="flex items-center gap-[11px]"
+-                                             bis_skin_checked="1"
+                                            >
+                  ...
+ 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/projects" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{rsc:{...}, ...}}>
+                    <__next_viewport_boundary__>
+                    <MetadataWrapper>
+                      <div
+                        hidden={true}
+-                       bis_skin_checked="1"
+                      >
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <RootLayout>
+                        <html lang="en" className="__variable...">
+                          <body
+                            className="min-h-full flex flex-col"
+-                           __processed_29b7437b-9a6c-49fa-af0c-1c51cbdb9627__="true"
+-                           bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
+-                           cz-shortcut-listen="true"
+                          >
+                            ...
+                              <SegmentViewNode type="page" pagePath="projects/p...">
+                                <SegmentTrieNode>
+                                <ProjectsPage>
+                                  <main className="min-h-scre...">
+                                    <Header>
+                                      <div
+                                        className="bg-black"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <header className={"relative..."}>
+                                          <div
+                                            className="flex w-full items-center justify-between gap-3 md:order-2 md:w-..."
+-                                           bis_skin_checked="1"
+                                          >
+                                          ...
+                                    <section className="bg-black p...">
+                                      <div
+                                        className="mx-auto max-w-[1150px]"
+-                                       bis_skin_checked="1"
+                                      >
+                                    <section className="bg-[#f7f7f...">
+                                      <div
+                                        className="mx-auto max-w-[1150px]"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+                                          className={"flex gap-[10px] overflow-x-auto pb-[28px] [scrollbar-width:none..."}
+-                                         bis_skin_checked="1"
+                                        >
+                                        <div
+                                          className="grid gap-x-[31px] gap-y-[35px] sm:grid-cols-2 lg:grid-cols-3"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <ProjectCard>
+                                            <article className="min-w-0">
+                                              <div
+                                                className="relative aspect-[376/280] overflow-hidden rounded-[7px] bg-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <h2>
+                                              <p>
+                                              <div
+                                                className="mt-[18px] flex flex-wrap gap-[7px]"
+-                                               bis_skin_checked="1"
+                                              >
+                                          <ProjectCard>
+                                            <article className="min-w-0">
+                                              <div
+                                                className="relative aspect-[376/280] overflow-hidden rounded-[7px] bg-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <h2>
+                                              <p>
+                                              <div
+                                                className="mt-[18px] flex flex-wrap gap-[7px]"
+-                                               bis_skin_checked="1"
+                                              >
+                                          <ProjectCard>
+                                            <article className="min-w-0">
+                                              <div
+                                                className="relative aspect-[376/280] overflow-hidden rounded-[7px] bg-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <h2>
+                                              <p>
+                                              <div
+                                                className="mt-[18px] flex flex-wrap gap-[7px]"
+-                                               bis_skin_checked="1"
+                                              >
+                                          <ProjectCard>
+                                            <LinkComponent>
+                                              <LinkComponent aria-label="View Cinna..." className="block roun..." ...>
+                                                <a aria-label="View Cinna..." className="block roun..." ref={function} ...>
+                                                  <article className="min-w-0">
+                                                    <div
+                                                      className="relative aspect-[376/280] overflow-hidden rounded-[7p..."
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                    <h2>
+                                                    <p>
+                                                    <div
+                                                      className="mt-[18px] flex flex-wrap gap-[7px]"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                          <ProjectCard>
+                                            <article className="min-w-0">
+                                              <div
+                                                className="relative aspect-[376/280] overflow-hidden rounded-[7px] bg-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <h2>
+                                              <p>
+                                              <div
+                                                className="mt-[18px] flex flex-wrap gap-[7px]"
+-                                               bis_skin_checked="1"
+                                              >
+                                          <ProjectCard>
+                                            <article className="min-w-0">
+                                              <div
+                                                className="relative aspect-[376/280] overflow-hidden rounded-[7px] bg-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <h2>
+                                              <p>
+                                              <div
+                                                className="mt-[18px] flex flex-wrap gap-[7px]"
+-                                               bis_skin_checked="1"
+                                              >
+                                          <ProjectCard>
+                                            <article className="min-w-0">
+                                              <div
+                                                className="relative aspect-[376/280] overflow-hidden rounded-[7px] bg-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <h2>
+                                              <p>
+                                              <div
+                                                className="mt-[18px] flex flex-wrap gap-[7px]"
+-                                               bis_skin_checked="1"
+                                              >
+                                          <ProjectCard>
+                                            <article className="min-w-0">
+                                              <div
+                                                className="relative aspect-[376/280] overflow-hidden rounded-[7px] bg-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <h2>
+                                              <p>
+                                              <div
+                                                className="mt-[18px] flex flex-wrap gap-[7px]"
+-                                               bis_skin_checked="1"
+                                              >
+                                          <ProjectCard>
+                                            <article className="min-w-0">
+                                              <div
+                                                className="relative aspect-[376/280] overflow-hidden rounded-[7px] bg-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <h2>
+                                              <p>
+                                              <div
+                                                className="mt-[18px] flex flex-wrap gap-[7px]"
+-                                               bis_skin_checked="1"
+                                              >
+                                          <ProjectCard>
+                                            <article className="min-w-0">
+                                              <div
+                                                className="relative aspect-[376/280] overflow-hidden rounded-[7px] bg-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <h2>
+                                              <p>
+                                              <div
+                                                className="mt-[18px] flex flex-wrap gap-[7px]"
+-                                               bis_skin_checked="1"
+                                              >
+                                          <ProjectCard>
+                                            <article className="min-w-0">
+                                              <div
+                                                className="relative aspect-[376/280] overflow-hidden rounded-[7px] bg-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <h2>
+                                              <p>
+                                              <div
+                                                className="mt-[18px] flex flex-wrap gap-[7px]"
+-                                               bis_skin_checked="1"
+                                              >
+                                          <ProjectCard>
+                                            <article className="min-w-0">
+                                              <div
+                                                className="relative aspect-[376/280] overflow-hidden rounded-[7px] bg-..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <h2>
+                                              <p>
+                                              <div
+                                                className="mt-[18px] flex flex-wrap gap-[7px]"
+-                                               bis_skin_checked="1"
+                                              >
+                                    <ProjectsCta>
+                                      <section className="bg-[#08080...">
+                                        <div
+                                          className="mx-auto flex max-w-[650px] flex-col items-center text-center"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <p>
+                                          <h2>
+                                          <p>
+                                          <p>
+                                          <div
+                                            className="mt-[29px] flex w-full max-w-[512px] flex-col items-center justi..."
+-                                           bis_skin_checked="1"
+                                          >
+                                    <Footer>
+                                      <footer className={"relative..."}>
+                                        <div
+                                          className="mx-auto flex max-w-[1150px] flex-col gap-[82px]"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="grid gap-10 md:grid-cols-[minmax(0,380px)_180px_minmax(0,260px)..."
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="flex max-w-[410px] flex-col"
+-                                             bis_skin_checked="1"
+                                            >
+                                            <nav>
+                                            <div
+                                              className="flex flex-col"
+-                                             bis_skin_checked="1"
+                                            >
+                                          <div
+                                            className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:..."
+-                                           bis_skin_checked="1"
+                                          >
+                                            <p>
+                                            <div
+                                              className="flex items-center gap-[11px]"
+-                                             bis_skin_checked="1"
+                                            >
+                  ...
+ 

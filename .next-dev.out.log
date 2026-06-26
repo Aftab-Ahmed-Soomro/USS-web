@@ -1,0 +1,13 @@
+▲ Next.js 16.2.9 (webpack)
+- Local:         http://localhost:3000
+- Network:       http://10.168.196.171:3000
+✓ Ready in 602ms
+
+ GET /about 200 in 1968ms (next.js: 1609ms, application-code: 359ms)
+ GET /projects 200 in 2.0s (next.js: 1416ms, application-code: 597ms)
+ GET /about 200 in 119ms (next.js: 21ms, application-code: 98ms)
+ GET /email-marketing 200 in 1560ms (next.js: 890ms, application-code: 670ms)
+ GET /about 200 in 148ms (next.js: 16ms, application-code: 132ms)
+ GET /projects 200 in 162ms (next.js: 17ms, application-code: 145ms)
+ GET /projects 200 in 156ms (next.js: 7ms, application-code: 148ms)
+[?25h
