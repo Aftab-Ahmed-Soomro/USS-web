@@ -81,7 +81,7 @@ function Strategic() {
             <h2 className="mt-[35px] text-[42px] font-medium leading-[0.98] tracking-[-0.8px] sm:text-[56px]">
               a strategic process.
               <span className="mt-[25px] block font-[var(--font-cormorant)] text-[51px] font-normal timesFontFamily italic leading-[0.8] tracking-[-0.8px] text-[#ff5500] sm:text-[56px]">
-                built for growth.
+                built to perform.
               </span>
             </h2>
           </ScaleIn>

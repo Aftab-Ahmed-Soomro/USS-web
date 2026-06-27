@@ -25,14 +25,14 @@ export default function ContactHero() {
   const contactItems = [
     {
       icon: Mail,
-      label: "Email Us",
-      value: "hello@uss.agency",
-      href: "mailto:hello@uss.agency",
+      label: "Email",
+      value: "contact@unitedstrategicsolutions.com",
+      href: "mailto:contact@unitedstrategicsolutions.com",
     },
     {
       icon: Phone,
-      label: "Call Us",
-      value: "+1 (501) 123-4567",
+      label: "Call us to phone",
+      value: "+971 58 525 8431",
       href: "tel:+15011234567",
     },
     {
@@ -128,8 +128,7 @@ export default function ContactHero() {
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.7, delay: 0.35, ease }}
             >
-              Ready to scale your business with USS? Let&apos;s discuss growth,
-              creative strategy, and performance marketing.
+              <b>Ready to grow your business with USS? </b> Whether you're starting from scratch or looking to improve your marketing, we're here to help.
             </motion.p>
 
             {/* Divider line — draws itself */}
