@@ -16,10 +16,10 @@ const serviceLinks = [
 ];
 
 const navItems = [
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/", hasDropdown: true },
-  { label: "Projects", href: "/projects" },
-  { label: "Contact", href: "/contact" },
+  { label: "ABOUT", href: "/about" },
+  { label: "SERVICES", href: "/", hasDropdown: true },
+  { label: "WORK", href: "/projects" },
+  { label: "CONTACT", href: "/contact" },
 ];
 
 export function Header() {
@@ -41,37 +41,47 @@ export function Header() {
   }, []);
 
   return (
-    <div className="bg-black">
-      <header className="relative z-10 mx-auto flex w-full max-w-[1150px] flex-col px-6 py-4 md:min-h-[72px] md:flex-row md:items-center md:justify-between md:gap-8 md:py-0">
-        <div className="flex w-full items-center justify-between gap-3 md:order-2 md:w-auto md:shrink-0">
-          <Link href="/contact" passHref>
-            <Button className="h-[40px] cursor-pointer max-w-[calc(100vw-96px)] shrink-0 px-4 text-[13px] font-bold min-[360px]:px-5 sm:h-[42px] sm:px-[27px] sm:text-[16px]">
-              Book a Consultation
-            </Button>
+    <div className="bg-black sticky top-0 z-50 w-full border-b border-white/5 transition-all duration-300">
+      <header className="relative z-10 mx-auto flex w-full max-w-[1200px] flex-col px-6 py-4 md:min-h-[80px] md:flex-row md:items-center md:justify-between md:py-0">
+        
+        {/* Top Bar for Mobile & Desktop */}
+        <div className="flex w-full items-center justify-between md:w-auto md:flex-1 md:justify-start">
+          <Link href="/" className="text-white font-bold text-[22px] tracking-[0.15em] uppercase transition hover:text-[#ff6b1f] shrink-0">
+            USS
           </Link>
-          <button
-            type="button"
-            aria-label={isMenuOpen ? "Close main navigation" : "Open main navigation"}
-            aria-expanded={isMenuOpen}
-            aria-controls="main-navigation"
-            className="inline-flex size-10 shrink-0 flex-col items-center justify-center gap-1.5 rounded-full border border-white/25 text-white transition hover:border-[#ff6b1f] hover:text-[#ff6b1f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff5a05] md:hidden"
-            onClick={() => setIsMenuOpen((open) => !open)}
-          >
-            <span className={`h-0.5 w-5 rounded-full bg-current transition ${isMenuOpen ? "translate-y-2 rotate-45" : ""}`} />
-            <span className={`h-0.5 w-5 rounded-full bg-current transition ${isMenuOpen ? "opacity-0" : ""}`} />
-            <span className={`h-0.5 w-5 rounded-full bg-current transition ${isMenuOpen ? "-translate-y-2 -rotate-45" : ""}`} />
-          </button>
+          
+          {/* Mobile Right Controls */}
+          <div className="flex items-center gap-3 md:hidden">
+            <Link href="/contact" passHref>
+              <Button className="h-[38px] px-4 text-[13px] font-bold">
+                Book a Consultation
+              </Button>
+            </Link>
+            <button
+              type="button"
+              aria-label={isMenuOpen ? "Close main navigation" : "Open main navigation"}
+              aria-expanded={isMenuOpen}
+              aria-controls="main-navigation"
+              className="inline-flex size-10 shrink-0 flex-col items-center justify-center gap-1.5 rounded-full border border-white/25 text-white transition hover:border-[#ff6b1f] hover:text-[#ff6b1f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff5a05]"
+              onClick={() => setIsMenuOpen((open) => !open)}
+            >
+              <span className={`h-0.5 w-5 rounded-full bg-current transition ${isMenuOpen ? "translate-y-2 rotate-45" : ""}`} />
+              <span className={`h-0.5 w-5 rounded-full bg-current transition ${isMenuOpen ? "opacity-0" : ""}`} />
+              <span className={`h-0.5 w-5 rounded-full bg-current transition ${isMenuOpen ? "-translate-y-2 -rotate-45" : ""}`} />
+            </button>
+          </div>
         </div>
 
+        {/* Navigation */}
         <nav
           id="main-navigation"
           aria-label="Main navigation"
-          className={`mt-4 flex w-full flex-col gap-3 overflow-hidden border-t border-white/10 pt-4 transition-[max-height,opacity] duration-200 md:order-1 md:mt-0 md:w-auto md:flex-row md:items-center md:gap-8 md:overflow-visible md:border-0 md:pt-0 md:opacity-100 lg:gap-12 xl:gap-[112px] ${isMenuOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0 md:max-h-none"
-            }`}
+          className={`mt-4 flex w-full flex-col gap-4 overflow-hidden border-t border-white/10 pt-4 transition-[max-height,opacity] duration-300 md:mt-0 md:w-auto md:flex-row md:items-center md:justify-center md:gap-8 lg:gap-10 md:overflow-visible md:border-0 md:pt-0 md:opacity-100 ${
+            isMenuOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0 md:max-h-none"
+          }`}
         >
           {navItems.map((item) =>
             item.hasDropdown ? (
-              /* ── Services with dropdown ── */
               <div
                 key={item.label}
                 className="relative"
@@ -80,15 +90,16 @@ export function Header() {
                 onMouseLeave={() => setIsServicesOpen(false)}
               >
                 {/* Desktop trigger */}
-                <button
-                  type="button"
+                <div
+                  role="button"
+                  tabIndex={0}
                   aria-haspopup="true"
                   aria-expanded={isServicesOpen}
                   onClick={() => setIsServicesOpen((o) => !o)}
-                  className="hidden cursor-pointer md:inline-flex items-center gap-1.5 py-1 text-[16px] font-medium text-white transition hover:text-[#ff6b1f] md:py-0 focus-visible:outline-none"
+                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setIsServicesOpen((o) => !o) }}
+                  className="hidden cursor-pointer md:inline-flex items-center gap-1.5 py-1 text-[14px] md:text-[13px] mb-1 tracking-[0.1em] font-bold uppercase text-white transition hover:text-[#ff6b1f] md:py-0 focus-visible:outline-none"
                 >
                   {item.label}
-                  {/* Chevron */}
                   <svg
                     className={`h-3.5 w-3.5 transition-transform duration-200 ${isServicesOpen ? "rotate-180" : ""}`}
                     viewBox="0 0 12 12"
@@ -97,24 +108,21 @@ export function Header() {
                   >
                     <path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                </button>
+                </div>
 
                 {/* Desktop dropdown panel */}
-                {/* Invisible bridge fills the gap between button and panel so mouseleave
-                    is never triggered while the cursor travels downward. */}
-                <div className="absolute left-0 right-0 top-full h-6 hidden md:block" />
+                <div className="absolute left-0 right-0 top-full h-8 hidden md:block" />
 
                 <div
                   ref={dropdownRef}
-                  className={`absolute left-1/2 top-[calc(100%+24px)] z-50 -translate-x-1/2 transition-all duration-200 hidden md:block ${isServicesOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"
-                    }`}
+                  className={`absolute left-1/2 top-[calc(100%+32px)] z-50 -translate-x-1/2 transition-all duration-200 hidden md:block ${
+                    isServicesOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"
+                  }`}
                   style={{ width: "340px" }}
                 >
-                  {/* Arrow */}
                   <div className="absolute -top-[7px] left-1/2 -translate-x-1/2 h-[14px] w-[14px] rotate-45 bg-[#111] border-l border-t border-white/10" />
 
-                  <div className="relative  rounded-xl border border-white/10 bg-[#111] shadow-2xl shadow-black/60 overflow-hidden">
-                    {/* Top accent bar */}
+                  <div className="relative rounded-xl border border-white/10 bg-[#111] shadow-2xl shadow-black/60 overflow-hidden">
                     <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-[#ff6b1f] to-transparent" />
 
                     <div className="p-3 grid grid-cols-2 gap-1">
@@ -123,7 +131,7 @@ export function Header() {
                           key={service.href}
                           href={service.href}
                           onClick={() => setIsServicesOpen(false)}
-                          className="group flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-[13px] font-medium text-white/70 transition-all duration-150 hover:bg-white/[0.06] hover:text-white"
+                          className="group flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-[13px] font-semibold tracking-[0.1em] text-white/70 transition-all duration-150 hover:bg-white/[0.06] hover:text-white"
                         >
                           <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-white/5 text-[#ff6b1f] text-[10px] transition group-hover:bg-[#ff6b1f]/15">
                             ✦
@@ -132,29 +140,17 @@ export function Header() {
                         </Link>
                       ))}
                     </div>
-
-                    {/* Footer CTA */}
-                    {/* <div className="border-t border-white/10 px-4 py-3">
-                      <Link
-                        href="/services"
-                        onClick={() => setIsServicesOpen(false)}
-                        className="flex items-center justify-between text-[12px] font-semibold uppercase tracking-widest text-[#ff6b1f] transition hover:text-white"
-                      >
-                        View All Services
-                        <svg className="h-3.5 w-3.5" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M2 6H10M7 3L10 6L7 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      </Link>
-                    </div> */}
                   </div>
                 </div>
 
                 {/* Mobile: accordion */}
                 <div className="md:hidden">
-                  <button
-                    type="button"
-                    className="flex w-full items-center justify-between py-1 text-[15px] font-medium text-white transition hover:text-[#ff6b1f]"
+                  <div
+                    role="button"
+                    tabIndex={0}
+                    className="flex w-full cursor-pointer items-center justify-between py-1 text-[14px] tracking-[0.1em] font-bold uppercase text-white transition hover:text-[#ff6b1f]"
                     onClick={() => setIsMobileServicesOpen((o) => !o)}
+                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setIsMobileServicesOpen((o) => !o) }}
                   >
                     {item.label}
                     <svg
@@ -164,11 +160,12 @@ export function Header() {
                     >
                       <path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
-                  </button>
+                  </div>
 
                   <div
-                    className={`overflow-hidden transition-[max-height,opacity] duration-200 ${isMobileServicesOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-                      }`}
+                    className={`overflow-hidden transition-[max-height,opacity] duration-200 ${
+                      isMobileServicesOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                    }`}
                   >
                     <div className="mt-2 flex flex-col gap-0.5 border-l border-[#ff6b1f]/30 pl-3">
                       {serviceLinks.map((service) => (
@@ -190,10 +187,9 @@ export function Header() {
                 </div>
               </div>
             ) : (
-              /* ── Regular nav link ── */
               <Link
                 key={item.label}
-                className="py-1 text-[15px] font-medium tracking-[0] text-white transition hover:text-[#ff6b1f] md:py-0 md:text-[16px]"
+                className="py-1 text-[14px] tracking-[0.1em] font-bold uppercase text-white transition hover:text-[#ff6b1f] md:py-0 md:text-[13px] block"
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -202,6 +198,16 @@ export function Header() {
             )
           )}
         </nav>
+
+        {/* Desktop Right Action */}
+        <div className="hidden md:flex md:w-auto md:flex-1 md:justify-end">
+          <Link href="/contact" passHref>
+            <Button className="h-[42px] cursor-pointer px-6 text-[14px] font-bold tracking-wide">
+              Book a Consultation
+            </Button>
+          </Link>
+        </div>
+
       </header>
     </div>
   );

@@ -14,10 +14,10 @@ const testimonials = [
     image: "/assets/Testimonels/Manhal Naser - Yula.jpg",
   },
   {
-    company: "Flowork",
-    author: "Abir Moussa - CEO",
-    quote: "From launch strategy to content and digital marketing, USS helped us successfully introduce flowork to the Dubai market. Their team played a crucial role in building awareness and generating momentum ahead of opening.",
-    image: "/assets/Testimonels/Abir Moussa - Flowork.webp",
+    company: "Cinnamood",
+    author: "Sabrina Gora - Brand Director",
+    quote: "Launching in the UAE was an exciting milestone for our brand. The support we received helped us build strong local awareness while maintaining the look, feel, and values that define Cinnamood.",
+    image: "/assets/Testimonels/Sabrina Gora - Cinnamood.jpeg",
   },
   {
     company: "Agency 8",
@@ -38,10 +38,10 @@ const testimonials = [
     image: "/assets/Testimonels/Disturbed Innovations Group - Co-Founders.png",
   },
   {
-    company: "Cinnamood",
-    author: "Sabrina Gora - Brand Director",
-    quote: "Launching in the UAE was an exciting milestone for our brand. The support we received helped us build strong local awareness while maintaining the look, feel, and values that define Cinnamood.",
-    image: "/assets/Testimonels/Sabrina Gora - Cinnamood.jpeg",
+    company: "Flowork",
+    author: "Abir Moussa - CEO",
+    quote: "From launch strategy to content and digital marketing, USS helped us successfully introduce flowork to the Dubai market. Their team played a crucial role in building awareness and generating momentum ahead of opening.",
+    image: "/assets/Testimonels/Abir Moussa - Flowork.webp",
   },
   {
     company: "Residency Advanced",

@@ -1,5 +1,7 @@
 "use client";
 
+import { FaInstagramSquare, FaLinkedin } from "react-icons/fa";
+
 const companyLinks = ["About USS", "Our Projects", "Our Team", "Contact", "Book a Call"];
 
 const offices = [
@@ -18,8 +20,16 @@ const offices = [
 ];
 
 const socials = [
-  { label: "Facebook", icon: "f", href: "#" },
-  { label: "LinkedIn", icon: "in", href: "#" },
+  { 
+    label: "Instagram", 
+    href: "#",
+    icon: <FaLinkedin size={16} />
+  },
+  { 
+    label: "LinkedIn", 
+    href: "#",
+    icon: <FaInstagramSquare size={16} />
+  },
 ];
 
 export function Footer() {
@@ -317,23 +327,25 @@ margin-top: 4px;
 
               <p className="uss-newsletter-label">Subscribe to our newsletter</p>
 
-              <div className="uss-subscribe-form">
+              <form action="mailto:contact@unitedstrategicsolutions.com" method="GET" className="uss-subscribe-form">
                 <label htmlFor="footer-email" className="sr-only">Your email</label>
                 <input
                   id="footer-email"
+                  name="email"
                   type="email"
                   placeholder="Your email"
                   className="uss-subscribe-input"
+                  required
                 />
                 <button type="submit" className="uss-subscribe-btn">
                   Subscribe
                 </button>
-              </div>
+              </form>
             </div>
 
             {/* Middle: Company links */}
             <nav aria-label="Footer company navigation">
-              <h3 className="uss-col-heading">Company</h3>
+              <h3 className="uss-col-heading">Quick Links</h3>
               <ul className="uss-nav-list">
                 {companyLinks.map((link) => (
                   <li key={link}>

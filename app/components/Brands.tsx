@@ -11,17 +11,41 @@ const brandCards = [
   { image: "/assets/brands/adidas.png" },
 ];
 
-const trustedBrandImages = [
-  { name: "Agency 8",        image: "/assets/100brands/image 1.png", size: "170px" },
-  { name: "Vodafone",        image: "/assets/brands/vodafone.png",   size: "170px" },
-  { name: "Sadia Psychology",image: "/assets/brands/sadia.png",      size: "170px" },
-  { name: "Flowork",         image: "/assets/brands/flowork.png",    size: "170px" },
-  { name: "Unilever",        image: "/assets/100brands/image 3.png", size: "170px" },
+const ecwLogos = [
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/01-1.png",
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/02-1.png",
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/03-1.png",
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/04-1.png",
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/06-1.png",
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/07-1.png",
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/05/08.png",
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/09-1.png",
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/010-1.png",
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/011-1.png",
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/012-1.png",
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/013-1.png",
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/014-1.png",
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/015-1.png",
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/016-1.png",
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/017-1.png",
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/018-1.png",
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/019-1.png",
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/020-1.png",
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/021-1.png",
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/022-1.png",
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/023-1.png",
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/024-1.png",
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/025-1.png",
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/026-1.png",
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/027-1.png",
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/028-1.png",
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/029-1.png",
+  "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/030-1.png"
 ];
 
 export function Brands() {
   return (
-    <section className="relative z-10 px-6 pb-[100px] pt-[58px] text-white lg:pb-[111px]">
+    <section className="relative z-10 pb-[100px] pt-[58px] text-white lg:pb-[111px]">
 
       {/* ── Section heading ── */}
       <FadeDown delay={0.1}>
@@ -31,7 +55,7 @@ export function Brands() {
       </FadeDown>
 
       {/* ── Brand Cards — horizontal left-scrolling marquee ── */}
-      <div className="mt-[26px] max-w-[1150px] mx-auto overflow-hidden -mx-6">
+      <div className="mt-[26px] w-full mx-auto overflow-hidden">
         <div className="brand-cards-track flex items-center gap-x-12">
           {/* Three sets for seamless loop */}
           {[...brandCards, ...brandCards, ...brandCards].map((brand, index) => (
@@ -61,21 +85,18 @@ export function Brands() {
           </h2>
         </FadeUp>
 
-        {/* ── Logo marquee — same direction, same speed ── */}
-        <div className="mt-[40px] max-w-[900px] mx-auto overflow-hidden -mx-6">
-          <div className="logos-track flex items-center gap-x-20 sm:gap-x-28">
-            {[...trustedBrandImages, ...trustedBrandImages, ...trustedBrandImages].map((brand, index) => (
+        {/* ── Logo marquee — continuous scroll ── */}
+        <div className="mt-[50px] w-full mx-auto max-w-[1000px]  overflow-hidden">
+          <div className="logos-track flex items-center gap-x-6">
+            {[...ecwLogos, ...ecwLogos, ...ecwLogos].map((src, index) => (
               <article
                 key={index}
-                className="group relative h-[90px] shrink-0"
-                style={{ width: brand.size }}
+                className="group relative h-[50px] sm:h-[90px] lg:h-[115px] w-[170px] shrink-0"
               >
-                <Image
-                  src={brand.image}
-                  alt={`${brand.name} logo`}
-                  fill
-                  sizes={brand.size}
-                  className="object-contain opacity-80 saturate-[0.85] transition duration-500
+                <img
+                  src={src}
+                  alt={`Brand logo ${index}`}
+                  className="w-full h-full object-contain brightness-0 invert opacity-70 transition duration-500
                              group-hover:scale-105 group-hover:opacity-100"
                 />
               </article>
@@ -88,22 +109,22 @@ export function Brands() {
         /* ── Brand cards: scroll left continuously ── */
         .brand-cards-track {
           width: max-content;
-          animation: marquee-left 25s linear infinite;
+          animation: marquee-right 20s linear infinite;
           will-change: transform;
         }
 
         /* ── Logos: same direction, same speed ── */
         .logos-track {
           width: max-content;
-          animation: marquee-left 35s linear infinite;
+          animation: marquee-right 80s linear infinite;
           will-change: transform;
         }
 
         /* Both scroll by exactly 1/3 (one set) so the loop is seamless
            with three duplicated sets */
-        @keyframes marquee-left {
-          0%   { transform: translateX(0); }
-          100% { transform: translateX(-33.3333%); }
+        @keyframes marquee-right {
+          0%   { transform: translateX(-33.3333%); }
+          100% { transform: translateX(0); }
         }
 
         /* Respect reduced-motion preference */
