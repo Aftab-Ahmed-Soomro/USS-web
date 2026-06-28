@@ -103,15 +103,15 @@ export default function ContactHero() {
 
             {/* Heading — slides in from left with word-stagger feel */}
             <motion.h2
-              className="mt-6 font-semibold text-white leading-[1] whitespace-nowrap"
-              style={{ fontSize: "clamp(2.6rem, 4.2vw, 3.75rem)", fontFamily: "Poppins, sans-serif" }}
+              className="mt-6 font-semibold text-white leading-[1] whitespace-nowrap text-[42px] sm:text-[56px] tracking-[-1.5px]"
+              style={{ fontFamily: "Poppins, sans-serif" }}
               initial={{ opacity: 0, x: -50, filter: "blur(12px)" }}
               animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.75, delay: 0.25, ease }}
             >
               get in{" "}
               <motion.span
-                className="text-[#ff5a14] italic font-medium"
+                className="text-[#ff5a14] italic font-normal text-[52px] sm:text-[72px]"
                 style={{ fontFamily: "'Playfair Display', serif" }}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}

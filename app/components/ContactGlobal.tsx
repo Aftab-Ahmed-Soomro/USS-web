@@ -10,21 +10,24 @@ const regions = [
     name: "United States",
     description:
       "Supporting growth-focused businesses through strategy, creative, and performance marketing.",
-    image: "/assets/Global/global1.jpg",
+    address: "Atlanta Office 1175, Peachtree St NE, Atlanta, GA 30361, United States",
+    image: "/assets/Downtown Atlanta.webp",
     alt: "United States skyline at sunset",
   },
   {
     name: "United Kingdom",
     description:
       "Helping brands scale through structured marketing systems and execution.",
-    image: "/assets/Global/global2.jpg",
+    address: "London Office 4, Green Dragon House, London, CR0 1FS, United Kingdom",
+    image: "/assets/UK.webp",
     alt: "United Kingdom skyline at night",
   },
   {
     name: "United Arab Emirates",
     description:
       "Partnering with ambitious companies looking to accelerate growth and market presence.",
-    image: "/assets/Global/global3.jpg",
+    address: "Dubai Flowork Offices, Business Park 4, Dubai Hills, United Arab Emirates",
+    image: "/assets/Dubai.jpeg",
     alt: "UAE skyline at dusk",
   },
 ];
@@ -177,7 +180,10 @@ export default function WeAreGlobal() {
               </div>
               <div className="wag-card-body">
                 <h2 className="wag-card-title">{regions[0].name}</h2>
-                <p className="wag-card-desc">{regions[0].description}</p>
+                <p className="wag-card-desc">{regions[0].description}</p> <br />
+                <div className="wag-card-desc mt-4">
+                  {regions[0].address}
+                </div>
               </div>
             </div>
           </FadeLeft>
@@ -190,7 +196,10 @@ export default function WeAreGlobal() {
               </div>
               <div className="wag-card-body">
                 <h2 className="wag-card-title">{regions[1].name}</h2>
-                <p className="wag-card-desc">{regions[1].description}</p>
+                <p className="wag-card-desc">{regions[1].description}</p> <br />
+                <div className="wag-card-desc mt-4">
+                  {regions[1].address}
+                </div>
               </div>
             </div>
           </FadeUp>
@@ -203,7 +212,10 @@ export default function WeAreGlobal() {
               </div>
               <div className="wag-card-body">
                 <h2 className="wag-card-title">{regions[2].name}</h2>
-                <p className="wag-card-desc">{regions[2].description}</p>
+                <p className="wag-card-desc">{regions[2].description}</p> <br />
+                <div className="wag-card-desc mt-4">
+                  {regions[2].address}
+                </div>
               </div>
             </div>
           </FadeRight>

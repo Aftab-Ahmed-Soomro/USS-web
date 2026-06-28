@@ -51,7 +51,7 @@ export default function AboutPage() {
                 meet our founder &
               </p>
               <h2
-                className="text-[#FF5500] text-[42px] sm:text-[72px] italic leading-[0.9]"
+                className="text-[#FF5500] text-[42px] sm:text-[70px] italic leading-[0.9]"
                 style={{ fontFamily: "Times New Roman, Times, serif", fontWeight: 400 }}
               >
                 <span className="font-medium text-[42px] sm:text-[56px]" style={{ fontFamily: "Arial, Helvetica, sans-serif", color: "white",fontWeight: 500 }}>
@@ -67,13 +67,13 @@ export default function AboutPage() {
             {/* LEFT — Portrait — slides in from left */}
             <FadeLeft delay={0.2}>
               <div className="relative w-full max-w-[280px] mx-auto md:mx-0">
-                <div className="relative aspect-[3/4] w-full overflow-hidden bg-[#f0ece6]">
+                <div className="relative aspect-[3/4] w-full min-h-[300px] overflow-hidden bg-[#f0ece6]">
                   <Image
                     src="/assets/founder.jpg"
                     alt="Emmanuel Cole Williams, Founder and CEO of USS"
                     fill
                     sizes="(min-width: 1024px) 280px, (min-width: 768px) 240px, 80vw"
-                    className="object-cover object-[center_10%]"
+                    className="object-cover object-[center_100%]"
                   />
                 </div>
               </div>
@@ -126,14 +126,14 @@ export default function AboutPage() {
 
               {/* Quote — rises up */}
               <FadeUp delay={0.45}>
-                <blockquote className="text-[1.45rem] md:text-[1.65rem] lg:text-[32px] font-medium leading-[35px] tracking-[0%] text-white max-w-[500px]">
+                <blockquote className="text-[1.45rem] mt-4 md:text-[1.65rem] lg:text-[32px] font-medium leading-[35px] tracking-[0%] text-white max-w-[500px]">
                   &ldquo;Structured marketing systems that generate revenue.&rdquo;
                 </blockquote>
               </FadeUp>
 
               {/* Signed row — slides in from right */}
               <FadeRight delay={0.55}>
-                <div className="mt-20 flex items-center w-full gap-4">
+                <div className="mt-16 flex items-center w-full gap-4">
                   <div className="h-[1px] bg-white/20 flex-grow" />
                   <span className="text-[#F5F5F5] text-[9px] font-medium tracking-[3px] shrink-0 uppercase">
                     Signed, E.C.W.

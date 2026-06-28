@@ -81,7 +81,7 @@ const categories = [
     topTag: "Helping Business Expand",
     bottomTag: "Helping Business Grow",
     projects: [
-      { title: "Sadia Phycology", description: "Black Friday Planner Project", image: "/assets/projectsPagePics/sadia.png", tags: ["Scaling Business"], href: "/projects/sadia-psychology" },
+      { title: "Sadia Psychology", description: "Black Friday Planner Project", image: "/assets/projectsPagePics/sadia.png", tags: ["Scaling Business"], href: "/projects/sadia-psychology", imageClass: "object-[center_top]" },
       { title: "Tish Wonders", description: "New E-Book Launch", image: "/assets/projectsPagePics/tesh.png", tags: ["Scaling Business"], href: "/projects/tish-wonders" }
     ]
   },
@@ -122,14 +122,14 @@ const labelCardVariants = {
 
 function ProjectsCta() {
   return (
-    <section className="relative z-10 px-6 py-[80px] text-white overflow-hidden">
+    <section className="relative z-10 px-6 pb-[80px]  text-white overflow-hidden">
       <div className="relative mx-auto max-w-[800px] text-center">
 
         {/* Eyebrow pill — drops down */}
         <FadeDown delay={0.1}>
           <div className="flex items-center justify-center gap-2 mb-8">
             <div className="h-1.5 w-1.5 rounded-full bg-[#ff5500]"></div>
-            <p className="text-[9px] font-bold uppercase tracking-[3px] text-white/90">
+            <p className="text-[9px] font-bold uppercase tracking-[3px] text-white">
               FULL-STACK MARKETING
             </p>
           </div>
@@ -137,13 +137,13 @@ function ProjectsCta() {
 
         {/* Main heading — rises up */}
         <FadeUp delay={0.2}>
-          <h2 className="mb-10 text-[42px] font-medium leading-[1.05] tracking-[-1.5px] sm:text-[60px]">
+          <h2 className="mb-10 text-[42px] font-medium leading-[1.05] tracking-[-6%] sm:text-[56px]">
             we are your{" "}
             <span className="font-[var(--font-cormorant)] text-[1.1em] font-light timesFontFamily italic">
               360&deg;
             </span>
             <br />
-            <span className="font-[var(--font-cormorant)] text-[1.1em] font-light timesFontFamily italic">
+            <span className="font-[var(--font-cormorant)] text-[1.1em] sm:text-[72px] tracking-[-6%] font-normal timesFontFamily italic">
               marketing agency
             </span>
           </h2>
@@ -151,7 +151,7 @@ function ProjectsCta() {
 
         {/* Body copy — slides in from right */}
         <FadeRight delay={0.3}>
-          <div className="mx-auto max-w-[600px] space-y-8 text-[12px] leading-[1.7] tracking-[1.4px] text-white/80">
+          <div className="mx-auto max-w-[640px] space-y-8 text-[12px] sm:text-[16px] leading-[1.7] tracking-[0%] text-white">
             <p>
               Calling ourselves a data-driven, problem solving, people connecting, digital crazy,
               talent engaging creative agency is too long winded.. so we call ourselves USS.
@@ -165,10 +165,10 @@ function ProjectsCta() {
         {/* CTA buttons — rise up last */}
         <FadeUp delay={0.4}>
           <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <button className="h-[40px] w-full sm:w-auto px-10 rounded-full bg-[#ff5500] text-[8px] font-bold text-white transition-colors hover:bg-[#ff6b1f]">
+            <button className="h-[40px] w-full sm:w-auto px-10 rounded-full bg-[#ff5500] text-[8px] font-bold sm:text-[13px] tracking-[0.52px] text-white transition-colors hover:bg-[#ff6b1f]">
               Book a Call
             </button>
-            <button className="flex h-[40px] w-full sm:w-auto px-8 items-center justify-center gap-2 rounded-full border border-white bg-transparent text-[8px] font-bold text-white transition-colors hover:bg-white/5">
+            <button className="flex h-[40px] w-full sm:w-auto px-8 items-center justify-center gap-2 rounded-full border border-white bg-transparent text-[8px] font-bold sm:text-[13px] tracking-[0.52px] text-white transition-colors hover:bg-white/5">
               See How We Scale
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1 opacity-80">
                 <path d="M5 12h14"></path>
@@ -203,9 +203,9 @@ export default function ProjectsPage() {
 
           {/* Main heading — rises up */}
           <FadeUp delay={0.2}>
-            <h1 className="mt-[20px] font-[var(--font-be-vietnam)] text-[38px] font-medium lowercase leading-[1.03] tracking-[-0.9px] text-white sm:text-[56px] sm:tracking-[2px]">
+            <h1 className="mt-[20px] font-[var(--font-be-vietnam)] text-[38px] font-bold lowercase leading-[1.03] tracking-[-0.9px] text-white sm:text-[56px] sm:tracking-[2px]">
               projects that make an{" "}
-              <span className="font-[var(--font-cormorant)] text-[1.15em] font-extralight timesFontFamily italic tracking-[-0.035em] text-[#ff5500]">
+              <span className="font-[var(--font-cormorant)] text-[1.15em] sm:text-[72px] font-extralight timesFontFamily italic tracking-[-0.035em] text-[#ff5500]">
                 impact
               </span>
             </h1>
@@ -213,7 +213,7 @@ export default function ProjectsPage() {
 
           {/* Subheading — slides in from right */}
           <FadeRight delay={0.3}>
-            <p className="mt-[30px] font-[var(--font-be-vietnam)] text-[12px] font-medium uppercase leading-[1.35] tracking-[0.3px] text-white sm:text-[15px]">
+            <p className="mt-[30px] font-[var(--font-be-vietnam)] text-[12px] font-medium uppercase leading-[1.35] text-white sm:text-[16.5px]">
               TAKE A LOOK AT USS PROJECTS ACROSS UK, US AND MIDDLE EAST
             </p>
           </FadeRight>
@@ -222,7 +222,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Categories scroll rows */}
-      <section className="bg-black pb-[124px] pt-[20px] text-white sm:pb-[150px]">
+      <section className="bg-black pb-[130px] pt-[20px] text-white">
         <div className="flex flex-col gap-8 sm:gap-12 max-w-[1200px] mx-auto">
           {categories.map((category, categoryIdx) => (
             <motion.div
@@ -237,7 +237,7 @@ export default function ProjectsPage() {
               {/* Sticky category label card — slides in from left */}
               <motion.div
                 // variants={labelCardVariants}
-                className="sticky left-0 z-10 shrink-0 w-[260px] sm:w-[320px] aspect-[4/5] rounded-[16px] bg-[#0f0f0f] border border-white/5 relative p-5 sm:p-6 flex flex-col justify-between self-start"
+                className="sticky left-0 z-10 shrink-0 w-[260px] sm:w-[320px] aspect-[4/5] rounded-[16px] bg-[#0E0E0E] border border-white/5 relative p-5 sm:p-6 flex flex-col justify-between self-start"
               >
                 {/* Subtle top-left glow accent */}
                 <div className="pointer-events-none absolute -top-10 -left-10 h-[180px] w-[180px] rounded-full bg-[#ff5500] opacity-[0.06] blur-[60px]" />
@@ -275,7 +275,9 @@ export default function ProjectsPage() {
                         alt={project.title}
                         fill
                         sizes="(min-width: 640px) 320px, 260px"
-                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        className={`object-cover transition-transform duration-700 group-hover:scale-105 ${
+                          (project as any).imageClass || ""
+                        }`}
                       />
                       {/* Gradient overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-black/10 transition-opacity duration-500 group-hover:opacity-90" />
