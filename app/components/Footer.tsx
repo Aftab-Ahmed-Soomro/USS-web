@@ -36,10 +36,11 @@ export function Footer() {
 
         .uss-footer-inner {
           max-width: 1150px;
-          margin: 0 auto;
+          margin: 8px auto;
           display: flex;
           flex-direction: column;
           gap: 72px;
+          padding: 0 24px;
         }
 
         /* ── Top grid ── */

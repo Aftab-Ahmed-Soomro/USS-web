@@ -13,34 +13,36 @@ import { VideoPreview } from "../components/VideoPreview";
 import { PerformanceMarketing } from "../components/PerformanceMarketing";
 import { PaidAds } from "../components/PaidAds";
 import { Services } from "../components/Services";
+import { Team } from "../components/Team";
+import { Footer } from "../components/Footer";
 
 function Hero() {
   return (
       <main className="relative z-10 mx-auto grid max-w-[1150px] flex-1 items-center gap-12 px-6 pb-[68px] pt-[58px]  md:grid-cols-[minmax(0,1fr)_431px] md:gap-14  lg:pb-[74px] lg:pt-[79px] xl:grid-cols-[575px_431px] xl:gap-[132px]">
         <section className="max-w-[560px] text-white">
           
-          <h1 className="max-w-[560px] text-[43px] font-bold leading-[1.03] tracking-[-1.7px] sm:text-[54px] lg:text-[58px]">
+          <h1 className="max-w-[560px] text-[43px] font-bold leading-[1.03]  sm:text-[54px] lg:text-[56px]">
             we don’t just {" "}
-            <span className="font-serif text-[1.24em] font-extralight timesFontFamily italic leading-[0.7] tracking-[-1px]">
+            <span className="font-serif text-[52px] sm:text-[72px] font-extralight timesFontFamily italic leading-[0.7] tracking-[-1px]">
               market
             </span>
           </h1>
-          <h1 className="max-w-[560px] text-[43px] font-bold leading-[1.03] tracking-[-1.7px] sm:text-[54px] lg:text-[58px]">
+          <h1 className="max-w-[560px] text-[43px] font-bold leading-[1.03]  sm:text-[54px] lg:text-[56px]">
             we scale{" "}
-            <span className="font-serif text-[1.24em] font-extralight timesFontFamily italic leading-[0.7] tracking-[-1px]">
+            <span className="font-serif text-[52px] sm:text-[72px] font-extralight timesFontFamily italic leading-[0.7] tracking-[-1px]">
               brands
             </span>
           </h1>
   
-          <p className="mt-[43px] max-w-[530px] text-[16px] font-normal leading-[1.62] tracking-[-0.2px] text-white/90">
+          <p className="mt-[43px] max-w-[550px] text-[16px] sm:text-[18px] font-normal leading-[1.62] text-white/90">
             We are a 360 digital marketing agency that combine strategy, creative and performance marketing into one connected system designed to scale your business. 
           </p>
 
-          <p className="mt-[43px] max-w-[465px] text-[16px] font-normal leading-[1.62] tracking-[-0.2px] text-white/90">
+          <p className="mt-[43px] max-w-[485px] text-[16px] sm:text-[18px] font-normal leading-[1.62] text-white/90">
             Trusted by 100+ SMEs across UK, US & UAE.
           </p>
   
-          <Button className="mt-[34px] h-[43px] px-[33px] text-[12px]">Book a Consultation</Button>
+          <Button className="mt-[34px] h-[43px] px-[33px] text-[12px] sm:text-[14px] font-bold">Book a Consultation</Button>
         </section>
   
         <div className="flex justify-center md:justify-end">
@@ -69,6 +71,8 @@ export default function New360WithForm() {
         <EmailVisuals />    
         <Testimonials />
         <GoodCompanyMap />
+        <Team />
+        <Footer />
     </div>
   )
 }

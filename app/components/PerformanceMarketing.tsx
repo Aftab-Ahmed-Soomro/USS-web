@@ -1,17 +1,17 @@
 import Image from "next/image";
 
 const purposeItems = [
-  "Align marketing spend with revenue targets",
-  "Identify the highest-leverage growth channels",
+  "Creates clarity around your marketing goals",
+  "Identifies where to focus your time and budget",
   "Build a repeatable testing and learning cadence",
   "Create predictable, compounding pipeline",
 ];
 
 const deliverableItems = [
-  "90-day growth roadmap and forecast",
-  "Channel-by-channel media plan and budget",
-  "KPI framework and live reporting dashboard",
-  "Quarterly strategic review and re-plan",
+  "3 month marketing roadmap and priorities",
+  "Audience and competitor insights",
+  "Channel strategy recommendations",
+  "Action plan for implementation",
 ];
 
 export function PerformanceMarketing() {
@@ -23,20 +23,20 @@ export function PerformanceMarketing() {
         <div className="flex flex-col">
 
           {/* Eyebrow */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 mb-3">
             <span className="size-[6px] shrink-0 rounded-full bg-[#ff5500]" />
             <p
               style={{ fontFamily: "var(--font-be-vietnam)" }}
-              className="text-[9px] font-medium uppercase tracking-[3px] text-black/50"
+              className="text-[9px] sm:text-[11px] font-medium uppercase tracking-[3.52px] text-black/50"
             >
-              Performance Marketing
+              STRATEGIC GROWTH
             </p>
           </div>
 
           {/* Title */}
           <h2
             style={{ fontFamily: "var(--font-be-vietnam)" }}
-            className="mt-5 text-[34px] sm:text-[40px] xl:text-[46px] font-medium leading-[1.08] tracking-[-1.2px] text-[#111]"
+            className="mt-5 text-[34px] sm:text-[40px] lg:text-[56px] font-medium leading-[1.08] tracking-[-2.52px] text-[#111]"
           >
             Marketing &amp; <br className="hidden sm:block" />
             Growth Strategy
@@ -45,9 +45,9 @@ export function PerformanceMarketing() {
           {/* Description */}
           <p
             style={{ fontFamily: "var(--font-inter)" }}
-            className="mt-5 max-w-[400px] text-[13px] leading-[1.65] text-black"
+            className="mt-8 max-w-[450px] text-[13px] sm:text-[16px] leading-[1.65] text-black"
           >
-            We build clear, data-driven marketing strategies designed to scale your business not just generate leads. Trusted by brands across UAE and globally.
+            Are you are running marketing but without a clear strategy? We help businesses find the right direction, identify growth opportunities and create a clear plan to move forward.
           </p>
 
           {/* Divider */}
@@ -56,18 +56,16 @@ export function PerformanceMarketing() {
           {/* What It Is */}
           <p
             style={{ fontFamily: "var(--font-be-vietnam)" }}
-            className="mt-7 text-[9px] font-bold uppercase tracking-[3px] text-black/40"
+            className="mt-8 text-[9px] sm:text-[11px] font-normal uppercase tracking-[3.52px] text-black/40"
           >
-            What It Is
+            What We Do
           </p>
 
           <p
             style={{ fontFamily: "var(--font-inter)" }}
-            className="mt-4 max-w-[380px] text-[13px] leading-[1.5] font-normal text-[#000]"
+            className="mt-4 mb-8 max-w-[450px] text-[13px] sm:text-[16px] leading-[1.65] text-black"
           >
-            An end-to-end growth program combining paid media,
-            lifecycle and analytics into one accountable system –
-            operated by a dedicated USS team.
+            A complete marketing strategy covering your brand, audience, channels and customer journey.
           </p>
 
           {/* Purpose + Deliverables Table */}
@@ -76,13 +74,13 @@ export function PerformanceMarketing() {
             {/* Column Headers */}
             <p
               style={{ fontFamily: "var(--font-be-vietnam)" }}
-              className="text-[8.5px] font-semibold uppercase tracking-[2.5px] text-black/40 pb-3"
+              className="text-[8.5px] sm:text-[11px] font-normal uppercase tracking-[3.52px] text-[#11111199] pb-5"
             >
-              Purpose
+              HOW IT HELPS
             </p>
             <p
               style={{ fontFamily: "var(--font-be-vietnam)" }}
-              className="text-[8.5px] font-semibold uppercase tracking-[2.5px] text-black/40 pb-3"
+              className="text-[8.5px] sm:text-[11px] font-normal uppercase tracking-[3.52px] text-[#11111199] pb-5"
             >
               Deliverables
             </p>
@@ -97,13 +95,13 @@ export function PerformanceMarketing() {
                 >
                   <span
                     style={{ fontFamily: "var(--font-be-vietnam)" }}
-                    className="shrink-0 text-[11px] font-bold text-[#ff5500] tabular-nums"
+                    className="shrink-0 mt-[2px] text-[11px] sm:text-[12px] font-normal tracking-[2.4px] text-[#ff5500] tabular-nums"
                   >
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <p
                     style={{ fontFamily: "var(--font-inter)" }}
-                    className="text-[12px] leading-[1.5] text-black/90 max-w-[200px]"
+                    className="text-[12px] sm:text-[15px] leading-[1.5] text-black/90 max-w-[200px]"
                   >
                     {purpose}
                   </p>
@@ -116,13 +114,13 @@ export function PerformanceMarketing() {
                 >
                   <span
                     style={{ fontFamily: "var(--font-be-vietnam)" }}
-                    className="shrink-0 text-[11px] font-bold text-[#ff5500] tabular-nums"
+                    className="shrink-0 mt-[2px] text-[11px] sm:text-[12px] font-normal tracking-[2.4px] text-[#ff5500] tabular-nums"
                   >
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <p
                     style={{ fontFamily: "var(--font-inter)" }}
-                    className="text-[12px] leading-[1.5] text-black/90 max-w-[200px]"
+                    className="text-[12px] sm:text-[15px] leading-[1.5] text-black/90 max-w-[170px]"
                   >
                     {deliverableItems[i]}
                   </p>
@@ -136,7 +134,7 @@ export function PerformanceMarketing() {
         <div className="flex flex-col gap-3">
 
           {/* Large hero image */}
-          <div className="relative w-full overflow-hidden rounded-[6px] aspect-[4/3]">
+          <div className="relative w-full overflow-hidden rounded-[6px] aspect-[4/3] min-h-[530px]">
             <Image
               src="/assets/Performance Marketing/hero.jpg"
               alt="Marketing analyst working at desktop"
@@ -149,7 +147,7 @@ export function PerformanceMarketing() {
 
           {/* Two smaller images */}
           <div className="grid grid-cols-2 gap-3">
-            <div className="relative w-full overflow-hidden rounded-[6px] aspect-[4/3]">
+            <div className="relative w-full overflow-hidden rounded-[6px] aspect-[4/3] min-h-[260px]">
               <Image
                 src="/assets/Performance Marketing/sub1.jpg"
                 alt="Performance marketing analytics dashboard"
@@ -158,7 +156,7 @@ export function PerformanceMarketing() {
                 className="object-cover object-center"
               />
             </div>
-            <div className="relative w-full overflow-hidden rounded-[6px] aspect-[4/3]">
+            <div className="relative w-full overflow-hidden rounded-[6px] aspect-[4/3] min-h-[260px]">
               <Image
                 src="/assets/Performance Marketing/sub2.jpg"
                 alt="Marketing strategy reports and planning"
