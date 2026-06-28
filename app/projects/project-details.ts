@@ -130,6 +130,7 @@ export const projectDetails = [
       description:
         "A USS project overview for Agency 8, covering custom website development, email marketing, WhatsApp marketing integration, and digital strategy.",
     },
+    hideVideoSection: true,
   },
   {
     slug: "sadia-psychology",
@@ -219,6 +220,7 @@ export const projectDetails = [
       description:
         "A USS project overview for launching Sadia Psychology's 2024 planner through product concept development, marketing strategy, and digital launch execution.",
     },
+    hideVideoSection: true,
   },
   {
     slug: "women-who-thrive",
@@ -308,6 +310,7 @@ export const projectDetails = [
       description:
         "A USS project overview for growing Women Who Thrive through community-led marketing strategy, social media management, content creation, and email marketing.",
     },
+    hideVideoSection: true,
   },
   {
     slug: "picksperience",
@@ -859,6 +862,7 @@ export const projectDetails = [
       description:
         "A USS project overview for building Blank DXB from the ground up through business setup, branding, website design, and paid media strategy.",
     },
+    hideVideoSection: true,
   },
   {
     slug: "reclaim-us",
@@ -948,6 +952,7 @@ export const projectDetails = [
       description:
         "A USS project overview for launching Reclaim in the US travel market through marketing strategy, paid media, email marketing, and content creation.",
     },
+    hideVideoSection: true,
   },
   {
     slug: "adidas-middle-east",
@@ -1127,6 +1132,7 @@ export const projectDetails = [
       description:
         "A USS project overview for Fête Events, delivering bespoke, extraordinary corporate events through comprehensive marketing strategy and digital presence.",
     },
+    hideVideoSection: true,
   },
   {
     slug: "precision-talk",
@@ -1216,6 +1222,7 @@ export const projectDetails = [
       description:
         "A USS project overview for Precision Talk, an AI voice agent solution designed to help businesses handle customer calls instantly, 24/7.",
     },
+    hideVideoSection: true,
   },
   {
     slug: "disturbed-innovations",
@@ -1305,6 +1312,7 @@ export const projectDetails = [
       description:
         "A USS project overview for the Disturbed Innovations Group rebrand, covering website design, brand positioning, and sales material creation.",
     },
+    hideVideoSection: true,
   },
   {
     slug: "afro-maya",
@@ -1394,6 +1402,7 @@ export const projectDetails = [
       description:
         "A USS project overview for Afro Maya, driving growth for an e-commerce fashion brand through website development, content creation, and digital marketing.",
     },
+    hideVideoSection: true,
   },
   {
     slug: "coshe-juices",
@@ -1574,6 +1583,7 @@ export const projectDetails = [
       description:
         "A USS project overview for M&N Nail Spa, a luxury London salon, focused on content creation, social media management, and increasing physical footfall.",
     },
+    hideVideoSection: true,
   },
   {
     slug: "tish-wonders",
@@ -1663,6 +1673,7 @@ export const projectDetails = [
       description:
         "A USS project overview for Tish Wonders, launching a digital e-book to a global audience through website development, email strategy, and targeted marketing.",
     },
+    hideVideoSection: true,
   },
   {
     slug: "residency-advanced",
@@ -1752,6 +1763,7 @@ export const projectDetails = [
       description:
         "A USS project overview for Residency Advanced, scaling a second citizenship consultancy through targeted Google Ads and performance marketing.",
     },
+    hideVideoSection: true,
   },
   {
     slug: "oak",
@@ -1841,6 +1853,7 @@ export const projectDetails = [
       description:
         "A USS project overview for Residency Advanced, scaling a second citizenship consultancy through targeted Google Ads and performance marketing.",
     },
+    hideVideoSection: true,
   },
 ] satisfies ProjectDetail[];
 

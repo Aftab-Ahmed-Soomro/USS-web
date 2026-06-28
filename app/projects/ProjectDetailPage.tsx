@@ -176,6 +176,50 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
       </section>
       )}
 
+      {/* ── VIDEO SECTION ── */}
+      {!project.hideVideoSection && (
+        <section className="bg-black px-5 pb-[80px] pt-[80px] text-center text-white sm:px-8 sm:pb-[107px] sm:pt-[83px] lg:px-12">
+        <div className="mx-auto max-w-[1180px]">
+          {/* Heading — drops down */}
+          <FadeDown delay={0.1}>
+            <h2 className="font-[var(--font-be-vietnam)] text-[31px] font-bold lowercase leading-none tracking-[-1.5px] sm:text-[43px]">
+              {project.videoTitle}
+            </h2>
+          </FadeDown>
+
+          {/* Subtitle — rises up */}
+          <FadeUp delay={0.2}>
+            <p className="mt-[20px] font-[var(--font-be-vietnam)] text-[13px] font-light uppercase leading-none tracking-[0] text-white/70 sm:text-[17px]">
+              {project.videoSubtitle}
+            </p>
+          </FadeUp>
+
+          {/* Video player — rises up last */}
+          <FadeUp delay={0.3}>
+            {project.videoSrcs && project.videoSrcs.length === 3 ? (
+              <TripleVideoPlayer
+                srcs={project.videoSrcs}
+                productName={project.productName}
+              />
+            ) : project.videoSrcs && project.videoSrcs.length === 2 ? (
+              <DoubleVideoPlayer
+                srcs={project.videoSrcs as [string, string]}
+                productName={project.productName}
+              />
+            ) : (
+              <SingleVideoPlayer
+                src={project.videoSrc}
+                previewSrc={project.videoPreview.src}
+                previewAlt={project.videoPreview.alt}
+                previewPosition={project.videoPreview.position}
+                productName={project.productName}
+              />
+            )}
+          </FadeUp>
+        </div>
+        </section>
+      )}
+
       {/* ── GOAL / WORK / OUTCOME SECTION ── */}
       
       <section className="bg-[#f7f7f5] px-6 pb-[70px] pt-[72px] sm:pb-[82px] sm:pt-[82px]">
@@ -283,51 +327,6 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
           </FadeRight>
         </div>
       </section>
-      
-
-      {/* ── VIDEO SECTION ── */}
-      {!project.hideVideoSection && (
-        <section className="bg-black px-5 pb-[80px] pt-[80px] text-center text-white sm:px-8 sm:pb-[107px] sm:pt-[83px] lg:px-12">
-        <div className="mx-auto max-w-[1180px]">
-          {/* Heading — drops down */}
-          <FadeDown delay={0.1}>
-            <h2 className="font-[var(--font-be-vietnam)] text-[31px] font-bold lowercase leading-none tracking-[-1.5px] sm:text-[43px]">
-              {project.videoTitle}
-            </h2>
-          </FadeDown>
-
-          {/* Subtitle — rises up */}
-          <FadeUp delay={0.2}>
-            <p className="mt-[20px] font-[var(--font-be-vietnam)] text-[13px] font-light uppercase leading-none tracking-[0] text-white/70 sm:text-[17px]">
-              {project.videoSubtitle}
-            </p>
-          </FadeUp>
-
-          {/* Video player — rises up last */}
-          <FadeUp delay={0.3}>
-            {project.videoSrcs && project.videoSrcs.length === 3 ? (
-              <TripleVideoPlayer
-                srcs={project.videoSrcs}
-                productName={project.productName}
-              />
-            ) : project.videoSrcs && project.videoSrcs.length === 2 ? (
-              <DoubleVideoPlayer
-                srcs={project.videoSrcs as [string, string]}
-                productName={project.productName}
-              />
-            ) : (
-              <SingleVideoPlayer
-                src={project.videoSrc}
-                previewSrc={project.videoPreview.src}
-                previewAlt={project.videoPreview.alt}
-                previewPosition={project.videoPreview.position}
-                productName={project.productName}
-              />
-            )}
-          </FadeUp>
-        </div>
-        </section>
-      )}
 
       <Footer />
     </main>
