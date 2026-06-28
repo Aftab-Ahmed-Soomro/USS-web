@@ -37,6 +37,8 @@ export type ProjectDetail = {
     title: string;
     description: string;
   };
+  hideVideoSection?: boolean;
+  hideSocialGridPreview?: boolean
 };
 
 export const projectDetails = [
@@ -496,7 +498,7 @@ export const projectDetails = [
     productName: "Cinnamood",
     title: "Launching Cinnamood in the UAE",
     description:
-      "Cinnamood is a German bakery franchise known for its signature cinnamon rolls and strong brand presence across Europe. We worked alongside their German team to support their entry into the UAE market, helping establish their presence in Dubai and adapt their brand for a new audience.",
+      "Cinnamood is a German bakery franchise famous for its signature cinnamon rolls. As the brand expanded into the UAE, we worked alongside their team to bring Cinnamood to a new audience while staying true to what made the brand so recognisable.",
     heroImage: {
       src: "https://emmanuelcolewilliams.com/uss-assets/cinamood/cinamood.jpg",
       alt: "Cinnamood cinnamon roll with chocolate topping",
@@ -518,7 +520,6 @@ export const projectDetails = [
         src: "https://emmanuelcolewilliams.com/uss-assets/cinamood/3.jpg",
         alt: "Cinnamood pastries on a studio backdrop",
         position: "64% 48%",
-        overlay: true,
       },
       {
         src: "https://emmanuelcolewilliams.com/uss-assets/cinamood/4.png",
@@ -1399,7 +1400,7 @@ export const projectDetails = [
     productName: "Coshe Juices",
     title: "Growing a Wellness Membership Brand",
     description:
-      "Coshe Juices is a wellness brand offering healthy juices, cleanses, and membership-based lifestyle solutions designed to support holistic living. USS partnered with Coshe to strengthen its digital presence and support membership growth through a combination of website development, marketing strategy, content, social media management, and email marketing.",
+      "Coshe Juices is a wellness brand offering fresh juices, cleanses and membership-based wellness plans. We partnered with Coshe to strengthen their digital presence, helping grow memberships through a combination of website design, content, social media and email marketing.",
     heroImage: {
       src: "https://emmanuelcolewilliams.com/uss-assets/coshe/coshe.jpg",
       alt: "Coshe Juices wellness brand lifestyle",
@@ -1482,6 +1483,8 @@ export const projectDetails = [
       description:
         "A USS project overview for Coshe Juices, growing a wellness membership brand through website development, marketing strategy, and social media management.",
     },
+    hideVideoSection: true,
+    hideSocialGridPreview: true
   },
   {
     slug: "mn-nail-spa",

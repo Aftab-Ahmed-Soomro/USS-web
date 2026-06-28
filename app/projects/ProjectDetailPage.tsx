@@ -9,6 +9,7 @@ import FadeRight from "../components/FadeRight";
 import type { OutcomeIcon, ProjectDetail, WorkIcon } from "./project-details";
 import { TripleVideoPlayer } from "./TripleVideoPlayer";
 import { DoubleVideoPlayer } from "./DoubleVideoPlayer";
+import { SingleVideoPlayer } from "./SingleVideoPlayer";
 
 const outcomeIconAssets: Record<OutcomeIcon, string> = {
   megaphone: "/assets/outcome1.png",
@@ -68,14 +69,14 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
 
       {/* ── HERO SECTION ── */}
       <section className="bg-[#f7f7f5] px-6 pb-[38px] pt-[42px] sm:pb-[44px] sm:pt-[55px] lg:pt-[64px]">
-        <div className="mx-auto grid max-w-[1150px] items-start justify-between gap-10 lg:grid-cols-[470px_428px] lg:gap-[74px]">
+        <div className="mx-auto grid max-w-[1150px] items-start justify-between gap-10 lg:grid-cols-[525px_566px] lg:gap-[74px]">
           {/* Left — back link, title, description */}
           <div className="lg:pt-[11px]">
             {/* Back link — slides in from left */}
             <FadeLeft delay={0.1}>
               <Link
                 href="/projects"
-                className="font-[var(--font-inter)] flex items-center gap-2 text-[12px] font-normal leading-none tracking-[-0.05px] text-[#777] transition hover:text-[#ff5500]"
+                className="font-[var(--font-inter)] flex items-center mb-4 gap-2 text-[12px] font-normal leading-none tracking-[-0.05px] text-[#777] transition hover:text-[#ff5500]"
               >
                 <span>
                   <img
@@ -90,21 +91,21 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
 
             {/* Product pill — drops down */}
             <FadeDown delay={0.2}>
-              <p className="mt-[59px] inline-flex w-fit max-w-[220px] items-center justify-center rounded-full bg-[#e9e9e7] px-3 py-2 text-center font-[var(--font-inter)] text-[10px] font-medium uppercase leading-none tracking-[0.4px] text-[#242424] lg:mt-[58px]">
+              <p className="mt-[60px] mb-2 inline-flex w-fit max-w-[260px] items-center justify-center rounded-full bg-[#e9e9e7] px-4 py-2 text-center font-[var(--font-inter)] text-[10px] sm:text-[14px] font-normal uppercase leading-none tracking-[0.7px] text-[#242424] lg:mt-[58px]">
                 {project.productName}
               </p>
             </FadeDown>
 
             {/* Page title — slides in from left */}
             <FadeLeft delay={0.3}>
-              <h1 className="mt-[28px] max-w-[450px] font-[var(--font-be-vietnam)] text-[32px] font-bold leading-[1.35] tracking-[1.05px] text-[#141414] sm:text-[35px]">
+              <h1 className="mt-[28px] mb-6 max-w-[500px] font-[var(--font-be-vietnam)] text-[32px] font-bold leading-[1.35] tracking-[-0.9px] text-[#141414] sm:text-[44px]">
                 {project.title}
               </h1>
             </FadeLeft>
 
             {/* Description — rises up */}
             <FadeUp delay={0.4}>
-              <p className="mt-[15px] max-w-[470px] font-[var(--font-inter)] text-[12px] font-normal leading-[1.72] tracking-[-0.18px] text-[#707070] sm:text-[14px]">
+              <p className="mt-[15px] max-w-[600px] font-[var(--font-inter)] text-[12px] font-normal leading-[1.72] tracking-[-0.18px] text-[#707070] sm:text-[16px]">
                 {project.description}
               </p>
             </FadeUp>
@@ -112,13 +113,13 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
 
           {/* Right — hero image — slides in from right */}
           <FadeRight delay={0.25}>
-            <div className="relative aspect-[428/377] overflow-hidden rounded-[13px] bg-[#8f512f]">
+            <div className="relative overflow-hidden h-[500px] min-h-[400px] min-w-[566px] rounded-[13px] bg-[#8f512f]">
               <Image
                 src={project.heroImage.src}
                 alt={project.heroImage.alt}
                 fill
                 priority
-                sizes="(min-width: 1024px) 428px, 92vw"
+                sizes="(min-width: 1024px) 566px, 92vw"
                 className="object-cover"
                 style={{
                   objectPosition: project.heroImage.position ?? "center",
@@ -131,6 +132,7 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
       </section>
 
       {/* ── OVERVIEW SECTION ── */}
+      {!project.hideSocialGridPreview && (
       <section className="bg-black px-5 pb-[40px] pt-[68px] text-white sm:px-8 sm:pb-[43px] lg:px-12">
         <div className="mx-auto max-w-[1150px] text-center">
           {/* Heading — drops down */}
@@ -172,8 +174,10 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
           </div>
         </div>
       </section>
+      )}
 
       {/* ── GOAL / WORK / OUTCOME SECTION ── */}
+      
       <section className="bg-[#f7f7f5] px-6 pb-[70px] pt-[72px] sm:pb-[82px] sm:pt-[82px]">
         <div className="mx-auto grid max-w-[1150px] gap-14 lg:grid-cols-[840px_226px] lg:gap-[96px]">
           <div>
@@ -279,9 +283,11 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
           </FadeRight>
         </div>
       </section>
+      
 
       {/* ── VIDEO SECTION ── */}
-      <section className="bg-black px-5 pb-[80px] pt-[80px] text-center text-white sm:px-8 sm:pb-[107px] sm:pt-[83px] lg:px-12">
+      {!project.hideVideoSection && (
+        <section className="bg-black px-5 pb-[80px] pt-[80px] text-center text-white sm:px-8 sm:pb-[107px] sm:pt-[83px] lg:px-12">
         <div className="mx-auto max-w-[1180px]">
           {/* Heading — drops down */}
           <FadeDown delay={0.1}>
@@ -310,44 +316,18 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
                 productName={project.productName}
               />
             ) : (
-              <div className="relative mx-auto mt-[48px] aspect-[1014/540] max-w-[1014px] overflow-hidden rounded-[10px] bg-[#181818] shadow-[0_0_65px_rgba(255,255,255,0.23)]">
-                {project.videoSrc ? (
-                  <video
-                    src={project.videoSrc}
-                    controls
-                    muted
-                    playsInline
-                    preload="metadata"
-                    className="absolute inset-0 h-full w-full object-cover"
-                    aria-label={`${project.productName} campaign video`}
-                  />
-                ) : (
-                  <>
-                    <Image
-                      src={project.videoPreview.src}
-                      alt={project.videoPreview.alt}
-                      fill
-                      sizes="(min-width: 1024px) 1014px, 92vw"
-                      className="scale-[1.03] object-cover blur-[8px]"
-                      style={{
-                        objectPosition: project.videoPreview.position ?? "center",
-                      }}
-                    />
-                    <div className="absolute inset-0 bg-black/12" />
-                    <button
-                      aria-label={`Play ${project.productName} campaign video`}
-                      className="absolute left-1/2 top-1/2 grid size-[82px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-[#f47700] text-white transition hover:bg-[#ff861b] sm:size-[94px]"
-                      type="button"
-                    >
-                      <span className="ml-[5px] h-0 w-0 border-y-[13px] border-l-[19px] border-y-transparent border-l-white sm:border-y-[15px] sm:border-l-[22px]" />
-                    </button>
-                  </>
-                )}
-              </div>
+              <SingleVideoPlayer
+                src={project.videoSrc}
+                previewSrc={project.videoPreview.src}
+                previewAlt={project.videoPreview.alt}
+                previewPosition={project.videoPreview.position}
+                productName={project.productName}
+              />
             )}
           </FadeUp>
         </div>
-      </section>
+        </section>
+      )}
 
       <Footer />
     </main>
