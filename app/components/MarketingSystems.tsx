@@ -40,7 +40,7 @@ export function MarketingSystems() {
         <FadeUp delay={0.2}>
           <h2 className="text-white mt-[28px] text-[32px] md:text-[56px] font-medium leading-[0.9] tracking-tight">
             marketing systems<br />
-            aligned for <span className="text-[#ff5500] font-[var(--font-cormorant)] timesFontFamily italic text-[42px] md:text-[76px] font-light">growth</span>
+            designed for <span className="text-[#ff5500] font-[var(--font-cormorant)] timesFontFamily italic text-[42px] md:text-[76px] font-light">growth</span>
           </h2>
         </FadeUp>
       </div>

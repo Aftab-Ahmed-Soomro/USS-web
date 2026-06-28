@@ -4,12 +4,10 @@ import Image from "next/image";
 import FadeDown from "./FadeDown";
 import FadeUp from "./FadeUp";
 
-const brandCards = [
-  { image: "/assets/brands/agent.png" },
-  { image: "/assets/brands/sadia-psychology.png" },
-  { image: "/assets/brands/unilever-forest.png" },
-  { image: "/assets/brands/adidas.png" },
-];
+const brandCards = Array.from(
+  { length: 37 },
+  (_, i) => ({ image: `/assets/brands/brands/${i + 1}.png` })
+);
 
 const ecwLogos = [
   "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/01-1.png",
@@ -64,12 +62,10 @@ export function Brands() {
               className="group relative aspect-[176/314] w-[176px] shrink-0 overflow-hidden rounded-[22px] bg-[#151515]
                          sm:w-[210px] lg:w-[246px]"
             >
-              <Image
+              <img
                 src={brand.image}
                 alt="Brand campaign"
-                fill
-                sizes="(min-width: 1024px) 246px, (min-width: 640px) 210px, 176px"
-                className="object-cover transition duration-500 group-hover:scale-105"
+                className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
               />
             </article>
           ))}
@@ -109,7 +105,7 @@ export function Brands() {
         /* ── Brand cards: scroll left continuously ── */
         .brand-cards-track {
           width: max-content;
-          animation: marquee-right 20s linear infinite;
+          animation: marquee-right 150s linear infinite;
           will-change: transform;
         }
 
