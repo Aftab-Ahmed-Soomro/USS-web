@@ -89,9 +89,8 @@ function Strategic() {
 
           {/* Supporting copy */}
           <FadeUp delay={0.2}>
-            <p className="mx-auto mt-[32px] max-w-[550px] text-[17px] sm:text-[24px] font-normal leading-[-1%]">
-              We combine insight, strategy, and execution to create measurable growth that
-              lasts.
+            <p className="mx-auto mt-[32px] max-w-[580px] text-[17px] sm:text-[24px] font-normal leading-[-1%]">
+              Every project starts with understanding your business before we plan, create and deliver.
             </p>
           </FadeUp>
         </div>
@@ -113,7 +112,7 @@ function Strategic() {
                     {step.number}
                   </span>
                   {step.icon && (
-                    <span className="grid border mr-10 border-black size-[50px] shrink-0 place-items-center rounded-full bg-white text-[22px] font-normal text-[#ff5500] shadow-[0_18px_32px_rgba(0,0,0,0.08)]">
+                    <span className="grid border mr-10 border-black size-[50px] shrink-0 place-items-center rounded-full text-[22px] font-normal text-[#ff5500] shadow-[0_18px_32px_rgba(0,0,0,0.08)]">
                       <img className="size-[30px]" src={step.icon} alt="" />
                     </span>
                   )}
@@ -122,7 +121,7 @@ function Strategic() {
                 <h3 className="mt-[33px] text-[24px] sm:text-[34.6px] font-bold leading-none tracking-[-0.85px]">
                   {step.title}
                 </h3>
-                <p className="mt-[30px] max-w-[400px] text-[16px] font-normal leading-[36px] text-black/70">
+                <p className="mt-[30px] max-w-[400px] text-[16px] sm:text-[17px] font-normal leading-[36px] text-black/70">
                   {step.copy}
                 </p>
               </article>
@@ -132,27 +131,26 @@ function Strategic() {
 
         {/* Partnership card — zoom-in feels more like a "highlight" than a fade */}
         <ScaleIn delay={0.1} startScale={0.94}>
-          <div className="mx-auto mt-[56px] grid max-w-[800px] overflow-hidden rounded-[16px] border border-black/[0.03] bg-white shadow-[0_22px_42px_rgba(0,0,0,0.08)] md:min-h-[110px] md:grid-cols-[452px_1fr]">
+          <div className="mx-auto mt-[56px] grid max-w-[800px] overflow-hidden rounded-[16px] border border-black/[0.03] bg-white shadow-[0_22px_42px_rgba(0,0,0,0.08)] md:min-h-[110px] md:grid-cols-[482px_1fr]">
             <div className="flex items-center gap-[21px] px-8 py-7 md:px-[38px]">
               <span className="grid size-[46px] shrink-0 place-items-center border border-gray-200 p-3.5 rounded-full text-[22px] font-normal text-white shadow-[0_8px_16px_rgba(0,0,0,0.08)]">
                 <img src="/assets/star.png" alt="" />
               </span>
               <div>
-                <h3 className="text-[14px] sm:text-[16px] font-bold leading-none">
-                  More Than a Process. A Partnership.
+                <h3 className="text-[14px] sm:text-[18px] font-bold leading-none">
+                  A process that keeps things moving
                 </h3>
-                <p className="mt-[11px] max-w-[350px] text-[11.5px] leading-[24px] text-black/60">
-                  We don&apos;t just follow a process &ndash; we partner with you at every
-                  stage to drive sustainable, long-term growth.
+                <p className="mt-[11px] max-w-[420px] text-[11.5px] sm:text-[15px] leading-[24px] text-black/60">
+                  From planning to delivery, we keep every project organised, efficient and on track.
                 </p>
               </div>
             </div>
             <div className="flex items-center border-t border-black/[0.06] px-8 py-7 md:border-l md:border-t-0 md:px-[31px]">
               <a
                 href="#contact"
-                className="inline-flex h-11 w-full max-w-[300px] items-center justify-center rounded-full bg-[#ff5500] px-6 text-[7.5px] font-semibold uppercase tracking-[2px] text-white transition hover:bg-[#ff6b1f]"
+                className="inline-flex h-11 w-full max-w-[300px] items-center justify-center rounded-full bg-[#ff5500] px-6 text-[12px] font-semibold uppercase tracking-[2px] text-white transition hover:bg-[#ff6b1f]"
               >
-                Let&apos;s Build Your Growth Story
+                Book a Consultation
                 <span className="ml-[14px] text-[14px] leading-none">
                   <img className="size-[16px]" src="/assets/smallRightArrow.png" alt="" />
                 </span>
