@@ -18,14 +18,7 @@ const categories = [
     projects: [
       { title: "CINNAMOOD", description: "Franchise Expanding To Dubai", image: "/assets/projectsPagePics/cinamood.jpg", tags: ["UAE Expansion"], href: "/projects/cinamood" },
       { title: "Coshe", description: "Wellness Juices", image: "/assets/projectsPagePics/Coshe.jpg", tags: ["Brand Launch"], href: "/projects/coshe-juices" },
-      { title: "Oak Restaurant", description: "Building awareness for a new dining experience.", image: "/assets/projectsPagePics/oak.png", tags: ["Restaurant Launch"], href: "/projects/oak" },
-      {
-        title: "Picksperience",
-        description: "A new way to experience Dubai.",
-        image: "/assets/picksper.png",
-        tags: ["Brand Launch"],
-        href: "/projects/picksperience" 
-      }
+      { title: "Oak Restaurant", description: "Building awareness for a new dining experience.", image: "/assets/projectsPagePics/oak.png", tags: ["Restaurant Launch"], href: "/projects/oak" }
     ]
   },
   {
@@ -65,6 +58,14 @@ const categories = [
       { title: "Adidas UAE", description: "Product Event For New Launch", image: "/assets/projectsPagePics/adidas.jpg", tags: ["Scaling Business"], href: "/projects/adidas-middle-east" },
       { title: "Blank DXB", description: "New Warehouse Events", image: "/assets/projectsPagePics/blank.png", tags: ["Scaling Business"], href: "/projects/blank-dxb" },
       { title: "Fete Events", description: "Premium Event Planning", image: "/assets/fete/1.png", tags: ["Scaling Business"], href: "/projects/fete-events" }
+      ,
+      {
+        title: "Picksperience",
+        description: "A new way to experience Dubai.",
+        image: "/assets/picksper.png",
+        tags: ["Brand Launch"],
+        href: "/projects/picksperience" 
+      }
     ]
   },
   {
@@ -244,7 +245,7 @@ export default function ProjectsPage() {
               {/* Sticky category label card — slides in from left */}
               <motion.div
                 // variants={labelCardVariants}
-                className="sticky left-0 z-10 shrink-0 w-[260px] sm:w-[320px] aspect-[4/5] rounded-[16px] bg-[#0E0E0E] border border-white/5 relative p-5 sm:p-6 flex flex-col justify-between self-start"
+                className="sticky left-0 z-10 shrink-0 w-[270px] aspect-[4/5] rounded-[16px] bg-[#0E0E0E] border border-white/5 relative p-5 sm:p-6 flex flex-col justify-between self-start"
               >
                 {/* Subtle top-left glow accent */}
                 <div className="pointer-events-none absolute -top-10 -left-10 h-[180px] w-[180px] rounded-full bg-[#ff5500] opacity-[0.06] blur-[60px]" />
@@ -275,7 +276,7 @@ export default function ProjectsPage() {
                   >
                     <Link
                       href={project.href}
-                      className="relative w-[260px] sm:w-[320px] aspect-[4/5] rounded-[16px] overflow-hidden group block"
+                      className="relative w-[270px] aspect-[4/5] rounded-[16px] overflow-hidden group block"
                     >
                       <Image
                         src={project.image}
