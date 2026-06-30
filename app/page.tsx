@@ -147,7 +147,7 @@ function Strategic() {
             </div>
             <div className="flex items-center border-t border-black/[0.06] px-8 py-7 md:border-l md:border-t-0 md:px-[31px]">
               <a
-                href="#contact"
+                href="/contact"
                 className="inline-flex h-11 w-full max-w-[300px] items-center justify-center rounded-full bg-[#ff5500] px-6 text-[12px] font-semibold uppercase tracking-[2px] text-white transition hover:bg-[#ff6b1f]"
               >
                 Book a Consultation

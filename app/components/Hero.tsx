@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "./common/Button";
 import { ConsultationForm } from "./ConsultationForm";
 
@@ -20,8 +21,10 @@ export function Hero() {
         <p className="mt-[43px] max-w-[465px] text-[18px] font-normal leading-[1.62] tracking-[-0.2px] text-white/90">
           We build email systems that increase retention, repeat purchases and customer lifetime value.
         </p>
-
+        <Link href="/contact">
+        
         <Button className="mt-[34px] h-[43px] px-[33px] text-[12px]">Book a Consultation</Button>
+        </Link>
       </section>
 
       <div className="flex justify-center md:justify-end">
