@@ -47,7 +47,7 @@ export const projectDetails = [
     productName: "Agency 8",
     title: "Real Estate Agency Email & WhatsApp Strategy",
     description:
-      "Agency 8 is a real estate agency focused on delivering a modern and streamlined experience for buyers and investors. USS partnered with Agency 8 to build a strong digital foundation, combining a custom website with integrated marketing systems.",
+      "Agency 8 is a real estate agency focused on helping buyers and investors discover premium property opportunities. USS partnered with Agency 8 to build a custom website and implement email and WhatsApp marketing systems that made it easier to capture, manage and convert enquiries.",
     heroImage: {
       src: "https://emmanuelcolewilliams.com/uss-assets/agency/agency.png",
       alt: "Agency 8 luxury apartment interior overlooking the sea",
@@ -137,7 +137,7 @@ export const projectDetails = [
     productName: "Sadia Psychology",
     title: "Black Friday project with Sadia Psychology",
     description:
-      "Sadia is a content creator and YouTuber with a strong global audience, including over 800K followers on Instagram. USS partnered with her to create and launch a 2024 planner designed as a daily resource, combining insights from her content into a structured, engaging product.",
+      "Sadia Psychology is a content creator and educator with a global audience of more than 800K+ Instagram & YouTube followers. USS partnered with Sadia to develop, launch and market her 2024 planner, turning her content into a physical product that resonated with her audience and sold out during the Black Friday campaign.",
     heroImage: {
       src: "https://emmanuelcolewilliams.com/uss-assets/sadia/Sadia.png",
       alt: "Sadia Psychology holding her planner",
@@ -1500,7 +1500,7 @@ export const projectDetails = [
     productName: "M&N Nail Spa",
     title: "Creating a Beauty Brand That Stands Out",
     description:
-      "M&N Nail Spa is a luxury salon in London offering a wide range of nail, beauty, and wellness treatments designed to help clients look and feel their best. USS partnered with M&N Nail Spa to increase brand awareness, attract new customers, and strengthen their presence across digital channels through a combination of paid media, content creation, social media management, and marketing strategy.",
+      "M&N Nail Spa is a luxury salon in Dubai offering nail, beauty and wellness treatments in a modern, premium setting. USS partnered with M&N Nail Spa to grow brand awareness, attract new customers and strengthen its presence through paid media, content creation, social media management and marketing strategy.",
     heroImage: {
       src: "https://emmanuelcolewilliams.com/uss-assets/m&n/m&n.jpg",
       alt: "M&N Nail Spa luxury salon experience",
@@ -1590,7 +1590,7 @@ export const projectDetails = [
     productName: "Tish Wonders",
     title: "Launching a Digital Product to a Global Audience",
     description:
-      "Tish Wonders is a leading food and wellness creator, sharing healthy recipes, lifestyle content, and personal health inspiration with a global audience. USS partnered with Tish to support the launch of her healthy cooking e-book, combining website development, email strategy, and a targeted social and performance marketing campaign during the Black Friday period.",
+      "Tish Wonders is a food and wellness creator sharing healthy recipes and lifestyle content with a global audience. USS partnered with Tish to launch her healthy cooking e-book, supporting the campaign with a dedicated website, email marketing and a Black Friday launch strategy that turned audience engagement into sales.",
     heroImage: {
       src: "https://emmanuelcolewilliams.com/uss-assets/tish/tish.png",
       alt: "Tish Wonders healthy cooking e-book launch",
