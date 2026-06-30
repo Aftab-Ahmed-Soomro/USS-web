@@ -1509,7 +1509,7 @@ export const projectDetails = [
     heroImage: {
       src: "https://emmanuelcolewilliams.com/uss-assets/m&n/m&n.jpg",
       alt: "M&N Nail Spa luxury salon experience",
-      position: "50% 50%",
+      position: "65% 65%",
     },
     overviewSubtitle: "M&N NAIL SPA CONTENT CREATION",
     galleryImages: [
@@ -1859,6 +1859,100 @@ export const projectDetails = [
         "A USS project overview for Residency Advanced, scaling a second citizenship consultancy through targeted Google Ads and performance marketing.",
     },
     hideVideoSection: true,
+  },
+  {
+    slug: "fabri-elite",
+    productName: "FABRI ELITE",
+    title: "Building a Personal Brand in Real Estate",
+    description:
+      "Fabir Elite is a real estate entrepreneur who successfully transitioned from content creator to agency owner. USS partnered with her to produce high quality content that introduced her new agency, strengthened her personal brand and positioned her as a trusted voice within the Dubai property market.",
+    heroImage: {
+      src: "https://emmanuelcolewilliams.com/uss-assets/fabri/fabri.jpg",
+      alt: "Fabri Elite personal brand hero image",
+      position: "50% 50%",
+    },
+    overviewSubtitle: "FABRI ELITE AGENCY",
+    galleryImages: [
+      {
+        src: "https://emmanuelcolewilliams.com/uss-assets/fabri/1.jpg",
+        alt: "Fabri Elite ribbon cutting",
+        position: "50% 50%",
+      },
+      {
+        src: "https://emmanuelcolewilliams.com/uss-assets/fabri/2.jpg",
+        alt: "Fabri Elite presenting",
+        position: "50% 50%",
+      },
+      {
+        src: "https://emmanuelcolewilliams.com/uss-assets/fabri/3.jpg",
+        alt: "Fabri Elite meeting",
+        position: "50% 50%",
+      },
+      {
+        src: "https://emmanuelcolewilliams.com/uss-assets/fabri/4.jpg",
+        alt: "Fabri Elite man presenting",
+        position: "50% 50%",
+      },
+    ],
+    goal:
+      "Build a strong personal brand that supports the launch and growth of a new real estate agency.",
+    workIntro: "Our Work Included:",
+    workItems: [
+      {
+        icon: "creator",
+        text: "YouTube content production",
+      },
+      {
+        icon: "social",
+        text: "Agent interview series",
+      },
+      {
+        icon: "email",
+        text: "Weekly broadcast creation",
+      },
+      {
+        icon: "360",
+        text: "Personal brand content",
+      },
+    ],
+    approach:
+      "Our focus was on creating content that shows, never tells the business, and the person behind it. From introducing new agents, providing value true to real estate investing and market insights across the website, every piece of content was designed to build credibility and establish a strong local presence even before actual estate was created.",
+    outcomes: [
+      {
+        icon: "megaphone",
+        text: "Strong personal brand presence",
+      },
+      {
+        icon: "bars",
+        text: "Professional content across multiple platforms",
+      },
+      {
+        icon: "shield",
+        text: "High quality assets for the agency website",
+      },
+      {
+        icon: "star",
+        text: "Consistent new and supporting business growth",
+      },
+    ],
+    focusAreas: ["Marketing Strategy & Website Content", "YouTube Content"],
+    videoTitle: "fabri elite agency",
+    videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
+    videoPreview: {
+      src: "https://emmanuelcolewilliams.com/uss-assets/blurred.png",
+      alt: "Blurred video preview of the Fabri Elite campaign",
+      position: "50% 50%",
+    },
+    videoSrcs: [
+      "https://emmanuelcolewilliams.com/uss-assets/fabri/FAB OFFICE-4K.mov",
+      "https://emmanuelcolewilliams.com/uss-assets/fabri/FAB DECA-4K.MOV",
+      "https://emmanuelcolewilliams.com/uss-assets/fabri/FAB 2ND VIEWING .mov",
+    ],
+    metadata: {
+      title: "Fabri Elite Personal Brand | USS Projects",
+      description:
+        "A USS project overview for Fabri Elite, building a personal brand in real estate through YouTube content, agent interviews, and high-quality assets.",
+    },
   },
 ] satisfies ProjectDetail[];
 
