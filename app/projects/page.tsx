@@ -210,9 +210,9 @@ export default function ProjectsPage() {
 
           {/* Main heading — rises up */}
           <FadeUp delay={0.2}>
-            <h1 className="mt-[20px] font-[var(--font-be-vietnam)] text-[38px] font-bold lowercase leading-[1.03] tracking-[-0.9px] text-white sm:text-[56px] sm:tracking-[2px]">
+            <h1 className="mt-[20px] font-[var(--font-be-vietnam)] text-[38px] font-bold lowercase leading-[1.03] tracking-[-0.9px] text-white sm:text-[56px] sm:tracking-[-0.9px]">
               projects that make an{" "}
-              <span className="font-[var(--font-cormorant)] text-[1.15em] sm:text-[72px] font-extralight timesFontFamily italic tracking-[-0.035em] text-[#ff5500]">
+              <span className="font-[var(--font-cormorant)] text-[1.15em] sm:text-[72px] font-extralight timesFontFamily italic tracking-[-0.9px] text-[#ff5500]">
                 impact
               </span>
             </h1>
