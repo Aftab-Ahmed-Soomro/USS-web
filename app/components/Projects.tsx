@@ -16,6 +16,11 @@ const projects = [
     image: "/assets/company/yula-card.jpg",
     alt: "Yula Lounge dessert campaign",
   },
+  {
+    name: "Picksperience",
+    image: "/assets/picksper.png",
+    alt: "Picksperience campaign",
+  }
 ];
 
 export function Projects() {

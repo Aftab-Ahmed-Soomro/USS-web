@@ -18,7 +18,14 @@ const categories = [
     projects: [
       { title: "CINNAMOOD", description: "Franchise Expanding To Dubai", image: "/assets/projectsPagePics/cinamood.jpg", tags: ["UAE Expansion"], href: "/projects/cinamood" },
       { title: "Coshe", description: "Wellness Juices", image: "/assets/projectsPagePics/Coshe.jpg", tags: ["Brand Launch"], href: "/projects/coshe-juices" },
-      { title: "Oak Restaurant", description: "Building awareness for a new dining experience.", image: "/assets/projectsPagePics/oak.png", tags: ["Restaurant Launch"], href: "/projects/oak" }
+      { title: "Oak Restaurant", description: "Building awareness for a new dining experience.", image: "/assets/projectsPagePics/oak.png", tags: ["Restaurant Launch"], href: "/projects/oak" },
+      {
+        title: "Picksperience",
+        description: "A new way to experience Dubai.",
+        image: "/assets/picksper.png",
+        tags: ["Brand Launch"],
+        href: "/projects/picksperience" 
+      }
     ]
   },
   {

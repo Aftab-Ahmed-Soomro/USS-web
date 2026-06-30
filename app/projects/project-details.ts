@@ -227,7 +227,7 @@ export const projectDetails = [
     productName: "Women Who Thrive",
     title: "Increasing memberships for Women Who Thrive",
     description:
-      "Women Who Thrive is a Dubai based female networking organisation focused on empowering women through connection, business growth, and personal development. USS partnered with the team as their dedicated marketing partner, supporting their growth and expanding their community.",
+      "Women Who Thrive is a Dubai based networking community bringing women together through business, connection and personal growth. USS were responsible for helping grow its membership, strengthen its presence and build an engaged community through organic marketing.",
     heroImage: {
       src: "https://emmanuelcolewilliams.com/uss-assets/women/Women.jpg",
       alt: "Women Who Thrive event portrait with three women",
@@ -685,7 +685,7 @@ export const projectDetails = [
     productName: "Flowork",
     title: "Launching Flowork in Dubai Hills & Business Bay",
     description:
-      "Flowork is a modern business centre offering flexible co-working spaces in Dubai Hills. The offer: private offices, virtual rooms and podcast studios. USS partnered with Flowork to support the launch of their first location in Dubai Hills and second location in Business Bay, helping establish a strong brand awareness ahead of opening.",
+      "Flowork is a modern workspace offering private offices, meeting rooms and podcast studios. USS partnered with Flowork to launch its Dubai Hills and Business Bay locations, building awareness and generating demand selling out 50% of office space ahead of opening.",
     heroImage: {
       src: "https://emmanuelcolewilliams.com/uss-assets/flowork/flowork.jpg",
       alt: "Flowork lounge with warm shelving and tan seating",
@@ -779,7 +779,7 @@ export const projectDetails = [
     productName: "Blank DXB",
     title: "Building Blank DXB from the ground up",
     description:
-      "Blank DXB is a new concept focused on transforming a warehouse space into a versatile venue for corporate events, private hire, and special occasions in Dubai. USS partnered with Blank DXB from the early stages, supporting everything from initial setup to building a complete go-to-market strategy.",
+      "Blank DXB transformed an industrial warehouse into a flexible venue for corporate events, private hire and creative experiences. USS worked alongside the team from day one, build the business and create a launch strategy that generated awareness and bookings.",
     heroImage: {
       src: "https://emmanuelcolewilliams.com/uss-assets/blank/blank.jpg",
       alt: "Blank DXB warehouse venue space",
@@ -959,7 +959,7 @@ export const projectDetails = [
     productName: "Adidas Middle East",
     title: "Adidas Middle East Product Launch",
     description:
-      "USS partnered with Adidas Dubai to support the launch of a new product, delivering an event-led activation alongside content creation. The project focused on creating a strong brand moment that connected with the local audience and extended beyond the event itself.",
+      "Adidas Middle East partnered with USS to deliver the launch of a new product through a high impact event experience. From event planning and on the day delivery to content creation, we helped bring the launch to life while producing assets that continued driving engagement long after the event.",
     heroImage: {
       src: "https://emmanuelcolewilliams.com/uss-assets/adidas/Adidas.jpg",
       alt: "Adidas Middle East launch event crowd",
@@ -1049,7 +1049,7 @@ export const projectDetails = [
     productName: "Fete Events",
     title: "Elevating Luxury Events Through 360 Marketing",
     description:
-      "Fête Events is a renowned, leading luxury event management company with over 15 years of experience delivering bespoke, extraordinary corporate events, weddings, galas, and brand activations across the globe. USS partnered with Fête Events to strengthen their digital presence, increase visibility, and support long-term business growth through a comprehensive marketing strategy.",
+      "Fête Events is a luxury event management company delivering bespoke weddings, corporate events, private celebrations and brand activations globally. USS partnered with the team to strengthen its digital presence through strategy, paid media, social media management and email marketing, helping the brand reach more of the right audience.",
     heroImage: {
       src: "https://emmanuelcolewilliams.com/uss-assets/fete/Fete.png",
       alt: "Fete Events passport and globe",
@@ -1229,7 +1229,7 @@ export const projectDetails = [
     productName: "Disturbed Innovations Group",
     title: "Disturbed Innovations Group Rebrand",
     description:
-      "Disturbed Innovations Group (DIG) is an unprecedented innovation company creating immersive brand experiences, technology activations, and large-scale events across the region. As the business evolved from Disturbed Media Group into DIG, USS partnered with the team to support their rebrand through a new website, sales materials, social media management and a renewed brand presence across key touchpoints.",
+      "Disturbed Innovations Group (DIG) creates immersive brand experiences, technology activations and large scale events globally. As the business evolved from Disturbed Media Group into DIG, USS led the rebrand with a new website, fresh social presence, sales materials and a stronger brand presence across every touchpoint.",
     heroImage: {
       src: "https://emmanuelcolewilliams.com/uss-assets/disturbed-innovations/disturbed.png",
       alt: "Disturbed Innovations Group event production and brand experience",
@@ -1319,7 +1319,7 @@ export const projectDetails = [
     productName: "Afro Maya",
     title: "Driving Growth for an E-Commerce Fashion Brand",
     description:
-      "Afro Maya is a fashion and lifestyle brand dedicated to creating contemporary pieces inspired by culture, individuality and self expression. USS partnered with Afro Maya to strengthen its online presence through a combination of website development, content creation, social media management and email marketing, helping the brand create a seamless e-commerce experience across every digital touchpoint.",
+      "Afro Maya is a fashion and lifestyle brand creating pieces inspired by culture and individuality. USS partnered with the brand to build a stronger digital presence through a new website, content creation, social media management  and email marketing, helping more people discover and shop the brand online.",
     heroImage: {
       src: "https://emmanuelcolewilliams.com/uss-assets/afro/afro.jpg",
       alt: "Afro Maya fashion and lifestyle e-commerce brand",

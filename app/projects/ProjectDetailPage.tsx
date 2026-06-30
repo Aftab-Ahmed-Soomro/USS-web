@@ -41,8 +41,8 @@ function LineIcon({ type }: { type: OutcomeIcon }) {
     <Image
       src={outcomeIconAssets[type]}
       alt=""
-      width={31}
-      height={31}
+      width={41}
+      height={39}
       aria-hidden
       className="size-[31px] object-contain"
     />
@@ -91,14 +91,14 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
 
             {/* Product pill — drops down */}
             <FadeDown delay={0.2}>
-              <p className="mt-[60px] mb-2 inline-flex w-fit max-w-[260px] items-center justify-center rounded-full bg-[#e9e9e7] px-4 py-2 text-center font-[var(--font-inter)] text-[10px] sm:text-[14px] font-normal uppercase leading-none tracking-[0.7px] text-[#242424] lg:mt-[58px]">
+              <p className="mt-[60px] mb-2 inline-flex w-fit max-w-[400px] items-center justify-center rounded-full bg-[#e9e9e7] px-4 py-2 text-center font-[var(--font-inter)] text-[10px] sm:text-[14px] font-normal uppercase leading-none tracking-[0.7px] text-[#242424] lg:mt-[58px]">
                 {project.productName}
               </p>
             </FadeDown>
 
             {/* Page title — slides in from left */}
             <FadeLeft delay={0.3}>
-              <h1 className="mt-[28px] mb-6 max-w-[500px] font-[var(--font-be-vietnam)] text-[32px] font-bold leading-[1.35] tracking-[-0.9px] text-[#141414] sm:text-[44px]">
+              <h1 className="mt-[28px] mb-6 max-w-[520px] font-[var(--font-be-vietnam)] text-[32px] font-bold leading-[1.35] tracking-[-0.9px] text-[#141414] sm:text-[44px]">
                 {project.title}
               </h1>
             </FadeLeft>
@@ -223,7 +223,7 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
       {/* ── GOAL / WORK / OUTCOME SECTION ── */}
       
       <section className="bg-[#f7f7f5] px-6 pb-[70px] pt-[72px] sm:pb-[82px] sm:pt-[82px]">
-        <div className="mx-auto grid max-w-[1150px] gap-14 lg:grid-cols-[840px_226px] lg:gap-[96px]">
+        <div className="mx-auto grid max-w-[1150px] gap-14 lg:grid-cols-[840px_300px] lg:gap-[30px]">
           <div>
             {/* The Goal — slides in from left */}
             <FadeLeft delay={0.1}>
@@ -232,11 +232,11 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
                   <span className="grid size-[25px] shrink-0 place-items-center text-[#ff5500]">
                     <img src="/assets/goalIcon.png" alt="" />
                   </span>
-                  <h2 className="font-[var(--font-be-vietnam)] text-[18px] font-bold leading-none tracking-[0.85px] text-[#111]">
+                  <h2 className="font-[var(--font-be-vietnam)] text-[18px] sm:text-[24px] font-bold leading-none tracking-[3.13%] text-[#141414]">
                     The Goal
                   </h2>
                 </div>
-                <p className="mt-[20px] max-w-[680px] font-[var(--font-inter)] text-[15px] font-normal leading-[1.58] tracking-[0.28px] text-[#6c6c6c]">
+                <p className="mt-[20px] max-w-[780px] font-[var(--font-inter)] text-[15px] sm:text-[18px] font-normal leading-[28px] tracking-[0%] text-[#737373]">
                   {project.goal}
                 </p>
               </div>
@@ -245,16 +245,16 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
             {/* What We Did — rises up */}
             <FadeUp delay={0.2}>
               <div className="mt-[70px]">
-                <h3 className="font-[var(--font-be-vietnam)] text-[16px] font-bold leading-none tracking-[0.85px] text-[#111]">
+                <h3 className="font-[var(--font-be-vietnam)] text-[16px] sm:text-[20px] font-bold leading-none tracking-[2.34%] text-[#141414]">
                   What We Did
                 </h3>
-                <p className="mt-[21px] font-[var(--font-inter)] text-[12px] font-bold leading-none tracking-[0.85px] text-[#777]">
+                <p className="mt-[21px] font-[var(--font-inter)] text-[12px] sm:text-[16px] font-bold leading-none tracking-[0%] text-[#737373]">
                   {project.workIntro}
                 </p>
-                <ul className="mt-[13px] flex flex-col gap-[12px]">
+                <ul className="mt-[13px] flex flex-col gap-[17px]">
                   {project.workItems.map((item) => (
                     <li
-                      className="flex items-center gap-[10px] font-[var(--font-inter)] text-[12px] font-normal leading-none tracking-[0.38px] text-[#747474]"
+                      className="flex items-center gap-[10px] font-[var(--font-inter)] text-[12px] font-normal leading-none tracking-[0%] sm:text-[16px] text-[#747474]"
                       key={item.text}
                     >
                       <span className="grid size-[17px] shrink-0 place-items-center text-[#ff5500]">
@@ -270,10 +270,10 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
             {/* The Approach — slides in from left */}
             <FadeLeft delay={0.15}>
               <div className="mt-[54px]">
-                <h3 className="font-[var(--font-be-vietnam)] text-[16px] font-bold leading-none tracking-[0.85px] text-[#111]">
+                <h3 className="font-[var(--font-be-vietnam)] text-[16px] sm:text-[20px] font-bold leading-none tracking-[2.34%] text-[#141414]">
                   The Approach
                 </h3>
-                <p className="mt-[21px] max-w-[560px] font-[var(--font-inter)] text-[12px] font-normal leading-[1.48] tracking-[0.38px] text-[#747474]">
+                <p className="mt-[21px] max-w-[700px] font-[var(--font-inter)] text-[12px] sm:text-[16px] font-normal leading-[1.48] tracking-[0%] text-[#747474]">
                   {project.approach}
                 </p>
               </div>
@@ -282,15 +282,15 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
             {/* The Outcome — rises up, cards staggered */}
             <FadeUp delay={0.1}>
               <div className="mt-[56px]">
-                <h3 className="font-[var(--font-be-vietnam)] text-[16px] font-bold leading-none tracking-[0.85px] text-[#111]">
+                <h3 className="font-[var(--font-be-vietnam)] text-[16px] font-bold leading-none tracking-[2.34%] text-[#141414] sm:text-[20px]">
                   The Outcome
                 </h3>
-                <div className="mt-[17px] max-w-[560px] grid grid-cols-2 gap-[17px] sm:grid-cols-4">
+                <div className="mt-[17px] max-w-[750px] grid grid-cols-2 gap-[17px] sm:grid-cols-4">
                   {project.outcomes.map((outcome, idx) => (
                     <FadeUp key={outcome.text} delay={0.15 + idx * 0.1}>
-                      <div className="flex min-h-[104px] w-full max-w-[130px] flex-col items-center justify-start rounded-[7px] border border-[#dededb] px-[10px] pb-[10px] pt-[12px] text-center text-[#ff5500]">
+                      <div className="flex min-h-[104px] w-full max-w-[330px] flex-col items-center justify-start rounded-[7px] border border-[#dededb] px-[10px] pb-[10px] pt-[12px] text-center text-[#ff5500]">
                         <LineIcon type={outcome.icon} />
-                        <p className="mt-[10px] font-[var(--font-inter)] text-[11px] font-normal leading-[1.48] tracking-[0.3px] text-black">
+                        <p className="mt-[10px] font-[var(--font-inter)] text-[12px] sm:text-[16px] font-normal leading-[1.48] tracking-[0%] text-[#141414]">
                           {outcome.text}
                         </p>
                       </div>
@@ -304,13 +304,13 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
           {/* Aside — slides in from right */}
           <FadeRight delay={0.2}>
             <aside className="lg:pt-[1px]">
-              <h3 className="font-[var(--font-inter)] text-[14px] font-normal leading-none tracking-[0.28px] text-black">
+              <h3 className="font-[var(--font-inter)] text-[14px] sm:text-[18px] font-normal leading-none tracking-[0%] text-[#141414]">
                 What We Focused On
               </h3>
-              <div className="mt-[18px] flex max-w-[210px] flex-wrap gap-x-[7px] gap-y-[8px]">
+              <div className="mt-[18px] flex max-w-[300px] flex-wrap gap-x-[7px] gap-y-[8px]">
                 {project.focusAreas.map((area) => (
                   <span
-                    className="rounded-full bg-[#e9e9e7] px-[12px] py-[7px] font-[var(--font-inter)] text-[11px] font-normal leading-none tracking-[-0.18px] text-black"
+                    className="rounded-full bg-[#e9e9e7] px-[12px] py-[7px] font-[var(--font-inter)] text-[11px] sm:text-[14px] font-normal leading-none tracking-[-0.18px] text-[#141414]"
                     key={area}
                   >
                     {area}
@@ -319,10 +319,11 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
               </div>
               <Link
                 href="/#contact"
-                className="mt-[31px] inline-flex h-[35px] w-full max-w-[226px] items-center justify-center rounded-full bg-[#f0522b] px-7 font-[var(--font-be-vietnam)] text-[11px] font-medium leading-none text-white transition hover:bg-[#ff6b1f]"
+                className="mt-[31px] inline-flex h-[35px] w-full max-w-[250px] items-center justify-center rounded-full bg-[#f0522b] px-7 font-[var(--font-be-vietnam)] text-[11px] sm:text-[16px] font-normal leading-none text-white transition hover:bg-[#ff6b1f]"
               >
                 Book Your Consultation
               </Link>
+              <img src="/assets/aboutDetail.png" className="mt-[70px] w-full max-w-[400px] h-[450px]" alt="" />
             </aside>
           </FadeRight>
         </div>
