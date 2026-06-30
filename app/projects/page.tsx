@@ -173,16 +173,16 @@ function ProjectsCta() {
         {/* CTA buttons — rise up last */}
         <FadeUp delay={0.4}>
           <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <button className="h-[40px] w-full sm:w-auto px-10 rounded-full bg-[#ff5500] text-[8px] font-bold sm:text-[13px] tracking-[0.52px] text-white transition-colors hover:bg-[#ff6b1f]">
-              Book a Call
+            <button className="h-[40px] w-full sm:w-auto cursor-pointer px-10 rounded-full bg-[#ff5500] text-[8px] font-bold sm:text-[13px] tracking-[0.52px] text-white transition-colors hover:bg-[#ff6b1f]">
+              Book a Consultation
             </button>
-            <button className="flex h-[40px] w-full sm:w-auto px-8 items-center justify-center gap-2 rounded-full border border-white bg-transparent text-[8px] font-bold sm:text-[13px] tracking-[0.52px] text-white transition-colors hover:bg-white/5">
+            {/* <button className="flex h-[40px] w-full sm:w-auto px-8 items-center justify-center gap-2 rounded-full border border-white bg-transparent text-[8px] font-bold sm:text-[13px] tracking-[0.52px] text-white transition-colors hover:bg-white/5">
               See How We Scale
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1 opacity-80">
                 <path d="M5 12h14"></path>
                 <path d="m12 5 7 7-7 7"></path>
               </svg>
-            </button>
+            </button> */}
           </div>
         </FadeUp>
 

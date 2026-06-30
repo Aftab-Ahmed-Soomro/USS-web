@@ -132,7 +132,7 @@ export function Header() {
                           key={service.href}
                           href={service.href}
                           onClick={() => setIsServicesOpen(false)}
-                          className="group flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-[13px] tracking-[0.1em] font-bold uppercase text-white/70 transition-all duration-150 hover:bg-white/[0.06] hover:text-white"
+                          className="group flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-[13px] tracking-[0.1em] font-bold uppercase text-white transition-all duration-150 hover:bg-white/[0.06] hover:text-white"
                         >
                           <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-white/5 text-[#ff6b1f] text-[10px] transition group-hover:bg-[#ff6b1f]/15">
                             ✦
@@ -202,10 +202,8 @@ export function Header() {
 
         {/* Desktop Right Action */}
         <div className="hidden md:flex md:w-auto md:flex-1 md:justify-end">
-          <Link href="/contact" passHref>
-            <Button className="h-[42px] cursor-pointer px-6 text-[13px] tracking-[0.1em] font-bold uppercase">
+          <Link className="h-[42px] inline-flex h-[48px] items-center justify-center rounded-full bg-[#ff5a05] cursor-pointer px-6 text-[13px] tracking-[0.1em] font-bold uppercase" href="/contact" passHref>
               Book a Consultation
-            </Button>
           </Link>
         </div>
 
