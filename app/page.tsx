@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Header } from "./components/Header";
 import { Brands } from "./components/Brands";
 import { Footer } from "./components/Footer";
@@ -218,16 +219,16 @@ function FinalCta() {
         {/* CTA buttons — rise up last */}
         <FadeUp delay={0.5}>
           <div className="mt-8 max-w-[600px] mx-auto flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <button className="h-[40px] w-full sm:w-auto px-10 rounded-full bg-[#ff5500] text-[8px] font-bold text-white transition-colors hover:bg-[#ff6b1f]">
+            <Link href="/contact" className="flex h-[40px] w-full sm:w-auto px-10 items-center justify-center rounded-full bg-[#ff5500] text-[13px] font-bold text-white transition-colors hover:bg-[#ff6b1f]">
               Book a Consultation
-            </button>
-            <button className="flex h-[40px] w-full sm:w-auto px-8 items-center justify-center gap-2 rounded-full border border-white bg-transparent text-[8px] font-bold text-white transition-colors hover:bg-white/5">
+            </Link>
+            {/* <button className="flex h-[40px] w-full sm:w-auto px-8 items-center justify-center gap-2 rounded-full border border-white bg-transparent text-[8px] font-bold text-white transition-colors hover:bg-white/5">
               See How We Scale
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1 opacity-80">
                 <path d="M5 12h14"></path>
                 <path d="m12 5 7 7-7 7"></path>
               </svg>
-            </button>
+            </button> */}
           </div>
         </FadeUp>
 
