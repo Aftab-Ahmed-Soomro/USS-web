@@ -98,8 +98,8 @@ const categories = [
     bottomTag: "Helping Business Grow",
     projects: [
       { title: "Agency 8", description: "Real Estate Agency in Dubai", image: "/assets/projectsPagePics/agency.png", tags: ["Scaling Business"], href: "/projects/agency-8" },
-      { title: "Fabri Elite", description: "Luxury Agency in UAE", image: "/assets/projectsPagePics/fabri.jpg", tags: ["Scaling Business"], href: "#" },
-      { title: "St. George Estate", description: "Real Estate Agency in Dubai", image: "/assets/projectsPagePics/st.png", tags: ["Scaling Business"], href: "#" }
+      { title: "Fabri Elite", description: "Luxury Agency in UAE", image: "/assets/projectsPagePics/fabri.jpg", tags: ["Scaling Business"], href: "/projects/fabri-elite" },
+      { title: "St. George Estate", description: "Real Estate Agency in Dubai", image: "/assets/projectsPagePics/st.png", tags: ["Scaling Business"], href: "/projects/st-georges" }
     ]
   }
 ];
