@@ -1954,6 +1954,97 @@ export const projectDetails = [
         "A USS project overview for Fabri Elite, building a personal brand in real estate through YouTube content, agent interviews, and high-quality assets.",
     },
   },
+  {
+    slug: "st-georges",
+    productName: "ST GEORGE'S",
+    title: "Property Content for St George's",
+    description:
+      "St George's is a real estate agency specialising in premium residential properties across Dubai. USS partnered with the team to produce professional photo and video content that showcased listings, strengthened the brand's visual identity and provided high quality marketing assets across digital channels.",
+    heroImage: {
+      src: "https://emmanuelcolewilliams.com/uss-assets/fete/Fete.png",
+      alt: "St George's passport and globe",
+      position: "50% 50%",
+    },
+    overviewSubtitle: "SNEAK PEAK INTO ST. GEORGES",
+    galleryImages: [
+      {
+        src: "https://emmanuelcolewilliams.com/uss-assets/st/1.png",
+        alt: "St George's globe",
+        position: "50% 50%",
+      },
+      {
+        src: "https://emmanuelcolewilliams.com/uss-assets/st/2.png",
+        alt: "St George's passports",
+        position: "50% 50%",
+      },
+      {
+        src: "https://emmanuelcolewilliams.com/uss-assets/st/3.jpg",
+        alt: "St George's flags",
+        position: "50% 50%",
+      },
+      {
+        src: "https://emmanuelcolewilliams.com/uss-assets/st/4.jpg",
+        alt: "St George's airport",
+        position: "50% 50%",
+      },
+    ],
+    goal:
+      "Create premium visual content that highlights properties and strengthens the agency's brand presence.",
+    workIntro: "Our Work Included:",
+    workItems: [
+      {
+        icon: "creator",
+        text: "Property photography",
+      },
+      {
+        icon: "social",
+        text: "Property videography",
+      },
+      {
+        icon: "email",
+        text: "Lifestyle content creation",
+      },
+      {
+        icon: "360",
+        text: "Brand identity assets",
+      },
+    ],
+    approach:
+      "Our focus was on creating content that reflects the quality of the property while reinforcing the St. George's brand. By capturing both the space and the lifestyle it offers, we delivered a library of assets that could be used consistently across social media, websites and marketing campaigns.",
+    outcomes: [
+      {
+        icon: "megaphone",
+        text: "Professional property content library",
+      },
+      {
+        icon: "bars",
+        text: "Stronger online and local presence",
+      },
+      {
+        icon: "shield",
+        text: "Marketing assets across digital channels",
+      },
+      {
+        icon: "star",
+        text: "Consistent content for ongoing campaigns",
+      },
+    ],
+    focusAreas: ["Social Media", "Creative Direction", "Content Creation"],
+    videoTitle: "mall of emirates launch",
+    videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
+    videoPreview: {
+      src: "https://emmanuelcolewilliams.com/uss-assets/blurred.png",
+      alt: "Blurred video preview of the St George's campaign",
+      position: "50% 50%",
+    },
+    videoSrc: "https://emmanuelcolewilliams.com/uss-assets/st_george/Garden landscape no branding.mov",
+    metadata: {
+      title: "Property Content for St George's | USS Projects",
+      description:
+        "A USS project overview for St George's, creating premium visual content to highlight properties and strengthen the agency's brand presence.",
+    },
+    hideSocialGridPreview: true
+  },
 ] satisfies ProjectDetail[];
 
 export function getProjectDetail(slug: string) {
