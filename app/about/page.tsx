@@ -67,7 +67,7 @@ export default function AboutPage() {
             {/* LEFT — Portrait — slides in from left */}
             <FadeLeft delay={0.2}>
               <div className="relative w-full max-w-[280px] mx-auto md:mx-0">
-                <div className="relative aspect-[3/4] w-full min-h-[300px] overflow-hidden bg-[#f0ece6]">
+                <div className="relative aspect-[3/4] w-full min-h-[300px] overflow-hidden">
                   <Image
                     src="/assets/founder.jpg"
                     alt="Emmanuel Cole Williams, Founder and CEO of USS"

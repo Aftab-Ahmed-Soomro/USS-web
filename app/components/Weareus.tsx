@@ -6,13 +6,13 @@ import ImageSlider from "./ImageSlider";
 export default function WeAreUSS() {
   return (
     <section className="relative w-full bg-[#080808] overflow-hidden py-16 max-w-[1150px] mx-auto">
-      <div className="grid grid-cols-1 lg:grid-cols-[31fr_39fr_30fr] items-center">
+      <div className="relative grid grid-cols-1 lg:grid-cols-[1fr_auto_1.5fr] items-center">
 
-        {/* LEFT — Big heading — slides in from left */}
-        <FadeLeft delay={0.1}>
-          <div className="flex items-center justify-start py-16 lg:py-0 order-1 lg:order-none">
+        {/* LEFT — Big heading — overlaps the image's left edge */}
+        <FadeLeft delay={0.1} className="relative z-10">
+          <div className="relative z-1000 flex items-center justify-start lg:justify-end py-16 lg:py-0 lg:-mr-24 order-1 lg:order-none pointer-events-none">
             <h2
-              className="text-white font-bold uppercase leading-[116.28px] z-1000 tracking-[-2.74px] whitespace-nowrap"
+              className="text-white font-bold uppercase leading-[116.28px] mt-20 tracking-[-2.74px] whitespace-nowrap"
               style={{ fontSize: "clamp(6rem, 7vw, 7rem)", fontFamily: "Poppins, sans-serif" }}
             >
               WE ARE
@@ -25,28 +25,33 @@ export default function WeAreUSS() {
           </div>
         </FadeLeft>
 
-        {/* CENTER — Portrait — rises up from below */}
-        <FadeUp delay={0.2}>
-        <div className="relative order-2 lg:order-none w-full">
-          <ImageSlider />
-        </div>
-      </FadeUp>
+        {/* CENTER — Portrait — image with gradient overlays so overlapping text reads clearly */}
+        <FadeUp delay={0.2} className="relative z-0">
+          <div className="relative order-2 lg:order-none w-full">
+            <ImageSlider />
 
-      {/* RIGHT — Description text — slides in from right */}
-      <FadeRight delay={0.1}>
-        <div className="flex items-center justify-end py-16 lg:py-0 order-3 lg:order-none">
-          <div className="text-right text-[#FFFFFF] max-w-[270px] flex flex-col gap-8">
-            <p className="text-[12px] leading-[28.5px] font-normal">
-              At USS, We Focus On One Thing, Growth That Actually Translates Into Revenue. We Help Brands Across The US, UK, And Middle East Scale Through High-Performance Meta Ads, Google Ads, And Retention-Driven Email Systems.
-            </p>
-            <p className="text-[12px] leading-[32.5px] font-normal">
-              At Some Point, You Realize Guessing Doesn&apos;t Scale.
-            </p>
+            {/* fade into black on the right so the paragraph text is legible */}
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-2/3" />
+            {/* subtle fade on the left so the heading is legible */}
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-l from-transparent to-black/40" />
           </div>
-        </div>
-      </FadeRight>
+        </FadeUp>
 
-    </div>
-    </section >
+        {/* RIGHT — Description text — overlaps the image's right edge */}
+        <FadeRight delay={0.1} className="relative z-10">
+          <div className="relative z-1000 flex items-center justify-end py-16 lg:py-0 lg:-ml-60 order-3 lg:order-none">
+            <div className="text-right text-[#FFFFFF] max-w-[500px] flex flex-col gap-8">
+              <p className="text-[12px] sm:text-[14px] leading-[32.5px] font-normal capitalize">
+                At USS, we believe great marketing starts with understanding your business. For over 10 years, we've partnered with brands across the UK, US, and Middle East. Every recommendation, campaign and creative decision is built around your goals, helping you attract the right customers and build a stronger business over time.
+              </p>
+              <p className="text-[12px] sm:text-[16px] leading-[32.5px] font-normal capitalize">
+                The best marketing isn't about doing more. It's about doing the right things well.
+              </p>
+            </div>
+          </div>
+        </FadeRight>
+
+      </div>
+    </section>
   );
 }

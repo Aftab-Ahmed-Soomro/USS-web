@@ -44,7 +44,7 @@ export default function ImageSlider() {
   const goNext = () => goTo((activeIndex + 1) % IMAGES.length);
 
   return (
-    <div className="relative w-full aspect-[700/750] group">
+    <div className="relative w-full aspect-[700/750] h-[746px] max-w-[558px] group">
       {/* Crossfade stack */}
       {IMAGES.map((src, index) => (
         <div
@@ -58,7 +58,7 @@ export default function ImageSlider() {
             fill
             className="object-cover object-center"
             priority={index === 0}
-            sizes="(min-width: 1024px) 39vw, 100vw"
+            // sizes="(min-width: 1024px) 39vw, 100vw"
           />
         </div>
       ))}

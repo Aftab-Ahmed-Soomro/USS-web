@@ -5,14 +5,16 @@ import Link from "next/link";
 import { Button } from "./common/Button";
 
 const serviceLinks = [
-  { label: "Content Creation", href: "/content-creation", icon: "✦" },
-  { label: "Email Marketing", href: "/email-marketing", icon: "✦" },
-  { label: "Google Ads", href: "/google-ads", icon: "✦" },
+  { label: "360 Marketing", href: "/new-360-with-form", icon: "✦" },
   { label: "Marketing Strategy", href: "/marketing-strategy", icon: "✦" },
+  { label: "Google Ads", href: "/google-ads", icon: "✦" },
   { label: "Meta Ads", href: "/meta-ads", icon: "✦" },
-  { label: "Social Media Management", href: "/social-media-management", icon: "✦" },
-  { label: "Website", href: "/website", icon: "✦" },
   { label: "WhatsApp & SMS", href: "/whatsapp-and-sms", icon: "✦" },
+  { label: "Email Marketing", href: "/email-marketing", icon: "✦" },
+  { label: "Social Media Management", href: "/social-media-management", icon: "✦" },
+  { label: "Content Creation", href: "/content-creation", icon: "✦" },
+  { label: "Talent Management", href:"/", icon: "✦"},
+  { label: "Website Design & Development", href: "/website", icon: "✦" }
 ];
 
 const navItems = [
@@ -118,7 +120,7 @@ export function Header() {
                   className={`absolute left-1/2 top-[calc(100%+32px)] z-50 -translate-x-1/2 transition-all duration-200 hidden md:block ${
                     isServicesOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"
                   }`}
-                  style={{ width: "340px" }}
+                  style={{ width: "500px" }}
                 >
                   <div className="absolute -top-[7px] left-1/2 -translate-x-1/2 h-[14px] w-[14px] rotate-45 bg-[#111] border-l border-t border-white/10" />
 

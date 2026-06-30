@@ -305,12 +305,16 @@ export const projectDetails = [
       alt: "Blurred video preview of the Women Who Thrive community campaign",
       position: "50% 44%",
     },
+    videoSrcs: [
+      "https://emmanuelcolewilliams.com/uss-assets/womenwho/WWT Event recap.mov",
+      "https://emmanuelcolewilliams.com/uss-assets/supperclub/WWC.m4v",
+      "https://emmanuelcolewilliams.com/uss-assets/supperclub/Gala Recap Chatz.mov",
+    ],
     metadata: {
       title: "Women Who Thrive Membership Growth | USS Projects",
       description:
         "A USS project overview for growing Women Who Thrive through community-led marketing strategy, social media management, content creation, and email marketing.",
     },
-    hideVideoSection: true,
   },
   {
     slug: "picksperience",
@@ -1307,12 +1311,13 @@ export const projectDetails = [
       alt: "Blurred video preview of the Disturbed Innovations campaign",
       position: "50% 50%",
     },
+    videoSrc: "https://emmanuelcolewilliams.com/uss-assets/USS Main Website Showreel.mp4",
     metadata: {
       title: "Disturbed Innovations Group Rebrand | USS Projects",
       description:
         "A USS project overview for the Disturbed Innovations Group rebrand, covering website design, brand positioning, and sales material creation.",
     },
-    hideVideoSection: true,
+    // hideVideoSection: true,
   },
   {
     slug: "afro-maya",
@@ -1397,12 +1402,12 @@ export const projectDetails = [
       alt: "Blurred video preview of the Afro Maya campaign",
       position: "50% 50%",
     },
+    videoSrc: "https://emmanuelcolewilliams.com/uss-assets/afro/Horizontal.mov",
     metadata: {
       title: "Afro Maya E-Commerce Fashion | USS Projects",
       description:
         "A USS project overview for Afro Maya, driving growth for an e-commerce fashion brand through website development, content creation, and digital marketing.",
     },
-    hideVideoSection: true,
   },
   {
     slug: "coshe-juices",
