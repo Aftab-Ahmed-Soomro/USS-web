@@ -52,10 +52,9 @@ export function Header() {
             USS
           </Link>
           
-          {/* Mobile Right Controls */}
           <div className="flex items-center gap-3 md:hidden">
             <Link href="/contact" passHref>
-              <Button className="h-[38px] px-4 text-[13px] font-bold">
+              <Button className="h-[38px] px-4 text-[14px] tracking-[5px] font-bold uppercase">
                 Book a Consultation
               </Button>
             </Link>
@@ -122,9 +121,9 @@ export function Header() {
                   }`}
                   style={{ width: "500px" }}
                 >
-                  <div className="absolute -top-[7px] left-1/2 -translate-x-1/2 h-[14px] w-[14px] rotate-45 bg-[#111] border-l border-t border-white/10" />
+                  <div className="absolute -top-[7px] left-1/2 -translate-x-1/2 h-[14px] w-[14px] rotate-45 bg-[#111]/90 backdrop-blur-md border-l border-t border-white/10" />
 
-                  <div className="relative rounded-xl border border-white/10 bg-[#111] shadow-2xl shadow-black/60 overflow-hidden">
+                  <div className="relative rounded-xl border border-white/10 bg-[#111]/90 backdrop-blur-md shadow-2xl shadow-black/60 overflow-hidden">
                     <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-[#ff6b1f] to-transparent" />
 
                     <div className="p-3 grid grid-cols-2 gap-1">
@@ -133,7 +132,7 @@ export function Header() {
                           key={service.href}
                           href={service.href}
                           onClick={() => setIsServicesOpen(false)}
-                          className="group flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-[13px] font-semibold tracking-[0.1em] text-white/70 transition-all duration-150 hover:bg-white/[0.06] hover:text-white"
+                          className="group flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-[13px] tracking-[0.1em] font-bold uppercase text-white/70 transition-all duration-150 hover:bg-white/[0.06] hover:text-white"
                         >
                           <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-white/5 text-[#ff6b1f] text-[10px] transition group-hover:bg-[#ff6b1f]/15">
                             ✦
@@ -178,7 +177,7 @@ export function Header() {
                             setIsMobileServicesOpen(false);
                             setIsMenuOpen(false);
                           }}
-                          className="flex items-center gap-2 py-1.5 text-[13px] font-medium text-white/60 transition hover:text-white"
+                          className="flex items-center gap-2 py-1.5 text-[14px] tracking-[0.1em] font-bold uppercase text-white/60 transition hover:text-white"
                         >
                           <span className="text-[#ff6b1f] text-[8px]">✦</span>
                           {service.label}
@@ -204,7 +203,7 @@ export function Header() {
         {/* Desktop Right Action */}
         <div className="hidden md:flex md:w-auto md:flex-1 md:justify-end">
           <Link href="/contact" passHref>
-            <Button className="h-[42px] cursor-pointer px-6 text-[14px] font-bold tracking-wide">
+            <Button className="h-[42px] cursor-pointer px-6 text-[13px] tracking-[0.1em] font-bold uppercase">
               Book a Consultation
             </Button>
           </Link>

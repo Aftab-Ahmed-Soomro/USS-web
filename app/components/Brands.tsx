@@ -43,7 +43,7 @@ const ecwLogos = [
 
 export function Brands() {
   return (
-    <section className="relative z-10 pb-[100px] pt-[58px] text-white lg:pb-[111px]">
+    <section className="relative z-10 pb-[100px] pt-[58px] text-white lg:pb-[111px] bg-black">
 
       {/* ── Section heading ── */}
       <FadeDown delay={0.1}>
@@ -59,7 +59,7 @@ export function Brands() {
           {[...brandCards, ...brandCards, ...brandCards].map((brand, index) => (
             <article
               key={index}
-              className="group relative aspect-[176/314] w-[176px] shrink-0 overflow-hidden rounded-[22px] bg-[#151515]
+              className="group relative aspect-[176/314] w-[176px] shrink-0 overflow-hidden rounded-[22px] bg-black
                          sm:w-[210px] lg:w-[246px]"
             >
               <img
@@ -92,7 +92,7 @@ export function Brands() {
                 <img
                   src={src}
                   alt={`Brand logo ${index}`}
-                  className="w-full h-full object-contain brightness-0 invert opacity-70 transition duration-500
+                  className="w-full h-full object-contain brightness-0 invert transition duration-500
                              group-hover:scale-105 group-hover:opacity-100"
                 />
               </article>

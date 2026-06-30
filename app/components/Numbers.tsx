@@ -27,7 +27,7 @@ type NumbersProps = {
 const defaultStats: NumberStat[] = [
   { value: "5x", label: "ROAS Achieved" },
   { value: "55M", label: "AED Generated in Revenue" },
-  { value: "500k", label: "Leads Delivered" },
+  { value: "485k", label: "Leads Delivered" },
   { value: "100+", label: "Brands Worldwide" },
 ];
 
@@ -119,7 +119,7 @@ function Spark() {
 
 export function Numbers({
   stats = defaultStats,
-  eyebrow = "OUR NUMBERS",
+  eyebrow = "OUR IMPACT",
   title = "our numbers speak\nfor themselves",
   ctaLabel = "Get in Touch",
   ctaHref = "/contact",
@@ -127,7 +127,7 @@ export function Numbers({
   const titleLines = title.split("\n");
 
   return (
-    <section className="relative z-10 overflow-hidden bg-black px-6 py-[58px] text-white lg:py-[67px]">
+    <section className="relative z-10 overflow-hidden bg-black px-6 py-[58px] text-white lg:py-[100px]">
       <Image
         src="/assets/sections/numbers-space.jpg"
         alt=""
