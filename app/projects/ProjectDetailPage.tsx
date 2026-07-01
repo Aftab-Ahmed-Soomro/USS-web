@@ -63,6 +63,8 @@ function WorkIconView({ type }: { type: WorkIcon }) {
 }
 
 export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
+  const hasVideo = !!(project.videoSrc || project.videoSrcs);
+
   return (
     <main className="min-h-screen bg-white text-black overflow-hidden">
       <Header />
@@ -132,8 +134,52 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
         </div>
       </section>
 
-      {/* ── OVERVIEW SECTION ── */}
-      {!project.hideSocialGridPreview && (
+      {/* ── VIDEO SECTION (with-video projects only — appears before main info) ── */}
+      {hasVideo && !project.hideVideoSection && (
+        <section className="bg-black px-5 pb-[80px] pt-[80px] text-center text-white sm:px-8 sm:pb-[107px] sm:pt-[83px] lg:px-12">
+          <div className="mx-auto max-w-[1180px]">
+            {/* Heading — drops down */}
+            <FadeDown delay={0.1}>
+              <h2 className="font-[var(--font-be-vietnam)] text-[31px] font-bold lowercase leading-none tracking-[-1.5px] sm:text-[43px]">
+                {project.videoTitle}
+              </h2>
+            </FadeDown>
+
+            {/* Subtitle — rises up */}
+            <FadeUp delay={0.2}>
+              <p className="mt-[20px] font-[var(--font-be-vietnam)] text-[13px] font-light uppercase leading-none tracking-[0] text-white/70 sm:text-[17px]">
+                {project.videoSubtitle}
+              </p>
+            </FadeUp>
+
+            {/* Video player — rises up last */}
+            <FadeUp delay={0.3}>
+              {project.videoSrcs && project.videoSrcs.length === 3 ? (
+                <TripleVideoPlayer
+                  srcs={project.videoSrcs}
+                  productName={project.productName}
+                />
+              ) : project.videoSrcs && project.videoSrcs.length === 2 ? (
+                <DoubleVideoPlayer
+                  srcs={project.videoSrcs as [string, string]}
+                  productName={project.productName}
+                />
+              ) : (
+                <SingleVideoPlayer
+                  src={project.videoSrc}
+                  previewSrc={project.videoPreview.src}
+                  previewAlt={project.videoPreview.alt}
+                  previewPosition={project.videoPreview.position}
+                  productName={project.productName}
+                />
+              )}
+            </FadeUp>
+          </div>
+        </section>
+      )}
+
+      {/* ── OVERVIEW / PICTURES SECTION (no-video projects: before main info; with-video: after) ── */}
+      {!hasVideo && !project.hideSocialGridPreview && (
         <section className="bg-black px-5 pb-[40px] pt-[68px] text-white sm:px-8 sm:pb-[43px] lg:px-12">
           <div className="mx-auto max-w-[1150px] text-center">
             {/* Heading — drops down */}
@@ -174,50 +220,6 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
                 </FadeUp>
               ))}
             </div>
-          </div>
-        </section>
-      )}
-
-      {/* ── VIDEO SECTION ── */}
-      {!project.hideVideoSection && (
-        <section className="bg-black px-5 pb-[80px] pt-[80px] text-center text-white sm:px-8 sm:pb-[107px] sm:pt-[83px] lg:px-12">
-          <div className="mx-auto max-w-[1180px]">
-            {/* Heading — drops down */}
-            <FadeDown delay={0.1}>
-              <h2 className="font-[var(--font-be-vietnam)] text-[31px] font-bold lowercase leading-none tracking-[-1.5px] sm:text-[43px]">
-                {project.videoTitle}
-              </h2>
-            </FadeDown>
-
-            {/* Subtitle — rises up */}
-            <FadeUp delay={0.2}>
-              <p className="mt-[20px] font-[var(--font-be-vietnam)] text-[13px] font-light uppercase leading-none tracking-[0] text-white/70 sm:text-[17px]">
-                {project.videoSubtitle}
-              </p>
-            </FadeUp>
-
-            {/* Video player — rises up last */}
-            <FadeUp delay={0.3}>
-              {project.videoSrcs && project.videoSrcs.length === 3 ? (
-                <TripleVideoPlayer
-                  srcs={project.videoSrcs}
-                  productName={project.productName}
-                />
-              ) : project.videoSrcs && project.videoSrcs.length === 2 ? (
-                <DoubleVideoPlayer
-                  srcs={project.videoSrcs as [string, string]}
-                  productName={project.productName}
-                />
-              ) : (
-                <SingleVideoPlayer
-                  src={project.videoSrc}
-                  previewSrc={project.videoPreview.src}
-                  previewAlt={project.videoPreview.alt}
-                  previewPosition={project.videoPreview.position}
-                  productName={project.productName}
-                />
-              )}
-            </FadeUp>
           </div>
         </section>
       )}
@@ -330,6 +332,52 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
           </FadeRight>
         </div>
       </section>
+
+      {/* ── OVERVIEW / PICTURES SECTION (with-video projects only — appears after main info) ── */}
+      {hasVideo && !project.hideSocialGridPreview && (
+        <section className="bg-black px-5 pb-[40px] pt-[68px] text-white sm:px-8 sm:pb-[43px] lg:px-12">
+          <div className="mx-auto max-w-[1150px] text-center">
+            {/* Heading — drops down */}
+            <FadeDown delay={0.1}>
+              <h2 className="font-[var(--font-be-vietnam)] text-[30px] font-bold lowercase leading-none tracking-[-1.6px] sm:text-[43px]">
+                project{" "}
+                <span className="font-[var(--font-cormorant)] text-[1.15em] font-extralight italic timesFontFamily tracking-[-0.04em]">
+                  overview.
+                </span>
+              </h2>
+            </FadeDown>
+
+            {/* Subtitle — rises up */}
+            <FadeUp delay={0.2}>
+              <p className="mt-[17px] font-[var(--font-be-vietnam)] text-[13px] font-light uppercase leading-none tracking-[-0.1px] sm:text-[17px]">
+                {project.overviewSubtitle}
+              </p>
+            </FadeUp>
+
+            {/* Gallery grid — each image staggered up */}
+            <div className="mt-[15px] grid gap-[18px] sm:grid-cols-2 lg:grid-cols-4 lg:gap-[20px]">
+              {project.galleryImages.map((image, idx) => (
+                <FadeUp key={image.alt} delay={0.25 + idx * 0.1}>
+                  <div className="relative h-[310px] overflow-hidden bg-[#171717] sm:h-[390px] lg:h-[510px]">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      unoptimized
+                      sizes="(min-width: 1024px) 280px, (min-width: 640px) 45vw, 90vw"
+                      className="object-cover"
+                      style={{ objectPosition: image.position ?? "center" }}
+                    />
+                    {image.overlay ? (
+                      <div className="absolute inset-0 -z-0 bg-[#36023d]/45 mix-blend-multiply" />
+                    ) : null}
+                  </div>
+                </FadeUp>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <Footer />
     </main>
