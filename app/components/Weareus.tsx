@@ -27,7 +27,7 @@ export default function WeAreUSS() {
 
         {/* CENTER — Portrait — image with gradient overlays so overlapping text reads clearly */}
         <FadeUp delay={0.2} className="relative z-0">
-          <div className="relative order-2 lg:order-none w-full">
+          <div className="relative order-2 right-8 lg:order-none w-full">
             <ImageSlider />
 
             {/* fade into black on the right so the paragraph text is legible */}
@@ -39,12 +39,12 @@ export default function WeAreUSS() {
 
         {/* RIGHT — Description text — overlaps the image's right edge */}
         <FadeRight delay={0.1} className="relative z-10">
-          <div className="relative z-1000 flex items-center justify-end py-16 lg:py-0 ml-2 order-3 lg:order-none">
+          <div className="relative z-1000 flex items-center justify-end py-16 lg:py-0 -ml-8 order-3 lg:order-none">
             <div className="text-right text-[#FFFFFF] max-w-[440px] flex flex-col gap-8">
-              <p className="text-[12px] sm:text-[14px] leading-[32.5px] font-normal">
+              <p className="text-[12px] sm:text-[14px] leading-[32.5px] font-normal tracking-[-0.1px]">
                 At USS, we believe great marketing starts with understanding your business. For over 10 years, we've partnered with brands across the UK, US, and Middle East. Every recommendation, campaign and creative decision is built around your goals, helping you attract the right customers and build a stronger business over time.
               </p>
-              <p className="text-[12px] sm:text-[14px] leading-[32.5px] font-normal">
+              <p className="text-[12px] sm:text-[14px] leading-[32.5px] font-normal  tracking-[-0.1px]">
                 The best marketing isn't about doing more. It's about doing the right things well.
               </p>
             </div>
