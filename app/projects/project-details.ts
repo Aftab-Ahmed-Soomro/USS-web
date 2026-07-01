@@ -38,7 +38,8 @@ export type ProjectDetail = {
     description: string;
   };
   hideVideoSection?: boolean;
-  hideSocialGridPreview?: boolean
+  hideSocialGridPreview?: boolean;
+  socialGridImage?: string;
 };
 
 export const projectDetails = [
@@ -588,6 +589,7 @@ export const projectDetails = [
       "https://emmanuelcolewilliams.com/uss-assets/cinamood/cinamood-2.mov",
       "https://emmanuelcolewilliams.com/uss-assets/cinamood/cinamood-3.mov",
     ],
+    socialGridImage: "/assets/socialGridPreviews/cinamood.png",
     metadata: {
       title: "Cinnamood UAE Launch | USS Projects",
       description:
@@ -678,6 +680,7 @@ export const projectDetails = [
       position: "50% 42%",
     },
     videoSrc: "https://emmanuelcolewilliams.com/uss-assets/yula/yula.mov",
+    socialGridImage: "/assets/socialGridPreviews/yula.png",
     metadata: {
       title: "Yula Beach Lounge Rebrand | USS Projects",
       description:
@@ -772,6 +775,7 @@ export const projectDetails = [
       "https://emmanuelcolewilliams.com/uss-assets/flowork/flow-2.mp4",
       "https://emmanuelcolewilliams.com/uss-assets/flowork/flow-3.mp4",
     ],
+    socialGridImage: "/assets/socialGridPreviews/flowork.png",
     metadata: {
       title: "Flowork Dubai Launch | USS Projects",
       description:
@@ -957,6 +961,7 @@ export const projectDetails = [
         "A USS project overview for launching Reclaim in the US travel market through marketing strategy, paid media, email marketing, and content creation.",
     },
     hideVideoSection: true,
+    socialGridImage: "/assets/socialGridPreviews/reclaim.png",
   },
   {
     slug: "adidas-middle-east",
@@ -1137,6 +1142,7 @@ export const projectDetails = [
         "A USS project overview for Fête Events, delivering bespoke, extraordinary corporate events through comprehensive marketing strategy and digital presence.",
     },
     hideVideoSection: true,
+    socialGridImage: "/assets/socialGridPreviews/fete.png",
   },
   {
     slug: "precision-talk",
@@ -1312,6 +1318,7 @@ export const projectDetails = [
       position: "50% 50%",
     },
     videoSrc: "https://emmanuelcolewilliams.com/uss-assets/USS Main Website Showreel.mp4",
+    socialGridImage: "/assets/socialGridPreviews/disturbed.png",
     metadata: {
       title: "Disturbed Innovations Group Rebrand | USS Projects",
       description:
@@ -1772,34 +1779,34 @@ export const projectDetails = [
   },
   {
     slug: "oak",
-    productName: "Residency Advanced",
-    title: "Scaling Residency ddw",
+    productName: "Oak Restaurant",
+    title: "Creating Content for Oak Restaurant",
     description:
-      "Residency Advanced is a consultancy specializing in second citizenship and residency by investment programs, helping clients gain global mobility and greater freedom through alternative residencies. USS partnered with Residency Advanced to scale their operations and results by targeting qualified audiences actively searching for their services.",
+      "Oak Restaurant us a contemporary dining destination in Dubai, bringing together modern Asian cuisine, premium interiors and a vibrant atmosphere. USS partnered with Oak to create high quality photo and video content that captured the food, the venue and the overall dining experience.",
     heroImage: {
-      src: "https://emmanuelcolewilliams.com/uss-assets/oak/oak.png",
+      src: "/assets/oakrestaurant/Hero.jpg",
       alt: "Residency Advanced second citizenship and residency",
       position: "50% 50%",
     },
-    overviewSubtitle: "SNEAK PEAK INTO RESIDENCY ADVANCED",
+    overviewSubtitle: "SNEAK PEAK INTO OAK RESTAURANT",
     galleryImages: [
       {
-        src: "https://emmanuelcolewilliams.com/uss-assets/oak/1.png",
+        src: "/assets/oakrestaurant/1.jpg",
         alt: "Residency Advanced global mobility passport",
         position: "50% 50%",
       },
       {
-        src: "https://emmanuelcolewilliams.com/uss-assets/oak/2.png",
+        src: "/assets/oakrestaurant/2.jpg",
         alt: "Residency Advanced citizenship programs",
         position: "50% 50%",
       },
       {
-        src: "https://emmanuelcolewilliams.com/uss-assets/oak/3.png",
+        src: "/assets/oakrestaurant/3.jpg",
         alt: "Residency Advanced global investment",
         position: "50% 50%",
       },
       {
-        src: "https://emmanuelcolewilliams.com/uss-assets/oak/4.jpg",
+        src: "/assets/oakrestaurant/4.jpg",
         alt: "Residency Advanced alternative residencies",
         position: "50% 50%",
       },

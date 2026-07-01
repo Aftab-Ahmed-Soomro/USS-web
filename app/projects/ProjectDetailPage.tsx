@@ -327,7 +327,13 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
               >
                 Book Your Consultation
               </Link>
-              <img src="/assets/aboutDetail.png" className="mt-[70px] w-full max-w-[400px] h-[450px]" alt="" />
+              {project.socialGridImage ? (
+                <img
+                  src={project.socialGridImage}
+                  className="mt-[70px] w-full max-w-[389px] h-[480px]"
+                  alt=""
+                />
+              ) : null}
             </aside>
           </FadeRight>
         </div>
