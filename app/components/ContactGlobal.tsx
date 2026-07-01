@@ -10,7 +10,7 @@ const regions = [
     name: "United States",
     description:
       "Supporting growth-focused businesses through strategy, creative, and performance marketing.",
-    address: "Atlanta Office 1175, Peachtree St NE, Atlanta, GA 30361, United States",
+    address: "Atlanta",
     image: "/assets/Downtown Atlanta.webp",
     alt: "United States skyline at sunset",
   },
@@ -18,7 +18,7 @@ const regions = [
     name: "United Kingdom",
     description:
       "Helping brands scale through structured marketing systems and execution.",
-    address: "London Office 4, Green Dragon House, London, CR0 1FS, United Kingdom",
+    address: "London",
     image: "/assets/UK.webp",
     alt: "United Kingdom skyline at night",
   },
@@ -26,7 +26,7 @@ const regions = [
     name: "United Arab Emirates",
     description:
       "Partnering with ambitious companies looking to accelerate growth and market presence.",
-    address: "Dubai Flowork Offices, Business Park 4, Dubai Hills, United Arab Emirates",
+    address: "Dubai",
     image: "/assets/Dubai.jpeg",
     alt: "UAE skyline at dusk",
   },
@@ -125,6 +125,13 @@ export default function WeAreGlobal() {
           letter-spacing: -0.6px;
           line-height: 32px;
         }
+        .wag-card-desc-color {
+          color: #fff;
+          margin: 0;
+          font-size: clamp(0.8125rem, 1.05vw, 0.9375rem);
+          font-weight: 400;
+          line-height: 22.75px;
+        }
 
         .wag-card-desc {
           color: #FFFFFFA6;
@@ -179,7 +186,7 @@ export default function WeAreGlobal() {
               <div className="wag-card-body">
                 <h2 className="wag-card-title">{regions[0].name}</h2>
                 <p className="wag-card-desc">{regions[0].description}</p> <br />
-                <div className="wag-card-desc mt-4">
+                <div className="wag-card-desc-color mt-4">
                   {regions[0].address}
                 </div>
               </div>
@@ -195,7 +202,7 @@ export default function WeAreGlobal() {
               <div className="wag-card-body">
                 <h2 className="wag-card-title">{regions[1].name}</h2>
                 <p className="wag-card-desc">{regions[1].description}</p> <br />
-                <div className="wag-card-desc mt-4">
+                <div className="wag-card-desc-color mt-4">
                   {regions[1].address}
                 </div>
               </div>
@@ -211,7 +218,7 @@ export default function WeAreGlobal() {
               <div className="wag-card-body">
                 <h2 className="wag-card-title">{regions[2].name}</h2>
                 <p className="wag-card-desc">{regions[2].description}</p> <br />
-                <div className="wag-card-desc mt-4">
+                <div className="wag-card-desc-color mt-4">
                   {regions[2].address}
                 </div>
               </div>
