@@ -1,21 +1,22 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import FadeLeft from "./FadeLeft";
 import FadeDown from "./FadeDown";
 import FadeUp from "./FadeUp";
 import FadeRight from "./FadeRight";
 
 const rawSystems = [
-  { title: "MARKETING\nSTRATEGY", icon: "/assets/marketingGrowths/marketingSvg.png" },
-  { title: "SOCIAL MEDIA\nMARKETING", icon: "/assets/marketingGrowths/socialMediaIcon.png" },
-  { title: "META\nADS", icon: "/assets/marketingGrowths/metaIcon.png" },
-  { title: "GOOGLE\nADWORDS", icon: "/assets/marketingGrowths/googleIcon.png" },
-  { title: "CONTENT\nCREATION", icon: "/assets/marketingGrowths/contentIcon.png" },
-  { title: "EMAIL\nMARKETING", icon: "/assets/marketingGrowths/emailIcon.png" },
-  { title: "WHATSAPP\n& SMS", icon: "/assets/marketingGrowths/whatsappIcon.png" },
-  { title: "TALENT\nMANAGEMENT", icon: "/assets/marketingGrowths/talentIcon.png" },
-  { title: "WEBSITE\nTRANSFORMATION", icon: "/assets/marketingGrowths/websiteTransformationIcon.png" },
+  { title: "MARKETING\nSTRATEGY", icon: "/assets/marketingGrowths/marketingSvg.png", href: "/marketing-strategy" },
+  { title: "SOCIAL MEDIA\nMARKETING", icon: "/assets/marketingGrowths/socialMediaIcon.png", href: "/social-media-management" },
+  { title: "META\nADS", icon: "/assets/marketingGrowths/metaIcon.png", href: "/meta-ads" },
+  { title: "GOOGLE\nADWORDS", icon: "/assets/marketingGrowths/googleIcon.png", href: "/google-ads" },
+  { title: "CONTENT\nCREATION", icon: "/assets/marketingGrowths/contentIcon.png", href: "/content-creation" },
+  { title: "EMAIL\nMARKETING", icon: "/assets/marketingGrowths/emailIcon.png", href: "/email-marketing" },
+  { title: "WHATSAPP\n& SMS", icon: "/assets/marketingGrowths/whatsappIcon.png", href: "/whatsapp-and-sms" },
+  { title: "TALENT\nMANAGEMENT", icon: "/assets/marketingGrowths/talentIcon.png", href: "/talent-management" },
+  { title: "WEBSITE\nTRANSFORMATION", icon: "/assets/marketingGrowths/websiteTransformationIcon.png", href: "/website-design-development" },
 ];
 
 // Evenly distribute angles around the full circle so spacing never drifts
@@ -165,7 +166,8 @@ export function MarketingSystems() {
                 <div style={{ animation: "counter-orbit 60s linear infinite" }}>
 
                   {/* ── Clickable node ── */}
-                  <div
+                  <Link
+                    href={sys.href}
                     className="node-btn relative pointer-events-auto rounded-full flex items-center justify-center cursor-pointer
                       w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-[72px] lg:h-[72px]
                       -ml-[20px] -mt-[20px] sm:-ml-[28px] sm:-mt-[28px] md:-ml-[32px] md:-mt-[32px] lg:-ml-[36px] lg:-mt-[36px]"
@@ -186,7 +188,7 @@ export function MarketingSystems() {
                         <div key={i}>{line}</div>
                       ))}
                     </div>
-                  </div>
+                  </Link>
 
                 </div>
               </div>
