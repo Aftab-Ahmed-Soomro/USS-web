@@ -25,9 +25,9 @@ type NumbersProps = {
 // ─── Default data ─────────────────────────────────────────────────────────────
 
 const defaultStats: NumberStat[] = [
-  { value: "5x", label: "ROAS Achieved" },
+  { value: "5x", label: "Up to 5X ROAS" },
   { value: "55M", label: "AED Generated in Revenue" },
-  { value: "485k", label: "Leads Delivered" },
+  { value: "485k", label: "Leads Generated" },
   { value: "100+", label: "Brands Worldwide" },
 ];
 
@@ -176,10 +176,10 @@ export function Numbers({
                 <div className="flex items-center gap-[16px]">
                   <Spark />
                   <div>
-                    <p className="text-[42px] font-extrabold leading-none tracking-[-1px] sm:text-[50px]">
+                    <p className="text-[42px] font-bold leading-none tracking-[-1px] sm:text-[50px]">
                       <AnimatedStat value={stat.value} />
                     </p>
-                    <p className="mt-[8px] text-[11px] font-light leading-none text-white/95">
+                    <p className="mt-[8px] text-[11px] font-light sm:text-[14px] leading-none text-white">
                       {stat.label}
                     </p>
                   </div>
