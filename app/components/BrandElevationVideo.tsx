@@ -16,7 +16,7 @@ export default function BrandElevationVideo() {
   };
 
   return (
-    <section className="relative w-full h-[70vh] md:h-[85vh] min-h-[665px] overflow-hidden">
+    <section className="relative w-full h-[70vh] md:h-[85vh] min-h-[720px] overflow-hidden">
       {/* Background Video */}
       <video
         ref={videoRef}
