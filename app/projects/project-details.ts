@@ -1146,7 +1146,7 @@ export const projectDetails = [
   },
   {
     slug: "precision-talk",
-    productName: "Precision Talk",
+    productName: "PrecisionTalk",
     title: "Transforming Customer Calls with AI",
     description:
       "Precision Talk is an AI voice agent solution designed to help businesses capture more opportunities by handling customer calls instantly, 24/7. Built for businesses that rely on inbound and outbound enquiries and bookings, Precision Talk eliminates missed calls, improves response times, and delivers a consistent customer experience at scale. USS partnered with Precision Talk to launch the brand, establish its market position and drive awareness.",
