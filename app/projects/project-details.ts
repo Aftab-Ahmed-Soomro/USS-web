@@ -299,7 +299,7 @@ export const projectDetails = [
       },
     ],
     focusAreas: ["Social Media", "Email Marketing", "Content Creation"],
-    videoTitle: "building a strong, community driven brand",
+    videoTitle: "building a strong, community driven brand.",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
       src: "https://emmanuelcolewilliams.com/uss-assets/blurred.png",
@@ -308,8 +308,8 @@ export const projectDetails = [
     },
     videoSrcs: [
       "https://emmanuelcolewilliams.com/uss-assets/womenwho/WWT Event recap.mov",
-      "https://emmanuelcolewilliams.com/uss-assets/supperclub/WWC.m4v",
-      "https://emmanuelcolewilliams.com/uss-assets/supperclub/Gala Recap Chatz.mov",
+      "https://emmanuelcolewilliams.com/uss-assets/womenwho/WWC.m4v",
+      "https://emmanuelcolewilliams.com/uss-assets/womenwho/Gala Recap Chatz.mov",
     ],
     metadata: {
       title: "Women Who Thrive Membership Growth | USS Projects",
@@ -483,7 +483,7 @@ export const projectDetails = [
       },
     ],
     focusAreas: ["Social Media", "360 Marketing", "Content Creation"],
-    videoTitle: "mall of emirates launch",
+    videoTitle: "supperclub golden partners",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
       src: "https://emmanuelcolewilliams.com/uss-assets/blurred.png",
@@ -948,7 +948,7 @@ export const projectDetails = [
       },
     ],
     focusAreas: ["Social Media", "360 Marketing", "Paid Media"],
-    videoTitle: "mall of emirates launch",
+    videoTitle: "reclaim is expanding across the US",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
       src: "https://emmanuelcolewilliams.com/uss-assets/blurred.png",
@@ -1039,7 +1039,7 @@ export const projectDetails = [
       },
     ],
     focusAreas: ["Event Management ", "Brand Alignment", "Content Creation"],
-    videoTitle: "showcase your new product properly",
+    videoTitle: "adidas middle east launch event",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
       src: "https://emmanuelcolewilliams.com/uss-assets/blurred.png",
@@ -1310,7 +1310,7 @@ export const projectDetails = [
       },
     ],
     focusAreas: ["Brand Transformation", "Website Creation", "Social Media Management"],
-    videoTitle: "mall of emirates launch",
+    videoTitle: "immersive 3D technology ",
     videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     videoPreview: {
       src: "https://emmanuelcolewilliams.com/uss-assets/blurred.png",
