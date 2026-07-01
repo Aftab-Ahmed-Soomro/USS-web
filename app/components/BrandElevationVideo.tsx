@@ -26,7 +26,7 @@ export default function BrandElevationVideo() {
         muted={isMuted}
         playsInline
         preload="metadata"
-        className="absolute inset-0 w-full h-full object-contain bg-black"
+        className="absolute inset-0 w-full h-full object-cover object-top"
         aria-label="USS brand video"
       />
 
