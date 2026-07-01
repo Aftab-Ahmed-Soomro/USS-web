@@ -1317,7 +1317,7 @@ export const projectDetails = [
       alt: "Blurred video preview of the Disturbed Innovations campaign",
       position: "50% 50%",
     },
-    videoSrc: "https://emmanuelcolewilliams.com/uss-assets/USS Main Website Showreel.mp4",
+    videoSrc: "https://emmanuelcolewilliams.com/uss-assets/disturbed-innovations/dig.mp4",
     socialGridImage: "/assets/socialGridPreviews/disturbed.png",
     metadata: {
       title: "Disturbed Innovations Group Rebrand | USS Projects",
