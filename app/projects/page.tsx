@@ -27,8 +27,7 @@ const categories = [
     bottomTag: "Helping Tourism Grow",
     projects: [
       { title: "SupperClub", description: "Scaling Supperclub Membership", image: "/assets/projectsPagePics/supper.png", tags: ["Scaling Business"], href: "/projects/supperclub" },
-      { title: "Yula", description: "Transforming Yalseh into Yula", image: "/assets/projectsPagePics/yula.jpg", tags: ["Rebrand"], href: "/projects/yula-beach-lounge" },
-      { title: "Reclaim", description: "Launching Reclaim in the US", image: "/assets/projectsPagePics/reclaim.png", tags: ["Scaling Business"], href: "/projects/reclaim-us" }
+      { title: "Yula", description: "Transforming Yalseh into Yula", image: "/assets/projectsPagePics/yula.jpg", tags: ["Rebrand"], href: "/projects/yula-beach-lounge" }
     ]
   },
   {
@@ -37,7 +36,8 @@ const categories = [
     bottomTag: "Helping Business Grow",
     projects: [
       { title: "Flowork", description: "Office Opening in Dubai Hills", image: "/assets/projectsPagePics/flowork.png", tags: ["Scaling Business"], href: "/projects/flowork" },
-      { title: "Residency Advanced", description: "Paid Search Lead Generation", image: "/assets/projectsPagePics/residency.png", tags: ["Scaling Business"], href: "/projects/residency-advanced" }
+      { title: "Residency Advanced", description: "Paid Search Lead Generation", image: "/assets/projectsPagePics/residency.png", tags: ["Scaling Business"], href: "/projects/residency-advanced" },
+      { title: "Reclaim", description: "Launching Reclaim in the US", image: "/assets/projectsPagePics/reclaim.png", tags: ["Scaling Business"], href: "/projects/reclaim-us" }
     ]
   },
   {
@@ -57,7 +57,7 @@ const categories = [
       { title: "Women Who Thrive", description: "Networking Event Membership", image: "/assets/projectsPagePics/women.jpg", tags: ["Scaling Business"], href: "/projects/women-who-thrive" },
       { title: "Adidas UAE", description: "Product Event For New Launch", image: "/assets/projectsPagePics/adidas.jpg", tags: ["Scaling Business"], href: "/projects/adidas-middle-east" },
       { title: "Blank DXB", description: "New Warehouse Events", image: "/assets/projectsPagePics/blank.png", tags: ["Scaling Business"], href: "/projects/blank-dxb" },
-      { title: "Fete Events", description: "Premium Event Planning", image: "/assets/fete/1.png", tags: ["Scaling Business"], href: "/projects/fete-events" }
+      { title: "Fete Events", description: "Premium Event Planning", image: "/assets/Fete.png", tags: ["Scaling Business"], href: "/projects/fete-events" }
       ,
       {
         title: "Picksperience",
