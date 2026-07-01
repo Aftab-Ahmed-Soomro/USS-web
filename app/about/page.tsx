@@ -51,20 +51,20 @@ export default function AboutPage() {
           <FadeLeft delay={0.1}>
             <div className="mx-auto max-w-[1150px] px-6 mb-12">
               <p
-                className="text-[#fff] font-medium text-[42px] sm:[56px] tracking-normal leading-none"
-                style={{ fontWeight: 500 }}
+                className="text-[#fff] font-medium text-[42px] sm:text-[56px] tracking-[0%] leading-none"
               >
                 meet our founder &
               </p>
-              <h2
-                className="text-[#FF5500] text-[42px] sm:text-[70px] italic leading-[0.9]"
-                style={{ fontFamily: "Times New Roman, Times, serif", fontWeight: 400 }}
-              >
-                <span className="font-medium text-[42px] sm:text-[56px]" style={{ fontFamily: "Arial, Helvetica, sans-serif", color: "white",fontWeight: 500 }}>
+              <span className="text-[#fff] font-medium text-[42px] sm:text-[56px] tracking-[0%] leading-none">
                   ceo{" "}
                 </span>
+              <span
+                className="text-[#FF5500] text-[42px] sm:text-[72px] italic timesFontFamily leading-[0.9]"
+                style={{  fontWeight: 400 }}
+              >
+                
                 emmanuel
-              </h2>
+              </span>
             </div>
           </FadeLeft>
 
