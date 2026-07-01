@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Fragment } from "react";
 
 const purposeItems = [
   "Creates clarity around your marketing goals",
@@ -87,7 +88,7 @@ export function PerformanceMarketing() {
 
             {/* Rows */}
             {purposeItems.map((purpose, i) => (
-              <>
+              <Fragment key={i}>
                 {/* Purpose item */}
                 <div
                   key={`purpose-${i}`}
@@ -125,7 +126,7 @@ export function PerformanceMarketing() {
                     {deliverableItems[i]}
                   </p>
                 </div>
-              </>
+              </Fragment>
             ))}
           </div>
         </div>

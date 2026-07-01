@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Fragment } from "react";
 
 const purposeItems = [
   "Sharpen brand distinctiveness in a crowded market",
@@ -129,7 +130,7 @@ export function PaidAds() {
 
             {/* Rows */}
             {purposeItems.map((purpose, i) => (
-              <>
+              <Fragment key={i}>
                 {/* Purpose item */}
                 <div
                   key={`purpose-${i}`}
@@ -167,7 +168,7 @@ export function PaidAds() {
                     {deliverableItems[i]}
                   </p>
                 </div>
-              </>
+              </Fragment>
             ))}
           </div>
         </div>

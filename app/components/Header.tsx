@@ -19,7 +19,7 @@ const serviceLinks = [
 
 const navItems = [
   { label: "ABOUT", href: "/about" },
-  { label: "SERVICES", href: "/", hasDropdown: true },
+  { label: "SERVICES", href: "/new-360-with-form", hasDropdown: true },
   { label: "WORK", href: "/projects" },
   { label: "CONTACT", href: "/contact" },
 ];
@@ -91,13 +91,10 @@ export function Header() {
                 onMouseLeave={() => setIsServicesOpen(false)}
               >
                 {/* Desktop trigger */}
-                <div
-                  role="button"
-                  tabIndex={0}
+                <Link
+                  href={item.href}
                   aria-haspopup="true"
                   aria-expanded={isServicesOpen}
-                  onClick={() => setIsServicesOpen((o) => !o)}
-                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setIsServicesOpen((o) => !o) }}
                   className="hidden cursor-pointer md:inline-flex items-center gap-1.5 py-1 text-[14px] md:text-[13px] mb-1 tracking-[0.1em] font-bold uppercase text-white transition hover:text-[#ff6b1f] md:py-0 focus-visible:outline-none"
                 >
                   {item.label}
@@ -109,7 +106,7 @@ export function Header() {
                   >
                     <path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                </div>
+                </Link>
 
                 {/* Desktop dropdown panel */}
                 <div className="absolute left-0 right-0 top-full h-8 hidden md:block" />
@@ -119,7 +116,7 @@ export function Header() {
                   className={`absolute left-1/2 top-[calc(100%+32px)] z-50 -translate-x-1/2 transition-all duration-200 hidden md:block ${
                     isServicesOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"
                   }`}
-                  style={{ width: "500px" }}
+                  style={{ width: "520px" }}
                 >
                   <div className="absolute -top-[7px] left-1/2 -translate-x-1/2 h-[14px] w-[14px] rotate-45 bg-[#111]/90 backdrop-blur-md border-l border-t border-white/10" />
 
@@ -146,21 +143,29 @@ export function Header() {
 
                 {/* Mobile: accordion */}
                 <div className="md:hidden">
-                  <div
-                    role="button"
-                    tabIndex={0}
-                    className="flex w-full cursor-pointer items-center justify-between py-1 text-[14px] tracking-[0.1em] font-bold uppercase text-white transition hover:text-[#ff6b1f]"
-                    onClick={() => setIsMobileServicesOpen((o) => !o)}
-                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setIsMobileServicesOpen((o) => !o) }}
-                  >
-                    {item.label}
-                    <svg
-                      className={`h-3.5 w-3.5 transition-transform duration-200 ${isMobileServicesOpen ? "rotate-180" : ""}`}
-                      viewBox="0 0 12 12"
-                      fill="none"
+                  <div className="flex w-full items-center justify-between py-1">
+                    <Link
+                      href={item.href}
+                      className="text-[14px] tracking-[0.1em] font-bold uppercase text-white transition hover:text-[#ff6b1f]"
+                      onClick={() => setIsMenuOpen(false)}
                     >
-                      <path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
+                      {item.label}
+                    </Link>
+                    <div
+                      role="button"
+                      tabIndex={0}
+                      className="p-2 -mr-2 cursor-pointer text-white transition hover:text-[#ff6b1f]"
+                      onClick={() => setIsMobileServicesOpen((o) => !o)}
+                      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setIsMobileServicesOpen((o) => !o) }}
+                    >
+                      <svg
+                        className={`h-4 w-4 transition-transform duration-200 ${isMobileServicesOpen ? "rotate-180" : ""}`}
+                        viewBox="0 0 12 12"
+                        fill="none"
+                      >
+                        <path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </div>
                   </div>
 
                   <div
