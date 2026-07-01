@@ -59,7 +59,7 @@ export default function WeAreGlobal() {
         }
 
         .wag-heading em {
-          color: #E04E14;
+          color: #ff5a14;
           font-style: italic;
           font-family: 'Georgia', 'Times New Roman', serif;
           font-weight: 400;
@@ -69,7 +69,7 @@ export default function WeAreGlobal() {
           color: #888888;
           font-size: clamp(0.875rem, 1.4vw, 1rem);
           text-align: center;
-          max-width: 540px;
+          max-width: 450px;
           line-height: 29.25px;
           margin: 0 0 72px 0;
           font-weight: 400;
@@ -163,9 +163,7 @@ export default function WeAreGlobal() {
         {/* Subtitle — rises up after heading */}
         <FadeUp delay={0.2}>
           <p className="wag-subtitle">
-            Serving ambitious brands across the United States, United Kingdom,
-            <br />
-            and United Arab Emirates.
+          Working with businesses across the United States, United Kingdom and United Arab Emirates.
           </p>
         </FadeUp>
 
