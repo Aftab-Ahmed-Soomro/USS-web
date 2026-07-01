@@ -12,11 +12,10 @@ import FadeUp from "../components/FadeUp";
 import FadeRight from "../components/FadeRight";
 
 const stats = [
-  { value: "5x", label: "ROAS Achieved" },
+{ value: "5x", label: "Up to 5X ROAS" },
   { value: "55M", label: "AED Generated in Revenue" },
-  { value: "500K", label: "Leads Delivered" },
-  { value: "100+", label: "Brands Worldwide" },
-];
+  { value: "485k", label: "Leads Generated" },
+  { value: "100+", label: "Brands Worldwide" },];
 
 const team = [
   { name: "MEET EMMANUEL", role: "CEO/Founder", image: "/assets/team/emanuel.png", color: "#72cc3b", position: "center bottom" },
