@@ -77,47 +77,47 @@ export const projectDetails = [
       },
     ],
     goal:
-      "Create a high-performing digital presence while implementing systems to capture, nurture, and convert leads more effectively.",
-    workIntro: "We supported the launch with a full 360 scope marketing approach:",
+      "Build a digital platform that captures and converts more enquiries.",
+    workIntro: "Our work included:",
     workItems: [
       {
         icon: "creator",
-        text: "Custom coded website design and development",
+        text: "Custom-coded website design and development",
       },
       {
         icon: "social",
-        text: "Email marketing setup and campaigns",
+        text: "Email marketing setup",
       },
       {
         icon: "email",
-        text: "WhatsApp marketing integration",
+        text: "WhatsApp integration",
       },
       {
         icon: "360",
-        text: "Overall marketing strategy for market entry",
+        text: "Lead generation strategy",
       },
     ],
     approach:
-      "Our focus was on building more than just a website. We created a connected system. By combining a tailored web experience with direct communication channels, we enabled Agency 8 to engage leads more effectively and streamline their marketing efforts.",
+      "Rather than building a website alone, we created a connected lead generation system. By combining a custom website with email marketing and WhatsApp automation, every enquiry could be captured, followed up and managed more efficiently.",
     outcomes: [
       {
         icon: "megaphone",
-        text: "A fully custom website aligned with the brand",
+        text: "Custom website built around the brand",
       },
       {
         icon: "bars",
-        text: "Integrated communication channels for leads",
+        text: "Integrated email and WhatsApp journeys",
       },
       {
         icon: "shield",
-        text: "Capturing and managing enquiries",
+        text: "Better enquiry management",
       },
       {
         icon: "star",
-        text: "A scalable digital setup for continued growth",
+        text: "Scalable system ready for growth",
       },
     ],
-    focusAreas: ["Social Media", "360 Marketing", "Content Creation"],
+    focusAreas: ["WhatsApp Marketing", "Email Marketing", "Website Transformation"],
     videoTitle: "mall of emirates launch",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
@@ -167,8 +167,8 @@ export const projectDetails = [
       },
     ],
     goal:
-      "Develop and launch a product that delivers value to her audience, while driving strong engagement and sales from day one.",
-    workIntro: "We supported the launch with a full 360 scope marketing approach:",
+      "Launch a product that delivers real value to her audience while driving strong engagement and sales.",
+    workIntro: "Our work included:",
     workItems: [
       {
         icon: "creator",
@@ -188,26 +188,26 @@ export const projectDetails = [
       },
     ],
     approach:
-      "Our focus was on turning existing audience demand into a tangible product. We built a launch strategy that combined content, storytelling, and direct engagement, guiding the audience from awareness to purchase through social and email touchpoints.",
+      "We worked closely with Sadia to bring her planner from concept to launch. From product design and launch planning to content creation and email marketing, every stage was built to generate excitement, drive sales and give the product the strongest possible start.",
     outcomes: [
       {
         icon: "megaphone",
-        text: "Thousands of units sold within the first two weeks",
+        text: "Thousands of planners sold within two weeks",
       },
       {
         icon: "bars",
-        text: "Strong engagement from current audience",
+        text: "Strong engagement from an existing audience",
       },
       {
         icon: "shield",
-        text: "Successful transition from content to product",
+        text: "Successful product launch",
       },
       {
         icon: "star",
-        text: "A scalable model for future product launches",
+        text: "Repeatable launch strategy for future products",
       },
     ],
-    focusAreas: ["Social Media", "360 Marketing", "Content Creation"],
+    focusAreas: ["360 Marketing", "Brand Alignment", "Content Creation"],
     videoTitle: "Black Friday product launch",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
@@ -257,8 +257,8 @@ export const projectDetails = [
       },
     ],
     goal:
-      "Increase membership, strengthen brand presence, and build a highly engaged community all through organic growth.",
-    workIntro: "We supported the launch with a full 360 scope marketing approach:",
+      "Grow membership, strengthen the brand and build an engaged community through organic marketing.",
+    workIntro: "Our work included:",
     workItems: [
       {
         icon: "creator",
@@ -278,26 +278,26 @@ export const projectDetails = [
       },
     ],
     approach:
-      "Our focus was on building a strong, community-driven brand. We combined consistent storytelling, value-driven content, and audience engagement to create a sense of connection, turning followers into active members.",
+      "We focused on creating content that people wanted to engage with. By showing the value of the community, celebrating members and staying consistent across every channel, we helped turn interest into memberships and followers into members.",
     outcomes: [
       {
         icon: "megaphone",
-        text: "Membership base tripled within 15 months",
+        text: "Membership tripled within 15 months",
       },
       {
         icon: "bars",
-        text: "Organic Instagram growth from 0K to 22K",
+        text: "Organic Instagram growth from 6K to 22K",
       },
       {
         icon: "shield",
-        text: "Engagement without relying on paid ads",
+        text: "High engagement without paid advertising",
       },
       {
         icon: "star",
-        text: "A highly active and connected community",
+        text: "Built a loyal and active community",
       },
     ],
-    focusAreas: ["Social Media", "360 Marketing", "Content Creation"],
+    focusAreas: ["Social Media", "Email Marketing", "Content Creation"],
     videoTitle: "building a strong, community driven brand",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
@@ -441,8 +441,8 @@ export const projectDetails = [
       },
     ],
     goal:
-      "Drive membership growth while maintaining a premium brand image and attracting the right audience.",
-    workIntro: "We supported the launch with a full 360 scope marketing approach:",
+      "Grow memberships while strengthening the brand and attracting the right audience.",
+    workIntro: "Our work included:",
     workItems: [
       {
         icon: "creator",
@@ -462,11 +462,11 @@ export const projectDetails = [
       },
     ],
     approach:
-      "Our focus was on positioning SupperClub as an exclusive and high-value offering. We combined consistent content, strategic messaging, and targeted communication to attract and convert a premium audience.",
+      "We focused on showing the value of a SupperClub membership through consistent content, social media and email marketing, helping the brand connect with the right audience and encourage more sign ups.",
     outcomes: [
       {
         icon: "megaphone",
-        text: "Increased membership growth",
+        text: "120% increase in memberships",
       },
       {
         icon: "bars",
@@ -474,7 +474,7 @@ export const projectDetails = [
       },
       {
         icon: "shield",
-        text: "Improved engagement with target audiences",
+        text: "Improved engagement with target audience",
       },
       {
         icon: "star",
@@ -535,8 +535,8 @@ export const projectDetails = [
       },
     ],
     goal:
-      "Successfully launch Cinnamood in Mall of Emirates, while building local awareness and demand from day one, without losing the essence of the original brand.",
-    workIntro: "We supported the launch with a full 360 scope marketing approach:",
+      "Launch Cinnamood in Mall of the Emirates, introducing the brand to the UAE market while staying true to what made it so successful across Europe.",
+    workIntro: "To support the launch, we delivered:",
     workItems: [
       {
         icon: "creator",
@@ -556,23 +556,23 @@ export const projectDetails = [
       },
     ],
     approach:
-      "Our focus was on making the brand feel both globally consistent and locally relevant. We adapted content, messaging, and strategy to fit the Dubai market while maintaining Cinnamood's identity.",
+      "Launching in a new market meant more than simply translating content. We adapted the messaging, creative and strategy for a UAE audience while keeping the brand instantly recognisable.",
     outcomes: [
       {
         icon: "megaphone",
-        text: "Strong awareness during launch phase",
+        text: "Strong awareness from launch",
       },
       {
         icon: "bars",
-        text: "Growth in local audience engagement",
+        text: "High engagement across social media",
       },
       {
         icon: "shield",
-        text: "Consistent brand presence across platforms",
+        text: "Consistent brand experience across every channel",
       },
       {
         icon: "star",
-        text: "Set new standards for support system activations",
+        text: "A successful launch into the UAE market",
       },
     ],
     focusAreas: ["Social Media", "360 Marketing", "Content Creation"],
@@ -629,8 +629,8 @@ export const projectDetails = [
       },
     ],
     goal:
-      "Ensure a smooth and successful rebrand, while repositioning Yula Lounge to cater to a broader, more contemporary audience.",
-    workIntro: "We supported the launch with a full 360 scope marketing approach:",
+      "Launch the new Yula Lounge identity and introduce a fresh, contemporary brand to a wider audience.",
+    workIntro: "Our work included:",
     workItems: [
       {
         icon: "creator",
@@ -650,23 +650,23 @@ export const projectDetails = [
       },
     ],
     approach:
-      "To USS, rebranding wasn't just about visuals, it's about perception. Our focus was on delivering a consistent and refined identity across all channels, making sure the new direction felt premium, aligned with Yula's business direction and wider marketing goals.",
+      "The rebrand was about more than a new look. Every piece of content, campaign and customer touch point was designed to introduce Yula Lounge with a clear and consistent identity across every channel.",
     outcomes: [
       {
         icon: "megaphone",
-        text: "Smooth transition from Yalseh to Yula Lounge",
+        text: "Successful transition from Yalseh to Yula Lounge",
       },
       {
         icon: "bars",
-        text: "Consistent brand presence across platforms",
+        text: "Consistent branding across every channel",
       },
       {
         icon: "shield",
-        text: "Strong alignment between concept and content",
+        text: "Strong launch engagement",
       },
       {
         icon: "star",
-        text: "A clear foundation for post-launch growth",
+        text: "A clear foundation for post launch growth.",
       },
     ],
     focusAreas: ["Social Media", "360 Marketing", "Content Creation"],
@@ -719,8 +719,8 @@ export const projectDetails = [
       },
     ],
     goal:
-      "Build awareness, generate demand and position Flowork as a go to workspace solution in Dubai ahead of its official launch.",
-    workIntro: "We supported the launch with a full 360 scope marketing approach:",
+      "Build awareness, generate demand and position Flowork as a go to workspace before opening its Dubai Hills and Business Bay locations.",
+    workIntro: "Our work included:",
     workItems: [
       {
         icon: "creator",
@@ -740,23 +740,23 @@ export const projectDetails = [
       },
     ],
     approach:
-      "Our focus was on combining brand awareness with engagement. We used paid and organic channels together to create consistent digital presence, while delivering content that showcased the space, communicated value and built interest before launch.",
+      "The focus was on building excitement before launch. We combined paid media, organic content and SEO to introduce Flowork, showcase the spaces and keep the brand visible before the doors opened.",
     outcomes: [
       {
         icon: "megaphone",
-        text: "We sold 50% of total offices before opening",
+        text: "50% of offices sold before opening",
       },
       {
         icon: "bars",
-        text: "Strong awareness leading up to launch",
+        text: "Strong awareness before launch",
       },
       {
         icon: "shield",
-        text: "Consistent presence across multiple platforms",
+        text: "Consistent presence across key channels",
       },
       {
         icon: "star",
-        text: "A solid foundation for growth post-launch",
+        text: "Solid foundation for continued growth",
       },
     ],
     focusAreas: ["Social Media", "Paid Media", "Content Creation"],
@@ -813,8 +813,8 @@ export const projectDetails = [
       },
     ],
     goal:
-      "Create and launch a fully operational venue concept, from business setup to generating demand and bookings.",
-    workIntro: "We supported the launch with a full 360 scope marketing approach:",
+      "Launch a new venue with a strong brand, clear positioning and a steady pipeline of bookings from day one.",
+    workIntro: "Our work included:",
     workItems: [
       {
         icon: "creator",
@@ -830,27 +830,27 @@ export const projectDetails = [
       },
       {
         icon: "360",
-        text: "Paid media strategy across Google Ads and paid social",
+        text: "Google Ads and paid social campaigns",
       },
     ],
     approach:
-      "This wasn't just a marketing project, it was about building a business from the ground up. We focused on creating a strong brand identity, a clear market position, and a performance-driven strategy to attract the right audience and drive bookings.",
+      "This project went beyond marketing. We helped turn an idea into a launch ready business, creating the brand, digital presence and marketing strategy needed to attract the right audience and generate bookings from the outset.",
     outcomes: [
       {
         icon: "megaphone",
-        text: "Clear positioning within events and venue space",
+        text: "Successfully launched a new venue brand",
       },
       {
         icon: "bars",
-        text: "Strong foundation across brand and digital presence",
+        text: "Strong brand presence across digital channels",
       },
       {
         icon: "shield",
-        text: "Targeted strategy for corporate and private events",
+        text: "Generated early interest and bookings",
       },
       {
         icon: "star",
-        text: "Scalable setup ready for ongoing growth",
+        text: "Built a foundation for long term growth",
       },
     ],
     focusAreas: ["Social Media", "360 Marketing", "Content Creation"],
@@ -903,8 +903,8 @@ export const projectDetails = [
       },
     ],
     goal:
-      "Introduce and position reclaim as a trusted, time-saving solution for modern travelers, while building awareness in a new and competitive market.",
-    workIntro: "We supported the launch with a full 360 scope marketing approach:",
+      "Launch reclaim in the US and introduce a smarter, hands-free way to travel while building awareness across key markets leading up to the worldcup. ",
+    workIntro: "Our work included:",
     workItems: [
       {
         icon: "creator",
@@ -924,26 +924,26 @@ export const projectDetails = [
       },
     ],
     approach:
-      "Our focus was on clearly communicating the value of the service: convenience, time-saving, and simplicity. We built a cohesive strategy across channels to educate the audience, build trust, and drive adoption.",
+      "We focused on showing how reclaim makes travelling easier. Through clear messaging, creative content and paid campaigns, we introduced the service to a new audience and built awareness across every channel.",
     outcomes: [
       {
         icon: "megaphone",
-        text: "Clear positioning within the travel space",
+        text: "Successful US brand launch opening new locations",
       },
       {
         icon: "bars",
-        text: "Increased awareness in the US market",
+        text: "Increased awareness across key markets",
       },
       {
         icon: "shield",
-        text: "Consistent messaging across all channels",
+        text: "Consistent messaging across every channel",
       },
       {
         icon: "star",
-        text: "Strong foundation for ongoing growth",
+        text: "Build email database across US and retargeting users",
       },
     ],
-    focusAreas: ["Social Media", "360 Marketing", "Content Creation"],
+    focusAreas: ["Social Media", "360 Marketing", "Paid Media"],
     videoTitle: "mall of emirates launch",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
@@ -993,28 +993,28 @@ export const projectDetails = [
       },
     ],
     goal:
-      "Execute a successful product launch event while capturing high-quality content to amplify the campaign across digital platforms.",
-    workIntro: "We supported the launch with a full 360 scope marketing approach:",
+      "Deliver a product launch that created a memorable brand experience while capturing high quality content for use across digital channels.",
+    workIntro: "Our work included:",
     workItems: [
       {
         icon: "creator",
-        text: "Event execution and on-ground support",
+        text: "Event execution and on-site support",
       },
       {
         icon: "social",
-        text: "Content creation during the launch",
+        text: "Launch content creation",
       },
       {
         icon: "email",
-        text: "Capturing assets for ongoing digital use",
+        text: "Photography and video for digital campaigns",
       },
       {
         icon: "360",
-        text: "Creative vision and concept",
+        text: "Creative direction",
       },
     ],
     approach:
-      "Our focus was on combining experience with content. We ensured the event delivered a strong in-person impact, while producing content that could extend the campaign's reach across social and digital channels.",
+      "Our focus was on creating an event that left a lasting impression. We managed the launch from the ground up while capturing every key moment, producing content that kept the campaign going long after the event ended.",
     outcomes: [
       {
         icon: "megaphone",
@@ -1026,14 +1026,14 @@ export const projectDetails = [
       },
       {
         icon: "shield",
-        text: "Strong alignment between brand and event",
+        text: "Strong alignment between brand, & event",
       },
       {
         icon: "star",
         text: "Extended value beyond the launch moment",
       },
     ],
-    focusAreas: ["Social Media", "360 Marketing", "Content Creation"],
+    focusAreas: ["Event Management ", "Brand Alignment", "Content Creation"],
     videoTitle: "showcase your new product properly",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
@@ -1083,8 +1083,8 @@ export const projectDetails = [
       },
     ],
     goal:
-      "Increase brand visibility, generate high quality enquiries, and position Fête Events as a leading luxury event management company in the UAE and internationally.",
-    workIntro: "We supported Fête Events with a full-service marketing approach:",
+      "Increase brand visibility, attract high quality enquiries and strengthen Fête Events' position within the luxury events market.",
+    workIntro: "Our work included:",
     workItems: [
       {
         icon: "creator",
@@ -1104,23 +1104,23 @@ export const projectDetails = [
       },
     ],
     approach:
-      "Our team executed a comprehensive monthly and weekly management of the Fête Events brand, through a combination of paid media, strategic content, email marketing and ongoing social media management. We developed a marketing strategy designed to increase awareness, attract qualified leads and reinforce the brand's position within the luxury event industry.",
+      "Our focus was on keeping the brand visible to the right audience. By combining paid media, social media, email marketing and strategic planning, we built a consistent online presence that supported enquiries and long term growth.",
     outcomes: [
       {
         icon: "megaphone",
-        text: "Expanded awareness across key digital channels",
+        text: "Increased visibility across digital channels",
       },
       {
         icon: "bars",
-        text: "Generated targeted leads and high quality search enquiries for luxury event services",
+        text: "More high quality event enquiries",
       },
       {
         icon: "shield",
-        text: "Created a consistent and seamless brand experience online",
+        text: "Stronger brand presence online",
       },
       {
         icon: "star",
-        text: "Implemented scalable marketing systems to support future expansion",
+        text: "Marketing built to support long term growth",
       },
     ],
     focusAreas: ["Luxury Events", "360 Marketing", "Social Media Management"],
@@ -1173,8 +1173,8 @@ export const projectDetails = [
       },
     ],
     goal:
-      "Position Precision Talk as a leading AI voice agent solution while educating businesses on the revenue opportunities lost through missed calls and inefficient customer handling.",
-    workIntro: "We supported Precision Talk with a full-service marketing approach:",
+      "Position PrecisionTalk as a leading AI voice agent platform while helping businesses understand the revenue lost through missed calls and slow customer response times.",
+    workIntro: "Our work included:",
     workItems: [
       {
         icon: "creator",
@@ -1194,23 +1194,23 @@ export const projectDetails = [
       },
     ],
     approach:
-      "Our focus was on highlighting a real pain point for businesses across hospitality, real estate, automotive, and service industries: missed calls leading to missed revenue. By combining educational content, strategic messaging, and performance-driven campaigns.",
+      "Our focus was on a problem every business understands, missed calls mean missed revenue. We built a clear message around that pain point, supported by educational content, strong branding and targeted campaigns across multiple channels.",
     outcomes: [
       {
         icon: "megaphone",
-        text: "Introduced a new brand into the UAE market",
+        text: "Introduced PrecisionTalk to the UAE market.",
       },
       {
         icon: "bars",
-        text: "Built a scalable foundation for expansion",
+        text: "Built a recognisable brand identity",
       },
       {
         icon: "shield",
-        text: "Established a professional online presence",
+        text: "Established a strong digital presence",
       },
       {
         icon: "star",
-        text: "Generated key performance benchmarks",
+        text: "Created a foundation for future growth",
       },
     ],
     focusAreas: ["New Product Launch", "360 Marketing", "Content Creation"],
@@ -1263,8 +1263,8 @@ export const projectDetails = [
       },
     ],
     goal:
-      "Create a modern brand presence that accurately reflects DIG's evolution while providing the tools needed to support future growth and business development.",
-    workIntro: "We supported DIG through a complete brand evolution project:",
+      "Create a brand that matched DIG's evolution and positioned the business for its next stage of growth.",
+    workIntro: "Our work included:",
     workItems: [
       {
         icon: "360",
@@ -1284,7 +1284,7 @@ export const projectDetails = [
       },
     ],
     approach:
-      "Our focus was on creating consistency across every touchpoint. From the website and sales materials to social media and all visual branding, we helped align DIG's visual identity with its position as a forward-thinking, unprecedented innovation company.",
+      "Every part of the brand needed to tell the same story. From the website and sales materials to social media, we created a consistent identity that reflected DIG's position as an innovation led company.",
     outcomes: [
       {
         icon: "megaphone",
@@ -1292,15 +1292,15 @@ export const projectDetails = [
       },
       {
         icon: "bars",
-        text: "Designed and launched a website aligned with the company's new positioning",
+        text: "Designed and developed new responsive website",
       },
       {
         icon: "shield",
-        text: "Developed sales materials to support business development and client presentations",
+        text: "Created sales materials for pitches and client presentations",
       },
       {
         icon: "star",
-        text: "Improved brand consistency across digital, physical, and marketing touchpoints",
+        text: "Consistent branding across every customer touchpoint",
       },
     ],
     focusAreas: ["Brand Transformation", "Website Creation", "Social Media Management"],
@@ -1354,7 +1354,7 @@ export const projectDetails = [
       },
     ],
     goal:
-      "Build a stronger digital foundation that supports brand growth, customer engagement, and online sales.",
+      "Build a stronger online presence that supports brand growth, customer engagement and online sales and new product launches,",
     workIntro: "We supported the launch with a full 360 scope marketing approach:",
     workItems: [
       {
@@ -1375,23 +1375,23 @@ export const projectDetails = [
       },
     ],
     approach:
-      "Our focus was on creating a visual identity and user experience that represents the brand values. From developing the website to producing content and managing ongoing communications, we worked to strengthen Afro Maya's digital presence and generate opportunities for long-term growth.",
+      "Every touchpoint needed to reflect the brand. From the website and product content to social media and email campaigns, we created a consistent digital experience that made it easier for customers to discover, connect with, and shop the collection.",
     outcomes: [
       {
         icon: "megaphone",
-        text: "Launched a modern, responsive website",
+        text: "Launched a modern e-commerce website",
       },
       {
         icon: "bars",
-        text: "Creating content to showcase new products",
+        text: "Created content to showcase new collections",
       },
       {
         icon: "shield",
-        text: "Established a stronger customer base",
+        text: "Built a stronger online presence",
       },
       {
         icon: "star",
-        text: "Strengthened the brand's presence across social",
+        text: "Improved customer engagement",
       },
     ],
     focusAreas: ["Social Media", "360 Marketing", "Content Creation"],
@@ -1444,8 +1444,8 @@ export const projectDetails = [
       },
     ],
     goal:
-      "Increase membership sign-ups, improve the customer experience, and build a stronger digital ecosystem to support long-term growth.",
-    workIntro: "We supported the launch with a full 360 scope marketing approach:",
+      "Increase memberships, improve the online customer experience and create a stronger digital presence for the brand.",
+    workIntro: "Our work included:",
     workItems: [
       {
         icon: "360",
@@ -1465,26 +1465,26 @@ export const projectDetails = [
       },
     ],
     approach:
-      "Our focus was on creating a seamless customer journey, while building greater awareness around the Coshe membership offering. Through strategic content, email marketing, and ongoing social media management, we helped position Coshe as a leading wellness brand while supporting customer retention and membership growth.",
+      "We focused on making it easier for customers to discover Coshe, learn about their membership offering and keep coming back. From the website through to social media and email marketing, every touchpoint worked together to create a better customer experience.",
     outcomes: [
       {
         icon: "megaphone",
-        text: "Increased membership by 250% in first month",
+        text: "250% increase in memberships during the first month",
       },
       {
         icon: "bars",
-        text: "Increased visibility across web and search terms",
+        text: "Greater visibility across search and social",
       },
       {
         icon: "shield",
-        text: "Improved brand loyalty and performance",
+        text: "Stronger customer engagement",
       },
       {
         icon: "star",
-        text: "Generated key performance benchmarks",
+        text: "A better online experience for new and existing members",
       },
     ],
-    focusAreas: ["Website Design & Development", "Email Marketing", "Social Media"],
+    focusAreas: ["Website Development", "360 Marketing", "Email Marketing"],
     videoTitle: "mall of emirates launch",
     videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     videoPreview: {
@@ -1498,7 +1498,7 @@ export const projectDetails = [
         "A USS project overview for Coshe Juices, growing a wellness membership brand through website development, marketing strategy, and social media management.",
     },
     hideVideoSection: true,
-    hideSocialGridPreview: true
+    // hideSocialGridPreview: true
   },
   {
     slug: "mn-nail-spa",
@@ -1535,8 +1535,8 @@ export const projectDetails = [
       },
     ],
     goal:
-      "Increase visibility, attract new clients, and create a consistent brand presence that reflects the quality of the salon experience.",
-    workIntro: "We supported the launch with a full 360 scope marketing approach:",
+      "Increase brand visibility, attract new clients and build a stronger digital presence that reflects the quality of the salon experience.",
+    workIntro: "Our work included:",
     workItems: [
       {
         icon: "creator",
@@ -1544,7 +1544,7 @@ export const projectDetails = [
       },
       {
         icon: "360",
-        text: "Paid media management",
+        text: "Meta Ads management",
       },
       {
         icon: "email",
@@ -1552,27 +1552,27 @@ export const projectDetails = [
       },
       {
         icon: "social",
-        text: "Campaign and event planning",
+        text: "Campaign & social planning",
       },
     ],
     approach:
-      "Our focus was on showcasing the luxury salon experience, positioning M&N Nail Spa as a premium beauty destination. Through engaging content, targeted advertising, and a consistent social media presence, we helped the brand connect with both new and existing customers.",
+      "We focused on showcasing the salon experience through premium visuals, targeted advertising and consistent content. By combining paid campaigns with ongoing social media activity, we helped the brand reach new audiences while keeping existing customers engaged.",
     outcomes: [
       {
         icon: "megaphone",
-        text: "Increased awareness across key digital platforms",
+        text: "Increased awareness across digital channels",
       },
       {
         icon: "bars",
-        text: "Increased footfall to physical locations by 30%",
+        text: "30% increase in salon visits",
       },
       {
         icon: "shield",
-        text: "Improved local visibility and performance",
+        text: "Improved local visibility",
       },
       {
         icon: "star",
-        text: "Produced content that highlighted the salon's premium services",
+        text: "Premium content that showcased the salon experience",
       },
     ],
     focusAreas: ["Social Media", "360 Marketing", "Content Creation"],
@@ -1625,8 +1625,8 @@ export const projectDetails = [
       },
     ],
     goal:
-      "Successfully launch a new digital product while leveraging an existing audience to drive awareness, engagement, and sales during a key Black Friday period.",
-    workIntro: "We supported the launch with a full 360 scope marketing approach:",
+      "Launch a new digital product and maximise sales during the Black Friday campaign.",
+    workIntro: "Our work included:",
     workItems: [
       {
         icon: "360",
@@ -1634,7 +1634,7 @@ export const projectDetails = [
       },
       {
         icon: "creator",
-        text: "Marketing strategy",
+        text: "Product launch strategy",
       },
       {
         icon: "email",
@@ -1646,23 +1646,23 @@ export const projectDetails = [
       },
     ],
     approach:
-      "Our focus was on creating a seamless customer journey from discovery to purchase. By combining a dedicated website experience with a strategic launch campaign, we helped position the e-book as a valuable resource for Tish's audience while maximising visibility during one of the busiest shopping periods of the year.",
+      "We built the launch around Black Friday, creating a dedicated website, clear customer journey and a campaign designed to convert Tish's audience into customers. Every stage was focused on making it easy to discover, purchase and download the e-book.",
     outcomes: [
       {
         icon: "megaphone",
-        text: "Selling out 100s of e-books in Black Friday weekend",
+        text: "Hundreds of e-books sold over Black Friday weekend",
       },
       {
         icon: "bars",
-        text: "Helped transform audience engagement into product sales",
+        text: "Turned audience engagement into product sales",
       },
       {
         icon: "shield",
-        text: "Improved local visibility and performance",
+        text: "Improved website performance and conversions",
       },
       {
         icon: "star",
-        text: "Exceeded key performance benchmarks",
+        text: "A repeatable launch model for future digital products",
       },
     ],
     focusAreas: ["Social Media", "360 Marketing", "Content Creation"],
@@ -1715,8 +1715,8 @@ export const projectDetails = [
       },
     ],
     goal:
-      "Increase high-quality lead generation while improving visibility and performance across search.",
-    workIntro: "We supported the launch with a full 360 scope marketing approach:",
+      "Increase high quality enquiries while improving visibility across Google Search.",
+    workIntro: "Our work included:",
     workItems: [
       {
         icon: "creator",
@@ -1724,11 +1724,11 @@ export const projectDetails = [
       },
       {
         icon: "360",
-        text: "Keyword research and audience segmentation",
+        text: "Keyword targeting and audience segmentation",
       },
       {
         icon: "email",
-        text: "Ad copy and performance optimization",
+        text: "Ad copy and performance optimisation",
       },
       {
         icon: "social",
@@ -1736,26 +1736,26 @@ export const projectDetails = [
       },
     ],
     approach:
-      "Our focus was on capturing intent demand. By targeting users actively searching for residency and citizenship solutions, we built a campaign designed to attract qualified leads while maximizing ad spend and performance.",
+      "We focused on reaching people already searching for residency and citizenship solutions. By targeting relevant keywords, creating ad copy and monitoring campaign performance, we improved lead quality while increasing visibility across Google.",
     outcomes: [
       {
         icon: "megaphone",
-        text: "150+ high-quality leads generated in two months",
+        text: "125 high quality leads generated in one month",
       },
       {
         icon: "bars",
-        text: "Increased visibility across web and search terms",
+        text: "Increased visibility across relevant search terms",
       },
       {
         icon: "shield",
-        text: "Improved local visibility and performance",
+        text: "Higher quality enquiries",
       },
       {
         icon: "star",
-        text: "Exceeded key performance benchmarks",
+        text: "Better campaign performance",
       },
     ],
-    focusAreas: ["Social Media", "360 Marketing", "Content Creation"],
+    focusAreas: ["Paid Search", "Marketing Strategy", "Lead Generation"],
     videoTitle: "mall of emirates launch",
     videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     videoPreview: {
@@ -1805,44 +1805,44 @@ export const projectDetails = [
       },
     ],
     goal:
-      "Increase high-quality lead generation while improving visibility and performance across search.",
-    workIntro: "We supported the launch with a full 360 scope marketing approach:",
+      "Create premium content that showcased the food, atmosphere and overall experience while strengthening Oak’s digital presence.",
+    workIntro: "Our Work Included:",
     workItems: [
       {
         icon: "creator",
-        text: "Google Ads strategy and campaign setup",
+        text: "Food & beverage photography",
       },
       {
         icon: "360",
-        text: "Keyword research and audience segmentation",
+        text: "Videography",
       },
       {
         icon: "email",
-        text: "Ad copy and performance optimization",
+        text: "Social media content",
       },
       {
         icon: "social",
-        text: "Overall marketing strategy for market entry",
+        text: "Creative direction",
       },
     ],
     approach:
-      "Our focus was on capturing intent demand. By targeting users actively searching for residency and citizenship solutions, we built a campaign designed to attract qualified leads while maximizing ad spend and performance.",
+      "The focus was on capturing what made Oak different, from the presentation of each dish to the atmosphere throughout the venue. Every photo and video was created to reflect the restaurant's premium experience in a natural and authentic way.",
     outcomes: [
       {
         icon: "megaphone",
-        text: "150+ high-quality leads generated in two months",
+        text: "Premium content library",
       },
       {
         icon: "bars",
-        text: "Increased visibility across web and search terms",
+        text: "Consistent content across social media",
       },
       {
         icon: "shield",
-        text: "Improved local visibility and performance",
+        text: "Stronger online brand presence",
       },
       {
         icon: "star",
-        text: "Exceeded key performance benchmarks",
+        text: "Creative assets for ongoing campaigns",
       },
     ],
     focusAreas: ["Social Media", "360 Marketing", "Content Creation"],
@@ -1908,7 +1908,7 @@ export const projectDetails = [
       },
       {
         icon: "email",
-        text: "Weekly broadcast creation",
+        text: "Website content creation",
       },
       {
         icon: "360",
@@ -1916,7 +1916,7 @@ export const projectDetails = [
       },
     ],
     approach:
-      "Our focus was on creating content that shows, never tells the business, and the person behind it. From introducing new agents, providing value true to real estate investing and market insights across the website, every piece of content was designed to build credibility and establish a strong local presence even before actual estate was created.",
+      "Our focus was on creating content that showcased both the business and the person behind it. From interviewing agents to producing long form YouTube content and creating assets for the website, every piece of content was designed to build credibility and establish a recognisable presence within the real estate market.",
     outcomes: [
       {
         icon: "megaphone",
@@ -1932,10 +1932,10 @@ export const projectDetails = [
       },
       {
         icon: "star",
-        text: "Consistent new and supporting business growth",
+        text: "Consistent content supporting business growth",
       },
     ],
-    focusAreas: ["Marketing Strategy & Website Content", "YouTube Content"],
+    focusAreas: ["Marketing Strategy", "Website Content", "YouTube Content"],
     videoTitle: "fabri elite agency",
     videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     videoPreview: {
@@ -2006,11 +2006,11 @@ export const projectDetails = [
       },
       {
         icon: "360",
-        text: "Brand identity assets",
+        text: "Social media assets",
       },
     ],
     approach:
-      "Our focus was on creating content that reflects the quality of the property while reinforcing the St. George's brand. By capturing both the space and the lifestyle it offers, we delivered a library of assets that could be used consistently across social media, websites and marketing campaigns.",
+      "Our focus was on creating content that reflected the quality of each property while reinforcing the St George's brand. By capturing both the spaces and the lifestyle they offer, we delivered a library of assets that could be used consistently across social media, websites and marketing campaigns.",
     outcomes: [
       {
         icon: "megaphone",
@@ -2018,7 +2018,7 @@ export const projectDetails = [
       },
       {
         icon: "bars",
-        text: "Stronger online and local presence",
+        text: "Stronger visual brand presence",
       },
       {
         icon: "shield",

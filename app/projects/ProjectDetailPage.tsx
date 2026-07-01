@@ -107,7 +107,7 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
 
             {/* Description — rises up */}
             <FadeUp delay={0.4}>
-              <p className="mt-[15px] max-w-[600px] font-[var(--font-inter)] text-[12px] font-normal leading-[1.72] tracking-[-0.18px] text-[#707070] sm:text-[16px]">
+              <p className="mt-[15px] max-w-[490px] font-[var(--font-inter)] text-[12px] font-normal leading-[1.72] tracking-[-0.18px] text-[#707070] sm:text-[16px]">
                 {project.description}
               </p>
             </FadeUp>
@@ -289,7 +289,7 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
                 <h3 className="font-[var(--font-be-vietnam)] text-[16px] font-bold leading-none tracking-[2.34%] text-[#141414] sm:text-[20px]">
                   The Outcome
                 </h3>
-                <div className="mt-[17px] max-w-[750px] grid grid-cols-2 gap-[17px] sm:grid-cols-4">
+                <div className="mt-[17px] max-w-[700px] grid grid-cols-2 gap-[25px] sm:grid-cols-4">
                   {project.outcomes.map((outcome, idx) => (
                     <FadeUp key={outcome.text} delay={0.15 + idx * 0.1}>
                       <div className="flex min-h-[104px] w-full max-w-[330px] flex-col items-center justify-start rounded-[7px] border border-[#dededb] px-[10px] pb-[10px] pt-[12px] text-center text-[#ff5500]">
