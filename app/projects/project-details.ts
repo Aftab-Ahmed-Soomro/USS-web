@@ -1698,7 +1698,7 @@ export const projectDetails = [
       alt: "Residency Advanced second citizenship and residency",
       position: "50% 50%",
     },
-    overviewSubtitle: "SNEAK PEAK INTO RESIDENCY ADVANCED",
+    overviewSubtitle: "GLOBAL CITIZENSHIP",
     galleryImages: [
       {
         src: "https://emmanuelcolewilliams.com/uss-assets/st/1.png",
@@ -1788,7 +1788,7 @@ export const projectDetails = [
       alt: "Residency Advanced second citizenship and residency",
       position: "50% 50%",
     },
-    overviewSubtitle: "SNEAK PEAK INTO OAK RESTAURANT",
+    overviewSubtitle: "OAK RESTAURANT",
     galleryImages: [
       {
         src: "/assets/oakrestaurant/1.jpg",
