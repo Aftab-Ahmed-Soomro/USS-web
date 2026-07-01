@@ -238,7 +238,7 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
                     The Goal
                   </h2>
                 </div>
-                <p className="mt-[20px] max-w-[780px] font-[var(--font-inter)] text-[15px] sm:text-[18px] font-normal leading-[28px] tracking-[0%] text-[#737373]">
+                <p className="mt-[20px] max-w-[780px] font-[var(--font-inter)] text-[12px] sm:text-[16px] font-normal leading-[28px] tracking-[0%] text-[#737373]">
                   {project.goal}
                 </p>
               </div>

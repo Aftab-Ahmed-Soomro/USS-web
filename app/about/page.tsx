@@ -11,6 +11,13 @@ import FadeDown from "../components/FadeDown";
 import FadeUp from "../components/FadeUp";
 import FadeRight from "../components/FadeRight";
 
+const stats = [
+  { value: "5x", label: "ROAS Achieved" },
+  { value: "55M", label: "AED Generated in Revenue" },
+  { value: "500K", label: "Leads Delivered" },
+  { value: "100+", label: "Brands Worldwide" },
+];
+
 const team = [
   { name: "MEET EMMANUEL", role: "CEO/Founder", image: "/assets/team/emanuel.png", color: "#72cc3b", position: "center bottom" },
   { name: "MEET MEERAL", role: "Marketing Director", image: "/assets/team/meeral.png", color: "#f45122", position: "center bottom" },
@@ -43,7 +50,7 @@ export default function AboutPage() {
 
           {/* Section heading — slides in from left */}
           <FadeLeft delay={0.1}>
-            <div className="mx-auto max-w-[1150px] px-6 mb-12 md:mb-16">
+            <div className="mx-auto max-w-[1150px] px-6 mb-12">
               <p
                 className="text-[#fff] font-medium text-[42px] sm:[56px] tracking-normal leading-none"
                 style={{ fontWeight: 500 }}
@@ -62,18 +69,17 @@ export default function AboutPage() {
             </div>
           </FadeLeft>
 
-          <div className="mx-auto max-w-[1150px] px-6 grid grid-cols-1 md:grid-cols-[240px_1fr] lg:grid-cols-[280px_1fr] gap-10 lg:gap-16 items-start">
+          <div className="mx-auto max-w-[1150px] px-6 grid grid-cols-1 md:grid-cols-[240px_1fr] lg:grid-cols-[280px_1fr] gap-30 lg:gap-40 items-start">
 
             {/* LEFT — Portrait — slides in from left */}
             <FadeLeft delay={0.2}>
               <div className="relative w-full max-w-[280px] mx-auto md:mx-0">
-                <div className="relative aspect-[3/4] w-full min-h-[300px] overflow-hidden">
+                <div className="relative aspect-[3/4] min-w-[318px] w-full min-h-[397.5px] overflow-hidden">
                   <Image
                     src="/assets/founder.jpg"
                     alt="Emmanuel Cole Williams, Founder and CEO of USS"
                     fill
-                    sizes="(min-width: 1024px) 280px, (min-width: 768px) 240px, 80vw"
-                    className="object-cover object-[center_100%]"
+                    className="object-contain object-[center_20%]"
                   />
                 </div>
               </div>
@@ -133,7 +139,7 @@ export default function AboutPage() {
 
               {/* Signed row — slides in from right */}
               <FadeRight delay={0.55}>
-                <div className="mt-16 flex items-center w-full gap-4">
+                <div className="mt-22 flex items-center w-full gap-4">
                   <div className="h-[1px] bg-white/20 flex-grow" />
                   <span className="text-[#F5F5F5] text-[9px] font-medium tracking-[3px] shrink-0 uppercase">
                     Signed, E.C.W.
@@ -145,7 +151,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <Numbers />
+        <Numbers stats={stats} />
 
         <Team />
       </main>
