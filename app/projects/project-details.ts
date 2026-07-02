@@ -875,33 +875,33 @@ export const projectDetails = [
   {
     slug: "reclaim-us",
     productName: "Reclaim",
-    title: "Launching reclaim in the US",
+    title: `Launching reclaim in the US`,
     description:
       "Reclaim is a US travel service designed to simplify the airport experience by allowing passengers to skip check-in entirely. By collecting luggage directly from a customer's home, hotel, or Airbnb and checking it in with the airline, reclaim offers a more seamless and convenient way to travel.",
     heroImage: {
-      src: "https://emmanuelcolewilliams.com/uss-assets/reclaim/reclaim.png",
+      src: "/assets/reclaimMainImage.png",
       alt: "Travelers with luggage inside an airport terminal",
       position: "50% 50%",
     },
     overviewSubtitle: "Sneak peak into reclaim launch in US",
     galleryImages: [
       {
-        src: "https://emmanuelcolewilliams.com/uss-assets/reclaim/1.png",
+        src: "/assets/reclaim1.png",
         alt: "Reclaim travel luggage in airport terminal",
         position: "16% 50%",
       },
       {
-        src: "https://emmanuelcolewilliams.com/uss-assets/reclaim/2.jpg",
+        src: "/assets/reclaim2.jpg",
         alt: "Reclaim branded luggage service concept",
         position: "38% 50%",
       },
       {
-        src: "https://emmanuelcolewilliams.com/uss-assets/reclaim/3.png",
+        src: "/assets/reclaim3.png",
         alt: "Traveler with luggage before boarding",
         position: "58% 50%",
       },
       {
-        src: "https://emmanuelcolewilliams.com/uss-assets/reclaim/4.png",
+        src: "/assets/reclaim4.png",
         alt: "US travel destination skyline and airport route",
         position: "82% 50%",
       },

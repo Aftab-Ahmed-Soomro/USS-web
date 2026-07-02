@@ -103,7 +103,7 @@ export function Testimonials() {
         <FadeDown delay={0.1}>
           <div className="flex h-[15px] items-center gap-2">
             <span className="size-1.5 rounded-full bg-[#ff5500]" />
-            <p className="font-[var(--font-be-vietnam)] text-[8px] sm:text-[10px] font-bold uppercase leading-none tracking-[3px] text-white">
+            <p className="font-[var(--font-be-vietnam)] text-[9px] sm:text-[11px] font-bold uppercase leading-none tracking-[3px] text-white">
               What Our Clients Say
             </p>
           </div>

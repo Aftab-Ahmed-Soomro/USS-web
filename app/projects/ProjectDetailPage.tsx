@@ -100,7 +100,7 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
 
             {/* Page title — slides in from left */}
             <FadeLeft delay={0.3}>
-              <h1 className="mt-[28px] mb-6 max-w-[520px] font-[var(--font-be-vietnam)] text-[32px] font-bold leading-[1.35] tracking-[-0.9px] text-[#141414] sm:text-[44px]">
+              <h1 className="mt-[28px] mb-6 max-w-[480px] font-[var(--font-be-vietnam)] text-[32px] font-bold leading-[1.35] tracking-[-0.9px] text-[#141414] sm:text-[44px]">
                 {project.title}
               </h1>
             </FadeLeft>

@@ -18,7 +18,7 @@ const categories = [
     projects: [
       { title: "CINNAMOOD", description: "Franchise Expanding To Dubai", image: "/assets/projectsPagePics/cinamood.jpg", tags: ["UAE Expansion"], href: "/projects/cinamood" },
       { title: "Coshe", description: "Wellness Juices", image: "/assets/projectsPagePics/Coshe.jpg", tags: ["Brand Launch"], href: "/projects/coshe-juices" },
-      { title: "Oak Restaurant", description: "Building awareness for a new dining experience.", image: "/assets/projectsPagePics/oak.png", tags: ["Restaurant Launch"], href: "/projects/oak" }
+      { title: "Oak Restaurant", description: "Building awareness for a new dining experience.", image: "/assets/projectsPagePics/oak.png", tags: ["Content Creation"], href: "/projects/oak" }
     ]
   },
   {
@@ -26,7 +26,7 @@ const categories = [
     topTag: "Travel & Tourism",
     bottomTag: "Helping Tourism Grow",
     projects: [
-      { title: "SupperClub", description: "Scaling Supperclub Membership", image: "/assets/projectsPagePics/supper.png", tags: ["Scaling Business"], href: "/projects/supperclub" },
+      { title: "SupperClub", description: "Scaling Supperclub Membership", image: "/assets/projectsPagePics/supper.png", tags: ["Membership Growth"], href: "/projects/supperclub" },
       { title: "Yula", description: "Transforming Yalseh into Yula", image: "/assets/projectsPagePics/yula.jpg", tags: ["Rebrand"], href: "/projects/yula-beach-lounge" }
     ]
   },
@@ -35,9 +35,9 @@ const categories = [
     topTag: "Helping Business Expand",
     bottomTag: "Helping Business Grow",
     projects: [
-      { title: "Flowork", description: "Office Opening in Dubai Hills", image: "/assets/projectsPagePics/flowork.png", tags: ["Scaling Business"], href: "/projects/flowork" },
-      { title: "Residency Advanced", description: "Paid Search Lead Generation", image: "/assets/projectsPagePics/residency.png", tags: ["Scaling Business"], href: "/projects/residency-advanced" },
-      { title: "Reclaim", description: "Launching Reclaim in the US", image: "/assets/projectsPagePics/reclaim.png", tags: ["Scaling Business"], href: "/projects/reclaim-us" }
+      { title: "Flowork", description: "Office Opening in Dubai Hills", image: "/assets/projectsPagePics/flowork.png", tags: ["Business Launch"], href: "/projects/flowork" },
+      { title: "Residency Advanced", description: "Paid Search Lead Generation", image: "/assets/projectsPagePics/residency.png", tags: ["Google Ads"], href: "/projects/residency-advanced" },
+      { title: "Reclaim", description: "Launching Reclaim in the US", image: "/assets/projectsPagePics/reclaim.png", tags: ["US Expansion"], href: "/projects/reclaim-us" }
     ]
   },
   {
@@ -45,8 +45,8 @@ const categories = [
     topTag: "Helping Business Expand",
     bottomTag: "Helping Business Grow",
     projects: [
-      { title: "PrecisionTalk", description: "AI Voice Agent Expanding in UAE", image: "/assets/projectsPagePics/precision.png", tags: ["Scaling Business"], href: "/projects/precision-talk" },
-      { title: "Disturbed Innovations Group", description: "3D Immersive Experiences", image: "/assets/projectsPagePics/disturbed.jpg", tags: ["Scaling Business"], href: "/projects/disturbed-innovations" }
+      { title: "PrecisionTalk", description: "AI Voice Agent Expanding in UAE", image: "/assets/projectsPagePics/precision.png", tags: ["Brand Launch"], href: "/projects/precision-talk" },
+      { title: "Disturbed Innovations Group", description: "3D Immersive Experiences", image: "/assets/projectsPagePics/disturbed.jpg", tags: ["Rebrand"], href: "/projects/disturbed-innovations" }
     ]
   },
   {
@@ -54,9 +54,9 @@ const categories = [
     topTag: "Helping Business Expand",
     bottomTag: "Helping Business Grow",
     projects: [
-      { title: "Women Who Thrive", description: "Networking Event Membership", image: "/assets/projectsPagePics/women.jpg", tags: ["Scaling Business"], href: "/projects/women-who-thrive" },
-      { title: "Adidas UAE", description: "Product Event For New Launch", image: "/assets/projectsPagePics/adidas.jpg", tags: ["Scaling Business"], href: "/projects/adidas-middle-east" },
-      { title: "Blank DXB", description: "New Warehouse Events", image: "/assets/projectsPagePics/blank.png", tags: ["Scaling Business"], href: "/projects/blank-dxb" },
+      { title: "Women Who Thrive", description: "Networking Event Membership", image: "/assets/projectsPagePics/women.jpg", tags: ["Membership Growth"], href: "/projects/women-who-thrive" },
+      { title: "Adidas UAE", description: "Product Event For New Launch", image: "/assets/projectsPagePics/adidas.jpg", tags: ["Product Launch"], href: "/projects/adidas-middle-east" },
+      { title: "Blank DXB", description: "New Warehouse Events", image: "/assets/projectsPagePics/blank.png", tags: ["Business Launch"], href: "/projects/blank-dxb" },
       { title: "Fete Events", description: "Premium Event Planning", image: "/assets/Fete.png", tags: ["Scaling Business"], href: "/projects/fete-events" }
       ,
       {
@@ -73,7 +73,7 @@ const categories = [
     topTag: "Helping Business Expand",
     bottomTag: "Helping Business Grow",
     projects: [
-      { title: "Afro Maya", description: "Fashion E-Commerce Brand", image: "/assets/projectsPagePics/afro.jpg", tags: ["Scaling Business"], href: "/projects/afro-maya" }
+      { title: "Afro Maya", description: "Fashion E-Commerce Brand", image: "/assets/projectsPagePics/afro.jpg", tags: ["E-Commerce Growth"], href: "/projects/afro-maya" }
     ]
   },
   {
@@ -89,8 +89,8 @@ const categories = [
     topTag: "Helping Business Expand",
     bottomTag: "Helping Business Grow",
     projects: [
-      { title: "Sadia Psychology", description: "Black Friday Planner Project", image: "/assets/projectsPagePics/sadia.png", tags: ["Scaling Business"], href: "/projects/sadia-psychology", imageClass: "object-[center_top]" },
-      { title: "Tish Wonders", description: "New E-Book Launch", image: "/assets/projectsPagePics/tesh.png", tags: ["Scaling Business"], href: "/projects/tish-wonders" }
+      { title: "Sadia Psychology", description: "Black Friday Planner Project", image: "/assets/projectsPagePics/sadia.png", tags: ["Black Friday Project"], href: "/projects/sadia-psychology", imageClass: "object-[center_top]" },
+      { title: "Tish Wonders", description: "New E-Book Launch", image: "/assets/projectsPagePics/tesh.png", tags: ["Product Launch"], href: "/projects/tish-wonders" }
     ]
   },
   {
@@ -98,9 +98,9 @@ const categories = [
     topTag: "Helping Business Expand",
     bottomTag: "Helping Business Grow",
     projects: [
-      { title: "Agency 8", description: "Real Estate Agency in Dubai", image: "/assets/projectsPagePics/agency.png", tags: ["Scaling Business"], href: "/projects/agency-8" },
-      { title: "Fabri Elite", description: "Luxury Agency in UAE", image: "/assets/projectsPagePics/fabri.jpg", tags: ["Scaling Business"], href: "/projects/fabri-elite" },
-      { title: "St. George Estate", description: "Real Estate Agency in Dubai", image: "/assets/projectsPagePics/st.png", tags: ["Scaling Business"], href: "/projects/st-georges" }
+      { title: "Agency 8", description: "Real Estate Agency in Dubai", image: "/assets/projectsPagePics/agency.png", tags: ["Lead Generation"], href: "/projects/agency-8" },
+      { title: "Fabri Elite", description: "Luxury Agency in UAE", image: "/assets/projectsPagePics/fabri.jpg", tags: ["Agency Opening"], href: "/projects/fabri-elite" },
+      { title: "St. George Estate", description: "Real Estate Agency in Dubai", image: "/assets/projectsPagePics/st.png", tags: ["Content Creation"], href: "/projects/st-georges" }
     ]
   }
 ];
@@ -207,7 +207,7 @@ export default function ProjectsPage() {
 
           {/* Eyebrow — drops down */}
           <FadeDown delay={0.1}>
-            <p className="font-[var(--font-be-vietnam)] text-[13px] font-medium uppercase leading-none tracking-[1.3px] text-white flex items-center justify-center">
+            <p className="font-[var(--font-be-vietnam)] text-[13px] font-medium uppercase leading-none tracking-[3px] text-white flex items-center justify-center">
               OUR PORTFOLIO
             </p>
           </FadeDown>
@@ -216,7 +216,7 @@ export default function ProjectsPage() {
           <FadeUp delay={0.2}>
             <h1 className="mt-[20px] font-[var(--font-be-vietnam)] text-[38px] font-bold lowercase leading-[1.03] tracking-[-0.9px] text-white sm:text-[56px] sm:tracking-[-0.9px]">
               projects that make an{" "}
-              <span className="font-[var(--font-cormorant)] text-[1.15em] sm:text-[72px] font-bold timesFontFamily italic tracking-[-0.9px] text-[#ff5500]">
+              <span className="font-[var(--font-cormorant)] text-[1.15em] sm:text-[72px] font-extralight timesFontFamily italic tracking-[-0.9px] text-[#ff5500]">
                 impact
               </span>
             </h1>
@@ -312,10 +312,10 @@ export default function ProjectsPage() {
 
                       {/* Title & description — slides up on hover */}
                       <div className="absolute bottom-5 left-5 right-5 pointer-events-none translate-y-1 group-hover:translate-y-0 transition-transform duration-400">
-                        <h3 className="text-white text-xl sm:text-[22px] font-medium font-[var(--font-be-vietnam)] tracking-[-0.5px]">
+                        <h3 className="text-white text-xl sm:text-[22px] font-medium font-[var(--font-be-vietnam)] tracking-[-0.44px]">
                           {project.title}
                         </h3>
-                        <p className="text-white/50 text-[12px] sm:text-[13px] mt-1 font-[var(--font-inter)] line-clamp-2 leading-[1.4]">
+                        <p className="text-white/50 text-[12px] sm:text-[16px] font-[var(--font-inter)] font-light line-clamp-2 leading-[1.4] tracking-[-0.44px]">
                           {project.description}
                         </p>
                       </div>

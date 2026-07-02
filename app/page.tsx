@@ -72,7 +72,7 @@ function Strategic() {
         {/* Section label — drops in from above */}
         <div className="text-center">
           <FadeDown>
-            <p className="text-[10px] sm:text-[14px] font-bold uppercase leading-none tracking-[5.6px] text-[#ff5500]">
+            <p className="font-[var(--font-be-vietnam)] text-[9px] sm:text-[11px] font-bold uppercase leading-none tracking-[3px] text-[#ff5500]">
               OUR APPROACH
             </p>
           </FadeDown>
@@ -81,7 +81,7 @@ function Strategic() {
           <ScaleIn delay={0.1} startScale={0.92}>
             <h2 className="mt-[35px] text-[42px] font-medium leading-[0.98] tracking-[-0.8px] sm:text-[56px]">
               a strategic process
-              <span className="mt-[25px] block font-[var(--font-cormorant)] text-[51px] font-normal timesFontFamily italic leading-[0.8] tracking-[-0.8px] text-[#ff5500] sm:text-[56px]">
+              <span className="mt-[25px] block fo`nt-[var(--font-cormorant)] text-[51px] font-normal timesFontFamily italic leading-[0.8] tracking-[-0.8px] text-[#ff5500] sm:text-[56px]">
                 built to perform.
               </span>
             </h2>

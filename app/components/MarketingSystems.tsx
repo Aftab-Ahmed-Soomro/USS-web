@@ -35,7 +35,7 @@ export function MarketingSystems() {
       {/* Header */}
       <div className="text-center mb-16 md:mb-24 z-10 mt-10">
         <FadeDown delay={0.1}>
-          <p className="text-[#ff5500] text-[11px] font-medium tracking-[0px] uppercase mb-4">
+          <p className="text-[#ff5500] font-[var(--font-be-vietnam)] text-[9px] sm:text-[11px] font-bold uppercase leading-none tracking-[3px] mb-4">
             OUR SOLUTIONS
           </p>
         </FadeDown>
