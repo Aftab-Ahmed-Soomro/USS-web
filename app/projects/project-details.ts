@@ -136,13 +136,13 @@ export const projectDetails = [
   {
     slug: "sadia-psychology",
     productName: "Sadia Psychology",
-    title: "Black Friday project with Sadia Psychology",
+    title: "Black Friday Project with Sadia Psychology",
     description:
       "Sadia Psychology is a content creator and educator with a global audience of more than 800K+ Instagram & YouTube followers. USS partnered with Sadia to develop, launch and market her 2024 planner, turning her content into a physical product that resonated with her audience and sold out during the Black Friday campaign.",
     heroImage: {
       src: "https://emmanuelcolewilliams.com/uss-assets/sadia/Sadia.png",
       alt: "Sadia Psychology holding her planner",
-      position: "50% 45%",
+      position: "20% 20%",
     },
     overviewSubtitle: "Sneak peak into Black Friday launch",
     galleryImages: [
@@ -226,7 +226,7 @@ export const projectDetails = [
   {
     slug: "women-who-thrive",
     productName: "Women Who Thrive",
-    title: "Increasing memberships for Women Who Thrive",
+    title: "Increasing Memberships for Women Who Thrive",
     description:
       "Women Who Thrive is a Dubai based networking community bringing women together through business, connection and personal growth. USS were responsible for helping grow its membership, strengthen its presence and build an engaged community through organic marketing.",
     heroImage: {
@@ -393,7 +393,7 @@ export const projectDetails = [
       },
     ],
     focusAreas: ["Social Media", "360 Marketing", "Content Creation"],
-    videoTitle: "mall of emirates launch",
+    videoTitle: "uae market launch",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
       src: "https://emmanuelcolewilliams.com/uss-assets/blurred.png",
@@ -763,7 +763,7 @@ export const projectDetails = [
       },
     ],
     focusAreas: ["Social Media", "Paid Media", "Content Creation"],
-    videoTitle: "Dubai Hills & Business Bay launch",
+    videoTitle: "from strategy to launch",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
       src: "https://emmanuelcolewilliams.com/uss-assets/blurred.png",
@@ -1153,7 +1153,7 @@ export const projectDetails = [
     heroImage: {
       src: "https://emmanuelcolewilliams.com/uss-assets/precision/precision.png",
       alt: "Precision Talk AI voice agent dashboard",
-      position: "50% 50%",
+      position: "20% 20%",
     },
     overviewSubtitle: "BUILDING THE FUTURE OF CUSTOMER COMMUNICATION",
     galleryImages: [
@@ -1690,33 +1690,33 @@ export const projectDetails = [
   {
     slug: "residency-advanced",
     productName: "Residency Advanced",
-    title: "Scaling Residency ddw",
+    title: "Scaling Residency Advanced with Google Ads",
     description:
-      "Residency Advanced is a consultancy specializing in second citizenship and residency by investment programs, helping clients gain global mobility and greater freedom through alternative residencies. USS partnered with Residency Advanced to scale their operations and results by targeting qualified audiences actively searching for their services.",
+      "Residency Advanced helps individuals and families secure second residency and citizenship through investment programmes. USS partnered with Residency Advanced to grow lead generation through Google Ads, connecting the brand with people actively searching for their services.",
     heroImage: {
-      src: "https://emmanuelcolewilliams.com/uss-assets/st/st.png",
+      src: "https://emmanuelcolewilliams.com/uss-assets/residency-advanced/Residency.jpg",
       alt: "Residency Advanced second citizenship and residency",
       position: "50% 50%",
     },
     overviewSubtitle: "GLOBAL CITIZENSHIP",
     galleryImages: [
       {
-        src: "https://emmanuelcolewilliams.com/uss-assets/st/1.png",
+        src: "https://emmanuelcolewilliams.com/uss-assets/residency-advanced/1.jpg",
         alt: "Residency Advanced global mobility passport",
         position: "50% 50%",
       },
       {
-        src: "https://emmanuelcolewilliams.com/uss-assets/st/2.png",
+        src: "https://emmanuelcolewilliams.com/uss-assets/residency-advanced/2.jpg",
         alt: "Residency Advanced citizenship programs",
         position: "50% 50%",
       },
       {
-        src: "https://emmanuelcolewilliams.com/uss-assets/st/3.jpg",
+        src: "https://emmanuelcolewilliams.com/uss-assets/residency-advanced/3.jpg",
         alt: "Residency Advanced global investment",
         position: "50% 50%",
       },
       {
-        src: "https://emmanuelcolewilliams.com/uss-assets/st/4.jpg",
+        src: "https://emmanuelcolewilliams.com/uss-assets/residency-advanced/4.jpg",
         alt: "Residency Advanced alternative residencies",
         position: "50% 50%",
       },
@@ -1953,7 +1953,7 @@ export const projectDetails = [
     videoSrcs: [
       "https://emmanuelcolewilliams.com/uss-assets/fabri/FAB OFFICE-4K.mov",
       "https://emmanuelcolewilliams.com/uss-assets/fabri/FAB DECA-4K.MOV",
-      "https://emmanuelcolewilliams.com/uss-assets/fabri/FAB 2ND VIEWING .mov",
+      "https://emmanuelcolewilliams.com/uss-assets/fabri/FAB 2ND VIEWING.mov",
     ],
     metadata: {
       title: "Fabri Elite Personal Brand | USS Projects",
@@ -1964,11 +1964,11 @@ export const projectDetails = [
   {
     slug: "st-georges",
     productName: "ST GEORGE'S",
-    title: "Property Content for St George's",
+    title: "Building a Standout Real Estate Brand",
     description:
       "St George's is a real estate agency specialising in premium residential properties across Dubai. USS partnered with the team to produce professional photo and video content that showcased listings, strengthened the brand's visual identity and provided high quality marketing assets across digital channels.",
     heroImage: {
-      src: "https://emmanuelcolewilliams.com/uss-assets/fete/Fete.png",
+      src: "/assets/palmJumerah.jpg",
       alt: "St George's passport and globe",
       position: "50% 50%",
     },
@@ -2037,7 +2037,7 @@ export const projectDetails = [
       },
     ],
     focusAreas: ["Social Media", "Creative Direction", "Content Creation"],
-    videoTitle: "mall of emirates launch",
+    videoTitle: "content strategy",
     videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     videoPreview: {
       src: "https://emmanuelcolewilliams.com/uss-assets/blurred.png",

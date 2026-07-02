@@ -13,8 +13,8 @@ import { DraggableContainer } from "../components/DraggableContainer";
 const categories = [
   {
     name: "F&B",
-    topTag: "Helping Brands Establish",
-    bottomTag: "Brands Launching",
+    topTag: "Brand Launches",
+    bottomTag: "Customer Growth",
     projects: [
       { title: "CINNAMOOD", description: "Franchise Expanding To Dubai", image: "/assets/projectsPagePics/cinamood.jpg", tags: ["UAE Expansion"], href: "/projects/cinamood" },
       { title: "Coshe", description: "Wellness Juices", image: "/assets/projectsPagePics/Coshe.jpg", tags: ["Brand Launch"], href: "/projects/coshe-juices" },
@@ -23,8 +23,8 @@ const categories = [
   },
   {
     name: "Hospitality",
-    topTag: "Travel & Tourism",
-    bottomTag: "Helping Tourism Grow",
+    topTag: "Customer Experience",
+    bottomTag: "Bookings & Loyalty",
     projects: [
       { title: "SupperClub", description: "Scaling Supperclub Membership", image: "/assets/projectsPagePics/supper.png", tags: ["Membership Growth"], href: "/projects/supperclub" },
       { title: "Yula", description: "Transforming Yalseh into Yula", image: "/assets/projectsPagePics/yula.jpg", tags: ["Rebrand"], href: "/projects/yula-beach-lounge" }
@@ -32,8 +32,8 @@ const categories = [
   },
   {
     name: "Professional services",
-    topTag: "Helping Business Expand",
-    bottomTag: "Helping Business Grow",
+    topTag: "Business Growth",
+    bottomTag: "Lead Generation",
     projects: [
       { title: "Flowork", description: "Office Opening in Dubai Hills", image: "/assets/projectsPagePics/flowork.png", tags: ["Business Launch"], href: "/projects/flowork" },
       { title: "Residency Advanced", description: "Paid Search Lead Generation", image: "/assets/projectsPagePics/residency.png", tags: ["Google Ads"], href: "/projects/residency-advanced" },
@@ -42,8 +42,8 @@ const categories = [
   },
   {
     name: "Technology and startups",
-    topTag: "Helping Business Expand",
-    bottomTag: "Helping Business Grow",
+    topTag: "Market Expansion",
+    bottomTag: "Business Growth",
     projects: [
       { title: "PrecisionTalk", description: "AI Voice Agent Expanding in UAE", image: "/assets/projectsPagePics/precision.png", tags: ["Brand Launch"], href: "/projects/precision-talk" },
       { title: "Disturbed Innovations Group", description: "3D Immersive Experiences", image: "/assets/projectsPagePics/disturbed.jpg", tags: ["Rebrand"], href: "/projects/disturbed-innovations" }
@@ -51,8 +51,8 @@ const categories = [
   },
   {
     name: "Events & Entertainment",
-    topTag: "Helping Business Expand",
-    bottomTag: "Helping Business Grow",
+    topTag: "Brand Experiences",
+    bottomTag: "Event Launches",
     projects: [
       { title: "Women Who Thrive", description: "Networking Event Membership", image: "/assets/projectsPagePics/women.jpg", tags: ["Membership Growth"], href: "/projects/women-who-thrive" },
       { title: "Adidas UAE", description: "Product Event For New Launch", image: "/assets/projectsPagePics/adidas.jpg", tags: ["Product Launch"], href: "/projects/adidas-middle-east" },
@@ -70,24 +70,24 @@ const categories = [
   },
   {
     name: "E-Commerce",
-    topTag: "Helping Business Expand",
-    bottomTag: "Helping Business Grow",
+    topTag: "Online Growth",
+    bottomTag: "Revenue Growth",
     projects: [
       { title: "Afro Maya", description: "Fashion E-Commerce Brand", image: "/assets/projectsPagePics/afro.jpg", tags: ["E-Commerce Growth"], href: "/projects/afro-maya" }
     ]
   },
   {
     name: "Wellness & Beauty",
-    topTag: "Helping Business Expand",
-    bottomTag: "Helping Business Grow",
+    topTag: "Customer Growth",
+    bottomTag: "Brand Awareness",
     projects: [
       { title: "M&N Nail Spa", description: "Beauty Treatment Salon in Dubai", image: "/assets/projectsPagePics/m&n.png", tags: ["Scaling Business"], href: "/projects/mn-nail-spa" }
     ]
   },
   {
     name: "Talent Projects",
-    topTag: "Helping Business Expand",
-    bottomTag: "Helping Business Grow",
+    topTag: "Personal Branding",
+    bottomTag: "Audience Growth",
     projects: [
       { title: "Sadia Psychology", description: "Black Friday Planner Project", image: "/assets/projectsPagePics/sadia.png", tags: ["Black Friday Project"], href: "/projects/sadia-psychology", imageClass: "object-[center_top]" },
       { title: "Tish Wonders", description: "New E-Book Launch", image: "/assets/projectsPagePics/tesh.png", tags: ["Product Launch"], href: "/projects/tish-wonders" }
@@ -95,8 +95,8 @@ const categories = [
   },
   {
     name: "Real Estate",
-    topTag: "Helping Business Expand",
-    bottomTag: "Helping Business Grow",
+    topTag: "Property Growth",
+    bottomTag: "Leads & Sales",
     projects: [
       { title: "Agency 8", description: "Real Estate Agency in Dubai", image: "/assets/projectsPagePics/agency.png", tags: ["Lead Generation"], href: "/projects/agency-8" },
       { title: "Fabri Elite", description: "Luxury Agency in UAE", image: "/assets/projectsPagePics/fabri.jpg", tags: ["Agency Opening"], href: "/projects/fabri-elite" },
