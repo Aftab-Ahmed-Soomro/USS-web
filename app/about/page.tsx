@@ -59,7 +59,7 @@ export default function AboutPage() {
                   ceo{" "}
                 </span>
               <span
-                className="text-[#FF5500] text-[42px] sm:text-[72px] italic timesFontFamily tracking-tight leading-[0.9]"
+                className="text-[#FF5500] text-[42px] sm:text-[72px] italic timesFontFamily tracking-tight leading-[0.7]"
                 style={{  fontWeight: 400 }}
               >
                 
