@@ -53,8 +53,10 @@ function Hero() {
                     your business.
 
                 </p>
-
-                <Button className="mt-[34px] h-[43px] px-[33px] text-[12px]">Book a Consultation</Button>
+                <Link href="/contact">
+                
+                <Button className="mt-[34px] uppercase h-[43px] px-[33px] text-[12px]">Book a Consultation</Button>
+                </Link>
             </section>
 
             <div className="flex justify-center md:justify-end">

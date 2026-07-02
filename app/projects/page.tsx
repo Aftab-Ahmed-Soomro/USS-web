@@ -175,7 +175,7 @@ function ProjectsCta() {
           <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link href="/contact">
             
-            <button className="h-[40px] w-full sm:w-auto cursor-pointer px-10 rounded-full bg-[#ff5500] text-[8px] font-bold sm:text-[13px] tracking-[0.52px] text-white transition-colors hover:bg-[#ff6b1f]">
+            <button className="h-[40px] w-full sm:w-auto cursor-pointer px-10 rounded-full bg-[#ff5500] text-[8px] font-bold sm:text-[13px] tracking-[0.52px] text-white transition-colors uppercase hover:bg-[#ff6b1f]">
               Book a Consultation
             </button>
             </Link>

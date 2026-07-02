@@ -6,13 +6,14 @@ import FadeLeft from "./FadeLeft";
 import FadeDown from "./FadeDown";
 import FadeUp from "./FadeUp";
 import FadeRight from "./FadeRight";
+import { CiCamera } from "react-icons/ci";
 
 const rawSystems = [
   { title: "MARKETING\nSTRATEGY", icon: "/assets/marketingGrowths/marketingSvg.png", href: "/marketing-strategy" },
   { title: "SOCIAL MEDIA\nMARKETING", icon: "/assets/marketingGrowths/socialMediaIcon.png", href: "/social-media-management" },
   { title: "META\nADS", icon: "/assets/marketingGrowths/metaIcon.png", href: "/meta-ads" },
   { title: "GOOGLE\nADWORDS", icon: "/assets/marketingGrowths/googleIcon.png", href: "/google-ads" },
-  { title: "CONTENT\nCREATION", icon: "/assets/marketingGrowths/contentIcon.png", href: "/content-creation" },
+  { title: "CONTENT\nCREATION", icon:  CiCamera , href: "/content-creation" },
   { title: "EMAIL\nMARKETING", icon: "/assets/marketingGrowths/emailIcon.png", href: "/email-marketing" },
   { title: "WHATSAPP\n& SMS", icon: "/assets/marketingGrowths/whatsappIcon.png", href: "/whatsapp-and-sms" },
   { title: "TALENT\nMANAGEMENT", icon: "/assets/marketingGrowths/talentIcon.png", href: "/talent-management" },
@@ -173,14 +174,18 @@ export function MarketingSystems() {
                       -ml-[20px] -mt-[20px] sm:-ml-[28px] sm:-mt-[28px] md:-ml-[32px] md:-mt-[32px] lg:-ml-[36px] lg:-mt-[36px]"
                   >
                     {/* Icon */}
-                    <div className="relative w-4 h-4">
-                      <Image
-                        src={sys.icon}
-                        alt={sys.title.replace("\n", " ")}
-                        fill
-                        className="node-icon object-contain"
-                      />
-                    </div>
+                    <div className="relative w-4 h-4 flex items-center justify-center">
+  {typeof sys.icon === "string" ? (
+    <Image
+      src={sys.icon}
+      alt={sys.title.replace("\n", " ")}
+      fill
+      className="node-icon object-contain"
+    />
+  ) : (
+    <sys.icon className="node-icon w-4 h-4 text-white" />
+  )}
+</div>
 
                     {/* Label — above the node */}
                     <div className="node-label text-white absolute whitespace-nowrap text-[7px] sm:text-[9px] md:text-[12px] lg:text-[14px] uppercase font-medium tracking-wide flex flex-col items-center text-center bottom-full left-1/2 -translate-x-1/2 mb-3 md:mb-5">
@@ -206,7 +211,7 @@ export function MarketingSystems() {
         </FadeLeft>
         <FadeRight delay={0.2}>
           <p className="text-white text-[8px] md:text-[12px] uppercase font-medium tracking-[3.84px] mb-7">
-            BRAND &middot; CONTENT &middot; ADVERTISING &middot; AUTOMATION
+            STRATEGY &middot; CREATIVE &middot; PERFORMANCE &middot; AUTOMATION
           </p>
         </FadeRight>
         <FadeUp delay={0.3}>

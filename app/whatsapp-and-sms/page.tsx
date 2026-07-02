@@ -348,7 +348,7 @@ function FinalCta() {
         </h2>
         <div className="mt-[26px] flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Link
-            className="inline-flex h-[35px] min-w-[176px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[11px] font-bold text-white transition hover:bg-[#ff6b1f]"
+            className="inline-flex h-[35px] min-w-[176px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[11px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
             href="/contact"
           >
             Book a Consultation

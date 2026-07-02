@@ -121,7 +121,7 @@ export function Numbers({
   stats = defaultStats,
   eyebrow = "OUR IMPACT",
   title = "our numbers speak\nfor themselves",
-  ctaLabel = "Get in Touch",
+  ctaLabel = "Book a Consultation",
   ctaHref = "/contact",
 }: NumbersProps) {
   const titleLines = title.split("\n");
@@ -159,7 +159,7 @@ export function Numbers({
           {/* CTA Button */}
           <FadeRight delay={0.2}>
             <Link
-              className="inline-flex h-[42px] w-[210px] items-center justify-center gap-[15px] rounded-full bg-white text-[11px] font-extrabold text-black transition hover:bg-white/90"
+              className="inline-flex h-[42px] w-[210px] items-center justify-center gap-[15px] rounded-full bg-white text-[11px] font-extrabold text-black uppercase transition hover:bg-white/90"
               href={ctaHref}
             >
               {ctaLabel} <span className="text-[18px] leading-none">&rsaquo;</span>

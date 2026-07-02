@@ -23,7 +23,7 @@ export function Hero() {
         </p>
         <Link href="/contact">
         
-        <Button className="mt-[34px] h-[43px] px-[33px] text-[12px]">Book a Consultation</Button>
+        <Button className="mt-[34px] h-[43px] px-[33px] text-[12px] uppercase">Book a Consultation</Button>
         </Link>
       </section>
 

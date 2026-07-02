@@ -42,7 +42,7 @@ function Hero() {
             Trusted by 100+ SMEs across UK, US & UAE.
           </p>
   
-          <Button className="mt-[34px] h-[43px] px-[33px] text-[12px] sm:text-[14px] font-bold">Book a Consultation</Button>
+          <Button className="mt-[34px] h-[43px] px-[33px] text-[12px] sm:text-[14px] uppercase font-bold">Book a Consultation</Button>
         </section>
   
         <div className="flex justify-center md:justify-end">

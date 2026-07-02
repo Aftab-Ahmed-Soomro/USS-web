@@ -29,7 +29,7 @@ const process = [
   {
     number: "01",
     title: "DISCOVER",
-    copy: "We dive deep into your business, audience, and market to uncover real opportunities.",
+    copy: "We dive deep into your business, audience and market to uncover real opportunities.",
     icon: "/assets/rigggght_arrow.png",
   },
   {
@@ -80,7 +80,7 @@ function Strategic() {
           {/* Headline — scales in for more punch than a plain fade */}
           <ScaleIn delay={0.1} startScale={0.92}>
             <h2 className="mt-[35px] text-[42px] font-medium leading-[0.98] tracking-[-0.8px] sm:text-[56px]">
-              a strategic process.
+              a strategic process
               <span className="mt-[25px] block font-[var(--font-cormorant)] text-[51px] font-normal timesFontFamily italic leading-[0.8] tracking-[-0.8px] text-[#ff5500] sm:text-[56px]">
                 built to perform.
               </span>
@@ -131,7 +131,7 @@ function Strategic() {
 
         {/* Partnership card — zoom-in feels more like a "highlight" than a fade */}
         <ScaleIn delay={0.1} startScale={0.94}>
-          <div className="mx-auto mt-[56px] grid max-w-[800px] overflow-hidden rounded-[16px] border border-black/[0.03] bg-white shadow-[0_22px_42px_rgba(0,0,0,0.08)] md:min-h-[110px] md:grid-cols-[482px_1fr]">
+          <div className="mx-auto mt-[56px] grid max-w-[900px] overflow-hidden rounded-[16px] border border-black/[0.03] bg-white shadow-[0_22px_42px_rgba(0,0,0,0.08)] md:min-h-[110px] md:grid-cols-[492px_1fr]">
             <div className="flex items-center gap-[21px] px-8 py-7 md:px-[38px]">
               <span className="grid size-[46px] shrink-0 place-items-center border border-gray-200 p-3.5 rounded-full text-[22px] font-normal text-white shadow-[0_8px_16px_rgba(0,0,0,0.08)]">
                 <img src="/assets/star.png" alt="" />
@@ -145,10 +145,10 @@ function Strategic() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center border-t border-black/[0.06] px-8 py-7 md:border-l md:border-t-0 md:px-[31px]">
+            <div className="flex items-center border-t border-black/[0.06] px-8 py-7 md:border-l md:border-t-0 md:px-[24px]">
               <a
                 href="/contact"
-                className="inline-flex h-11 w-full max-w-[300px] items-center justify-center rounded-full bg-[#ff5500] px-6 text-[12px] font-semibold uppercase tracking-[2px] text-white transition hover:bg-[#ff6b1f]"
+                className="inline-flex h-11 w-full max-w-[300px] items-center justify-center rounded-full bg-[#ff5500] px-6 text-[10px] sm:text-[11px] md:text-[12px] font-semibold uppercase tracking-[2px] text-white transition hover:bg-[#ff6b1f]"
               >
                 Book a Consultation
                 <span className="ml-[14px] text-[14px] leading-none">
@@ -217,7 +217,7 @@ function FinalCta() {
         {/* CTA buttons — rise up last */}
         <FadeUp delay={0.5}>
           <div className="mt-8 max-w-[600px] mx-auto flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link href="/contact" className="flex h-[40px] w-full sm:w-auto px-10 items-center justify-center rounded-full bg-[#ff5500] text-[13px] font-bold text-white transition-colors hover:bg-[#ff6b1f]">
+            <Link href="/contact" className="flex h-[40px] w-full sm:w-auto px-10 items-center justify-center rounded-full bg-[#ff5500] text-[13px] font-bold text-white transition-colors uppercase hover:bg-[#ff6b1f]">
               Book a Consultation
             </Link>
             {/* <button className="flex h-[40px] w-full sm:w-auto px-8 items-center justify-center gap-2 rounded-full border border-white bg-transparent text-[8px] font-bold text-white transition-colors hover:bg-white/5">

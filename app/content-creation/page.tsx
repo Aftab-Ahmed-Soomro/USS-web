@@ -102,7 +102,7 @@ stop the scroll, engage your audience and support your
 growth across every platform.
           </p>
           <Link
-            className="mt-[22px] inline-flex h-[37px] min-w-[164px] items-center justify-center rounded-full bg-white px-7 font-[var(--font-be-vietnam)] text-[11px] font-bold text-[#ff5500] transition hover:bg-white/90"
+            className="mt-[22px] inline-flex h-[37px] min-w-[164px] items-center justify-center rounded-full bg-white px-7 font-[var(--font-be-vietnam)] text-[11px] font-bold uppercase text-[#ff5500] transition hover:bg-white/90"
             href="/contact"
           >
             Book a Consultation
@@ -371,7 +371,7 @@ function FinalCta() {
         </h2>
         <div className="mt-[26px] flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Link
-            className="inline-flex h-[37px] min-w-[166px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[11px] font-bold text-white transition hover:bg-[#ff6b1f]"
+            className="inline-flex h-[37px] min-w-[166px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[11px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
             href="/contact"
           >
             Book a Consultation

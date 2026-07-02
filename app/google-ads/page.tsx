@@ -124,7 +124,7 @@ function Hero() {
             Turn searches into sales with campaigns built to convert to generate high quality leads, not just clicks.
           </p>
           <Link
-            className="mt-[24px] inline-flex h-[34px] min-w-[145px] items-center justify-center rounded-full bg-white px-6 font-[var(--font-be-vietnam)] text-[10.5px] font-bold text-black transition hover:bg-white/90"
+            className="mt-[24px] inline-flex h-[34px] min-w-[145px] items-center justify-center rounded-full bg-white px-6 font-[var(--font-be-vietnam)] text-[10.5px] font-bold uppercase text-black transition hover:bg-white/90"
             href="/contact"
           >
             Book a Consultation
