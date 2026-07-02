@@ -66,7 +66,7 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
   const hasVideo = !!(project.videoSrc || project.videoSrcs);
 
   return (
-    <main className="min-h-screen bg-white text-black overflow-hidden">
+    <main className="min-h-screen bg-white overflow-hidden">
       <Header />
 
       {/* ── HERO SECTION ── */}
@@ -292,7 +292,7 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
                 <div className="mt-[17px] max-w-[700px] grid grid-cols-2 gap-[25px] sm:grid-cols-4">
                   {project.outcomes.map((outcome, idx) => (
                     <FadeUp key={outcome.text} delay={0.15 + idx * 0.1}>
-                      <div className="flex min-h-[104px] w-full max-w-[330px] flex-col items-center justify-start rounded-[7px] border border-[#dededb] px-[10px] pb-[10px] pt-[12px] text-center text-[#ff5500]">
+                      <div className="flex h-[140px] min-h-[104px] w-full max-w-[330px] flex-col items-center justify-start rounded-[7px] border border-[#dededb] px-[10px] pb-[10px] pt-[12px] text-center text-[#ff5500]">
                         <LineIcon type={outcome.icon} />
                         <p className="mt-[10px] font-[var(--font-inter)] text-[12px] sm:text-[16px] font-normal leading-[1.48] tracking-[0%] text-[#141414]">
                           {outcome.text}

@@ -216,7 +216,7 @@ export default function ProjectsPage() {
           <FadeUp delay={0.2}>
             <h1 className="mt-[20px] font-[var(--font-be-vietnam)] text-[38px] font-bold lowercase leading-[1.03] tracking-[-0.9px] text-white sm:text-[56px] sm:tracking-[-0.9px]">
               projects that make an{" "}
-              <span className="font-[var(--font-cormorant)] text-[1.15em] sm:text-[72px] font-extralight timesFontFamily italic tracking-[-0.9px] text-[#ff5500]">
+              <span className="font-[var(--font-cormorant)] text-[1.15em] sm:text-[72px] font-bold timesFontFamily italic tracking-[-0.9px] text-[#ff5500]">
                 impact
               </span>
             </h1>
@@ -224,8 +224,8 @@ export default function ProjectsPage() {
 
           {/* Subheading — slides in from right */}
           <FadeRight delay={0.3}>
-            <p className="mt-[30px] font-[var(--font-be-vietnam)] text-[12px] font-medium uppercase leading-[1.35] text-white sm:text-[16.5px]">
-              TAKE A LOOK AT USS PROJECTS ACROSS UK, US AND MIDDLE EAST
+            <p className="mt-[30px] font-[var(--font-be-vietnam)] text-[12px] font-medium  leading-[1.35] text-white sm:text-[16.5px]">
+              Take a look at USS projects across UK, US and Middle East
             </p>
           </FadeRight>
 
