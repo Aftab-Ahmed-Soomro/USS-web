@@ -16,19 +16,20 @@ export default function BrandElevationVideo() {
   };
 
   return (
-    <section className="relative w-full h-[70vh] md:h-[85vh] min-h-[720px] overflow-hidden">
-      {/* Background Video */}
-      <video
-        ref={videoRef}
-        src="https://emmanuelcolewilliams.com/uss-assets/USS AD_FINAL.mp4"
-        autoPlay
-        loop
-        muted={isMuted}
-        playsInline
-        preload="metadata"
-        className="absolute inset-0 w-full h-full object-cover object-top"
-        aria-label="USS brand video"
-      />
+    <section className="relative w-full h-[70svh] md:h-[100svh] min-h-[720px] overflow-hidden">
+  <video
+    ref={videoRef}
+    src="https://emmanuelcolewilliams.com/uss-assets/USS AD_FINAL.mp4"
+    autoPlay
+    loop
+    muted={isMuted}
+    playsInline
+    preload="auto"
+    width={1920}
+    height={1080}
+    className="absolute inset-0 w-full h-full object-cover object-center"
+    aria-label="USS brand video"
+  />
 
       {/* Dark Overlay */}
       {/* <div className="absolute inset-0 bg-black/40" /> */}
