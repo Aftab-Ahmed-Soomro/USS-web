@@ -10,6 +10,7 @@ import { Team } from "../components/Team";
 import { Testimonials } from "../components/Testimonials";
 import { ConsultationForm } from "../components/ConsultationForm";
 import { GoodCompanyMap } from "../components/GoodCompanyMap";
+import EmailMarketingQuote from "../components/EmailMarketingQuote";
 
 const failPoints = [
   "Emails sent without a clear strategy",
@@ -48,6 +49,7 @@ const systemItems = [
     copy: "Tracking results to improve performance over time.",
   },
 ];
+
 
 const waysToWork = [
   {
@@ -109,71 +111,54 @@ function Hero() {
 function EmailOverview() {
   return (
     <section className="relative overflow-hidden bg-black">
-      <div className="absolute inset-x-0 top-0 h-[47%] bg-[#f5f5f4]" />
-      <div className="relative mx-auto grid max-w-[1150px] px-6 lg:grid-cols-[minmax(0,608px)_minmax(320px,430px)] lg:grid-rows-[auto_auto] lg:justify-between">
-        <div className="pt-[64px] text-black lg:pt-[78px]">
-          <div className="max-w-[600px]">
-            <h2 className="font-[var(--font-be-vietnam)] text-[36px] font-medium leading-[1.05] tracking-[-1.5px] sm:text-[56px]">
-              why most{" "}
-              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] font-normal timesFontFamily italic">
-                email
-              </span>
-              <br />
-              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] font-normal timesFontFamily italic">
-                marketing{" "}
-              </span>
-              fails
-            </h2>
-            <p className="mt-[19px] font-[var(--font-inter)] text-[13px] sm:text-[16px] leading-[1.7] text-[#4A4543]">
-              Most brands don't have an email problem, they have a strategy problem.
-            </p>
-            <ul className="mt-[30px] space-y-[30px] border-t border-t-[#c2c1c1] pt-[8px]">
-              {failPoints.map((point) => (
-                <li
-                  className="flex items-center gap-3 font-[var(--font-inter)] text-[13px] text-[#4A4543]"
-                  key={point}
-                >
-                  <span className="size-1.5 rounded-full bg-[#ff5500]" />
-                  {point}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        <div className="order-3 -mx-1 pb-[54px] sm:mx-0 lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:flex lg:items-start lg:pb-0 lg:pt-[78px]">
-          <div className="relative mx-auto aspect-[800/1650] w-full max-w-[430px] overflow-hidden bg-white shadow-[0_24px_55px_rgba(0,0,0,0.18)] lg:aspect-auto lg:h-[calc(100%-82px)] lg:min-h-900px]">
+      <div className="relative mx-auto grid max-w-[1150px] px-6 py-16 lg:grid-cols-[minmax(0,680px)_minmax(320px,430px)] lg:justify-between lg:py-20">
+        {/* Image mockup */}
+        <div className="order-2 -mx-1 pt-10 sm:mx-0 lg:order-none lg:col-start-2 lg:row-start-1 lg:flex lg:items-start lg:pt-0">
+          <div className="relative mx-auto aspect-[463/842] w-full max-w-[400px] overflow-hidden bg-white shadow-[0_24px_55px_rgba(0,0,0,0.35)]">
             <Image
               src="/assets/email-market.png"
               alt="Email marketing campaign designs"
               fill
               priority
-              sizes="(min-width: 1024px) 430px, calc(100vw - 48px)"
+              sizes="(min-width: 1024px) 400px, calc(100vw - 48px)"
               className="object-cover object-top"
             />
           </div>
         </div>
 
-        <div className="py-[70px] text-white lg:py-[82px]">
-          <p className="mb-[26px] font-[var(--font-be-vietnam)] text-[10px] sm:text-[14px] font-normal text-white">
+        {/* Text content */}
+        <div className="order-1 text-white lg:col-start-1 lg:row-start-1 lg:max-w-[680px]">
+          <p className="mb-[20px] text-[11px] font-normal leading-[19.6px] tracking-[0%] text-white sm:text-[14px]">
             Our Email System for Retention and Growth
           </p>
-          <h2 className="font-[var(--font-be-vietnam)] text-[37px] font-medium leading-[1.08] tracking-[-1.5px] sm:text-[56px]">
+
+          <h2 className="text-[32px] font-medium leading-[1.1] tracking-[-1.5px] sm:text-[56px] sm:leading-[70px]">
             Our Approach to <br />
-            <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] font-normal tracking-[-1.5px] timesFontFamily italic text-[#ff5500]">
+            <span
+              className="text-[1.1em] font-normal italic tracking-[-1.5px] text-[#ff5500] sm:text-[72px] sm:leading-[70px]"
+              style={{ fontFamily: "'Times New Roman', Times, serif" }}
+            >
               Email Marketing
             </span>
           </h2>
-          <div className="mt-[48px] grid border-white/20 sm:grid-cols-2 sm:[&>*:nth-child(2n)]:border-l sm:[&>*:nth-child(n+3)]:border-t">
-            {systemItems.map((item) => (
-              <article className="min-h-[165px] border-t border-white/20 py-7 sm:border-t-0 sm:py-8 first:pt-0 sm:first:pt-8" key={item.number}>
-                <p className="font-[var(--font-inter)] text-[11px] sm:text-[14px] leading-none text-white">
+
+          <div className="mt-[52px] grid grid-cols-2">
+            {systemItems.map((item, i) => (
+              <article
+                key={item.number}
+                className={[
+                  "py-6 sm:py-7",
+                  i % 2 === 1 ? "border-l border-white/20 pl-8" : "",
+                  i >= 2 ? "border-t border-white/20" : "",
+                ].join(" ")}
+              >
+                <p className="text-[11px] font-normal leading-5 text-white/90 sm:text-[14px]">
                   {item.number}
                 </p>
-                <h3 className="mt-[18px] max-w-[300px] font-[var(--font-be-vietnam)] text-[18px] font-semibold leading-[1.25] tracking-[-0.6px] sm:text-[24px]">
+                <h3 className="mt-[14px] max-w-[350px] text-[16px] font-semibold leading-[1.3] tracking-[-0.6px] sm:text-[24px] sm:leading-8">
                   {item.title}
                 </h3>
-                <p className="mt-[16px] max-w-[290px] font-[var(--font-inter)] text-[12px] sm:text-[16px] leading-[1.8] text-white">
+                <p className="mt-[12px] max-w-[250px] text-[12px] font-normal leading-[1.7] text-white/90 sm:text-[16px] sm:leading-7">
                   {item.copy}
                 </p>
               </article>
@@ -256,6 +241,7 @@ export default function EmailMarketingPage() {
       <Hero />
       {/* <Numbers stats={emailStats} eyebrow="Our Numbers"/> */}
       <Numbers stats={emailStats}/>
+      <EmailMarketingQuote />
       <EmailOverview />
       <Brands />
       <Services />

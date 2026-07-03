@@ -10,7 +10,7 @@ export default function WeAreUSS() {
 
         {/* LEFT — Big heading — overlaps the image's left edge */}
         <FadeLeft delay={0.1} className="relative z-10">
-          <div className="relative z-1000 flex items-center justify-start lg:justify-end py-16 lg:py-0 lg:-mr-24 order-1 lg:order-none pointer-events-none">
+          <div className="relative z-1000 flex items-center justify-start lg:justify-end py-16 lg:py-0 lg:-mr-26 order-1 lg:order-none pointer-events-none">
             <h2
               className="text-white font-bold uppercase leading-[116.28px] mt-20 tracking-[-2.74px] whitespace-nowrap"
               style={{ fontSize: "clamp(6rem, 7vw, 7rem)", fontFamily: "Poppins, sans-serif" }}
