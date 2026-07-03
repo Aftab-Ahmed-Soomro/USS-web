@@ -11,7 +11,7 @@ export function GoodCompanyMap() {
 
         {/* Main heading — fades up */}
         <FadeUp delay={0.1}>
-          <h2 className="text-center text-[36px] md:text-5xl lg:text-[56px] text-black tracking-[-6%] mb-6">
+          <h2 className="text-center text-[36px] md:text-5xl lg:text-[56px] text-black tracking-[-6%] mb-3">
             <span className="font-medium">you&apos;re in</span>{" "}
             <span className="text-[#FF5722] italic timesFontFamily px-1 text-4xl md:text-6xl lg:text-[72px]">good</span>{" "}
             <span className="font-medium tracking-[-6%]">company</span>
@@ -20,7 +20,7 @@ export function GoodCompanyMap() {
 
         {/* Subheading — drops down after heading */}
         <FadeDown delay={0.2}>
-          <p className="text-center text-[10px] md:text-xs lg:text-[22px] text-black tracking-[-1px] font-medium uppercase mb-8 md:mb-12">
+          <p className="text-center text-[10px] md:text-xs lg:text-[24px] text-black tracking-[-1px] font-medium uppercase mb-8 md:mb-12">
             DELIVERING SOLUTIONS ACROSS THE WORLD
           </p>
         </FadeDown>

@@ -158,7 +158,7 @@ function EmailOverview() {
                 <h3 className="mt-[14px] max-w-[350px] text-[16px] font-semibold leading-[1.3] tracking-[-0.6px] sm:text-[24px] sm:leading-8">
                   {item.title}
                 </h3>
-                <p className="mt-[12px] max-w-[250px] text-[12px] font-normal leading-[1.7] text-white/90 sm:text-[16px] sm:leading-7">
+                <p className="mt-[12px] max-w-[280px] text-[12px] font-normal leading-[1.7] text-white/90 sm:text-[16px] sm:leading-7">
                   {item.copy}
                 </p>
               </article>
@@ -383,11 +383,11 @@ function RevenueMethod() {
                 width: '1285.61px', // Scaled proportions fallback or driven via wrapper max-width
                 maxWidth: '100%',
                 height: '606.93px',
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.85)), url(${card.bgImage})`,
+                backgroundImage: `url(${card.bgImage})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center'
               }}
-              className="group relative rounded-[28px] overflow-hidden p-6 flex flex-col justify-between cursor-pointer border border-neutral-800 transition-all duration-500 ease-out hover:border-neutral-600"
+              className="group relative rounded-[28px] overflow-hidden p-6 flex flex-col justify-between cursor-pointer transition-all duration-500 ease-out"
             >
               {/* Card Number */}
               <div 
@@ -410,7 +410,7 @@ function RevenueMethod() {
 
                 {/* Description (Fades and slides in cleanly) */}
                 <p 
-                  className="text-[16px] font-normal leading-[18.86px] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 ease-out"
+                  className="text-[15.5px] font-normal leading-[18.86px] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 ease-out"
                   style={{ fontStyle: 'Regular' }}
                 >
                   {card.description}

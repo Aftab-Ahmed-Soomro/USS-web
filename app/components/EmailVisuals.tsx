@@ -44,7 +44,7 @@ export function EmailVisuals() {
           <div className="grid grid-cols-1 items-start justify-items-center gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:justify-between lg:gap-[42px]">
             {emailVisuals.map((visual) => (
               <div
-                className="relative h-[460px] w-full max-w-[190px] overflow-hidden bg-[#111] shadow-[0_16px_38px_rgba(0,0,0,0.08)] sm:h-[520px] sm:max-w-[210px] lg:h-[750px] lg:max-w-[253px]"
+                className="relative h-[460px] w-full max-w-[190px] overflow-hidden bg-[#111] shadow-[0_16px_38px_rgba(0,0,0,0.08)] sm:h-[520px] sm:max-w-[210px] lg:h-[750px] lg:max-w-[250px]"
                 key={visual.src}
               >
                 <Image
