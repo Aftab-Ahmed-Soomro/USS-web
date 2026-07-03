@@ -16,7 +16,7 @@ export default function BrandElevationVideo() {
   };
 
   return (
-    <section className="relative w-full h-[70svh] md:h-[100svh] min-h-[720px] overflow-hidden">
+    <section className="relative w-full h-[100svh] md:h-[120svh] min-h-[720px] overflow-hidden">
   <video
     ref={videoRef}
     src="https://emmanuelcolewilliams.com/uss-assets/USS AD_FINAL.mp4"
