@@ -32,24 +32,36 @@ const defaultStats: NumberStat[] = [
 ];
 
 // ─── parseValue ───────────────────────────────────────────────────────────────
-// Splits "55M", "500k", "100+", "5x", "$20M+" into
-// { prefix, number, suffix }
-// so we can count only the numeric part.
+// Splits "55M", "500k", "100+", "5x", "0.2%" into
+// { prefix, number, suffix, decimals }
+// so we can count only the numeric part, preserving decimal precision.
 
-function parseValue(raw: string): { prefix: string; number: number; suffix: string } {
+function parseValue(raw: string): {
+  prefix: string;
+  number: number;
+  suffix: string;
+  decimals: number;
+} {
   // e.g. "$20M+" → prefix="$", number=20, suffix="M+"
   const match = raw.match(/^([^0-9]*)([0-9]+(?:\.[0-9]+)?)(.*)$/);
-  if (!match) return { prefix: "", number: 0, suffix: raw };
+  if (!match) return { prefix: "", number: 0, suffix: raw, decimals: 0 };
+
+  const numberStr = match[2];
+  const decimals = numberStr.includes(".") ? numberStr.split(".")[1].length : 0;
+
   return {
     prefix: match[1],
-    number: parseFloat(match[2]),
+    number: parseFloat(numberStr),
     suffix: match[3],
+    decimals,
   };
 }
 
 // ─── useCountUp hook ──────────────────────────────────────────────────────────
 // Triggers when the element enters the viewport (once), then animates
 // from 0 → target over `duration` ms with an easeOut curve.
+// Returns the raw float — rounding/formatting is left to the caller so
+// small decimal targets (e.g. 0.2) don't get clipped to 0.
 
 function useCountUp(target: number, duration = 3000) {
   const [count, setCount] = useState(0);
@@ -73,7 +85,7 @@ function useCountUp(target: number, duration = 3000) {
             const progress = Math.min(elapsed / duration, 1);
             // easeOutQuart — matches the site's feel
             const eased = 1 - Math.pow(1 - progress, 4);
-            setCount(Math.round(eased * target));
+            setCount(eased * target);
             if (progress < 1) requestAnimationFrame(tick);
           }
 
@@ -93,12 +105,16 @@ function useCountUp(target: number, duration = 3000) {
 // ─── AnimatedStat ─────────────────────────────────────────────────────────────
 
 function AnimatedStat({ value }: { value: string }) {
-  const { prefix, number, suffix } = parseValue(value);
+  const { prefix, number, suffix, decimals } = parseValue(value);
   const { ref, count } = useCountUp(number);
+
+  const displayValue = decimals > 0 ? count.toFixed(decimals) : Math.round(count);
 
   return (
     <span ref={ref} aria-label={value}>
-      {prefix}{count}{suffix}
+      {prefix}
+      {displayValue}
+      {suffix}
     </span>
   );
 }

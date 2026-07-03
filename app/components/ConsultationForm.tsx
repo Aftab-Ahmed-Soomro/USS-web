@@ -38,14 +38,27 @@ export function ConsultationForm() {
           </label>
         </div>
         <label className="block font-[var(--font-inter)] placeholder:text-white/45 text-[11px] sm:text-[14px] font-medium leading-none">
-          Services You Need
-          <select className={`${darkInput} text-white/45 appearance-none`}>
-            <option>Select...</option>
-            <option>Email Marketing</option>
-            <option>Flow Automation</option>
-            <option>Campaign Strategy</option>
-          </select>
-        </label>
+  Services You Need
+  <div className="relative mt-2">
+    <select className={`${darkInput} text-white/45 appearance-none w-full pr-10`}>
+      <option>Select...</option>
+      <option>Email Marketing</option>
+      <option>Flow Automation</option>
+      <option>Campaign Strategy</option>
+    </select>
+    <svg
+      className="pointer-events-none absolute right-4 top-[25px] -translate-y-1/2 w-4 h-4 text-white/45"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M6 9l6 6 6-6" />
+    </svg>
+  </div>
+</label>
         <label className="block font-[var(--font-inter)] text-[11px] sm:text-[14px] font-medium leading-none">
           Message / Requirement
           <textarea

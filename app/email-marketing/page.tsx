@@ -19,6 +19,13 @@ const failPoints = [
   "No focus on retention or repeat purchases",
 ];
 
+const emailStats = [
+  { value: "40%", label: "Avg. Open Rate" },
+  { value: "2-5%", label: "Avg. Click Through Rate" },
+  { value: "0.2%", label: "Avg. Unsubscribe Rate" },
+  { value: "100+", label: "Brands Worldwide" },
+];
+
 const systemItems = [
   {
     number: "01",
@@ -68,17 +75,17 @@ const waysToWork = [
 function Hero() {
   return (
     <section className="relative overflow-hidden bg-black px-6 pb-[58px] pt-[56px] text-white sm:pb-[72px] sm:pt-[78px]">
-      <div className="pointer-events-none absolute left-[-80px] top-[80px] h-[260px] w-[280px] rounded-full bg-[#712507] opacity-45 blur-[90px]" />
+      
       <div className="mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
         <div>
-          <p className="font-[var(--font-be-vietnam)] text-[10px] font-normal sm:text-[14px] uppercase tracking-[3px] text-white">
+          <p className="font-[var(--font-be-vietnam)] text-[10px] font-normal sm:text-[14px] uppercase tracking-[0px] text-white">
             Email Marketing
           </p>
-          <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[38px] font-semibold lowercase leading-[1.08] tracking-[0px] sm:text-[40px] lg:text-[54px] text-white">
+          <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[38px] font-bold lowercase leading-[100%] tracking-[-3px] sm:text-[60px] text-white">
             turn your email database
             <br />
             into a{" "}
-            <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[1.2em] font-extralight timesFontFamily italic text-white">
+            <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white leading-[103.04px] tracking-[-2.8px]">
               revenue engine
             </span>
           </h1>
@@ -86,7 +93,7 @@ function Hero() {
             We create strategic email campaigns and automated customer journeys that deliver the right message at the right time, driving retention and repeat purchases.
           </p>
           <Link
-            className="mt-[36px] inline-flex h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
+            className="mt-[36px] inline-flex h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
             href="/contact"
           >
             Book a Consultation
@@ -247,7 +254,8 @@ export default function EmailMarketingPage() {
     <main className="min-h-screen bg-black overflow-hidden">
       <Header />
       <Hero />
-      <Numbers />
+      {/* <Numbers stats={emailStats} eyebrow="Our Numbers"/> */}
+      <Numbers stats={emailStats}/>
       <EmailOverview />
       <Brands />
       <Services />
