@@ -324,10 +324,6 @@ function EmailStrategy() {
   );
 }
 
-'use strict';
-
-import React, { useState } from 'react';
-
 // Card Data Structure
 const CARDS_DATA = [
   {
