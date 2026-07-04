@@ -40,6 +40,7 @@ export type ProjectDetail = {
   hideVideoSection?: boolean;
   hideSocialGridPreview?: boolean;
   socialGridImage?: string;
+  galleryLayout?: "grid" | "centerVideo";
 };
 
 export const projectDetails = [
@@ -1789,28 +1790,24 @@ export const projectDetails = [
       position: "50% 50%",
     },
     overviewSubtitle: "OAK RESTAURANT",
-    galleryImages: [
-      {
-        src: "/assets/oakrestaurant/1.jpg",
-        alt: "Residency Advanced global mobility passport",
-        position: "50% 50%",
-      },
-      {
-        src: "/assets/oakrestaurant/2.jpg",
-        alt: "Residency Advanced citizenship programs",
-        position: "50% 50%",
-      },
-      {
-        src: "/assets/oakrestaurant/3.jpg",
-        alt: "Residency Advanced global investment",
-        position: "50% 50%",
-      },
-      {
-        src: "/assets/oakrestaurant/4.jpg",
-        alt: "Residency Advanced alternative residencies",
-        position: "50% 50%",
-      },
-    ],
+    galleryLayout: "centerVideo",
+galleryImages: [
+  {
+    src: "/assets/Sushi.jpeg",
+    alt: "Oak Restaurant interior ambience",
+    position: "50% 50%",
+  },
+  {
+    src: "https://emmanuelcolewilliams.com/uss-assets/oak/oakVideo.mov",
+    alt: "Oak Restaurant video showcase",
+    position: "50% 50%",
+  },
+  {
+    src: "/assets/Susha.jpeg",
+    alt: "Oak Restaurant dish presentation",
+    position: "50% 50%",
+  },
+],
     goal:
       "Create premium content that showcased the food, atmosphere and overall experience while strengthening Oak’s digital presence.",
     workIntro: "Our Work Included:",

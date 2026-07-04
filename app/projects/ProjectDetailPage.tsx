@@ -200,26 +200,72 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
             </FadeUp>
 
             {/* Gallery grid — each image staggered up */}
-            <div className="mt-[15px] grid gap-[18px] sm:grid-cols-2 lg:grid-cols-4 lg:gap-[20px]">
-              {project.galleryImages.map((image, idx) => (
-                <FadeUp key={image.alt} delay={0.25 + idx * 0.1}>
-                  <div className="relative h-[310px] overflow-hidden bg-[#171717] sm:h-[390px] lg:h-[510px]">
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      fill
-                      unoptimized
-                      sizes="(min-width: 1024px) 280px, (min-width: 640px) 45vw, 90vw"
-                      className="object-cover"
-                      style={{ objectPosition: image.position ?? "center" }}
-                    />
-                    {image.overlay ? (
-                      <div className="absolute inset-0 -z-0 bg-[#36023d]/45 mix-blend-multiply" />
-                    ) : null}
-                  </div>
-                </FadeUp>
-              ))}
-            </div>
+            {project.galleryLayout === "centerVideo" ? (
+  <div className="mt-[15px] flex flex-col items-center gap-[18px] sm:flex-row sm:items-stretch sm:justify-center lg:gap-[24px]">
+    {project.galleryImages.map((image, idx) => {
+      const isCenter = idx === 1;
+      const isVideo = image.src.toLowerCase().endsWith(".mov") || image.src.toLowerCase().endsWith(".mp4");
+
+      return (
+        <FadeUp key={image.alt} delay={0.25 + idx * 0.1}>
+          <div
+            className={
+              isCenter
+                ? "relative h-[340px] w-[280px] overflow-hidden bg-[#171717] sm:h-[480px] sm:w-[340px]"
+                : "relative h-[280px] w-[240px] overflow-hidden bg-[#171717] sm:h-[360px] sm:w-[280px] lg:h-[480px] lg:w-[330px] sm:self-center"
+            }
+          >
+            {isVideo ? (
+              <video
+                src={image.src}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 h-full w-full object-cover"
+                style={{ objectPosition: image.position ?? "center" }}
+              />
+            ) : (
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                unoptimized
+                sizes="(min-width: 1024px) 330px, (min-width: 640px) 45vw, 90vw"
+                className="object-cover"
+                style={{ objectPosition: image.position ?? "center" }}
+              />
+            )}
+            {image.overlay ? (
+              <div className="absolute inset-0 -z-0 bg-[#36023d]/45 mix-blend-multiply" />
+            ) : null}
+          </div>
+        </FadeUp>
+      );
+    })}
+  </div>
+) : (
+  <div className="mt-[15px] grid gap-[18px] sm:grid-cols-2 lg:grid-cols-4 lg:gap-[20px]">
+    {project.galleryImages.map((image, idx) => (
+      <FadeUp key={image.alt} delay={0.25 + idx * 0.1}>
+        <div className="relative h-[310px] overflow-hidden bg-[#171717] sm:h-[390px] lg:h-[510px]">
+          <Image
+            src={image.src}
+            alt={image.alt}
+            fill
+            unoptimized
+            sizes="(min-width: 1024px) 280px, (min-width: 640px) 45vw, 90vw"
+            className="object-cover"
+            style={{ objectPosition: image.position ?? "center" }}
+          />
+          {image.overlay ? (
+            <div className="absolute inset-0 -z-0 bg-[#36023d]/45 mix-blend-multiply" />
+          ) : null}
+        </div>
+      </FadeUp>
+    ))}
+  </div>
+)}
           </div>
         </section>
       )}
