@@ -89,7 +89,7 @@ export function LightConsultationForm() {
       <h2 className="font-[var(--font-be-vietnam)] text-[18px] font-medium leading-tight">
         Book Your Free Consultation
       </h2>
-      <p className="mt-[8px] font-[var(--font-inter)] text-[11px] sm:text-[14px] leading-[1.45] text-white/75">
+      <p className="mt-[8px] font-[var(--font-inter)] text-[11px] sm:text-[14px] leading-[1.45] text-[#62748E]">
         Get in touch with us, we&apos;d love to hear from you.
       </p>
 
@@ -110,7 +110,7 @@ export function LightConsultationForm() {
             <input className={lightInput} placeholder="Company" />
           </label>
           <label className="font-[var(--font-inter)] text-[11px] sm:text-[14px] font-medium leading-none">
-            Website URL
+            Website URL (if applicable)
             <input className={lightInput} placeholder="Website" />
           </label>
         </div>
@@ -138,7 +138,7 @@ export function LightConsultationForm() {
         </button>
       </form>
 
-      <p className="mt-[14px] text-center font-[var(--font-inter)] text-[10px] text-white/70">
+      <p className="mt-[14px] text-center font-[var(--font-inter)] text-[12px] text-[#62748E]">
         No spam. Your details stay with us.
       </p>
     </section>

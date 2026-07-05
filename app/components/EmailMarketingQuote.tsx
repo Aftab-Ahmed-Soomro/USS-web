@@ -1,4 +1,4 @@
-export default function EmailMarketingQuote() {
+export default function EmailMarketingQuote({first, second, third}: {first: string, second: string, third: string}) {
   return (
     <section className="bg-black w-full py-20 px-6 flex flex-col items-center justify-center text-center">
       <div className="flex gap-1">
@@ -7,17 +7,17 @@ export default function EmailMarketingQuote() {
       </div>
 
       <h2
-        className="text-white max-w-[600px] mt-8"
+        className="text-white max-w-[500px] mt-8"
         style={{
           fontWeight: 500,
           fontSize: "40px",
-          lineHeight: "100%",
+          lineHeight: "60px",
           letterSpacing: "-2.44px",
         }}
       >
-        Email Marketing should contribute to{" "}
+        {first} {" "}
         <span
-          className="text-orange-500"
+          className="text-[#FF5500]"
           style={{
             fontFamily: "Times New Roman, serif",
             fontWeight: 400,
@@ -27,9 +27,9 @@ export default function EmailMarketingQuote() {
             letterSpacing: "-2.44px",
           }}
         >
-          35%
+          {second}
         </span>{" "}
-        of your business revenue with the right strategy &amp; execution
+        {third}
       </h2>
 
       <div className="w-[243px] h-[2px] bg-orange-500 my-7" />

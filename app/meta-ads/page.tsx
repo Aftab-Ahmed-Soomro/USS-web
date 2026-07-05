@@ -10,10 +10,10 @@ import { ConsultationForm } from "../components/ConsultationForm";
 import { GoodCompanyMap } from "../components/GoodCompanyMap";
 
 const failPoints = [
-  "Poor creative gets ignored",
-  "Weak structure wastes budget",
-  "No testing system means no scale",
-  "Over reliance on targeting",
+  "Creative that fails to capture attention",
+  "Campaigns structured inefficiently",
+  "No testing or optimisation process",
+  "Scaling too quickly or too slowly",
 ];
 
 const stats = [
@@ -23,11 +23,28 @@ const stats = [
   { value: "4.7x", label: "Average ROAS" },
 ];
 
+const relatedProjects = [
+  {
+    name: "Cinnamood",
+    year: "2024",
+    copy: "Launching a German bakery franchise into the UAE market.",
+    image: "/assets/projectsPagePics/cinamood.jpg",
+    tags: ["Web design & development", "Branding", "F&B"],
+  },
+  {
+    name: "Yula Lounge",
+    year: "2024",
+    copy: "Transforming Yalseh into Yula – a modern Dubai beach club.",
+    image: "/assets/yula2.jpg",
+    tags: ["Web design & development", "Hospitality"],
+  },
+];
+
 const systemItems = [
-  ["01", "Creative-First Strategy", "We focus on scroll-stopping creatives that convert."],
-  ["02", "Full-Funnel Structure", "Building strong efficient funnel campaign"],
-  ["03", "Testing and Optimisation", "Continuous testing to find and scale winners."],
-  ["04", "Scalable Growth", "We increase spend only when performance is proven."],
+  ["01", "Creative That Converts", "High quality creative designed to stop the scroll and encourage action."],
+  ["02", "Campaign Structure", "Campaigns built around clear objectives, audience and budget allocation."],
+  ["03", "Testing and Optimisation", "Continuous testing to improve performance and identify winning creatives."],
+  ["04", "Scaling Performance", "Increasing budget only when campaigns are consistently delivering results."],
 ];
 
 const workSteps = [
@@ -58,50 +75,79 @@ const projects = [
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-black px-6 pb-[58px] pt-[42px] text-white sm:pb-[76px] sm:pt-[68px] lg:pt-[56px]">
-      <div className="pointer-events-none absolute left-[-110px] top-[70px] h-[280px] w-[330px] rounded-full bg-[#6b2409] opacity-35 blur-[95px]" />
-      <div className="relative mx-auto grid max-w-[1150px] gap-9 lg:grid-cols-[minmax(0,585px)_430px] lg:items-center lg:justify-between">
+    <section className="relative overflow-hidden bg-black px-6 pb-[58px] pt-[56px] text-white sm:pb-[72px] sm:pt-[78px]">
+      
+      <div className="mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
         <div>
-          <h1 className="max-w-[610px] font-[var(--font-be-vietnam)] text-[34px] font-medium lowercase leading-[1.03] tracking-[-1.4px] sm:text-[48px] lg:text-[54px]">
-            scale your brand
-            <br />
-            with meta ads, don&apos;t
-            <br />
-            just{" "}
-            <span className="font-[var(--font-cormorant)] text-[1.1em] font-extralight timesFontFamily italic tracking-[-0.04em] text-[#ff5500]">
+          <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[38px] font-bold lowercase leading-[100%] tracking-[1px] sm:text-[65px] text-white">
+            scale your brand with meta ads, don’t just{" "}
+            <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] lowercase font-normal timesFontFamily italic text-[#FF5500] tracking-[-2px]">
               spending more.
             </span>
           </h1>
-          <p className="mt-[25px] max-w-[520px] font-[var(--font-inter)] text-[13px] leading-[1.75] text-white/74 sm:text-[14.5px]">
-            We turn Facebook and Instagram into consistent revenue engines using
-paid social first creatives and data-driven strategies. Trusted by brands
-across the UAE and globally.
+          <p className="mt-[50px] max-w-[560px] font-[var(--font-inter)] text-[14px] leading-[32px] text-white/90 sm:text-[18px]">
+            We create and manage Meta Ads across Facebook and Instagram, helping businesses reach the right people, generate more enquiries and grow with confidence.
           </p>
+          <div className="flex justify-start gap-24 bg-black pt-12 pb-6">
+  <div className="text-center">
+    <h2
+      className="text-[#ff5500]"
+      style={{
+        fontFamily: "Times New Roman, serif",
+        fontWeight: 700,
+        fontStyle: "italic",
+        fontSize: "48px",
+        lineHeight: "48px",
+        letterSpacing: "0%",
+      }}
+    >
+      $100M
+    </h2>
+    <p
+      className="text-white mt-2"
+      style={{
+        fontWeight: 400,
+        fontSize: "14px",
+        lineHeight: "20px",
+        letterSpacing: "0%",
+      }}
+    >
+      in ad spend managed
+    </p>
+  </div>
 
-          <div className="mt-[28px] grid max-w-[420px] grid-cols-2 gap-7 border-b border-white/12 pb-[22px]">
-            <div>
-              <p className="font-[var(--font-cormorant)] text-[28px] font-extralight timesFontFamily italic leading-none text-[#ff5500]">
-                $100M+
-              </p>
-              <p className="mt-2 font-[var(--font-inter)] text-[10px] uppercase tracking-[1.6px] text-white/62">
-                in ad spend managed
-              </p>
-            </div>
-            <div>
-              <p className="font-[var(--font-cormorant)] text-[28px] font-extralight timesFontFamily italic leading-none text-[#ff5500]">
-                5x
-              </p>
-              <p className="mt-2 font-[var(--font-inter)] text-[10px] uppercase tracking-[1.6px] text-white/62">
-                average ROAS acheived
-              </p>
-            </div>
-          </div>
-
+  <div className="text-center">
+    <h2
+      className="text-[#ff5500]"
+      style={{
+        fontFamily: "Times New Roman, serif",
+        fontWeight: 700,
+        fontStyle: "italic",
+        fontSize: "48px",
+        lineHeight: "48px",
+        letterSpacing: "0%",
+      }}
+    >
+      5x
+    </h2>
+    <p
+      className="text-white mt-2"
+      style={{
+        fontWeight: 400,
+        fontSize: "14px",
+        lineHeight: "20px",
+        letterSpacing: "0%",
+      }}
+    >
+      average ROAS achieved
+    </p>
+  </div>
+</div>
           <Link
-            className="mt-[24px] inline-flex h-[36px] min-w-[142px] items-center justify-center rounded-full bg-[#ff5500] px-6 font-[var(--font-be-vietnam)] text-[11px] font-bold text-white transition hover:bg-[#ff6b1f]"
+            className="mt-[36px] inline-flex h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
             href="/contact"
           >
-            Book a Call
+            Book a Consultation
           </Link>
         </div>
 
@@ -116,18 +162,18 @@ function WhyAdsFail() {
     <section className="bg-[#f7f7f5] px-6 py-[58px] text-black  lg:py-[70px]">
       <div className="mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[minmax(0,500px)_minmax(360px,520px)] lg:items-center lg:justify-between">
         <div>
-          <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[7px] text-[#ff5500]">
+          <p className="font-[var(--font-be-vietnam)] text-[10px] sm:text-[12px] font-normal uppercase tracking-[4.8px] text-[#ff5500]">
             THE PROBLEM
           </p>
-          <h2 className="mt-[38px] font-[var(--font-be-vietnam)] text-[38px] font-medium lowercase leading-[1.08] tracking-[-1.4px] sm:text-[50px]">
+          <h2 className="mt-[28px] font-[var(--font-be-vietnam)] text-[38px] font-medium lowercase leading-[1.08] tracking-[-1.4px] sm:text-[60px]">
             why most
             <br />
-            <span className="font-[var(--font-cormorant)] text-[1.12em] font-extralight timesFontFamily italic">
+            <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] font-normal timesFontFamily italic">
               meta ads
             </span>{" "}
             fails
           </h2>
-          <p className="mt-[28px] max-w-[390px] font-[var(--font-inter)] text-[15px] leading-[1.45] text-black/65">
+          <p className="mt-[28px] max-w-[390px] font-[var(--font-inter)] text-[15px] sm:text-[18px] leading-[1.45] text-black/65">
             Most brands don&apos;t have a Meta Ads problem
             <br />
             they have a strategy problem.
@@ -135,7 +181,7 @@ function WhyAdsFail() {
           <ul className="mt-[24px] max-w-[548px] border-b border-black/10">
             {failPoints.map((point) => (
               <li
-                className="flex items-center gap-[18px] border-t border-black/10 py-[15px] font-[var(--font-inter)] text-[15px] text-black/78"
+                className="flex items-center gap-[18px] border-t border-black/10 py-[15px] font-[var(--font-inter)] text-[15px] sm:text-[18px] text-[#262626]"
                 key={point}
               >
                 <span className="size-[13px] shrink-0 rounded-full bg-[#ff5500]" />
@@ -143,9 +189,8 @@ function WhyAdsFail() {
               </li>
             ))}
           </ul>
-          <div className="mt-[24px] font-[var(--font-be-vietnam)] text-[14px] font-extrabold uppercase leading-[1.55]">
-            <p>META PERFORMANCE IS DRIVEN BY</p>
-            <p className="text-[#ff5500]">CREATIVE AND DATA</p>
+          <div className="mt-[24px] max-w-[430px] font-[var(--font-be-vietnam)] text-[14px] sm:text-[18px] font-bold  leading-[1.55]">
+            <p>Successful Meta Ads rely on the right combination of creative, strategy and data.</p>
           </div>
         </div>
 
@@ -172,33 +217,33 @@ function MetaSystem() {
     <section className="relative overflow-hidden bg-black px-6 py-[76px] text-white  lg:py-[88px]">
       <div className="pointer-events-none absolute right-[-90px] top-[-80px] h-[520px] w-[520px] rounded-full bg-[#7a2707] opacity-80 blur-[105px]" />
       <div className="relative mx-auto max-w-[1150px]">
-        <p className="font-[var(--font-be-vietnam)] text-[9px] font-medium uppercase tracking-[5px] text-[#ff5500]">
+        <p className="font-[var(--font-be-vietnam)] text-[9px] font-normal sm:text-[12px] uppercase tracking-[4.8px] text-[#ff5500]">
           OUR SYSTEM
         </p>
-        <h2 className="mt-[30px] max-w-[590px] font-[var(--font-be-vietnam)] text-[38px] font-medium lowercase leading-[1.06] tracking-[-1.4px] sm:text-[50px]">
+        <h2 className="mt-[30px] max-w-[590px] font-[var(--font-be-vietnam)] text-[38px] font-medium lowercase leading-[1.06] tracking-[-1.5px] sm:text-[56px]">
           our meta ads system for
           <br />
-          <span className="font-[var(--font-cormorant)] text-[1.12em] font-extralight timesFontFamily italic">
+          <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] font-normal timesFontFamily italic">
             scalable growth.
           </span>
         </h2>
-        <p className="mt-[22px] max-w-[560px] font-[var(--font-inter)] text-[13px] leading-[1.75] text-white/82">
-          We don&apos;t just run ads, we build systems designed to scale.
+        <p className="mt-[22px] max-w-[670px] font-[var(--font-inter)] text-[13px] sm:text-[18px] leading-[1.75] text-white">
+          We don't We don't just launch campaigns, we build a structured system designed to improve performance over time.just run ads, we build systems designed to scale.
         </p>
 
         <div className="mt-[62px] grid border border-white/16 md:grid-cols-2 md:[&>*:nth-child(2n)]:border-l md:[&>*:nth-child(n+3)]:border-t">
           {systemItems.map(([number, title, copy]) => (
             <article className="min-h-[196px] border-[0.5px] border-white/16 px-[38px] py-[42px] first:border-t-0 md:border-t-0 md:px-[48px]" key={number}>
               <div className="grid items-center gap-[26px] sm:grid-cols-[58px_minmax(0,1fr)]">
-                <p className="font-[var(--font-cormorant)] text-[42px] font-extralight timesFontFamily italic leading-none text-[#ff5500]">
+                <p className="font-[var(--font-cormorant)] text-[60px] font-bold timesFontFamily italic leading-none text-[#ff5500]">
                   {number}
                 </p>
                 <span className="hidden h-px bg-white/12 sm:block" />
               </div>
-              <h3 className="mt-[28px] font-[var(--font-be-vietnam)] text-[22px] font-medium leading-tight tracking-[0.2px]">
+              <h3 className="mt-[28px] font-[var(--font-be-vietnam)] text-[22px] sm:text-[30px] font-medium leading-tight tracking-[0.75px]">
                 {title}
               </h3>
-              <p className="mt-[14px] max-w-[360px] font-[var(--font-cormorant)] text-[13px] font-medium leading-[1.45] text-white/80">
+              <p className="mt-[14px] max-w-[350px] font-[var(--font-cormorant)] text-[13px] sm:text-[18px] font-normal leading-[1.45] text-white/90">
                 {copy}
               </p>
             </article>
@@ -212,25 +257,24 @@ function MetaSystem() {
 function HowItWorks() {
   return (
     <section className="bg-[#ff5500] px-6 py-[68px] text-white  lg:py-[74px]">
-      <div className="mx-auto grid max-w-[1150px] gap-10 md:grid-cols-[minmax(0,550px)_minmax(320px,430px)] md:items-center md:justify-between">
+      <div className="mx-auto grid max-w-[1150px] gap-10 md:grid-cols-[minmax(0,590px)_minmax(320px,430px)] md:items-center md:justify-between">
         <div>
-          <p className="font-[var(--font-be-vietnam)] text-[9px] font-medium uppercase tracking-[7px] text-white/85">
+          <p className="font-[var(--font-be-vietnam)] text-[9px] font-normal sm:text-[12px] uppercase tracking-[4.8px] text-white/85">
             WHAT WE DO
           </p>
-          <h2 className="mt-[26px] font-[var(--font-be-vietnam)] text-[38px] font-medium lowercase leading-[1.02] tracking-[-1.4px] sm:text-[50px]">
-            how it
-            <br />
-            <span className="font-[var(--font-cormorant)] text-[1.12em] font-extralight timesFontFamily italic">
+          <h2 className="mt-[26px] font-[var(--font-be-vietnam)] text-[38px] font-medium lowercase leading-[1.02] tracking-[-1.4px] sm:text-[56px]">
+            how it {" "}
+            <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] font-normal timesFontFamily italic">
               works
             </span>
           </h2>
-          <ul className="mt-[72px] grid gap-y-[40px] sm:grid-cols-2">
+          <ul className="mt-[62px] grid gap-y-[40px] sm:grid-cols-2 gap-6">
             {workSteps.map((step, index) => (
               <li
-                className="grid grid-cols-[22px_minmax(0,1fr)] gap-[13px] font-[var(--font-be-vietnam)] text-[12px] font-normal leading-[1.35]"
+                className="grid grid-cols-[22px_minmax(0,0.95fr)] gap-[13px] items-center justify-center font-[var(--font-be-vietnam)] text-[14px] sm:text-[18px] tracking-[1.4px] font-normal leading-[1.35]"
                 key={step}
               >
-                <span className="font-[var(--font-inter)] text-[9px] font-bold leading-[1.8] tracking-[2px] text-white/90">
+                <span className="font-[var(--font-inter)] text-[12px] sm:text-[14px] tracking-[1.4px] font-normal leading-[1.35]">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 {step}
@@ -239,13 +283,13 @@ function HowItWorks() {
           </ul>
         </div>
 
-        <div className="relative aspect-[490/510] w-full overflow-hidden rounded-[8px] bg-black/10">
+        <div className="relative aspect-[490/510] min-h-[510px] max-w-[518px] w-full overflow-hidden rounded-[8px] bg-black/10">
           <Image
             src="/assets/how_it_works.jpg"
             alt="Team reviewing campaign performance"
             fill
             sizes="(min-width: 768px) 490px, 90vw"
-            className="object-cover object-[center_42%]"
+            className="object-cover object-[center_50%]"
           />
         </div>
       </div>
@@ -259,17 +303,17 @@ function BrandWork() {
       <div className="mx-auto max-w-[1150px]">
         <div className="flex flex-col gap-7 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="font-[var(--font-be-vietnam)] text-[9px] font-medium uppercase tracking-[6px] text-[#ff5500]">
+            <p className="font-[var(--font-be-vietnam)] text-[9px] sm:text-[12px] font-normal uppercase tracking-[4.8px] text-[#ff5500]">
               PROJECTS
             </p>
-            <h2 className="mt-[34px] max-w-[470px] font-[var(--font-be-vietnam)] text-[38px] font-medium lowercase leading-[1.08] tracking-[-1.4px] sm:text-[50px]">
+            <h2 className="mt-[24px] max-w-[470px] font-[var(--font-be-vietnam)] text-[38px] font-medium lowercase leading-[1.08] tracking-[-1.4px] sm:text-[56px]">
               see how we
               <br />
-              <span className="font-[var(--font-cormorant)] text-[1.12em] font-extralight timesFontFamily italic">
+              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] font-normal timesFontFamily italic">
                 scale brands.
               </span>
             </h2>
-            <p className="mt-[26px] font-[var(--font-inter)] text-[14px] leading-[1.7] text-white/86">
+            <p className="mt-[20px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.7] text-white">
               Explore how we&apos;ve helped brands grow through Meta Ads.
             </p>
           </div>
@@ -281,44 +325,63 @@ function BrandWork() {
           </Link>
         </div>
 
-        <div className="mt-[52px] grid gap-[24px] md:grid-cols-2">
-          {projects.map((project) => (
-            <article className="group rounded-[18px] border border-white/80 p-[25px] pb-[22px]" key={project.name}>
-              <div className="relative aspect-[470/292] overflow-hidden rounded-[12px] bg-[#171717]">
-                <Image
-                  src={project.image}
-                  alt={`${project.name} campaign`}
-                  fill
-                  sizes="(min-width: 768px) 470px, 90vw"
-                  className="object-cover transition duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="mt-[23px] flex items-start justify-between gap-5">
-                <div>
-                  <h3 className="font-[var(--font-be-vietnam)] text-[28px] font-medium leading-none tracking-[-0.8px]">
-                    {project.name}
-                  </h3>
-                  <p className="mt-[12px] max-w-[360px] font-[var(--font-be-vietnam)] text-[14px] font-normal leading-[1.45] text-white/92">
-                    {project.copy}
-                  </p>
-                </div>
-                <span className="mt-[12px] shrink-0 font-[var(--font-inter)] text-[10px] text-white/55">
-                  {project.year}
-                </span>
-              </div>
-              <div className="mt-[13px] flex flex-wrap gap-[6px]">
-                {project.tags.map((tag) => (
-                  <span
-                    className="rounded-full border border-white/55 px-[10px] py-[4px] font-[var(--font-inter)] text-[8px] text-white/72"
-                    key={tag}
+        {/* Cards */}
+                <div className="mt-[40px] grid gap-[24px] md:grid-cols-2">
+                  {relatedProjects.map((project) => (
+                    <article
+                      key={project.name}
+                      className="rounded-[20px] border border-white p-[14px]"
+                    >
+                      <div className="relative aspect-[420/260] w-full overflow-hidden max-w-[534px] rounded-[12px] bg-[#111]">
+                        <Image
+                          src={project.image}
+                          alt={`${project.name} marketing strategy project`}
+                          fill
+                          sizes="(min-width: 768px) 45vw, calc(100vw - 48px)"
+                          className="object-cover"
+                        />
+                      </div>
+        
+                      <div className="px-[10px] pt-[24px] pb-[6px]">
+                        {/* Title + year */}
+                        <div className="flex items-baseline justify-between gap-3">
+                          <h3 className="font-[var(--font-be-vietnam)] text-[22px] sm:text-[36px] font-normal leading-none tracking-[-0.72px]">
+                            {project.name}
+                          </h3>
+                          <span className="shrink-0 font-[var(--font-inter)] text-[14px] text-white">
+                            {project.year}
+                          </span>
+                        </div>
+        
+                        {/* Copy */}
+                        <p className="mt-[14px] max-w-[420px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[28px] text-white">
+                          {project.copy}
+                        </p>
+        
+                        {/* Tags */}
+                        <div className="mt-[20px] flex flex-wrap gap-[10px]">
+                          {(project.tags ?? []).map((tag) => (
+                            <span
+                              key={tag}
+                              className="rounded-full border border-white px-[14px] py-[7px] font-[var(--font-inter)] text-[12px] text-white/90"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </article>
+                  ))}
+        
+                  {/* Mobile-only view all link, shown below cards on small screens */}
+                  <Link
+                    href="/projects"
+                    className="sm:hidden inline-flex w-fit items-center gap-2 rounded-full border border-white/30 px-5 py-3 font-[var(--font-inter)] text-[12px] text-white/85 transition-colors hover:border-white/60 hover:text-white"
                   >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </article>
-          ))}
-        </div>
+                    View all projects
+                    <span aria-hidden="true">→</span>
+                  </Link>
+                </div>
       </div>
     </section>
   );
@@ -326,12 +389,12 @@ function BrandWork() {
 
 function FinalCta() {
   return (
-    <section className="bg-black px-6 py-[62px] text-white  lg:py-[76px]">
+    <section className="bg-black px-6 pt-[70px] text-white pb-30">
       <div className="mx-auto max-w-[1150px] text-center">
-        <p className="font-[var(--font-be-vietnam)] text-[10px] font-normal uppercase tracking-[3px] text-[#ff5500]">
-          LET'S SCALE
+        <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
+           LET&apos;S SCALE
         </p>
-        <h2 className="mt-[18px] font-[var(--font-be-vietnam)] text-[32px] font-medium lowercase leading-[1.08] tracking-[-1.2px] sm:text-[46px]">
+        <h2 className="mt-8 font-[var(--font-be-vietnam)] text-[36px] font-medium leading-[1.08] tracking-[-1.5px] sm:text-[55px]">
           ready to scale
           <br />
           with{" "}
@@ -339,19 +402,16 @@ function FinalCta() {
             meta ads?
           </span>
         </h2>
-        <div className="mt-[26px] flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Link
-            className="inline-flex h-[36px] min-w-[170px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[11px] font-bold text-white transition hover:bg-[#ff6b1f]"
+            className="inline-flex h-[42px] min-w-[190px] items-center justify-center rounded-full bg-[#ff5500] px-8 font-[var(--font-be-vietnam)] text-[12px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
             href="/contact"
           >
-            Book a Consulation
+            Book a Consultation
           </Link>
-          <Link
-            className="inline-flex h-[36px] min-w-[170px] items-center justify-center rounded-full border border-white/30 px-7 font-[var(--font-be-vietnam)] text-[11px] font-bold text-white transition hover:border-white"
-            href="/projects"
-          >
+          {/* <Link className="font-[var(--font-be-vietnam)] text-[13px] font-medium text-white/80 transition hover:text-white border-white border rounded-full px-6 h-[48px] inline-flex items-center justify-center" href="#services">
             Book a Strategy Call
-          </Link>
+          </Link> */}
         </div>
       </div>
     </section>

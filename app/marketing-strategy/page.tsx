@@ -228,25 +228,37 @@ function BulletList({
 
 function StrategyPanel({ section }: { section: StrategySection }) {
   const isLight = section.theme === "light";
+  // For imageSide=="right": text left, image right
+  // Text panel inner content aligns to max-w-[1150px] mx-auto via padding-left
   const textPanel = (
     <div
-      className={`flex min-h-[440px] flex-col justify-center px-6 py-[72px] lg:min-h-[590px] ${isLight ? "bg-[#f5f4f1] text-black" : "bg-[#050505] text-white"
-        }`}
+      className={`flex min-h-[440px] flex-col justify-center py-[72px] lg:min-h-[590px] ${
+        isLight ? "bg-[#f5f4f1] text-black" : "bg-[#050505] text-white"
+      }`}
     >
-      <p
-        className={`font-[var(--font-be-vietnam)] text-[8px] sm:text-[11.2px] font-normal uppercase tracking-[2.02px] ${isLight ? "text-[#58554F]" : "text-[#FF5500]"
-          }`}
+      {/* Inner wrapper: aligns content to the right edge of the max-w-[1150px] container */}
+      <div
+        className={`mx-auto w-full max-w-[575px] px-6 ${
+          section.imageSide === "right" ? "lg:ml-auto lg:pr-12" : "lg:mr-auto lg:pl-12"
+        }`}
       >
-        {section.eyebrow}
-      </p>
-      <SectionTitle title={section.title} />
-      <p
-        className={`mt-[25px] max-w-[600px] font-[var(--font-inter)] text-[15px] sm:text-[18px] leading-[1.55] ${isLight ? "text-black/58" : "text-white"
+        <p
+          className={`font-[var(--font-be-vietnam)] text-[8px] sm:text-[11.2px] font-normal uppercase tracking-[2.02px] ${
+            isLight ? "text-[#58554F]" : "text-[#FF5500]"
           }`}
-      >
-        {section.copy}
-      </p>
-      <BulletList bullets={section.bullets} isLight={isLight} />
+        >
+          {section.eyebrow}
+        </p>
+        <SectionTitle title={section.title} />
+        <p
+          className={`mt-[25px] max-w-[370px] font-[var(--font-inter)] text-[15px] sm:text-[18px] leading-[1.55] ${
+            isLight ? "text-black/58" : "text-white"
+          }`}
+        >
+          {section.copy}
+        </p>
+        <BulletList bullets={section.bullets} isLight={isLight} />
+      </div>
     </div>
   );
 
@@ -263,18 +275,15 @@ function StrategyPanel({ section }: { section: StrategySection }) {
   );
 
   return (
-    <section className="mx-auto grid w-full  lg:grid-cols-2">
-      {section.imageSide === "left" ? (
-        <>
-          {imagePanel}
-          {textPanel}
-        </>
-      ) : (
-        <>
-          {textPanel}
-          {imagePanel}
-        </>
-      )}
+    <section className={`w-full ${isLight ? "bg-[#f5f4f1]" : "bg-[#050505]"}`}>
+      {/* Full-width grid — no max-w so image fills edge-to-edge */}
+      <div className="grid w-full lg:grid-cols-2">
+        {section.imageSide === "left" ? (
+          <>{imagePanel}{textPanel}</>
+        ) : (
+          <>{textPanel}{imagePanel}</>
+        )}
+      </div>
     </section>
   );
 }
