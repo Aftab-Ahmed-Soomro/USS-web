@@ -12,6 +12,7 @@ import EmailMarketingQuote from "../components/EmailMarketingQuote";
 import PlatformsWeWorkWith from "../components/PlatformsWeWorkWith";
 import OurOrganicSocialMediaApproach from "../components/OurOrganicSocialMediaApproach";
 import Image from "next/image";
+import { WhyEmailFails } from "../components/WhyEmailFails";
 
 const stats = [
   { value: "500M+", label: "Total Reach" },
@@ -468,6 +469,69 @@ export default function SocialMediaManagementPage() {
       <Metrics />
       <PlatformsWeWorkWith />
       <Brands />
+      <WhyEmailFails
+        tagline="THE PROBLEM"
+        heading={
+          <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
+            why your{" "}
+            <span
+              className="font-normal italic text-[60px] sm:text-[72px]"
+              style={{ fontFamily: "'Times New Roman', Times, serif" }}
+            >
+              social strategy
+            </span>{" "}
+            <br />
+            isn&apos;t working
+          </h2>
+        }
+        subheading=""
+        leftTitle="Most Brands"
+        rightTitle="The USS Difference"
+        leftPoints={[
+          {
+            number: "01",
+            title: "Posting Without A Plan",
+            description: "Content is published without a clear strategy or long term direction.",
+          },
+          {
+            number: "02",
+            title: "Inconsistent Brand Presence",
+            description: "Different styles, messages and visuals make it difficult to build recognition.",
+          },
+          {
+            number: "03",
+            title: "Content That Doesn't Add Value",
+            description: "Posts focus on selling instead of educating, entertaining or building trust.",
+          },
+          {
+            number: "04",
+            title: "No Clear Content Pillars",
+            description: "Without consistent themes, content lacks direction and becomes difficult to sustain.",
+          },
+        ]}
+        rightPoints={[
+          {
+            number: "01",
+            title: "Content Strategy First",
+            description: "Every post is planned around your business goals, audience and brand positioning.",
+          },
+          {
+            number: "02",
+            title: "A Consistent Brand Presence",
+            description: "Clear messaging, visuals and tone that make your business instantly recognisable.",
+          },
+          {
+            number: "03",
+            title: "Content People Want to Engage With",
+            description: "Educational, entertaining and informative content that builds trust over time.",
+          },
+          {
+            number: "04",
+            title: "Defined Content Pillars",
+            description: "A structured content plan that keeps your social channels consistent, relevant and easy to scale.",
+          },
+        ]}
+      />
       <EmailMarketingQuote first={"your social media is your"} second={"digital window"} third={"shop front"} />
       <OurOrganicSocialMediaApproach />
       <RelatedProjects />
