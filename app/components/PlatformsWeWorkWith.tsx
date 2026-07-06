@@ -11,25 +11,25 @@ const platforms: Platform[] = [
     name: "Meta",
     description:
       "Reach, engage and convert customers across Facebook and Instagram through high-performing paid campaigns.",
-    imageSrc: "/assets/platforms/meta.jpg",
+    imageSrc: "/assets/platforms/meta.png",
+  },
+  {
+    name: "YouTube",
+    description:
+    "Create video campaigns that educate, build trust and convert viewers into customers.",
+    imageSrc: "/assets/platforms/youtube.png",
   },
   {
     name: "LinkedIn",
     description:
       "Generate qualified B2B leads through strategic content, paid advertising and professional outreach.",
-    imageSrc: "/assets/platforms/linkedin.jpg",
-  },
-  {
-    name: "YouTube",
-    description:
-      "Create video campaigns that educate, build trust and convert viewers into customers.",
-    imageSrc: "/assets/platforms/youtube.jpg",
+    imageSrc: "/assets/platforms/linkedin.png",
   },
   {
     name: "TikTok",
     description:
       "Capture attention with high-impact short-form video designed for modern audiences.",
-    imageSrc: "/assets/platforms/tiktok.jpg",
+    imageSrc: "/assets/platforms/2.png",
   },
 ];
 
@@ -37,7 +37,7 @@ export default function PlatformsWeWorkWith() {
   return (
     <section className="bg-[#0A0A0A] py-20 px-6">
       <h2
-        className="text-white text-center mx-auto mb-10"
+        className="text-white mx-auto max-w-[1150px] mb-10"
         style={{
           fontWeight: 500,
           fontSize: "40px",
@@ -54,7 +54,7 @@ export default function PlatformsWeWorkWith() {
             key={platform.name}
             className="relative rounded-2xl overflow-hidden  group"
           >
-            <div className="relative w-full min-h-[418px] aspect-[4/5]">
+            <div className="relative w-full min-h-[490px] aspect-[4/5]">
               {platform.imageSrc ? (
                 <Image
                   src={platform.imageSrc}
@@ -66,31 +66,34 @@ export default function PlatformsWeWorkWith() {
                 <div className="w-full h-full bg-neutral-900" />
               )}
 
-              {/* <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" /> */}
+              {/* Gradient overlay for readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-500 ease-out" />
 
-              <div className="absolute bottom-0 left-0 right-0 p-5">
-                <h3
-                  className="text-white mb-2"
-                  style={{
-                    fontWeight: 700,
-                    fontSize: "28px",
-                    lineHeight: "35px",
-                    letterSpacing: "0%",
-                  }}
-                >
-                  {platform.name}
-                </h3>
-                <p
-                  className="text-neutral-300"
-                  style={{
-                    fontWeight: 400,
-                    fontSize: "15px",
-                    lineHeight: "24.38px",
-                    letterSpacing: "0%",
-                  }}
-                >
-                  {platform.description}
-                </p>
+              <div className="absolute bottom-0 left-0 right-0 px-5 py-6">
+                <div className="transform translate-y-[80px] group-hover:translate-y-0 transition-transform duration-500 ease-out will-change-transform">
+                  <h3
+                    className="text-white mb-2"
+                    style={{
+                      fontWeight: 400,
+                      fontSize: "22.64px",
+                      lineHeight: "35px",
+                      letterSpacing: "0%",
+                    }}
+                  >
+                    {platform.name}
+                  </h3>
+                  <p
+                    className="text-neutral-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 ease-out"
+                    style={{
+                      fontWeight: 400,
+                      fontSize: "15px",
+                      lineHeight: "24.38px",
+                      letterSpacing: "0%",
+                    }}
+                  >
+                    {platform.description}
+                  </p>
+                </div>
               </div>
             </div>
           </div>

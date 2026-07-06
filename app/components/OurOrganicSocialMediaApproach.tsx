@@ -59,11 +59,12 @@ export default function OurOrganicSocialMediaApproach() {
           </span>
           <span
             style={{
-              fontWeight: 700,
+              fontWeight: 400,
               fontStyle: "italic",
               fontSize: "72px",
               lineHeight: "70px",
               letterSpacing: "-1.2px",
+              color: "#FF5500"
             }}
           >
             organic{" "}
