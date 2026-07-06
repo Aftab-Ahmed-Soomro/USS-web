@@ -77,7 +77,7 @@ const waysToWork = [
 function Hero() {
   return (
     <section className="relative overflow-hidden bg-black px-6 pb-[58px] pt-[56px] text-white sm:pb-[72px] sm:pt-[78px]">
-      
+
       <div className="mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
         <div>
           <p className="font-[var(--font-be-vietnam)] text-[10px] font-normal sm:text-[14px] uppercase tracking-[0px] text-white">
@@ -160,45 +160,32 @@ const ussPoints: Point[] = [
   },
 ];
 
-// ─── BrandRow ────────────────────────────────────────────────────────────────
-// Left column item: title label above, then [light-gray pill card] [red circle]
-function BrandRow({ point }: { point: Point }) {
-  return (
-    <div className="flex flex-col items-end gap-[5px]">
-      <h4 className="pr-[48px] text-right font-[var(--font-inter)] text-[12px] font-bold leading-none text-white sm:text-[13px]">
-        {point.title}
-      </h4>
-      <div className="flex items-center gap-[10px]">
-        <div className="rounded-[40px] bg-[#d4d4d2] px-[20px] py-[14px]">
-          <p className="w-[210px] font-[var(--font-inter)] text-[12px] font-normal leading-[1.45] text-[#333333] sm:text-[13px]">
-            {point.description}
-          </p>
-        </div>
-        <span className="flex size-[38px] shrink-0 items-center justify-center rounded-full bg-[#8b1c1c] font-[var(--font-inter)] text-[12px] font-bold leading-none text-white">
-          {point.number}
-        </span>
-      </div>
-    </div>
-  );
-}
+// ─── AbsolutePoint (Desktop) ─────────────────────────────────────────────────
+function AbsolutePoint({ side, x, y, point }: { side: 'left' | 'right', x: number, y: number, point: Point }) {
+  const isLeft = side === 'left';
+  const bgColor = isLeft ? 'bg-[#A81508]' : 'bg-[#12801F]';
 
-// ─── UssRow ──────────────────────────────────────────────────────────────────
-// Right column item: title label above, then [green circle] [light-gray pill card]
-function UssRow({ point }: { point: Point }) {
   return (
-    <div className="flex flex-col items-start gap-[5px]">
-      <h4 className="pl-[48px] text-left font-[var(--font-inter)] text-[12px] font-bold leading-none text-white sm:text-[13px]">
-        {point.title}
-      </h4>
-      <div className="flex items-center gap-[10px]">
-        <span className="flex size-[38px] shrink-0 items-center justify-center rounded-full bg-[#2e7d32] font-[var(--font-inter)] text-[12px] font-bold leading-none text-white">
-          {point.number}
-        </span>
-        <div className="rounded-[40px] bg-[#d4d4d2] px-[20px] py-[14px]">
-          <p className="w-[210px] font-[var(--font-inter)] text-[12px] font-normal leading-[1.45] text-[#333333] sm:text-[13px]">
-            {point.description}
-          </p>
+    <div className="absolute z-10" style={{ left: x, top: y }}>
+      {/* Text Box & Title */}
+      <div
+        className={`absolute top-0 -translate-y-1/2 w-[320px] ${isLeft ? 'right-[34px]' : 'left-[34px]'}`}
+      >
+        <div className="relative">
+          <h4 className="absolute bottom-[100%] mb-[8px] pl-[2px] w-[300px] text-left font-[var(--font-inter)] text-[14px] font-semibold text-white">
+            {point.title}
+          </h4>
+          <div className="rounded-[40px] bg-[#eef0f2] px-[20px] py-[8px] shadow-lg">
+            <p className="font-[var(--font-inter)] text-[14px] leading-[1.45] text-[#333]">
+              {point.description}
+            </p>
+          </div>
         </div>
+      </div>
+
+      {/* Circle */}
+      <div className={`absolute -translate-x-1/2 -translate-y-1/2 flex size-[38px] items-center justify-center rounded-full ${bgColor} font-[var(--font-inter)] text-[13px] font-bold text-white shadow-md`}>
+        {point.number}
       </div>
     </div>
   );
@@ -206,41 +193,41 @@ function UssRow({ point }: { point: Point }) {
 
 // ─── SegmentedRing ───────────────────────────────────────────────────────────
 // Four white arc segments with clean butt gaps between them
-function SegmentedRing({ size = 260 }: { size?: number }) {
-  const cx = size / 2;
-  const cy = size / 2;
-  const r = size * 0.355;
-  const sw = size * 0.128;
-  const gap = 11;
-  const segs = [
-    { s: 0   + gap / 2, e: 90  - gap / 2 },
-    { s: 90  + gap / 2, e: 180 - gap / 2 },
-    { s: 180 + gap / 2, e: 270 - gap / 2 },
-    { s: 270 + gap / 2, e: 360 - gap / 2 },
-  ];
-  const rad = (d: number) => (d * Math.PI) / 180;
-  const pt = (deg: number) => ({
-    x: cx + r * Math.cos(rad(deg - 90)),
-    y: cy + r * Math.sin(rad(deg - 90)),
-  });
-  return (
-    <svg viewBox={`0 0 ${size} ${size}`} width={size} height={size} fill="none">
-      {segs.map((seg, i) => {
-        const s = pt(seg.s);
-        const e = pt(seg.e);
-        return (
-          <path
-            key={i}
-            d={`M ${s.x.toFixed(2)} ${s.y.toFixed(2)} A ${r} ${r} 0 0 1 ${e.x.toFixed(2)} ${e.y.toFixed(2)}`}
-            stroke="white"
-            strokeWidth={sw}
-            strokeLinecap="butt"
-          />
-        );
-      })}
-    </svg>
-  );
-}
+// function SegmentedRing({ size = 260 }: { size?: number }) {
+//   const cx = size / 2;
+//   const cy = size / 2;
+//   const r = size * 0.355;
+//   const sw = size * 0.128;
+//   const gap = 11;
+//   const segs = [
+//     { s: 0   + gap / 2, e: 90  - gap / 2 },
+//     { s: 90  + gap / 2, e: 180 - gap / 2 },
+//     { s: 180 + gap / 2, e: 270 - gap / 2 },
+//     { s: 270 + gap / 2, e: 360 - gap / 2 },
+//   ];
+//   const rad = (d: number) => (d * Math.PI) / 180;
+//   const pt = (deg: number) => ({
+//     x: cx + r * Math.cos(rad(deg - 90)),
+//     y: cy + r * Math.sin(rad(deg - 90)),
+//   });
+//   return (
+//     <svg viewBox={`0 0 ${size} ${size}`} width={size} height={size} fill="none">
+//       {segs.map((seg, i) => {
+//         const s = pt(seg.s);
+//         const e = pt(seg.e);
+//         return (
+//           <path
+//             key={i}
+//             d={`M ${s.x.toFixed(2)} ${s.y.toFixed(2)} A ${r} ${r} 0 0 1 ${e.x.toFixed(2)} ${e.y.toFixed(2)}`}
+//             stroke="white"
+//             strokeWidth={sw}
+//             strokeLinecap="butt"
+//           />
+//         );
+//       })}
+//     </svg>
+//   );
+// }
 
 // ─── WhyEmailFails ───────────────────────────────────────────────────────────
 function WhyEmailFails() {
@@ -267,67 +254,71 @@ function WhyEmailFails() {
           Most brands don&apos;t have an email problem, they have a strategy problem.
         </p>
 
-        {/* ═══ DESKTOP layout (lg+): 3-col grid [left | ring | right] ═══ */}
-        <div className="mt-14 hidden lg:block">
+        {/* ═══ DESKTOP layout (lg+): Absolute Positioned Diagram ═══ */}
+        <div className="mt-8 hidden lg:flex justify-center">
 
-          {/* Column labels */}
-          <div className="grid grid-cols-[1fr_260px_1fr]">
-            <p className="text-center font-[var(--font-inter)] text-[20px] font-normal text-white">
-              Most Brands
-            </p>
-            <span />
-            <p className="text-center font-[var(--font-inter)] text-[20px] font-normal text-white">
-              The USS Difference
-            </p>
-          </div>
-
-          {/* 3-column diagram grid */}
-          <div className="relative mt-8 grid grid-cols-[1fr_260px_1fr] items-center">
-
-            {/* LEFT — brand rows */}
-            <div className="flex flex-col items-end gap-[44px]">
-              {brandPoints.map((point) => (
-                <BrandRow key={point.number} point={point} />
-              ))}
+          <div className="relative mx-auto w-[1000px] h-[640px] shrink-0">
+            {/* Column labels */}
+            <div className="absolute top-[20px] left-[90px] -translate-x-1/2">
+              <p className="text-center font-[var(--font-inter)] text-[20px] font-normal text-white">
+                Most Brands
+              </p>
+            </div>
+            <div className="absolute top-[20px] left-[890px] -translate-x-1/2">
+              <p className="text-center font-[var(--font-inter)] text-[20px] font-normal whitespace-nowrap text-white">
+                The USS Difference
+              </p>
             </div>
 
-            {/* CENTRE — ring */}
-            <div className="flex items-center justify-center">
-              <SegmentedRing size={260} />
-            </div>
-
-            {/* RIGHT — USS rows */}
-            <div className="flex flex-col items-start gap-[44px]">
-              {ussPoints.map((point) => (
-                <UssRow key={point.number} point={point} />
-              ))}
-            </div>
-
-            {/*
-              CONNECTOR LINES (absolute SVG overlay).
-              ViewBox: 1000 × 580
-              Left col: 0–370  |  Ring col: 370–630  |  Right col: 630–1000
-              Ring centre: (500, 290). Ring outer edge x ≈ 393 (left) and 607 (right).
-              4 rows at y ≈ 72, 217, 362, 507
-              Red circles (right edge of their row) at x ≈ 368
-              Green circles (left edge of their row) at x ≈ 632
-            */}
+            {/* SVG Lines and Dots */}
             <svg
-              className="pointer-events-none absolute inset-0 h-full w-full"
-              preserveAspectRatio="none"
-              viewBox="0 0 1000 580"
+              className="pointer-events-none absolute inset-0 h-full w-full z-0"
+              viewBox="0 0 1000 640"
             >
-              {/* Left: red circle → ring */}
-              <line x1="368" y1="72"  x2="393" y2="120" stroke="white" strokeWidth="1.3" opacity="0.6" />
-              <line x1="368" y1="217" x2="385" y2="250" stroke="white" strokeWidth="1.3" opacity="0.6" />
-              <line x1="368" y1="362" x2="385" y2="330" stroke="white" strokeWidth="1.3" opacity="0.6" />
-              <line x1="368" y1="507" x2="393" y2="460" stroke="white" strokeWidth="1.3" opacity="0.6" />
-              {/* Right: ring → green circle */}
-              <line x1="632" y1="72"  x2="607" y2="120" stroke="white" strokeWidth="1.3" opacity="0.6" />
-              <line x1="632" y1="217" x2="615" y2="250" stroke="white" strokeWidth="1.3" opacity="0.6" />
-              <line x1="632" y1="362" x2="615" y2="330" stroke="white" strokeWidth="1.3" opacity="0.6" />
-              <line x1="632" y1="507" x2="607" y2="460" stroke="white" strokeWidth="1.3" opacity="0.6" />
+              {/* Left Lines (\ staircase) */}
+              <line x1={330} y1={145} x2={380} y2={170} stroke="white" strokeWidth="1.5" />
+              <circle cx={380} cy={170} r={4.5} fill="white" />
+
+              <line x1={340} y1={240} x2={372} y2={240} stroke="white" strokeWidth="1.5" />
+              <circle cx={372} cy={240} r={4.5} fill="white" />
+
+              <line x1={350} y1={350} x2={392} y2={319} stroke="white" strokeWidth="1.5" />
+              <circle cx={392} cy={319} r={4.5} fill="white" />
+
+              <line x1={400} y1={430} x2={440} y2={370} stroke="white" strokeWidth="1.5" />
+              <circle cx={440} cy={370} r={4.5} fill="white" />
+
+              {/* Right Lines (/ staircase) */}
+              <line x1={670} y1={145} x2={630} y2={170} stroke="white" strokeWidth="1.5" />
+              <circle cx={630} cy={170} r={4.5} fill="white" />
+
+              <line x1={680} y1={240} x2={630} y2={240} stroke="white" strokeWidth="1.5" />
+              <circle cx={630} cy={240} r={4.5} fill="white" />
+
+              <line x1={650} y1={350} x2={608} y2={319} stroke="white" strokeWidth="1.5" />
+              <circle cx={608} cy={319} r={4.5} fill="white" />
+
+              <line x1={600} y1={430} x2={555} y2={370} stroke="white" strokeWidth="1.5" />
+              <circle cx={555} cy={370} r={4.5} fill="white" />
             </svg>
+
+            {/* Center Ring */}
+            <div className="absolute left-1/2 top-[230px] -translate-x-1/2 -translate-y-1/2 z-0">
+              {/* <SegmentedRing size={260} /> */}
+              <img src="/assets/circled.png" alt="" className="w-[310px] object-contain" />
+            </div>
+
+            {/* Left Items (Stairs: moving right as going down \ ) */}
+            <AbsolutePoint side="left" x={290} y={130} point={brandPoints[0]} />
+            <AbsolutePoint side="left" x={320} y={240} point={brandPoints[1]} />
+            <AbsolutePoint side="left" x={350} y={350} point={brandPoints[2]} />
+            <AbsolutePoint side="left" x={380} y={460} point={brandPoints[3]} />
+
+            {/* Right Items (Stairs: moving left as going down / ) */}
+            <AbsolutePoint side="right" x={710} y={130} point={ussPoints[0]} />
+            <AbsolutePoint side="right" x={680} y={240} point={ussPoints[1]} />
+            <AbsolutePoint side="right" x={650} y={350} point={ussPoints[2]} />
+            <AbsolutePoint side="right" x={620} y={460} point={ussPoints[3]} />
           </div>
         </div>
 
@@ -352,7 +343,7 @@ function WhyEmailFails() {
           </div>
 
           <div className="my-10 flex justify-center">
-            <SegmentedRing size={140} />
+            {/* <SegmentedRing size={140} /> */}
           </div>
 
           <p className="mb-5 text-center font-[var(--font-inter)] text-[17px] font-normal text-white">
@@ -627,7 +618,7 @@ function RevenueMethod() {
   return (
     <div className="w-full bg-black text-white py-20 px-6 min-h-screen flex flex-col justify-center items-center font-sans">
       <div className="max-w-[1150px] w-full">
-        
+
         {/* Header Section */}
         {/* Heading */}
         <h2 className="lowercase text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-16">
@@ -657,7 +648,7 @@ function RevenueMethod() {
               className="group relative rounded-[28px] overflow-hidden p-6 flex flex-col justify-between cursor-pointer transition-all duration-500 ease-out"
             >
               {/* Card Number */}
-              <div 
+              <div
                 className="text-[9.82px] font-medium leading-[14.73px] tracking-[2.95px] text-white opacity-80 align-middle"
                 style={{ fontStyle: 'Medium' }}
               >
@@ -666,9 +657,9 @@ function RevenueMethod() {
 
               {/* Bottom Content Group (Animates Up on Hover) */}
               <div className="transform translate-y-[80px] group-hover:translate-y-0 transition-transform duration-500 ease-out will-change-transform">
-                
+
                 {/* Title */}
-                <h3 
+                <h3
                   className="text-[22.64px] font-normal leading-[26.78px] tracking-[0%] text-white align-middle mb-3"
                   style={{ fontStyle: 'Regular' }}
                 >
@@ -676,7 +667,7 @@ function RevenueMethod() {
                 </h3>
 
                 {/* Description (Fades and slides in cleanly) */}
-                <p 
+                <p
                   className="text-[15.5px] font-normal leading-[18.86px] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 ease-out"
                   style={{ fontStyle: 'Regular' }}
                 >
@@ -697,7 +688,7 @@ function FinalCta() {
     <section className="bg-black px-6 pt-[70px] text-white pb-30">
       <div className="mx-auto max-w-[1150px] text-center">
         <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
-           LET&apos;S SCALE
+          LET&apos;S SCALE
         </p>
         <h2 className="mt-20 font-[var(--font-be-vietnam)] text-[36px] font-medium leading-[1.08] tracking-[-1.5px] sm:text-[55px]">
           turn your database
@@ -729,9 +720,9 @@ export default function EmailMarketingPage() {
       <Header />
       <Hero />
       {/* <Numbers stats={emailStats} eyebrow="Our Numbers"/> */}
-      <Numbers stats={emailStats}/>
+      <Numbers stats={emailStats} />
       <EmailMarketingQuote first={"Email Marketing should contribute to"} second={"35%"} third={"of your business revenue with the right strategy &amp; execution"} />
-      {/* <WhyEmailFails /> */}
+      <WhyEmailFails />
       <EmailOverview />
       <Brands />
       <EmailStrategy />
