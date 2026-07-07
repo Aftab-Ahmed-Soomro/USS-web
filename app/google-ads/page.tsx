@@ -25,17 +25,17 @@ const failPoints = [
 
 const relatedProjects = [
   {
-    name: "Cinnamood",
+    name: "Residency Advanced",
     year: "2024",
     copy: "Launching a German bakery franchise into the UAE market.",
-    image: "/assets/projectsPagePics/cinamood.jpg",
+    image: "/assets/reside.jpg",
     tags: ["Web design & development", "Branding", "F&B"],
   },
   {
-    name: "Yula Lounge",
+    name: "Flowork",
     year: "2024",
     copy: "Transforming Yalseh into Yula – a modern Dubai beach club.",
-    image: "/assets/yula2.jpg",
+    image: "/assets/flow.jpg",
     tags: ["Web design & development", "Hospitality"],
   },
 ];
@@ -511,6 +511,103 @@ function WorkTogether() {
   );
 }
 
+// Card Data Structure
+const CARDS_DATA = [
+  {
+    id: '01',
+    title: 'Keyword Strategy',
+    description: 'We identify the keywords your customers are actively searching for and build campaigns around high-intent search terms.',
+    bgImage: '/assets/method1.png', // Replace with your image src
+  },
+  {
+    id: '02',
+    title: 'Campaign Structure',
+    description: 'We build meticulously organized campaigns designed to maximize relevance, improve Quality Score, and give precise control over your budget.',
+    bgImage: '/assets/method2.png', // Replace with your image src
+  },
+  {
+    id: '03',
+    title: 'Ad Copy & Creative',
+    description: 'Our team crafts compelling ad copy and engaging creatives that capture attention, drive higher click-through rates, and increase conversions.',
+    bgImage: '/assets/method3.png', // Replace with your image src
+  },
+  {
+    id: '04',
+    title: 'Optimisation & Growth',
+    description: 'We continuously monitor and refine your campaigns based on data-driven insights, ensuring scalable growth and maximum return on ad spend.',
+    bgImage: '/assets/method4.png', // Replace with your image src
+  },
+];
+
+function RevenueMethod() {
+  return (
+    <div className="w-full bg-black text-white py-20 px-6 min-h-screen flex flex-col justify-center items-center font-sans">
+      <div className="max-w-[1150px] w-full">
+
+        {/* Header Section */}
+        {/* Heading */}
+        <h2 className="lowercase text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-16">
+          how we capture demand  <br />
+          and turn it into{" "}
+          <span
+            className="italic text-[#ff5500] font-normal text-[1.1em] tracking-[-3%] sm:text-[72px] sm:leading-[70px]"
+            style={{ fontFamily: "'Times New Roman', Times, serif" }}
+          >
+            revenue
+          </span>
+        </h2>
+
+        {/* Grid Container */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center items-center">
+          {CARDS_DATA.map((card) => (
+            <div
+              key={card.id}
+              style={{
+                width: '1285.61px', // Scaled proportions fallback or driven via wrapper max-width
+                maxWidth: '100%',
+                height: '606.93px',
+                backgroundImage: `url(${card.bgImage})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
+              className="group relative rounded-[28px] overflow-hidden p-6 flex flex-col justify-between cursor-pointer transition-all duration-500 ease-out"
+            >
+              {/* Card Number */}
+              <div
+                className="text-[9.82px] font-medium leading-[14.73px] tracking-[2.95px] text-white opacity-80 align-middle"
+                style={{ fontStyle: 'Medium' }}
+              >
+                {card.id}
+              </div>
+
+              {/* Bottom Content Group (Animates Up on Hover) */}
+              <div className="transform translate-y-[80px] group-hover:translate-y-0 transition-transform duration-500 ease-out will-change-transform">
+
+                {/* Title */}
+                <h3
+                  className="text-[22.64px] font-normal leading-[26.78px] tracking-[0%] text-white align-middle mb-3"
+                  style={{ fontStyle: 'Regular' }}
+                >
+                  {card.title}
+                </h3>
+
+                {/* Description (Fades and slides in cleanly) */}
+                <p
+                  className="text-[15.5px] font-normal leading-[18.86px] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 ease-out"
+                  style={{ fontStyle: 'Regular' }}
+                >
+                  {card.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </div>
+  );
+}
+
 function FinalCta() {
   return (
     <section className="bg-black px-6 pt-[70px] text-white pb-30">
@@ -602,7 +699,7 @@ export default function GoogleAdsPage() {
       <Header />
       <Hero />
       <Numbers />
-      {/* <Brands /> */}
+      <Brands />
       
       <WhyEmailFails
         heading={
@@ -668,8 +765,9 @@ export default function GoogleAdsPage() {
           },
         ]}
       />
+      <RevenueMethod />
       <CaseStudies />
-      <WorkTogether />
+      {/* <WorkTogether /> */}
       <Testimonials />
       <Team />
       <GoodCompanyMap />
