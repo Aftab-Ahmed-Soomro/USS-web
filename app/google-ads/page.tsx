@@ -8,6 +8,9 @@ import { Team } from "../components/Team";
 import { Testimonials } from "../components/Testimonials";
 import { LightConsultationForm } from "../components/ConsultationForm";
 import { GoodCompanyMap } from "../components/GoodCompanyMap";
+import { WhyEmailFails } from "../components/WhyEmailFails";
+import { WhyGoogleAdsWork } from "../components/WhyGoogleAdsWork";
+import PlatformsWeWorkWith from "../components/PlatformsWeWorkWith";
 
 const inputClass =
   "mt-[6px] h-[29px] w-full rounded-[5px] border border-black/15 bg-white px-[9px] font-[var(--font-inter)] text-[9px] text-black outline-none placeholder:text-black/35 focus:border-[#ff5500]";
@@ -539,16 +542,132 @@ function FinalCta() {
   );
 }
 
+const googleAdsBrandPoints = [
+  {
+    number: "01",
+    title: "Targeting the Wrong Keywords",
+    description:
+      "Campaigns focus on high-volume searches instead of high-intent customers.",
+  },
+  {
+    number: "02",
+    title: "Poor Campaign Structure",
+    description:
+      "Disorganised campaigns make it difficult to control budgets, relevance and performance.",
+  },
+  {
+    number: "03",
+    title: "Low-Converting Ad Copy",
+    description:
+      "Generic ads fail to stand out or encourage users to click.",
+  },
+  {
+    number: "04",
+    title: "No Continuous Optimisation",
+    description:
+      "Campaigns aren't regularly reviewed, resulting in wasted budget and missed opportunities.",
+  },
+];
+
+const googleAdsUssPoints = [
+  {
+    number: "01",
+    title: "Keyword Strategy",
+    description:
+      "We identify the search terms your ideal customers are actively using.",
+  },
+  {
+    number: "02",
+    title: "Structured Campaigns",
+    description:
+      "Well-organised campaigns designed to improve Quality Score, relevance and performance.",
+  },
+  {
+    number: "03",
+    title: "High-Performing Ad Copy",
+    description:
+      "Compelling headlines and descriptions written to increase clicks and conversions.",
+  },
+  {
+    number: "04",
+    title: "Ongoing Optimisation",
+    description:
+      "We monitor search terms, bids and conversions to continuously improve performance and maximise return on ad spend.",
+  },
+];
+
 export default function GoogleAdsPage() {
   return (
     <main className="min-h-screen bg-black overflow-hidden">
       <Header />
       <Hero />
-      <WhyAdsFail />
       <Numbers />
-      <GoogleServices />
-      <GrowthSystem />
-      <Brands />
+      {/* <Brands /> */}
+      
+      <WhyEmailFails
+        heading={
+          <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
+            why most{" "}
+            <span
+              className="font-normal italic text-[60px] sm:text-[72px]"
+              style={{ fontFamily: "'Times New Roman', Times, serif" }}
+            >
+              google ads
+            </span>{" "}
+            fails
+          </h2>
+        }
+        subheading="Most brands don't have an email problem, they have a strategy problem."
+        leftTitle="Most Brands"
+        rightTitle="The USS Difference"
+        leftPoints={googleAdsBrandPoints}
+        rightPoints={googleAdsUssPoints}
+      />
+      <WhyGoogleAdsWork />
+      {/* <WhyAdsFail /> */}
+      {/* <GoogleServices /> */}
+      {/* <GrowthSystem /> */}
+      <PlatformsWeWorkWith
+        heading={
+          <h2
+            className="text-white mx-auto max-w-[1150px] mb-10 tracking-[-1.5px]"
+            style={{
+              fontWeight: 500,
+              fontSize: "clamp(36px, 5vw, 56px)",
+              lineHeight: "100%",
+              fontFamily: "var(--font-be-vietnam, var(--font-inter))",
+            }}
+          >
+            platforms we work with
+          </h2>
+        }
+        platforms={[
+          {
+            name: "Search Campaigns",
+            description:
+              "Reach, engage and convert customers across Facebook and Instagram through high-performing paid campaigns.",
+            imageSrc: "/assets/1.png",
+          },
+          {
+            name: "Performance Max",
+            description:
+              "Maximise conversions across all Google channels using AI-driven campaigns.",
+            imageSrc: "/assets/googlePlatforms/2.png",
+          },
+          {
+            name: "YouTube Campaigns",
+            description:
+              "Engage audiences with compelling video ads across YouTube and the web.",
+            imageSrc: "/assets/googlePlatforms/3.png",
+          },
+          {
+            name: "Display Ads",
+            description:
+              "Build brand awareness and retarget visitors with visually striking image ads.",
+            imageSrc: "/assets/googlePlatforms/4.png",
+          },
+        ]}
+      />
       <CaseStudies />
       <WorkTogether />
       <Testimonials />

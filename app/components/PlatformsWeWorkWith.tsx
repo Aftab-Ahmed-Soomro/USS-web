@@ -1,12 +1,19 @@
 import Image from "next/image";
 
-interface Platform {
+import React from "react";
+
+export interface Platform {
   name: string;
-  description: string;
+  description?: string;
   imageSrc: string;
 }
 
-const platforms: Platform[] = [
+interface PlatformsWeWorkWithProps {
+  heading?: React.ReactNode;
+  platforms?: Platform[];
+}
+
+const defaultPlatforms: Platform[] = [
   {
     name: "Meta",
     description:
@@ -33,27 +40,41 @@ const platforms: Platform[] = [
   },
 ];
 
-export default function PlatformsWeWorkWith() {
+export default function PlatformsWeWorkWith({
+  heading,
+  platforms = defaultPlatforms,
+}: PlatformsWeWorkWithProps) {
   return (
     <section className="bg-[#0A0A0A] py-20 px-6">
-      <h2
-        className="text-white mx-auto max-w-[1150px] mb-10"
-        style={{
-          fontWeight: 500,
-          fontSize: "40px",
-          lineHeight: "100%",
-          letterSpacing: "0%",
-        }}
-      >
-        platforms we work with
-      </h2>
+      {heading ? (
+        heading
+      ) : (
+        <h2
+          className="text-white mx-auto max-w-[1150px] mb-10"
+          style={{
+            fontWeight: 500,
+            fontSize: "40px",
+            lineHeight: "100%",
+            letterSpacing: "0%",
+          }}
+        >
+          platforms we work with
+        </h2>
+      )}
 
       <div className="max-w-[1150px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {platforms.map((platform) => (
+        {platforms.map((platform, index) => (
           <div
             key={platform.name}
             className="relative rounded-2xl overflow-hidden  group"
           >
+            {/* Number top left */}
+            <div className="absolute top-[24px] left-[24px] z-20">
+              <span className="text-white/70 font-[var(--font-inter)] text-[10px] font-semibold tracking-[2px] uppercase">
+                0{index + 1}
+              </span>
+            </div>
+
             <div className="relative w-full min-h-[490px] aspect-[4/5]">
               {platform.imageSrc ? (
                 <Image
@@ -82,17 +103,19 @@ export default function PlatformsWeWorkWith() {
                   >
                     {platform.name}
                   </h3>
-                  <p
-                    className="text-neutral-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 ease-out"
-                    style={{
-                      fontWeight: 400,
-                      fontSize: "15px",
-                      lineHeight: "24.38px",
-                      letterSpacing: "0%",
-                    }}
-                  >
-                    {platform.description}
-                  </p>
+                  {platform.description && (
+                    <p
+                      className="text-neutral-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 ease-out"
+                      style={{
+                        fontWeight: 400,
+                        fontSize: "15px",
+                        lineHeight: "24.38px",
+                        letterSpacing: "0%",
+                      }}
+                    >
+                      {platform.description}
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
