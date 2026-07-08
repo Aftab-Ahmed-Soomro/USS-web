@@ -33,11 +33,6 @@ const emailVisuals = [
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
-  // {
-  //   src: "https://emmanuelcolewilliams.com/uss-assets/emailGrids/7.png",
-  //   alt: "Restaurant offer email design",
-  //   // widthClass: "lg:w-[192px]",
-  // },
   {
     src: "https://emmanuelcolewilliams.com/uss-assets/emailGrids/8.png",
     alt: "Restaurant offer email design",
@@ -96,13 +91,13 @@ export function EmailVisuals() {
 
           <StaggerItem>
             <p className="max-w-[580px] font-[var(--font-be-vietnam)] text-[14px] font-normal leading-[32px] text-[#505050] sm:text-[18px] lg:pt-[10px]">
-              A clean showcase area for email design visuals from your drive. Replace these placeholders with final assets.
+              'A showcase of high converting email campaigns designed to drive revenue through personalised customer experiences.
             </p>
           </StaggerItem>
         </Stagger>
 
         <div className="w-full overflow-hidden mt-8 lg:mt-16">
-          <div className="email-visuals-track flex items-center gap-4 sm:gap-[42px]">
+          <div className="email-visuals-track flex items-center gap-4 sm:gap-[54px]">
             {[...emailVisuals, ...emailVisuals, ...emailVisuals].map((visual, index) => (
                 <div
                   className="relative h-[460px] w-[190px] shrink-0 overflow-hidden bg-[#111] shadow-[0_16px_38px_rgba(0,0,0,0.08)] sm:h-[520px] sm:w-[210px] lg:h-[750px] lg:w-[250px]"
