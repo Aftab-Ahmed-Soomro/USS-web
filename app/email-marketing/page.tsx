@@ -34,20 +34,21 @@ const emailStats = [
 
 const relatedProjects = [
   {
-    name: "Women Who Thrive",
-    slug: "women-who-thrive",
+    name: "Agency 8",
+    slug: "agency-8",
     year: "2026",
-    copy: "Using organic social we increased Women Who Thrive membership to 10k after 6months using only Organic Social and to 22k in 18 months. ",
-    image: "/assets/womenThrive.jpg",
-    tags: ["Social Growth", "Increase Membership", "Women Network Organization"],
+    copy: "Email strategy for a luxury real estate agency, keeping buyers engaged through personalised property updates, off-plan launches and automated customer journeys.",
+    image: "/assets/agent.png",
+    tags: ["Email Marketing", "Real Estate", "Customer Journeys"],
   },
   {
-    name: "Yula Lounge",
-    slug: "yula-beach-lounge",
+    name: "SupperClub",
+    slug: "supperclub",
     year: "2026",
-    copy: "Transforming Yalseh into Yula, a modern Dubai beach club. We grew their organic social following to 20k+ in 24 months.",
-    image: "/assets/yula2.jpg",
-    tags: ["Social Growth", "F&B Industry"],
+    copy: "Built a membership focused email strategy promoting exclusive offers from 5* star hotels, restaurants and spas across the GCC and worldwide.",
+    image: "/assets/supp.jpg",
+    tags: ["Email Marketing", "Membership Growth", "Customer Retention"],
+    imageClassName: "object-cover object-[50%_20%]",
   },
 ];
 
@@ -576,7 +577,7 @@ function RelatedProjects() {
                     alt={`${project.name} marketing strategy project`}
                     fill
                     sizes="(min-width: 768px) 45vw, calc(100vw - 48px)"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    className={`${project.imageClassName || 'object-cover'} transition-transform duration-700 group-hover:scale-105`}
                   />
                 </div>
 

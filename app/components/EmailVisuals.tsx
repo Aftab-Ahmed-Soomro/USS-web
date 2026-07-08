@@ -97,7 +97,7 @@ export function EmailVisuals() {
         </Stagger>
 
         <div className="w-full overflow-hidden mt-8 lg:mt-16">
-          <div className="email-visuals-track flex items-center gap-4 sm:gap-[54px]">
+          <div className="email-visuals-track flex items-center gap-4 sm:gap-[46px]">
             {[...emailVisuals, ...emailVisuals, ...emailVisuals].map((visual, index) => (
                 <div
                   className="relative h-[460px] w-[190px] shrink-0 overflow-hidden bg-[#111] shadow-[0_16px_38px_rgba(0,0,0,0.08)] sm:h-[520px] sm:w-[210px] lg:h-[750px] lg:w-[250px]"
