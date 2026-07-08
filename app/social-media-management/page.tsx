@@ -1,4 +1,8 @@
 import Link from "next/link";
+import Stagger from "../components/Stagger";
+import StaggerItem from "../components/Staggeritem";
+import FadeLeft from "../components/FadeLeft";
+import FadeRight from "../components/FadeRight";
 import { Approach } from "../components/Approach";
 import { Brands } from "../components/Brands";
 import { Footer } from "../components/Footer";
@@ -78,30 +82,40 @@ function Hero() {
   return (
     <section className="bg-[#f7f7f5] px-6 py-[58px] text-black sm:py-[76px] lg:py-[82px]">
       <div className="mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[minmax(0,575px)_430px] lg:items-center lg:justify-between">
-        <div>
-          <h1 className="max-w-[650px] font-[var(--font-be-vietnam)] text-[38px] font-bold lowercase leading-[1.03] tracking-[-3.2px] sm:text-[70px]">
-            social media that
-            <br />
-            <span className="font-[var(--font-cormorant)] text-[1.08em] sm:text-[80px] font-normal timesFontFamily italic tracking-[-3.2px]">
-              delivers real {"  "}
-            </span> {" "}
-            {" "} results
-          </h1>
-          <p className="mt-[24px] max-w-[580px] font-[var(--font-inter)] text-[14px] leading-[1.75] text-black/72 sm:text-[20px]">
-            Your social media is often the first impression of your business. We help brands stay active, consistent, and memorable across Instagram, LinkedIn, TikTok, YouTube, and more.
-          </p>
-          <p className="mt-[32px] max-w-[460px] font-[var(--font-inter)] text-[12px] leading-[1.7] tracking-[2.64px] text-[#06060680] uppercase">
-            Trusted by brands across the world
-          </p>
-          <Link
-            className="mt-[25px] inline-flex h-[38px] min-w-[176px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
-            href="/contact"
-          >
-            Book a Consultation
-          </Link>
-        </div>
+        <Stagger staggerDelay={0.15}>
+          <StaggerItem>
+            <h1 className="max-w-[700px] font-[var(--font-be-vietnam)] text-[38px] font-bold lowercase leading-[1.03] tracking-[-3.2px] sm:text-[70px]">
+              social media that
+              <br />
+              <span className="font-[var(--font-cormorant)] text-[1.08em] sm:text-[80px] font-normal timesFontFamily italic tracking-[-3.2px]">
+                delivers real {"  "}
+              </span> {" "}
+              {" "} results
+            </h1>
+          </StaggerItem>
+          <StaggerItem>
+            <p className="mt-[24px] max-w-[580px] font-[var(--font-inter)] text-[14px] leading-[1.75] text-black/72 sm:text-[20px]">
+              Your social media is often the first impression of your business. We help brands stay active, consistent, and memorable across Instagram, LinkedIn, TikTok, YouTube, and more.
+            </p>
+          </StaggerItem>
+          <StaggerItem>
+            <p className="mt-[32px] max-w-[460px] font-[var(--font-inter)] text-[12px] leading-[1.7] tracking-[2.64px] text-[#06060680] uppercase">
+              Trusted by brands across the world
+            </p>
+          </StaggerItem>
+          <StaggerItem>
+            <Link
+              className="mt-[25px] inline-flex h-[38px] min-w-[176px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
+              href="/contact"
+            >
+              Book a Consultation
+            </Link>
+          </StaggerItem>
+        </Stagger>
 
-        <LightConsultationForm />
+        <FadeRight delay={0.4}>
+          <LightConsultationForm />
+        </FadeRight>
       </div>
     </section>
   );
@@ -163,89 +177,96 @@ function StrategyProblem() {
 function SocialServices() {
   return (
     <section className="bg-[#080808] px-6 py-[70px] text-white lg:py-[100px]">
-      <div className="mx-auto max-w-[1150px]">
-        {/* Header */}
-        <p className="font-[var(--font-inter)] text-[10px] font-bold uppercase tracking-[4px] text-[#ff5500]">
-          SERVICES
-        </p>
-        <h2 className="mt-[26px] mb-[60px] font-[var(--font-be-vietnam)] text-[36px] font-medium lowercase leading-none tracking-[-1.4px] sm:text-[50px]">
-          our social media{" "}
-          <span className="font-[var(--font-cormorant)] text-[1.12em] font-extralight timesFontFamily italic tracking-[-0.04em]">
-            services
-          </span>
-        </h2>
-        
-        {/* Accordion List */}
-        <div className="flex flex-col">
-          {socialServicesData.map((service, index) => (
-            <article
-              key={service.title}
-              className="group border-b border-white/20 py-8 first:border-t flex cursor-pointer transition-colors duration-300"
-            >
-              {/* Number */}
-              <div 
-                className="w-[100px] sm:w-[150px] shrink-0 text-white"
-                style={{
-                  fontWeight: 500,
-                  fontSize: '32px',
-                  lineHeight: '20px',
-                  letterSpacing: '0%'
-                }}
-              >
-                {String(index + 1).padStart(2, "0")}
-              </div>
-
-              {/* Content */}
-              <div className="flex-1 flex flex-col">
-                <div className="flex justify-between items-start">
-                  
-                  {/* Title */}
-                  <h3 
-                    className="text-white"
+      <Stagger staggerDelay={0.15}>
+        <div className="mx-auto max-w-[1150px]">
+          {/* Header */}
+          <StaggerItem>
+            <p className="font-[var(--font-inter)] text-[10px] font-bold uppercase tracking-[4px] text-[#ff5500]">
+              SERVICES
+            </p>
+          </StaggerItem>
+          <StaggerItem>
+            <h2 className="mt-[26px] mb-[60px] font-[var(--font-be-vietnam)] text-[36px] font-medium lowercase leading-none tracking-[-1.4px] sm:text-[50px]">
+              our social media{" "}
+              <span className="font-[var(--font-cormorant)] text-[1.12em] font-extralight timesFontFamily italic tracking-[-0.04em]">
+                services
+              </span>
+            </h2>
+          </StaggerItem>
+          
+          {/* Accordion List */}
+          <div className="flex flex-col">
+            {socialServicesData.map((service, index) => (
+              <StaggerItem key={service.title}>
+                <article
+                  className="group border-b border-white/20 py-8 first:border-t flex cursor-pointer transition-colors duration-300"
+                >
+                  {/* Number */}
+                  <div 
+                    className="w-[100px] sm:w-[150px] shrink-0 text-white"
                     style={{
-                      fontWeight: 400,
-                      fontSize: '36px',
-                      lineHeight: '40px',
-                      letterSpacing: '-0.72px'
+                      fontWeight: 500,
+                      fontSize: '32px',
+                      lineHeight: '20px',
+                      letterSpacing: '0%'
                     }}
                   >
-                    {service.title}
-                  </h3>
-                  
-                  {/* Icon */}
-                  <div className="relative w-8 h-8 flex items-center justify-center ml-4 shrink-0 mt-1">
-                    {/* + Icon */}
-                    <span className="absolute text-white text-2xl group-hover:opacity-0 transition-opacity duration-300">
-                      +
-                    </span>
-                    {/* Orange X */}
-                    <div className="absolute w-8 h-8 rounded-full bg-[#ff5500] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <span className="text-black text-lg font-medium leading-none pb-[2px]">×</span>
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+
+                  {/* Content */}
+                  <div className="flex-1 flex flex-col">
+                    <div className="flex justify-between items-start">
+                      
+                      {/* Title */}
+                      <h3 
+                        className="text-white"
+                        style={{
+                          fontWeight: 400,
+                          fontSize: '36px',
+                          lineHeight: '40px',
+                          letterSpacing: '-0.72px'
+                        }}
+                      >
+                        {service.title}
+                      </h3>
+                      
+                      {/* Icon */}
+                      <div className="relative w-8 h-8 flex items-center justify-center ml-4 shrink-0 mt-1">
+                        {/* + Icon */}
+                        <span className="absolute text-white text-2xl group-hover:opacity-0 transition-opacity duration-300">
+                          +
+                        </span>
+                        {/* Orange X */}
+                        <div className="absolute w-8 h-8 rounded-full bg-[#ff5500] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          <span className="text-black text-lg font-medium leading-none pb-[2px]">×</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Description animation (Grid trick) */}
+                    <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
+                      <div className="overflow-hidden">
+                        <p 
+                          className="text-white mt-4 max-w-[550px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75"
+                          style={{
+                            fontWeight: 400,
+                            fontSize: '20px',
+                            lineHeight: '24px',
+                            letterSpacing: '0%'
+                          }}
+                        >
+                          {service.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-                
-                {/* Description animation (Grid trick) */}
-                <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
-                  <div className="overflow-hidden">
-                    <p 
-                      className="text-white mt-4 max-w-[550px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75"
-                      style={{
-                        fontWeight: 400,
-                        fontSize: '20px',
-                        lineHeight: '24px',
-                        letterSpacing: '0%'
-                      }}
-                    >
-                      {service.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </article>
-          ))}
+                </article>
+              </StaggerItem>
+            ))}
+          </div>
         </div>
-      </div>
+      </Stagger>
     </section>
   );
 }
@@ -275,73 +296,81 @@ const CARDS_DATA = [
 function RevenueMethod() {
   return (
     <div className="w-full bg-black text-white py-20 px-6 min-h-screen flex flex-col justify-center items-center font-sans">
-      <div className="max-w-[1150px] w-full">
-        
-        {/* Header Section */}
-        <p className="font-[var(--font-inter)] text-[10px] font-bold uppercase tracking-[4px] text-[#ff5500] mb-4">
-          PROCESS
-        </p>
-        {/* Heading */}
-        <h2 className="text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-16">
-          organic social{" "}
-          <span
-            className="italic text-[#ff5500] font-normal text-[1.1em] tracking-[-3%] sm:text-[72px] sm:leading-[70px]"
-            style={{ fontFamily: "'Times New Roman', Times, serif" }}
-          >
-            step by step process
-          </span>
-        </h2>
-
-        {/* Grid Container */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 justify-center min-h-[500px] lg:min-h-[600px]">
-          {CARDS_DATA.map((card, index) => (
-            <div
-              key={card.id}
-              style={{
-                backgroundImage: `url(${card.bgImage})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-              }}
-              className={`group relative rounded-[28px] overflow-hidden p-5 flex flex-col justify-between cursor-pointer transition-all duration-500 ease-out ${
-                index === 0 ? 'md:col-span-2' : 'md:col-span-1'
-              }`}
-            >
-              {/* Card Number */}
-              <div 
-                className="text-[9.82px] font-medium leading-[14.73px] tracking-[2.95px] text-white opacity-80 align-middle"
-                style={{ fontStyle: 'Medium' }}
+      <Stagger staggerDelay={0.15}>
+        <div className="max-w-[1150px] w-full">
+          
+          {/* Header Section */}
+          <StaggerItem>
+            <p className="font-[var(--font-inter)] text-[10px] font-bold uppercase tracking-[4px] text-[#ff5500] mb-4">
+              PROCESS
+            </p>
+          </StaggerItem>
+          {/* Heading */}
+          <StaggerItem>
+            <h2 className="text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-16">
+              organic social{" "}
+              <span
+                className="italic text-[#ff5500] font-normal text-[1.1em] tracking-[-3%] sm:text-[72px] sm:leading-[70px]"
+                style={{ fontFamily: "'Times New Roman', Times, serif" }}
               >
-                {card.id}
-              </div>
+                step by step process
+              </span>
+            </h2>
+          </StaggerItem>
 
-              {/* Bottom Content Group (Animates Up on Hover) */}
-              <div className="mt-auto flex flex-col">
-                
-                {/* Title */}
-                <h3 
-                  className="text-[22.64px] font-normal leading-[26.78px] tracking-[0%] text-white align-middle transition-all duration-500"
-                  style={{ fontStyle: 'Regular' }}
+          {/* Grid Container */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 justify-center min-h-[500px] lg:min-h-[600px]">
+            {CARDS_DATA.map((card, index) => (
+              <StaggerItem
+                key={card.id}
+                className={index === 0 ? 'md:col-span-2' : 'md:col-span-1'}
+              >
+                <div
+                  style={{
+                    backgroundImage: `url(${card.bgImage})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                  }}
+                  className="group relative rounded-[28px] overflow-hidden p-5 flex flex-col justify-between cursor-pointer transition-all duration-500 ease-out h-full min-h-[400px]"
                 >
-                  {card.title}
-                </h3>
+                  {/* Card Number */}
+                  <div 
+                    className="text-[9.82px] font-medium leading-[14.73px] tracking-[2.95px] text-white opacity-80 align-middle"
+                    style={{ fontStyle: 'Medium' }}
+                  >
+                    {card.id}
+                  </div>
 
-                {/* Description (Grid animation for height + fade in) */}
-                <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
-                  <div className="overflow-hidden">
-                    <p 
-                      className="text-[15.5px] font-normal leading-[1.8] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 ease-out mt-3"
+                  {/* Bottom Content Group (Animates Up on Hover) */}
+                  <div className="mt-auto flex flex-col">
+                    
+                    {/* Title */}
+                    <h3 
+                      className="text-[22.64px] font-normal leading-[26.78px] tracking-[0%] text-white align-middle transition-all duration-500"
                       style={{ fontStyle: 'Regular' }}
                     >
-                      {card.description}
-                    </p>
+                      {card.title}
+                    </h3>
+
+                    {/* Description (Grid animation for height + fade in) */}
+                    <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
+                      <div className="overflow-hidden">
+                        <p 
+                          className="text-[15.5px] font-normal leading-[1.8] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 ease-out mt-3"
+                          style={{ fontStyle: 'Regular' }}
+                        >
+                          {card.description}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          ))}
-        </div>
+              </StaggerItem>
+            ))}
+          </div>
 
-      </div>
+        </div>
+      </Stagger>
     </div>
   );
 }
@@ -349,83 +378,90 @@ function RevenueMethod() {
 function RelatedProjects() {
   return (
     <section className="bg-[#080808] px-6 py-[56px] text-white">
-      <div className="mx-auto max-w-[1150px]">
-        {/* Header */}
-        <div className="flex items-center justify-between gap-6">
-          <h2 className="font-[var(--font-be-vietnam)] text-[28px] sm:text-[56px] font-medium lowercase leading-none tracking-[-0.96px]">
-            related{" "}
-            <span className="font-[var(--font-cormorant)] text-[1.18em] sm:text-[72px] font-normal timesFontFamily italic tracking-[-0.96px]">
-              projects
-            </span>
-          </h2>
+      <Stagger staggerDelay={0.15}>
+        <div className="mx-auto max-w-[1150px]">
+          {/* Header */}
+          <StaggerItem>
+            <div className="flex items-center justify-between gap-6">
+              <h2 className="font-[var(--font-be-vietnam)] text-[28px] sm:text-[56px] font-medium lowercase leading-none tracking-[-0.96px]">
+                related{" "}
+                <span className="font-[var(--font-cormorant)] text-[1.18em] sm:text-[72px] font-normal timesFontFamily italic tracking-[-0.96px]">
+                  projects
+                </span>
+              </h2>
 
-          <Link
-            href="/projects"
-            className="hidden sm:inline-flex shrink-0 items-center gap-2 rounded-full border border-white px-5 py-3 font-[var(--font-inter)] text-[12px] text-white sm:text-[15px]"
-          >
-            View all projects
-            <img src="/assets/rightArrowMed.png" className="w-4 h-4" alt="" />
-          </Link>
+              <Link
+                href="/projects"
+                className="hidden sm:inline-flex shrink-0 items-center gap-2 rounded-full border border-white px-5 py-3 font-[var(--font-inter)] text-[12px] text-white sm:text-[15px]"
+              >
+                View all projects
+                <img src="/assets/rightArrowMed.png" className="w-4 h-4" alt="" />
+              </Link>
+            </div>
+          </StaggerItem>
+
+          {/* Cards */}
+          <div className="mt-[40px] grid gap-[24px] md:grid-cols-2">
+            {relatedProjects.map((project) => (
+              <StaggerItem key={project.name}>
+                <article
+                  className="rounded-[20px] border border-white p-[14px]"
+                >
+                  <div className="relative aspect-[420/260] w-full overflow-hidden max-w-[534px] rounded-[12px] bg-[#111]">
+                    <Image
+                      src={project.image}
+                      alt={`${project.name} marketing strategy project`}
+                      fill
+                      sizes="(min-width: 768px) 45vw, calc(100vw - 48px)"
+                      className="object-cover"
+                    />
+                  </div>
+
+                  <div className="px-[10px] pt-[24px] pb-[6px]">
+                    {/* Title + year */}
+                    <div className="flex items-baseline justify-between gap-3">
+                      <h3 className="font-[var(--font-be-vietnam)] text-[22px] sm:text-[36px] font-normal leading-none tracking-[-0.72px]">
+                        {project.name}
+                      </h3>
+                      <span className="shrink-0 font-[var(--font-inter)] text-[14px] text-white">
+                        {project.year}
+                      </span>
+                    </div>
+
+                    {/* Copy */}
+                    <p className="mt-[14px] max-w-[420px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[28px] text-white">
+                      {project.copy}
+                    </p>
+
+                    {/* Tags */}
+                    <div className="mt-[20px] flex flex-wrap gap-[10px]">
+                      {(project.tags ?? []).map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded-full border border-white px-[14px] py-[7px] font-[var(--font-inter)] text-[12px] text-white/90"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </article>
+              </StaggerItem>
+            ))}
+
+            {/* Mobile-only view all link, shown below cards on small screens */}
+            <StaggerItem className="sm:hidden">
+              <Link
+                href="/projects"
+                className="inline-flex w-fit items-center gap-2 rounded-full border border-white/30 px-5 py-3 font-[var(--font-inter)] text-[12px] text-white/85 transition-colors hover:border-white/60 hover:text-white"
+              >
+                View all projects
+                <span aria-hidden="true">→</span>
+              </Link>
+            </StaggerItem>
+          </div>
         </div>
-
-        {/* Cards */}
-        <div className="mt-[40px] grid gap-[24px] md:grid-cols-2">
-          {relatedProjects.map((project) => (
-            <article
-              key={project.name}
-              className="rounded-[20px] border border-white p-[14px]"
-            >
-              <div className="relative aspect-[420/260] w-full overflow-hidden max-w-[534px] rounded-[12px] bg-[#111]">
-                <Image
-                  src={project.image}
-                  alt={`${project.name} marketing strategy project`}
-                  fill
-                  sizes="(min-width: 768px) 45vw, calc(100vw - 48px)"
-                  className="object-cover"
-                />
-              </div>
-
-              <div className="px-[10px] pt-[24px] pb-[6px]">
-                {/* Title + year */}
-                <div className="flex items-baseline justify-between gap-3">
-                  <h3 className="font-[var(--font-be-vietnam)] text-[22px] sm:text-[36px] font-normal leading-none tracking-[-0.72px]">
-                    {project.name}
-                  </h3>
-                  <span className="shrink-0 font-[var(--font-inter)] text-[14px] text-white">
-                    {project.year}
-                  </span>
-                </div>
-
-                {/* Copy */}
-                <p className="mt-[14px] max-w-[420px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[28px] text-white">
-                  {project.copy}
-                </p>
-
-                {/* Tags */}
-                <div className="mt-[20px] flex flex-wrap gap-[10px]">
-                  {(project.tags ?? []).map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-full border border-white px-[14px] py-[7px] font-[var(--font-inter)] text-[12px] text-white/90"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </article>
-          ))}
-
-          {/* Mobile-only view all link, shown below cards on small screens */}
-          <Link
-            href="/projects"
-            className="sm:hidden inline-flex w-fit items-center gap-2 rounded-full border border-white/30 px-5 py-3 font-[var(--font-inter)] text-[12px] text-white/85 transition-colors hover:border-white/60 hover:text-white"
-          >
-            View all projects
-            <span aria-hidden="true">→</span>
-          </Link>
-        </div>
-      </div>
+      </Stagger>
     </section>
   );
 }
@@ -433,30 +469,35 @@ function RelatedProjects() {
 function FinalCta() {
   return (
     <section className="bg-black px-6 pt-[70px] text-white pb-30">
-      <div className="mx-auto max-w-[1150px] text-center">
-        <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
-           LET&apos;S SCALE
-        </p>
-        <h2 className="mt-20 font-[var(--font-be-vietnam)] text-[36px] font-medium leading-[1.08] tracking-[-1.5px] sm:text-[55px]">
-          turn your database
-          <br />
-          into{" "}
-          <span className="font-[var(--font-cormorant)] text-[1.12em] font-extralight timesFontFamily italic text-[#ff5500]">
-            repeat revenue
-          </span>
-        </h2>
-        <div className="mt-20 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Link
-            className="inline-flex h-[42px] min-w-[190px] items-center justify-center rounded-full bg-[#ff5500] px-8 font-[var(--font-be-vietnam)] text-[12px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
-            href="/contact"
-          >
-            Book a Consultation
-          </Link>
-          {/* <Link className="font-[var(--font-be-vietnam)] text-[13px] font-medium text-white/80 transition hover:text-white border-white border rounded-full px-6 h-[48px] inline-flex items-center justify-center" href="#services">
-            Book a Strategy Call
-          </Link> */}
+      <Stagger staggerDelay={0.15}>
+        <div className="mx-auto max-w-[1150px] text-center">
+          <StaggerItem>
+            <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
+               LET&apos;S SCALE
+            </p>
+          </StaggerItem>
+          <StaggerItem>
+            <h2 className="mt-20 font-[var(--font-be-vietnam)] text-[36px] font-medium leading-[1.08] tracking-[-1.5px] sm:text-[55px]">
+              turn your database
+              <br />
+              into{" "}
+              <span className="font-[var(--font-cormorant)] text-[1.12em] font-extralight timesFontFamily italic text-[#ff5500]">
+                repeat revenue
+              </span>
+            </h2>
+          </StaggerItem>
+          <StaggerItem>
+            <div className="mt-20 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <Link
+                className="inline-flex h-[42px] min-w-[190px] items-center justify-center rounded-full bg-[#ff5500] px-8 font-[var(--font-be-vietnam)] text-[12px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
+                href="/contact"
+              >
+                Book a Consultation
+              </Link>
+            </div>
+          </StaggerItem>
         </div>
-      </div>
+      </Stagger>
     </section>
   );
 }
@@ -468,7 +509,7 @@ export default function SocialMediaManagementPage() {
       <Hero />
       <Metrics />
       <PlatformsWeWorkWith />
-      <Brands />
+      {/* <Brands /> */}
       <WhyEmailFails
         tagline="THE PROBLEM"
         heading={

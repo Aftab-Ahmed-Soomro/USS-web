@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Stagger from "./Stagger";
+import StaggerItem from "./Staggeritem";
 
 interface GridImage {
   src: string;
@@ -32,61 +34,73 @@ function ImageColumn({ images }: { images: GridImage }) {
 export default function OurOrganicSocialMediaApproach() {
   return (
     <section className="bg-white py-20 px-6">
-      <div className="max-w-6xl mx-auto text-center mb-12">
-        <p
-          className="uppercase mb-4"
-          style={{
-            fontWeight: 500,
-            fontSize: "14px",
-            lineHeight: "16px",
-            letterSpacing: "2.64px",
-            color: "#ff5500",
-          }}
-        >
-          Our Approach
-        </p>
+      <Stagger staggerDelay={0.15}>
+        <div className="max-w-6xl mx-auto text-center mb-12">
+          <StaggerItem>
+            <p
+              className="uppercase mb-4"
+              style={{
+                fontWeight: 500,
+                fontSize: "14px",
+                lineHeight: "16px",
+                letterSpacing: "-1.2px",
+                color: "#ff5500",
+              }}
+            >
+              Our Approach
+            </p>
+          </StaggerItem>
 
-        <h2 className="text-black">
-          <span
-            style={{
-              fontWeight: 500,
-              fontSize: "56px",
-              lineHeight: "70px",
-              letterSpacing: "-1.2px",
-            }}
-          >
-            our{" "}
-          </span>
-          <span
-            style={{
-              fontWeight: 400,
-              fontStyle: "italic",
-              fontSize: "72px",
-              lineHeight: "70px",
-              letterSpacing: "-1.2px",
-              color: "#FF5500"
-            }}
-          >
-            organic{" "}
-          </span>
-          <span
-            style={{
-              fontWeight: 500,
-              fontSize: "56px",
-              lineHeight: "70px",
-              letterSpacing: "-1.2px",
-            }}
-          >
-            social media approach
-          </span>
-        </h2>
-      </div>
+          <StaggerItem>
+            <h2 className="text-black">
+              <span
+                style={{
+                  fontWeight: 500,
+                  fontSize: "56px",
+                  lineHeight: "70px",
+                  letterSpacing: "-1.2px",
+                }}
+              >
+                our{" "}
+              </span>
+              <span className="timesFontFamily"
+                style={{
+                  fontWeight: 400,
+                  fontStyle: "italic",
+                  fontSize: "72px",
+                  lineHeight: "70px",
+                  letterSpacing: "-1.2px",
+                  color: "#FF5500"
+                }}
+              >
+                organic{" "}
+              </span>
+              <span
+                style={{
+                  fontWeight: 500,
+                  fontSize: "56px",
+                  lineHeight: "70px",
+                  letterSpacing: "-1.2px",
+                }}
+              >
+                social grids
+              </span>
+            </h2>
+          </StaggerItem>
+        </div>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
-        <ImageColumn images={column1} />
-        <ImageColumn images={column2} />
-        <ImageColumn images={column3} />
-      </div>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+          <StaggerItem>
+            <ImageColumn images={column1} />
+          </StaggerItem>
+          <StaggerItem>
+            <ImageColumn images={column2} />
+          </StaggerItem>
+          <StaggerItem>
+            <ImageColumn images={column3} />
+          </StaggerItem>
+        </div>
+      </Stagger>
     </section>
   );
 }
