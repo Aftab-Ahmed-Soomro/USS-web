@@ -35,6 +35,7 @@ const emailStats = [
 const relatedProjects = [
   {
     name: "Women Who Thrive",
+    slug: "women-who-thrive",
     year: "2026",
     copy: "Using organic social we increased Women Who Thrive membership to 10k after 6months using only Organic Social and to 22k in 18 months. ",
     image: "/assets/womenThrive.jpg",
@@ -42,6 +43,7 @@ const relatedProjects = [
   },
   {
     name: "Yula Lounge",
+    slug: "yula-beach-lounge",
     year: "2026",
     copy: "Transforming Yalseh into Yula — a modern Dubai beach club. Using Organic Social we increased both awareness and social following to 20k+ in 24months. ",
     image: "/assets/yula2.jpg",
@@ -530,49 +532,51 @@ function RelatedProjects() {
         {/* Cards */}
         <div className="mt-[40px] grid gap-[24px] md:grid-cols-2">
           {relatedProjects.map((project) => (
-            <article
-              key={project.name}
-              className="rounded-[20px] border border-white p-[14px]"
-            >
-              <div className="relative aspect-[420/260] w-full overflow-hidden max-w-[534px] rounded-[12px] bg-[#111]">
-                <Image
-                  src={project.image}
-                  alt={`${project.name} marketing strategy project`}
-                  fill
-                  sizes="(min-width: 768px) 45vw, calc(100vw - 48px)"
-                  className="object-cover"
-                />
-              </div>
-
-              <div className="px-[10px] pt-[24px] pb-[6px]">
-                {/* Title + year */}
-                <div className="flex items-baseline justify-between gap-3">
-                  <h3 className="font-[var(--font-be-vietnam)] text-[22px] sm:text-[36px] font-normal leading-none tracking-[-0.72px]">
-                    {project.name}
-                  </h3>
-                  <span className="shrink-0 font-[var(--font-inter)] text-[14px] text-white">
-                    {project.year}
-                  </span>
+            <StaggerItem key={project.name}>
+              <Link
+                href={`/projects/${project.slug}`}
+                className="block rounded-[20px] border border-white p-[14px] transition-colors duration-300 hover:border-[#ff5500] group"
+              >
+                <div className="relative aspect-[420/260] w-full overflow-hidden max-w-[534px] rounded-[12px] bg-[#111]">
+                  <Image
+                    src={project.image}
+                    alt={`${project.name} marketing strategy project`}
+                    fill
+                    sizes="(min-width: 768px) 45vw, calc(100vw - 48px)"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
                 </div>
 
-                {/* Copy */}
-                <p className="mt-[14px] max-w-[480px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[28px] text-white">
-                  {project.copy}
-                </p>
-
-                {/* Tags */}
-                <div className="mt-[20px] flex flex-wrap gap-[10px]">
-                  {(project.tags ?? []).map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-full border border-white px-[14px] py-[7px] font-[var(--font-inter)] text-[12px] text-white/90"
-                    >
-                      {tag}
+                <div className="px-[10px] pt-[24px] pb-[6px]">
+                  {/* Title + year */}
+                  <div className="flex items-baseline justify-between gap-3">
+                    <h3 className="font-[var(--font-be-vietnam)] text-[22px] sm:text-[36px] font-normal leading-none tracking-[-0.72px] group-hover:text-[#ff5500] transition-colors duration-300">
+                      {project.name}
+                    </h3>
+                    <span className="shrink-0 font-[var(--font-inter)] text-[14px] text-white">
+                      {project.year}
                     </span>
-                  ))}
+                  </div>
+
+                  {/* Copy */}
+                  <p className="mt-[14px] max-w-[420px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[28px] text-white">
+                    {project.copy}
+                  </p>
+
+                  {/* Tags */}
+                  <div className="mt-[20px] flex flex-wrap gap-[10px]">
+                    {(project.tags ?? []).map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full border border-white px-[14px] py-[7px] font-[var(--font-inter)] text-[12px] text-white/90 group-hover:border-[#ff5500]/50 transition-colors duration-300"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </article>
+              </Link>
+            </StaggerItem>
           ))}
 
           {/* Mobile-only view all link, shown below cards on small screens */}
