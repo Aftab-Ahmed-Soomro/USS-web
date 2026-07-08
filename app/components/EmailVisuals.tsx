@@ -4,24 +4,79 @@ import StaggerItem from "./Staggeritem";
 
 const emailVisuals = [
   {
-    src: "/assets/email_visuals/1st.png",
+    src: "https://emmanuelcolewilliams.com/uss-assets/emailGrids/1.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "/assets/email_visuals/2nd.png",
-    alt: "Flowork office tower email design",
-    // widthClass: "lg:w-[190px]",
+    src: "https://emmanuelcolewilliams.com/uss-assets/emailGrids/2.png",
+    alt: "Restaurant offer email design",
+    // widthClass: "lg:w-[192px]",
   },
   {
-    src: "/assets/email_visuals/3rd.png",
-    alt: "Luxury event curator email design",
-      // widthClass: "lg:w-[190px]",
+    src: "https://emmanuelcolewilliams.com/uss-assets/emailGrids/3.png",
+    alt: "Restaurant offer email design",
+    // widthClass: "lg:w-[192px]",
   },
   {
-    src: "/assets/email_visuals/4th.png",
-    alt: "Agency 8 DAMAC Islands email design",
-    // widthClass: "lg:w-[200px]",
+    src: "https://emmanuelcolewilliams.com/uss-assets/emailGrids/4.png",
+    alt: "Restaurant offer email design",
+    // widthClass: "lg:w-[192px]",
+  },
+  {
+    src: "https://emmanuelcolewilliams.com/uss-assets/emailGrids/5.png",
+    alt: "Restaurant offer email design",
+    // widthClass: "lg:w-[192px]",
+  },
+  {
+    src: "https://emmanuelcolewilliams.com/uss-assets/emailGrids/6.png",
+    alt: "Restaurant offer email design",
+    // widthClass: "lg:w-[192px]",
+  },
+  // {
+  //   src: "https://emmanuelcolewilliams.com/uss-assets/emailGrids/7.png",
+  //   alt: "Restaurant offer email design",
+  //   // widthClass: "lg:w-[192px]",
+  // },
+  {
+    src: "https://emmanuelcolewilliams.com/uss-assets/emailGrids/8.png",
+    alt: "Restaurant offer email design",
+    // widthClass: "lg:w-[192px]",
+  },
+  {
+    src: "https://emmanuelcolewilliams.com/uss-assets/emailGrids/9.png",
+    alt: "Restaurant offer email design",
+    // widthClass: "lg:w-[192px]",
+  },
+  {
+    src: "https://emmanuelcolewilliams.com/uss-assets/emailGrids/11.png",
+    alt: "Restaurant offer email design",
+    // widthClass: "lg:w-[192px]",
+  },
+  {
+    src: "https://emmanuelcolewilliams.com/uss-assets/emailGrids/12.png",
+    alt: "Restaurant offer email design",
+    // widthClass: "lg:w-[192px]",
+  },
+  {
+    src: "https://emmanuelcolewilliams.com/uss-assets/emailGrids/13.png",
+    alt: "Restaurant offer email design",
+    // widthClass: "lg:w-[192px]",
+  },
+  {
+    src: "https://emmanuelcolewilliams.com/uss-assets/emailGrids/14.png",
+    alt: "Restaurant offer email design",
+    // widthClass: "lg:w-[192px]",
+  },
+  {
+    src: "https://emmanuelcolewilliams.com/uss-assets/emailGrids/15.png",
+    alt: "Restaurant offer email design",
+    // widthClass: "lg:w-[192px]",
+  },
+  {
+    src: "https://emmanuelcolewilliams.com/uss-assets/emailGrids/16.png",
+    alt: "Restaurant offer email design",
+    // widthClass: "lg:w-[192px]",
   },
 ];
 
@@ -57,6 +112,7 @@ export function EmailVisuals() {
                     src={visual.src}
                     alt={visual.alt}
                     fill
+                    unoptimized
                     sizes="(min-width: 1024px) 250px, (min-width: 640px) 210px, 190px"
                     className="object-cover object-top hover:scale-105 transition-transform duration-700 ease-out"
                   />

@@ -607,8 +607,6 @@ export default function EmailMarketingPage() {
       <EmailStrategy />
       <EmailVisuals />
       <RevenueMethod />
-      {/* <Services /> */}
-      {/* <WorkWithUs /> */}
       <RelatedProjects />
       <Testimonials />
       <GoodCompanyMap />
