@@ -38,7 +38,7 @@ const relatedProjects = [
     name: "Yula Lounge",
     slug: "yula-beach-lounge",
     year: "2026",
-    copy: "Transforming Yalseh into Yula — a modern Dubai beach club. Using Organic Social we increased both awareness and social following to 20k+ in 24months. ",
+    copy: "Transforming Yalseh into Yula, a modern Dubai beach club. We grew their organic social following to 20k+ in 24 months.",
     image: "/assets/yula2.jpg",
     tags: ["Social Growth", "F&B Industry"],
   },

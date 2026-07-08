@@ -166,7 +166,7 @@ const relatedProjects = [
   {
     name: "Yula Lounge",
     year: "2024",
-    copy: "Transforming Yalseh into Yula – a modern Dubai beach club.",
+    copy: "Transforming Yalseh into Yula, a modern Dubai beach club.",
     image: "/assets/yula2.jpg",
     tags: ["Web design & development", "Hospitality"],
   },

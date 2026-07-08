@@ -45,7 +45,7 @@ const relatedProjects = [
     name: "Yula Lounge",
     slug: "yula-beach-lounge",
     year: "2026",
-    copy: "Transforming Yalseh into Yula — a modern Dubai beach club. Using Organic Social we increased both awareness and social following to 20k+ in 24months. ",
+    copy: "Transforming Yalseh into Yula, a modern Dubai beach club. We grew their organic social following to 20k+ in 24 months.",
     image: "/assets/yula2.jpg",
     tags: ["Social Growth", "F&B Industry"],
   },
@@ -306,7 +306,7 @@ function EmailStrategy() {
         </StaggerItem>
 
         {/* Steps */}
-        <div className="mt-20 grid grid-cols-1 gap-y-16 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-20 grid grid-cols-1 gap-x-6 gap-y-16 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, i) => (
             <StaggerItem key={step.title} className="relative">
               {/* Title */}
@@ -317,6 +317,7 @@ function EmailStrategy() {
                   fontSize: "20px",
                   lineHeight: "32px",
                   letterSpacing: "-0.6px",
+                  minHeight: "64px",
                 }}
               >
                 {step.title}
@@ -387,7 +388,7 @@ const CARDS_DATA = [
   {
     id: '03',
     title: 'Email Design',
-    description: 'Beautiful, responsive designs tailored to your brand identity that captivate your audience across all devices.',
+    description: 'Beautiful, responsive designs tailored to your brand identity. We craft visually stunning, conversion-focused emails that captivate your audience.',
     bgImage: '/assets/method3.png', // Replace with your image src
   },
   {
@@ -408,12 +409,12 @@ function RevenueMethod() {
         <StaggerItem>
           <h2 className="lowercase text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-16">
             method to convert email database to <br />
-            high{" "}
+            
             <span
               className="italic text-[#ff5500] font-normal text-[1.1em] tracking-[-3%] sm:text-[72px] sm:leading-[70px]"
               style={{ fontFamily: "'Times New Roman', Times, serif" }}
             >
-              performing revenue
+              high performing revenue
             </span>
           </h2>
         </StaggerItem>
@@ -599,7 +600,7 @@ export default function EmailMarketingPage() {
       <Header />
       <Hero />
       <Numbers stats={emailStats} />
-      <EmailMarketingQuote first={"Email Marketing should contribute to"} second={"35%"} third={"of your business revenue with the right strategy &amp; execution"} />
+      <EmailMarketingQuote first={"email marketing should contribute to"} second={"35%"} third={"of your business revenue with the right strategy and execution"} />
       <WhyEmailFails />
       <EmailOverview />
       <Brands />

@@ -34,7 +34,7 @@ const relatedProjects = [
   {
     name: "Flowork",
     year: "2024",
-    copy: "Transforming Yalseh into Yula – a modern Dubai beach club.",
+    copy: "Transforming Yalseh into Yula, a modern Dubai beach club.",
     image: "/assets/flow.jpg",
     tags: ["Web design & development", "Hospitality"],
   },
@@ -96,7 +96,7 @@ const projects = [
   {
     name: "Yula Lounge",
     year: "2024",
-    copy: "Transforming Yalseh into Yula – a modern Dubai beach club.",
+    copy: "Transforming Yalseh into Yula, a modern Dubai beach club.",
     image: "/assets/company/yula-card.jpg",
     tags: ["Web design & development", "Hospitality"],
   },

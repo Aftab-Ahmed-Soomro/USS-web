@@ -25,7 +25,7 @@ const brandPoints: Point[] = [
     {
         number: "04",
         title: "No Clear Performance Tracking",
-        description: "Little reporting or optimization means opportunities are missed.",
+        description: "Little reporting or optimisation means opportunities are missed.",
     },
 ];
 
@@ -33,17 +33,17 @@ const ussPoints: Point[] = [
     {
         number: "01",
         title: "Always-On Email Strategy",
-        description: "We create an email calendar that keeps your brand consistently in front of customers.",
+        description: "We create a strategic email calendar that drives consistent engagement.",
     },
     {
         number: "02",
         title: "Personalized Customer Experiences",
-        description: "Campaigns are tailored to different audiences using segmentation and customer behavior.",
+        description: "Every customer receives content relevant to their interests.",
     },
     {
         number: "03",
         title: "Automated Customer Journeys",
-        description: "Welcome flows, abandoned carts, post-purchase emails and retention campaigns work in the background.",
+        description: "Automated flows nurture leads and recover lost revenue.",
     },
     {
         number: "04",
