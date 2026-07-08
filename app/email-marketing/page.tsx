@@ -12,6 +12,10 @@ import { ConsultationForm } from "../components/ConsultationForm";
 import { GoodCompanyMap } from "../components/GoodCompanyMap";
 import EmailMarketingQuote from "../components/EmailMarketingQuote";
 import { WhyEmailFails } from "../components/WhyEmailFails";
+import Stagger from "../components/Stagger";
+import StaggerItem from "../components/Staggeritem";
+import FadeRight from "../components/FadeRight";
+import FadeLeft from "../components/FadeLeft";
 
 const failPoints = [
   "Emails sent without a clear strategy",
@@ -26,6 +30,23 @@ const emailStats = [
   { value: "2-5%", label: "Avg. Click Through Rate" },
   { value: "0.2%", label: "Avg. Unsubscribe Rate" },
   { value: "100+", label: "Brands Worldwide" },
+];
+
+const relatedProjects = [
+  {
+    name: "Women Who Thrive",
+    year: "2026",
+    copy: "Using organic social we increased Women Who Thrive membership to 10k after 6months using only Organic Social and to 22k in 18 months. ",
+    image: "/assets/womenThrive.jpg",
+    tags: ["Social Growth", "Increase Membership", "Women Network Organization"],
+  },
+  {
+    name: "Yula Lounge",
+    year: "2026",
+    copy: "Transforming Yalseh into Yula — a modern Dubai beach club. Using Organic Social we increased both awareness and social following to 20k+ in 24months. ",
+    image: "/assets/yula2.jpg",
+    tags: ["Social Growth", "F&B Industry"],
+  },
 ];
 
 const systemItems = [
@@ -80,28 +101,36 @@ function Hero() {
     <section className="relative overflow-hidden bg-black px-6 pb-[58px] pt-[56px] text-white sm:pb-[72px] sm:pt-[78px]">
 
       <div className="mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
-        <div>
-          <p className="font-[var(--font-be-vietnam)] text-[10px] font-normal sm:text-[14px] uppercase tracking-[0px] text-white">
-            Email Marketing
-          </p>
-          <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[38px] font-bold lowercase leading-[100%] tracking-[-3px] sm:text-[58px] text-white">
-            turn your email database
-            <br />
-            into a{" "}
-            <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white leading-[103.04px] tracking-[-2.8px]">
-              revenue engine
-            </span>
-          </h1>
-          <p className="mt-[50px] max-w-[560px] font-[var(--font-inter)] text-[14px] leading-[32px] text-white/90 sm:text-[18px]">
-            We create strategic email campaigns and automated customer journeys that deliver the right message at the right time, driving retention and repeat purchases.
-          </p>
-          <Link
-            className="mt-[36px] inline-flex h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
-            href="/contact"
-          >
-            Book a Consultation
-          </Link>
-        </div>
+        <Stagger staggerDelay={0.15}>
+          <StaggerItem>
+            <p className="font-[var(--font-be-vietnam)] text-[10px] font-normal sm:text-[14px] uppercase tracking-[0px] text-white">
+              Email Marketing
+            </p>
+          </StaggerItem>
+          <StaggerItem>
+            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[38px] font-bold lowercase leading-[100%] tracking-[-3px] sm:text-[58px] text-white">
+              turn your email database
+              <br />
+              into a{" "}
+              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white leading-[103.04px] tracking-[-2.8px]">
+                revenue engine
+              </span>
+            </h1>
+          </StaggerItem>
+          <StaggerItem>
+            <p className="mt-[50px] max-w-[560px] font-[var(--font-inter)] text-[14px] leading-[32px] text-white/90 sm:text-[18px]">
+              We create strategic email campaigns and automated customer journeys that deliver the right message at the right time, driving retention and repeat purchases.
+            </p>
+          </StaggerItem>
+          <StaggerItem>
+            <Link
+              className="mt-[36px] inline-flex h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
+              href="/contact"
+            >
+              Book a Consultation
+            </Link>
+          </StaggerItem>
+        </Stagger>
 
         <ConsultationForm />
       </div>
@@ -115,7 +144,7 @@ function EmailOverview() {
     <section className="relative overflow-hidden bg-black">
       <div className="relative mx-auto grid max-w-[1150px] px-6 py-16 lg:grid-cols-[minmax(0,680px)_minmax(320px,430px)] lg:justify-between lg:py-20">
         {/* Image mockup */}
-        <div className="order-2 -mx-1 pt-10 sm:mx-0 lg:order-none lg:col-start-2 lg:row-start-1 lg:flex lg:items-start lg:pt-0">
+        <FadeRight duration={0.8} delay={0.2} className="order-2 -mx-1 pt-10 sm:mx-0 lg:order-none lg:col-start-2 lg:row-start-1 lg:flex lg:items-start lg:pt-0">
           <div className="relative mx-auto aspect-[463/842] w-full max-w-[400px] overflow-hidden bg-white shadow-[0_24px_55px_rgba(0,0,0,0.35)]">
             <Image
               src="/assets/email-market.png"
@@ -126,47 +155,52 @@ function EmailOverview() {
               className="object-cover object-top"
             />
           </div>
-        </div>
+        </FadeRight>
 
         {/* Text content */}
-        <div className="order-1 text-white lg:col-start-1 lg:row-start-1 lg:max-w-[680px]">
-          <p className="mb-[20px] text-[11px] font-normal leading-[19.6px] tracking-[0%] text-white sm:text-[14px]">
-            Our Email System for Retention and Growth
-          </p>
+        <Stagger staggerDelay={0.1} className="order-1 text-white lg:col-start-1 lg:row-start-1 lg:max-w-[680px]">
+          <StaggerItem>
+            <p className="mb-[20px] text-[11px] font-normal leading-[19.6px] tracking-[0%] text-white sm:text-[14px]">
+              Our Email System for Retention and Growth
+            </p>
+          </StaggerItem>
 
-          <h2 className="text-[32px] font-medium leading-[1.1] tracking-[-1.5px] sm:text-[56px] sm:leading-[70px]">
-            Our Approach to <br />
-            <span
-              className="text-[1.1em] font-normal italic tracking-[-1.5px] text-[#ff5500] sm:text-[72px] sm:leading-[70px]"
-              style={{ fontFamily: "'Times New Roman', Times, serif" }}
-            >
-              Email Marketing
-            </span>
-          </h2>
+          <StaggerItem>
+            <h2 className="text-[32px] font-medium leading-[1.1] tracking-[-1.5px] sm:text-[56px] sm:leading-[70px]">
+              Our Approach to <br />
+              <span
+                className="text-[1.1em] font-normal italic tracking-[-1.5px] text-[#ff5500] sm:text-[72px] sm:leading-[70px]"
+                style={{ fontFamily: "'Times New Roman', Times, serif" }}
+              >
+                Email Marketing
+              </span>
+            </h2>
+          </StaggerItem>
 
           <div className="mt-[52px] grid grid-cols-2">
             {systemItems.map((item, i) => (
-              <article
-                key={item.number}
-                className={[
-                  "py-6 sm:py-7",
-                  i % 2 === 1 ? "border-l border-white/20 pl-8" : "",
-                  i >= 2 ? "border-t border-white/20" : "",
-                ].join(" ")}
-              >
-                <p className="text-[11px] font-normal leading-5 text-white/90 sm:text-[14px]">
-                  {item.number}
-                </p>
-                <h3 className="mt-[14px] max-w-[350px] text-[16px] font-semibold leading-[1.3] tracking-[-0.6px] sm:text-[24px] sm:leading-8">
-                  {item.title}
-                </h3>
-                <p className="mt-[12px] max-w-[280px] text-[12px] font-normal leading-[1.7] text-white/90 sm:text-[16px] sm:leading-7">
-                  {item.copy}
-                </p>
-              </article>
+              <StaggerItem key={item.number}>
+                <article
+                  className={[
+                    "py-6 sm:py-7",
+                    i % 2 === 1 ? "border-l border-white/20 pl-8" : "",
+                    i >= 2 ? "border-t border-white/20" : "",
+                  ].join(" ")}
+                >
+                  <p className="text-[11px] font-normal leading-5 text-white/90 sm:text-[14px]">
+                    {item.number}
+                  </p>
+                  <h3 className="mt-[14px] max-w-[350px] text-[16px] font-semibold leading-[1.3] tracking-[-0.6px] sm:text-[24px] sm:leading-8">
+                    {item.title}
+                  </h3>
+                  <p className="mt-[12px] max-w-[280px] text-[12px] font-normal leading-[1.7] text-white/90 sm:text-[16px] sm:leading-7">
+                    {item.copy}
+                  </p>
+                </article>
+              </StaggerItem>
             ))}
           </div>
-        </div>
+        </Stagger>
       </div>
     </section>
   );
@@ -176,30 +210,36 @@ function WorkWithUs() {
   return (
     <section className="bg-[#f5f5f4] px-6 py-[70px] text-black  lg:py-[82px]">
       <div className="mx-auto grid max-w-[1150px] gap-12 lg:grid-cols-[330px_minmax(0,1fr)] lg:items-center lg:gap-[72px]">
-        <div className="lg:pt-2">
-          <h2 className="font-[var(--font-be-vietnam)] text-[36px] font-medium leading-[1.04] tracking-[-1.4px] sm:text-[48px]">
-            ways to
-            <br />
-            <span className="font-[var(--font-cormorant)] text-[1.12em] font-extralight timesFontFamily italic">work with</span> us
-          </h2>
-          <p className="mt-[28px] max-w-[310px] font-[var(--font-inter)] text-[14px] leading-[1.85] text-black/65">
-            Whether you&apos;re just getting started or ready to scale, we have a way to work together.
-          </p>
-        </div>
+        <Stagger staggerDelay={0.15} className="lg:pt-2">
+          <StaggerItem>
+            <h2 className="font-[var(--font-be-vietnam)] text-[36px] font-medium leading-[1.04] tracking-[-1.4px] sm:text-[48px]">
+              ways to
+              <br />
+              <span className="font-[var(--font-cormorant)] text-[1.12em] font-extralight timesFontFamily italic">work with</span> us
+            </h2>
+          </StaggerItem>
+          <StaggerItem>
+            <p className="mt-[28px] max-w-[310px] font-[var(--font-inter)] text-[14px] leading-[1.85] text-black/65">
+              Whether you&apos;re just getting started or ready to scale, we have a way to work together.
+            </p>
+          </StaggerItem>
+        </Stagger>
 
-        <div className="grid border-y border-black/10 sm:grid-cols-2 sm:[&>*:nth-child(2n)]:border-l sm:[&>*:nth-child(n+3)]:border-t">
+        <Stagger staggerDelay={0.1} className="grid border-y border-black/10 sm:grid-cols-2 sm:[&>*:nth-child(2n)]:border-l sm:[&>*:nth-child(n+3)]:border-t">
           {waysToWork.map((way) => (
-            <article className="min-h-[176px] border-t border-black/10 py-7 first:border-t-0 sm:border-t-0 sm:px-7 sm:py-8" key={way.number}>
-              <p className="font-[var(--font-inter)] text-[11px] leading-none text-black/70">{way.number}</p>
-              <h3 className="mt-[20px] font-[var(--font-be-vietnam)] text-[18px] font-bold leading-[1.2] tracking-[-0.3px] sm:text-[19px]">
-                {way.title}
-              </h3>
-              <p className="mt-[18px] max-w-[290px] font-[var(--font-inter)] text-[13px] leading-[1.75] text-black/65">
-                {way.copy}
-              </p>
-            </article>
+            <StaggerItem key={way.number}>
+              <article className="min-h-[176px] border-t border-black/10 py-7 first:border-t-0 sm:border-t-0 sm:px-7 sm:py-8">
+                <p className="font-[var(--font-inter)] text-[11px] leading-none text-black/70">{way.number}</p>
+                <h3 className="mt-[20px] font-[var(--font-be-vietnam)] text-[18px] font-bold leading-[1.2] tracking-[-0.3px] sm:text-[19px]">
+                  {way.title}
+                </h3>
+                <p className="mt-[18px] max-w-[290px] font-[var(--font-inter)] text-[13px] leading-[1.75] text-black/65">
+                  {way.copy}
+                </p>
+              </article>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );
@@ -248,23 +288,25 @@ const steps = [
 function EmailStrategy() {
   return (
     <section className="relative overflow-hidden bg-black px-6 py-20">
-      <div className="mx-auto max-w-[1150px]">
+      <Stagger staggerDelay={0.15} className="mx-auto max-w-[1150px]">
         {/* Heading */}
-        <h2 className="lowercase text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px]">
-          every brand has its <br />
-          own{" "}
-          <span
-            className="italic text-[#ff5500] font-normal text-[1.1em] tracking-[-3%] sm:text-[72px] sm:leading-[70px]"
-            style={{ fontFamily: "'Times New Roman', Times, serif" }}
-          >
-            email strategy
-          </span>
-        </h2>
+        <StaggerItem>
+          <h2 className="lowercase text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px]">
+            every brand has its <br />
+            own{" "}
+            <span
+              className="italic text-[#ff5500] font-normal text-[1.1em] tracking-[-3%] sm:text-[72px] sm:leading-[70px]"
+              style={{ fontFamily: "'Times New Roman', Times, serif" }}
+            >
+              email strategy
+            </span>
+          </h2>
+        </StaggerItem>
 
         {/* Steps */}
-        <div className="mt-20 grid grid-cols-1 gap-x-6 gap-y-16 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-20 grid grid-cols-1 gap-y-16 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, i) => (
-            <div key={step.title} className="relative">
+            <StaggerItem key={step.title} className="relative">
               {/* Title */}
               <h3
                 className="mb-6 text-white"
@@ -318,10 +360,10 @@ function EmailStrategy() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </StaggerItem>
           ))}
         </div>
-      </div>
+      </Stagger>
     </section>
   );
 }
@@ -357,68 +399,71 @@ const CARDS_DATA = [
 function RevenueMethod() {
   return (
     <div className="w-full bg-black text-white py-20 px-6 min-h-screen flex flex-col justify-center items-center font-sans">
-      <div className="max-w-[1150px] w-full">
+      <Stagger staggerDelay={0.15} className="max-w-[1150px] w-full">
 
         {/* Header Section */}
         {/* Heading */}
-        <h2 className="lowercase text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-16">
-          method to convert email database to <br />
-          high{" "}
-          <span
-            className="italic text-[#ff5500] font-normal text-[1.1em] tracking-[-3%] sm:text-[72px] sm:leading-[70px]"
-            style={{ fontFamily: "'Times New Roman', Times, serif" }}
-          >
-            performing revenue
-          </span>
-        </h2>
+        <StaggerItem>
+          <h2 className="lowercase text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-16">
+            method to convert email database to <br />
+            high{" "}
+            <span
+              className="italic text-[#ff5500] font-normal text-[1.1em] tracking-[-3%] sm:text-[72px] sm:leading-[70px]"
+              style={{ fontFamily: "'Times New Roman', Times, serif" }}
+            >
+              performing revenue
+            </span>
+          </h2>
+        </StaggerItem>
 
         {/* Grid Container */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center items-center">
           {CARDS_DATA.map((card) => (
-            <div
-              key={card.id}
-              style={{
-                width: '1285.61px', // Scaled proportions fallback or driven via wrapper max-width
-                maxWidth: '100%',
-                height: '606.93px',
-                backgroundImage: `url(${card.bgImage})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-              }}
-              className="group relative rounded-[28px] overflow-hidden p-6 flex flex-col justify-between cursor-pointer transition-all duration-500 ease-out"
-            >
-              {/* Card Number */}
+            <StaggerItem key={card.id}>
               <div
-                className="text-[9.82px] font-medium leading-[14.73px] tracking-[2.95px] text-white opacity-80 align-middle"
-                style={{ fontStyle: 'Medium' }}
+                style={{
+                  width: '1285.61px', // Scaled proportions fallback or driven via wrapper max-width
+                  maxWidth: '100%',
+                  height: '606.93px',
+                  backgroundImage: `url(${card.bgImage})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+                className="group relative rounded-[28px] overflow-hidden p-6 flex flex-col justify-between cursor-pointer transition-all duration-500 ease-out"
               >
-                {card.id}
-              </div>
-
-              {/* Bottom Content Group (Animates Up on Hover) */}
-              <div className="transform translate-y-[80px] group-hover:translate-y-0 transition-transform duration-500 ease-out will-change-transform">
-
-                {/* Title */}
-                <h3
-                  className="text-[22.64px] font-normal leading-[26.78px] tracking-[0%] text-white align-middle mb-3"
-                  style={{ fontStyle: 'Regular' }}
+                {/* Card Number */}
+                <div
+                  className="text-[9.82px] font-medium leading-[14.73px] tracking-[2.95px] text-white opacity-80 align-middle"
+                  style={{ fontStyle: 'Medium' }}
                 >
-                  {card.title}
-                </h3>
+                  {card.id}
+                </div>
 
-                {/* Description (Fades and slides in cleanly) */}
-                <p
-                  className="text-[15.5px] font-normal leading-[18.86px] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 ease-out"
-                  style={{ fontStyle: 'Regular' }}
-                >
-                  {card.description}
-                </p>
+                {/* Bottom Content Group (Animates Up on Hover) */}
+                <div className="transform translate-y-[80px] group-hover:translate-y-0 transition-transform duration-500 ease-out will-change-transform">
+
+                  {/* Title */}
+                  <h3
+                    className="text-[22.64px] font-normal leading-[26.78px] tracking-[0%] text-white align-middle mb-3"
+                    style={{ fontStyle: 'Regular' }}
+                  >
+                    {card.title}
+                  </h3>
+
+                  {/* Description (Fades and slides in cleanly) */}
+                  <p
+                    className="text-[15.5px] font-normal leading-[18.86px] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 ease-out"
+                    style={{ fontStyle: 'Regular' }}
+                  >
+                    {card.description}
+                  </p>
+                </div>
               </div>
-            </div>
+            </StaggerItem>
           ))}
         </div>
 
-      </div>
+      </Stagger>
     </div>
   );
 }
@@ -426,28 +471,118 @@ function RevenueMethod() {
 function FinalCta() {
   return (
     <section className="bg-black px-6 pt-[70px] text-white pb-30">
-      <div className="mx-auto max-w-[1150px] text-center">
-        <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
-          LET&apos;S SCALE
-        </p>
-        <h2 className="mt-20 font-[var(--font-be-vietnam)] text-[36px] font-medium leading-[1.08] tracking-[-1.5px] sm:text-[55px]">
-          turn your database
-          <br />
-          into{" "}
-          <span className="font-[var(--font-cormorant)] text-[1.12em] font-extralight timesFontFamily italic text-[#ff5500]">
-            repeat revenue
-          </span>
-        </h2>
-        <div className="mt-20 flex flex-col items-center justify-center gap-4 sm:flex-row">
+      <Stagger staggerDelay={0.15} className="mx-auto max-w-[1150px] text-center">
+        <StaggerItem>
+          <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
+            LET&apos;S SCALE
+          </p>
+        </StaggerItem>
+        <StaggerItem>
+          <h2 className="mt-20 font-[var(--font-be-vietnam)] text-[36px] font-medium leading-[1.08] tracking-[-1.5px] sm:text-[55px]">
+            turn your database
+            <br />
+            into{" "}
+            <span className="font-[var(--font-cormorant)] text-[1.12em] font-extralight timesFontFamily italic text-[#ff5500]">
+              repeat revenue
+            </span>
+          </h2>
+        </StaggerItem>
+        <StaggerItem>
+          <div className="mt-20 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Link
+              className="inline-flex h-[42px] min-w-[190px] items-center justify-center rounded-full bg-[#ff5500] px-8 font-[var(--font-be-vietnam)] text-[12px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
+              href="/contact"
+            >
+              Book a Consultation
+            </Link>
+            {/* <Link className="font-[var(--font-be-vietnam)] text-[13px] font-medium text-white/80 transition hover:text-white border-white border rounded-full px-6 h-[48px] inline-flex items-center justify-center" href="#services">
+              Book a Strategy Call
+            </Link> */}
+          </div>
+        </StaggerItem>
+      </Stagger>
+    </section>
+  );
+}
+
+function RelatedProjects() {
+  return (
+    <section className="bg-[#080808] px-6 py-[56px] text-white">
+      <div className="mx-auto max-w-[1150px]">
+        {/* Header */}
+        <div className="flex items-center justify-between gap-6">
+          <h2 className="font-[var(--font-be-vietnam)] text-[28px] sm:text-[56px] font-medium lowercase leading-none tracking-[-0.96px]">
+            related{" "}
+            <span className="font-[var(--font-cormorant)] text-[1.18em] sm:text-[72px] font-normal timesFontFamily italic tracking-[-0.96px]">
+              projects
+            </span>
+          </h2>
+
           <Link
-            className="inline-flex h-[42px] min-w-[190px] items-center justify-center rounded-full bg-[#ff5500] px-8 font-[var(--font-be-vietnam)] text-[12px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
-            href="/contact"
+            href="/projects"
+            className="hidden sm:inline-flex shrink-0 items-center gap-2 rounded-full border border-white px-5 py-3 font-[var(--font-inter)] text-[12px] text-white sm:text-[15px]"
           >
-            Book a Consultation
+            View all projects
+            <img src="/assets/rightArrowMed.png" className="w-4 h-4" alt="" />
           </Link>
-          {/* <Link className="font-[var(--font-be-vietnam)] text-[13px] font-medium text-white/80 transition hover:text-white border-white border rounded-full px-6 h-[48px] inline-flex items-center justify-center" href="#services">
-            Book a Strategy Call
-          </Link> */}
+        </div>
+
+        {/* Cards */}
+        <div className="mt-[40px] grid gap-[24px] md:grid-cols-2">
+          {relatedProjects.map((project) => (
+            <article
+              key={project.name}
+              className="rounded-[20px] border border-white p-[14px]"
+            >
+              <div className="relative aspect-[420/260] w-full overflow-hidden max-w-[534px] rounded-[12px] bg-[#111]">
+                <Image
+                  src={project.image}
+                  alt={`${project.name} marketing strategy project`}
+                  fill
+                  sizes="(min-width: 768px) 45vw, calc(100vw - 48px)"
+                  className="object-cover"
+                />
+              </div>
+
+              <div className="px-[10px] pt-[24px] pb-[6px]">
+                {/* Title + year */}
+                <div className="flex items-baseline justify-between gap-3">
+                  <h3 className="font-[var(--font-be-vietnam)] text-[22px] sm:text-[36px] font-normal leading-none tracking-[-0.72px]">
+                    {project.name}
+                  </h3>
+                  <span className="shrink-0 font-[var(--font-inter)] text-[14px] text-white">
+                    {project.year}
+                  </span>
+                </div>
+
+                {/* Copy */}
+                <p className="mt-[14px] max-w-[480px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[28px] text-white">
+                  {project.copy}
+                </p>
+
+                {/* Tags */}
+                <div className="mt-[20px] flex flex-wrap gap-[10px]">
+                  {(project.tags ?? []).map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full border border-white px-[14px] py-[7px] font-[var(--font-inter)] text-[12px] text-white/90"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </article>
+          ))}
+
+          {/* Mobile-only view all link, shown below cards on small screens */}
+          <Link
+            href="/projects"
+            className="sm:hidden inline-flex w-fit items-center gap-2 rounded-full border border-white/30 px-5 py-3 font-[var(--font-inter)] text-[12px] text-white/85 transition-colors hover:border-white/60 hover:text-white"
+          >
+            View all projects
+            <span aria-hidden="true">→</span>
+          </Link>
         </div>
       </div>
     </section>
@@ -459,17 +594,17 @@ export default function EmailMarketingPage() {
     <main className="min-h-screen bg-black overflow-hidden">
       <Header />
       <Hero />
-      {/* <Numbers stats={emailStats} eyebrow="Our Numbers"/> */}
       <Numbers stats={emailStats} />
       <EmailMarketingQuote first={"Email Marketing should contribute to"} second={"35%"} third={"of your business revenue with the right strategy &amp; execution"} />
       <WhyEmailFails />
       <EmailOverview />
       <Brands />
       <EmailStrategy />
+      <EmailVisuals />
       <RevenueMethod />
       {/* <Services /> */}
-      <EmailVisuals />
       {/* <WorkWithUs /> */}
+      <RelatedProjects />
       <Testimonials />
       <GoodCompanyMap />
       <Team />

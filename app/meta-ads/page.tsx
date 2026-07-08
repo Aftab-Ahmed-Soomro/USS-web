@@ -8,6 +8,8 @@ import { Team } from "../components/Team";
 import { Testimonials } from "../components/Testimonials";
 import { ConsultationForm } from "../components/ConsultationForm";
 import { GoodCompanyMap } from "../components/GoodCompanyMap";
+import { WhyEmailFails } from "../components/WhyEmailFails";
+import TargetRightPeople from "../components/TargetRightPeople";
 
 const failPoints = [
   "Creative that fails to capture attention",
@@ -25,18 +27,18 @@ const stats = [
 
 const relatedProjects = [
   {
-    name: "Cinnamood",
+    name: "Blank DXB",
+    image: "/assets/dxb.jpg",
+    copy: "With a strong Meta Ads execution we focused on Paid Media during Blank DXB launch. We were able to target demand on a granular level making budget efficiency higher",
+    tags: ["Paid Media", "Meta Ads Targeting", "Lead Generation"],
     year: "2024",
-    copy: "Launching a German bakery franchise into the UAE market.",
-    image: "/assets/projectsPagePics/cinamood.jpg",
-    tags: ["Web design & development", "Branding", "F&B"],
   },
   {
-    name: "Yula Lounge",
+    name: "SupperClub",
+    image: "/assets/club.jpg",
+    copy: "We increased SupperClub membership using Meta Ads to drive members using creative assets and location targeting",
+    tags: ["Membership Increase", "Hospitality"],
     year: "2024",
-    copy: "Transforming Yalseh into Yula – a modern Dubai beach club.",
-    image: "/assets/yula2.jpg",
-    tags: ["Web design & development", "Hospitality"],
   },
 ];
 
@@ -54,23 +56,6 @@ const workSteps = [
   "Conversion tracking and pixel setup",
   "Landing page optimisation",
   "Scaling and performance optimisation",
-];
-
-const projects = [
-  {
-    name: "Cinnamood",
-    image: "/assets/company/cinamood-card.jpg",
-    copy: "Launching a German bakery franchise into the UAE market.",
-    tags: ["Web design & development", "Branding", "F&B"],
-    year: "2024",
-  },
-  {
-    name: "Yula Lounge",
-    image: "/assets/company/yula-card.jpg",
-    copy: "Transforming Yalseh into Yula - a modern Dubai beach club.",
-    tags: ["Web design & development", "Hospitality"],
-    year: "2024",
-  },
 ];
 
 function Hero() {
@@ -418,16 +403,188 @@ function FinalCta() {
   );
 }
 
+const googleAdsBrandPoints = [
+  {
+    number: "01",
+    title: "No Clear Campaign Strategy",
+    description:
+      "Ads are launched without clear objectives, audience planning or a structured campaign approach.",
+  },
+  {
+    number: "02",
+    title: "Targeting the Wrong Audience",
+    description:
+      "Broad targeting wastes budget by reaching people who are unlikely to convert.",
+  },
+  {
+    number: "03",
+    title: "Creative That Doesn't Convert",
+    description:
+      "Ads fail to capture attention, communicate value or encourage action.",
+  },
+  {
+    number: "04",
+    title: "No Ongoing Optimisation",
+    description:
+      "Campaigns are left running without testing, refining or scaling what's working.",
+  },
+];
+
+const googleAdsUssPoints = [
+  {
+    number: "01",
+    title: "Strategy Before Spend",
+    description:
+      "Every campaign is built around your business goals, audience and measurable objectives.",
+  },
+  {
+    number: "02",
+    title: "Precision Audience Targeting",
+    description:
+      "We identify and target the audiences most likely to become customers.",
+  },
+  {
+    number: "03",
+    title: "Creative Built to Perform",
+    description:
+      "Scroll-stopping creatives designed to generate engagement, leads and sales.",
+  },
+  {
+    number: "04",
+    title: "Continuous Optimisation",
+    description:
+      "We analyse performance, test new ideas and optimise campaigns to maximise return on ad spend.",
+  },
+];
+
+// Card Data Structure
+const CARDS_DATA = [
+  {
+    id: '01',
+    title: 'Campaign Strategy',
+    description: 'Every campaign starts with a clear objective. We define your goals, audience, budget and messaging before any ad goes live.',
+    bgImage: '/assets/method1.png', // Replace with your image src
+  },
+  {
+    id: '02',
+    title: 'Audience Targeting',
+    description: 'We identify and engage the most relevant demographics through data-driven targeting strategies, ensuring your ads reach the right people.',
+    bgImage: '/assets/method2.png', // Replace with your image src
+  },
+  {
+    id: '03',
+    title: 'Creative & Ad Content',
+    description: 'Our team crafts compelling visuals and persuasive copy that capture attention and drive meaningful engagement from your audience.',
+    bgImage: '/assets/method3.png', // Replace with your image src
+  },
+  {
+    id: '04',
+    title: 'Optimisation & Scaling',
+    description: 'We continuously monitor performance metrics to refine campaigns, maximizing return on ad spend and scaling what works best.',
+    bgImage: '/assets/method4.png', // Replace with your image src
+  },
+];
+
+function RevenueMethod() {
+  return (
+    <div className="w-full bg-black text-white py-20 px-6 min-h-screen flex flex-col justify-center items-center font-sans">
+      <div className="max-w-[1150px] w-full">
+
+        {/* Header Section */}
+        {/* Heading */}
+        <h2 className="lowercase text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-16">
+          How We Build High-Performing  <br />
+          {" "}
+          <span
+            className="italic text-[#ff5500] font-normal text-[1.1em] tracking-[-3%] sm:text-[72px] sm:leading-[70px]"
+            style={{ fontFamily: "'Times New Roman', Times, serif" }}
+          >
+            Meta Campaigns
+          </span>
+        </h2>
+
+        {/* Grid Container */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center items-center">
+          {CARDS_DATA.map((card) => (
+            <div
+              key={card.id}
+              style={{
+                width: '1285.61px', // Scaled proportions fallback or driven via wrapper max-width
+                maxWidth: '100%',
+                height: '606.93px',
+                backgroundImage: `url(${card.bgImage})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
+              className="group relative rounded-[28px] overflow-hidden p-6 flex flex-col justify-between cursor-pointer transition-all duration-500 ease-out"
+            >
+              {/* Card Number */}
+              <div
+                className="text-[9.82px] font-medium leading-[14.73px] tracking-[2.95px] text-white opacity-80 align-middle"
+                style={{ fontStyle: 'Medium' }}
+              >
+                {card.id}
+              </div>
+
+              {/* Bottom Content Group (Animates Up on Hover) */}
+              <div className="transform translate-y-[80px] group-hover:translate-y-0 transition-transform duration-500 ease-out will-change-transform">
+
+                {/* Title */}
+                <h3
+                  className="text-[22.64px] font-normal leading-[26.78px] tracking-[0%] text-white align-middle mb-3"
+                  style={{ fontStyle: 'Regular' }}
+                >
+                  {card.title}
+                </h3>
+
+                {/* Description (Fades and slides in cleanly) */}
+                <p
+                  className="text-[15.5px] font-normal leading-[18.86px] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 ease-out"
+                  style={{ fontStyle: 'Regular' }}
+                >
+                  {card.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </div>
+  );
+}
+
 export default function MetaAdsPage() {
   return (
     <main className="min-h-screen bg-black overflow-hidden">
       <Header />
       <Hero />
-      <WhyAdsFail />
+      {/* <WhyAdsFail /> */}
       <Numbers />
-      <Brands />
-      <MetaSystem />
-      <HowItWorks />
+      {/* <Brands /> */}
+      {/* <MetaSystem /> */}
+      {/* <HowItWorks /> */}
+      <WhyEmailFails
+              heading={
+                <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
+                  why most{" "}
+                  <span
+                    className="font-normal italic text-[60px] sm:text-[72px]"
+                    style={{ fontFamily: "'Times New Roman', Times, serif" }}
+                  >
+                    meta ads
+                  </span>{" "}
+                  fails
+                </h2>
+              }
+              subheading="Most brands don't have an email problem, they have a strategy problem."
+              leftTitle="Most Brands"
+              rightTitle="The USS Difference"
+              leftPoints={googleAdsBrandPoints}
+              rightPoints={googleAdsUssPoints}
+            />
+            <TargetRightPeople />
+      <RevenueMethod />
       <BrandWork />
       <Testimonials />
       <Team />
