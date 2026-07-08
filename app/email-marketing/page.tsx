@@ -636,7 +636,7 @@ export default function EmailMarketingPage() {
       <EmailMarketingQuote first={"email marketing should contribute to"} second={"35%"} third={"of your business revenue with the right strategy and execution"} />
       <WhyEmailFails />
       <EmailOverview />
-      {/* <Brands /> */}
+      <Brands />
       <EmailStrategy />
       <EmailVisuals />
       <RevenueMethod />
