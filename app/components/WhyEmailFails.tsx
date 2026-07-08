@@ -140,6 +140,7 @@ export function WhyEmailFails({
     rightTitle = "The USS Difference",
     leftPoints = brandPoints,
     rightPoints = ussPoints,
+    hideBadge = false,
 }: {
     tagline?: string;
     heading?: React.ReactNode;
@@ -148,6 +149,7 @@ export function WhyEmailFails({
     rightTitle?: string;
     leftPoints?: Point[];
     rightPoints?: Point[];
+    hideBadge?: boolean;
 } = {}) {
     return (
         <section className="bg-black px-4 py-[80px] text-white sm:px-8 lg:px-14">
@@ -245,7 +247,9 @@ export function WhyEmailFails({
                             <ScaleIn delay={0.4} duration={0.8}>
                                 <div className="relative flex items-center justify-center">
                                     <img src="/assets/circled.png" alt="" className="w-[310px] object-contain" />
-                                    <img src="/assets/klaviyo-logo-white.webp" alt="Klaviyo" className="absolute w-[140px] ml-1 object-contain" />
+                                    {!hideBadge && (
+                                        <img src="/assets/klaviyo-logo-white.webp" alt="Klaviyo" className="absolute w-[140px] ml-1 object-contain" />
+                                    )}
                                 </div>
                             </ScaleIn>
                         </div>
@@ -292,7 +296,9 @@ export function WhyEmailFails({
                             <ScaleIn delay={0.3} duration={0.6}>
                                 <div className="relative flex items-center justify-center">
                                     <img src="/assets/circled.png" alt="" className="w-[200px] object-contain" />
-                                    <img src="/assets/klaviyo-logo-white.webp" alt="Klaviyo" className="absolute w-[100px] object-contain" />
+                                    {!hideBadge && (
+                                        <img src="/assets/klaviyo-logo-white.webp" alt="Klaviyo" className="absolute w-[100px] object-contain" />
+                                    )}
                                 </div>
                             </ScaleIn>
                         </div>

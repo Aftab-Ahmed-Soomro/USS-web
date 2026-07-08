@@ -10,7 +10,7 @@ const lightInput =
 
 export function ConsultationForm() {
   return (
-    <section className="w-full max-w-[430px] rounded-[12px] border border-white/70 bg-black px-[22px] py-[25px] text-white shadow-[0_20px_60px_rgba(0,0,0,0.45)]">
+    <section className="w-full max-w-[430px] rounded-[12px] border border-white/70 bg-black px-[22px] py-[25px] text-white">
       <Stagger staggerDelay={0.1}>
         <StaggerItem>
           <h2 className="font-[var(--font-be-vietnam)] text-[16px] sm:text-[20px] font-semibold tracking-[1px]">
@@ -105,7 +105,7 @@ export function ConsultationForm() {
 
 export function LightConsultationForm() {
   return (
-    <section className="w-full max-w-[430px] rounded-[12px] border border-white/70 bg-white px-[22px] py-[25px] text-black shadow-[0_20px_60px_rgba(0,0,0,0.45)]">
+    <section className="w-full max-w-[430px] rounded-[12px] border border-gray-200 bg-white px-[22px] py-[25px] text-black">
       <Stagger staggerDelay={0.1}>
         <StaggerItem>
           <h2 className="font-[var(--font-be-vietnam)] text-[18px] font-medium leading-tight">

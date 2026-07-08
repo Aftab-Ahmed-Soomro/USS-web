@@ -17,6 +17,7 @@ import PlatformsWeWorkWith from "../components/PlatformsWeWorkWith";
 import OurOrganicSocialMediaApproach from "../components/OurOrganicSocialMediaApproach";
 import Image from "next/image";
 import { WhyEmailFails } from "../components/WhyEmailFails";
+import SocialMediaRevenueMethod from "../components/SocialMediaRevenueMethod";
 
 const stats = [
   { value: "500M+", label: "Total Reach" },
@@ -83,16 +84,15 @@ const socialServicesData = [
 function Hero() {
   return (
     <section className="bg-[#f7f7f5] px-6 py-[58px] text-black sm:py-[76px] lg:py-[82px]">
-      <div className="mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[minmax(0,575px)_430px] lg:items-center lg:justify-between">
+      <div className="mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[minmax(0,700px)_430px] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.15}>
           <StaggerItem>
             <h1 className="max-w-[700px] font-[var(--font-be-vietnam)] text-[38px] font-bold lowercase leading-[1.03] tracking-[-3.2px] sm:text-[70px]">
               social media that
               <br />
               <span className="font-[var(--font-cormorant)] text-[1.08em] sm:text-[80px] font-normal timesFontFamily italic tracking-[-3.2px]">
-                delivers real {"  "}
-              </span> {" "}
-              {" "} results
+                delivers real {" "}
+              </span>results
             </h1>
           </StaggerItem>
           <StaggerItem>
@@ -152,19 +152,19 @@ function StrategyProblem() {
             Most brands are active on social but not effectively
           </p>
           <div className="border-t border-white/45">
-          {problems.map((problem, index) => (
-            <div
-              className="grid grid-cols-[28px_minmax(0,1fr)] gap-6 border-b border-white/45 py-[16px]"
-              key={problem}
-            >
-              <span className="font-[var(--font-inter)] text-[10px] font-bold leading-[1.6] tracking-[2px] text-white/75">
-                0{index + 1}
-              </span>
-              <p className="font-[var(--font-be-vietnam)] text-[14px] font-medium leading-[1.6] text-white/84 sm:text-[15px]">
-                {problem}
-              </p>
-            </div>
-          ))}
+            {problems.map((problem, index) => (
+              <div
+                className="grid grid-cols-[28px_minmax(0,1fr)] gap-6 border-b border-white/45 py-[16px]"
+                key={problem}
+              >
+                <span className="font-[var(--font-inter)] text-[10px] font-bold leading-[1.6] tracking-[2px] text-white/75">
+                  0{index + 1}
+                </span>
+                <p className="font-[var(--font-be-vietnam)] text-[14px] font-medium leading-[1.6] text-white/84 sm:text-[15px]">
+                  {problem}
+                </p>
+              </div>
+            ))}
           </div>
           <p className="mt-[42px] max-w-[520px] font-[var(--font-be-vietnam)] text-[15px] font-medium leading-[1.55] text-white/84">
             Social media is not just about posting, it&apos;s about building a brand people
@@ -195,7 +195,7 @@ function SocialServices() {
               </span>
             </h2>
           </StaggerItem>
-          
+
           {/* Accordion List */}
           <div className="flex flex-col">
             {socialServicesData.map((service, index) => (
@@ -204,7 +204,7 @@ function SocialServices() {
                   className="group border-b border-white/20 py-8 first:border-t flex cursor-pointer transition-colors duration-300"
                 >
                   {/* Number */}
-                  <div 
+                  <div
                     className="w-[100px] sm:w-[150px] shrink-0 text-white"
                     style={{
                       fontWeight: 500,
@@ -219,9 +219,9 @@ function SocialServices() {
                   {/* Content */}
                   <div className="flex-1 flex flex-col">
                     <div className="flex justify-between items-start">
-                      
+
                       {/* Title */}
-                      <h3 
+                      <h3
                         className="text-white"
                         style={{
                           fontWeight: 400,
@@ -232,7 +232,7 @@ function SocialServices() {
                       >
                         {service.title}
                       </h3>
-                      
+
                       {/* Icon */}
                       <div className="relative w-8 h-8 flex items-center justify-center ml-4 shrink-0 mt-1">
                         {/* + Icon */}
@@ -245,11 +245,11 @@ function SocialServices() {
                         </div>
                       </div>
                     </div>
-                    
+
                     {/* Description animation (Grid trick) */}
                     <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
                       <div className="overflow-hidden">
-                        <p 
+                        <p
                           className="text-white mt-4 max-w-[550px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75"
                           style={{
                             fontWeight: 400,
@@ -279,103 +279,22 @@ const CARDS_DATA = [
     id: '01',
     title: 'Social Media Strategy',
     description: 'Every successful campaign starts with a clear strategy. We build a tailored email plan around your goals, customer journey and opportunities for growth.',
-    bgImage: '/assets/method1.png', 
+    bgImage: '/assets/method1.png',
   },
   {
     id: '02',
     title: 'Social media execution',
     description: 'We implement the strategy with precision, creating high-quality content, managing scheduling, and engaging with your audience to build a loyal community.',
-    bgImage: '/assets/method2.png', 
+    bgImage: '/assets/method2.png',
   },
   {
     id: '03',
     title: 'Maintenance',
     description: 'Ongoing optimization and active monitoring ensure your profiles remain relevant. We analyze performance data to refine tactics and sustain long-term growth.',
-    bgImage: '/assets/method3.png', 
+    bgImage: '/assets/method3.png',
   }
 ];
 
-function RevenueMethod() {
-  return (
-    <div className="w-full bg-black text-white py-20 px-6 min-h-screen flex flex-col justify-center items-center font-sans">
-      <Stagger staggerDelay={0.15}>
-        <div className="max-w-[1150px] w-full">
-          
-          {/* Header Section */}
-          <StaggerItem>
-            <p className="font-[var(--font-inter)] text-[10px] font-bold uppercase tracking-[4px] text-[#ff5500] mb-4">
-              PROCESS
-            </p>
-          </StaggerItem>
-          {/* Heading */}
-          <StaggerItem>
-            <h2 className="text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-16">
-              organic social{" "}
-              <span
-                className="italic text-[#ff5500] font-normal text-[1.1em] tracking-[-3%] sm:text-[72px] sm:leading-[70px]"
-                style={{ fontFamily: "'Times New Roman', Times, serif" }}
-              >
-                step by step process
-              </span>
-            </h2>
-          </StaggerItem>
-
-          {/* Grid Container */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 justify-center min-h-[500px] lg:min-h-[600px]">
-            {CARDS_DATA.map((card, index) => (
-              <StaggerItem
-                key={card.id}
-                className={index === 0 ? 'md:col-span-2' : 'md:col-span-1'}
-              >
-                <div
-                  style={{
-                    backgroundImage: `url(${card.bgImage})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center'
-                  }}
-                  className="group relative rounded-[28px] overflow-hidden p-5 flex flex-col justify-between cursor-pointer transition-all duration-500 ease-out h-full min-h-[400px]"
-                >
-                  {/* Card Number */}
-                  <div 
-                    className="text-[9.82px] font-medium leading-[14.73px] tracking-[2.95px] text-white opacity-80 align-middle"
-                    style={{ fontStyle: 'Medium' }}
-                  >
-                    {card.id}
-                  </div>
-
-                  {/* Bottom Content Group (Animates Up on Hover) */}
-                  <div className="mt-auto flex flex-col">
-                    
-                    {/* Title */}
-                    <h3 
-                      className="text-[22.64px] font-normal leading-[26.78px] tracking-[0%] text-white align-middle transition-all duration-500"
-                      style={{ fontStyle: 'Regular' }}
-                    >
-                      {card.title}
-                    </h3>
-
-                    {/* Description (Grid animation for height + fade in) */}
-                    <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
-                      <div className="overflow-hidden">
-                        <p 
-                          className="text-[15.5px] font-normal leading-[1.8] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 ease-out mt-3"
-                          style={{ fontStyle: 'Regular' }}
-                        >
-                          {card.description}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </StaggerItem>
-            ))}
-          </div>
-
-        </div>
-      </Stagger>
-    </div>
-  );
-}
 
 function RelatedProjects() {
   return (
@@ -476,7 +395,7 @@ function FinalCta() {
         <div className="mx-auto max-w-[1150px] text-center">
           <StaggerItem>
             <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
-               LET&apos;S SCALE
+              LET&apos;S SCALE
             </p>
           </StaggerItem>
           <StaggerItem>
@@ -512,8 +431,9 @@ export default function SocialMediaManagementPage() {
       <Hero />
       <Metrics />
       <PlatformsWeWorkWith />
-      {/* <Brands /> */}
+      <Brands />
       <WhyEmailFails
+        hideBadge={true}
         tagline="THE PROBLEM"
         heading={
           <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
@@ -557,31 +477,29 @@ export default function SocialMediaManagementPage() {
           {
             number: "01",
             title: "Content Strategy First",
-            description: "Every post is planned around your business goals, audience and brand positioning.",
+            description: "Every post is planned around your business goals and audience.",
           },
           {
             number: "02",
             title: "A Consistent Brand Presence",
-            description: "Clear messaging, visuals and tone that make your business instantly recognisable.",
+            description: "Consistent messaging and visuals that build brand recognition.",
           },
           {
             number: "03",
             title: "Content People Want to Engage With",
-            description: "Educational, entertaining and informative content that builds trust over time.",
+            description: "Content that educates, entertains and builds lasting trust.",
           },
           {
             number: "04",
             title: "Defined Content Pillars",
-            description: "A structured content plan that keeps your social channels consistent, relevant and easy to scale.",
+            description: "A structured content plan that keeps your socials consistent.",
           },
         ]}
       />
       <EmailMarketingQuote first={"your social media is your"} second={"digital window"} third={"shop front"} />
       <OurOrganicSocialMediaApproach />
       <RelatedProjects />
-      <RevenueMethod />
-      {/* <Approach /> */}
-      {/* <StrategyProblem /> */}
+      <SocialMediaRevenueMethod />
       <SocialServices />
       <Testimonials />
       <GoodCompanyMap />
