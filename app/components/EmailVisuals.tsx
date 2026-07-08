@@ -77,8 +77,8 @@ const emailVisuals = [
 
 export function EmailVisuals() {
   return (
-    <section className="relative z-10 bg-[#F5F5F5] px-6 py-[72px] text-black lg:py-[92px]">
-      <div className="mx-auto flex w-full max-w-[1150px] flex-col gap-[44px]">
+    <section className="relative z-10 bg-[#F5F5F5] py-[72px] text-black lg:py-[92px]">
+      <div className="mx-auto flex w-full flex-col gap-[44px]">
         <Stagger staggerDelay={0.15} className="grid gap-8 lg:grid-cols-[360px_minmax(0,580px)] lg:items-start lg:justify-between">
           <StaggerItem>
             <h2 className="max-w-[400px] font-[var(--font-be-vietnam)] text-[37px] text-black font-medium leading-[1.02] tracking-[-3%]  sm:text-[56px]">
@@ -91,7 +91,7 @@ export function EmailVisuals() {
 
           <StaggerItem>
             <p className="max-w-[580px] font-[var(--font-be-vietnam)] text-[14px] font-normal leading-[32px] text-[#505050] sm:text-[18px] lg:pt-[10px]">
-              'A showcase of high converting email campaigns designed to drive revenue through personalised customer experiences.
+              A showcase of high converting email campaigns designed to drive revenue through personalised customer experiences.
             </p>
           </StaggerItem>
         </Stagger>
@@ -120,7 +120,7 @@ export function EmailVisuals() {
       <style>{`
         .email-visuals-track {
           width: max-content;
-          animation: marquee-visuals 25s linear infinite;
+          animation: marquee-visuals 40s linear infinite;
           will-change: transform;
         }
 
