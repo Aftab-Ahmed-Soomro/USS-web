@@ -11,6 +11,11 @@ import { GoodCompanyMap } from "../components/GoodCompanyMap";
 import { WhyEmailFails } from "../components/WhyEmailFails";
 import { WhyGoogleAdsWork } from "../components/WhyGoogleAdsWork";
 import PlatformsWeWorkWith from "../components/PlatformsWeWorkWith";
+import Stagger from "../components/Stagger";
+import StaggerItem from "../components/Staggeritem";
+import FadeLeft from "../components/FadeLeft";
+import FadeRight from "../components/FadeRight";
+import FadeUp from "../components/FadeUp";
 
 const inputClass =
   "mt-[6px] h-[29px] w-full rounded-[5px] border border-black/15 bg-white px-[9px] font-[var(--font-inter)] text-[9px] text-black outline-none placeholder:text-black/35 focus:border-[#ff5500]";
@@ -25,6 +30,7 @@ const failPoints = [
 
 const relatedProjects = [
   {
+    slug: "residency-advanced",
     name: "Residency Advanced",
     year: "2024",
     copy: "Launching a German bakery franchise into the UAE market.",
@@ -32,6 +38,7 @@ const relatedProjects = [
     tags: ["Web design & development", "Branding", "F&B"],
   },
   {
+    slug: "flowork",
     name: "Flowork",
     year: "2024",
     copy: "Transforming Yalseh into Yula, a modern Dubai beach club.",
@@ -124,34 +131,43 @@ const workWays = [
 function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#ff5500] px-6 pb-[58px] pt-[56px] text-white sm:pb-[72px] sm:pt-[78px]">
-      
       <div className="mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
-        <div>
-          <p className="font-[var(--font-be-vietnam)] text-[10px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white">
-            Google Ads
-          </p>
-          <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[38px] font-bold lowercase leading-[100%] tracking-[1px] sm:text-[60px] text-white">
-            capture high
-            <br />
-            quality leads
-            <br />
-            with{" "}
-            <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] lowercase font-bold timesFontFamily italic text-white tracking-[-2.8px]">
-              google ads
-            </span>
-          </h1>
-          <p className="mt-[40px] max-w-[490px] font-[var(--font-inter)] text-[14px] leading-[32px] text-white/90 sm:text-[18px]">
-            Turn searches into sales with Google Ads, built to generate qualified leads, not just clicks, by putting your business in front of customers actively searching for your products or services.
-          </p>
-          <Link
-            className="mt-[36px] inline-flex h-[38px] min-w-[178px] items-center justify-center rounded-full bg-white px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-black transition uppercase hover:bg-[#ff6b1f]"
-            href="/contact"
-          >
-            Book a Consultation
-          </Link>
-        </div>
+        <Stagger staggerDelay={0.12}>
+          <StaggerItem>
+            <p className="font-[var(--font-be-vietnam)] text-[10px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white">
+              Google Ads
+            </p>
+          </StaggerItem>
+          <StaggerItem>
+            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[38px] font-bold lowercase leading-[100%] tracking-[1px] sm:text-[60px] text-white">
+              capture high
+              <br />
+              quality leads
+              <br />
+              with{" "}
+              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] lowercase font-bold timesFontFamily italic text-white tracking-[-2.8px]">
+                google ads
+              </span>
+            </h1>
+          </StaggerItem>
+          <StaggerItem>
+            <p className="mt-[40px] max-w-[490px] font-[var(--font-inter)] text-[14px] leading-[32px] text-white/90 sm:text-[18px]">
+              Turn searches into sales with Google Ads, built to generate qualified leads, not just clicks, by putting your business in front of customers actively searching for your products or services.
+            </p>
+          </StaggerItem>
+          <StaggerItem>
+            <Link
+              className="mt-[36px] inline-flex h-[38px] min-w-[178px] items-center justify-center rounded-full bg-white px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-black transition uppercase hover:bg-[#ff6b1f]"
+              href="/contact"
+            >
+              Book a Consultation
+            </Link>
+          </StaggerItem>
+        </Stagger>
 
-        <LightConsultationForm />
+        <FadeRight delay={0.3}>
+          <LightConsultationForm />
+        </FadeRight>
       </div>
     </section>
   );
@@ -209,59 +225,67 @@ function WhyAdsFail() {
   return (
     <section className="border-t border-[#ff5500] bg-white px-6 py-[67px] text-black lg:pb-[88px]">
       <div className="mx-auto max-w-[1150px]">
-        <p className="font-[var(--font-be-vietnam)] text-[10px] font-extrabold sm:text-[14px] uppercase text-[#ff5500]">
-          Problem
-        </p>
+        <Stagger staggerDelay={0.12}>
+          <StaggerItem>
+            <p className="font-[var(--font-be-vietnam)] text-[10px] font-extrabold sm:text-[14px] uppercase text-[#ff5500]">
+              Problem
+            </p>
+          </StaggerItem>
+        </Stagger>
 
         <div className="mt-[28px] grid gap-9 lg:grid-cols-[493px_minmax(0,509px)] lg:items-start lg:justify-between">
-          <div>
-            <h2 className="font-[var(--font-be-vietnam)] text-[40px] font-medium lowercase leading-[1] tracking-[-3%] sm:text-[56px]">
-              why most google
-              <br />
-              ads{" "}
-              <span className="font-[var(--font-cormorant)] text-[1.14em] sm:text-[72px] font-normal timesFontFamily italic">
-                campaigns fail
-              </span>
-            </h2>
-            <div className="mt-[30px]">
-              <GoogleAdsVisual />
+          <FadeLeft delay={0.15}>
+            <div>
+              <h2 className="font-[var(--font-be-vietnam)] text-[40px] font-medium lowercase leading-[1] tracking-[-3%] sm:text-[56px]">
+                why most google
+                <br />
+                ads{" "}
+                <span className="font-[var(--font-cormorant)] text-[1.14em] sm:text-[72px] font-normal timesFontFamily italic">
+                  campaigns fail
+                </span>
+              </h2>
+              <div className="mt-[30px]">
+                <GoogleAdsVisual />
+              </div>
             </div>
-          </div>
+          </FadeLeft>
 
-          <div className="pt-[106px]">
-            <p className="max-w-[480px] font-[var(--font-be-vietnam)] text-[16px] sm:text-[20px] font-semibold leading-[1.95] text-black">
-              Most campaigns don&rsquo;t fail because of budget,
-              <br />
-              they fail because of strategy, structure, and tracking
-            </p>
-            <div className="mt-[29px] grid gap-x-[17px] sm:grid-cols-2">
-              {failPoints.map((point) => (
-                <div
-                  className="flex min-h-[55px] items-center gap-[13px] border-t border-[#d9d9d9] font-[var(--font-be-vietnam)] text-[12px] sm:text-[16px] font-semibold leading-[1.35] text-black last:border-b sm:[&:nth-last-child(2)]:border-b"
-                  key={point}
-                >
-                  <span className="grid size-[21px] shrink-0 place-items-center rounded-full bg-[#ff5500] text-white">
-                    <svg
-                      aria-hidden="true"
-                      className="size-[10px]"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2.5"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="m3.5 8.2 2.7 2.7 6.3-6.8" />
-                    </svg>
-                  </span>
-                  <span>{point}</span>
-                </div>
-              ))}
+          <FadeRight delay={0.25}>
+            <div className="pt-[106px]">
+              <p className="max-w-[480px] font-[var(--font-be-vietnam)] text-[16px] sm:text-[20px] font-semibold leading-[1.95] text-black">
+                Most campaigns don&rsquo;t fail because of budget,
+                <br />
+                they fail because of strategy, structure, and tracking
+              </p>
+              <div className="mt-[29px] grid gap-x-[17px] sm:grid-cols-2">
+                {failPoints.map((point) => (
+                  <div
+                    className="flex min-h-[55px] items-center gap-[13px] border-t border-[#d9d9d9] font-[var(--font-be-vietnam)] text-[12px] sm:text-[16px] font-semibold leading-[1.35] text-black last:border-b sm:[&:nth-last-child(2)]:border-b"
+                    key={point}
+                  >
+                    <span className="grid size-[21px] shrink-0 place-items-center rounded-full bg-[#ff5500] text-white">
+                      <svg
+                        aria-hidden="true"
+                        className="size-[10px]"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2.5"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="m3.5 8.2 2.7 2.7 6.3-6.8" />
+                      </svg>
+                    </span>
+                    <span>{point}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-[28px] border-l-[4px] border-[#ff5500] pl-[7px] font-[var(--font-be-vietnam)] text-[15px] sm:text-[20px] font-semibold leading-[36px] text-black max-w-[430px]">
+                Google Ads isn't about getting more clicks. It's about attracting the right customers.
+              </p>
             </div>
-            <p className="mt-[28px] border-l-[4px] border-[#ff5500] pl-[7px] font-[var(--font-be-vietnam)] text-[15px] sm:text-[20px] font-semibold leading-[36px] text-black max-w-[430px]">
-              Google Ads isn't about getting more clicks. It's about attracting the right customers.
-            </p>
-          </div>
+          </FadeRight>
         </div>
       </div>
     </section>
@@ -345,31 +369,37 @@ function GrowthSystem() {
   return (
     <section className="bg-[#f4f4f4] px-6 py-[62px] text-black lg:pb-[55px]">
       <div className="mx-auto max-w-[1150px]">
-        <p className="font-[var(--font-be-vietnam)] text-[10px] font-extrabold sm:text-[14px] uppercase text-[#ff5500]">
-          System
-        </p>
-        <h2 className="mt-[30px] max-w-[660px] font-[var(--font-be-vietnam)] text-[38px] font-medium lowercase leading-[1] tracking-[-3%] sm:text-[56px]">
-          How We Build Better
-
-          <br />
-          <span className="font-[var(--font-cormorant)] text-[1.15em] font-normal sm:text-[72px] text-[#FF5500] timesFontFamily italic">
-            Google Ads Campaigns
-          </span>
-        </h2>
+        <Stagger staggerDelay={0.12}>
+          <StaggerItem>
+            <p className="font-[var(--font-be-vietnam)] text-[10px] font-extrabold sm:text-[14px] uppercase text-[#ff5500]">
+              System
+            </p>
+          </StaggerItem>
+          <StaggerItem>
+            <h2 className="mt-[30px] max-w-[660px] font-[var(--font-be-vietnam)] text-[38px] font-medium lowercase leading-[1] tracking-[-3%] sm:text-[56px]">
+              How We Build Better
+              <br />
+              <span className="font-[var(--font-cormorant)] text-[1.15em] font-normal sm:text-[72px] text-[#FF5500] timesFontFamily italic">
+                Google Ads Campaigns
+              </span>
+            </h2>
+          </StaggerItem>
+        </Stagger>
         <div className="mt-[45px] grid border-y border-[#dadada] sm:grid-cols-2 lg:grid-cols-4">
-          {systemItems.map((item) => (
-            <article
-              className="min-h-[244px] border-[#dadada] px-[25px] py-[37px] sm:[&:nth-child(even)]:border-l lg:border-l lg:first:border-l-0"
-              key={item.title}
-            >
-              <GrowthIcon />
-              <h3 className="mt-[31px] max-w-[180px] font-[var(--font-be-vietnam)] text-[19px] sm:text-[text-[19px]] font-bold leading-[1.28] tracking-[-0.45px]">
-                {item.title}
-              </h3>
-              <p className="mt-[19px] max-w-[210px] font-[var(--font-inter)] text-[12px] sm:text-[16px] leading-[1.65] text-[#505050]">
-                {item.copy}
-              </p>
-            </article>
+          {systemItems.map((item, i) => (
+            <FadeUp key={item.title} delay={0.1 + i * 0.1}>
+              <article
+                className="min-h-[244px] border-[#dadada] px-[25px] py-[37px] sm:[&:nth-child(even)]:border-l lg:border-l lg:first:border-l-0"
+              >
+                <GrowthIcon />
+                <h3 className="mt-[31px] max-w-[180px] font-[var(--font-be-vietnam)] text-[19px] font-bold leading-[1.28] tracking-[-0.45px]">
+                  {item.title}
+                </h3>
+                <p className="mt-[19px] max-w-[210px] font-[var(--font-inter)] text-[12px] sm:text-[16px] leading-[1.65] text-[#505050]">
+                  {item.copy}
+                </p>
+              </article>
+            </FadeUp>
           ))}
         </div>
       </div>
@@ -379,131 +409,139 @@ function GrowthSystem() {
 
 function CaseStudies() {
   return (
-    <section className="bg-black px-6 py-[78px] text-white  lg:py-[86px]">
+    <section className="bg-black px-6 py-[78px] text-white lg:py-[86px]">
       <div className="mx-auto max-w-[1150px]">
         <div className="flex flex-col gap-7 md:flex-row md:items-end md:justify-between">
-          <div>
-            <p className="font-[var(--font-be-vietnam)] text-[9px] sm:text-[12px] font-normal uppercase tracking-[4.8px] text-[#ff5500]">
-              PROJECTS
-            </p>
-            <h2 className="mt-[24px] max-w-[510px] font-[var(--font-be-vietnam)] text-[38px] font-medium lowercase leading-[1.08] tracking-[-1.4px] sm:text-[56px]">
-              see how we turn
-              <br />
-              search {" "}
-              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] font-normal timesFontFamily italic">
-                into revenue
-              </span>
-            </h2>
-            <p className="mt-[20px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.7] text-white">
-              Explore how we’ve helped brands generate high-quality leads and scale through Google Ads.
-            </p>
-          </div>
-          <Link
-            className="inline-flex h-[42px] w-[158px] items-center justify-center rounded-full border border-white/80 font-[var(--font-be-vietnam)] text-[12px] font-normal text-white transition hover:border-white hover:bg-white hover:text-black"
-            href="/projects"
-          >
-            View all projects <span className="ml-[4px]">-&gt;</span>
-          </Link>
+          <Stagger staggerDelay={0.12}>
+            <StaggerItem>
+              <p className="font-[var(--font-be-vietnam)] text-[9px] sm:text-[12px] font-normal uppercase tracking-[4.8px] text-[#ff5500]">
+                PROJECTS
+              </p>
+            </StaggerItem>
+            <StaggerItem>
+              <h2 className="mt-[24px] max-w-[650px] font-[var(--font-be-vietnam)] text-[38px] font-medium lowercase leading-[0.9] tracking-[-1.4px] sm:text-[56px]">
+                see how we turn
+                <br />
+                search{" "}
+                <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] font-normal timesFontFamily italic">
+                  into revenue
+                </span>
+              </h2>
+            </StaggerItem>
+            <StaggerItem>
+              <p className="mt-[18px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.5] text-white">
+                Explore how we've helped brands generate high-quality leads and scale through Google Ads.
+              </p>
+            </StaggerItem>
+          </Stagger>
+          <FadeRight delay={0.3}>
+            <Link
+              className="inline-flex h-[42px] w-[158px] items-center justify-center rounded-full border border-white/80 font-[var(--font-be-vietnam)] text-[12px] font-normal text-white transition hover:border-white hover:bg-white hover:text-black"
+              href="/projects"
+            >
+              View all projects <span className="ml-[4px]">-&gt;</span>
+            </Link>
+          </FadeRight>
         </div>
 
         {/* Cards */}
-                <div className="mt-[40px] grid gap-[24px] md:grid-cols-2">
-                  {relatedProjects.map((project) => (
-                    <article
-                      key={project.name}
-                      className="rounded-[20px] border border-white p-[14px]"
-                    >
-                      <div className="relative aspect-[420/260] w-full overflow-hidden max-w-[534px] rounded-[12px] bg-[#111]">
-                        <Image
-                          src={project.image}
-                          alt={`${project.name} marketing strategy project`}
-                          fill
-                          sizes="(min-width: 768px) 45vw, calc(100vw - 48px)"
-                          className="object-cover"
-                        />
-                      </div>
-        
-                      <div className="px-[10px] pt-[24px] pb-[6px]">
-                        {/* Title + year */}
-                        <div className="flex items-baseline justify-between gap-3">
-                          <h3 className="font-[var(--font-be-vietnam)] text-[22px] sm:text-[36px] font-normal leading-none tracking-[-0.72px]">
-                            {project.name}
-                          </h3>
-                          <span className="shrink-0 font-[var(--font-inter)] text-[14px] text-white">
-                            {project.year}
-                          </span>
-                        </div>
-        
-                        {/* Copy */}
-                        <p className="mt-[14px] max-w-[420px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[28px] text-white">
-                          {project.copy}
-                        </p>
-        
-                        {/* Tags */}
-                        <div className="mt-[20px] flex flex-wrap gap-[10px]">
-                          {(project.tags ?? []).map((tag) => (
-                            <span
-                              key={tag}
-                              className="rounded-full border border-white px-[14px] py-[7px] font-[var(--font-inter)] text-[12px] text-white/90"
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </article>
-                  ))}
-        
-                  {/* Mobile-only view all link, shown below cards on small screens */}
-                  <Link
-                    href="/projects"
-                    className="sm:hidden inline-flex w-fit items-center gap-2 rounded-full border border-white/30 px-5 py-3 font-[var(--font-inter)] text-[12px] text-white/85 transition-colors hover:border-white/60 hover:text-white"
-                  >
-                    View all projects
-                    <span aria-hidden="true">→</span>
-                  </Link>
+        <div className="mt-[40px] grid gap-[24px] md:grid-cols-2">
+          {relatedProjects.map((project, i) => (
+            <FadeUp key={project.name} delay={0.15 + i * 0.15}>
+              <Link
+                href={`/projects/${project.slug}`}
+                className="block rounded-[20px] border border-white p-[14px] transition-colors duration-300 hover:border-[#ff5500] group"
+              >
+                <div className="relative aspect-[420/260] w-full overflow-hidden max-w-[534px] rounded-[12px] bg-[#111]">
+                  <Image
+                    src={project.image}
+                    alt={`${project.name} marketing strategy project`}
+                    fill
+                    sizes="(min-width: 768px) 45vw, calc(100vw - 48px)"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
                 </div>
+
+                <div className="px-[10px] pt-[24px] pb-[6px]">
+                  <div className="flex items-baseline justify-between gap-3">
+                    <h3 className="font-[var(--font-be-vietnam)] text-[22px] sm:text-[36px] font-normal leading-none tracking-[-0.72px] group-hover:text-[#ff5500] transition-colors duration-300">
+                      {project.name}
+                    </h3>
+                    <span className="shrink-0 font-[var(--font-inter)] text-[14px] text-white">
+                      {project.year}
+                    </span>
+                  </div>
+
+                  <p className="mt-[14px] max-w-[420px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[28px] text-white">
+                    {project.copy}
+                  </p>
+
+                  <div className="mt-[20px] flex flex-wrap gap-[10px]">
+                    {(project.tags ?? []).map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full border border-white px-[14px] py-[7px] font-[var(--font-inter)] text-[12px] text-white/90 group-hover:border-[#ff5500]/50 transition-colors duration-300"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </Link>
+            </FadeUp>
+          ))}
+        </div>
       </div>
     </section>
   );
 }
 
 
+
 function WorkTogether() {
   return (
     <section className="border-t border-black bg-white px-6 py-[66px] text-black lg:pb-[62px]">
       <div className="mx-auto max-w-[1150px]">
-        <p className="font-[var(--font-be-vietnam)] text-[9px] font-normal sm:text-[12px] uppercase tracking-[4.8px] text-[#ff5500]">
-          Ways To Work With Us
-        </p>
-        <h2 className="mt-[21px] font-[var(--font-be-vietnam)] text-[39px] font-medium lowercase leading-none tracking-[-3.5px] sm:text-[56px]">
-          Our Google{" "}
-          <span className="font-[var(--font-cormorant)] text-[1.16em] sm:text-[72px] tracking-[-3.5px] font-extralight timesFontFamily text-[#FF5500] italic">
-            Ads Process
-          </span>
-        </h2>
-        <p className="mt-[24px] max-w-[780px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.55] text-[#404040]">
-          Whether you&rsquo;re just getting started or ready to scale, we have a way to work together.
-        </p>
+        <Stagger staggerDelay={0.12}>
+          <StaggerItem>
+            <p className="font-[var(--font-be-vietnam)] text-[9px] font-normal sm:text-[12px] uppercase tracking-[4.8px] text-[#ff5500]">
+              Ways To Work With Us
+            </p>
+          </StaggerItem>
+          <StaggerItem>
+            <h2 className="mt-[21px] font-[var(--font-be-vietnam)] text-[39px] font-medium lowercase leading-none tracking-[-3.5px] sm:text-[56px]">
+              Our Google{" "}
+              <span className="font-[var(--font-cormorant)] text-[1.16em] sm:text-[72px] tracking-[-3.5px] font-extralight timesFontFamily text-[#FF5500] italic">
+                Ads Process
+              </span>
+            </h2>
+          </StaggerItem>
+          <StaggerItem>
+            <p className="mt-[24px] max-w-[780px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.55] text-[#404040]">
+              Whether you&rsquo;re just getting started or ready to scale, we have a way to work together.
+            </p>
+          </StaggerItem>
+        </Stagger>
         <div className="mt-[49px] grid border border-[#d8d8d8] sm:grid-cols-2">
           {workWays.map((way, index) => (
-            <article
-              className={`min-h-[188px] px-[38px] py-[40px] ${
-                index % 2 ? "sm:border-l sm:border-[#d8d8d8]" : ""
-              } ${index > 1 ? "border-t border-[#d8d8d8]" : ""}`}
-              key={way.title}
-            >
-              <div className="flex items-center gap-[10px] font-[var(--font-inter)] text-[9px] leading-none text-black/45">
-                <span className="size-[8px] rounded-full bg-[#ff5500]" />
-                <span>{index + 1}</span>
-              </div>
-              <h3 className="mt-[22px] font-[var(--font-be-vietnam)] text-[24px] sm:text-[30px] font-semibold leading-tight">
-                {way.title}
-              </h3>
-              <p className="mt-[12px] max-w-[400px] font-[var(--font-inter)] text-[15px] sm:text-[18px] leading-[1.55] text-[#404040]">
-                {way.copy}
-              </p>
-            </article>
+            <FadeUp key={way.title} delay={0.1 + index * 0.1}>
+              <article
+                className={`min-h-[188px] px-[38px] py-[40px] ${
+                  index % 2 ? "sm:border-l sm:border-[#d8d8d8]" : ""
+                } ${index > 1 ? "border-t border-[#d8d8d8]" : ""}`}
+              >
+                <div className="flex items-center gap-[10px] font-[var(--font-inter)] text-[9px] leading-none text-black/45">
+                  <span className="size-[8px] rounded-full bg-[#ff5500]" />
+                  <span>{index + 1}</span>
+                </div>
+                <h3 className="mt-[22px] font-[var(--font-be-vietnam)] text-[24px] sm:text-[30px] font-semibold leading-tight">
+                  {way.title}
+                </h3>
+                <p className="mt-[12px] max-w-[400px] font-[var(--font-inter)] text-[15px] sm:text-[18px] leading-[1.55] text-[#404040]">
+                  {way.copy}
+                </p>
+              </article>
+            </FadeUp>
           ))}
         </div>
       </div>
@@ -543,63 +581,59 @@ function RevenueMethod() {
   return (
     <div className="w-full bg-black text-white py-20 px-6 min-h-screen flex flex-col justify-center items-center font-sans">
       <div className="max-w-[1150px] w-full">
-
-        {/* Header Section */}
-        {/* Heading */}
-        <h2 className="lowercase text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-16">
-          how we capture demand  <br />
-          and turn it into{" "}
-          <span
-            className="italic text-[#ff5500] font-normal text-[1.1em] tracking-[-3%] sm:text-[72px] sm:leading-[70px]"
-            style={{ fontFamily: "'Times New Roman', Times, serif" }}
-          >
-            revenue
-          </span>
-        </h2>
+        <Stagger staggerDelay={0.12}>
+          <StaggerItem>
+            <h2 className="lowercase text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-16">
+              how we capture demand  <br />
+              and turn it into{" "}
+              <span
+                className="italic text-[#ff5500] font-normal text-[1.1em] tracking-[-3%] sm:text-[72px] sm:leading-[70px]"
+                style={{ fontFamily: "'Times New Roman', Times, serif" }}
+              >
+                revenue
+              </span>
+            </h2>
+          </StaggerItem>
+        </Stagger>
 
         {/* Grid Container */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center items-center">
-          {CARDS_DATA.map((card) => (
-            <div
-              key={card.id}
-              style={{
-                width: '1285.61px', // Scaled proportions fallback or driven via wrapper max-width
-                maxWidth: '100%',
-                height: '606.93px',
-                backgroundImage: `url(${card.bgImage})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-              }}
-              className="group relative rounded-[28px] overflow-hidden p-6 flex flex-col justify-between cursor-pointer transition-all duration-500 ease-out"
-            >
-              {/* Card Number */}
+          {CARDS_DATA.map((card, i) => (
+            <FadeUp key={card.id} delay={0.1 + i * 0.1}>
               <div
-                className="text-[9.82px] font-medium leading-[14.73px] tracking-[2.95px] text-white opacity-80 align-middle"
-                style={{ fontStyle: 'Medium' }}
+                style={{
+                  width: '1285.61px',
+                  maxWidth: '100%',
+                  height: '606.93px',
+                  backgroundImage: `url(${card.bgImage})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+                className="group relative rounded-[28px] overflow-hidden p-6 flex flex-col justify-between cursor-pointer transition-all duration-500 ease-out"
               >
-                {card.id}
-              </div>
-
-              {/* Bottom Content Group (Animates Up on Hover) */}
-              <div className="transform translate-y-[80px] group-hover:translate-y-0 transition-transform duration-500 ease-out will-change-transform">
-
-                {/* Title */}
-                <h3
-                  className="text-[22.64px] font-normal leading-[26.78px] tracking-[0%] text-white align-middle mb-3"
-                  style={{ fontStyle: 'Regular' }}
+                <div
+                  className="text-[9.82px] font-medium leading-[14.73px] tracking-[2.95px] text-white opacity-80 align-middle"
+                  style={{ fontStyle: 'Medium' }}
                 >
-                  {card.title}
-                </h3>
+                  {card.id}
+                </div>
 
-                {/* Description (Fades and slides in cleanly) */}
-                <p
-                  className="text-[15.5px] font-normal leading-[18.86px] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 ease-out"
-                  style={{ fontStyle: 'Regular' }}
-                >
-                  {card.description}
-                </p>
+                <div className="transform translate-y-[80px] group-hover:translate-y-0 transition-transform duration-500 ease-out will-change-transform">
+                  <h3
+                    className="text-[22.64px] font-normal leading-[26.78px] tracking-[0%] text-white align-middle mb-3"
+                    style={{ fontStyle: 'Regular' }}
+                  >
+                    {card.title}
+                  </h3>
+                  <p
+                    className="text-[15.5px] font-normal leading-[18.86px] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 ease-out"
+                    style={{ fontStyle: 'Regular' }}
+                  >
+                    {card.description}
+                  </p>
+                </div>
               </div>
-            </div>
+            </FadeUp>
           ))}
         </div>
 
@@ -611,30 +645,33 @@ function RevenueMethod() {
 function FinalCta() {
   return (
     <section className="bg-black px-6 pt-[70px] text-white pb-30">
-      <div className="mx-auto max-w-[1150px] text-center">
-        <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
-           LET&apos;S SCALE
-        </p>
-        <h2 className="mt-8 font-[var(--font-be-vietnam)] text-[36px] font-medium leading-[1.08] tracking-[-1.5px] sm:text-[55px]">
-          ready to scale
-          <br />
-          with{" "}
-          <span className="font-[var(--font-cormorant)] text-[1.12em] font-extralight timesFontFamily italic text-[#ff5500]">
-            meta ads?
-          </span>
-        </h2>
-        <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Link
-            className="inline-flex h-[42px] min-w-[190px] items-center justify-center rounded-full bg-[#ff5500] px-8 font-[var(--font-be-vietnam)] text-[12px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
-            href="/contact"
-          >
-            Book a Consultation
-          </Link>
-          {/* <Link className="font-[var(--font-be-vietnam)] text-[13px] font-medium text-white/80 transition hover:text-white border-white border rounded-full px-6 h-[48px] inline-flex items-center justify-center" href="#services">
-            Book a Strategy Call
-          </Link> */}
-        </div>
-      </div>
+      <Stagger staggerDelay={0.12} className="mx-auto max-w-[1150px] text-center">
+        <StaggerItem>
+          <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
+             LET&apos;S SCALE
+          </p>
+        </StaggerItem>
+        <StaggerItem>
+          <h2 className="mt-8 font-[var(--font-be-vietnam)] text-[36px] font-medium leading-[1.08] tracking-[-1.5px] sm:text-[55px]">
+            ready to scale
+            <br />
+            with{" "}
+            <span className="font-[var(--font-cormorant)] text-[1.12em] font-extralight timesFontFamily italic text-[#ff5500]">
+              google ads?
+            </span>
+          </h2>
+        </StaggerItem>
+        <StaggerItem>
+          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Link
+              className="inline-flex h-[42px] min-w-[190px] items-center justify-center rounded-full bg-[#ff5500] px-8 font-[var(--font-be-vietnam)] text-[12px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
+              href="/contact"
+            >
+              Book a Consultation
+            </Link>
+          </div>
+        </StaggerItem>
+      </Stagger>
     </section>
   );
 }
@@ -719,11 +756,9 @@ export default function GoogleAdsPage() {
         rightTitle="The USS Difference"
         leftPoints={googleAdsBrandPoints}
         rightPoints={googleAdsUssPoints}
+        centerLogo="/assets/Google__logo.webp"
       />
       <WhyGoogleAdsWork />
-      {/* <WhyAdsFail /> */}
-      {/* <GoogleServices /> */}
-      {/* <GrowthSystem /> */}
       <PlatformsWeWorkWith
         heading={
           <h2

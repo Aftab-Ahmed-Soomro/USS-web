@@ -141,6 +141,7 @@ export function WhyEmailFails({
     leftPoints = brandPoints,
     rightPoints = ussPoints,
     hideBadge = false,
+    centerLogo,
 }: {
     tagline?: string;
     heading?: React.ReactNode;
@@ -150,6 +151,7 @@ export function WhyEmailFails({
     leftPoints?: Point[];
     rightPoints?: Point[];
     hideBadge?: boolean;
+    centerLogo?: string;
 } = {}) {
     return (
         <section className="bg-black px-4 py-[80px] text-white sm:px-8 lg:px-14">
@@ -248,7 +250,11 @@ export function WhyEmailFails({
                                 <div className="relative flex items-center justify-center">
                                     <img src="/assets/circled.png" alt="" className="w-[310px] object-contain" />
                                     {!hideBadge && (
-                                        <img src="/assets/klaviyo-logo-white.webp" alt="Klaviyo" className="absolute w-[140px] ml-1 object-contain" />
+                                        <img
+                                            src={centerLogo ?? "/assets/klaviyo-logo-white.webp"}
+                                            alt="center logo"
+                                            className="absolute w-[140px] ml-1 object-contain"
+                                        />
                                     )}
                                 </div>
                             </ScaleIn>
@@ -297,7 +303,11 @@ export function WhyEmailFails({
                                 <div className="relative flex items-center justify-center">
                                     <img src="/assets/circled.png" alt="" className="w-[200px] object-contain" />
                                     {!hideBadge && (
-                                        <img src="/assets/klaviyo-logo-white.webp" alt="Klaviyo" className="absolute w-[100px] object-contain" />
+                                        <img
+                                            src={centerLogo ?? "/assets/klaviyo-logo-white.webp"}
+                                            alt="center logo"
+                                            className="absolute w-[100px] object-contain"
+                                        />
                                     )}
                                 </div>
                             </ScaleIn>

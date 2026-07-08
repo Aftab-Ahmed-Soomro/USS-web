@@ -1,4 +1,7 @@
 import Image from "next/image";
+import FadeLeft from "./FadeLeft";
+import FadeRight from "./FadeRight";
+import FadeUp from "./FadeUp";
 
 const items = [
   {
@@ -31,71 +34,105 @@ const items = [
   },
 ];
 
+/**
+ * Icon positions follow the right curved edge of the image.
+ * Image: 580×680px, effective border-radius ≈ 340px on right corners,
+ * arc center at (240, 340). Curve: x(y) = 240 + √(340² − (y−340)²)
+ * right = 580 − x_curve(y) − 26   (26 = half of 52px icon)
+ *
+ * y=13% (88px):  x≈468 → right=86px   (icon inward — top of curve)
+ * y=36% (245px): x≈566 → right=-12px  (near widest point)
+ * y=57% (388px): x≈577 → right=-23px  (slightly past widest)
+ * y=78% (530px): x≈522 → right=32px   (icon inward — bottom of curve)
+ */
+const iconPositions = [
+  { top: "19%", right: "40px" },
+  { top: "40%", right: "-12px" },
+  { top: "63%", right: "-13px" },
+  { top: "85%", right: "72px" },
+];
+
 export function WhyGoogleAdsWork() {
   return (
     <section className="bg-[#0a0a0a] overflow-hidden">
       <div className="mx-auto max-w-[1150px] px-4 sm:px-8 lg:px-0">
+
         {/* Heading — top right aligned */}
-        <div className="flex justify-end pt-[60px] pb-0 relative z-10 pr-0">
-          <h2
-            className="text-white text-right"
-            style={{
-              fontWeight: 500,
-              fontSize: "clamp(36px, 5vw, 56px)",
-              lineHeight: "80px",
-              letterSpacing: "-3px",
-              textTransform: "lowercase",
-              fontFamily: "var(--font-be-vietnam)",
-            }}
-          >
-            why{" "}
-            <span
+        <FadeRight delay={0.1}>
+          <div className="flex justify-end pt-[60px] pb-0 relative z-10 mr-26 pr-0">
+            <h2
+              className="text-white text-right"
               style={{
-                fontFamily: "'Times New Roman', Times, serif",
-                fontWeight: 400,
-                fontStyle: "italic",
-                fontSize: "clamp(44px, 6vw, 72px)",
+                fontWeight: 500,
+                fontSize: "clamp(36px, 5vw, 56px)",
                 lineHeight: "80px",
                 letterSpacing: "-3px",
+                textTransform: "lowercase",
+                fontFamily: "var(--font-be-vietnam)",
               }}
             >
-              google ads
-            </span>{" "}
-            work
-          </h2>
-        </div>
-
-        {/* Body: image left, list right */}
-        <div className="flex flex-col lg:flex-row items-start gap-0 mt-[-20px]">
-          {/* Left — rounded bottom image */}
-          <div className="relative w-full lg:w-[580px] shrink-0">
-            <div
-              className="relative w-full lg:w-[580px] overflow-hidden"
-              style={{
-                aspectRatio: "580 / 680",
-                borderRadius: "0px 1550px 1550px 0px ",
-              }}
-            >
-              <Image
-                src="/assets/googleAds/leftPicture.jpg"
-                alt="Team working on Google Ads strategy"
-                fill
-                sizes="(min-width: 1024px) 580px, 100vw"
-                className="object-cover"
-                priority
-              />
-            </div>
+              why{" "}
+              <span
+                style={{
+                  fontFamily: "'Times New Roman', Times, serif",
+                  fontWeight: 400,
+                  fontStyle: "italic",
+                  fontSize: "clamp(44px, 6vw, 72px)",
+                  lineHeight: "80px",
+                  letterSpacing: "-3px",
+                }}
+              >
+                google ads
+              </span>{" "}
+              work
+            </h2>
           </div>
+        </FadeRight>
 
-          {/* Right — feature list */}
-          <div className="flex-1 flex flex-col justify-center pt-[80px] lg:pt-[100px] lg:pl-[56px] pb-[60px]">
-            <div className="flex flex-col gap-[44px]">
-              {items.map((item) => (
-                <div key={item.number} className="flex items-start gap-[22px]">
+        {/* Body: image left (with edge icons), text right */}
+        <div className="flex flex-col lg:flex-row items-start gap-0 mt-[-20px]">
+
+          {/* Left — image + absolutely positioned edge icons */}
+          <FadeLeft delay={0.2}>
+            {/* overflow-visible so icons can protrude past the image edge */}
+            <div className="relative w-full lg:w-[580px] shrink-0" style={{ overflow: "visible" }}>
+
+              {/* The actual clipped image */}
+              <div
+                className="relative w-full lg:w-[580px] overflow-hidden"
+                style={{
+                  aspectRatio: "580 / 680",
+                  borderRadius: "0px 1550px 1550px 0px",
+                }}
+              >
+                <Image
+                  src="/assets/googleAds/leftPicture.jpg"
+                  alt="Team working on Google Ads strategy"
+                  fill
+                  sizes="(min-width: 1024px) 580px, 100vw"
+                  className="object-cover"
+                  priority
+                />
+              </div>
+
+              {/* Icon circles following the curve of the rounded right edge */}
+              {items.map((item, i) => (
+                <div
+                  key={item.number}
+                  className="absolute z-20 hidden lg:flex items-center gap-[8px]"
+                  style={{
+                    top: iconPositions[i].top,
+                    right: iconPositions[i].right,
+                    transform: "translateY(-50%)",
+                  }}
+                >
                   {/* Icon circle */}
                   <div
-                    className="shrink-0 flex items-center justify-center size-[52px] rounded-full"
-                    style={{ background: "#1c1c1c", border: "1px solid rgba(255,255,255,0.08)" }}
+                    className="flex items-center justify-center size-[52px] rounded-full shrink-0"
+                    style={{
+                      background: "#000",
+                      border: "1px solid #FF550059"
+                    }}
                   >
                     <Image
                       src={item.icon}
@@ -105,15 +142,37 @@ export function WhyGoogleAdsWork() {
                       className="object-contain"
                     />
                   </div>
+                  {/* Number label to the right of icon */}
+                  {/* <p
+                    style={{
+                      fontFamily: "var(--font-inter)",
+                      fontWeight: 600,
+                      fontSize: "10px",
+                      letterSpacing: "3px",
+                      textTransform: "uppercase",
+                      color: "#ff5500",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    {item.number}
+                  </p> */}
+                </div>
+              ))}
+            </div>
+          </FadeLeft>
 
-                  {/* Text */}
+          {/* Right — title + description only (no icons) */}
+          <div className="flex-1 flex flex-col justify-center pt-[80px] lg:pt-[110px] lg:pl-[80px] pb-[60px]">
+            <div className="flex flex-col gap-[52px]" >
+              {items.map((item, i) => (
+                <FadeUp key={item.number} delay={0.25 + i * 0.12}>
                   <div>
+                    {/* Number — always visible above title */}
                     <p
                       style={{
                         fontFamily: "var(--font-inter)",
                         fontWeight: 600,
                         fontSize: "11px",
-                        lineHeight: "16.5px",
                         letterSpacing: "3.3px",
                         textTransform: "uppercase",
                         color: "#ff5500",
@@ -128,7 +187,6 @@ export function WhyGoogleAdsWork() {
                         fontWeight: 700,
                         fontSize: "18px",
                         lineHeight: "24.75px",
-                        letterSpacing: "0",
                         color: "#ffffff",
                         marginBottom: "8px",
                       }}
@@ -141,20 +199,21 @@ export function WhyGoogleAdsWork() {
                         fontWeight: 400,
                         fontSize: "14px",
                         lineHeight: "22.75px",
-                        letterSpacing: "0",
-                        color: "rgba(255,255,255,0.55)",
+                        color: "#FFFFFFB8",
                         maxWidth: "270px",
                       }}
                     >
                       {item.description}
                     </p>
                   </div>
-                </div>
+                </FadeUp>
               ))}
             </div>
           </div>
+
         </div>
-    </div>
-    </section >
+      </div>
+    </section>
   );
 }
+
