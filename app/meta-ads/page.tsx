@@ -75,9 +75,9 @@ function Hero() {
       <div className="mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
-            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[38px] font-bold lowercase leading-[100%] tracking-[-1px] sm:text-[65px] text-white">
+            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[38px] font-bold lowercase leading-[100%] tracking-[-3px] sm:text-[58px] text-white">
               scale your brand with meta ads, don’t just{" "}
-              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] lowercase font-normal timesFontFamily italic text-[#FF5500] tracking-[-2px]">
+              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] lowercase font-normal timesFontFamily italic text-[#FF5500] tracking-[-2.8px]">
                 spending more.
               </span>
             </h1>
@@ -644,7 +644,7 @@ export default function MetaAdsPage() {
       />
       <TargetRightPeople />
       <WhyEmailFails
-              hideBadge={true}
+              hideBadge={false}
               heading={
                 <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
                   why most{" "}
@@ -662,6 +662,8 @@ export default function MetaAdsPage() {
               rightTitle="The USS Difference"
               leftPoints={googleAdsBrandPoints}
               rightPoints={googleAdsUssPoints}
+              centerLogo="/assets/meta__logo.jpg"
+      logoClassName="w-[80px] lg:w-[115px]"
             />
             
       <RevenueMethod />

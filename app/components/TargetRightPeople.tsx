@@ -98,7 +98,7 @@ function solveTForX(targetX: number) {
 
 // Left offsets as % of container width — tuned to match the mockup,
 // with the outer two nodes closer to the edges.
-const leftPercents = [8.5, 25, 41.4, 58.7, 75, 93.5];
+const leftPercents = [5.5, 23.5, 41.4, 58.7, 77, 95];
 
 // Height of the icon row below the curve (number + icon + title + desc)
 const ICON_ROW_TOP = 300; // px from top of container where the icon row starts
@@ -165,6 +165,7 @@ export default function TargetRightPeople() {
               viewBox="0 0 1400 200"
               preserveAspectRatio="none"
               fill="none"
+              style={{ overflow: 'visible' }}
             >
               <defs>
                 <filter id="glow" x="-20%" y="-200%" width="140%" height="500%">
@@ -174,15 +175,15 @@ export default function TargetRightPeople() {
                     <feMergeNode in="SourceGraphic" />
                   </feMerge>
                 </filter>
-                <linearGradient id="arcFade" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stopColor="#ff5500" stopOpacity="0.15" />
-                  <stop offset="15%" stopColor="#ff5500" stopOpacity="1" />
-                  <stop offset="85%" stopColor="#ff5500" stopOpacity="1" />
-                  <stop offset="100%" stopColor="#ff5500" stopOpacity="0.15" />
+                <linearGradient id="arcFade" x1="-1000" y1="0" x2="2400" y2="0" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stopColor="#ff5500" stopOpacity="0.0" />
+                  <stop offset="20%" stopColor="#ff5500" stopOpacity="1" />
+                  <stop offset="80%" stopColor="#ff5500" stopOpacity="1" />
+                  <stop offset="100%" stopColor="#ff5500" stopOpacity="0.0" />
                 </linearGradient>
               </defs>
               <path
-                d="M -50 -30 Q 700 260 1450 -30"
+                d="M -3050 -3510 Q 700 3740 4450 -3510"
                 stroke="url(#arcFade)"
                 strokeWidth="2.5"
                 filter="url(#glow)"

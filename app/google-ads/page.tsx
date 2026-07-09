@@ -139,13 +139,13 @@ function Hero() {
             </p>
           </StaggerItem>
           <StaggerItem>
-            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[38px] font-bold lowercase leading-[100%] tracking-[1px] sm:text-[56px] text-white">
+            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[38px] font-bold lowercase leading-[100%] tracking-[-3px] sm:text-[58px] text-white">
               capture high
               <br />
               quality leads
               <br />
               with{" "}
-              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] lowercase font-bold timesFontFamily italic text-white tracking-[1px]">
+              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] lowercase font-bold timesFontFamily italic text-white tracking-[-2.8px]">
                 google ads
               </span>
             </h1>
