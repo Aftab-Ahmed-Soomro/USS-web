@@ -10,6 +10,8 @@ import { ConsultationForm } from "../components/ConsultationForm";
 import { GoodCompanyMap } from "../components/GoodCompanyMap";
 import { WhyEmailFails } from "../components/WhyEmailFails";
 import TargetRightPeople from "../components/TargetRightPeople";
+import { WhyGoogleAdsWork } from "../components/WhyGoogleAdsWork";
+import StaggerItem from "../components/Staggeritem";
 
 const failPoints = [
   "Creative that fails to capture attention",
@@ -27,18 +29,22 @@ const stats = [
 
 const relatedProjects = [
   {
-    name: "Blank DXB",
-    image: "/assets/dxb.jpg",
-    copy: "With a strong Meta Ads execution we focused on Paid Media during Blank DXB launch. We were able to target demand on a granular level making budget efficiency higher",
-    tags: ["Paid Media", "Meta Ads Targeting", "Lead Generation"],
+    slug: "reclaim-us",
+    name: "Reclaim",
+    image: "/assets/reclare.png",
+    copy: "We scaled awareness and customer acquisition across the US using Meta Ads, delivering highly targeted campaigns that generated bookings while maximising return on ad spend.",
+    tags: ["Meta Ads", "US Expansion", "Customer Acquisition"],
     year: "2024",
+    imageClassName: "object-cover object-[50%_55%]",
   },
   {
+    slug: "supperclub",
     name: "SupperClub",
     image: "/assets/club.jpg",
-    copy: "We increased SupperClub membership using Meta Ads to drive members using creative assets and location targeting",
-    tags: ["Membership Increase", "Hospitality"],
+    copy: "Using Meta Ads to grow SupperClub memberships, promoting exclusive experiences from 5-star hotel, restaurant and spa partners through highly targeted acquisition campaigns.",
+    tags: ["Membership Growth", "Meta Ads", "Hospitality"],
     year: "2024",
+    imageClassName: "object-cover object-[50%_65%]",
   },
 ];
 
@@ -282,91 +288,87 @@ function HowItWorks() {
   );
 }
 
-function BrandWork() {
+function RelatedProjects() {
   return (
-    <section className="bg-black px-6 py-[78px] text-white  lg:py-[86px]">
+    <section className="bg-[#080808] px-6 py-[56px] text-white">
       <div className="mx-auto max-w-[1150px]">
-        <div className="flex flex-col gap-7 md:flex-row md:items-end md:justify-between">
-          <div>
-            <p className="font-[var(--font-be-vietnam)] text-[9px] sm:text-[12px] font-normal uppercase tracking-[4.8px] text-[#ff5500]">
-              PROJECTS
-            </p>
-            <h2 className="mt-[24px] max-w-[470px] font-[var(--font-be-vietnam)] text-[38px] font-medium lowercase leading-[1.08] tracking-[-1.4px] sm:text-[56px]">
-              see how we
-              <br />
-              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] font-normal timesFontFamily italic">
-                scale brands.
-              </span>
-            </h2>
-            <p className="mt-[20px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.7] text-white">
-              Explore how we&apos;ve helped brands grow through Meta Ads.
-            </p>
-          </div>
+        {/* Header */}
+        <div className="flex items-center justify-between gap-6">
+          <h2 className="font-[var(--font-be-vietnam)] text-[28px] sm:text-[56px] font-medium lowercase leading-none tracking-[-0.96px]">
+            related{" "}
+            <span className="font-[var(--font-cormorant)] text-[1.18em] sm:text-[72px] font-normal timesFontFamily italic tracking-[-0.96px]">
+              projects
+            </span>
+          </h2>
+
           <Link
-            className="inline-flex h-[42px] w-[158px] items-center justify-center rounded-full border border-white/80 font-[var(--font-be-vietnam)] text-[12px] font-normal text-white transition hover:border-white hover:bg-white hover:text-black"
             href="/projects"
+            className="hidden sm:inline-flex shrink-0 items-center gap-2 rounded-full border border-white px-5 py-3 font-[var(--font-inter)] text-[12px] text-white sm:text-[15px]"
           >
-            View all projects <span className="ml-[4px]">-&gt;</span>
+            View all projects
+            <img src="/assets/rightArrowMed.png" className="w-4 h-4" alt="" />
           </Link>
         </div>
 
         {/* Cards */}
-                <div className="mt-[40px] grid gap-[24px] md:grid-cols-2">
-                  {relatedProjects.map((project) => (
-                    <article
-                      key={project.name}
-                      className="rounded-[20px] border border-white p-[14px]"
-                    >
-                      <div className="relative aspect-[420/260] w-full overflow-hidden max-w-[534px] rounded-[12px] bg-[#111]">
-                        <Image
-                          src={project.image}
-                          alt={`${project.name} marketing strategy project`}
-                          fill
-                          sizes="(min-width: 768px) 45vw, calc(100vw - 48px)"
-                          className="object-cover"
-                        />
-                      </div>
-        
-                      <div className="px-[10px] pt-[24px] pb-[6px]">
-                        {/* Title + year */}
-                        <div className="flex items-baseline justify-between gap-3">
-                          <h3 className="font-[var(--font-be-vietnam)] text-[22px] sm:text-[36px] font-normal leading-none tracking-[-0.72px]">
-                            {project.name}
-                          </h3>
-                          <span className="shrink-0 font-[var(--font-inter)] text-[14px] text-white">
-                            {project.year}
-                          </span>
-                        </div>
-        
-                        {/* Copy */}
-                        <p className="mt-[14px] max-w-[420px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[28px] text-white">
-                          {project.copy}
-                        </p>
-        
-                        {/* Tags */}
-                        <div className="mt-[20px] flex flex-wrap gap-[10px]">
-                          {(project.tags ?? []).map((tag) => (
-                            <span
-                              key={tag}
-                              className="rounded-full border border-white px-[14px] py-[7px] font-[var(--font-inter)] text-[12px] text-white/90"
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </article>
-                  ))}
-        
-                  {/* Mobile-only view all link, shown below cards on small screens */}
-                  <Link
-                    href="/projects"
-                    className="sm:hidden inline-flex w-fit items-center gap-2 rounded-full border border-white/30 px-5 py-3 font-[var(--font-inter)] text-[12px] text-white/85 transition-colors hover:border-white/60 hover:text-white"
-                  >
-                    View all projects
-                    <span aria-hidden="true">→</span>
-                  </Link>
+        <div className="mt-[40px] grid gap-[24px] md:grid-cols-2">
+          {relatedProjects.map((project) => (
+            <StaggerItem key={project.name}>
+              <Link
+                href={`/projects/${project.slug}`}
+                className="block rounded-[20px] border border-white p-[14px] transition-colors duration-300 hover:border-[#ff5500] group"
+              >
+                <div className="relative aspect-[420/260] w-full overflow-hidden max-w-[534px] rounded-[12px] bg-[#111]">
+                  <Image
+                    src={project.image}
+                    alt={`${project.name} marketing strategy project`}
+                    fill
+                    sizes="(min-width: 768px) 45vw, calc(100vw - 48px)"
+                    className={`${project.imageClassName || 'object-cover'} transition-transform duration-700 group-hover:scale-105`}
+                  />
                 </div>
+
+                <div className="px-[10px] pt-[24px] pb-[6px]">
+                  {/* Title + year */}
+                  <div className="flex items-baseline justify-between gap-3">
+                    <h3 className="font-[var(--font-be-vietnam)] text-[22px] sm:text-[36px] font-normal leading-none tracking-[-0.72px] group-hover:text-[#ff5500] transition-colors duration-300">
+                      {project.name}
+                    </h3>
+                    <span className="shrink-0 font-[var(--font-inter)] text-[14px] text-white">
+                      {project.year}
+                    </span>
+                  </div>
+
+                  {/* Copy */}
+                  <p className="mt-[14px] max-w-[550px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[28px] text-white">
+                    {project.copy}
+                  </p>
+
+                  {/* Tags */}
+                  <div className="mt-[20px] flex flex-wrap gap-[10px]">
+                    {(project.tags ?? []).map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full border border-white px-[14px] py-[7px] font-[var(--font-inter)] text-[12px] text-white/90 group-hover:border-[#ff5500]/50 transition-colors duration-300"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </Link>
+            </StaggerItem>
+          ))}
+
+          {/* Mobile-only view all link, shown below cards on small screens */}
+          <Link
+            href="/projects"
+            className="sm:hidden inline-flex w-fit items-center gap-2 rounded-full border border-white/30 px-5 py-3 font-[var(--font-inter)] text-[12px] text-white/85 transition-colors hover:border-white/60 hover:text-white"
+          >
+            View all projects
+            <span aria-hidden="true">→</span>
+          </Link>
+        </div>
       </div>
     </section>
   );
@@ -406,54 +408,54 @@ function FinalCta() {
 const googleAdsBrandPoints = [
   {
     number: "01",
-    title: "No Clear Campaign Strategy",
+    title: "No Clear Strategy",
     description:
-      "Ads are launched without clear objectives, audience planning or a structured campaign approach.",
+      "Campaigns are launched without a clear plan or defined business goal.",
   },
   {
     number: "02",
-    title: "Targeting the Wrong Audience",
+    title: "Reaching the Wrong People",
     description:
-      "Broad targeting wastes budget by reaching people who are unlikely to convert.",
+      "Ads are shown to people who aren't likely to become customers.",
   },
   {
     number: "03",
-    title: "Creative That Doesn't Convert",
+    title: "Weak Creative",
     description:
-      "Ads fail to capture attention, communicate value or encourage action.",
+      "The ads don't grab attention, explain the offer or encourage people to take action.",
   },
   {
     number: "04",
-    title: "No Ongoing Optimisation",
+    title: "Set and Forget",
     description:
-      "Campaigns are left running without testing, refining or scaling what's working.",
+      "Campaigns are left running with little testing or optimisation, so performance stalls.",
   },
 ];
 
 const googleAdsUssPoints = [
   {
     number: "01",
-    title: "Strategy Before Spend",
+    title: "Strategy First",
     description:
-      "Every campaign is built around your business goals, audience and measurable objectives.",
+      "Every campaign starts with clear goals, the right audience and a plan to achieve them.",
   },
   {
     number: "02",
-    title: "Precision Audience Targeting",
+    title: "Smarter Targeting",
     description:
-      "We identify and target the audiences most likely to become customers.",
+      "We target the people most likely to become customers, not just the biggest audience.",
   },
   {
     number: "03",
-    title: "Creative Built to Perform",
+    title: "Creative That Performs",
     description:
-      "Scroll-stopping creatives designed to generate engagement, leads and sales.",
+      "We create ads designed to stop the scroll and generate clicks, leads and sales.",
   },
   {
     number: "04",
-    title: "Continuous Optimisation",
+    title: "Always Improving",
     description:
-      "We analyse performance, test new ideas and optimise campaigns to maximise return on ad spend.",
+      "We continuously test, refine and optimise campaigns to get more from your ad spend.",
   },
 ];
 
@@ -516,7 +518,7 @@ function RevenueMethod() {
                 backgroundSize: 'cover',
                 backgroundPosition: 'center'
               }}
-              className="group relative rounded-[28px] overflow-hidden p-6 flex flex-col justify-between cursor-pointer transition-all duration-500 ease-out"
+              className="group relative rounded-[28px] overflow-hidden p-2 flex flex-col justify-between cursor-pointer transition-all duration-500 ease-out"
             >
               {/* Card Number */}
               <div
@@ -531,7 +533,7 @@ function RevenueMethod() {
 
                 {/* Title */}
                 <h3
-                  className="text-[22.64px] font-normal leading-[26.78px] tracking-[0%] text-white align-middle mb-3"
+                  className="text-[22.64px] font-normal leading-[26.78px] tracking-[0%] text-white align-middle mb-3 min-h-[60px]"
                   style={{ fontStyle: 'Regular' }}
                 >
                   {card.title}
@@ -539,7 +541,7 @@ function RevenueMethod() {
 
                 {/* Description (Fades and slides in cleanly) */}
                 <p
-                  className="text-[15.5px] font-normal leading-[18.86px] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 ease-out"
+                  className="text-[15.5px] font-normal leading-[18.86px] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 ease-out min-h-[120px]"
                   style={{ fontStyle: 'Regular' }}
                 >
                   {card.description}
@@ -559,12 +561,42 @@ export default function MetaAdsPage() {
     <main className="min-h-screen bg-black overflow-hidden">
       <Header />
       <Hero />
-      {/* <WhyAdsFail /> */}
       <Numbers />
-      {/* <Brands /> */}
-      {/* <MetaSystem /> */}
-      {/* <HowItWorks /> */}
+      <Brands />
+      <WhyGoogleAdsWork
+        imageSrc="/assets/metaSide.png"
+        imageAlt="Meta Ads strategy expert"
+        headingItalic="meta ads"
+        items={[
+          {
+            number: "01",
+            icon: "/assets/googleAds/icon1.png",
+            title: "Reach Your Ideal Audience",
+            description: "Target customers based on interests, behaviours, location and intent.",
+          },
+          {
+            number: "02",
+            icon: "/assets/googleAds/icon2.png",
+            title: "Generate Qualified Leads",
+            description: "Drive enquiries from people actively interested in your product or service.",
+          },
+          {
+            number: "03",
+            icon: "/assets/googleAds/icon3.png",
+            title: "Increase Sales",
+            description: "Convert website visitors into paying customers with conversion-focused campaigns.",
+          },
+          {
+            number: "04",
+            icon: "/assets/googleAds/icon4.png",
+            title: "Retarget Warm Audiences",
+            description: "Stay visible to people who have already visited your website or engaged with your brand.",
+          },
+        ]}
+      />
+      <TargetRightPeople />
       <WhyEmailFails
+              hideBadge={true}
               heading={
                 <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
                   why most{" "}
@@ -577,15 +609,15 @@ export default function MetaAdsPage() {
                   fails
                 </h2>
               }
-              subheading="Most brands don't have an email problem, they have a strategy problem."
+              subheading="Most brands don't have a Meta Ads problem, they have a strategy problem."
               leftTitle="Most Brands"
               rightTitle="The USS Difference"
               leftPoints={googleAdsBrandPoints}
               rightPoints={googleAdsUssPoints}
             />
-            <TargetRightPeople />
+            
       <RevenueMethod />
-      <BrandWork />
+      <RelatedProjects />
       <Testimonials />
       <Team />
       <GoodCompanyMap />

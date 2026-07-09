@@ -175,10 +175,10 @@ export function Numbers({
           {/* CTA Button */}
           <FadeRight delay={0.2}>
             <Link
-              className="inline-flex h-[42px] w-[210px] items-center justify-center gap-[15px] rounded-full bg-white text-[11px] font-extrabold text-black uppercase transition hover:bg-white/90"
-              href={ctaHref}
+              className="mt-[36px] inline-flex h-[38px] min-w-[178px] items-center justify-center rounded-full bg-white px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-black transition uppercase hover:bg-[#ff6b1f]"
+              href="/contact"
             >
-              {ctaLabel} <span className="text-[18px] leading-none">&rsaquo;</span>
+              Book a Consultation
             </Link>
           </FadeRight>
 

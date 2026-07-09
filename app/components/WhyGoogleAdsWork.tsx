@@ -3,36 +3,19 @@ import FadeLeft from "./FadeLeft";
 import FadeRight from "./FadeRight";
 import FadeUp from "./FadeUp";
 
-const items = [
-  {
-    number: "01",
-    icon: "/assets/googleAds/icon1.png",
-    title: "Reach Your Ideal Audience",
-    description:
-      "Target customers based on interests, behaviours, location and intent.",
-  },
-  {
-    number: "02",
-    icon: "/assets/googleAds/icon2.png",
-    title: "Generate Qualified Leads",
-    description:
-      "Drive enquiries from people actively interested in your product or service.",
-  },
-  {
-    number: "03",
-    icon: "/assets/googleAds/icon3.png",
-    title: "Increase Sales",
-    description:
-      "Convert website visitors into paying customers with conversion-focused campaigns.",
-  },
-  {
-    number: "04",
-    icon: "/assets/googleAds/icon4.png",
-    title: "Retarget Warm Audiences",
-    description:
-      "Stay visible to people who have already visited your website or engaged with your brand.",
-  },
-];
+export interface WhyAdsItem {
+  number: string;
+  icon: string;
+  title: string;
+  description: string;
+}
+
+interface WhyAdsWorkProps {
+  imageSrc: string;
+  imageAlt?: string;
+  headingItalic: string; // e.g. "google ads" or "meta ads"
+  items: WhyAdsItem[];
+}
 
 /**
  * Icon positions follow the right curved edge of the image.
@@ -46,16 +29,21 @@ const items = [
  * y=78% (530px): x≈522 → right=32px   (icon inward — bottom of curve)
  */
 const iconPositions = [
-  { top: "19%", right: "40px" },
-  { top: "40%", right: "-12px" },
-  { top: "63%", right: "-13px" },
-  { top: "85%", right: "72px" },
+  { top: "19%", right: "-210px" },
+  { top: "40%", right: "-280px" },
+  { top: "63%", right: "-270px" },
+  { top: "85%", right: "-210px" },
 ];
 
-export function WhyGoogleAdsWork() {
+export function WhyGoogleAdsWork({
+  imageSrc,
+  imageAlt = "Side image",
+  headingItalic,
+  items,
+}: WhyAdsWorkProps) {
   return (
-    <section className="bg-[#0a0a0a] overflow-hidden">
-      <div className="mx-auto max-w-[1150px] px-4 sm:px-8 lg:px-0">
+    <section className="bg-[#000]">
+      <div className="mx-auto max-w-[1150px] px-6 sm:px-8 lg:px-0">
 
         {/* Heading — top right aligned */}
         <FadeRight delay={0.1}>
@@ -82,7 +70,7 @@ export function WhyGoogleAdsWork() {
                   letterSpacing: "-3px",
                 }}
               >
-                google ads
+                {headingItalic}
               </span>{" "}
               work
             </h2>
@@ -106,8 +94,8 @@ export function WhyGoogleAdsWork() {
                 }}
               >
                 <Image
-                  src="/assets/googleAds/leftPicture.jpg"
-                  alt="Team working on Google Ads strategy"
+                  src={imageSrc}
+                  alt={imageAlt}
                   fill
                   sizes="(min-width: 1024px) 580px, 100vw"
                   className="object-cover"
@@ -115,35 +103,19 @@ export function WhyGoogleAdsWork() {
                 />
               </div>
 
-              {/* Icon circles following the curve of the rounded right edge */}
+              {/* Icon + number + title + description following the curve */}
               {items.map((item, i) => (
                 <div
                   key={item.number}
-                  className="absolute z-20 hidden lg:flex items-center gap-[8px]"
+                  className="absolute z-20 hidden lg:flex flex-col gap-[8px]"
                   style={{
                     top: iconPositions[i].top,
                     right: iconPositions[i].right,
                     transform: "translateY(-50%)",
                   }}
                 >
-                  {/* Icon circle */}
-                  <div
-                    className="flex items-center justify-center size-[52px] rounded-full shrink-0"
-                    style={{
-                      background: "#000",
-                      border: "1px solid #FF550059"
-                    }}
-                  >
-                    <Image
-                      src={item.icon}
-                      alt=""
-                      width={24}
-                      height={24}
-                      className="object-contain"
-                    />
-                  </div>
-                  {/* Number label to the right of icon */}
-                  {/* <p
+                  {/* Number above */}
+                  <p
                     style={{
                       fontFamily: "var(--font-inter)",
                       fontWeight: 600,
@@ -151,60 +123,89 @@ export function WhyGoogleAdsWork() {
                       letterSpacing: "3px",
                       textTransform: "uppercase",
                       color: "#ff5500",
-                      whiteSpace: "nowrap",
+                      lineHeight: 1,
+                      paddingLeft: "58px",
                     }}
                   >
                     {item.number}
-                  </p> */}
+                  </p>
+
+                  {/* Icon + text row */}
+                  <div className="flex items-start gap-[10px]">
+                    {/* Icon circle */}
+                    <div
+                      className="flex items-center justify-center size-[48px] rounded-full shrink-0"
+                      style={{
+                        background: "#000",
+                        border: "1px solid #FF550059",
+                      }}
+                    >
+                      <Image
+                        src={item.icon}
+                        alt=""
+                        width={22}
+                        height={22}
+                        className="object-contain"
+                      />
+                    </div>
+
+                    {/* Title + description */}
+                    <div>
+                      <h3
+                        style={{
+                          fontFamily: "var(--font-inter)",
+                          fontWeight: 700,
+                          fontSize: "16px",
+                          lineHeight: "22px",
+                          color: "#ffffff",
+                          marginBottom: "4px",
+                          whiteSpace: "nowrap",
+                        }}
+                      >
+                        {item.title}
+                      </h3>
+                      <p
+                        style={{
+                          fontFamily: "var(--font-inter)",
+                          fontWeight: 400,
+                          fontSize: "12px",
+                          lineHeight: "20px",
+                          color: "#FFFFFFB8",
+                          maxWidth: "250px",
+                        }}
+                      >
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           </FadeLeft>
 
-          {/* Right — title + description only (no icons) */}
-          <div className="flex-1 flex flex-col justify-center pt-[80px] lg:pt-[110px] lg:pl-[80px] pb-[60px]">
-            <div className="flex flex-col gap-[52px]" >
+          {/* Mobile only — stacked list (hidden on lg, shown on smaller screens) */}
+          <div className="flex-1 flex flex-col justify-center pt-[40px] pb-[60px] px-4 lg:hidden">
+            <div className="flex flex-col gap-[32px]">
               {items.map((item, i) => (
                 <FadeUp key={item.number} delay={0.25 + i * 0.12}>
-                  <div>
-                    {/* Number — always visible above title */}
-                    <p
-                      style={{
-                        fontFamily: "var(--font-inter)",
-                        fontWeight: 600,
-                        fontSize: "11px",
-                        letterSpacing: "3.3px",
-                        textTransform: "uppercase",
-                        color: "#ff5500",
-                        marginBottom: "6px",
-                      }}
+                  <div className="flex items-start gap-[12px]">
+                    <div
+                      className="flex items-center justify-center size-[44px] rounded-full shrink-0"
+                      style={{ background: "#111", border: "1px solid #FF550059" }}
                     >
-                      {item.number}
-                    </p>
-                    <h3
-                      style={{
-                        fontFamily: "var(--font-inter)",
-                        fontWeight: 700,
-                        fontSize: "18px",
-                        lineHeight: "24.75px",
-                        color: "#ffffff",
-                        marginBottom: "8px",
-                      }}
-                    >
-                      {item.title}
-                    </h3>
-                    <p
-                      style={{
-                        fontFamily: "var(--font-inter)",
-                        fontWeight: 400,
-                        fontSize: "14px",
-                        lineHeight: "22.75px",
-                        color: "#FFFFFFB8",
-                        maxWidth: "270px",
-                      }}
-                    >
-                      {item.description}
-                    </p>
+                      <Image src={item.icon} alt="" width={20} height={20} className="object-contain" />
+                    </div>
+                    <div>
+                      <p style={{ fontFamily: "var(--font-inter)", fontWeight: 600, fontSize: "10px", letterSpacing: "3px", textTransform: "uppercase", color: "#ff5500", marginBottom: "4px" }}>
+                        {item.number}
+                      </p>
+                      <h3 style={{ fontFamily: "var(--font-inter)", fontWeight: 700, fontSize: "16px", lineHeight: "22px", color: "#fff", marginBottom: "4px" }}>
+                        {item.title}
+                      </h3>
+                      <p style={{ fontFamily: "var(--font-inter)", fontWeight: 400, fontSize: "13px", lineHeight: "20px", color: "#FFFFFFB8" }}>
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
                 </FadeUp>
               ))}

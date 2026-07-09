@@ -95,19 +95,20 @@ function solveTForX(targetX: number) {
 
 // Left offsets as % of container width — tuned to match the mockup,
 // with the outer two nodes closer to the edges.
-const leftPercents = [10.5, 27, 43.4, 58.7, 75, 91.5];
+const leftPercents = [8.5, 25, 41.4, 58.7, 75, 93.5];
+
+// Height of the icon row below the curve (number + icon + title + desc)
+const ICON_ROW_TOP = 300; // px from top of container where the icon row starts
 
 const positions = leftPercents.map((leftPct) => {
   const targetX = (leftPct / 100) * VIEWBOX_W;
   const t = solveTForX(targetX);
   const yInViewBox = bezierY(t);
-  // scale viewBox y (0-200) to actual container height (0-420),
-  // then offset from the icon row's fixed top position
-  const yScaled = (yInViewBox / VIEWBOX_H) * CONTAINER_H;
-  // curve sits roughly in the upper-middle of the container; connector
-  // starts at y=0 (top of container) and drops to meet the curve
-  const drop = Math.max(yScaled + 90, 40);
-  return { left: `${leftPct}%`, drop };
+  // scale viewBox y (0-200) to actual container height
+  const curveY = (yInViewBox / VIEWBOX_H) * CONTAINER_H;
+  // connector runs from the curve point DOWN to the icon row
+  const lineHeight = Math.max(ICON_ROW_TOP - curveY, 8);
+  return { left: `${leftPct}%`, curveY, lineHeight };
 });
 
 export default function TargetRightPeople() {
@@ -122,7 +123,7 @@ export default function TargetRightPeople() {
         }}
       />
 
-      <div className="relative mx-auto max-w-[1400px]">
+      <div className="relative mx-auto max-w-[1150px]">
         {/* Heading */}
         <h2
           className="lowercase text-white"
@@ -181,23 +182,23 @@ export default function TargetRightPeople() {
             />
           </svg>
 
-          {/* Nodes */}
+          {/* Nodes — icon row fixed, lines go from curve DOWN to icons */}
           {items.map((item, i) => {
             const Icon = item.icon;
             const pos = positions[i];
             return (
               <div
                 key={item.number}
-                className="absolute top-0 flex -translate-x-1/2 flex-col items-center text-center"
-                style={{ left: pos.left, width: "220px" }}
+                className="absolute flex -translate-x-1/2 flex-col items-center text-center"
+                style={{ left: pos.left, top: `${pos.curveY}px`, width: "180px" }}
               >
-                {/* connector line */}
+                {/* connector line: from curve down to icon */}
                 <div
                   style={{
                     width: "1px",
-                    height: `${pos.drop}px`,
+                    height: `${pos.lineHeight}px`,
                     background:
-                      "linear-gradient(180deg, rgba(255,85,0,0.5), rgba(255,85,0,0.7))",
+                      "linear-gradient(180deg, rgba(255,85,0,0.7), rgba(255,85,0,0.5))",
                   }}
                 />
 

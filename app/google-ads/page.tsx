@@ -32,18 +32,18 @@ const relatedProjects = [
   {
     slug: "residency-advanced",
     name: "Residency Advanced",
-    year: "2024",
-    copy: "Launching a German bakery franchise into the UAE market.",
+    year: "2026",
+    copy: "Google Ads consistently delivered around 120 qualified enquiries every month for second passport and residency programmes.",
     image: "/assets/reside.jpg",
-    tags: ["Web design & development", "Branding", "F&B"],
+    tags: ["Google Ads", "Lead Generation", "Professional Services"],
   },
   {
     slug: "flowork",
     name: "Flowork",
-    year: "2024",
-    copy: "Transforming Yalseh into Yula, a modern Dubai beach club.",
+    year: "2026",
+    copy: "USS helped Flowork sell 50% of the available office space before opening by generating high intent enquiries through targeted Google Ads.",
     image: "/assets/flow.jpg",
-    tags: ["Web design & development", "Hospitality"],
+    tags: ["Google Ads", "Office Space", "Lead Generation"],
   },
 ];
 
@@ -679,54 +679,54 @@ function FinalCta() {
 const googleAdsBrandPoints = [
   {
     number: "01",
-    title: "Targeting the Wrong Keywords",
+    title: "Wasted Budget",
     description:
-      "Campaigns focus on high-volume searches instead of high-intent customers.",
+      "Budget is spent on keywords that don't convert.",
   },
   {
     number: "02",
     title: "Poor Campaign Structure",
     description:
-      "Disorganised campaigns make it difficult to control budgets, relevance and performance.",
+      "Poor campaign structure makes it harder to improve performance.",
   },
   {
     number: "03",
-    title: "Low-Converting Ad Copy",
+    title: "Weak Ad Copy",
     description:
-      "Generic ads fail to stand out or encourage users to click.",
+      "Ads don't stand out or encourage people to click and engage.",
   },
   {
     number: "04",
-    title: "No Continuous Optimisation",
+    title: "Set and Forget",
     description:
-      "Campaigns aren't regularly reviewed, resulting in wasted budget and missed opportunities.",
+      "Campaigns run without A/B testing or optimisation.",
   },
 ];
 
 const googleAdsUssPoints = [
   {
     number: "01",
-    title: "Keyword Strategy",
+    title: "High-Intent Targeting",
     description:
-      "We identify the search terms your ideal customers are actively using.",
+      "We target searches that are ready to convert.",
   },
   {
     number: "02",
-    title: "Structured Campaigns",
+    title: "Built for Performance",
     description:
-      "Well-organised campaigns designed to improve Quality Score, relevance and performance.",
+      "Campaigns structured for better results and scalability.",
   },
   {
     number: "03",
-    title: "High-Performing Ad Copy",
+    title: "Ads That Drive Action",
     description:
-      "Compelling headlines and descriptions written to increase clicks and conversions.",
+      "Copy written to increase clicks and enquiries",
   },
   {
     number: "04",
-    title: "Ongoing Optimisation",
+    title: "Always Optimising",
     description:
-      "We monitor search terms, bids and conversions to continuously improve performance and maximise return on ad spend.",
+      "Continuous improvements based on real campaign data",
   },
 ];
 
@@ -739,6 +739,7 @@ export default function GoogleAdsPage() {
       <Brands />
       
       <WhyEmailFails
+      hideBadge={true}
         heading={
           <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
             why most{" "}
@@ -751,14 +752,44 @@ export default function GoogleAdsPage() {
             fails
           </h2>
         }
-        subheading="Most brands don't have an email problem, they have a strategy problem."
+        subheading="Most brands don't have a Google Ads problem, they have a strategy problem."
         leftTitle="Most Brands"
         rightTitle="The USS Difference"
         leftPoints={googleAdsBrandPoints}
         rightPoints={googleAdsUssPoints}
         centerLogo="/assets/Google__logo.webp"
       />
-      <WhyGoogleAdsWork />
+      <WhyGoogleAdsWork
+        imageSrc="/assets/googleside.jpg"
+        imageAlt="Team working on Google Ads strategy"
+        headingItalic="google ads"
+        items={[
+          {
+            number: "01",
+            icon: "/assets/googleAds/icon1.png",
+            title: "Reach Your Ideal Audience",
+            description: "Target customers based on interests, behaviours, location and intent.",
+          },
+          {
+            number: "02",
+            icon: "/assets/googleAds/icon2.png",
+            title: "Generate Qualified Leads",
+            description: "Drive enquiries from people actively interested in your product or service.",
+          },
+          {
+            number: "03",
+            icon: "/assets/googleAds/icon3.png",
+            title: "Increase Sales",
+            description: "Convert website visitors into paying customers with conversion-focused campaigns.",
+          },
+          {
+            number: "04",
+            icon: "/assets/googleAds/icon4.png",
+            title: "Retarget Warm Audiences",
+            description: "Stay visible to people who have already visited your website or engaged with your brand.",
+          },
+        ]}
+      />
       <PlatformsWeWorkWith
         heading={
           <h2
