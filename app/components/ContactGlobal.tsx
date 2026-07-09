@@ -29,7 +29,20 @@ const regions = [
   },
 ];
 
-export default function WeAreGlobal() {
+interface WeAreGlobalProps {
+  images?: {
+    Atlanta?: string;
+    London?: string;
+    Dubai?: string;
+  };
+}
+
+export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
+  const displayRegions = regions.map((region) => ({
+    ...region,
+    image: images?.[region.name as keyof typeof images] || region.image,
+  }));
+
   return (
     <>
       <style>{`
@@ -168,38 +181,40 @@ export default function WeAreGlobal() {
         {/* Subtitle — rises up after heading */}
         <FadeUp delay={0.2}>
           <p className="wag-subtitle">
-          Working with businesses across the United States, United Kingdom and United Arab Emirates.
+            Working with businesses across the United States, United Kingdom and United Arab Emirates.
           </p>
         </FadeUp>
 
         {/* Cards grid — each card uses a different direction, left→up→right */}
         <div className="wag-grid">
 
-          {/* Card 1 (US) — slides in from left */}
-          <FadeLeft delay={0.3}>
+          {/* Card 3 (UAE) — slides in from right */}
+          <FadeRight delay={0.3}>
             <div className="wag-card">
               <div className="wag-image-wrapper">
-                <img src={regions[0].image} alt={regions[0].alt} />
+                <img src={displayRegions[2].image} alt={displayRegions[2].alt} />
               </div>
               <div className="wag-card-body">
-                <h2 className="wag-card-title">{regions[0].name}</h2>
-                <p className="wag-card-desc">{regions[0].description}</p> <br />
+                <h2 className="wag-card-title">{displayRegions[2].name}</h2>
+                <p className="wag-card-desc max-w-[240px]">{displayRegions[2].description}</p> <br />
                 {/* <div className="wag-card-desc-color mt-4">
-                  {regions[0].address}
+                  {regions[2].address}
                 </div> */}
               </div>
             </div>
-          </FadeLeft>
+          </FadeRight>
+
+
 
           {/* Card 2 (UK) — rises up from below, center anchor */}
           <FadeUp delay={0.4}>
             <div className="wag-card">
               <div className="wag-image-wrapper">
-                <img src={regions[1].image} alt={regions[1].alt} />
+                <img src={displayRegions[1].image} alt={displayRegions[1].alt} />
               </div>
               <div className="wag-card-body">
-                <h2 className="wag-card-title">{regions[1].name}</h2>
-                <p className="wag-card-desc">{regions[1].description}</p> <br />
+                <h2 className="wag-card-title">{displayRegions[1].name}</h2>
+                <p className="wag-card-desc max-w-[240px]">{displayRegions[1].description}</p> <br />
                 {/* <div className="wag-card-desc-color mt-4">
                   {regions[1].address}
                 </div> */}
@@ -207,21 +222,21 @@ export default function WeAreGlobal() {
             </div>
           </FadeUp>
 
-          {/* Card 3 (UAE) — slides in from right */}
-          <FadeRight delay={0.3}>
+          {/* Card 1 (US) — slides in from left */}
+          <FadeLeft delay={0.3}>
             <div className="wag-card">
               <div className="wag-image-wrapper">
-                <img src={regions[2].image} alt={regions[2].alt} />
+                <img src={displayRegions[0].image} alt={displayRegions[0].alt} />
               </div>
               <div className="wag-card-body">
-                <h2 className="wag-card-title">{regions[2].name}</h2>
-                <p className="wag-card-desc">{regions[2].description}</p> <br />
+                <h2 className="wag-card-title">{displayRegions[0].name}</h2>
+                <p className="wag-card-desc max-w-[240px]">{displayRegions[0].description}</p> <br />
                 {/* <div className="wag-card-desc-color mt-4">
-                  {regions[2].address}
+                  {regions[0].address}
                 </div> */}
               </div>
             </div>
-          </FadeRight>
+          </FadeLeft>
 
         </div>
       </section>

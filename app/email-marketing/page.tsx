@@ -646,7 +646,10 @@ export default function EmailMarketingPage() {
       <GoodCompanyMap />
       <Team />
       <FinalCta />
+      <div className="mt-[-120px]">
+
       <Footer />
+      </div>
     </main>
   );
 }

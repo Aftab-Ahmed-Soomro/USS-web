@@ -48,14 +48,20 @@ export function Footer() {
     <footer className="bg-[#050505] text-white pt-20 pb-10 px-6  font-sans border-t border-white/5">
       <div className="max-w-[1150px] mx-auto">
         {/* Top Section: Offices */}
-        <WeAreGlobal />
+        <WeAreGlobal 
+          images={{
+            Dubai: "/assets/Dubai.png",
+            London: "/assets/London.png",
+            Atlanta: "/assets/Atlanta.png"
+          }}
+        />
 
         {/* Divider */}
         <div className="h-px bg-white/10 w-full mb-16"></div>
 
         {/* Bottom Section */}
         <div className="flex flex-col lg:flex-row justify-between gap-16 lg:gap-8">
-          
+
           {/* Left Column */}
           <div className="flex flex-col w-full lg:w-[420px]">
             <div className="flex items-center justify-between mb-4 w-full">
@@ -65,7 +71,7 @@ export function Footer() {
                 <a href="#" className="hover:text-[#FF5500] transition-colors"><FaInstagramSquare className="text-3xl" /></a>
               </div>
             </div>
-            
+
             <div className="flex items-center gap-4 mb-8">
               <div className="w-[28px] h-[28px] rounded-full border border-[#FF5500] text-[#FF5500] flex items-center justify-center font-medium text-sm flex-shrink-0">
                 @
@@ -76,16 +82,16 @@ export function Footer() {
             </div>
 
             <p className="text-white font-semibold text-lg mb-5">Subscribe to our newsletter</p>
-            
+
             <form className="flex gap-4 w-full">
-              <input 
-                type="email" 
-                placeholder="Your email" 
+              <input
+                type="email"
+                placeholder="Your email"
                 className="bg-[#121212] border border-white/10 focus:border-[#FF5500] transition-colors rounded-full px-6 py-3.5 text-white text-[14px] outline-none flex-grow min-w-0 placeholder-text-[#FFFFFFA6]"
                 required
               />
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 className="bg-[#FF5500] hover:bg-[#e04a00] text-white rounded-full px-8 py-3.5 text-[14px] font-medium transition-colors flex-shrink-0 shadow-lg"
               >
                 Subscribe

@@ -139,7 +139,7 @@ function Hero() {
             </p>
           </StaggerItem>
           <StaggerItem>
-            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[38px] font-bold lowercase leading-[100%] tracking-[1px] sm:text-[60px] text-white">
+            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[38px] font-bold lowercase leading-[100%] tracking-[1px] sm:text-[56px] text-white">
               capture high
               <br />
               quality leads
