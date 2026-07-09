@@ -1,6 +1,6 @@
 "use client";
 
-import { FaInstagramSquare, FaLinkedin } from "react-icons/fa";
+import { FaInstagramSquare, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
 import WeAreGlobal from "./ContactGlobal";
 
@@ -74,7 +74,7 @@ export function Footer() {
 
             <div className="flex items-center gap-4 mb-8">
               <div className="w-[28px] h-[28px] rounded-full border border-[#FF5500] text-[#FF5500] flex items-center justify-center font-medium text-sm flex-shrink-0">
-                @
+                <FaEnvelope size={14} />
               </div>
               <a href="mailto:contact@unitedstrategicsolutions.com" className="text-[#FFFFFF] text-[14px] hover:text-[#FF5500] transition-colors">
                 contact@unitedstrategicsolutions.com
@@ -115,7 +115,7 @@ export function Footer() {
 
             {/* Services */}
             <div>
-              <h3 className="text-[#FF5500] font-bold text-[16px] sm:text-[20px] mb-6 tracking-wider text-center mr-20">Services</h3>
+              <h3 className="text-[#FF5500] font-bold text-[16px] sm:text-[20px] mb-6 tracking-wider text-center mr-10">Services</h3>
               <div className="flex gap-12 sm:gap-20">
                 <ul className="flex flex-col gap-[14px]">
                   {servicesCol1.map(service => (
