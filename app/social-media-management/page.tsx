@@ -390,7 +390,7 @@ function RelatedProjects() {
 
 function FinalCta() {
   return (
-    <section className="bg-black px-6 pt-[70px] text-white pb-30">
+    <section className="bg-black px-6 pt-[100px] text-white pb-20">
       <Stagger staggerDelay={0.15}>
         <div className="mx-auto max-w-[1150px] text-center">
           <StaggerItem>
@@ -399,17 +399,17 @@ function FinalCta() {
             </p>
           </StaggerItem>
           <StaggerItem>
-            <h2 className="mt-20 font-[var(--font-be-vietnam)] text-[36px] font-medium leading-[1.08] tracking-[-1.5px] sm:text-[55px]">
-              turn your database
+            <h2 className="mt-10 font-[var(--font-be-vietnam)] text-[36px] font-medium leading-[1.08] tracking-[-1.5px] sm:text-[55px]">
+              build a brand
               <br />
-              into{" "}
+              {" "}
               <span className="font-[var(--font-cormorant)] text-[1.12em] font-extralight timesFontFamily italic text-[#ff5500]">
-                repeat revenue
+                people remember
               </span>
             </h2>
           </StaggerItem>
           <StaggerItem>
-            <div className="mt-20 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 className="inline-flex h-[42px] min-w-[190px] items-center justify-center rounded-full bg-[#ff5500] px-8 font-[var(--font-be-vietnam)] text-[12px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
                 href="/contact"
