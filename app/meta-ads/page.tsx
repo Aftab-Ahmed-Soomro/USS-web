@@ -75,7 +75,7 @@ function Hero() {
       <div className="mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
-            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[38px] font-bold lowercase leading-[100%] tracking-[1px] sm:text-[65px] text-white">
+            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[38px] font-bold lowercase leading-[100%] tracking-[-1px] sm:text-[65px] text-white">
               scale your brand with meta ads, don’t just{" "}
               <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] lowercase font-normal timesFontFamily italic text-[#FF5500] tracking-[-2px]">
                 spending more.
@@ -83,11 +83,11 @@ function Hero() {
             </h1>
           </StaggerItem>
           <StaggerItem>
-            <p className="mt-[50px] max-w-[560px] font-[var(--font-inter)] text-[14px] leading-[32px] text-white/90 sm:text-[18px]">
+            <p className="mt-[50px] max-w-[600px] font-[var(--font-inter)] text-[14px] leading-[32px] text-white/90 sm:text-[18px]">
               We create and manage Meta Ads across Facebook and Instagram, helping businesses reach the right people, generate more enquiries and grow with confidence.
             </p>
           </StaggerItem>
-          <StaggerItem>
+          {/* <StaggerItem>
             <div className="flex justify-start gap-24 bg-black pt-12 pb-6">
               <div className="text-center">
                 <h2
@@ -143,7 +143,7 @@ function Hero() {
                 </p>
               </div>
             </div>
-          </StaggerItem>
+          </StaggerItem> */}
           <StaggerItem>
             <Link
               className="mt-[36px] inline-flex h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"

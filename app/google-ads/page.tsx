@@ -145,19 +145,19 @@ function Hero() {
               quality leads
               <br />
               with{" "}
-              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] lowercase font-bold timesFontFamily italic text-white tracking-[-2.8px]">
+              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] lowercase font-bold timesFontFamily italic text-white tracking-[1px]">
                 google ads
               </span>
             </h1>
           </StaggerItem>
           <StaggerItem>
-            <p className="mt-[40px] max-w-[490px] font-[var(--font-inter)] text-[14px] leading-[32px] text-white/90 sm:text-[18px]">
+            <p className="mt-[40px] max-w-[530px] font-[var(--font-inter)] text-[14px] leading-[32px] text-white/90 sm:text-[18px]">
               Turn searches into sales with Google Ads, built to generate qualified leads, not just clicks, by putting your business in front of customers actively searching for your products or services.
             </p>
           </StaggerItem>
           <StaggerItem>
             <Link
-              className="mt-[36px] inline-flex h-[38px] min-w-[178px] items-center justify-center rounded-full bg-white px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-black transition uppercase hover:bg-[#ff6b1f]"
+              className="mt-[30px] inline-flex h-[38px] min-w-[178px] items-center justify-center rounded-full bg-white px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-black transition uppercase hover:bg-[#ff6b1f]"
               href="/contact"
             >
               Book a Consultation

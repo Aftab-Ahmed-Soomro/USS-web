@@ -138,7 +138,8 @@ export function LightConsultationForm() {
               <input className={lightInput} placeholder="Company" />
             </label>
             <label className="font-[var(--font-inter)] text-[11px] sm:text-[14px] font-medium leading-none">
-              Website URL (if applicable)
+              Website URL 
+              {/* (if applicable) */}
               <input className={lightInput} placeholder="Website" />
             </label>
           </div>
