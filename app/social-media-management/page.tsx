@@ -509,7 +509,10 @@ export default function SocialMediaManagementPage() {
       <GoodCompanyMap />
       <Team />
       <FinalCta />
+      <div className="mt-[-120px]">
+
       <Footer />
+      </div>
     </main>
   );
 }

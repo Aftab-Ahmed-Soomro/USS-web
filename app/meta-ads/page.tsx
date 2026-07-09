@@ -618,25 +618,25 @@ export default function MetaAdsPage() {
         items={[
           {
             number: "01",
-            icon: "/assets/googleAds/icon1.png",
+            icon: "/assets/GoogleAds/icon1.png",
             title: "Reach Your Ideal Audience",
             description: "Target customers based on interests, behaviours, location and intent.",
           },
           {
             number: "02",
-            icon: "/assets/googleAds/icon2.png",
+            icon: "/assets/GoogleAds/icon2.png",
             title: "Generate Qualified Leads",
             description: "Drive enquiries from people actively interested in your product or service.",
           },
           {
             number: "03",
-            icon: "/assets/googleAds/icon3.png",
+            icon: "/assets/GoogleAds/icon3.png",
             title: "Increase Sales",
             description: "Convert website visitors into paying customers with conversion-focused campaigns.",
           },
           {
             number: "04",
-            icon: "/assets/googleAds/icon4.png",
+            icon: "/assets/GoogleAds/icon4.png",
             title: "Retarget Warm Audiences",
             description: "Stay visible to people who have already visited your website or engaged with your brand.",
           },

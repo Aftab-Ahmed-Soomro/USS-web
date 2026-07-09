@@ -29,10 +29,10 @@ interface WhyAdsWorkProps {
  * y=78% (530px): x≈522 → right=32px   (icon inward — bottom of curve)
  */
 const iconPositions = [
-  { top: "19%", right: "-210px" },
-  { top: "40%", right: "-280px" },
-  { top: "63%", right: "-270px" },
-  { top: "85%", right: "-210px" },
+  { top: "19%", right: "-370px" },
+  { top: "40%", right: "-440px" },
+  { top: "63%", right: "-440px" },
+  { top: "85%", right: "-360px" },
 ];
 
 export function WhyGoogleAdsWork({
@@ -43,7 +43,7 @@ export function WhyGoogleAdsWork({
 }: WhyAdsWorkProps) {
   return (
     <section className="bg-[#000]">
-      <div className="mx-auto max-w-[1150px] px-6 sm:px-8 lg:px-0">
+      <div className="mx-auto ">
 
         {/* Heading — top right aligned */}
         <FadeRight delay={0.1}>
@@ -87,7 +87,7 @@ export function WhyGoogleAdsWork({
 
               {/* The actual clipped image */}
               <div
-                className="relative w-full lg:w-[580px] overflow-hidden"
+                className="relative w-full lg:w-[600px] overflow-hidden"
                 style={{
                   aspectRatio: "580 / 680",
                   borderRadius: "0px 1550px 1550px 0px",
@@ -107,7 +107,7 @@ export function WhyGoogleAdsWork({
               {items.map((item, i) => (
                 <div
                   key={item.number}
-                  className="absolute z-20 hidden lg:flex flex-col gap-[8px]"
+                  className="absolute z-20 hidden lg:flex flex-col gap-[18px]"
                   style={{
                     top: iconPositions[i].top,
                     right: iconPositions[i].right,
@@ -119,19 +119,19 @@ export function WhyGoogleAdsWork({
                     style={{
                       fontFamily: "var(--font-inter)",
                       fontWeight: 600,
-                      fontSize: "10px",
+                      fontSize: "12px",
                       letterSpacing: "3px",
                       textTransform: "uppercase",
                       color: "#ff5500",
                       lineHeight: 1,
-                      paddingLeft: "58px",
+                      paddingLeft: "68px",
                     }}
                   >
                     {item.number}
                   </p>
 
                   {/* Icon + text row */}
-                  <div className="flex items-start gap-[10px]">
+                  <div className="flex items-start gap-[20px]">
                     {/* Icon circle */}
                     <div
                       className="flex items-center justify-center size-[48px] rounded-full shrink-0"
@@ -155,10 +155,10 @@ export function WhyGoogleAdsWork({
                         style={{
                           fontFamily: "var(--font-inter)",
                           fontWeight: 700,
-                          fontSize: "16px",
-                          lineHeight: "22px",
+                          fontSize: "20px",
+                          lineHeight: "26px",
                           color: "#ffffff",
-                          marginBottom: "4px",
+                          marginBottom: "6px",
                           whiteSpace: "nowrap",
                         }}
                       >
@@ -168,10 +168,10 @@ export function WhyGoogleAdsWork({
                         style={{
                           fontFamily: "var(--font-inter)",
                           fontWeight: 400,
-                          fontSize: "12px",
-                          lineHeight: "20px",
+                          fontSize: "14px",
+                          lineHeight: "22px",
                           color: "#FFFFFFB8",
-                          maxWidth: "250px",
+                          maxWidth: "380px",
                         }}
                       >
                         {item.description}
@@ -188,7 +188,7 @@ export function WhyGoogleAdsWork({
             <div className="flex flex-col gap-[32px]">
               {items.map((item, i) => (
                 <FadeUp key={item.number} delay={0.25 + i * 0.12}>
-                  <div className="flex items-start gap-[12px]">
+                  <div className="flex items-start gap-[20px]">
                     <div
                       className="flex items-center justify-center size-[44px] rounded-full shrink-0"
                       style={{ background: "#111", border: "1px solid #FF550059" }}
@@ -196,13 +196,13 @@ export function WhyGoogleAdsWork({
                       <Image src={item.icon} alt="" width={20} height={20} className="object-contain" />
                     </div>
                     <div>
-                      <p style={{ fontFamily: "var(--font-inter)", fontWeight: 600, fontSize: "10px", letterSpacing: "3px", textTransform: "uppercase", color: "#ff5500", marginBottom: "4px" }}>
+                      <p style={{ fontFamily: "var(--font-inter)", fontWeight: 600, fontSize: "12px", letterSpacing: "3px", textTransform: "uppercase", color: "#ff5500", marginBottom: "6px" }}>
                         {item.number}
                       </p>
-                      <h3 style={{ fontFamily: "var(--font-inter)", fontWeight: 700, fontSize: "16px", lineHeight: "22px", color: "#fff", marginBottom: "4px" }}>
+                      <h3 style={{ fontFamily: "var(--font-inter)", fontWeight: 700, fontSize: "18px", lineHeight: "24px", color: "#fff", marginBottom: "6px" }}>
                         {item.title}
                       </h3>
-                      <p style={{ fontFamily: "var(--font-inter)", fontWeight: 400, fontSize: "13px", lineHeight: "20px", color: "#FFFFFFB8" }}>
+                      <p style={{ fontFamily: "var(--font-inter)", fontWeight: 400, fontSize: "14px", lineHeight: "22px", color: "#FFFFFFB8" }}>
                         {item.description}
                       </p>
                     </div>

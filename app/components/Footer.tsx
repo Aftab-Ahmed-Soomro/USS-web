@@ -45,7 +45,7 @@ const servicesCol2 = [
 
 export function Footer() {
   return (
-    <footer className="bg-[#050505] text-white pt-20 pb-10 px-6  font-sans border-t border-white/5">
+    <footer className="bg-[#000] text-white pt-20 pb-10 px-6  font-sans">
       <div className="max-w-[1150px] mx-auto">
         {/* Top Section: Offices */}
         <WeAreGlobal 

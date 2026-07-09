@@ -34,12 +34,22 @@ const emailVisuals = [
     // widthClass: "lg:w-[192px]",
   },
   {
+    src: "https://emmanuelcolewilliams.com/uss-assets/emailGrids/7.png",
+    alt: "Restaurant offer email design",
+    // widthClass: "lg:w-[192px]",
+  },
+  {
     src: "https://emmanuelcolewilliams.com/uss-assets/emailGrids/8.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
     src: "https://emmanuelcolewilliams.com/uss-assets/emailGrids/9.png",
+    alt: "Restaurant offer email design",
+    // widthClass: "lg:w-[192px]",
+  },
+  {
+    src: "https://emmanuelcolewilliams.com/uss-assets/emailGrids/10.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
