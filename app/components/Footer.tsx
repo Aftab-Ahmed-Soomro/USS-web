@@ -28,19 +28,19 @@ const quickLinks = [
 ];
 
 const servicesCol1 = [
-  { name: "Meta Ads", href: "/services/meta-ads" },
+  { name: "360 Marketing", href: "/services/new-360-with-form" },
   { name: "Google Ads", href: "/services/google-ads" },
-  { name: "Web Development", href: "/services/website" },
-  { name: "Performance Marketing", href: "/services/performance-marketing" },
-  { name: "Email Marketing", href: "/services/email-marketing" }
+  { name: "WhatsApp & SMS", href: "/services/whatsapp-and-sms" },
+  { name: "Social Media Management", href: "/services/social-media-management" },
+  { name: "Talent Management", href: "/services/talent-management" },
 ];
 
 const servicesCol2 = [
-  { name: "Content Creation", href: "/services/content-creation" },
-  { name: "WhatsApp & SMS", href: "/services/whatsapp-and-sms" },
   { name: "Marketing Strategy", href: "/services/marketing-strategy" },
-  { name: "Talent Management", href: "/services/talent-management" },
-  { name: "Social Media Management", href: "/services/social-media-management" }
+  { name: "Meta Ads", href: "/services/meta-ads" },
+  { name: "Email Marketing", href: "/services/email-marketing" },
+  { name: "Content Creation", href: "/services/content-creation" },
+  { name: "Web Development", href: "/services/website" },
 ];
 
 export function Footer() {

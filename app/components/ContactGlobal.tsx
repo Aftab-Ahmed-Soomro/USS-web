@@ -8,22 +8,37 @@ import FadeRight from "./FadeRight";
 const regions = [
   {
     name: "Atlanta",
-    description:
-      "Office 1175, Peachtree St NE, # Atlanta, GA 30361, United States",
+    description: (
+      <>
+        Office 1175, Peachtree St NE,<br />
+        Atlanta, 30361,<br />
+        United States
+      </>
+    ),
     image: "/assets/Downtown Atlanta.webp",
     alt: "United States skyline at sunset",
   },
   {
     name: "London",
-    description:
-      "Office 4, Green Dragon House London, CR0 1FS, United Kingdom",
+    description: (
+      <>
+        Office 4, Green Dragon House,<br />
+        London, CR0 1FS,<br />
+        United Kingdom
+      </>
+    ),
     image: "/assets/UK.webp",
     alt: "United Kingdom skyline at night",
   },
   {
     name: "Dubai",
-    description:
-      "Flowork Offices, Business Park 4, Dubai Hills, United Arab Emirates",
+    description: (
+      <>
+        Flowork Offices<br />
+        Business Park 4, Dubai Hills<br />
+        United Arab Emirates
+      </>
+    ),
     image: "/assets/Dubai.jpeg",
     alt: "UAE skyline at dusk",
   },
@@ -53,7 +68,7 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          padding: 50px 48px;
+          padding: 50px 0px;
           box-sizing: border-box;
           font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
         }
@@ -76,7 +91,6 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
         }
 
         .wag-subtitle {
-          color: #888888;
           font-size: clamp(0.875rem, 1.4vw, 1rem);
           text-align: center;
           max-width: 450px;
@@ -89,7 +103,7 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           gap: 20px;
-          max-width: 1120px;
+          max-width: 1150px;
           width: 100%;
         }
 
@@ -125,7 +139,7 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
         }
 
         .wag-card-body {
-          padding: 22px 22px 30px 22px;
+          padding: 22px 22px 0px 22px;
         }
 
         .wag-card-title {
@@ -145,7 +159,6 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
         }
 
         .wag-card-desc {
-          color: #FFFFFFA6;
           font-size: clamp(0.8125rem, 1.05vw, 0.9375rem);
           line-height: 22.75px;
           margin: 0;
@@ -180,8 +193,8 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
 
         {/* Subtitle — rises up after heading */}
         <FadeUp delay={0.2}>
-          <p className="wag-subtitle">
-            Working with businesses across the United States, United Kingdom and United Arab Emirates.
+          <p className="wag-subtitle text-white/95">
+            Working with businesses across the<br /> United States, United Kingdom and United Arab Emirates.
           </p>
         </FadeUp>
 
@@ -196,7 +209,7 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
               </div>
               <div className="wag-card-body">
                 <h2 className="wag-card-title">{displayRegions[2].name}</h2>
-                <p className="wag-card-desc max-w-[240px]">{displayRegions[2].description}</p> <br />
+                <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[2].description}</p> <br />
                 {/* <div className="wag-card-desc-color mt-4">
                   {regions[2].address}
                 </div> */}
@@ -214,7 +227,7 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
               </div>
               <div className="wag-card-body">
                 <h2 className="wag-card-title">{displayRegions[1].name}</h2>
-                <p className="wag-card-desc max-w-[240px]">{displayRegions[1].description}</p> <br />
+                <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[1].description}</p> <br />
                 {/* <div className="wag-card-desc-color mt-4">
                   {regions[1].address}
                 </div> */}
@@ -230,7 +243,7 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
               </div>
               <div className="wag-card-body">
                 <h2 className="wag-card-title">{displayRegions[0].name}</h2>
-                <p className="wag-card-desc max-w-[240px]">{displayRegions[0].description}</p> <br />
+                <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[0].description}</p> <br />
                 {/* <div className="wag-card-desc-color mt-4">
                   {regions[0].address}
                 </div> */}
