@@ -433,7 +433,7 @@ export default function SocialMediaManagementPage() {
       <PlatformsWeWorkWith />
       <Brands />
       <WhyEmailFails
-        hideBadge={true}
+        hideBadge={false}
         tagline="THE PROBLEM"
         heading={
           <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
@@ -448,6 +448,8 @@ export default function SocialMediaManagementPage() {
             isn&apos;t working
           </h2>
         }
+        centerLogo="/assets/organic__icon.png"
+      logoClassName="w-[80px] lg:w-[125px]"
         subheading=""
         leftTitle="Most Brands"
         rightTitle="The USS Difference"
