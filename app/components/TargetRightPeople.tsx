@@ -9,6 +9,9 @@ import {
   Target,
   type LucideIcon,
 } from "lucide-react";
+import Stagger from "./Stagger";
+import StaggerItem from "./Staggeritem";
+import FadeUp from "./FadeUp";
 
 interface TargetItem {
   number: string;
@@ -125,62 +128,66 @@ export default function TargetRightPeople() {
 
       <div className="relative mx-auto max-w-[1150px]">
         {/* Heading */}
-        <h2
-          className="lowercase text-white"
-          style={{
-            fontWeight: 500,
-            fontSize: "56px",
-            lineHeight: "80px",
-            letterSpacing: "-3px",
-          }}
-        >
-          target the{" "}
-          <span
-            className="italic"
-            style={{
-              fontFamily: '"Times New Roman", Times, serif',
-              fontWeight: 400,
-              fontSize: "72px",
-              lineHeight: "80px",
-              letterSpacing: "-3px",
-              color: "#ff5500",
-            }}
-          >
-            right people
-          </span>
-        </h2>
+        <Stagger staggerDelay={0.12}>
+          <StaggerItem>
+            <h2
+              className="lowercase text-white"
+              style={{
+                fontWeight: 500,
+                fontSize: "56px",
+                lineHeight: "80px",
+                letterSpacing: "-3px",
+              }}
+            >
+              target the{" "}
+              <span
+                className="italic"
+                style={{
+                  fontFamily: '"Times New Roman", Times, serif',
+                  fontWeight: 400,
+                  fontSize: "72px",
+                  lineHeight: "80px",
+                  letterSpacing: "-3px",
+                  color: "#ff5500",
+                }}
+              >
+                right people
+              </span>
+            </h2>
+          </StaggerItem>
+        </Stagger>
 
         {/* Curve + nodes */}
         <div className="relative mt-24 h-[420px] w-full">
           {/* SVG arc */}
-          <svg
-            className="absolute inset-0 h-full w-full"
-            viewBox="0 0 1400 200"
-            preserveAspectRatio="none"
-            fill="none"
-          >
-            <defs>
-              <filter id="glow" x="-20%" y="-200%" width="140%" height="500%">
-                <feGaussianBlur stdDeviation="6" result="blur" />
-                <feMerge>
-                  <feMergeNode in="blur" />
-                  <feMergeNode in="SourceGraphic" />
-                </feMerge>
-              </filter>
-              <linearGradient id="arcFade" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stopColor="#ff5500" stopOpacity="0.15" />
-                <stop offset="15%" stopColor="#ff5500" stopOpacity="1" />
-                <stop offset="85%" stopColor="#ff5500" stopOpacity="1" />
-                <stop offset="100%" stopColor="#ff5500" stopOpacity="0.15" />
-              </linearGradient>
-            </defs>
-            <path
-              d="M -50 -30 Q 700 260 1450 -30"
-              stroke="url(#arcFade)"
-              strokeWidth="2.5"
-              filter="url(#glow)"
-            />
-          </svg>
+            <svg
+              className="absolute inset-0 h-full w-full"
+              viewBox="0 0 1400 200"
+              preserveAspectRatio="none"
+              fill="none"
+            >
+              <defs>
+                <filter id="glow" x="-20%" y="-200%" width="140%" height="500%">
+                  <feGaussianBlur stdDeviation="6" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+                <linearGradient id="arcFade" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stopColor="#ff5500" stopOpacity="0.15" />
+                  <stop offset="15%" stopColor="#ff5500" stopOpacity="1" />
+                  <stop offset="85%" stopColor="#ff5500" stopOpacity="1" />
+                  <stop offset="100%" stopColor="#ff5500" stopOpacity="0.15" />
+                </linearGradient>
+              </defs>
+              <path
+                d="M -50 -30 Q 700 260 1450 -30"
+                stroke="url(#arcFade)"
+                strokeWidth="2.5"
+                filter="url(#glow)"
+              />
+            </svg>
 
           {/* Nodes — icon row fixed, lines go from curve DOWN to icons */}
           {items.map((item, i) => {
@@ -192,68 +199,70 @@ export default function TargetRightPeople() {
                 className="absolute flex -translate-x-1/2 flex-col items-center text-center"
                 style={{ left: pos.left, top: `${pos.curveY}px`, width: "180px" }}
               >
-                {/* connector line: from curve down to icon */}
-                <div
-                  style={{
-                    width: "1px",
-                    height: `${pos.lineHeight}px`,
-                    background:
-                      "linear-gradient(180deg, rgba(255,85,0,0.7), rgba(255,85,0,0.5))",
-                  }}
-                />
+                <FadeUp delay={0.25 + i * 0.15} className="flex flex-col items-center">
+                  {/* connector line: from curve down to icon */}
+                  <div
+                    style={{
+                      width: "1px",
+                      height: `${pos.lineHeight}px`,
+                      background:
+                        "linear-gradient(180deg, rgba(255,85,0,0.7), rgba(255,85,0,0.5))",
+                    }}
+                  />
 
-                {/* index label */}
-                <span
-                  className="mt-3 text-gray-500"
-                  style={{
-                    fontWeight: 400,
-                    fontSize: "10px",
-                    lineHeight: "15px",
-                    letterSpacing: "3px",
-                  }}
-                >
-                  {item.number}
-                </span>
+                  {/* index label */}
+                  <span
+                    className="mt-3 text-gray-500"
+                    style={{
+                      fontWeight: 400,
+                      fontSize: "10px",
+                      lineHeight: "15px",
+                      letterSpacing: "3px",
+                    }}
+                  >
+                    {item.number}
+                  </span>
 
-                {/* icon */}
-                <div
-                  className="mt-3 flex h-16 w-16 items-center justify-center rounded-2xl border"
-                  style={{
-                    borderColor: "rgba(255,85,0,0.6)",
-                    background:
-                      "linear-gradient(180deg, rgba(255,85,0,0.12), rgba(255,85,0,0.03))",
-                    boxShadow:
-                      "0 0 24px rgba(255,85,0,0.35), inset 0 0 12px rgba(255,85,0,0.15)",
-                  }}
-                >
-                  <Icon size={26} strokeWidth={1.75} color="#ff7a33" />
-                </div>
+                  {/* icon */}
+                  <div
+                    className="mt-3 flex h-16 w-16 items-center justify-center rounded-2xl border"
+                    style={{
+                      borderColor: "rgba(255,85,0,0.6)",
+                      background:
+                        "linear-gradient(180deg, rgba(255,85,0,0.12), rgba(255,85,0,0.03))",
+                      boxShadow:
+                        "0 0 24px rgba(255,85,0,0.35), inset 0 0 12px rgba(255,85,0,0.15)",
+                    }}
+                  >
+                    <Icon size={26} strokeWidth={1.75} color="#ff7a33" />
+                  </div>
 
-                {/* title */}
-                <h3
-                  className="mt-5 text-white"
-                  style={{
-                    fontWeight: 600,
-                    fontSize: "16px",
-                    lineHeight: "19.5px",
-                    letterSpacing: "0%",
-                  }}
-                >
-                  {item.title}
-                </h3>
+                  {/* title */}
+                  <h3
+                    className="mt-5 text-white"
+                    style={{
+                      fontWeight: 600,
+                      fontSize: "16px",
+                      lineHeight: "19.5px",
+                      letterSpacing: "0%",
+                    }}
+                  >
+                    {item.title}
+                  </h3>
 
-                {/* description */}
-                <p
-                  className="mt-2 text-white"
-                  style={{
-                    fontWeight: 400,
-                    fontSize: "14px",
-                    lineHeight: "140%",
-                    letterSpacing: "0%",
-                  }}
-                >
-                  {item.description}
-                </p>
+                  {/* description */}
+                  <p
+                    className="mt-2 text-white"
+                    style={{
+                      fontWeight: 400,
+                      fontSize: "14px",
+                      lineHeight: "140%",
+                      letterSpacing: "0%",
+                    }}
+                  >
+                    {item.description}
+                  </p>
+                </FadeUp>
               </div>
             );
           })}

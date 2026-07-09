@@ -142,6 +142,7 @@ export function WhyEmailFails({
     rightPoints = ussPoints,
     hideBadge = false,
     centerLogo,
+    logoClassName,
 }: {
     tagline?: string;
     heading?: React.ReactNode;
@@ -152,6 +153,7 @@ export function WhyEmailFails({
     rightPoints?: Point[];
     hideBadge?: boolean;
     centerLogo?: string;
+    logoClassName?: string;
 } = {}) {
     return (
         <section className="bg-black px-4 py-[80px] text-white sm:px-8 lg:px-14">
@@ -253,7 +255,7 @@ export function WhyEmailFails({
                                         <img
                                             src={centerLogo ?? "/assets/klaviyo-logo-white.webp"}
                                             alt="center logo"
-                                            className="absolute w-[140px] ml-1 object-contain"
+                                            className={`absolute ml-1 object-contain ${logoClassName ?? 'w-[140px]'}`}
                                         />
                                     )}
                                 </div>
@@ -306,7 +308,7 @@ export function WhyEmailFails({
                                         <img
                                             src={centerLogo ?? "/assets/klaviyo-logo-white.webp"}
                                             alt="center logo"
-                                            className="absolute w-[100px] object-contain"
+                                            className={`absolute object-contain ${logoClassName ?? 'w-[100px]'}`}
                                         />
                                     )}
                                 </div>

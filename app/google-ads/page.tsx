@@ -300,46 +300,49 @@ function GoogleServices() {
   return (
     <section className="overflow-hidden bg-[#050505] px-6 pt-[39px] text-white">
       <div className="mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[450px_minmax(0,632px)] lg:items-start lg:justify-between">
-        <div className="relative min-h-[650px]">
-          
-          <h2 className="mt-[35px] font-[var(--font-be-vietnam)] text-[40px] font-medium lowercase leading-[1.05] tracking-[-3%] sm:text-[56px]">
-            our{" "}
-            <span className="font-[var(--font-cormorant)] text-[1.23em] sm:text-[72px] tracking-[-3%] font-normal timesFontFamily italic">
-              google ads
-            </span>
-            <br />
-            services
-          </h2>
-          <p className="mt-[35px] max-w-[400px] font-[var(--font-be-vietnam)] text-[12px] sm:text-[14px] font-normal leading-[1.50] text-white">
-            Every business has different goals. We build Google
-Ads campaigns around what matters most to yours.
-          </p>
-          <div className="absolute -bottom-20  left-[-4px] hidden aspect-[366/398] w-[460px] lg:block">
-            <Image
-              src="/assets/meeral2.png"
-              alt="Google Ads strategist"
-              fill
-              sizes="366px"
-              className="object-contain object-bottom"
-            />
+        <FadeLeft delay={0.15}>
+          <div className="relative min-h-[650px]">
+            
+            <h2 className="mt-[35px] font-[var(--font-be-vietnam)] text-[40px] font-medium lowercase leading-[1.05] tracking-[-3%] sm:text-[56px]">
+              our{" "}
+              <span className="font-[var(--font-cormorant)] text-[1.23em] sm:text-[72px] tracking-[-3%] font-normal timesFontFamily italic">
+                google ads
+              </span>
+              <br />
+              services
+            </h2>
+            <p className="mt-[35px] max-w-[400px] font-[var(--font-be-vietnam)] text-[12px] sm:text-[14px] font-normal leading-[1.50] text-white">
+              Every business has different goals. We build Google
+  Ads campaigns around what matters most to yours.
+            </p>
+            <div className="absolute -bottom-20  left-[-4px] hidden aspect-[366/398] w-[460px] lg:block">
+              <Image
+                src="/assets/meeral2.png"
+                alt="Google Ads strategist"
+                fill
+                sizes="366px"
+                className="object-contain object-bottom"
+              />
+            </div>
           </div>
-        </div>
+        </FadeLeft>
 
         <div className="grid border-white/20 lg:mt-[110px] sm:grid-cols-2 sm:[&>article:nth-child(2n)]:border-l sm:[&>article:nth-child(n+3)]:border-t">
           {services.map((service, index) => (
-            <article
-              className={`min-h-[163px] border-white/20 px-[26px] py-[30px] ${
-                index % 2 === 0 ? "sm:pl-[25px] sm:pr-[28px]" : "sm:pl-[25px] sm:pr-0"
-              }`}
-              key={service.title}
-            >
-              <h3 className="font-[var(--font-be-vietnam)] text-[24px] sm:text-[30px] font-bold leading-tight">
-                {service.title}
-              </h3>
-              <p className="mt-[24px] max-w-[220px] font-[var(--font-inter)] text-[12px] sm:text-[14px] leading-[1.85] text-white/90">
-                {service.copy}
-              </p>
-            </article>
+            <FadeUp key={service.title} delay={0.2 + index * 0.1}>
+              <article
+                className={`min-h-[163px] border-white/20 px-[26px] py-[30px] h-full ${
+                  index % 2 === 0 ? "sm:pl-[25px] sm:pr-[28px]" : "sm:pl-[25px] sm:pr-0"
+                }`}
+              >
+                <h3 className="font-[var(--font-be-vietnam)] text-[24px] sm:text-[30px] font-bold leading-tight">
+                  {service.title}
+                </h3>
+                <p className="mt-[24px] max-w-[220px] font-[var(--font-inter)] text-[12px] sm:text-[14px] leading-[1.85] text-white/90">
+                  {service.copy}
+                </p>
+              </article>
+            </FadeUp>
           ))}
         </div>
       </div>
@@ -739,25 +742,26 @@ export default function GoogleAdsPage() {
       <Brands />
       
       <WhyEmailFails
-      hideBadge={true}
-        heading={
-          <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
-            why most{" "}
-            <span
-              className="font-normal italic text-[60px] sm:text-[72px]"
-              style={{ fontFamily: "'Times New Roman', Times, serif" }}
-            >
-              google ads
-            </span>{" "}
-            fails
-          </h2>
-        }
-        subheading="Most brands don't have a Google Ads problem, they have a strategy problem."
-        leftTitle="Most Brands"
-        rightTitle="The USS Difference"
-        leftPoints={googleAdsBrandPoints}
-        rightPoints={googleAdsUssPoints}
-        centerLogo="/assets/Google__logo.webp"
+      hideBadge={false}
+      heading={
+        <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
+          why most{" "}
+          <span
+            className="font-normal italic text-[60px] sm:text-[72px]"
+            style={{ fontFamily: "'Times New Roman', Times, serif" }}
+          >
+            google ads
+          </span>{" "}
+          fails
+        </h2>
+      }
+      subheading="Most brands don't have a Google Ads problem, they have a strategy problem."
+      leftTitle="Most Brands"
+      rightTitle="The USS Difference"
+      leftPoints={googleAdsBrandPoints}
+      rightPoints={googleAdsUssPoints}
+      centerLogo="/assets/Google__logo.webp"
+      logoClassName="w-[80px] lg:w-[115px]"
       />
       <WhyGoogleAdsWork
         imageSrc="/assets/googleside.jpg"
