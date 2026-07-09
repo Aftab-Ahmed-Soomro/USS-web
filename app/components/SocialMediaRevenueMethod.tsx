@@ -59,8 +59,8 @@ export default function SocialMediaRevenueMethod() {
           </StaggerItem>
         </div>
 
-        {/* Cards — full width with just edge padding */}
-        <div className="w-full px-6">
+        {/* Cards — constrained to 1150px like heading */}
+        <div className="max-w-[1150px] w-full mx-auto">
           {/* Desktop: flex accordion */}
           <StaggerItem>
             <div className="hidden md:flex gap-6">
