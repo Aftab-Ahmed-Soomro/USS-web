@@ -31,7 +31,7 @@ const servicesCol1 = [
   { name: "360 Marketing", href: "/services/new-360-with-form" },
   { name: "Google Ads", href: "/services/google-ads" },
   { name: "WhatsApp & SMS", href: "/services/whatsapp-and-sms" },
-  { name: "Social Media Management", href: "/services/social-media-management" },
+  { name: "Social Media Marketing", href: "/services/social-media-management" },
   { name: "Talent Management", href: "/services/talent-management" },
 ];
 
@@ -102,7 +102,7 @@ export function Footer() {
           {/* Right Columns Container */}
           <div className="flex flex-col md:flex-row gap-16 lg:gap-24 lg:ml-auto pt-4">
             {/* Quick Links */}
-            <div>
+            <div className="mr-14">
               <h3 className="text-[#FF5500] font-bold text-[16px] sm:text-[20px] mb-6 tracking-wider">Quick Links</h3>
               <ul className="flex flex-col gap-[14px]">
                 {quickLinks.map(link => (
@@ -116,7 +116,7 @@ export function Footer() {
             {/* Services */}
             <div>
               <h3 className="text-[#FF5500] font-bold text-[16px] sm:text-[20px] mb-6 tracking-wider text-center mr-10">Services</h3>
-              <div className="flex gap-12 sm:gap-20">
+              <div className="flex gap-10">
                 <ul className="flex flex-col gap-[14px]">
                   {servicesCol1.map(service => (
                     <li key={service.name}>

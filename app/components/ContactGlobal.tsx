@@ -223,7 +223,7 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
           <FadeUp delay={0.4}>
             <div className="wag-card">
               <div className="wag-image-wrapper">
-                <img src={displayRegions[1].image} alt={displayRegions[1].alt} />
+                <img src={displayRegions[1].image} alt={displayRegions[1].alt} className="!object-[80%_0%]" />
               </div>
               <div className="wag-card-body">
                 <h2 className="wag-card-title">{displayRegions[1].name}</h2>
