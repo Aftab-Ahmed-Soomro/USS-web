@@ -57,7 +57,6 @@ export function WhyGoogleAdsWork({
                   lineHeight: "1.1",
                   letterSpacing: "-3px",
                   textTransform: "lowercase",
-                  marginBottom: "18px",
                   fontFamily: "var(--font-be-vietnam)",
                 }}
               >
@@ -81,7 +80,7 @@ export function WhyGoogleAdsWork({
 
         {/* Body: image left (with edge icons), text right */}
         <div className="flex flex-col lg:flex-row items-center gap-0 mt-0 lg:mt-[-20px] relative w-full">
-          
+
           {/* Desktop Heading (vertically centered on the right) */}
           <div className="hidden lg:flex absolute inset-y-0 right-[5%] xl:right-[10%] items-center z-10 pointer-events-none">
             <FadeRight delay={0.1}>
@@ -206,7 +205,7 @@ export function WhyGoogleAdsWork({
                           fontSize: "14px",
                           lineHeight: "22px",
                           color: "#FFFFFFB8",
-                          maxWidth: "380px",
+                          maxWidth: "330px",
                         }}
                       >
                         {item.description}
