@@ -739,7 +739,7 @@ export default function GoogleAdsPage() {
       <Header />
       <Hero />
       <Numbers />
-      <Brands />
+      {/* <Brands /> */}
       
       <WhyEmailFails
       hideBadge={false}

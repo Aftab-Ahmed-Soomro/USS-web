@@ -610,7 +610,7 @@ export default function MetaAdsPage() {
       <Header />
       <Hero />
       <Numbers />
-      <Brands />
+      {/* <Brands /> */}
       <WhyEmailFails
               hideBadge={false}
               heading={
