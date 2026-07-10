@@ -131,7 +131,7 @@ export default function TargetRightPeople() {
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
             <h2
-              className="lowercase text-white"
+              className="lowercase text-center text-white"
               style={{
                 fontWeight: 500,
                 fontSize: "56px",

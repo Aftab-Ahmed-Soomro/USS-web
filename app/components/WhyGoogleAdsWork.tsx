@@ -45,40 +45,75 @@ export function WhyGoogleAdsWork({
     <section className="bg-[#000]">
       <div className="mx-auto ">
 
-        {/* Heading — top right aligned */}
-        <FadeRight delay={0.1}>
-          <div className="flex justify-end pt-[60px] pb-0 relative z-10 mr-26 pr-0">
-            <h2
-              className="text-white text-right"
-              style={{
-                fontWeight: 500,
-                fontSize: "clamp(36px, 5vw, 56px)",
-                lineHeight: "80px",
-                letterSpacing: "-3px",
-                textTransform: "lowercase",
-                fontFamily: "var(--font-be-vietnam)",
-              }}
-            >
-              why{" "}
-              <span
+        {/* Heading — Mobile */}
+        <div className="lg:hidden">
+          <FadeRight delay={0.1}>
+            <div className="flex justify-center pt-[60px] pb-0 relative z-10">
+              <h2
+                className="text-white text-center"
                 style={{
-                  fontFamily: "'Times New Roman', Times, serif",
-                  fontWeight: 400,
-                  fontStyle: "italic",
-                  fontSize: "clamp(44px, 6vw, 72px)",
-                  lineHeight: "80px",
+                  fontWeight: 500,
+                  fontSize: "clamp(36px, 5vw, 56px)",
+                  lineHeight: "1.1",
                   letterSpacing: "-3px",
+                  textTransform: "lowercase",
+                  marginBottom: "18px",
+                  fontFamily: "var(--font-be-vietnam)",
                 }}
               >
-                {headingItalic}
-              </span>{" "}
-              work
-            </h2>
-          </div>
-        </FadeRight>
+                why{" "}
+                <span
+                  style={{
+                    fontFamily: "'Times New Roman', Times, serif",
+                    fontWeight: 400,
+                    fontStyle: "italic",
+                    fontSize: "clamp(44px, 6vw, 72px)",
+                    letterSpacing: "-3px",
+                  }}
+                >
+                  {headingItalic}
+                </span>{" "}
+                work
+              </h2>
+            </div>
+          </FadeRight>
+        </div>
 
         {/* Body: image left (with edge icons), text right */}
-        <div className="flex flex-col lg:flex-row items-start gap-0 mt-[-20px]">
+        <div className="flex flex-col lg:flex-row items-center gap-0 mt-0 lg:mt-[-20px] relative w-full">
+          
+          {/* Desktop Heading (vertically centered on the right) */}
+          <div className="hidden lg:flex absolute inset-y-0 right-[5%] xl:right-[10%] items-center z-10 pointer-events-none">
+            <FadeRight delay={0.1}>
+              <h2
+                className="text-white text-right"
+                style={{
+                  fontWeight: 500,
+                  fontSize: "clamp(36px, 5vw, 56px)",
+                  lineHeight: "80px",
+                  letterSpacing: "-3px",
+                  textTransform: "lowercase",
+                  fontFamily: "var(--font-be-vietnam)",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                why{" "}
+                <span
+                  style={{
+                    fontFamily: "'Times New Roman', Times, serif",
+                    fontWeight: 400,
+                    fontStyle: "italic",
+                    fontSize: "clamp(44px, 6vw, 72px)",
+                    lineHeight: "80px",
+                    letterSpacing: "-3px",
+                  }}
+                >
+                  {headingItalic}
+                </span>{" "}
+                work
+              </h2>
+            </FadeRight>
+          </div>
 
           {/* Left — image + absolutely positioned edge icons */}
           <FadeLeft delay={0.2}>

@@ -763,7 +763,8 @@ export default function GoogleAdsPage() {
       centerLogo="/assets/Google__logo.webp"
       logoClassName="w-[80px] lg:w-[115px]"
       />
-      <WhyGoogleAdsWork
+      <div className="mt-[-60px]">
+        <WhyGoogleAdsWork
         imageSrc="/assets/googleside.jpg"
         imageAlt="Team working on Google Ads strategy"
         headingItalic="google ads"
@@ -794,6 +795,7 @@ export default function GoogleAdsPage() {
           },
         ]}
       />
+      </div>
       <PlatformsWeWorkWith
         heading={
           <h2
@@ -842,7 +844,10 @@ export default function GoogleAdsPage() {
       <Team />
       <GoodCompanyMap />
       <FinalCta />
+      <div className="mt-[-100px]">
+
       <Footer />
+      </div>
     </main>
   );
 }

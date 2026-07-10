@@ -672,7 +672,10 @@ export default function MetaAdsPage() {
       <Team />
       <GoodCompanyMap />
       <FinalCta />
-      <Footer />
+      <div className="mt-[-120px]">
+      
+            <Footer />
+            </div>
     </main>
   );
 }
