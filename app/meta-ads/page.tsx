@@ -611,6 +611,28 @@ export default function MetaAdsPage() {
       <Hero />
       <Numbers />
       <Brands />
+      <WhyEmailFails
+              hideBadge={false}
+              heading={
+                <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
+                  why most{" "}
+                  <span
+                    className="font-normal italic text-[60px] sm:text-[72px]"
+                    style={{ fontFamily: "'Times New Roman', Times, serif" }}
+                  >
+                    meta ads
+                  </span>{" "}
+                  fails
+                </h2>
+              }
+              subheading="Most brands don't have a Meta Ads problem, they have a strategy problem."
+              leftTitle="Most Brands"
+              rightTitle="The USS Difference"
+              leftPoints={googleAdsBrandPoints}
+              rightPoints={googleAdsUssPoints}
+              centerLogo="/assets/meta__logo.jpg"
+      logoClassName="w-[80px] lg:w-[120px]"
+            />
       <WhyGoogleAdsWork
         imageSrc="/assets/metaSide.png"
         imageAlt="Meta Ads strategy expert"
@@ -643,28 +665,7 @@ export default function MetaAdsPage() {
         ]}
       />
       <TargetRightPeople />
-      <WhyEmailFails
-              hideBadge={false}
-              heading={
-                <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
-                  why most{" "}
-                  <span
-                    className="font-normal italic text-[60px] sm:text-[72px]"
-                    style={{ fontFamily: "'Times New Roman', Times, serif" }}
-                  >
-                    meta ads
-                  </span>{" "}
-                  fails
-                </h2>
-              }
-              subheading="Most brands don't have a Meta Ads problem, they have a strategy problem."
-              leftTitle="Most Brands"
-              rightTitle="The USS Difference"
-              leftPoints={googleAdsBrandPoints}
-              rightPoints={googleAdsUssPoints}
-              centerLogo="/assets/meta__logo.jpg"
-      logoClassName="w-[80px] lg:w-[115px]"
-            />
+      
             
       <RevenueMethod />
       <RelatedProjects />
