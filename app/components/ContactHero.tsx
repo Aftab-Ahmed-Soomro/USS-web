@@ -1,27 +1,13 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
+import { InlineWidget } from "react-calendly";
 
 // ─── Shared easing ────────────────────────────────────────────────────────────
 const ease = [0.22, 1, 0.36, 1] as const;
 
 export default function ContactHero() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [focused, setFocused] = useState<string | null>(null);
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log(form);
-  };
-
   const contactItems = [
     {
       icon: Mail,
@@ -187,111 +173,20 @@ export default function ContactHero() {
 
           {/* ── RIGHT COLUMN — Form slides in from right ─────────────── */}
           <motion.div
-            className="order-2 lg:order-none flex items-end"
+            className="order-2 lg:order-none flex items-center justify-center lg:items-end lg:justify-end"
             initial={{ opacity: 0, x: 60, filter: "blur(16px)" }}
             animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.85, delay: 0.3, ease }}
           >
-            <form
-              onSubmit={handleSubmit}
-              className="w-full rounded-[28px] border border-white/[0.08] bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-[21px] flex flex-col gap-[18px] backdrop-blur-sm"
+            <div
+              className="w-full max-w-[460px] rounded-[12px] border border-white/[0.08] bg-gradient-to-br from-white/[0.06] to-white/[0.02] flex flex-col gap-[18px] backdrop-blur-sm overflow-hidden"
               style={{ boxShadow: "0 32px 80px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.06)" }}
             >
-
-              {/* Form field label */}
-              {/* <p className="text-white/40 text-[10px] font-medium tracking-[0.2em] uppercase px-1">
-                Send us a message
-              </p> */}
-
-              {/* Name */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5, ease }}
-              >
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                  value={form.name}
-                  onChange={handleChange}
-                  onFocus={() => setFocused("name")}
-                  onBlur={() => setFocused(null)}
-                  className="w-full h-[78px] rounded-2xl border bg-white/[0.04] px-6 text-white placeholder:text-white text-[14px] outline-none transition-all duration-300"
-                  style={{
-                    borderColor: focused === "name" ? "rgba(255,90,20,0.5)" : "rgba(255,255,255,0.08)",
-                    boxShadow: focused === "name" ? "0 0 0 3px rgba(255,90,20,0.08)" : "none",
-                  }}
-                />
-              </motion.div>
-
-              {/* Email */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.6, ease }}
-              >
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  value={form.email}
-                  onChange={handleChange}
-                  onFocus={() => setFocused("email")}
-                  onBlur={() => setFocused(null)}
-                  className="w-full h-[78px] rounded-2xl border bg-white/[0.03] px-6 text-white placeholder:text-white text-[14px] outline-none transition-all duration-300"
-                  style={{
-                    borderColor: focused === "email" ? "rgba(255,90,20,0.5)" : "rgba(255,255,255,0.08)",
-                    boxShadow: focused === "email" ? "0 0 0 3px rgba(255,90,20,0.08)" : "none",
-                  }}
-                />
-              </motion.div>
-
-              {/* Message */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.7, ease }}
-              >
-                <textarea
-                  name="message"
-                  placeholder="Message"
-                  value={form.message}
-                  onChange={handleChange}
-                  onFocus={() => setFocused("message")}
-                  onBlur={() => setFocused(null)}
-                  className="w-full h-[190px] rounded-2xl border bg-[#111] px-6 py-5 text-white placeholder:text-white text-[14px] outline-none resize-none transition-all duration-300"
-                  style={{
-                    borderColor: focused === "message" ? "rgba(255,90,20,0.5)" : "rgba(255,255,255,0.08)",
-                    boxShadow: focused === "message" ? "0 0 0 3px rgba(255,90,20,0.08)" : "none",
-                  }}
-                />
-              </motion.div>
-
-              {/* Submit button */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.8, ease }}
-              >
-                <motion.button
-                  type="submit"
-                  className="w-full h-[58px] rounded-2xl bg-[#ff5a14] text-white font-semibold text-[14px] tracking-wide relative overflow-hidden"
-                  whileHover={{ scale: 1.015 }}
-                  whileTap={{ scale: 0.98 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  {/* Shimmer on hover */}
-                  <motion.span
-                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent -translate-x-full"
-                    whileHover={{ translateX: "200%" }}
-                    transition={{ duration: 0.5, ease: "easeInOut" }}
-                  />
-                  <span className="relative z-10">Send&nbsp;&nbsp;Message</span>
-                </motion.button>
-              </motion.div>
-
-            </form>
+              <InlineWidget 
+                url="https://calendly.com/unitedstrategicsolutions/30min"
+                styles={{ minWidth: "320px", height: "580px", borderRadius: "16px" }}
+              />
+            </div>
           </motion.div>
 
         </div>
