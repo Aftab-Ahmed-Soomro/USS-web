@@ -8,10 +8,10 @@ import FadeRight from "./FadeRight";
 
 const testimonials = [
   {
-    company: "Yula Lounge",
-    author: "Manhal Naser - Founder",
-    quote: "USS played a key role in our transition from Yalseh to Yula Lounge, helping us bring our new brand vision to life across every touchpoint. Their attention to detail and strategic support made the entire rebrand process seamless.",
-    image: "/assets/Testimonels/Manhal Naser - Yula.jpg",
+    company: "Agency 8",
+    author: "Darrell Elliot - CEO",
+    quote: "USS delivered a custom website and marketing infrastructure that elevated our digital presence and improved how we engage with clients. Through email and WhatsApp marketing, we were able to create more meaningful touchpoints with prospects and build a stronger lead nurturing process.",
+    image: "/assets/Testimonels/Darrell Elliot - Agency 8.webp",
   },
   {
     company: "Cinnamood",
@@ -20,10 +20,22 @@ const testimonials = [
     image: "/assets/Testimonels/Sabrina Gora - Cinnamood.jpeg",
   },
   {
-    company: "Agency 8",
-    author: "Darrell Elliot - CEO",
-    quote: "USS delivered a custom website and marketing infrastructure that elevated our digital presence and improved how we engage with clients. Through email and WhatsApp marketing, we were able to create more meaningful touchpoints with prospects and build a stronger lead nurturing process.",
-    image: "/assets/Testimonels/Darrell Elliot - Agency 8.webp",
+    company: "Yula Lounge",
+    author: "Manhal Naser - Founder",
+    quote: "USS played a key role in our transition from Yalseh to Yula Lounge, helping us bring our new brand vision to life across every touchpoint. Their attention to detail and strategic support made the entire rebrand process seamless.",
+    image: "/assets/Testimonels/Manhal Naser - Yula.jpg",
+  },
+  {
+    company: "SupperClub",
+    author: "Mehreen Omar - Co-Founder",
+    quote: "Growing a premium membership community requires the right mix of brand, content, and communication. The strategic approach helped strengthen our presence in the market and support continued membership growth across the region.",
+    image: "/assets/Testimonels/mehreen.png",
+  },
+  {
+    company: "Residency Advanced",
+    author: "Humphrey Ddagirira - Founder",
+    quote: "The paid search strategy delivered a consistent flow of high-quality enquiries, generating an average of 125 qualified leads per month. The results exceeded our expectations and helped us connect with the right audience at scale.",
+    image: "/assets/Testimonels/humpty.png",
   },
   {
     company: "Women Who Thrive",
@@ -32,35 +44,35 @@ const testimonials = [
     image: "/assets/Testimonels/Sue & Achasah - Women Who Women.jpg",
   },
   {
+    company: "Flowork",
+    author: "Abir Moussa - CEO",
+    quote: "From launch strategy to content and digital marketing, USS helped us successfully introduce flowork to the Dubai market. Their team played a crucial role in building awareness and generating momentum ahead of opening.",
+    image: "/assets/Testimonels/abeer.png",
+  },
+  {
+    company: "Reclaim",
+    author: "Akmann Van Mary - CEO",
+    quote: "Launching Reclaim in the US required more than just marketing. USS helped us build awareness, establish our brand and create a consistent customer journey across multiple channels. Their team has become a trusted extension of our business as we continue to grow.",
+    image: "/assets/Testimonels/akman.png",
+  },
+  {
+    company: "Charbon & C",
+    author: "Chareka Jolly - CEO",
+    quote: "USS has been a trusted partner behind the scenes, delivering high quality work that reflects the standard we expect for our own clients. Their reliability, attention to detail and ability to work as an extension of our team has been invaluable.",
+    image: "/assets/Testimonels/char.png",
+  },
+  {
     company: "Disturbed Innovations Group",
     author: "Co-Founders",
     quote: "We knew it was time for our brand to evolve, but translating that vision into reality was the challenge. The rebrand helped us create a more modern identity that better represents our business and connects with our audience.",
     image: "/assets/Testimonels/Disturbed Innovations Group - Co-Founders.png",
   },
-  {
-    company: "Flowork",
-    author: "Abir Moussa - CEO",
-    quote: "From launch strategy to content and digital marketing, USS helped us successfully introduce flowork to the Dubai market. Their team played a crucial role in building awareness and generating momentum ahead of opening.",
-    image: "/assets/Testimonels/Abir Moussa - Flowork.webp",
-  },
-  {
-    company: "Residency Advanced",
-    author: "Humphrey Ddagirira - Founder",
-    quote: "The paid search strategy delivered a consistent flow of high-quality enquiries, generating an average of 125 qualified leads per month. The results exceeded our expectations and helped us connect with the right audience at scale.",
-    image: "/assets/Testimonels/Humphrey Ddagirira - Residency Advanced.jpeg",
-  },
-  {
-    company: "Afro Maya",
-    author: "Bemnet Maru - Founder",
-    quote: "Building a fashion brand requires more than great products, it requires a strong presence. The combination of strategy, content, and creative direction helped us reach new audiences and strengthen our brand online.",
-    image: "/assets/Testimonels/Bemnet Maru - Afro Maya.jpg",
-  },
-  {
-    company: "SupperClub",
-    author: "Mehreen Omar - Co-Founder",
-    quote: "Growing a premium membership community requires the right mix of brand, content, and communication. The strategic approach helped strengthen our presence in the market and support continued membership growth across the region.",
-    image: "/assets/Testimonels/Mehreen - SupperClub.jpeg",
-  },
+  // {
+  //   company: "Afro Maya",
+  //   author: "Bemnet Maru - Founder",
+  //   quote: "Building a fashion brand requires more than great products, it requires a strong presence. The combination of strategy, content, and creative direction helped us reach new audiences and strengthen our brand online.",
+  //   image: "/assets/Testimonels/Bemnet Maru - Afro Maya.jpg",
+  // }
 ];
 
 function ArrowButton({
