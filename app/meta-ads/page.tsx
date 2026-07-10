@@ -71,7 +71,37 @@ const workSteps = [
 function Hero() {
   return (
     <section className="relative overflow-hidden bg-black px-6 pb-[58px] pt-[56px] text-white sm:pb-[72px] sm:pt-[78px]">
-      
+      <style>{`
+        @keyframes glow-move-tl {
+          0% { transform: translate(0, 0) scale(1); }
+          33% { transform: translate(8vw, 4vw) scale(1.15); }
+          66% { transform: translate(3vw, 8vw) scale(0.95); }
+          100% { transform: translate(0, 0) scale(1); }
+        }
+        @keyframes glow-move-br {
+          0% { transform: translate(0, 0) scale(1); }
+          33% { transform: translate(-8vw, -4vw) scale(1.15); }
+          66% { transform: translate(-3vw, -8vw) scale(0.95); }
+          100% { transform: translate(0, 0) scale(1); }
+        }
+        .animate-glow-tl {
+          animation: glow-move-tl 8s ease-in-out infinite;
+        }
+        .animate-glow-br {
+          animation: glow-move-br 8s ease-in-out infinite;
+        }
+      `}</style>
+      {/* Top Left Gradient */}
+      <div 
+        className="pointer-events-none absolute -left-[20%] -top-[20%] h-[80vw] max-h-[800px] min-h-[500px] w-[80vw] max-w-[800px] min-w-[500px] rounded-full opacity-40 blur-[100px] animate-glow-tl"
+        style={{ background: 'radial-gradient(circle, #FF5500 0%, rgba(255,85,0,0) 70%)' }}
+      />
+
+      {/* Bottom Right Gradient */}
+      <div 
+        className="pointer-events-none absolute -bottom-[20%] -right-[20%] h-[80vw] max-h-[800px] min-h-[500px] w-[80vw] max-w-[800px] min-w-[500px] rounded-full opacity-40 blur-[100px] animate-glow-br"
+        style={{ background: 'radial-gradient(circle, #FF5500 0%, rgba(255,85,0,0) 70%)' }}
+      />
       <div className="mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
@@ -610,7 +640,7 @@ export default function MetaAdsPage() {
       <Header />
       <Hero />
       <Numbers />
-      {/* <Brands /> */}
+      <Brands />
       <WhyEmailFails
               hideBadge={false}
               heading={
