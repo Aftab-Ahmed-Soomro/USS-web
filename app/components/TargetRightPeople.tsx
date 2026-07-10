@@ -71,18 +71,17 @@ const items: TargetItem[] = [
  * visually touches the arc exactly like in the mockup.
  */
 const VIEWBOX_W = 1400;
-const VIEWBOX_H = 200;
-const CONTAINER_H = 420; // matches h-[420px] wrapper
-const P0 = { x: -50, y: -30 };
-const P1 = { x: 700, y: 260 };
-const P2 = { x: 1450, y: -30 };
+const VIEWBOX_H = 420;
+const CONTAINER_H = 420;
+const P0 = { x: -50, y: 20 };
+const P1 = { x: 700, y: 580 };
+const P2 = { x: 1450, y: 20 };
 
 function bezierY(t: number) {
   const mt = 1 - t;
   return mt * mt * P0.y + 2 * mt * t * P1.y + t * t * P2.y;
 }
 
-// Solve for t given target x (bezier x is monotonic here, so simple bisection works)
 function solveTForX(targetX: number) {
   let lo = 0;
   let hi = 1;
@@ -96,33 +95,28 @@ function solveTForX(targetX: number) {
   return (lo + hi) / 2;
 }
 
-// Left offsets as % of container width — tuned to match the mockup,
-// with the outer two nodes closer to the edges.
-const leftPercents = [5.5, 23.5, 41.4, 58.7, 77, 95];
-
-// Height of the icon row below the curve (number + icon + title + desc)
-const ICON_ROW_TOP = 300; // px from top of container where the icon row starts
+// Evenly distribute the 6 nodes
+const leftPercents = [8.33, 25, 41.66, 58.33, 75, 91.66];
+const ICON_ROW_TOP = 320; 
 
 const positions = leftPercents.map((leftPct) => {
   const targetX = (leftPct / 100) * VIEWBOX_W;
   const t = solveTForX(targetX);
   const yInViewBox = bezierY(t);
-  // scale viewBox y (0-200) to actual container height
   const curveY = (yInViewBox / VIEWBOX_H) * CONTAINER_H;
-  // connector runs from the curve point DOWN to the icon row
-  const lineHeight = Math.max(ICON_ROW_TOP - curveY, 8);
+  const lineHeight = Math.max(ICON_ROW_TOP - curveY, 0);
   return { left: `${leftPct}%`, curveY, lineHeight };
 });
 
 export default function TargetRightPeople() {
   return (
-    <section className="relative w-full overflow-hidden bg-black py-24 px-6">
+    <section className="relative w-full overflow-hidden bg-black py-40 px-6">
       {/* ambient glow */}
       <div
-        className="pointer-events-none absolute inset-0 opacity-40"
+        className="pointer-events-none absolute inset-0 opacity-30"
         style={{
           background:
-            "radial-gradient(60% 40% at 50% 45%, rgba(255,85,0,0.15), transparent 70%)",
+            "radial-gradient(50% 50% at 50% 50%, rgba(255,85,0,0.15), transparent 70%)",
         }}
       />
 
@@ -158,39 +152,40 @@ export default function TargetRightPeople() {
         </Stagger>
 
         {/* Curve + nodes */}
-        <div className="relative mt-24 h-[420px] w-full">
+        <div className="relative mt-[-75px] h-[420px] w-full">
           {/* SVG arc */}
-            <svg
-              className="absolute inset-0 h-full w-full"
-              viewBox="0 0 1400 200"
-              preserveAspectRatio="none"
-              fill="none"
-              style={{ overflow: 'visible' }}
-            >
-              <defs>
-                <filter id="glow" x="-20%" y="-200%" width="140%" height="500%">
-                  <feGaussianBlur stdDeviation="6" result="blur" />
-                  <feMerge>
-                    <feMergeNode in="blur" />
-                    <feMergeNode in="SourceGraphic" />
-                  </feMerge>
-                </filter>
-                <linearGradient id="arcFade" x1="-1000" y1="0" x2="2400" y2="0" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stopColor="#ff5500" stopOpacity="0.0" />
-                  <stop offset="20%" stopColor="#ff5500" stopOpacity="1" />
-                  <stop offset="80%" stopColor="#ff5500" stopOpacity="1" />
-                  <stop offset="100%" stopColor="#ff5500" stopOpacity="0.0" />
-                </linearGradient>
-              </defs>
-              <path
-                d="M -3050 -3510 Q 700 3740 4450 -3510"
-                stroke="url(#arcFade)"
-                strokeWidth="2.5"
-                filter="url(#glow)"
-              />
-            </svg>
+          <svg
+            className="absolute inset-0 h-full w-full"
+            viewBox={`0 0 ${VIEWBOX_W} ${VIEWBOX_H}`}
+            preserveAspectRatio="none"
+            fill="none"
+            style={{ overflow: 'visible' }}
+          >
+            <defs>
+              <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="6" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+              <linearGradient id="arcFade" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#ff5500" stopOpacity="0" />
+                <stop offset="15%" stopColor="#ff5500" stopOpacity="1" />
+                <stop offset="85%" stopColor="#ff5500" stopOpacity="1" />
+                <stop offset="100%" stopColor="#ff5500" stopOpacity="0" />
+              </linearGradient>
+            </defs>
+            <path
+              d={`M ${P0.x} ${P0.y} Q ${P1.x} ${P1.y} ${P2.x} ${P2.y}`}
+              stroke="url(#arcFade)"
+              strokeWidth="2.5"
+              filter="url(#glow)"
+            />
+          </svg>
 
-          {/* Nodes — icon row fixed, lines go from curve DOWN to icons */}
+          {/* Nodes */}
           {items.map((item, i) => {
             const Icon = item.icon;
             const pos = positions[i];
@@ -200,20 +195,19 @@ export default function TargetRightPeople() {
                 className="absolute flex -translate-x-1/2 flex-col items-center text-center"
                 style={{ left: pos.left, top: `${pos.curveY}px`, width: "180px" }}
               >
-                <FadeUp delay={0.25 + i * 0.15} className="flex flex-col items-center">
-                  {/* connector line: from curve down to icon */}
+                <FadeUp delay={0.25 + i * 0.15} className="flex flex-col items-center w-full">
+                  {/* connector line */}
                   <div
                     style={{
                       width: "1px",
                       height: `${pos.lineHeight}px`,
-                      background:
-                        "linear-gradient(180deg, rgba(255,85,0,0.7), rgba(255,85,0,0.5))",
+                      background: "linear-gradient(180deg, rgba(255,85,0,0.8), rgba(255,85,0,0.2))",
                     }}
                   />
 
-                  {/* index label */}
+                  {/* label */}
                   <span
-                    className="mt-3 text-gray-500"
+                    className="mt-4 text-gray-500"
                     style={{
                       fontWeight: 400,
                       fontSize: "10px",
@@ -226,26 +220,23 @@ export default function TargetRightPeople() {
 
                   {/* icon */}
                   <div
-                    className="mt-3 flex h-16 w-16 items-center justify-center rounded-2xl border"
+                    className="mt-3 flex h-14 w-14 items-center justify-center rounded-[14px] border"
                     style={{
-                      borderColor: "rgba(255,85,0,0.6)",
-                      background:
-                        "linear-gradient(180deg, rgba(255,85,0,0.12), rgba(255,85,0,0.03))",
-                      boxShadow:
-                        "0 0 24px rgba(255,85,0,0.35), inset 0 0 12px rgba(255,85,0,0.15)",
+                      borderColor: "rgba(255,85,0,0.4)",
+                      background: "linear-gradient(180deg, rgba(255,85,0,0.1), rgba(255,85,0,0.02))",
+                      boxShadow: "0 0 20px rgba(255,85,0,0.2), inset 0 0 10px rgba(255,85,0,0.1)",
                     }}
                   >
-                    <Icon size={26} strokeWidth={1.75} color="#ff7a33" />
+                    <Icon size={24} strokeWidth={1.5} color="#ff7a33" />
                   </div>
 
                   {/* title */}
                   <h3
-                    className="mt-5 text-white"
+                    className="mt-4 text-white"
                     style={{
                       fontWeight: 600,
-                      fontSize: "16px",
+                      fontSize: "15px",
                       lineHeight: "19.5px",
-                      letterSpacing: "0%",
                     }}
                   >
                     {item.title}
@@ -253,12 +244,11 @@ export default function TargetRightPeople() {
 
                   {/* description */}
                   <p
-                    className="mt-2 text-white"
+                    className="mt-2 text-white/80"
                     style={{
                       fontWeight: 400,
-                      fontSize: "14px",
-                      lineHeight: "140%",
-                      letterSpacing: "0%",
+                      fontSize: "13px",
+                      lineHeight: "1.4",
                     }}
                   >
                     {item.description}
