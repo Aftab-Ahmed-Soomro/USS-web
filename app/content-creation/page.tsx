@@ -134,32 +134,40 @@ function VideoSection() {
   return (
     <section className="bg-[#050505] px-6 pb-[56px] pt-[58px] text-white ">
       <div className="mx-auto max-w-[1150px] text-center">
-        <h2 className="font-[var(--font-be-vietnam)] text-[28px] font-medium lowercase leading-tight tracking-[-4%] sm:text-[56px]">
-          take a look at our{" "}
-          <span className="font-[var(--font-cormorant)] text-[1.15em] sm:text-[72px] font-normal tracking-[-4%] timesFontFamily italic">
-            creative world
-          </span>
-        </h2>
-        <p className="mx-auto mt-[9px] max-w-[600px] font-[var(--font-inter)] text-[16px] sm:text-[24px] leading-[1.7] text-[#FFFFFFB2] uppercase">
-          See how we brought this campaign to life.
-        </p>
-        <div className="relative mx-auto mt-[38px] aspect-[1040/515] w-full max-w-[1150px] overflow-hidden rounded-[4px] shadow-[0_0_42px_rgba(255,255,255,0)]">
-          <Image
-            src="/assets/blurred.png"
-            alt="Content creation video preview"
-            fill
-            sizes="(min-width: 1024px) 1040px, 100vw"
-            className="object-cover object-center blur-[17.5px] scale-[1.1]"
-          />
-          <div className="absolute inset-0 bg-black/14" />
-          <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_92px_58px_rgba(0,0,0,0.92)]" />
-          <button
-            aria-label="Play creative video"
-            className="absolute left-1/2 top-1/2 grid size-[54px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-[#ff5500] text-white shadow-[0_12px_32px_rgba(0,0,0,0.36)] transition hover:bg-[#ff6b1f] sm:size-[70px]"
-          >
-            <span className="ml-[4px] h-0 w-0 border-y-[10px] border-l-[15px] border-y-transparent border-l-white sm:border-y-[13px] sm:border-l-[19px]" />
-          </button>
-        </div>
+        <Stagger staggerDelay={0.12}>
+          <StaggerItem>
+            <h2 className="font-[var(--font-be-vietnam)] text-[28px] font-medium lowercase leading-tight tracking-[-4%] sm:text-[56px]">
+              take a look at our{" "}
+              <span className="font-[var(--font-cormorant)] text-[1.15em] sm:text-[72px] font-normal tracking-[-4%] timesFontFamily italic">
+                creative world
+              </span>
+            </h2>
+          </StaggerItem>
+          <StaggerItem>
+            <p className="mx-auto mt-[9px] max-w-[600px] font-[var(--font-inter)] text-[16px] sm:text-[24px] leading-[1.7] text-[#FFFFFFB2] uppercase">
+              See how we brought this campaign to life.
+            </p>
+          </StaggerItem>
+        </Stagger>
+        <FadeUp delay={0.3}>
+          <div className="relative mx-auto mt-[38px] aspect-[1040/515] w-full max-w-[1150px] overflow-hidden rounded-[4px] shadow-[0_0_42px_rgba(255,255,255,0)]">
+            <Image
+              src="/assets/blurred.png"
+              alt="Content creation video preview"
+              fill
+              sizes="(min-width: 1024px) 1040px, 100vw"
+              className="object-cover object-center blur-[17.5px] scale-[1.1]"
+            />
+            <div className="absolute inset-0 bg-black/14" />
+            <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_92px_58px_rgba(0,0,0,0.92)]" />
+            <button
+              aria-label="Play creative video"
+              className="absolute left-1/2 top-1/2 grid size-[54px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-[#ff5500] text-white shadow-[0_12px_32px_rgba(0,0,0,0.36)] transition hover:bg-[#ff6b1f] sm:size-[70px]"
+            >
+              <span className="ml-[4px] h-0 w-0 border-y-[10px] border-l-[15px] border-y-transparent border-l-white sm:border-y-[13px] sm:border-l-[19px]" />
+            </button>
+          </div>
+        </FadeUp>
       </div>
     </section>
   );
@@ -372,31 +380,34 @@ function ProcessSection() {
 
 function FinalCta() {
   return (
-    <section className="bg-black px-6 py-[72px] text-white ">
-      <div className="mx-auto max-w-[1150px] text-center">
-        <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[3px] text-[#ff5500]">
-          Let&apos;s Create
-        </p>
-        <h2 className="mt-[22px] font-[var(--font-be-vietnam)] text-[34px] font-medium lowercase leading-[1.08] tracking-[-1.3px] sm:text-[50px]">
-          create content
-          <br />
-          that actually{" "}
-          <span className="font-[var(--font-cormorant)] text-[1.12em] font-extralight timesFontFamily italic tracking-[-0.04em] text-[#ff5500]">
-            performs
-          </span>
-        </h2>
-        <div className="mt-[26px] flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Link
-            className="inline-flex h-[37px] min-w-[166px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[11px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
-            href="/contact"
-          >
-            Book a Consultation
-          </Link>
-          <Link className="font-[var(--font-be-vietnam)] text-[13px] font-medium text-white/80 transition hover:text-white border-white border rounded-full px-5 h-[38px] inline-flex items-center justify-center" href="#services">
-            Book a Strategy Call
-          </Link>
-        </div>
-      </div>
+    <section className="bg-black px-6 pt-[70px] text-white pb-30">
+      <Stagger staggerDelay={0.12} className="mx-auto max-w-[1150px] text-center">
+        <StaggerItem>
+          <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
+             LET&apos;S CREATE
+          </p>
+        </StaggerItem>
+        <StaggerItem>
+          <h2 className="mt-8 font-[var(--font-be-vietnam)] text-[36px] font-medium leading-[1.08] tracking-[-1.5px] sm:text-[55px]">
+            create content
+            <br />
+            that actually{" "}
+            <span className="font-[var(--font-cormorant)] text-[1.12em] font-extralight timesFontFamily italic text-[#ff5500]">
+              performs
+            </span>
+          </h2>
+        </StaggerItem>
+        <StaggerItem>
+          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Link
+              className="inline-flex h-[42px] min-w-[190px] items-center justify-center rounded-full bg-[#ff5500] px-8 font-[var(--font-be-vietnam)] text-[12px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
+              href="/contact"
+            >
+              Book a Consultation
+            </Link>
+          </div>
+        </StaggerItem>
+      </Stagger>
     </section>
   );
 }
@@ -404,54 +415,54 @@ function FinalCta() {
 const googleAdsBrandPoints = [
   {
     number: "01",
-    title: "Wasted Budget",
+    title: "Send and Forget",
     description:
-      "Budget is spent on keywords that don't convert.",
+      "Emails are only sent when there's a promotion or announcement.",
   },
   {
     number: "02",
-    title: "Poor Campaign Structure",
+    title: "Every Subscriber Looks the Same",
     description:
-      "Poor campaign structure makes it harder to improve performance.",
+      "The same message is sent to everyone, regardless of interests or behavior.",
   },
   {
     number: "03",
-    title: "Weak Ad Copy",
+    title: "No Long-Term Customer Journey",
     description:
-      "Ads don't stand out or encourage people to click and engage.",
+      "There's no system to welcome, nurture, or retain customers after they sign up.",
   },
   {
     number: "04",
-    title: "Set and Forget",
+    title: "No Clear Performance Tracking",
     description:
-      "Campaigns run without A/B testing or optimisation.",
+      "Little reporting or optimization means opportunities are missed.",
   },
 ];
 
 const googleAdsUssPoints = [
   {
     number: "01",
-    title: "High-Intent Targeting",
+    title: "Always-On Email Strategy",
     description:
-      "We target searches that are ready to convert.",
+      "We create an email calendar that keeps your brand consistently in front of customers.",
   },
   {
     number: "02",
-    title: "Built for Performance",
+    title: "Personalized Customer Experiences",
     description:
-      "Campaigns structured for better results and scalability.",
+      "Campaigns are tailored to different audiences using segmentation and customer behavior.",
   },
   {
     number: "03",
-    title: "Ads That Drive Action",
+    title: "Automated Customer Journeys",
     description:
-      "Copy written to increase clicks and enquiries",
+      "Welcome flows, abandoned carts, post-purchase emails and retention campaigns work in the background.",
   },
   {
     number: "04",
-    title: "Always Optimising",
+    title: "Continuous Performance Optimization",
     description:
-      "Continuous improvements based on real campaign data",
+      "Every campaign is measured, refined and improved using real performance data.",
   },
 ];
 
@@ -459,39 +470,152 @@ const googleAdsUssPoints = [
 const CARDS_DATA = [
   {
     id: '01',
-    title: 'Campaign Strategy',
-    description: 'Every campaign starts with a clear objective. We define your goals, audience, budget and messaging before any ad goes live.',
+    title: 'Discovery & Planning',
+    description: 'Understanding your goals, audience and creative direction.',
     bgImage: '/assets/method1.png', // Replace with your image src
   },
   {
     id: '02',
-    title: 'Audience Targeting',
-    description: 'We identify and engage the most relevant demographics through data-driven targeting strategies, ensuring your ads reach the right people.',
+    title: 'Creative Direction',
+    description: 'Crafting unique visual styles to elevate your brand story.',
     bgImage: '/assets/method2.png', // Replace with your image src
   },
   {
     id: '03',
-    title: 'Creative & Ad Content',
-    description: 'Our team crafts compelling visuals and persuasive copy that capture attention and drive meaningful engagement from your audience.',
+    title: 'Production',
+    description: 'Bringing ideas to life with high quality video and photos.',
     bgImage: '/assets/method3.png', // Replace with your image src
   },
   {
     id: '04',
-    title: 'Optimisation & Scaling',
-    description: 'We continuously monitor performance metrics to refine campaigns, maximizing return on ad spend and scaling what works best.',
+    title: 'Editing & Delivery',
+    description: 'Polishing the footage into final assets ready for release.',
     bgImage: '/assets/method4.png', // Replace with your image src
   },
 ];
 
+const relatedProjects = [
+  {
+    slug: "blank-dxb",
+    name: "Blank DXB",
+    image: "/assets/dxb.jpg",
+    copy: "With a strong Meta Ads execution we focused on Paid Media during Blank DXB launch. We were able to target demand on a granular level making budget efficiency higher.",
+    tags: ["Paid Media", "Meta Ads Targeting", "Lead Generation"],
+    year: "2024",
+    imageClassName: "object-cover object-[50%_55%]",
+  },
+  {
+    slug: "supperclub",
+    name: "SupperClub",
+    image: "/assets/club.jpg",
+    copy: "We increased SupperClub membership using Meta Ads to drive members using creative assets and location targeting.",
+    tags: ["Membership Increase", "Hospitality"],
+    year: "2024",
+    imageClassName: "object-cover object-[50%_65%]",
+  },
+];
+
+function RelatedProjects() {
+  return (
+    <section className="bg-[#080808] px-6 py-[56px] text-white">
+      <div className="mx-auto max-w-[1150px]">
+        {/* Header */}
+        <div className="flex items-center justify-between gap-6">
+          <Stagger staggerDelay={0.12}>
+            <StaggerItem>
+              <h2 className="font-[var(--font-be-vietnam)] text-[28px] sm:text-[56px] font-medium lowercase leading-none tracking-[-0.96px]">
+                related{" "}
+                <span className="font-[var(--font-cormorant)] text-[1.18em] sm:text-[72px] font-normal timesFontFamily italic tracking-[-0.96px]">
+                  projects
+                </span>
+              </h2>
+            </StaggerItem>
+          </Stagger>
+
+          <FadeRight delay={0.3}>
+            <Link
+              href="/projects"
+              className="hidden sm:inline-flex shrink-0 items-center gap-2 rounded-full border border-white px-5 py-3 font-[var(--font-inter)] text-[12px] text-white sm:text-[15px]"
+            >
+              View all projects
+              <img src="/assets/rightArrowMed.png" className="w-4 h-4" alt="" />
+            </Link>
+          </FadeRight>
+        </div>
+
+        {/* Cards */}
+        <div className="mt-[40px] grid gap-[24px] md:grid-cols-2">
+          {relatedProjects.map((project, i) => (
+            <FadeUp key={project.name} delay={0.15 + i * 0.15}>
+              <Link
+                href={`/projects/${project.slug}`}
+                className="block rounded-[20px] border border-white p-[14px] transition-colors duration-300 hover:border-[#ff5500] group"
+              >
+                <div className="relative aspect-[420/260] w-full overflow-hidden max-w-[534px] rounded-[12px] bg-[#111]">
+                  <Image
+                    src={project.image}
+                    alt={`${project.name} marketing strategy project`}
+                    fill
+                    sizes="(min-width: 768px) 45vw, calc(100vw - 48px)"
+                    className={`${project.imageClassName || 'object-cover'} transition-transform duration-700 group-hover:scale-105`}
+                  />
+                </div>
+
+                <div className="px-[10px] pt-[24px] pb-[6px]">
+                  {/* Title + year */}
+                  <div className="flex items-baseline justify-between gap-3">
+                    <h3 className="font-[var(--font-be-vietnam)] text-[22px] sm:text-[36px] font-normal leading-none tracking-[-0.72px] group-hover:text-[#ff5500] transition-colors duration-300">
+                      {project.name}
+                    </h3>
+                    <span className="shrink-0 font-[var(--font-inter)] text-[14px] text-white">
+                      {project.year}
+                    </span>
+                  </div>
+
+                  {/* Copy */}
+                  <p className="mt-[14px] max-w-[550px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[28px] text-white">
+                    {project.copy}
+                  </p>
+
+                  {/* Tags */}
+                  <div className="mt-[20px] flex flex-wrap gap-[10px]">
+                    {(project.tags ?? []).map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full border border-white px-[14px] py-[7px] font-[var(--font-inter)] text-[12px] text-white/90 group-hover:border-[#ff5500]/50 transition-colors duration-300"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </Link>
+            </FadeUp>
+          ))}
+
+          {/* Mobile-only view all link, shown below cards on small screens */}
+          <Link
+            href="/projects"
+            className="sm:hidden inline-flex w-fit items-center gap-2 rounded-full border border-white/30 px-5 py-3 font-[var(--font-inter)] text-[12px] text-white/85 transition-colors hover:border-white/60 hover:text-white"
+          >
+            View all projects
+            <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function RevenueMethod() {
   return (
-    <div className="w-full bg-black text-white py-20 px-6 min-h-screen flex flex-col justify-center items-center font-sans">
+    <div className="w-full bg-black text-white py-20 mt-16 px-6 min-h-screen flex flex-col justify-center items-center font-sans">
       <div className="max-w-[1150px] w-full">
 
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
             <h2 className="lowercase text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-16">
-              our content creation  <br />
+              our content creation 
               {" "}
               <span
                 className="italic text-[#ff5500] font-normal text-[1.1em] tracking-[-3%] sm:text-[72px] sm:leading-[70px]"
@@ -561,46 +685,56 @@ export default function ContentCreationPage() {
       <Header />
       <Hero />
       <VideoSection />
-      {/* <Brands /> */}
+      <Brands />
       {/* <Metrics /> */}
-      <WhyEmailFails
-        hideBadge={true}
-        heading={
-          <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
-            why most{" "}
-            <span
-              className="font-normal italic text-[60px] sm:text-[72px]"
-              style={{ fontFamily: "'Times New Roman', Times, serif" }}
-            >
-              google ads
-            </span>{" "}
-            fails
-          </h2>
-        }
-        subheading="Most brands don't have a Google Ads problem, they have a strategy problem."
-        leftTitle="Most Brands"
-        rightTitle="The USS Difference"
-        leftPoints={googleAdsBrandPoints}
-        rightPoints={googleAdsUssPoints}
-        centerLogo="/assets/Google__logo.webp"
-        logoClassName="w-[80px] lg:w-[115px]"
-      />
-      <div className="mt-[-150px]">
-        <EmailMarketingQuote first={"your social media is your"} second={"digital window"} third={"shop front"} />
-      </div>
-      <ContentCreationGrid />
+      <FadeUp delay={0.2}>
+        <WhyEmailFails
+          hideBadge={true}
+          heading={
+            <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
+              why most{" "}
+              <span
+                className="font-normal italic text-[60px] sm:text-[72px]"
+                style={{ fontFamily: "'Times New Roman', Times, serif" }}
+              >
+                content assets
+              </span>{" "}
+              fails
+            </h2>
+          }
+          subheading="Most brands don't have an email problem, they have a strategy problem."
+          leftTitle="Most Brands"
+          rightTitle="The USS Difference"
+          leftPoints={googleAdsBrandPoints}
+          rightPoints={googleAdsUssPoints}
+          centerLogo="/assets/Google__logo.webp"
+          logoClassName="w-[80px] lg:w-[115px]"
+        />
+      </FadeUp>
+      <FadeUp delay={0.2}>
+        <div className="mt-[-150px]">
+          <EmailMarketingQuote first={"your social media is your"} second={"digital window"} third={"shop front"} />
+        </div>
+      </FadeUp>
+      <FadeUp delay={0.2}>
+        <ContentCreationGrid />
+      </FadeUp>
       <RevenueMethod />
-      {/* <Problems /> */}
-      {/* <QuoteImage /> */}
-      {/* <ApproachSection /> */}
-      {/* <ServicesSection /> */}
-      {/* <ProcessSection /> */}
-      {/* <OnlyBrands /> */}
-      <Testimonials />
-      <Team />
-      <GoodCompanyMap />
+      <RelatedProjects />
+      <FadeUp delay={0.2}>
+        <Testimonials />
+      </FadeUp>
+      <FadeUp delay={0.2}>
+        <Team />
+      </FadeUp>
+      <FadeUp delay={0.2}>
+        <GoodCompanyMap />
+      </FadeUp>
       <FinalCta />
-      <Footer />
+      <div className="mt-[-120px]">
+      
+            <Footer />
+            </div>
     </main>
   );
 }
