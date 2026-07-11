@@ -9,19 +9,12 @@ const socialVisuals = Array.from({ length: 13 }, (_, i) => ({
 
 export default function OurOrganicSocialMediaApproach() {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-[48px] min-[390px]:py-[58px] sm:py-20">
       <Stagger staggerDelay={0.15}>
-        <div className="max-w-6xl mx-auto text-center mb-12">
+        <div className="max-w-6xl mx-auto text-center mb-8 min-[390px]:mb-10 sm:mb-12 px-4 sm:px-0">
           <StaggerItem>
             <p
-              className="uppercase mb-4"
-              style={{
-                fontWeight: 500,
-                fontSize: "14px",
-                lineHeight: "16px",
-                letterSpacing: "-1.2px",
-                color: "#ff5500",
-              }}
+              className="uppercase mb-4 font-medium text-[14px] leading-[16px] tracking-[-1.2px] text-[#ff5500]"
             >
               Our Approach
             </p>
@@ -30,34 +23,16 @@ export default function OurOrganicSocialMediaApproach() {
           <StaggerItem>
             <h2 className="text-black">
               <span
-                style={{
-                  fontWeight: 500,
-                  fontSize: "56px",
-                  lineHeight: "70px",
-                  letterSpacing: "-1.2px",
-                }}
+                className="font-medium text-[32px] min-[390px]:text-[40px] sm:text-[56px] leading-[1.1] sm:leading-[70px] tracking-[-1.2px]"
               >
                 our{" "}
               </span>
-              <span className="timesFontFamily"
-                style={{
-                  fontWeight: 400,
-                  fontStyle: "italic",
-                  fontSize: "72px",
-                  lineHeight: "70px",
-                  letterSpacing: "-1.2px",
-                  color: "#FF5500"
-                }}
+              <span className="timesFontFamily italic font-normal text-[#FF5500] text-[40px] min-[390px]:text-[52px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-1.2px]"
               >
                 organic{" "}
               </span>
               <span
-                style={{
-                  fontWeight: 500,
-                  fontSize: "56px",
-                  lineHeight: "70px",
-                  letterSpacing: "-1.2px",
-                }}
+                className="font-medium text-[32px] min-[390px]:text-[40px] sm:text-[56px] leading-[1.1] sm:leading-[70px] tracking-[-1.2px]"
               >
                 social grids
               </span>
@@ -69,7 +44,7 @@ export default function OurOrganicSocialMediaApproach() {
           <div className="social-visuals-track flex items-center gap-4 sm:gap-[46px]">
             {[...socialVisuals, ...socialVisuals, ...socialVisuals].map((visual, index) => (
                 <div
-                  className="relative h-[460px] w-[258px] shrink-0 overflow-hidden bg-[#111] shadow-[0_16px_38px_rgba(0,0,0,0.08)] sm:h-[520px] sm:w-[292px] lg:h-[719px] lg:w-[404px]"
+                  className="relative h-[356px] w-[200px] min-[360px]:h-[392px] min-[360px]:w-[220px] min-[390px]:h-[460px] min-[390px]:w-[258px] shrink-0 overflow-hidden bg-[#111] shadow-[0_16px_38px_rgba(0,0,0,0.08)] sm:h-[520px] sm:w-[292px] lg:h-[719px] lg:w-[404px]"
                   key={index}
                 >
                   <Image
@@ -77,7 +52,7 @@ export default function OurOrganicSocialMediaApproach() {
                     alt={visual.alt}
                     fill
                     unoptimized
-                    sizes="(min-width: 1024px) 404px, (min-width: 640px) 292px, 258px"
+                    sizes="(min-width: 1024px) 404px, (min-width: 640px) 292px, (min-width: 390px) 258px, 200px"
                     className="object-cover object-top hover:scale-105 transition-transform duration-700 ease-out"
                   />
                 </div>

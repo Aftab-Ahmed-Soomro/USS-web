@@ -36,7 +36,7 @@ export default function SocialMediaRevenueMethod() {
   const isActive = (index: number) => hoveredIndex === index;
 
   return (
-    <div className="w-full bg-black text-white py-20 min-h-screen flex flex-col justify-center font-sans px-6">
+    <div className="w-full bg-black text-white py-[48px] min-[390px]:py-[58px] sm:py-20 min-h-screen flex flex-col justify-center font-sans px-4 min-[375px]:px-5 min-[480px]:px-6 sm:px-6">
       <Stagger staggerDelay={0.15}>
         {/* Heading — constrained width */}
         <div className="max-w-[1150px] w-full mx-auto">
@@ -47,7 +47,7 @@ export default function SocialMediaRevenueMethod() {
           </StaggerItem>
 
           <StaggerItem>
-            <h2 className="text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-16">
+            <h2 className="text-white text-[28px] min-[360px]:text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-8 min-[390px]:mb-10 sm:mb-16">
               organic social{" "}
               <span
                 className="italic text-[#ff5500] font-normal text-[1.1em] tracking-[-3%] sm:text-[72px] sm:leading-[70px]"
@@ -111,7 +111,7 @@ export default function SocialMediaRevenueMethod() {
             </div>
 
             {/* Mobile: stacked */}
-            <div className="flex md:hidden flex-col gap-6">
+            <div className="flex md:hidden flex-col gap-4 min-[390px]:gap-6">
               {CARDS_DATA.map((card) => (
                 <div
                   key={card.id}
@@ -119,18 +119,17 @@ export default function SocialMediaRevenueMethod() {
                     backgroundImage: "url(" + card.bgImage + ")",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
-                    height: "400px",
                   }}
-                  className="relative rounded-[28px] overflow-hidden p-6 flex flex-col justify-between cursor-pointer"
+                  className="relative h-[340px] min-[360px]:h-[360px] min-[390px]:h-[400px] rounded-[28px] overflow-hidden p-5 min-[390px]:p-6 flex flex-col justify-between cursor-pointer"
                 >
                   <div className="text-[9.82px] font-medium tracking-[2.95px] text-white opacity-80">
                     {card.id}
                   </div>
                   <div>
-                    <h3 className="text-[22.64px] font-normal leading-[26.78px] text-white mb-3">
+                    <h3 className="text-[20px] min-[360px]:text-[22.64px] font-normal leading-[26.78px] text-white mb-2 min-[360px]:mb-3">
                       {card.title}
                     </h3>
-                    <p className="text-[15.5px] font-normal leading-[1.8] text-white/90">
+                    <p className="text-[14px] min-[360px]:text-[15.5px] font-normal leading-[1.6] min-[360px]:leading-[1.8] text-white/90">
                       {card.description}
                     </p>
                   </div>
