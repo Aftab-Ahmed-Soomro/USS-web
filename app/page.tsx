@@ -66,8 +66,8 @@ const workWays = [
 
 function Strategic() {
   return (
-    <section className="bg-[#F8F8F7] pb-[40px] pt-[70px] text-black">
-      <div className="mx-auto max-w-[1150px] px-6">
+    <section className="bg-[#F8F8F7] pb-[40px] pt-[40px] sm:pt-[70px] text-black">
+      <div className="mx-auto max-w-[1150px] px-4 sm:px-6">
 
         {/* Section label — drops in from above */}
         <div className="text-center">
@@ -79,9 +79,9 @@ function Strategic() {
 
           {/* Headline — scales in for more punch than a plain fade */}
           <ScaleIn delay={0.1} startScale={0.92}>
-            <h2 className="mt-[35px] text-[42px] font-medium leading-[0.98] tracking-[-0.8px] sm:text-[56px]">
+            <h2 className="mt-[25px] sm:mt-[35px] text-[32px] min-[375px]:text-[42px] font-medium leading-[0.98] tracking-[-0.8px] sm:text-[56px]">
               a strategic process
-              <span className="mt-[25px] block fo`nt-[var(--font-cormorant)] text-[51px] font-normal timesFontFamily italic leading-[0.8] tracking-[-0.8px] text-[#ff5500] sm:text-[56px]">
+              <span className="mt-[15px] sm:mt-[25px] block font-[var(--font-cormorant)] text-[38px] min-[375px]:text-[51px] font-normal timesFontFamily italic leading-[0.8] tracking-[-0.8px] text-[#ff5500] sm:text-[56px]">
                 built to perform
               </span>
             </h2>
@@ -89,7 +89,7 @@ function Strategic() {
 
           {/* Supporting copy */}
           <FadeUp delay={0.2}>
-            <p className="mx-auto mt-[32px] max-w-[580px] text-[17px] sm:text-[24px] font-normal leading-[-1%]">
+            <p className="mx-auto mt-[20px] sm:mt-[32px] max-w-[580px] text-[15px] min-[375px]:text-[17px] sm:text-[24px] font-normal leading-[-1%]">
               Every project starts with understanding your business before we plan, create and deliver.
             </p>
           </FadeUp>
@@ -98,30 +98,30 @@ function Strategic() {
         {/* Process steps — staggered sequential reveal instead of 3 identical FadeLefts */}
         <Stagger
           staggerDelay={0.18}
-          className="mt-[93px] grid gap-y-12 md:grid-cols-3 md:gap-y-0"
+          className="mt-[60px] sm:mt-[93px] grid gap-y-10 sm:gap-y-12 md:grid-cols-3 md:gap-y-0"
         >
           {process.map((step, index) => (
             <StaggerItem key={step.number} y={50}>
               <article
-                className={`relative px-6 md:min-h-[355px] ${
+                className={`relative px-2 min-[375px]:px-6 md:min-h-[355px] ${
                   index > 0 ? "md:border-l md:border-black/10" : ""
                 }`}
               >
                 <div className="flex items-center justify-between gap-6">
-                  <span className="font-[var(--font-cormorant)] text-[180px] font-normal leading-[0.72] timesFontFamily tracking-[0%]">
+                  <span className="font-[var(--font-cormorant)] text-[120px] sm:text-[180px] font-normal leading-[0.72] timesFontFamily tracking-[0%]">
                     {step.number}
                   </span>
                   {step.icon && (
-                    <span className="grid border mr-10 border-black size-[50px] shrink-0 place-items-center rounded-full text-[22px] font-normal text-[#ff5500] shadow-[0_18px_32px_rgba(0,0,0,0.08)]">
-                      <img className="size-[30px]" src={step.icon} alt="" />
+                    <span className="grid border mr-2 sm:mr-10 border-black size-[40px] sm:size-[50px] shrink-0 place-items-center rounded-full text-[22px] font-normal text-[#ff5500] shadow-[0_18px_32px_rgba(0,0,0,0.08)]">
+                      <img className="size-[24px] sm:size-[30px]" src={step.icon} alt="" />
                     </span>
                   )}
                 </div>
-                <div className="mt-[48px] h-px w-9 bg-[#ff5500]" />
-                <h3 className="mt-[33px] text-[24px] sm:text-[34.6px] font-bold leading-none tracking-[-0.85px]">
+                <div className="mt-[30px] sm:mt-[48px] h-px w-9 bg-[#ff5500]" />
+                <h3 className="mt-[20px] sm:mt-[33px] text-[20px] min-[375px]:text-[24px] sm:text-[34.6px] font-bold leading-none tracking-[-0.85px]">
                   {step.title}
                 </h3>
-                <p className="mt-[30px] max-w-[400px] text-[16px] sm:text-[17px] font-normal leading-[36px] text-black/70">
+                <p className="mt-[16px] sm:mt-[30px] max-w-[400px] text-[14px] min-[375px]:text-[16px] sm:text-[17px] font-normal leading-[28px] min-[375px]:leading-[36px] text-black/70">
                   {step.copy}
                 </p>
               </article>
@@ -131,24 +131,24 @@ function Strategic() {
 
         {/* Partnership card — zoom-in feels more like a "highlight" than a fade */}
         <ScaleIn delay={0.1} startScale={0.94}>
-          <div className="mx-auto mt-[56px] grid max-w-[900px] overflow-hidden rounded-[16px] border border-black/[0.03] bg-white shadow-[0_22px_42px_rgba(0,0,0,0.08)] md:min-h-[110px] md:grid-cols-[492px_1fr]">
-            <div className="flex items-center gap-[21px] px-8 py-7 md:px-[38px]">
-              <span className="grid size-[46px] shrink-0 place-items-center border border-gray-200 p-3.5 rounded-full text-[22px] font-normal text-white shadow-[0_8px_16px_rgba(0,0,0,0.08)]">
+          <div className="mx-auto mt-[40px] sm:mt-[56px] grid max-w-[900px] overflow-hidden rounded-[16px] border border-black/[0.03] bg-white shadow-[0_22px_42px_rgba(0,0,0,0.08)] md:min-h-[110px] md:grid-cols-[492px_1fr]">
+            <div className="flex items-center gap-[12px] min-[375px]:gap-[21px] px-4 min-[375px]:px-8 py-5 min-[375px]:py-7 md:px-[38px]">
+              <span className="grid size-[36px] min-[375px]:size-[46px] shrink-0 place-items-center border border-gray-200 p-2.5 min-[375px]:p-3.5 rounded-full text-[22px] font-normal text-white shadow-[0_8px_16px_rgba(0,0,0,0.08)]">
                 <img src="/assets/star.png" alt="" />
               </span>
               <div>
-                <h3 className="text-[14px] sm:text-[18px] font-bold leading-none">
+                <h3 className="text-[13px] min-[375px]:text-[14px] sm:text-[18px] font-bold leading-none">
                   A process that keeps things moving
                 </h3>
-                <p className="mt-[11px] max-w-[420px] text-[11.5px] sm:text-[15px] leading-[24px] text-black/60">
+                <p className="mt-[6px] min-[375px]:mt-[11px] max-w-[420px] text-[10px] min-[375px]:text-[11.5px] sm:text-[15px] leading-[18px] min-[375px]:leading-[24px] text-black/60">
                   From planning to delivery, we keep every project organised, efficient and on track.
                 </p>
               </div>
             </div>
-            <div className="flex items-center border-t border-black/[0.06] px-8 py-7 md:border-l md:border-t-0 md:px-[4px] lg:px-[24px]">
+            <div className="flex items-center border-t border-black/[0.06] px-4 min-[375px]:px-8 py-5 min-[375px]:py-7 md:border-l md:border-t-0 md:px-[4px] lg:px-[24px]">
               <a
                 href="/contact"
-                className="inline-flex h-11 w-full max-w-[300px] items-center justify-center rounded-full bg-[#ff5500] px-4 sm:px-6 text-[10px] sm:text-[11px] md:text-[12px] font-semibold uppercase tracking-[1.5px] sm:tracking-[2px] text-white whitespace-nowrap  transition hover:bg-[#ff6b1f]"
+                className="inline-flex h-10 min-[375px]:h-11 w-full max-w-[300px] items-center justify-center rounded-full bg-[#ff5500] px-3 min-[375px]:px-4 sm:px-6 text-[10px] sm:text-[11px] md:text-[12px] font-semibold uppercase tracking-[1.5px] sm:tracking-[2px] text-white whitespace-nowrap transition hover:bg-[#ff6b1f]"
               >
                 Book a Consultation
                 <span className="text-[14px] ml-0 lg:ml-2 leading-none">
@@ -166,7 +166,7 @@ function Strategic() {
 
 function FinalCta() {
   return (
-    <section className="relative z-10 px-6 py-[80px] text-white overflow-hidden">
+    <section className="relative z-10 px-4 sm:px-6 py-[50px] sm:py-[80px] text-white overflow-hidden">
       {/* Background Glows */}
       <div className="pointer-events-none absolute left-[-15%] top-[-10%] h-[600px] w-[600px] rounded-full bg-[#ff5500] opacity-20 blur-[100px]" />
       <div className="pointer-events-none absolute right-[-15%] bottom-[-10%] h-[600px] w-[600px] rounded-full bg-[#ff5500] opacity-20 blur-[100px]" />
@@ -175,7 +175,7 @@ function FinalCta() {
 
         {/* Eyebrow — drops down */}
         <FadeDown>
-          <div className="flex items-center justify-center gap-2 mb-8">
+          <div className="flex items-center justify-center gap-2 mb-6 sm:mb-8">
             <div className="h-1.5 w-1.5 rounded-full bg-[#ff5500]"></div>
             <p className="text-[10px] font-bold uppercase tracking-[2px] text-white">
               FULL-STACK MARKETING
@@ -185,13 +185,13 @@ function FinalCta() {
 
         {/* Main headline — scales in for emphasis as the hero statement of the section */}
         <ScaleIn delay={0.1} startScale={0.88}>
-          <h2 className="mb-10 text-[42px] font-medium leading-[1.05] tracking-[-6%] sm:text-[56px]">
+          <h2 className="mb-8 sm:mb-10 text-[32px] min-[375px]:text-[42px] font-medium leading-[1.05] tracking-[-6%] sm:text-[56px]">
             we are your{" "}
-            <span className="font-[var(--font-cormorant)] text-[72px] font-light timesFontFamily italic">
+            <span className="font-[var(--font-cormorant)] text-[40px] min-[375px]:text-[50px] sm:text-[72px] font-light timesFontFamily italic">
               360&deg;
             </span>
             <br />
-            <span className="font-[var(--font-cormorant)] text-[72px] font-normal timesFontFamily italic">
+            <span className="font-[var(--font-cormorant)] text-[40px] min-[375px]:text-[50px] sm:text-[72px] font-normal timesFontFamily italic">
               marketing agency
             </span>
           </h2>
@@ -199,7 +199,7 @@ function FinalCta() {
 
         {/* Body copy paragraphs — staggered one after another instead of both fading together */}
         <Stagger staggerDelay={0.2} delay={0.25}>
-          <div className="mx-auto max-w-[600px] space-y-8 text-[15px] leading-[27px]  text-white">
+          <div className="mx-auto max-w-[600px] space-y-6 sm:space-y-8 text-[13px] min-[375px]:text-[14px] sm:text-[15px] leading-[24px] sm:leading-[27px] text-white">
             <StaggerItem y={20}>
               <p>
                 Calling ourselves a data-driven, problem solving, people connecting, digital crazy,
@@ -216,8 +216,8 @@ function FinalCta() {
 
         {/* CTA buttons — rise up last */}
         <FadeUp delay={0.5}>
-          <div className="mt-8 max-w-[600px] mx-auto flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link href="/contact" className="flex h-[40px] w-full sm:w-auto px-10 items-center justify-center rounded-full bg-[#ff5500] text-[13px] font-bold text-white transition-colors uppercase hover:bg-[#ff6b1f]">
+          <div className="mt-6 sm:mt-8 max-w-[600px] mx-auto flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Link href="/contact" className="flex h-[40px] w-full sm:w-auto px-10 items-center justify-center rounded-full bg-[#ff5500] text-[12px] sm:text-[13px] font-bold text-white transition-colors uppercase hover:bg-[#ff6b1f]">
               Book a Consultation
             </Link>
             {/* <button className="flex h-[40px] w-full sm:w-auto px-8 items-center justify-center gap-2 rounded-full border border-white bg-transparent text-[8px] font-bold text-white transition-colors hover:bg-white/5">

@@ -16,7 +16,7 @@ export default function BrandElevationVideo() {
   };
 
   return (
-    <section className="relative w-full h-[100svh] md:h-[120svh] min-h-[720px] overflow-hidden">
+    <section className="relative w-full h-[60svh] min-[375px]:h-[70svh] sm:h-[100svh] md:h-[120svh] min-h-[400px] sm:min-h-[720px] overflow-hidden">
   <video
     ref={videoRef}
     src="https://emmanuelcolewilliams.com/uss-assets/USS AD_FINAL.mp4"
@@ -37,7 +37,7 @@ export default function BrandElevationVideo() {
       {/* Mute / Unmute Button */}
       <button
         onClick={toggleMute}
-        className="absolute bottom-6 right-6 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-md transition hover:bg-black/70"
+        className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 z-20 flex h-9 w-9 sm:h-11 sm:w-11 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-md transition hover:bg-black/70"
         aria-label={isMuted ? "Unmute video" : "Mute video"}
       >
         {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}

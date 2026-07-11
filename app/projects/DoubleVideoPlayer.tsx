@@ -21,8 +21,8 @@ export function DoubleVideoPlayer({ srcs, productName }: DoubleVideoPlayerProps)
   };
 
   return (
-    <div className="relative mx-auto mt-[48px] max-w-[1014px] overflow-hidden rounded-[10px] bg-[#181818] shadow-[0_0_65px_rgba(255,255,255,0.23)] group">
-      <div className="flex h-[540px] gap-[3px]">
+    <div className="relative mx-auto mt-[24px] sm:mt-[48px] aspect-[1014/540] max-w-[1014px] overflow-hidden rounded-[10px] bg-[#181818] shadow-[0_0_65px_rgba(255,255,255,0.23)] group">
+      <div className="flex h-full gap-[2px] sm:gap-[3px]">
         {srcs.map((src, i) => (
           <video
             key={src}

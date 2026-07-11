@@ -143,7 +143,7 @@ export function Numbers({
   const titleLines = title.split("\n");
 
   return (
-    <section className="relative z-10 overflow-hidden bg-black px-6 py-[58px] text-white lg:py-[100px]">
+    <section className="relative z-10 overflow-hidden bg-black px-4 sm:px-6 py-[48px] sm:py-[58px] text-white lg:py-[100px]">
       <Image
         src="/assets/sections/numbers-space.jpg"
         alt=""
@@ -155,14 +155,14 @@ export function Numbers({
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/45 to-black/20" />
       <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/35" />
 
-      <div className="relative mx-auto max-w-[1150px] px-6">
-        <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+      <div className="relative mx-auto max-w-[1150px] px-2 sm:px-6">
+        <div className="flex flex-col gap-6 sm:gap-8 md:flex-row md:items-start md:justify-between">
 
           {/* Eyebrow + Title */}
           <FadeLeft delay={0.1}>
             <div>
-              <p className="text-[14px] font-bold uppercase tracking-[1.2px]">{eyebrow}</p>
-              <h2 className="mt-[19px] max-w-[490px] text-[38px] font-medium leading-[0.98] tracking-[-6%] sm:text-[48px] lg:text-[56px]">
+              <p className="text-[12px] sm:text-[14px] font-bold uppercase tracking-[1.2px]">{eyebrow}</p>
+              <h2 className="mt-[12px] sm:mt-[19px] max-w-[490px] text-[32px] min-[375px]:text-[38px] font-medium leading-[0.98] tracking-[-6%] sm:text-[48px] lg:text-[56px]">
                 {titleLines.map((line, index) => (
                   <span className="block" key={`${line}-${index}`}>
                     {line}
@@ -175,7 +175,7 @@ export function Numbers({
           {/* CTA Button */}
           <FadeRight delay={0.2}>
             <Link
-              className="mt-[36px] inline-flex h-[38px] min-w-[178px] items-center justify-center rounded-full bg-white px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-black transition uppercase hover:bg-[#ff6b1f]"
+              className="mt-[24px] sm:mt-[36px] inline-flex h-[34px] min-[375px]:h-[38px] min-w-[160px] min-[375px]:min-w-[178px] items-center justify-center rounded-full bg-white px-5 min-[375px]:px-7 font-[var(--font-be-vietnam)] text-[11px] min-[375px]:text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-black transition uppercase hover:bg-[#ff6b1f]"
               href="/contact"
             >
               Book a Consultation
@@ -185,17 +185,17 @@ export function Numbers({
         </div>
 
         {/* Stats grid */}
-        <div className="mt-[58px] border-t border-white/12 pt-[43px]">
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-[54px]">
+        <div className="mt-[40px] sm:mt-[58px] border-t border-white/12 pt-[32px] sm:pt-[43px]">
+          <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-[54px]">
             {stats.map((stat, index) => (
               <FadeUp key={stat.label} delay={0.3 + index * 0.12}>
-                <div className="flex items-center gap-[16px]">
+                <div className="flex items-center gap-[12px] min-[375px]:gap-[16px]">
                   <Spark />
                   <div>
-                    <p className="text-[42px] font-bold leading-none tracking-[-1px] sm:text-[50px]">
+                    <p className="text-[36px] min-[375px]:text-[42px] font-bold leading-none tracking-[-1px] sm:text-[50px]">
                       <AnimatedStat value={stat.value} />
                     </p>
-                    <p className="mt-[8px] text-[11px] font-light sm:text-[14px] leading-none text-white">
+                    <p className="mt-[6px] sm:mt-[8px] text-[11px] font-light sm:text-[14px] leading-none text-white">
                       {stat.label}
                     </p>
                   </div>

@@ -70,8 +70,8 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
       <Header />
 
       {/* ── HERO SECTION ── */}
-      <section className="bg-[#f7f7f5] px-6 pb-[38px] pt-[42px] sm:pb-[44px] sm:pt-[55px] lg:pt-[64px]">
-        <div className="mx-auto grid max-w-[1150px] items-start justify-between gap-10 lg:grid-cols-[525px_566px] lg:gap-[74px]">
+      <section className="bg-[#f7f7f5] px-4 min-[375px]:px-6 pb-[38px] pt-[42px] sm:pb-[44px] sm:pt-[55px] lg:pt-[64px]">
+        <div className="mx-auto grid max-w-[1150px] items-start justify-between gap-10 sm:gap-14 lg:grid-cols-[525px_566px] lg:gap-[74px]">
           {/* Left — back link, title, description */}
           <div className="lg:pt-[11px]">
             {/* Back link — slides in from left */}
@@ -93,21 +93,21 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
 
             {/* Product pill — drops down */}
             <FadeDown delay={0.2}>
-              <p className="mt-[60px] mb-2 inline-flex w-fit max-w-[400px] items-center justify-center rounded-full bg-[#e9e9e7] px-4 py-2 text-center font-[var(--font-inter)] text-[10px] sm:text-[14px] font-normal uppercase leading-none tracking-[0.7px] text-[#242424] lg:mt-[58px]">
+              <p className="mt-[30px] sm:mt-[60px] mb-2 inline-flex w-fit max-w-[400px] items-center justify-center rounded-full bg-[#e9e9e7] px-4 py-2 text-center font-[var(--font-inter)] text-[10px] sm:text-[14px] font-normal uppercase leading-none tracking-[0.7px] text-[#242424] lg:mt-[58px]">
                 {project.productName}
               </p>
             </FadeDown>
 
             {/* Page title — slides in from left */}
             <FadeLeft delay={0.3}>
-              <h1 className="mt-[28px] mb-6 max-w-[480px] font-[var(--font-be-vietnam)] text-[32px] font-bold leading-[1.35] tracking-[-0.9px] text-[#141414] sm:text-[44px]">
+              <h1 className="mt-[16px] sm:mt-[28px] mb-4 sm:mb-6 max-w-[480px] font-[var(--font-be-vietnam)] text-[28px] min-[375px]:text-[32px] font-bold leading-[1.35] tracking-[-0.9px] text-[#141414] sm:text-[44px]">
                 {project.title}
               </h1>
             </FadeLeft>
 
             {/* Description — rises up */}
             <FadeUp delay={0.4}>
-              <p className="mt-[15px] max-w-[490px] font-[var(--font-inter)] text-[12px] font-normal leading-[1.72] tracking-[-0.18px] text-[#707070] sm:text-[16px]">
+              <p className="mt-[10px] sm:mt-[15px] max-w-[490px] font-[var(--font-inter)] text-[12px] font-normal leading-[1.6] sm:leading-[1.72] tracking-[-0.18px] text-[#707070] sm:text-[16px]">
                 {project.description}
               </p>
             </FadeUp>
@@ -115,7 +115,7 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
 
           {/* Right — hero image — slides in from right */}
           <FadeRight delay={0.25}>
-            <div className="relative overflow-hidden h-[500px] min-h-[400px] min-w-[566px] rounded-[13px] bg-[#8f512f]">
+            <div className="relative overflow-hidden w-full h-[300px] min-[375px]:h-[350px] sm:h-[400px] lg:h-[500px] lg:min-h-[400px] lg:min-w-[566px] rounded-[13px] bg-[#8f512f]">
               <Image
                 src={project.heroImage.src}
                 alt={project.heroImage.alt}
@@ -136,18 +136,18 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
 
       {/* ── VIDEO SECTION (with-video projects only — appears before main info) ── */}
       {hasVideo && !project.hideVideoSection && (
-        <section className="bg-black px-5 pb-[80px] pt-[80px] text-center text-white sm:px-8 sm:pb-[107px] sm:pt-[83px] lg:px-12">
+        <section className="bg-black px-4 min-[375px]:px-5 pb-[50px] pt-[50px] text-center text-white sm:px-8 sm:pb-[107px] sm:pt-[83px] lg:px-12">
           <div className="mx-auto max-w-[1180px]">
             {/* Heading — drops down */}
             <FadeDown delay={0.1}>
-              <h2 className="font-[var(--font-be-vietnam)] text-[31px] font-bold lowercase leading-none tracking-[-1.5px] sm:text-[43px]">
+              <h2 className="font-[var(--font-be-vietnam)] text-[26px] min-[375px]:text-[31px] font-bold lowercase leading-none tracking-[-1.5px] sm:text-[43px]">
                 {project.videoTitle}
               </h2>
             </FadeDown>
 
             {/* Subtitle — rises up */}
             <FadeUp delay={0.2}>
-              <p className="mt-[20px] font-[var(--font-be-vietnam)] text-[13px] font-light uppercase leading-none tracking-[0] text-white/70 sm:text-[17px]">
+              <p className="mt-[14px] min-[375px]:mt-[20px] font-[var(--font-be-vietnam)] text-[11px] min-[375px]:text-[13px] font-light uppercase leading-none tracking-[0] text-white/70 sm:text-[17px]">
                 {project.videoSubtitle}
               </p>
             </FadeUp>
@@ -180,11 +180,11 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
 
       {/* ── OVERVIEW / PICTURES SECTION (no-video projects: before main info; with-video: after) ── */}
       {!hasVideo && !project.hideSocialGridPreview && (
-        <section className="bg-black px-5 pb-[40px] pt-[68px] text-white sm:px-8 sm:pb-[43px] lg:px-12">
+        <section className="bg-black px-4 min-[375px]:px-5 pb-[40px] pt-[50px] sm:pt-[68px] text-white sm:px-8 sm:pb-[43px] lg:px-12">
           <div className="mx-auto max-w-[1150px] text-center">
             {/* Heading — drops down */}
             <FadeDown delay={0.1}>
-              <h2 className="font-[var(--font-be-vietnam)] text-[30px] font-bold lowercase leading-none tracking-[-1.6px] sm:text-[43px]">
+              <h2 className="font-[var(--font-be-vietnam)] text-[26px] min-[375px]:text-[30px] font-bold lowercase leading-none tracking-[-1.6px] sm:text-[43px]">
                 project{" "}
                 <span className="font-[var(--font-cormorant)] text-[1.15em] font-extralight italic timesFontFamily tracking-[-0.04em]">
                   overview.
@@ -194,14 +194,14 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
 
             {/* Subtitle — rises up */}
             <FadeUp delay={0.2}>
-              <p className="mt-[17px] font-[var(--font-be-vietnam)] text-[13px] font-light uppercase leading-none tracking-[-0.1px] sm:text-[17px]">
+              <p className="mt-[14px] sm:mt-[17px] font-[var(--font-be-vietnam)] text-[11px] min-[375px]:text-[13px] font-light uppercase leading-none tracking-[-0.1px] sm:text-[17px]">
                 {project.overviewSubtitle}
               </p>
             </FadeUp>
 
             {/* Gallery grid — each image staggered up */}
             {project.galleryLayout === "centerVideo" ? (
-  <div className="mt-[15px] flex flex-col items-center gap-[18px] sm:flex-row sm:items-stretch sm:justify-center lg:gap-[24px]">
+  <div className="mt-[15px] flex flex-col items-center gap-[12px] sm:gap-[18px] sm:flex-row sm:items-stretch sm:justify-center lg:gap-[24px]">
     {project.galleryImages.map((image, idx) => {
       const isCenter = idx === 1;
       const isVideo = image.src.toLowerCase().endsWith(".mov") || image.src.toLowerCase().endsWith(".mp4");
@@ -211,8 +211,8 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
           <div
             className={
               isCenter
-                ? "relative h-[340px] w-[280px] overflow-hidden bg-[#171717] sm:h-[480px] sm:w-[340px]"
-                : "relative h-[280px] w-[240px] overflow-hidden bg-[#171717] sm:h-[360px] sm:w-[280px] lg:h-[480px] lg:w-[330px] sm:self-center"
+                ? "relative h-[300px] min-[375px]:h-[340px] w-full max-w-[280px] overflow-hidden bg-[#171717] sm:h-[480px] sm:w-[340px] sm:max-w-none"
+                : "relative h-[260px] min-[375px]:h-[280px] w-full max-w-[240px] overflow-hidden bg-[#171717] sm:h-[360px] sm:w-[280px] lg:h-[480px] lg:w-[330px] sm:max-w-none sm:self-center"
             }
           >
             {isVideo ? (
@@ -245,10 +245,10 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
     })}
   </div>
 ) : (
-  <div className="mt-[15px] grid gap-[18px] sm:grid-cols-2 lg:grid-cols-4 lg:gap-[20px]">
+  <div className="mt-[15px] grid gap-[12px] min-[375px]:gap-[18px] sm:grid-cols-2 lg:grid-cols-4 lg:gap-[20px]">
     {project.galleryImages.map((image, idx) => (
       <FadeUp key={image.alt} delay={0.25 + idx * 0.1}>
-        <div className="relative h-[310px] overflow-hidden bg-[#171717] sm:h-[390px] lg:h-[510px]">
+        <div className="relative h-[260px] min-[375px]:h-[310px] overflow-hidden bg-[#171717] sm:h-[390px] lg:h-[510px]">
           <Image
             src={image.src}
             alt={image.alt}
@@ -272,8 +272,8 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
 
       {/* ── GOAL / WORK / OUTCOME SECTION ── */}
 
-      <section className="bg-[#f7f7f5] px-6 pb-[70px] pt-[72px] sm:pb-[82px] sm:pt-[82px]">
-        <div className="mx-auto grid max-w-[1150px] gap-14 lg:grid-cols-[840px_300px] lg:gap-[30px]">
+      <section className="bg-[#f7f7f5] px-4 min-[375px]:px-6 pb-[40px] pt-[40px] sm:pb-[82px] sm:pt-[82px]">
+        <div className="mx-auto grid max-w-[1150px] gap-12 sm:gap-14 lg:grid-cols-[840px_300px] lg:gap-[30px]">
           <div>
             {/* The Goal — slides in from left */}
             <FadeLeft delay={0.1}>
@@ -286,7 +286,7 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
                     The Goal
                   </h2>
                 </div>
-                <p className="mt-[20px] max-w-[780px] font-[var(--font-inter)] text-[12px] sm:text-[16px] font-normal leading-[28px] tracking-[0%] text-[#737373]">
+                <p className="mt-[14px] sm:mt-[20px] max-w-[780px] font-[var(--font-inter)] text-[12px] sm:text-[16px] font-normal leading-[1.6] sm:leading-[28px] tracking-[0%] text-[#737373]">
                   {project.goal}
                 </p>
               </div>
@@ -294,11 +294,11 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
 
             {/* What We Did — rises up */}
             <FadeUp delay={0.2}>
-              <div className="mt-[70px]">
+              <div className="mt-[40px] sm:mt-[70px]">
                 <h3 className="font-[var(--font-be-vietnam)] text-[16px] sm:text-[20px] font-bold leading-none tracking-[2.34%] text-[#141414]">
                   What We Did
                 </h3>
-                <p className="mt-[21px] font-[var(--font-inter)] text-[12px] sm:text-[16px] font-bold leading-none tracking-[0%] text-[#737373]">
+                <p className="mt-[16px] sm:mt-[21px] font-[var(--font-inter)] text-[12px] sm:text-[16px] font-bold leading-none tracking-[0%] text-[#737373]">
                   {project.workIntro}
                 </p>
                 <ul className="mt-[13px] flex flex-col gap-[17px]">
@@ -319,11 +319,11 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
 
             {/* The Approach — slides in from left */}
             <FadeLeft delay={0.15}>
-              <div className="mt-[54px]">
+              <div className="mt-[40px] sm:mt-[54px]">
                 <h3 className="font-[var(--font-be-vietnam)] text-[16px] sm:text-[20px] font-bold leading-none tracking-[2.34%] text-[#141414]">
                   The Approach
                 </h3>
-                <p className="mt-[21px] max-w-[700px] font-[var(--font-inter)] text-[12px] sm:text-[16px] font-normal leading-[1.48] tracking-[0%] text-[#747474]">
+                <p className="mt-[16px] sm:mt-[21px] max-w-[700px] font-[var(--font-inter)] text-[12px] sm:text-[16px] font-normal leading-[1.6] sm:leading-[1.48] tracking-[0%] text-[#747474]">
                   {project.approach}
                 </p>
               </div>
@@ -331,16 +331,18 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
 
             {/* The Outcome — rises up, cards staggered */}
             <FadeUp delay={0.1}>
-              <div className="mt-[56px]">
+              <div className="mt-[40px] sm:mt-[56px]">
                 <h3 className="font-[var(--font-be-vietnam)] text-[16px] font-bold leading-none tracking-[2.34%] text-[#141414] sm:text-[20px]">
                   The Outcome
                 </h3>
-                <div className="mt-[17px] max-w-[700px] grid grid-cols-2 gap-[25px] sm:grid-cols-4">
+                <div className="mt-[17px] max-w-[700px] grid grid-cols-2 gap-[12px] min-[375px]:gap-[16px] sm:gap-[25px] sm:grid-cols-4">
                   {project.outcomes.map((outcome, idx) => (
                     <FadeUp key={outcome.text} delay={0.15 + idx * 0.1}>
-                      <div className="flex h-[160px] min-h-[104px] w-full max-w-[330px] flex-col items-center justify-start rounded-[7px] border border-[#dededb] px-[10px] pb-[10px] pt-[12px] text-center text-[#ff5500]">
-                        <LineIcon type={outcome.icon} />
-                        <p className="mt-[10px] font-[var(--font-inter)] text-[12px] sm:text-[16px] font-normal leading-[1.48] tracking-[0%] text-[#141414]">
+                      <div className="flex h-[110px] sm:h-[160px] min-h-[104px] w-full max-w-[330px] flex-col items-center justify-start rounded-[7px] border border-[#dededb] px-2 sm:px-[10px] pb-2 sm:pb-[10px] pt-4 sm:pt-[12px] text-center text-[#ff5500]">
+                        <div className="scale-75 sm:scale-100">
+                          <LineIcon type={outcome.icon} />
+                        </div>
+                        <p className="mt-[8px] sm:mt-[10px] font-[var(--font-inter)] text-[11px] sm:text-[16px] font-normal leading-[1.3] sm:leading-[1.48] tracking-[0%] text-[#141414]">
                           {outcome.text}
                         </p>
                       </div>
@@ -387,7 +389,7 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
 
       {/* ── OVERVIEW / PICTURES SECTION (with-video projects only — appears after main info) ── */}
       {hasVideo && !project.hideSocialGridPreview && (
-        <section className="bg-black px-5 pb-[40px] pt-[68px] text-white sm:px-8 sm:pb-[43px] lg:px-12">
+        <section className="bg-black px-5 pb-[4px] pt-[68px] text-white sm:px-8 sm:pb-[43px] lg:px-12">
           <div className="mx-auto max-w-[1150px] text-center">
             {/* Heading — drops down */}
             <FadeDown delay={0.1}>

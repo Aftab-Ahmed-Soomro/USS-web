@@ -30,7 +30,7 @@ export default function ContactHero() {
   ];
 
   return (
-    <section className="relative w-full bg-[#000] overflow-hidden py-28">
+    <section className="relative w-full bg-[#000] overflow-hidden py-16 sm:py-28">
 
       {/* Ambient glow — top centre */}
       <div
@@ -57,18 +57,18 @@ export default function ContactHero() {
         transition={{ duration: 1.4, ease }}
       >
         <h1
-          className="font-bold uppercase text-[#fff]/[0.05] tracking-tight whitespace-nowrap"
-          style={{ fontSize: "clamp(5rem, 14vw, 13rem)", fontFamily: "Poppins, sans-serif" }}
+          className="font-bold uppercase text-[#fff]/[0.05] tracking-tight whitespace-nowrap text-[64px] min-[375px]:text-[80px] sm:text-[clamp(5rem,14vw,13rem)]"
+          style={{ fontFamily: "Poppins, sans-serif" }}
         >
           CONTACT
         </h1>
       </motion.div>
 
-      <div className="relative mx-auto max-w-[1440px] px-[7.3%]">
+      <div className="relative mx-auto max-w-[1440px] px-4 min-[375px]:px-6 lg:px-[7.3%]">
         <div className="grid grid-cols-1 lg:grid-cols-[486fr_100fr_642fr] gap-y-12">
 
           {/* ── LEFT COLUMN ─────────────────────────────────────────── */}
-          <div className="flex flex-col order-1 lg:order-none pt-[160px] lg:pt-[200px]">
+          <div className="flex flex-col order-1 lg:order-none pt-[100px] sm:pt-[160px] lg:pt-[200px]">
 
             {/* Badge pill — drops down */}
             <motion.div
@@ -89,7 +89,7 @@ export default function ContactHero() {
 
             {/* Heading — slides in from left with word-stagger feel */}
             <motion.h2
-              className="mt-6 font-medium text-white leading-[1] whitespace-nowrap text-[42px] sm:text-[56px] tracking-[-1.5px]"
+              className="mt-6 font-medium text-white leading-[1] whitespace-nowrap text-[36px] min-[375px]:text-[42px] sm:text-[56px] tracking-[-1.5px]"
               style={{ fontFamily: "Poppins, sans-serif" }}
               initial={{ opacity: 0, x: -50, filter: "blur(12px)" }}
               animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
@@ -97,7 +97,7 @@ export default function ContactHero() {
             >
               get in{" "}
               <motion.span
-                className="text-[#ff5a14] italic font-normal text-[52px] sm:text-[72px]"
+                className="text-[#ff5a14] italic font-normal text-[48px] min-[375px]:text-[52px] sm:text-[72px]"
                 style={{ fontFamily: "'Playfair Display', serif" }}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -138,20 +138,20 @@ export default function ContactHero() {
                   >
                     <Wrapper
                       {...(href ? { href } : {})}
-                      className="group flex items-center justify-between gap-4 rounded-2xl border border-white/[0.06] bg-white/[0.08] px-[21px] py-[18px] min-h-[90px] transition-all duration-300 hover:bg-white/[0.05] hover:border-white/[0.12] hover:translate-x-1"
+                      className="group flex items-center justify-between gap-3 sm:gap-4 rounded-2xl border border-white/[0.06] bg-white/[0.08] px-4 sm:px-[21px] py-[18px] min-h-[90px] transition-all duration-300 hover:bg-white/[0.05] hover:border-white/[0.12] hover:translate-x-1"
                     >
-                      <div className="flex items-center gap-5">
+                      <div className="flex items-center gap-3 sm:gap-5 min-w-0 flex-1">
                         <motion.span
-                          className="flex items-center justify-center w-12 h-12 rounded-full bg-white/[0.06] shrink-0 transition-colors duration-300 group-hover:bg-[#ff5a14]/15"
+                          className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/[0.06] shrink-0 transition-colors duration-300 group-hover:bg-[#ff5a14]/15"
                           whileHover={{ scale: 1.1 }}
                         >
-                          <Icon className="w-5 h-5 text-white transition-colors duration-300 group-hover:text-[#ff5a14]" strokeWidth={1.75} />
+                          <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-white transition-colors duration-300 group-hover:text-[#ff5a14]" strokeWidth={1.75} />
                         </motion.span>
-                        <span className="flex flex-col">
-                          <span className="text-white font-medium text-[13px]">
+                        <span className="flex flex-col min-w-0">
+                          <span className="text-white font-medium text-[12px] sm:text-[13px]">
                             {label}
                           </span>
-                          <span className="text-[#8c8c8c] text-[12px]">{value}</span>
+                          <span className="text-[#8c8c8c] text-[11px] sm:text-[12px] break-all sm:break-normal leading-tight mt-0.5">{value}</span>
                         </span>
                       </div>
                       <motion.span
@@ -184,7 +184,7 @@ export default function ContactHero() {
             >
               <InlineWidget 
                 url="https://calendly.com/unitedstrategicsolutions/30min"
-                styles={{ minWidth: "320px", height: "580px", borderRadius: "16px" }}
+                styles={{ minWidth: "100%", height: "580px", borderRadius: "16px" }}
               />
             </div>
           </motion.div>

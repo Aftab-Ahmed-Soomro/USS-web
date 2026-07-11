@@ -130,12 +130,12 @@ const labelCardVariants = {
 
 function ProjectsCta() {
   return (
-    <section className="relative z-10 px-6 pb-[80px]  text-white overflow-hidden">
+    <section className="relative z-10 px-4 min-[375px]:px-6 pb-[40px] sm:pb-[80px] -mt-20 sm:mt-0 text-white overflow-hidden">
       <div className="relative mx-auto max-w-[800px] text-center">
 
         {/* Eyebrow pill — drops down */}
         <FadeDown delay={0.1}>
-          <div className="flex items-center justify-center gap-2 mb-8">
+          <div className="flex items-center justify-center gap-2 mb-6 sm:mb-8">
             <div className="h-1.5 w-1.5 rounded-full bg-[#ff5500]"></div>
             <p className="text-[9px] font-bold uppercase tracking-[3px] text-white">
               FULL-STACK MARKETING
@@ -145,7 +145,7 @@ function ProjectsCta() {
 
         {/* Main heading — rises up */}
         <FadeUp delay={0.2}>
-          <h2 className="mb-10 text-[42px] font-medium leading-[1.05] tracking-[-6%] sm:text-[56px]">
+          <h2 className="mb-6 sm:mb-10 text-[32px] min-[375px]:text-[42px] font-medium leading-[1.05] tracking-[-6%] sm:text-[56px]">
             we are your{" "}
             <span className="font-[var(--font-cormorant)] text-[1.1em] font-light timesFontFamily italic">
               360&deg;
@@ -159,7 +159,7 @@ function ProjectsCta() {
 
         {/* Body copy — slides in from right */}
         <FadeRight delay={0.3}>
-          <div className="mx-auto max-w-[640px] space-y-8 text-[12px] sm:text-[16px] leading-[1.7] tracking-[0%] text-white">
+          <div className="mx-auto max-w-[640px] space-y-6 sm:space-y-8 text-[12px] sm:text-[16px] leading-[1.6] sm:leading-[1.7] tracking-[0%] text-white">
             <p>
               Calling ourselves a data-driven, problem solving, people connecting, digital crazy,
               talent engaging creative agency is too long winded.. so we call ourselves USS.
@@ -172,12 +172,11 @@ function ProjectsCta() {
 
         {/* CTA buttons — rise up last */}
         <FadeUp delay={0.4}>
-          <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link href="/contact">
-            
-            <button className="h-[40px] w-full sm:w-auto cursor-pointer px-10 rounded-full bg-[#ff5500] text-[8px] font-bold sm:text-[13px] tracking-[0.52px] text-white transition-colors uppercase hover:bg-[#ff6b1f]">
-              Book a Consultation
-            </button>
+          <div className="mt-8 sm:mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Link href="/contact" className="block w-full sm:w-auto sm:inline-block">
+              <button className="h-[46px] sm:h-[40px] w-full sm:w-auto cursor-pointer px-10 rounded-full bg-[#ff5500] text-[11px] font-bold sm:text-[13px] tracking-[0.52px] text-white transition-colors uppercase hover:bg-[#ff6b1f]">
+                Book a Consultation
+              </button>
             </Link>
             {/* <button className="flex h-[40px] w-full sm:w-auto px-8 items-center justify-center gap-2 rounded-full border border-white bg-transparent text-[8px] font-bold sm:text-[13px] tracking-[0.52px] text-white transition-colors hover:bg-white/5">
               See How We Scale
@@ -202,19 +201,19 @@ export default function ProjectsPage() {
       <Header />
 
       {/* Hero section */}
-      <section className="bg-black px-6 pb-[60px] pt-[112px] text-center text-white sm:pb-[90px]">
+      <section className="bg-black px-4 min-[375px]:px-6 pb-[40px] min-[375px]:pb-[60px] pt-[80px] sm:pt-[112px] text-center text-white sm:pb-[90px]">
         <div className="mx-auto max-w-[1150px]">
 
           {/* Eyebrow — drops down */}
           <FadeDown delay={0.1}>
-            <p className="font-[var(--font-be-vietnam)] text-[13px] font-medium uppercase leading-none tracking-[3px] text-white flex items-center justify-center">
+            <p className="font-[var(--font-be-vietnam)] text-[11px] sm:text-[13px] font-medium uppercase leading-none tracking-[2px] sm:tracking-[3px] text-white flex items-center justify-center">
               OUR PORTFOLIO
             </p>
           </FadeDown>
 
           {/* Main heading — rises up */}
           <FadeUp delay={0.2}>
-            <h1 className="mt-[20px] font-[var(--font-be-vietnam)] text-[38px] font-bold lowercase leading-[1.03] tracking-[-0.9px] text-white sm:text-[56px] sm:tracking-[-0.9px]">
+            <h1 className="mt-[12px] sm:mt-[20px] font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[38px] font-bold lowercase leading-[1.03] tracking-[-0.9px] text-white sm:text-[56px] sm:tracking-[-0.9px]">
               projects that make an{" "}
               <span className="font-[var(--font-cormorant)] text-[1.15em] sm:text-[72px] font-extralight timesFontFamily italic tracking-[-0.9px] text-[#ff5500]">
                 impact
@@ -224,7 +223,7 @@ export default function ProjectsPage() {
 
           {/* Subheading — slides in from right */}
           <FadeRight delay={0.3}>
-            <p className="mt-[30px] font-[var(--font-be-vietnam)] text-[12px] font-medium  leading-[1.35] text-white sm:text-[16.5px]">
+            <p className="mt-[16px] sm:mt-[30px] font-[var(--font-be-vietnam)] text-[11px] min-[375px]:text-[12px] font-medium leading-[1.35] text-white sm:text-[16.5px]">
               Take a look at USS projects across UK, US and Middle East
             </p>
           </FadeRight>
@@ -248,19 +247,19 @@ export default function ProjectsPage() {
               {/* Sticky category label card — slides in from left */}
               <motion.div
                 // variants={labelCardVariants}
-                className="sticky left-0 z-10 shrink-0 w-[270px] aspect-[4/5] rounded-[16px] bg-[#0E0E0E] border border-white/5 relative p-5 sm:p-6 flex flex-col justify-between self-start"
+                className="sticky left-0 z-10 shrink-0 w-[140px] min-[375px]:w-[180px] sm:w-[270px] h-[337.5px] rounded-[16px] bg-[#0E0E0E] border border-white/5 relative p-4 sm:p-6 flex flex-col justify-between self-start"
               >
                 {/* Subtle top-left glow accent */}
-                <div className="pointer-events-none absolute -top-10 -left-10 h-[180px] w-[180px] rounded-full bg-[#ff5500] opacity-[0.06] blur-[60px]" />
+                <div className="pointer-events-none absolute -top-10 -left-10 h-[120px] sm:h-[180px] w-[120px] sm:w-[180px] rounded-full bg-[#ff5500] opacity-[0.06] blur-[60px]" />
 
-                <div className="self-end bg-white/5 backdrop-blur-md border border-white/10 text-white/80 text-[9px] sm:text-[10px] font-medium px-3 py-1.5 rounded-full font-[var(--font-inter)] tracking-[-0.2px] w-fit">
+                <div className="self-end bg-white/5 backdrop-blur-md border border-white/10 text-white/80 text-[8px] min-[375px]:text-[9px] sm:text-[10px] font-medium px-2 min-[375px]:px-3 py-1 min-[375px]:py-1.5 rounded-full font-[var(--font-inter)] tracking-[-0.2px] w-fit">
                   {category.topTag}
                 </div>
                 <div>
-                  <h2 className="text-white text-[28px] sm:text-[32px] font-normal font-[var(--font-be-vietnam)] leading-[1.1] tracking-[-0.5px]">
+                  <h2 className="text-white text-[20px] min-[375px]:text-[28px] sm:text-[32px] font-normal font-[var(--font-be-vietnam)] leading-[1.1] tracking-[-0.5px]">
                     {category.name}
                   </h2>
-                  <div className="mt-4 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-white/70 text-[10px] font-medium font-[var(--font-inter)] tracking-[-0.2px] hover:bg-white/10 transition-colors cursor-pointer w-fit">
+                  <div className="mt-2 sm:mt-4 bg-white/5 border border-white/10 rounded-full px-2 min-[375px]:px-4 py-1.5 min-[375px]:py-2 text-white/70 text-[8px] min-[375px]:text-[10px] font-medium font-[var(--font-inter)] tracking-[-0.2px] hover:bg-white/10 transition-colors cursor-pointer w-fit">
                     {category.bottomTag}
                   </div>
                 </div>

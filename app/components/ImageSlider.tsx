@@ -44,7 +44,7 @@ export default function ImageSlider() {
   const goNext = () => goTo((activeIndex + 1) % IMAGES.length);
 
   return (
-    <div className="relative w-full aspect-[700/750] h-[746px] max-w-[558px] lg:max-w-[540px] group">
+    <div className="relative w-full mx-auto aspect-[700/750] h-[380px] min-[375px]:h-[450px] sm:h-[746px] max-w-[558px] lg:max-w-[540px] group">
       {/* Crossfade stack */}
       {IMAGES.map((src, index) => (
         <div

@@ -43,23 +43,23 @@ const ecwLogos = [
 
 export function Brands() {
   return (
-    <section className="relative z-10 pb-[58px] pt-[58px] text-white bg-black">
+    <section className="relative z-10 pb-[40px] sm:pb-[58px] pt-[40px] sm:pt-[58px] text-white bg-black">
 
       {/* ── Section heading ── */}
       <FadeDown delay={0.1}>
-        <h2 className="text-center text-[31px] font-medium leading-tight tracking-[-0.4px] sm:text-[40px]">
+        <h2 className="text-center px-4 text-[26px] min-[375px]:text-[31px] font-medium leading-tight tracking-[-0.4px] sm:text-[40px]">
           brands we work with
         </h2>
       </FadeDown>
 
       {/* ── Brand Cards — horizontal left-scrolling marquee ── */}
       <div className="mt-[26px] w-full mx-auto overflow-hidden">
-        <div className="brand-cards-track flex items-center gap-x-12">
+        <div className="brand-cards-track flex items-center gap-x-4 min-[375px]:gap-x-6 sm:gap-x-12">
           {/* Three sets for seamless loop */}
           {[...brandCards, ...brandCards, ...brandCards].map((brand, index) => (
             <article
               key={index}
-              className="group relative aspect-[176/314] w-[176px] shrink-0 overflow-hidden rounded-[22px] bg-black
+              className="group relative aspect-[176/314] w-[130px] min-[375px]:w-[150px] min-[480px]:w-[176px] shrink-0 overflow-hidden rounded-[22px] bg-black
                          sm:w-[210px] lg:w-[246px]"
             >
               <img
@@ -73,21 +73,21 @@ export function Brands() {
       </div>
 
       {/* ── Trusted by 100+ brands ── */}
-      <div className="mt-[140px] text-center">
+      <div className="mt-[60px] sm:mt-[140px] text-center px-4">
 
         <FadeUp delay={0.1}>
-          <h2 className="text-[31px] font-medium leading-tight tracking-[0%] sm:text-[40px]">
+          <h2 className="text-[26px] min-[375px]:text-[31px] font-medium leading-tight tracking-[0%] sm:text-[40px]">
             trusted by 100+ brands worldwide
           </h2>
         </FadeUp>
 
         {/* ── Logo marquee — continuous scroll ── */}
-        <div className="mt-[50px] w-full mx-auto max-w-[1000px]  overflow-hidden">
-          <div className="logos-track flex items-center gap-x-6">
+        <div className="mt-[30px] sm:mt-[50px] w-full mx-auto max-w-[1000px]  overflow-hidden">
+          <div className="logos-track flex items-center gap-x-0 sm:gap-x-6">
             {[...ecwLogos, ...ecwLogos, ...ecwLogos].map((src, index) => (
               <article
                 key={index}
-                className="group relative h-[50px] sm:h-[90px] lg:h-[115px] w-[170px] shrink-0"
+                className="group relative h-[60px] min-[375px]:h-[75px] sm:h-[90px] lg:h-[115px] w-[160px] min-[375px]:w-[180px] sm:w-[170px] shrink-0"
               >
                 <img
                   src={src}
