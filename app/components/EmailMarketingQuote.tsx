@@ -4,7 +4,7 @@ import ScaleIn from "./Scalein";
 
 export default function EmailMarketingQuote({first, second, third}: {first: string, second: string, third: string}) {
   return (
-    <section className="bg-black w-full py-20 px-6 flex flex-col items-center justify-center text-center overflow-hidden">
+    <section className="bg-black w-full py-[50px] sm:py-20 px-4 min-[375px]:px-6 flex flex-col items-center justify-center text-center overflow-hidden">
       <Stagger staggerDelay={0.15} className="flex flex-col items-center justify-center text-center w-full">
         <StaggerItem className="flex gap-1">
           <img src="/assets/bigComma.png" alt="" />
@@ -13,24 +13,13 @@ export default function EmailMarketingQuote({first, second, third}: {first: stri
 
         <StaggerItem>
           <h2
-            className="text-white max-w-[530px] mt-8"
-            style={{
-              fontWeight: 500,
-              fontSize: "40px",
-              lineHeight: "60px",
-              letterSpacing: "-2.44px",
-            }}
+            className="text-white max-w-[530px] mt-[24px] sm:mt-8 font-medium text-[26px] min-[375px]:text-[32px] sm:text-[40px] leading-[1.3] sm:leading-[60px] tracking-[-1px] sm:tracking-[-2.44px]"
           >
             {first} {" "}
             <span
-              className="text-[#FF5500]"
+              className="text-[#FF5500] font-normal italic text-[32px] min-[375px]:text-[38px] sm:text-[48px] leading-none tracking-[-1px] sm:tracking-[-2.44px]"
               style={{
                 fontFamily: "Times New Roman, serif",
-                fontWeight: 400,
-                fontStyle: "italic",
-                fontSize: "48px",
-                lineHeight: "100%",
-                letterSpacing: "-2.44px",
               }}
             >
               {second}
@@ -40,7 +29,7 @@ export default function EmailMarketingQuote({first, second, third}: {first: stri
         </StaggerItem>
 
         <ScaleIn delay={0.4} startScale={0} duration={0.8}>
-          <div className="w-[243px] h-[2px] bg-orange-500 my-7" />
+          <div className="w-[180px] sm:w-[243px] h-[2px] bg-orange-500 my-[20px] sm:my-7" />
         </ScaleIn>
 
         <StaggerItem className="flex gap-1 mb-4">
@@ -50,13 +39,7 @@ export default function EmailMarketingQuote({first, second, third}: {first: stri
 
         <StaggerItem>
           <p
-            className="text-white"
-            style={{
-              fontWeight: 500,
-              fontSize: "20px",
-              lineHeight: "100%",
-              letterSpacing: "-1px",
-            }}
+            className="text-white font-medium text-[16px] sm:text-[20px] leading-none tracking-[-0.5px] sm:tracking-[-1px]"
           >
             Strategy. Precision. Growth.
           </p>

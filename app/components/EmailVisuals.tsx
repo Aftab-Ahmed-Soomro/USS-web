@@ -87,30 +87,30 @@ const emailVisuals = [
 
 export function EmailVisuals() {
   return (
-    <section className="relative z-10 bg-[#F5F5F5] py-[72px] text-black lg:py-[92px]">
-      <div className="flex w-full flex-col gap-[44px]">
-        <Stagger staggerDelay={0.15} className="mx-auto w-full max-w-[1150px] grid gap-8 lg:grid-cols-[360px_minmax(0,580px)] lg:items-start lg:justify-between">
+    <section className="relative z-10 bg-[#F5F5F5] py-[50px] sm:py-[72px] text-black lg:py-[92px]">
+      <div className="flex w-full flex-col gap-[32px] sm:gap-[44px]">
+        <Stagger staggerDelay={0.15} className="mx-auto w-full px-4 min-[375px]:px-6 max-w-[1150px] grid gap-[16px] sm:gap-8 lg:grid-cols-[360px_minmax(0,580px)] lg:items-start lg:justify-between">
           <StaggerItem>
-            <h2 className="max-w-[400px] font-[var(--font-be-vietnam)] text-[37px] text-black font-medium leading-[1.02] tracking-[-3%]  sm:text-[56px]">
+            <h2 className="max-w-[400px] font-[var(--font-be-vietnam)] text-[32px] sm:text-[37px] text-black font-medium leading-[1.02] tracking-[-3%] lg:text-[56px]">
                 email design{" "}
-                <span className="block font-[var(--font-cormorant)] text-[72px] font-normal timesFontFamily tracking-[-3%] italic">
+                <span className="block font-[var(--font-cormorant)] text-[48px] sm:text-[72px] font-normal timesFontFamily leading-[1.1] sm:leading-none tracking-[-3%] italic">
                   visuals
                 </span>
             </h2>
           </StaggerItem>
 
           <StaggerItem>
-            <p className="max-w-[580px] font-[var(--font-be-vietnam)] text-[14px] font-normal leading-[32px] text-[#505050] sm:text-[18px] lg:pt-[10px]">
+            <p className="max-w-[580px] font-[var(--font-be-vietnam)] text-[14px] font-normal leading-[1.6] sm:leading-[32px] text-[#505050] sm:text-[18px] lg:pt-[10px]">
               A showcase of high converting email campaigns designed to drive revenue through personalised customer experiences.
             </p>
           </StaggerItem>
         </Stagger>
 
-        <div className="w-full overflow-hidden mt-8 lg:mt-16">
+        <div className="w-full overflow-hidden mt-[24px] sm:mt-8 lg:mt-16">
           <div className="email-visuals-track flex items-center gap-4 sm:gap-[46px]">
             {[...emailVisuals, ...emailVisuals, ...emailVisuals].map((visual, index) => (
                 <div
-                  className="relative h-[460px] w-[190px] shrink-0 overflow-hidden bg-[#111] shadow-[0_16px_38px_rgba(0,0,0,0.08)] sm:h-[520px] sm:w-[210px] lg:h-[750px] lg:w-[250px]"
+                  className="relative h-[380px] w-[160px] min-[375px]:h-[460px] min-[375px]:w-[190px] shrink-0 overflow-hidden bg-[#111] shadow-[0_16px_38px_rgba(0,0,0,0.08)] sm:h-[520px] sm:w-[210px] lg:h-[750px] lg:w-[250px]"
                   key={index}
                 >
                   <Image

@@ -156,7 +156,7 @@ export function WhyEmailFails({
     logoClassName?: string;
 } = {}) {
     return (
-        <section className="bg-black px-4 py-[80px] text-white sm:px-8 lg:px-14">
+        <section className="bg-black px-4 py-[50px] sm:py-[80px] text-white sm:px-8 lg:px-14">
             <div className="mx-auto max-w-[1150px]">
 
                 {/* Header Section */}
@@ -164,7 +164,7 @@ export function WhyEmailFails({
                     {/* Tagline */}
                     {tagline && (
                         <StaggerItem>
-                            <p className="mb-4 text-center font-[var(--font-inter)] text-[14px] font-medium tracking-[2.64px] text-[#ff5500] uppercase">
+                            <p className="mb-[8px] sm:mb-4 text-center font-[var(--font-inter)] text-[12px] sm:text-[14px] font-medium tracking-[2.64px] text-[#ff5500] uppercase">
                                 {tagline}
                             </p>
                         </StaggerItem>
@@ -173,10 +173,10 @@ export function WhyEmailFails({
                     {/* Heading */}
                     {heading ?? (
                         <StaggerItem>
-                            <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[70px] tracking-[-1.5px] sm:text-[56px]">
+                            <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[32px] sm:text-[56px] font-medium leading-[1.2] sm:leading-[70px] tracking-[-1.5px]">
                                 why most{" "}
                                 <span
-                                    className="font-normal italic text-[60px] sm:text-[70px]"
+                                    className="font-normal italic text-[42px] min-[375px]:text-[48px] sm:text-[70px] leading-[1.1] sm:leading-none"
                                     style={{ fontFamily: "'Times New Roman', Times, serif" }}
                                 >
                                     email
@@ -190,7 +190,7 @@ export function WhyEmailFails({
 
                     {/* Sub-heading */}
                     <StaggerItem>
-                        <p className="mx-auto mt-5 max-w-[370px] text-center font-[var(--font-inter)] text-[15px] font-normal leading-[1.6] text-white sm:text-[18px]">
+                        <p className="mx-auto mt-[16px] sm:mt-5 max-w-[370px] text-center font-[var(--font-inter)] text-[14px] sm:text-[18px] font-normal leading-[1.6] text-white/90 sm:text-white">
                             {subheading ?? "Most brands don't have an email problem, they have a strategy problem."}
                         </p>
                     </StaggerItem>
@@ -277,38 +277,38 @@ export function WhyEmailFails({
                 </div>
 
                 {/* ═══ MOBILE layout (< lg): stacked list ═══ */}
-                <div className="mt-10 block lg:hidden">
+                <div className="mt-8 sm:mt-10 block lg:hidden">
                     <Stagger staggerDelay={0.1}>
                         <StaggerItem>
-                            <p className="mb-5 text-center font-[var(--font-inter)] text-[17px] font-normal text-white">
+                            <p className="mb-4 sm:mb-5 text-center font-[var(--font-inter)] text-[15px] sm:text-[17px] font-normal text-white">
                                 {leftTitle}
                             </p>
                         </StaggerItem>
-                        <div className="flex flex-col gap-4">
+                        <div className="flex flex-col gap-3 sm:gap-4">
                             {leftPoints.map((point) => (
                                 <StaggerItem key={point.number}>
-                                    <div className="flex items-start gap-3 rounded-[18px] bg-[#181818] p-4">
-                                        <span className="mt-[1px] flex size-[34px] shrink-0 items-center justify-center rounded-full bg-[#8b1c1c] font-[var(--font-inter)] text-[11px] font-bold text-white">
+                                    <div className="flex items-start gap-3 rounded-[18px] bg-[#eef0f2] p-4 shadow-lg">
+                                        <span className="mt-[1px] flex size-[34px] shrink-0 items-center justify-center rounded-full bg-[#A81508] font-[var(--font-inter)] text-[11px] font-bold text-white shadow-md">
                                             {point.number}
                                         </span>
                                         <div>
-                                            <h4 className="font-[var(--font-inter)] text-[13px] font-bold text-white">{point.title}</h4>
-                                            <p className="mt-[4px] font-[var(--font-inter)] text-[12px] leading-[1.55] text-white/55">{point.description}</p>
+                                            <h4 className="font-[var(--font-inter)] text-[13px] font-bold text-[#141414]">{point.title}</h4>
+                                            <p className="mt-[4px] font-[var(--font-inter)] text-[12px] leading-[1.55] text-[#333]">{point.description}</p>
                                         </div>
                                     </div>
                                 </StaggerItem>
                             ))}
                         </div>
 
-                        <div className="my-12 flex justify-center">
+                        <div className="my-[32px] sm:my-12 flex justify-center">
                             <ScaleIn delay={0.3} duration={0.6}>
                                 <div className="relative flex items-center justify-center">
-                                    <img src="/assets/circled.png" alt="" className="w-[200px] object-contain" />
+                                    <img src="/assets/circled.png" alt="" className="w-[180px] sm:w-[200px] object-contain" />
                                     {!hideBadge && (
                                         <img
                                             src={centerLogo ?? "/assets/klaviyo-logo-white.webp"}
                                             alt="center logo"
-                                            className={`absolute object-contain ${logoClassName ?? 'w-[100px]'}`}
+                                            className={`absolute object-contain ${logoClassName ?? 'w-[90px] sm:w-[100px]'}`}
                                         />
                                     )}
                                 </div>
@@ -316,20 +316,20 @@ export function WhyEmailFails({
                         </div>
 
                         <StaggerItem>
-                            <p className="mb-5 text-center font-[var(--font-inter)] text-[17px] font-normal text-white">
+                            <p className="mb-4 sm:mb-5 text-center font-[var(--font-inter)] text-[15px] sm:text-[17px] font-normal text-white">
                                 {rightTitle}
                             </p>
                         </StaggerItem>
-                        <div className="flex flex-col gap-4">
+                        <div className="flex flex-col gap-3 sm:gap-4">
                             {rightPoints.map((point) => (
                                 <StaggerItem key={point.number}>
-                                    <div className="flex items-start gap-3 rounded-[18px] bg-[#181818] p-4">
-                                        <span className="mt-[1px] flex size-[34px] shrink-0 items-center justify-center rounded-full bg-[#2e7d32] font-[var(--font-inter)] text-[11px] font-bold text-white">
+                                    <div className="flex items-start gap-3 rounded-[18px] bg-[#eef0f2] p-4 shadow-lg">
+                                        <span className="mt-[1px] flex size-[34px] shrink-0 items-center justify-center rounded-full bg-[#12801F] font-[var(--font-inter)] text-[11px] font-bold text-white shadow-md">
                                             {point.number}
                                         </span>
                                         <div>
-                                            <h4 className="font-[var(--font-inter)] text-[13px] font-bold text-white">{point.title}</h4>
-                                            <p className="mt-[4px] font-[var(--font-inter)] text-[12px] leading-[1.55] text-white/55">{point.description}</p>
+                                            <h4 className="font-[var(--font-inter)] text-[13px] font-bold text-[#141414]">{point.title}</h4>
+                                            <p className="mt-[4px] font-[var(--font-inter)] text-[12px] leading-[1.55] text-[#333]">{point.description}</p>
                                         </div>
                                     </div>
                                 </StaggerItem>
