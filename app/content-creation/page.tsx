@@ -491,13 +491,13 @@ function RevenueMethod() {
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
             <h2 className="lowercase text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-16">
-              How We Build High-Performing  <br />
+              our content creation  <br />
               {" "}
               <span
                 className="italic text-[#ff5500] font-normal text-[1.1em] tracking-[-3%] sm:text-[72px] sm:leading-[70px]"
                 style={{ fontFamily: "'Times New Roman', Times, serif" }}
               >
-                Meta Campaigns
+                process
               </span>
             </h2>
           </StaggerItem>
