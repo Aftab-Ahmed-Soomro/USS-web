@@ -133,7 +133,7 @@ function Hero() {
 function VideoSection() {
   return (
     <section className="bg-[#050505] px-6 pb-[56px] pt-[58px] text-white ">
-      <div className="mx-auto max-w-[1150px] text-center">
+      <div className="mx-auto text-center">
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
             <h2 className="font-[var(--font-be-vietnam)] text-[28px] font-medium lowercase leading-tight tracking-[-4%] sm:text-[56px]">
@@ -150,22 +150,19 @@ function VideoSection() {
           </StaggerItem>
         </Stagger>
         <FadeUp delay={0.3}>
-          <div className="relative mx-auto mt-[38px] aspect-[1040/515] w-full max-w-[1150px] overflow-hidden rounded-[4px] shadow-[0_0_42px_rgba(255,255,255,0)]">
-            <Image
-              src="/assets/blurred.png"
-              alt="Content creation video preview"
-              fill
-              sizes="(min-width: 1024px) 1040px, 100vw"
-              className="object-cover object-center blur-[17.5px] scale-[1.1]"
-            />
+          <div className="relative mx-auto mt-[38px] aspect-[1040/515] w-full overflow-hidden rounded-[4px] shadow-[0_0_42px_rgba(255,255,255,0)]">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover object-center"
+              preload="auto"
+            >
+              <source src="https://emmanuelcolewilliams.com/uss-assets/USS Main Website Showreel.mp4" type="video/mp4" />
+            </video>
             <div className="absolute inset-0 bg-black/14" />
             <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_92px_58px_rgba(0,0,0,0.92)]" />
-            <button
-              aria-label="Play creative video"
-              className="absolute left-1/2 top-1/2 grid size-[54px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-[#ff5500] text-white shadow-[0_12px_32px_rgba(0,0,0,0.36)] transition hover:bg-[#ff6b1f] sm:size-[70px]"
-            >
-              <span className="ml-[4px] h-0 w-0 border-y-[10px] border-l-[15px] border-y-transparent border-l-white sm:border-y-[13px] sm:border-l-[19px]" />
-            </button>
           </div>
         </FadeUp>
       </div>

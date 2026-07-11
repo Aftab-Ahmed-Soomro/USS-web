@@ -30,7 +30,7 @@ export function WhyGoogleAdsWork({
         <div className="flex flex-col lg:flex-row items-stretch lg:items-center mt-0 lg:mt-[-20px] relative w-full">
           {/* Left — image */}
           <FadeLeft delay={0.2}>
-            <div className="relative w-[90%] sm:w-[80%] md:w-[70%] lg:w-[580px] shrink-0">
+            <div className="relative w-[90%] sm:w-[80%] md:w-[70%] lg:w-[560px] shrink-0">
               <div
                 className="relative w-full lg:w-[600px] overflow-hidden"
                 style={{
@@ -56,7 +56,7 @@ export function WhyGoogleAdsWork({
             <div className="w-full flex justify-center">
               <FadeRight delay={0.1}>
               <h2
-                className="text-white mb-[40px] lg:mb-[40px] text-center lg:text-left lg:pl-3"
+                className="text-white mb-[40px] lg:mb-[40px] text-center lg:text-left pr-1"
                 style={{
                   fontWeight: 500,
                   fontSize: "clamp(36px, 5vw, 56px)",
@@ -85,7 +85,7 @@ export function WhyGoogleAdsWork({
 
             {/* Cards Grid */}
             <div className="w-full flex justify-center">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-[16px] gap-y-8 place-items-center lg:place-items-start max-w-[600px] w-full">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-[30px] gap-y-8 place-items-center lg:place-items-start max-w-[730px] w-full">
               {items.map((item, i) => (
                 <FadeUp key={item.number} delay={0.25 + i * 0.12}>
                   <div

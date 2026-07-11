@@ -29,13 +29,13 @@ const testimonials = [
     company: "SupperClub",
     author: "Mehreen Omar - Co-Founder",
     quote: "Growing a premium membership community requires the right mix of brand, content, and communication. The strategic approach helped strengthen our presence in the market and support continued membership growth across the region.",
-    image: "/assets/Testimonels/mehreen.png",
+    image: "/assets/Testimonels/mehreen.PNG",
   },
   {
     company: "Residency Advanced",
     author: "Humphrey Ddagirira - Founder",
     quote: "The paid search strategy delivered a consistent flow of high-quality enquiries, generating an average of 125 qualified leads per month. The results exceeded our expectations and helped us connect with the right audience at scale.",
-    image: "/assets/Testimonels/humpty.png",
+    image: "/assets/Testimonels/humpty.PNG",
   },
   {
     company: "Women Who Thrive",
@@ -47,19 +47,19 @@ const testimonials = [
     company: "Flowork",
     author: "Abir Moussa - CEO",
     quote: "From launch strategy to content and digital marketing, USS helped us successfully introduce flowork to the Dubai market. Their team played a crucial role in building awareness and generating momentum ahead of opening.",
-    image: "/assets/Testimonels/abeer.png",
+    image: "/assets/Testimonels/abeer.PNG",
   },
   {
     company: "Reclaim",
     author: "Akmann Van Mary - CEO",
     quote: "Launching Reclaim in the US required more than just marketing. USS helped us build awareness, establish our brand and create a consistent customer journey across multiple channels. Their team has become a trusted extension of our business as we continue to grow.",
-    image: "/assets/Testimonels/akman.png",
+    image: "/assets/Testimonels/akman.PNG",
   },
   {
     company: "Charbon & C",
     author: "Chareka Jolly - CEO",
     quote: "USS has been a trusted partner behind the scenes, delivering high quality work that reflects the standard we expect for our own clients. Their reliability, attention to detail and ability to work as an extension of our team has been invaluable.",
-    image: "/assets/Testimonels/char.png",
+    image: "/assets/Testimonels/char.PNG",
   },
   {
     company: "Disturbed Innovations Group",
