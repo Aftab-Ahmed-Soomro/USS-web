@@ -13,7 +13,7 @@ export default function EmailMarketingQuote({first, second, third}: {first: stri
 
         <StaggerItem>
           <h2
-            className="text-white max-w-[650px] mt-8"
+            className="text-white max-w-[530px] mt-8"
             style={{
               fontWeight: 500,
               fontSize: "40px",

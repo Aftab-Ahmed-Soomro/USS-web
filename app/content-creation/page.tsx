@@ -9,6 +9,13 @@ import { Testimonials } from "../components/Testimonials";
 import { ConsultationForm, LightConsultationForm } from "../components/ConsultationForm";
 import { OnlyBrands } from "../components/OnlyBrands";
 import { GoodCompanyMap } from "../components/GoodCompanyMap";
+import Stagger from "../components/Stagger";
+import StaggerItem from "../components/Staggeritem";
+import FadeRight from "../components/FadeRight";
+import { WhyEmailFails } from "../components/WhyEmailFails";
+import EmailMarketingQuote from "../components/EmailMarketingQuote";
+import { ContentCreationGrid } from "../components/ContentCreationGrid";
+import FadeUp from "../components/FadeUp";
 
 const stats = [
   { value: "18.4K+", label: "Creative Assets Produced" },
@@ -82,33 +89,42 @@ const process = [
 
 function Hero() {
   return (
-    <section className="bg-[#ff5500] px-6 py-[44px] text-white sm:py-[58px] lg:py-[72px]">
-      <div className="mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[minmax(0,520px)_470px] lg:items-center lg:justify-between">
-        <div>
-          <p className="font-[var(--font-be-vietnam)] text-[10px] font-bold uppercase tracking-[2.8px] text-white/85">
-            Content Creation
-          </p>
-          <h1 className="mt-[28px] max-w-[535px] font-[var(--font-be-vietnam)] text-[35px] font-medium lowercase leading-[1.02] tracking-[-1.5px] sm:text-[50px] lg:text-[54zpx]">
-            content that works
-            <br />
-            not just{" "}
-            <span className="font-[var(--font-cormorant)] text-[1.12em] font-extralight timesFontFamily italic tracking-[-0.04em]">
-              looks good
-            </span>
-          </h1>
-          <p className="mt-[18px] max-w-[380px] font-[var(--font-inter)] text-[12.5px] leading-[1.65] text-white/88 sm:text-[14px]">
-            We create high quality content creation, designed to
-stop the scroll, engage your audience and support your
-growth across every platform.
-          </p>
-          <Link
-            className="mt-[22px] inline-flex h-[37px] min-w-[164px] items-center justify-center rounded-full bg-white px-7 font-[var(--font-be-vietnam)] text-[11px] font-bold uppercase text-[#ff5500] transition hover:bg-white/90"
-            href="/contact"
-          >
-            Book a Consultation
-          </Link>
-        </div>
-        <LightConsultationForm />
+    <section className="relative overflow-hidden bg-[#ff5500] px-6 pb-[58px] pt-[56px] text-white sm:pb-[72px] sm:pt-[78px]">
+      <div className="mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
+        <Stagger staggerDelay={0.12}>
+          <StaggerItem>
+            <p className="font-[var(--font-be-vietnam)] text-[10px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white">
+              Google Ads
+            </p>
+          </StaggerItem>
+          <StaggerItem>
+            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[38px] font-bold lowercase leading-[100%] tracking-[-3px] sm:text-[58px] text-white">
+              content that works
+              <br />
+              not just{" "}
+              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white tracking-[-2.8px]">
+                looks good
+              </span>
+            </h1>
+          </StaggerItem>
+          <StaggerItem>
+            <p className="mt-[40px] max-w-[530px] font-[var(--font-inter)] text-[14px] leading-[32px] text-white/90 sm:text-[18px]">
+              We create high quality photo and video content designed to capture attention, reflect your brand and support your marketing across every platform.
+            </p>
+          </StaggerItem>
+          <StaggerItem>
+            <Link
+              className="mt-[30px] inline-flex h-[38px] min-w-[178px] items-center justify-center rounded-full bg-white px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-black transition uppercase hover:bg-[#ff6b1f]"
+              href="/contact"
+            >
+              Book a Consultation
+            </Link>
+          </StaggerItem>
+        </Stagger>
+
+        <FadeRight delay={0.3}>
+          <LightConsultationForm />
+        </FadeRight>
       </div>
     </section>
   );
@@ -118,14 +134,14 @@ function VideoSection() {
   return (
     <section className="bg-[#050505] px-6 pb-[56px] pt-[58px] text-white ">
       <div className="mx-auto max-w-[1150px] text-center">
-        <h2 className="font-[var(--font-be-vietnam)] text-[28px] font-medium lowercase leading-tight tracking-[-0.7px] sm:text-[38px]">
+        <h2 className="font-[var(--font-be-vietnam)] text-[28px] font-medium lowercase leading-tight tracking-[-4%] sm:text-[56px]">
           take a look at our{" "}
-          <span className="font-[var(--font-cormorant)] text-[1.15em] font-extralight timesFontFamily italic">
+          <span className="font-[var(--font-cormorant)] text-[1.15em] sm:text-[72px] font-normal tracking-[-4%] timesFontFamily italic">
             creative world
           </span>
         </h2>
-        <p className="mx-auto mt-[9px] max-w-[500px] font-[var(--font-inter)] text-[16px] leading-[1.7] text-white/64 uppercase">
-          See how we brought this campaign to life. 
+        <p className="mx-auto mt-[9px] max-w-[600px] font-[var(--font-inter)] text-[16px] sm:text-[24px] leading-[1.7] text-[#FFFFFFB2] uppercase">
+          See how we brought this campaign to life.
         </p>
         <div className="relative mx-auto mt-[38px] aspect-[1040/515] w-full max-w-[1150px] overflow-hidden rounded-[4px] shadow-[0_0_42px_rgba(255,255,255,0)]">
           <Image
@@ -385,20 +401,201 @@ function FinalCta() {
   );
 }
 
+const googleAdsBrandPoints = [
+  {
+    number: "01",
+    title: "Wasted Budget",
+    description:
+      "Budget is spent on keywords that don't convert.",
+  },
+  {
+    number: "02",
+    title: "Poor Campaign Structure",
+    description:
+      "Poor campaign structure makes it harder to improve performance.",
+  },
+  {
+    number: "03",
+    title: "Weak Ad Copy",
+    description:
+      "Ads don't stand out or encourage people to click and engage.",
+  },
+  {
+    number: "04",
+    title: "Set and Forget",
+    description:
+      "Campaigns run without A/B testing or optimisation.",
+  },
+];
+
+const googleAdsUssPoints = [
+  {
+    number: "01",
+    title: "High-Intent Targeting",
+    description:
+      "We target searches that are ready to convert.",
+  },
+  {
+    number: "02",
+    title: "Built for Performance",
+    description:
+      "Campaigns structured for better results and scalability.",
+  },
+  {
+    number: "03",
+    title: "Ads That Drive Action",
+    description:
+      "Copy written to increase clicks and enquiries",
+  },
+  {
+    number: "04",
+    title: "Always Optimising",
+    description:
+      "Continuous improvements based on real campaign data",
+  },
+];
+
+// Card Data Structure
+const CARDS_DATA = [
+  {
+    id: '01',
+    title: 'Campaign Strategy',
+    description: 'Every campaign starts with a clear objective. We define your goals, audience, budget and messaging before any ad goes live.',
+    bgImage: '/assets/method1.png', // Replace with your image src
+  },
+  {
+    id: '02',
+    title: 'Audience Targeting',
+    description: 'We identify and engage the most relevant demographics through data-driven targeting strategies, ensuring your ads reach the right people.',
+    bgImage: '/assets/method2.png', // Replace with your image src
+  },
+  {
+    id: '03',
+    title: 'Creative & Ad Content',
+    description: 'Our team crafts compelling visuals and persuasive copy that capture attention and drive meaningful engagement from your audience.',
+    bgImage: '/assets/method3.png', // Replace with your image src
+  },
+  {
+    id: '04',
+    title: 'Optimisation & Scaling',
+    description: 'We continuously monitor performance metrics to refine campaigns, maximizing return on ad spend and scaling what works best.',
+    bgImage: '/assets/method4.png', // Replace with your image src
+  },
+];
+
+function RevenueMethod() {
+  return (
+    <div className="w-full bg-black text-white py-20 px-6 min-h-screen flex flex-col justify-center items-center font-sans">
+      <div className="max-w-[1150px] w-full">
+
+        <Stagger staggerDelay={0.12}>
+          <StaggerItem>
+            <h2 className="lowercase text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-16">
+              How We Build High-Performing  <br />
+              {" "}
+              <span
+                className="italic text-[#ff5500] font-normal text-[1.1em] tracking-[-3%] sm:text-[72px] sm:leading-[70px]"
+                style={{ fontFamily: "'Times New Roman', Times, serif" }}
+              >
+                Meta Campaigns
+              </span>
+            </h2>
+          </StaggerItem>
+        </Stagger>
+
+        {/* Grid Container */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center items-center">
+          {CARDS_DATA.map((card, i) => (
+            <FadeUp key={card.id} delay={0.1 + i * 0.1}>
+              <div
+                style={{
+                  width: '1285.61px', // Scaled proportions fallback or driven via wrapper max-width
+                  maxWidth: '100%',
+                  height: '606.93px',
+                  backgroundImage: `url(${card.bgImage})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+                className="group relative rounded-[28px] overflow-hidden p-2 flex flex-col justify-between cursor-pointer transition-all duration-500 ease-out"
+              >
+                {/* Card Number */}
+                <div
+                  className="text-[9.82px] font-medium leading-[14.73px] tracking-[2.95px] text-white opacity-80 align-middle"
+                  style={{ fontStyle: 'Medium' }}
+                >
+                  {card.id}
+                </div>
+
+                {/* Bottom Content Group (Animates Up on Hover) */}
+                <div className="transform translate-y-[80px] group-hover:translate-y-0 transition-transform duration-500 ease-out will-change-transform">
+
+                  {/* Title */}
+                  <h3
+                    className="text-[22.64px] font-normal leading-[26.78px] tracking-[0%] text-white align-middle mb-3 min-h-[60px]"
+                    style={{ fontStyle: 'Regular' }}
+                  >
+                    {card.title}
+                  </h3>
+
+                  {/* Description (Fades and slides in cleanly) */}
+                  <p
+                    className="text-[15.5px] font-normal leading-[18.86px] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 ease-out min-h-[120px]"
+                    style={{ fontStyle: 'Regular' }}
+                  >
+                    {card.description}
+                  </p>
+                </div>
+              </div>
+            </FadeUp>
+          ))}
+        </div>
+
+      </div>
+    </div>
+  );
+}
+
 export default function ContentCreationPage() {
   return (
     <main className="min-h-screen bg-black overflow-hidden">
       <Header />
       <Hero />
       <VideoSection />
-      <Brands />
-      <Metrics />
-      <Problems />
-      <QuoteImage />
-      <ApproachSection />
-      <ServicesSection />
-      <ProcessSection />
-      <OnlyBrands />
+      {/* <Brands /> */}
+      {/* <Metrics /> */}
+      <WhyEmailFails
+        hideBadge={true}
+        heading={
+          <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
+            why most{" "}
+            <span
+              className="font-normal italic text-[60px] sm:text-[72px]"
+              style={{ fontFamily: "'Times New Roman', Times, serif" }}
+            >
+              google ads
+            </span>{" "}
+            fails
+          </h2>
+        }
+        subheading="Most brands don't have a Google Ads problem, they have a strategy problem."
+        leftTitle="Most Brands"
+        rightTitle="The USS Difference"
+        leftPoints={googleAdsBrandPoints}
+        rightPoints={googleAdsUssPoints}
+        centerLogo="/assets/Google__logo.webp"
+        logoClassName="w-[80px] lg:w-[115px]"
+      />
+      <div className="mt-[-150px]">
+        <EmailMarketingQuote first={"your social media is your"} second={"digital window"} third={"shop front"} />
+      </div>
+      <ContentCreationGrid />
+      <RevenueMethod />
+      {/* <Problems /> */}
+      {/* <QuoteImage /> */}
+      {/* <ApproachSection /> */}
+      {/* <ServicesSection /> */}
+      {/* <ProcessSection /> */}
+      {/* <OnlyBrands /> */}
       <Testimonials />
       <Team />
       <GoodCompanyMap />
