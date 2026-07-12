@@ -70,7 +70,7 @@ const workSteps = [
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-black px-6 pb-[58px] pt-[56px] text-white sm:pb-[72px] sm:pt-[78px]">
+    <section className="relative overflow-hidden bg-black px-4 min-[375px]:px-6 pb-[40px] pt-[40px] min-[375px]:pb-[58px] min-[375px]:pt-[56px] text-white sm:pb-[72px] sm:pt-[78px]">
       <style>{`
         @keyframes glow-move-tl {
           0% { transform: translate(0, 0) scale(1); }
@@ -93,27 +93,27 @@ function Hero() {
       `}</style>
       {/* Top Left Gradient */}
       <div 
-        className="pointer-events-none absolute -left-[20%] -top-[20%] h-[80vw] max-h-[800px] min-h-[500px] w-[80vw] max-w-[800px] min-w-[500px] rounded-full opacity-40 blur-[100px] animate-glow-tl"
+        className="pointer-events-none absolute -left-[20%] -top-[20%] h-[80vw] max-h-[800px] min-h-[300px] sm:min-h-[500px] w-[80vw] max-w-[800px] min-w-[300px] sm:min-w-[500px] rounded-full opacity-40 blur-[60px] sm:blur-[100px] animate-glow-tl"
         style={{ background: 'radial-gradient(circle, #FF5500 0%, rgba(255,85,0,0) 70%)' }}
       />
 
       {/* Bottom Right Gradient */}
       <div 
-        className="pointer-events-none absolute -bottom-[20%] -right-[20%] h-[80vw] max-h-[800px] min-h-[500px] w-[80vw] max-w-[800px] min-w-[500px] rounded-full opacity-40 blur-[100px] animate-glow-br"
+        className="pointer-events-none absolute -bottom-[20%] -right-[20%] h-[80vw] max-h-[800px] min-h-[300px] sm:min-h-[500px] w-[80vw] max-w-[800px] min-w-[300px] sm:min-w-[500px] rounded-full opacity-40 blur-[60px] sm:blur-[100px] animate-glow-br"
         style={{ background: 'radial-gradient(circle, #FF5500 0%, rgba(255,85,0,0) 70%)' }}
       />
-      <div className="mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
+      <div className="mx-auto grid max-w-[1150px] gap-8 sm:gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
-            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[38px] font-bold lowercase leading-[100%] tracking-[-3px] sm:text-[58px] text-white">
+            <h1 className="mt-[16px] min-[375px]:mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[38px] font-bold lowercase leading-[100%] tracking-[-1.5px] sm:tracking-[-3px] sm:text-[58px] text-white">
               scale your brand with meta ads, don’t just{" "}
-              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] lowercase font-normal timesFontFamily italic text-[#FF5500] tracking-[-2.8px]">
+              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] lowercase font-normal timesFontFamily italic text-[#FF5500] tracking-[-1.5px] sm:tracking-[-2.8px]">
                 spending more.
               </span>
             </h1>
           </StaggerItem>
           <StaggerItem>
-            <p className="mt-[50px] max-w-[600px] font-[var(--font-inter)] text-[14px] leading-[32px] text-white/90 sm:text-[18px]">
+            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[600px] font-[var(--font-inter)] text-[14px] leading-[24px] min-[375px]:leading-[28px] sm:leading-[32px] text-white/90 sm:text-[18px]">
               We create and manage Meta Ads across Facebook and Instagram, helping businesses reach the right people, generate more enquiries and grow with confidence.
             </p>
           </StaggerItem>
@@ -176,7 +176,7 @@ function Hero() {
           </StaggerItem> */}
           <StaggerItem>
             <Link
-              className="mt-[36px] inline-flex h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
+              className="mt-[24px] sm:mt-[36px] inline-flex w-full sm:w-auto h-[48px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
               href="/contact"
             >
               Book a Consultation
@@ -356,15 +356,15 @@ function HowItWorks() {
 
 function RelatedProjects() {
   return (
-    <section className="bg-[#080808] px-6 py-[56px] text-white">
+    <section className="bg-[#080808] px-4 min-[375px]:px-6 py-[40px] sm:py-[56px] text-white">
       <div className="mx-auto max-w-[1150px]">
         {/* Header */}
         <div className="flex items-center justify-between gap-6">
           <Stagger staggerDelay={0.12}>
             <StaggerItem>
-              <h2 className="font-[var(--font-be-vietnam)] text-[28px] sm:text-[56px] font-medium lowercase leading-none tracking-[-0.96px]">
+              <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[56px] font-medium lowercase leading-none tracking-[-0.96px]">
                 related{" "}
-                <span className="font-[var(--font-cormorant)] text-[1.18em] sm:text-[72px] font-normal timesFontFamily italic tracking-[-0.96px]">
+                <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal timesFontFamily italic tracking-[-0.96px]">
                   projects
                 </span>
               </h2>
@@ -383,12 +383,12 @@ function RelatedProjects() {
         </div>
 
         {/* Cards */}
-        <div className="mt-[40px] grid gap-[24px] md:grid-cols-2">
+        <div className="mt-[24px] sm:mt-[40px] grid gap-[16px] sm:gap-[24px] md:grid-cols-2">
           {relatedProjects.map((project, i) => (
             <FadeUp key={project.name} delay={0.15 + i * 0.15}>
               <Link
                 href={`/projects/${project.slug}`}
-                className="block rounded-[20px] border border-white p-[14px] transition-colors duration-300 hover:border-[#ff5500] group"
+                className="block rounded-[20px] border border-white p-[12px] sm:p-[14px] transition-colors duration-300 hover:border-[#ff5500] group"
               >
                 <div className="relative aspect-[420/260] w-full overflow-hidden max-w-[534px] rounded-[12px] bg-[#111]">
                   <Image
@@ -400,28 +400,28 @@ function RelatedProjects() {
                   />
                 </div>
 
-                <div className="px-[10px] pt-[24px] pb-[6px]">
+                <div className="px-[6px] sm:px-[10px] pt-[20px] sm:pt-[24px] pb-[6px]">
                   {/* Title + year */}
                   <div className="flex items-baseline justify-between gap-3">
-                    <h3 className="font-[var(--font-be-vietnam)] text-[22px] sm:text-[36px] font-normal leading-none tracking-[-0.72px] group-hover:text-[#ff5500] transition-colors duration-300">
+                    <h3 className="font-[var(--font-be-vietnam)] text-[24px] min-[375px]:text-[28px] sm:text-[36px] font-normal leading-[1.1] sm:leading-none tracking-[-0.72px] group-hover:text-[#ff5500] transition-colors duration-300">
                       {project.name}
                     </h3>
-                    <span className="shrink-0 font-[var(--font-inter)] text-[14px] text-white">
+                    <span className="shrink-0 font-[var(--font-inter)] text-[13px] sm:text-[14px] text-white">
                       {project.year}
                     </span>
                   </div>
 
                   {/* Copy */}
-                  <p className="mt-[14px] max-w-[550px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[28px] text-white">
+                  <p className="mt-[12px] sm:mt-[14px] max-w-[550px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.6] sm:leading-[28px] text-white/90 sm:text-white">
                     {project.copy}
                   </p>
 
                   {/* Tags */}
-                  <div className="mt-[20px] flex flex-wrap gap-[10px]">
+                  <div className="mt-[16px] sm:mt-[20px] flex flex-wrap gap-[8px] sm:gap-[10px]">
                     {(project.tags ?? []).map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full border border-white px-[14px] py-[7px] font-[var(--font-inter)] text-[12px] text-white/90 group-hover:border-[#ff5500]/50 transition-colors duration-300"
+                        className="rounded-full border border-white px-[12px] py-[6px] sm:px-[14px] sm:py-[7px] font-[var(--font-inter)] text-[11px] sm:text-[12px] text-white/90 group-hover:border-[#ff5500]/50 transition-colors duration-300"
                       >
                         {tag}
                       </span>
@@ -448,7 +448,7 @@ function RelatedProjects() {
 
 function FinalCta() {
   return (
-    <section className="bg-black px-6 pt-[70px] text-white pb-30">
+    <section className="bg-black px-4 min-[375px]:px-6 pt-[50px] sm:pt-[70px] text-white pb-30">
       <Stagger staggerDelay={0.12} className="mx-auto max-w-[1150px] text-center">
         <StaggerItem>
           <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
@@ -456,19 +456,19 @@ function FinalCta() {
           </p>
         </StaggerItem>
         <StaggerItem>
-          <h2 className="mt-8 font-[var(--font-be-vietnam)] text-[36px] font-medium leading-[1.08] tracking-[-1.5px] sm:text-[55px]">
+          <h2 className="mt-[24px] sm:mt-8 font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[36px] font-medium leading-[1.08] tracking-[-1.5px] sm:text-[55px]">
             ready to scale
             <br />
             with{" "}
-            <span className="font-[var(--font-cormorant)] text-[1.12em] font-extralight timesFontFamily italic text-[#ff5500]">
+            <span className="font-[var(--font-cormorant)] text-[1.12em] leading-[1.1] sm:leading-none font-extralight timesFontFamily italic text-[#ff5500]">
               meta ads?
             </span>
           </h2>
         </StaggerItem>
         <StaggerItem>
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="mt-[30px] sm:mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
-              className="inline-flex h-[42px] min-w-[190px] items-center justify-center rounded-full bg-[#ff5500] px-8 font-[var(--font-be-vietnam)] text-[12px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
+              className="inline-flex h-[46px] sm:h-[42px] min-w-[190px] items-center justify-center rounded-full bg-[#ff5500] px-8 font-[var(--font-be-vietnam)] text-[12px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
               href="/contact"
             >
               Book a Consultation
@@ -564,16 +564,16 @@ const CARDS_DATA = [
 
 function RevenueMethod() {
   return (
-    <div className="w-full bg-black text-white py-20 px-6 min-h-screen flex flex-col justify-center items-center font-sans">
+    <div className="w-full bg-black text-white py-[50px] sm:py-20 px-4 min-[375px]:px-6 min-h-screen flex flex-col justify-center items-center font-sans">
       <div className="max-w-[1150px] w-full">
 
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
-            <h2 className="lowercase text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-16">
+            <h2 className="lowercase text-white text-[28px] min-[375px]:text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-[40px] sm:mb-16">
               How We Build High-Performing  <br />
               {" "}
               <span
-                className="italic text-[#ff5500] font-normal text-[1.1em] tracking-[-3%] sm:text-[72px] sm:leading-[70px]"
+                className="italic text-[#ff5500] font-normal text-[36px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]"
                 style={{ fontFamily: "'Times New Roman', Times, serif" }}
               >
                 Meta Campaigns
@@ -583,19 +583,18 @@ function RevenueMethod() {
         </Stagger>
 
         {/* Grid Container */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[16px] sm:gap-6 justify-center items-center">
           {CARDS_DATA.map((card, i) => (
             <FadeUp key={card.id} delay={0.1 + i * 0.1}>
               <div
                 style={{
                   width: '1285.61px', // Scaled proportions fallback or driven via wrapper max-width
                   maxWidth: '100%',
-                  height: '606.93px',
                   backgroundImage: `url(${card.bgImage})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center'
                 }}
-                className="group relative rounded-[28px] overflow-hidden p-2 flex flex-col justify-between cursor-pointer transition-all duration-500 ease-out"
+                className="group relative rounded-[28px] overflow-hidden p-6 sm:p-2 flex flex-col justify-between cursor-pointer transition-all duration-500 ease-out w-full h-[360px] sm:h-[606.93px]"
               >
                 {/* Card Number */}
                 <div
@@ -610,7 +609,7 @@ function RevenueMethod() {
 
                   {/* Title */}
                   <h3
-                    className="text-[22.64px] font-normal leading-[26.78px] tracking-[0%] text-white align-middle mb-3 min-h-[60px]"
+                    className="text-[18px] sm:text-[22.64px] font-normal leading-[1.3] sm:leading-[26.78px] tracking-[0%] text-white align-middle mb-[8px] sm:mb-3 min-h-[40px] sm:min-h-[60px]"
                     style={{ fontStyle: 'Regular' }}
                   >
                     {card.title}
@@ -618,7 +617,7 @@ function RevenueMethod() {
 
                   {/* Description (Fades and slides in cleanly) */}
                   <p
-                    className="text-[15.5px] font-normal leading-[18.86px] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 ease-out min-h-[120px]"
+                    className="text-[14px] sm:text-[15.5px] font-normal leading-[1.4] sm:leading-[18.86px] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 ease-out min-h-[80px] sm:min-h-[120px]"
                     style={{ fontStyle: 'Regular' }}
                   >
                     {card.description}

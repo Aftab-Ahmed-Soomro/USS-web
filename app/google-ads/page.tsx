@@ -130,8 +130,8 @@ const workWays = [
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#ff5500] px-6 pb-[58px] pt-[56px] text-white sm:pb-[72px] sm:pt-[78px]">
-      <div className="mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
+    <section className="relative overflow-hidden bg-[#ff5500] px-4 min-[375px]:px-6 pb-[40px] pt-[40px] min-[375px]:pb-[58px] min-[375px]:pt-[56px] text-white sm:pb-[72px] sm:pt-[78px]">
+      <div className="mx-auto grid max-w-[1150px] gap-8 sm:gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
             <p className="font-[var(--font-be-vietnam)] text-[10px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white">
@@ -139,25 +139,25 @@ function Hero() {
             </p>
           </StaggerItem>
           <StaggerItem>
-            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[38px] font-bold lowercase leading-[100%] tracking-[-3px] sm:text-[58px] text-white">
+            <h1 className="mt-[16px] min-[375px]:mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[38px] font-bold lowercase leading-[100%] tracking-[-1.5px] sm:tracking-[-3px] sm:text-[58px] text-white">
               capture high
               <br />
               quality leads
               <br />
               with{" "}
-              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] lowercase font-bold timesFontFamily italic text-white tracking-[-2.8px]">
+              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] lowercase font-bold timesFontFamily italic text-white tracking-[-1.5px] sm:tracking-[-2.8px] leading-[1.1] sm:leading-none">
                 google ads
               </span>
             </h1>
           </StaggerItem>
           <StaggerItem>
-            <p className="mt-[40px] max-w-[530px] font-[var(--font-inter)] text-[14px] leading-[32px] text-white/90 sm:text-[18px]">
+            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[40px] max-w-[530px] font-[var(--font-inter)] text-[14px] leading-[24px] min-[375px]:leading-[28px] sm:leading-[32px] text-white/90 sm:text-[18px]">
               Turn searches into sales with Google Ads, built to generate qualified leads, not just clicks, by putting your business in front of customers actively searching for your products or services.
             </p>
           </StaggerItem>
           <StaggerItem>
             <Link
-              className="mt-[30px] inline-flex h-[38px] min-w-[178px] items-center justify-center rounded-full bg-white px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-black transition uppercase hover:bg-[#ff6b1f]"
+              className="mt-[24px] sm:mt-[30px] inline-flex w-full sm:w-auto h-[48px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-white px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-black transition uppercase hover:bg-[#ff6b1f]"
               href="/contact"
             >
               Book a Consultation
@@ -412,9 +412,9 @@ function GrowthSystem() {
 
 function CaseStudies() {
   return (
-    <section className="bg-black px-6 py-[78px] text-white lg:py-[86px]">
+    <section className="bg-black px-4 min-[375px]:px-6 py-[40px] sm:py-[78px] text-white lg:py-[86px]">
       <div className="mx-auto max-w-[1150px]">
-        <div className="flex flex-col gap-7 md:flex-row md:items-end md:justify-between">
+        <div className="flex flex-col gap-[20px] md:gap-7 md:flex-row md:items-end md:justify-between">
           <Stagger staggerDelay={0.12}>
             <StaggerItem>
               <p className="font-[var(--font-be-vietnam)] text-[9px] sm:text-[12px] font-normal uppercase tracking-[4.8px] text-[#ff5500]">
@@ -422,24 +422,24 @@ function CaseStudies() {
               </p>
             </StaggerItem>
             <StaggerItem>
-              <h2 className="mt-[24px] max-w-[650px] font-[var(--font-be-vietnam)] text-[38px] font-medium lowercase leading-[0.9] tracking-[-1.4px] sm:text-[56px]">
+              <h2 className="mt-[16px] sm:mt-[24px] max-w-[650px] font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[38px] font-medium lowercase leading-[0.9] tracking-[-1.4px] sm:text-[56px]">
                 see how we turn
                 <br />
                 search{" "}
-                <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] font-normal timesFontFamily italic">
+                <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] font-normal timesFontFamily italic leading-[1.1] sm:leading-none">
                   into revenue
                 </span>
               </h2>
             </StaggerItem>
             <StaggerItem>
-              <p className="mt-[18px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.5] text-white">
+              <p className="mt-[14px] sm:mt-[18px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.5] text-white/90 sm:text-white">
                 Explore how we've helped brands generate high-quality leads and scale through Google Ads.
               </p>
             </StaggerItem>
           </Stagger>
           <FadeRight delay={0.3}>
             <Link
-              className="inline-flex h-[42px] w-[158px] items-center justify-center rounded-full border border-white/80 font-[var(--font-be-vietnam)] text-[12px] font-normal text-white transition hover:border-white hover:bg-white hover:text-black"
+              className="hidden md:inline-flex h-[42px] w-[158px] items-center justify-center rounded-full border border-white/80 font-[var(--font-be-vietnam)] text-[12px] font-normal text-white transition hover:border-white hover:bg-white hover:text-black"
               href="/projects"
             >
               View all projects <span className="ml-[4px]">-&gt;</span>
@@ -448,12 +448,12 @@ function CaseStudies() {
         </div>
 
         {/* Cards */}
-        <div className="mt-[40px] grid gap-[24px] md:grid-cols-2">
+        <div className="mt-[24px] sm:mt-[40px] grid gap-[16px] sm:gap-[24px] md:grid-cols-2">
           {relatedProjects.map((project, i) => (
             <FadeUp key={project.name} delay={0.15 + i * 0.15}>
               <Link
                 href={`/projects/${project.slug}`}
-                className="block rounded-[20px] border border-white p-[14px] transition-colors duration-300 hover:border-[#ff5500] group"
+                className="block rounded-[20px] border border-white p-[12px] sm:p-[14px] transition-colors duration-300 hover:border-[#ff5500] group"
               >
                 <div className="relative aspect-[420/260] w-full overflow-hidden max-w-[534px] rounded-[12px] bg-[#111]">
                   <Image
@@ -465,25 +465,25 @@ function CaseStudies() {
                   />
                 </div>
 
-                <div className="px-[10px] pt-[24px] pb-[6px]">
+                <div className="px-[6px] sm:px-[10px] pt-[20px] sm:pt-[24px] pb-[6px]">
                   <div className="flex items-baseline justify-between gap-3">
-                    <h3 className="font-[var(--font-be-vietnam)] text-[22px] sm:text-[36px] font-normal leading-none tracking-[-0.72px] group-hover:text-[#ff5500] transition-colors duration-300">
+                    <h3 className="font-[var(--font-be-vietnam)] text-[24px] min-[375px]:text-[28px] sm:text-[36px] font-normal leading-[1.1] sm:leading-none tracking-[-0.72px] group-hover:text-[#ff5500] transition-colors duration-300">
                       {project.name}
                     </h3>
-                    <span className="shrink-0 font-[var(--font-inter)] text-[14px] text-white">
+                    <span className="shrink-0 font-[var(--font-inter)] text-[13px] sm:text-[14px] text-white">
                       {project.year}
                     </span>
                   </div>
 
-                  <p className="mt-[14px] max-w-[420px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[28px] text-white">
+                  <p className="mt-[12px] sm:mt-[14px] max-w-[420px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.6] sm:leading-[28px] text-white/90 sm:text-white">
                     {project.copy}
                   </p>
 
-                  <div className="mt-[20px] flex flex-wrap gap-[10px]">
+                  <div className="mt-[16px] sm:mt-[20px] flex flex-wrap gap-[8px] sm:gap-[10px]">
                     {(project.tags ?? []).map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full border border-white px-[14px] py-[7px] font-[var(--font-inter)] text-[12px] text-white/90 group-hover:border-[#ff5500]/50 transition-colors duration-300"
+                        className="rounded-full border border-white px-[12px] py-[6px] sm:px-[14px] sm:py-[7px] font-[var(--font-inter)] text-[11px] sm:text-[12px] text-white/90 group-hover:border-[#ff5500]/50 transition-colors duration-300"
                       >
                         {tag}
                       </span>
@@ -493,6 +493,15 @@ function CaseStudies() {
               </Link>
             </FadeUp>
           ))}
+          
+          {/* Mobile-only view all link, shown below cards on small screens */}
+          <Link
+            href="/projects"
+            className="md:hidden inline-flex w-fit items-center gap-2 rounded-full border border-white/30 px-5 py-3 font-[var(--font-inter)] text-[12px] text-white/85 transition-colors hover:border-white/60 hover:text-white"
+          >
+            View all projects
+            <span aria-hidden="true">-&gt;</span>
+          </Link>
         </div>
       </div>
     </section>
@@ -582,15 +591,15 @@ const CARDS_DATA = [
 
 function RevenueMethod() {
   return (
-    <div className="w-full bg-black text-white py-20 px-6 min-h-screen flex flex-col justify-center items-center font-sans">
+    <div className="w-full bg-black text-white py-[50px] sm:py-20 px-4 min-[375px]:px-6 min-h-screen flex flex-col justify-center items-center font-sans">
       <div className="max-w-[1150px] w-full">
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
-            <h2 className="lowercase text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-16">
+            <h2 className="lowercase text-white text-[28px] min-[375px]:text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-[40px] sm:mb-16">
               how we capture demand  <br />
               and turn it into{" "}
               <span
-                className="italic text-[#ff5500] font-normal text-[1.1em] tracking-[-3%] sm:text-[72px] sm:leading-[70px]"
+                className="italic text-[#ff5500] font-normal text-[36px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]"
                 style={{ fontFamily: "'Times New Roman', Times, serif" }}
               >
                 revenue
@@ -600,19 +609,16 @@ function RevenueMethod() {
         </Stagger>
 
         {/* Grid Container */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[16px] sm:gap-6 justify-center items-center">
           {CARDS_DATA.map((card, i) => (
             <FadeUp key={card.id} delay={0.1 + i * 0.1}>
               <div
                 style={{
-                  width: '1285.61px',
-                  maxWidth: '100%',
-                  height: '606.93px',
                   backgroundImage: `url(${card.bgImage})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center'
                 }}
-                className="group relative rounded-[28px] overflow-hidden p-6 flex flex-col justify-between cursor-pointer transition-all duration-500 ease-out"
+                className="group relative rounded-[28px] overflow-hidden p-6 flex flex-col justify-between cursor-pointer transition-all duration-500 ease-out w-full h-[360px] sm:h-[606.93px]"
               >
                 <div
                   className="text-[9.82px] font-medium leading-[14.73px] tracking-[2.95px] text-white opacity-80 align-middle"
@@ -623,13 +629,13 @@ function RevenueMethod() {
 
                 <div className="transform translate-y-[80px] group-hover:translate-y-0 transition-transform duration-500 ease-out will-change-transform">
                   <h3
-                    className="text-[22.64px] font-normal leading-[26.78px] tracking-[0%] text-white align-middle mb-3"
+                    className="text-[18px] sm:text-[22.64px] font-normal leading-[1.3] sm:leading-[26.78px] tracking-[0%] text-white align-middle mb-[8px] sm:mb-3"
                     style={{ fontStyle: 'Regular' }}
                   >
                     {card.title}
                   </h3>
                   <p
-                    className="text-[15.5px] font-normal leading-[18.86px] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 ease-out"
+                    className="text-[14px] sm:text-[15.5px] font-normal leading-[1.4] sm:leading-[18.86px] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 ease-out"
                     style={{ fontStyle: 'Regular' }}
                   >
                     {card.description}
@@ -647,7 +653,7 @@ function RevenueMethod() {
 
 function FinalCta() {
   return (
-    <section className="bg-black px-6 pt-[70px] text-white pb-30">
+    <section className="bg-black px-4 min-[375px]:px-6 pt-[50px] sm:pt-[70px] text-white pb-30">
       <Stagger staggerDelay={0.12} className="mx-auto max-w-[1150px] text-center">
         <StaggerItem>
           <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
@@ -655,19 +661,19 @@ function FinalCta() {
           </p>
         </StaggerItem>
         <StaggerItem>
-          <h2 className="mt-8 font-[var(--font-be-vietnam)] text-[36px] font-medium leading-[1.08] tracking-[-1.5px] sm:text-[55px]">
+          <h2 className="mt-[24px] sm:mt-8 font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[36px] font-medium leading-[1.08] tracking-[-1.5px] sm:text-[55px]">
             ready to scale
             <br />
             with{" "}
-            <span className="font-[var(--font-cormorant)] text-[1.12em] font-extralight timesFontFamily italic text-[#ff5500]">
+            <span className="font-[var(--font-cormorant)] text-[1.12em] leading-[1.1] sm:leading-none font-extralight timesFontFamily italic text-[#ff5500]">
               google ads?
             </span>
           </h2>
         </StaggerItem>
         <StaggerItem>
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="mt-[30px] sm:mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
-              className="inline-flex h-[42px] min-w-[190px] items-center justify-center rounded-full bg-[#ff5500] px-8 font-[var(--font-be-vietnam)] text-[12px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
+              className="inline-flex h-[46px] sm:h-[42px] min-w-[190px] items-center justify-center rounded-full bg-[#ff5500] px-8 font-[var(--font-be-vietnam)] text-[12px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
               href="/contact"
             >
               Book a Consultation
@@ -739,7 +745,7 @@ export default function GoogleAdsPage() {
       <Header />
       <Hero />
       <Numbers />
-      {/* <Brands /> */}
+      <Brands />
       
       <WhyEmailFails
       hideBadge={false}
@@ -763,7 +769,7 @@ export default function GoogleAdsPage() {
       centerLogo="/assets/Google__logo.webp"
       logoClassName="w-[80px] lg:w-[115px]"
       />
-      <div className="mt-[-60px]">
+      <div className="mt-[0px] sm:mt-[-60px]">
         <WhyGoogleAdsWork
         imageSrc="/assets/googleside.jpg"
         imageAlt="Team working on Google Ads strategy"
@@ -839,12 +845,11 @@ export default function GoogleAdsPage() {
       />
       <RevenueMethod />
       <CaseStudies />
-      {/* <WorkTogether /> */}
       <Testimonials />
       <Team />
       <GoodCompanyMap />
       <FinalCta />
-      <div className="mt-[-100px]">
+      <div className="mt-[-120px]">
 
       <Footer />
       </div>

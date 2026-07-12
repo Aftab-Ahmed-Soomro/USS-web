@@ -110,7 +110,16 @@ const positions = leftPercents.map((leftPct) => {
 
 export default function TargetRightPeople() {
   return (
-    <section className="relative w-full overflow-hidden bg-black py-40 px-6">
+    <section className="relative w-full overflow-hidden bg-black py-[60px] sm:py-40 px-4 sm:px-6">
+      <style>{`
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
       {/* ambient glow */}
       <div
         className="pointer-events-none absolute inset-0 opacity-30"
@@ -125,24 +134,13 @@ export default function TargetRightPeople() {
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
             <h2
-              className="lowercase text-center text-white"
-              style={{
-                fontWeight: 500,
-                fontSize: "56px",
-                lineHeight: "80px",
-                letterSpacing: "-3px",
-              }}
+              className="lowercase text-center text-white font-[var(--font-be-vietnam)] font-medium text-[36px] sm:text-[56px] leading-[1.2] sm:leading-[80px] tracking-[-1.5px] sm:tracking-[-3px]"
             >
               target the{" "}
               <span
-                className="italic"
+                className="italic font-normal text-[44px] sm:text-[72px] leading-[1.2] sm:leading-[80px] tracking-[-1.5px] sm:tracking-[-3px] text-[#ff5500]"
                 style={{
                   fontFamily: '"Times New Roman", Times, serif',
-                  fontWeight: 400,
-                  fontSize: "72px",
-                  lineHeight: "80px",
-                  letterSpacing: "-3px",
-                  color: "#ff5500",
                 }}
               >
                 right people
@@ -152,111 +150,100 @@ export default function TargetRightPeople() {
         </Stagger>
 
         {/* Curve + nodes */}
-        <div className="relative mt-[-75px] h-[420px] w-full">
-          {/* SVG arc */}
-          <svg
-            className="absolute inset-0 h-full w-full"
-            viewBox={`0 0 ${VIEWBOX_W} ${VIEWBOX_H}`}
-            preserveAspectRatio="none"
-            fill="none"
-            style={{ overflow: 'visible' }}
-          >
-            <defs>
-              <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-                <feGaussianBlur stdDeviation="6" result="blur" />
-                <feMerge>
-                  <feMergeNode in="blur" />
-                  <feMergeNode in="blur" />
-                  <feMergeNode in="SourceGraphic" />
-                </feMerge>
-              </filter>
-              <linearGradient id="arcFade" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#ff5500" stopOpacity="0" />
-                <stop offset="15%" stopColor="#ff5500" stopOpacity="1" />
-                <stop offset="85%" stopColor="#ff5500" stopOpacity="1" />
-                <stop offset="100%" stopColor="#ff5500" stopOpacity="0" />
-              </linearGradient>
-            </defs>
-            <path
-              d={`M ${P0.x} ${P0.y} Q ${P1.x} ${P1.y} ${P2.x} ${P2.y}`}
-              stroke="url(#arcFade)"
-              strokeWidth="2.5"
-              filter="url(#glow)"
-            />
-          </svg>
+        <div 
+          className="relative mt-[40px] sm:mt-[-75px] h-[420px] w-full overflow-x-auto sm:overflow-visible no-scrollbar"
+          style={{ WebkitOverflowScrolling: 'touch', scrollSnapType: 'x mandatory' }}
+        >
+          <div className="relative min-w-[1000px] sm:min-w-full h-full">
+            {/* SVG arc */}
+            <svg
+              className="absolute inset-0 h-full w-full"
+              viewBox={`0 0 ${VIEWBOX_W} ${VIEWBOX_H}`}
+              preserveAspectRatio="none"
+              fill="none"
+              style={{ overflow: 'visible' }}
+            >
+              <defs>
+                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="6" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+                <linearGradient id="arcFade" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#ff5500" stopOpacity="0" />
+                  <stop offset="15%" stopColor="#ff5500" stopOpacity="1" />
+                  <stop offset="85%" stopColor="#ff5500" stopOpacity="1" />
+                  <stop offset="100%" stopColor="#ff5500" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+              <path
+                d={`M ${P0.x} ${P0.y} Q ${P1.x} ${P1.y} ${P2.x} ${P2.y}`}
+                stroke="url(#arcFade)"
+                strokeWidth="2.5"
+                filter="url(#glow)"
+              />
+            </svg>
 
-          {/* Nodes */}
-          {items.map((item, i) => {
-            const Icon = item.icon;
-            const pos = positions[i];
-            return (
-              <div
-                key={item.number}
-                className="absolute flex -translate-x-1/2 flex-col items-center text-center"
-                style={{ left: pos.left, top: `${pos.curveY}px`, width: "180px" }}
-              >
-                <FadeUp delay={0.25 + i * 0.15} className="flex flex-col items-center w-full">
-                  {/* connector line */}
-                  <div
-                    style={{
-                      width: "1px",
-                      height: `${pos.lineHeight}px`,
-                      background: "linear-gradient(180deg, rgba(255,85,0,0.8), rgba(255,85,0,0.2))",
-                    }}
-                  />
+            {/* Nodes */}
+            {items.map((item, i) => {
+              const Icon = item.icon;
+              const pos = positions[i];
+              return (
+                <div
+                  key={item.number}
+                  className="absolute flex -translate-x-1/2 flex-col items-center text-center"
+                  style={{ left: pos.left, top: `${pos.curveY}px`, width: "180px", scrollSnapAlign: 'center' }}
+                >
+                  <FadeUp delay={0.25 + i * 0.15} className="flex flex-col items-center w-full">
+                    {/* connector line */}
+                    <div
+                      style={{
+                        width: "1px",
+                        height: `${pos.lineHeight}px`,
+                        background: "linear-gradient(180deg, rgba(255,85,0,0.8), rgba(255,85,0,0.2))",
+                      }}
+                    />
 
-                  {/* label */}
-                  <span
-                    className="mt-4 text-gray-500"
-                    style={{
-                      fontWeight: 400,
-                      fontSize: "10px",
-                      lineHeight: "15px",
-                      letterSpacing: "3px",
-                    }}
-                  >
-                    {item.number}
-                  </span>
+                    {/* label */}
+                    <span
+                      className="mt-4 text-gray-500 font-normal text-[10px] leading-[15px] tracking-[3px]"
+                    >
+                      {item.number}
+                    </span>
 
-                  {/* icon */}
-                  <div
-                    className="mt-3 flex h-14 w-14 items-center justify-center rounded-[14px] border"
-                    style={{
-                      borderColor: "rgba(255,85,0,0.4)",
-                      background: "linear-gradient(180deg, rgba(255,85,0,0.1), rgba(255,85,0,0.02))",
-                      boxShadow: "0 0 20px rgba(255,85,0,0.2), inset 0 0 10px rgba(255,85,0,0.1)",
-                    }}
-                  >
-                    <Icon size={24} strokeWidth={1.5} color="#ff7a33" />
-                  </div>
+                    {/* icon */}
+                    <div
+                      className="mt-3 flex h-14 w-14 items-center justify-center rounded-[14px] border"
+                      style={{
+                        borderColor: "rgba(255,85,0,0.4)",
+                        background: "linear-gradient(180deg, rgba(255,85,0,0.1), rgba(255,85,0,0.02))",
+                        boxShadow: "0 0 20px rgba(255,85,0,0.2), inset 0 0 10px rgba(255,85,0,0.1)",
+                      }}
+                    >
+                      <Icon size={24} strokeWidth={1.5} color="#ff7a33" />
+                    </div>
 
-                  {/* title */}
-                  <h3
-                    className="mt-4 text-white"
-                    style={{
-                      fontWeight: 600,
-                      fontSize: "15px",
-                      lineHeight: "19.5px",
-                    }}
-                  >
-                    {item.title}
-                  </h3>
+                    {/* title */}
+                    <h3
+                      className="mt-4 text-white font-semibold text-[15px] leading-[19.5px]"
+                    >
+                      {item.title}
+                    </h3>
 
-                  {/* description */}
-                  <p
-                    className="mt-2 text-white/80"
-                    style={{
-                      fontWeight: 400,
-                      fontSize: "13px",
-                      lineHeight: "1.4",
-                    }}
-                  >
-                    {item.description}
-                  </p>
-                </FadeUp>
-              </div>
-            );
-          })}
+                    {/* description */}
+                    <p
+                      className="mt-2 text-white/80 font-normal text-[13px] leading-[1.4]"
+                    >
+                      {item.description}
+                    </p>
+                  </FadeUp>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

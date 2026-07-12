@@ -51,30 +51,17 @@ export function WhyGoogleAdsWork({
           </FadeLeft>
 
           {/* Right - Content */}
-            <div className="flex-1 w-full flex flex-col justify-center items-center px-6 lg:px-0 py-[60px] lg:py-0">
+            <div className="flex-1 w-full flex flex-col justify-center items-center px-4 sm:px-6 lg:px-0 py-[40px] sm:py-[60px] lg:py-0">
             {/* Heading */}
             <div className="w-full flex justify-center">
               <FadeRight delay={0.1}>
               <h2
-                className="text-white mb-[40px] lg:mb-[40px] text-center lg:text-left pr-1"
-                style={{
-                  fontWeight: 500,
-                  fontSize: "clamp(36px, 5vw, 56px)",
-                  lineHeight: "1.1",
-                  letterSpacing: "-3px",
-                  textTransform: "lowercase",
-                  fontFamily: "var(--font-be-vietnam)",
-                }}
+                className="text-white mb-[24px] sm:mb-[40px] text-center lg:text-left pr-1 font-[var(--font-be-vietnam)] font-medium text-[32px] min-[375px]:text-[36px] sm:text-[clamp(36px,5vw,56px)] leading-[1.1] tracking-[-1.5px] sm:tracking-[-3px] lowercase"
               >
                 why{" "}
                 <span
-                  style={{
-                    fontFamily: "'Times New Roman', Times, serif",
-                    fontWeight: 400,
-                    fontStyle: "italic",
-                    fontSize: "clamp(44px, 6vw, 72px)",
-                    letterSpacing: "-3px",
-                  }}
+                  className="font-normal italic text-[38px] min-[375px]:text-[44px] sm:text-[clamp(44px,6vw,72px)] tracking-[-1.5px] sm:tracking-[-3px]"
+                  style={{ fontFamily: "'Times New Roman', Times, serif" }}
                 >
                   {headingItalic}
                 </span>{" "}
@@ -85,15 +72,12 @@ export function WhyGoogleAdsWork({
 
             {/* Cards Grid */}
             <div className="w-full flex justify-center">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-[30px] gap-y-8 place-items-center lg:place-items-start max-w-[730px] w-full">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-[20px] sm:gap-[30px] gap-y-6 sm:gap-y-8 place-items-center lg:place-items-start max-w-[730px] w-full">
               {items.map((item, i) => (
                 <FadeUp key={item.number} delay={0.25 + i * 0.12}>
                   <div
-                    className="relative rounded-[24px] py-[32px] px-[20px] flex flex-col justify-between cursor-pointer transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_40px_-10px_rgba(255,85,0,0.4)] border border-white/5 hover:border-[#ff5500]/50 active:scale-[0.98] group overflow-hidden bg-[#0a0a0a]"
+                    className="relative rounded-[24px] py-[24px] sm:py-[32px] px-[16px] sm:px-[20px] flex flex-col justify-between cursor-pointer transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_40px_-10px_rgba(255,85,0,0.4)] border border-white/5 hover:border-[#ff5500]/50 active:scale-[0.98] group overflow-hidden bg-[#0a0a0a] w-full max-w-[350px] h-auto min-h-[200px] sm:min-h-[235px] sm:h-[235px]"
                     style={{
-                      width: "100%",
-                      maxWidth: "350px",
-                      height: "235px",
                       boxShadow: "inset 0 0 20px rgba(0,0,0,0.5)",
                     }}
                   >
@@ -116,40 +100,19 @@ export function WhyGoogleAdsWork({
                     {/* Content wrapper */}
                     <div className="relative z-10 flex flex-col justify-between h-full">
                       <p
-                        className="text-[#ff5500] transition-all duration-500 group-hover:text-[#ff7733] group-hover:translate-x-1"
-                        style={{
-                          fontFamily: "var(--font-inter)",
-                          fontWeight: 600,
-                          fontSize: "16px",
-                          lineHeight: "16.5px",
-                          letterSpacing: "3.3px",
-                          textTransform: "uppercase",
-                        }}
+                        className="text-[#ff5500] transition-all duration-500 group-hover:text-[#ff7733] group-hover:translate-x-1 font-[var(--font-inter)] font-semibold text-[14px] sm:text-[16px] leading-[1] sm:leading-[16.5px] tracking-[2px] sm:tracking-[3.3px] uppercase mb-4 sm:mb-0"
                       >
                       {item.number}
                     </p>
 
                     <div className="transition-transform duration-500 group-hover:translate-x-1">
                       <h3
-                        className="text-white transition-colors duration-500 group-hover:text-[#ffaa80]"
-                        style={{
-                          fontFamily: "var(--font-inter)",
-                          fontWeight: 700,
-                          fontSize: "18px",
-                          lineHeight: "24.75px",
-                          marginBottom: "8px",
-                        }}
+                        className="text-white transition-colors duration-500 group-hover:text-[#ffaa80] font-[var(--font-inter)] font-bold text-[16px] sm:text-[18px] leading-[1.3] sm:leading-[24.75px] mb-[8px]"
                       >
                         {item.title}
                       </h3>
                       <p
-                        className="text-white/70 transition-colors duration-500 group-hover:text-white/95"
-                        style={{
-                          fontFamily: "var(--font-inter)",
-                          fontWeight: 400,
-                          fontSize: "15px",
-                          lineHeight: "22.75px",
-                        }}
+                        className="text-white/70 transition-colors duration-500 group-hover:text-white/95 font-[var(--font-inter)] font-normal text-[14px] sm:text-[15px] leading-[20px] sm:leading-[22.75px]"
                       >
                         {item.description}
                       </p>

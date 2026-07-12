@@ -6,43 +6,23 @@ import StaggerItem from "./Staggeritem";
 export function WhyWhatsappWorks() {
   return (
     <section className="w-full text-white">
-      <div className="mx-auto max-w-[1150px] px-6">
+      <div className="mx-auto max-w-[1150px] px-4 min-[375px]:px-6">
         <Stagger staggerDelay={0.15}>
           <StaggerItem>
-            <h2 className="flex flex-wrap justify-center items-center gap-x-[15px] mb-[50px] text-center">
+            <h2 className="flex flex-wrap justify-center items-center gap-x-[8px] sm:gap-x-[15px] mb-[30px] sm:mb-[50px] text-center">
               <span
-                className="lowercase"
-                style={{
-                  fontWeight: 500,
-                  fontSize: "clamp(40px, 5vw, 56px)",
-                  lineHeight: "clamp(50px, 6vw, 80px)",
-                  letterSpacing: "-3px",
-                  fontFamily: "var(--font-be-vietnam, sans-serif)",
-                }}
+                className="lowercase font-medium text-[32px] min-[375px]:text-[38px] leading-[1.1] tracking-[-1px] sm:text-[clamp(40px,5vw,56px)] sm:leading-[clamp(50px,6vw,80px)] sm:tracking-[-3px] font-[var(--font-be-vietnam)]"
               >
                 why
               </span>
               <span
-                className="lowercase italic"
-                style={{
-                  fontWeight: 400,
-                  fontSize: "clamp(48px, 6vw, 72px)",
-                  lineHeight: "clamp(50px, 6vw, 80px)",
-                  letterSpacing: "-3px",
-                  fontFamily: "'Times New Roman', Times, serif",
-                }}
+                className="lowercase italic font-normal text-[36px] min-[375px]:text-[42px] leading-[1.1] tracking-[-1px] sm:text-[clamp(48px,6vw,72px)] sm:leading-[clamp(50px,6vw,80px)] sm:tracking-[-3px]"
+                style={{ fontFamily: "'Times New Roman', Times, serif" }}
               >
                 whatsapp and sms
               </span>
               <span
-                className="lowercase"
-                style={{
-                  fontWeight: 500,
-                  fontSize: "clamp(40px, 5vw, 56px)",
-                  lineHeight: "clamp(50px, 6vw, 80px)",
-                  letterSpacing: "-3px",
-                  fontFamily: "var(--font-be-vietnam, sans-serif)",
-                }}
+                className="lowercase font-medium text-[32px] min-[375px]:text-[38px] leading-[1.1] tracking-[-1px] sm:text-[clamp(40px,5vw,56px)] sm:leading-[clamp(50px,6vw,80px)] sm:tracking-[-3px] font-[var(--font-be-vietnam)]"
               >
                 work
               </span>
