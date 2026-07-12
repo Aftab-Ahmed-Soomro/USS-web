@@ -16,6 +16,7 @@ import { WhyEmailFails } from "../components/WhyEmailFails";
 import EmailMarketingQuote from "../components/EmailMarketingQuote";
 import { ContentCreationGrid } from "../components/ContentCreationGrid";
 import FadeUp from "../components/FadeUp";
+import { ContentCreationServices } from "../components/ContentCreationServices";
 
 const stats = [
   { value: "18.4K+", label: "Creative Assets Produced" },
@@ -706,8 +707,9 @@ export default function ContentCreationPage() {
           logoClassName="w-[80px] lg:w-[115px]"
         />
       </FadeUp>
+        <ContentCreationServices />
       <FadeUp delay={0.2}>
-        <div className="mt-[-10px] sm:mt-[-150px]">
+        <div className="mt-[-10px] sm:mt-[-80px]">
           <EmailMarketingQuote first={"your social media is your"} second={"digital window"} third={"shop front"} />
         </div>
       </FadeUp>

@@ -394,7 +394,7 @@ const relatedProjects = [
     copy: "With a strong Meta Ads execution we focused on Paid Media during Blank DXB launch. We were able to target demand on a granular level making budget efficiency higher.",
     tags: ["Paid Media", "Meta Ads Targeting", "Lead Generation"],
     year: "2024",
-    imageClassName: "object-cover object-[50%_55%]",
+    imageClassName: "object-cover",
   },
   {
     slug: "supperclub",
@@ -412,15 +412,21 @@ function RelatedProjects() {
     <section className="bg-[#080808] px-4 min-[375px]:px-6 py-[40px] sm:py-[56px] text-white">
       <div className="mx-auto max-w-[1150px]">
         {/* Header */}
-        <div className="flex items-center justify-between gap-6">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
           <Stagger staggerDelay={0.12}>
             <StaggerItem>
+              <p className="font-[var(--font-be-vietnam)] text-[12px] font-normal uppercase tracking-[4px] text-[#ff5500] mb-[16px]">
+                PROJECTS
+              </p>
               <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[56px] font-medium lowercase leading-none tracking-[-0.96px]">
-                related{" "}
+                see how we{" "}
                 <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal timesFontFamily italic tracking-[-0.96px]">
-                  projects
+                  scale brands.
                 </span>
               </h2>
+              <p className="mt-[16px] font-[var(--font-inter)] text-[14px] sm:text-[18px] text-white/90">
+                Explore how we&apos;ve helped brands grow through Meta Ads.
+              </p>
             </StaggerItem>
           </Stagger>
 
@@ -436,19 +442,19 @@ function RelatedProjects() {
         </div>
 
         {/* Cards */}
-        <div className="mt-[24px] sm:mt-[40px] grid gap-[16px] sm:gap-[24px] md:grid-cols-2">
-          {relatedProjects.map((project, i) => (
+        <div className="mt-[24px] sm:mt-[40px] grid gap-[16px] sm:gap-[24px] grid-cols-1">
+          {relatedProjects.slice(0, 1).map((project, i) => (
             <FadeUp key={project.name} delay={0.15 + i * 0.15}>
               <Link
                 href={`/projects/${project.slug}`}
                 className="block rounded-[20px] border border-white p-[12px] sm:p-[14px] transition-colors duration-300 hover:border-[#ff5500] group"
               >
-                <div className="relative aspect-[420/260] w-full overflow-hidden max-w-[534px] rounded-[12px] bg-[#111]">
+                <div className="relative aspect-video sm:aspect-[3/1] lg:aspect-[3.5/1] w-full overflow-hidden rounded-[12px] bg-[#111]">
                   <Image
                     src={project.image}
                     alt={`${project.name} marketing strategy project`}
                     fill
-                    sizes="(min-width: 768px) 45vw, calc(100vw - 48px)"
+                    sizes="100vw"
                     className={`${project.imageClassName || 'object-cover'} transition-transform duration-700 group-hover:scale-105`}
                   />
                 </div>
@@ -459,13 +465,13 @@ function RelatedProjects() {
                     <h3 className="font-[var(--font-be-vietnam)] text-[24px] min-[375px]:text-[28px] sm:text-[36px] font-normal leading-[1.1] sm:leading-none tracking-[-0.72px] group-hover:text-[#ff5500] transition-colors duration-300">
                       {project.name}
                     </h3>
-                    <span className="shrink-0 font-[var(--font-inter)] text-[13px] sm:text-[14px] text-white">
+                    <span className="shrink-0 font-[var(--font-inter)] text-[13px] sm:text-[14px] text-white/50">
                       {project.year}
                     </span>
                   </div>
 
                   {/* Copy */}
-                  <p className="mt-[12px] sm:mt-[14px] max-w-[550px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.6] sm:leading-[28px] text-white/90 sm:text-white">
+                  <p className="mt-[12px] sm:mt-[14px] max-w-[800px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.6] sm:leading-[28px] text-white/90 sm:text-white">
                     {project.copy}
                   </p>
 
@@ -474,7 +480,7 @@ function RelatedProjects() {
                     {(project.tags ?? []).map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full border border-white px-[12px] py-[6px] sm:px-[14px] sm:py-[7px] font-[var(--font-inter)] text-[11px] sm:text-[12px] text-white/90 group-hover:border-[#ff5500]/50 transition-colors duration-300"
+                        className="rounded-full border border-white/50 px-[12px] py-[6px] sm:px-[14px] sm:py-[7px] font-[var(--font-inter)] text-[11px] sm:text-[12px] text-white/80 group-hover:border-[#ff5500]/50 transition-colors duration-300"
                       >
                         {tag}
                       </span>
