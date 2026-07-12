@@ -87,14 +87,13 @@ function Hero() {
         <Stagger staggerDelay={0.15}>
           
           <StaggerItem>
-            <p className="mt-0 sm:mt-[32px] max-w-[460px] font-[var(--font-inter)] text-[10px] sm:text-[14px] font-bold leading-[1.7] tracking-[2.4px] text-[#FF5500] mb-[24px] sm:mb-8 uppercase">
+            <p className="mt-0 sm:mt-[32px] max-w-[600px] font-[var(--font-inter)] text-[10px] sm:text-[14px] font-bold leading-[1.7] tracking-[2.4px] text-[#FF5500] mb-[24px] sm:mb-8 uppercase">
               WhatsApp & SMS Marketing
             </p>
-            <h1 className="max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[38px] font-bold capitalize leading-[1.03] tracking-[-1px] sm:tracking-[-3.2px] sm:text-[70px]">
-              WhatsApp &
+            <h1 className="max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[38px] font-bold leading-[1.03] tracking-[-1px] sm:tracking-[-3.2px] sm:text-[70px]">
+              WhatsApp & SMS
               <br />
-              SMS that {" "}
-              <br />
+              that {" "}
               <span className="font-[var(--font-cormorant)] text-[1.12em] leading-[1.2] sm:leading-[0.5px] sm:text-[88px] font-normal timesFontFamily italic lowercase tracking-[-1px] sm:tracking-[-3.2px]">
                 drive results
               </span>
@@ -605,54 +604,54 @@ const CARDS_DATA = [
 const googleAdsBrandPoints = [
   {
     number: "01",
-    title: "Send and Forget",
+    title: "Random Campaigns",
     description:
-      "Emails are only sent when there's a promotion or announcement.",
+      "Messages are only sent during promotions or last minute announcements.",
   },
   {
     number: "02",
-    title: "Every Subscriber Looks the Same",
+    title: "Everyone Gets the Same Message",
     description:
-      "The same message is sent to everyone, regardless of interests or behavior.",
+      "Every customer receives identical messages regardless of interests or behaviour.",
   },
   {
     number: "03",
-    title: "No Long-Term Customer Journey",
+    title: "No Customer Journey",
     description:
-      "There's no system to welcome, nurture, or retain customers after they sign up.",
+      "There's no automated communication before or after a purchase.",
   },
   {
     number: "04",
-    title: "No Clear Performance Tracking",
+    title: "No Performance Tracking",
     description:
-      "Little reporting or optimization means opportunities are missed.",
+      "Messages are sent without measuring what drives engagement or sales.",
   },
 ];
 
 const googleAdsUssPoints = [
   {
     number: "01",
-    title: "Always-On Email Strategy",
+    title: "Planned Messaging Strategy",
     description:
-      "We create an email calendar that keeps your brand consistently in front of customers.",
+      "Every campaign is planned around your customer journey and business goals.",
   },
   {
     number: "02",
-    title: "Personalized Customer Experiences",
+    title: "Smart Audience Segmentation",
     description:
-      "Campaigns are tailored to different audiences using segmentation and customer behavior.",
+      "Customers receive messages based on behaviour, interests and purchase history.",
   },
   {
     number: "03",
     title: "Automated Customer Journeys",
     description:
-      "Welcome flows, abandoned carts, post-purchase emails and retention campaigns work in the background.",
+      "Flows nurture customers before and after purchase without manual work.",
   },
   {
     number: "04",
-    title: "Continuous Performance Optimization",
+    title: "Continuous Optimisation",
     description:
-      "Every campaign is measured, refined and improved using real performance data.",
+      "We refine campaigns using real performance data to improve results over time.",
   },
 ];
 
@@ -665,7 +664,7 @@ export default function WhatsappAndSmsPage() {
       <Brands />
       <FadeUp delay={0.2}>
               <WhyEmailFails
-                hideBadge={true}
+                hideBadge={false}
                 heading={
                   <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
                     why most{" "}
@@ -673,7 +672,7 @@ export default function WhatsappAndSmsPage() {
                       className="font-normal italic text-[60px] sm:text-[72px]"
                       style={{ fontFamily: "'Times New Roman', Times, serif" }}
                     >
-                      content assets
+                      WhatsApp & SMS Marketing
                     </span>{" "}
                     fails
                   </h2>
@@ -683,8 +682,8 @@ export default function WhatsappAndSmsPage() {
                 rightTitle="The USS Difference"
                 leftPoints={googleAdsBrandPoints}
                 rightPoints={googleAdsUssPoints}
-                centerLogo="/assets/Google__logo.webp"
-                logoClassName="w-[80px] lg:w-[115px]"
+                centerLogo="/assets/wa-sms.png"
+                logoClassName="w-[180px] lg:w-[265px] mt-4"
               />
             </FadeUp>
                 <WhyWhatsappWorks />

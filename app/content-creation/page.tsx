@@ -685,7 +685,7 @@ export default function ContentCreationPage() {
       {/* <Metrics /> */}
       <FadeUp delay={0.2}>
         <WhyEmailFails
-          hideBadge={true}
+          hideBadge={false}
           heading={
             <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
               why most{" "}
@@ -703,8 +703,8 @@ export default function ContentCreationPage() {
           rightTitle="The USS Difference"
           leftPoints={googleAdsBrandPoints}
           rightPoints={googleAdsUssPoints}
-          centerLogo="/assets/Google__logo.webp"
-          logoClassName="w-[80px] lg:w-[115px]"
+          centerLogo="/assets/camera.jpg"
+          logoClassName="w-[80px] lg:w-[110px]"
         />
       </FadeUp>
         <ContentCreationServices />
