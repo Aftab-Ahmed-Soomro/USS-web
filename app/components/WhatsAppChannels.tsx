@@ -1,9 +1,95 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import FadeUp from "./FadeUp";
 
+const tabData = {
+  whatsapp: {
+    leftCards: [
+      {
+        icon: "/assets/whatsApp/1.png",
+        subtitle: "AVG REPLY",
+        title: "< 3s",
+        heading: "Instant Replies",
+        description: "AI answers in seconds, 24/7 — no more missed enquiries at 2am.",
+        align: "right" as const,
+      },
+      {
+        icon: "/assets/whatsApp/2.png",
+        subtitle: "CONVERSIONS",
+        title: "+42%",
+        heading: "Recover Lost Leads",
+        description: "Auto follow-ups turn silent enquiries into confirmed bookings.",
+        align: "right" as const,
+      },
+    ],
+    rightCards: [
+      {
+        icon: "/assets/whatsApp/3.png",
+        subtitle: "OPEN RATE",
+        title: "98%",
+        heading: "Higher Open Rates",
+        description: "98% of messages get read within 3 minutes. Email can't compete.",
+        align: "left" as const,
+      },
+      {
+        icon: "/assets/whatsApp/4.png",
+        subtitle: "COVERAGE",
+        title: "24/7",
+        heading: "Human + AI",
+        description: "AI handles the routine, your team steps in when it matters.",
+        align: "left" as const,
+      },
+    ],
+    image: "/assets/whatsApp/mobile.png",
+  },
+  sms: {
+    leftCards: [
+      {
+        icon: "/assets/whatsApp/1.png",
+        subtitle: "AVG REPLY",
+        title: "< 3s",
+        heading: "Instant Replies",
+        description: "AI answers in seconds, 24/7 — no more missed enquiries at 2am.",
+        align: "right" as const,
+      },
+      {
+        icon: "/assets/whatsApp/2.png",
+        subtitle: "CONVERSIONS",
+        title: "+42%",
+        heading: "Recover Lost Leads",
+        description: "Auto follow-ups turn silent enquiries into confirmed bookings.",
+        align: "right" as const,
+      },
+    ],
+    rightCards: [
+      {
+        icon: "/assets/whatsApp/3.png",
+        subtitle: "OPEN RATE",
+        title: "98%",
+        heading: "Higher Open Rates",
+        description: "98% of messages get read within 3 minutes. Email can't compete.",
+        align: "left" as const,
+      },
+      {
+        icon: "/assets/whatsApp/4.png",
+        subtitle: "COVERAGE",
+        title: "24/7",
+        heading: "Human + AI",
+        description: "AI handles the routine, your team steps in when it matters.",
+        align: "left" as const,
+      },
+    ],
+    image: "/assets/whatsApp/sms.png",
+  },
+};
+
 export default function WhatsAppChannels() {
+  const [activeTab, setActiveTab] = useState<"whatsapp" | "sms">("whatsapp");
+  
+  const currentData = tabData[activeTab];
+
   return (
     <section className="relative w-full overflow-hidden bg-black py-[80px] lg:py-[120px] px-4 sm:px-6">
       <div className="mx-auto max-w-[1200px]">
@@ -36,10 +122,20 @@ export default function WhatsAppChannels() {
           
           <FadeUp delay={0.3}>
             <div className="mt-8 sm:mt-10 flex items-center p-1 bg-[#1A1A1A] rounded-full border border-white/5 w-fit mx-auto">
-              <button className="px-5 sm:px-8 py-2 sm:py-2.5 bg-[#ff5a05] rounded-full text-white font-medium text-[13px] sm:text-[14px] leading-[20px] transition-all">
+              <button 
+                onClick={() => setActiveTab("whatsapp")}
+                className={`px-5 cursor-pointer sm:px-8 py-2 sm:py-2.5 rounded-full font-medium text-[13px] sm:text-[14px] leading-[20px] transition-all ${
+                  activeTab === "whatsapp" ? "bg-[#ff5a05] text-white" : "text-white/60 hover:text-white"
+                }`}
+              >
                 WhatsApp
               </button>
-              <button className="px-5 sm:px-8 py-2 sm:py-2.5 text-white/60 hover:text-white rounded-full font-medium text-[13px] sm:text-[14px] leading-[20px] transition-all">
+              <button 
+                onClick={() => setActiveTab("sms")}
+                className={`px-5 sm:px-8 py-2 sm:py-2.5 rounded-full font-medium text-[13px] sm:text-[14px] leading-[20px] transition-all ${
+                  activeTab === "sms" ? "bg-[#ff5a05] text-white" : "text-white/60 hover:text-white"
+                }`}
+              >
                 SMS
               </button>
             </div>
@@ -51,26 +147,11 @@ export default function WhatsAppChannels() {
           
           {/* Left Cards */}
           <div className="flex flex-col gap-6 w-full max-w-[450px] mx-auto lg:ml-auto lg:mr-0">
-            <FadeUp delay={0.4}>
-              <Card 
-                icon="/assets/whatsApp/1.png"
-                subtitle="AVG REPLY"
-                title="< 3s"
-                heading="Instant Replies"
-                description="AI answers in seconds, 24/7 — no more missed enquiries at 2am."
-                align="right"
-              />
-            </FadeUp>
-            <FadeUp delay={0.5}>
-              <Card 
-                icon="/assets/whatsApp/2.png"
-                subtitle="CONVERSIONS"
-                title="+42%"
-                heading="Recover Lost Leads"
-                description="Auto follow-ups turn silent enquiries into confirmed bookings."
-                align="right"
-              />
-            </FadeUp>
+            {currentData.leftCards.map((card, idx) => (
+              <FadeUp key={card.title} delay={0.4 + idx * 0.1}>
+                <Card {...card} />
+              </FadeUp>
+            ))}
           </div>
 
           {/* Center Mobile Image */}
@@ -79,36 +160,22 @@ export default function WhatsAppChannels() {
               {/* Glow behind the phone */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] bg-[#0f3b1b]/80 blur-[60px] sm:blur-[80px] rounded-[50px] pointer-events-none" />
               <Image 
-                src="/assets/whatsApp/mobile.png"
+                key={currentData.image} // Force re-render of image to trigger Next.js animation if any
+                src={currentData.image}
                 alt="Mobile App"
                 fill
-                className="object-contain relative z-10"
+                className="object-contain relative z-10 transition-opacity duration-300"
               />
             </div>
           </FadeUp>
 
           {/* Right Cards */}
           <div className="flex flex-col gap-6 w-full max-w-[450px] mx-auto lg:mr-auto lg:ml-0">
-            <FadeUp delay={0.7}>
-              <Card 
-                icon="/assets/whatsApp/3.png"
-                subtitle="OPEN RATE"
-                title="98%"
-                heading="Higher Open Rates"
-                description="98% of messages get read within 3 minutes. Email can't compete."
-                align="left"
-              />
-            </FadeUp>
-            <FadeUp delay={0.8}>
-              <Card 
-                icon="/assets/whatsApp/4.png"
-                subtitle="COVERAGE"
-                title="24/7"
-                heading="Human + AI"
-                description="AI handles the routine, your team steps in when it matters."
-                align="left"
-              />
-            </FadeUp>
+            {currentData.rightCards.map((card, idx) => (
+              <FadeUp key={card.title} delay={0.7 + idx * 0.1}>
+                <Card {...card} />
+              </FadeUp>
+            ))}
           </div>
 
         </div>
