@@ -108,7 +108,7 @@ export default function ConversationFlow() {
                           <span className="font-normal text-[10px] sm:text-[12px] leading-[16px] tracking-[0.6px] uppercase text-white/40">
                             WHATSAPP
                           </span>
-                          <span className="font-medium text-[13px] sm:text-[14px] leading-[20px] text-white mt-0.5">
+                          <span className="font-medium text-[20px] sm:text-[24px] leading-[20px] text-white mt-1.5">
                             {item.boxTitle}
                           </span>
                         </div>
