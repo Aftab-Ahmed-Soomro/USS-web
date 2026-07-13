@@ -13,7 +13,7 @@ const serviceLinks = [
   { label: "Email Marketing", href: "/email-marketing", icon: "✦" },
   { label: "Social Media Management", href: "/social-media-management", icon: "✦" },
   { label: "Content Creation", href: "/content-creation", icon: "✦" },
-  { label: "Talent Management", href:"/", icon: "✦"},
+  { label: "Talent Management", href:"/talent-management", icon: "✦"},
   { label: "Website Design & Development", href: "/website", icon: "✦" }
 ];
 

@@ -227,16 +227,19 @@ function Hero() {
         <Stagger staggerDelay={0.15}>
           <StaggerItem>
             <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[38px] font-bold lowercase leading-[70px] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white">
-              strategy that drives
-              <br />{" "}
-              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white leading-[1.2] sm:leading-[30px] tracking-[-1px] sm:tracking-[-2.8px]">
-                real growth
+              Turn Your Personal
+              <br />
+              Brand Into Your
+              <br />
+              {" "}
+              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] lowercase font-normal timesFontFamily italic text-[#FF5500] leading-[1.2] sm:leading-[30px] tracking-[-1px] sm:tracking-[-2.8px]">
+                Biggest Asset
               </span>
             </h1>
           </StaggerItem>
           <StaggerItem>
-            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[500px] font-[var(--font-inter)] text-[14px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[18px]">
-              We build clear, data-driven marketing strategies designed to scale your business not just generate leads. Trusted by brands across UAE and globally.
+            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[515px] font-[var(--font-inter)] text-[14px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[18px]">
+              Whether you're launching a business, growing an audience, or looking to secure brand partnerships, we help build personal brands through content, strategy and consistent storytelling.
             </p>
           </StaggerItem>
           <StaggerItem>
@@ -475,26 +478,34 @@ function RelatedProjects() {
 
 function FinalCta() {
   return (
-    <section className="bg-[#f5f4f1] px-6 py-[88px] text-center text-black sm:px-10 lg:px-[48px]">
-      <h2 className="mx-auto max-w-[800px] font-[var(--font-be-vietnam)] text-[36px] sm:text-[56px] font-medium lowercase leading-[1.08] tracking-[-1.44px]">
-        build a strategy that
-        <br />
-        actually{" "}
-        <span className="font-[var(--font-cormorant)] text-[1.16em] sm:text-[72px] font-normal tracking-[-1.44px] timesFontFamily italic">
-          works
-        </span>
-      </h2>
-      <p className="mx-auto mt-[15px] max-w-[800px] font-[var(--font-inter)] text-[18px] text-[#58554F] leading-[1.6] text-[-1.44px]">
-        If your marketing feels disconnected, it’s time for a clearer approach.
-      </p>
-      <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-        <Link
-          className="inline-flex h-[42px] min-w-[190px] items-center justify-center rounded-full bg-[#ff5500] px-8 font-[var(--font-be-vietnam)] text-[12px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
-          href="/contact"
-        >
-          Book a Consultation
-        </Link>
-      </div>
+    <section className="bg-black px-4 min-[375px]:px-6 pt-[50px] sm:pt-[70px] text-white pb-30">
+      <Stagger staggerDelay={0.12} className="mx-auto max-w-[1150px] text-center">
+        <StaggerItem>
+          <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
+             Get Started
+          </p>
+        </StaggerItem>
+        <StaggerItem>
+          <h2 className="mt-[24px] sm:mt-8 font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[36px] font-medium leading-[1.08] tracking-[-1.5px] sm:text-[55px]">
+            turn your website into
+            <br />
+            a{" "}
+            <span className="font-[var(--font-cormorant)] text-[1.12em] leading-[1.1] sm:leading-none font-extralight timesFontFamily italic text-[#ff5500]">
+              growth asset
+            </span>
+          </h2>
+        </StaggerItem>
+        <StaggerItem>
+          <div className="mt-[30px] sm:mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Link
+              className="inline-flex h-[46px] sm:h-[42px] min-w-[190px] items-center justify-center rounded-full bg-[#ff5500] px-8 font-[var(--font-be-vietnam)] text-[12px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
+              href="/contact"
+            >
+              Book a Consultation
+            </Link>
+          </div>
+        </StaggerItem>
+      </Stagger>
     </section>
   );
 }
@@ -648,9 +659,9 @@ const googleAdsUssPoints = [
 ];
 
 const emailStats = [
-  { value: "5x", label: "ROAS Achieved" },
-  { value: "55M", label: "AED Generated in Revenue" },
-  { value: "500K", label: "Leads Delivered" },
+  { value: "24.8M+", label: "Messages Delivered" },
+  { value: "3.6M+", label: "Customer Conversations" },
+  { value: "412K+", label: "Leads Generated" },
   { value: "100+", label: "Brands Worldwide" },
 ];
 
@@ -665,14 +676,14 @@ export default function MarketingStrategyPage() {
                   hideBadge={true}
                   heading={
                     <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
-                      why most{" "}
+                      how we build{" "}
                       <span
                         className="font-normal italic text-[60px] sm:text-[72px]"
                         style={{ fontFamily: "'Times New Roman', Times, serif" }}
                       >
-                        google ads
+                        your
                       </span>{" "}
-                      fails
+                      brand
                     </h2>
                   }
                   subheading="Most brands don't have an email problem, they have a strategy problem."
@@ -689,7 +700,10 @@ export default function MarketingStrategyPage() {
       <Team />
       <GoodCompanyMap />
       <FinalCta />
-      <Footer />
+      <div className="mt-[-120px]">
+            
+                  <Footer />
+                  </div>
     </main>
   );
 }
