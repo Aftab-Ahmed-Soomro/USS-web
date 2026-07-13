@@ -597,7 +597,7 @@ function RevenueMethod() {
 
 export default function WebsitePage() {
   return (
-    <main className="min-h-screen bg-[#080808]">
+    <main className="min-h-screen bg-[#080808] overflow-x-hidden">
       <Header />
       <Hero />
       <Numbers stats={emailStats} />
