@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 
 const teamMembers = [
   {
@@ -39,6 +42,8 @@ const teamMembers = [
 ];
 
 export function Team() {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
   return (
     <section className="relative z-10 bg-[#0a0a0a]  text-white overflow-hidden">
       <div className="mx-auto flex max-w-[1150px] px-4 min-[375px]:px-6 flex-col items-center gap-[16px] sm:gap-8 pt-[50px] sm:pt-[82px]">
@@ -54,9 +59,11 @@ export function Team() {
           <div className="flex w-full h-[380px] sm:h-[500px] lg:h-[600px] flex-row gap-0 overflow-hidden">
             {teamMembers.map((member, idx) => (
               <article
-                className="group relative flex-1 cursor-pointer overflow-hidden transition-all duration-500 ease-in-out hover:flex-[2.5] sm:hover:flex-[1.5] lg:hover:flex-[2]"
+                className={`group relative cursor-pointer overflow-hidden transition-all duration-500 ease-in-out hover:flex-[6] sm:hover:flex-[1.5] lg:hover:flex-[2] ${activeIndex === idx ? 'flex-[6] sm:flex-[1.5] lg:flex-[2]' : 'flex-1'}`}
                 key={member.role}
                 style={{ backgroundColor: member.color }}
+                onClick={() => setActiveIndex(activeIndex === idx ? null : idx)}
+                onMouseLeave={() => setActiveIndex(null)}
               >
                 {/* Image - fixed width pinned to left, doesn't stretch/zoom on hover */}
                 <div className="absolute inset-0 z-0 h-full w-full overflow-hidden border border-black">

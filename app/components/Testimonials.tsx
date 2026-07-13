@@ -1,5 +1,5 @@
 "use client";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import Image from "next/image";
 import FadeLeft from "./FadeLeft";
 import FadeDown from "./FadeDown";
@@ -107,6 +107,40 @@ export function Testimonials() {
     }
   };
 
+  useEffect(() => {
+    let interval: ReturnType<typeof setInterval>;
+    
+    const startAutoplay = () => {
+      // Only autoplay on mobile screens (< 640px)
+      if (window.innerWidth < 640) {
+        interval = setInterval(() => {
+          if (scrollRef.current) {
+            const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+            // Check if we reached the end of the scrollable area
+            if (scrollLeft + clientWidth >= scrollWidth - 10) {
+              scrollRef.current.scrollTo({ left: 0, behavior: "smooth" });
+            } else {
+              scroll("right");
+            }
+          }
+        }, 3000);
+      }
+    };
+
+    const handleResize = () => {
+      clearInterval(interval);
+      startAutoplay();
+    };
+
+    startAutoplay();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <section className="relative z-10 bg-[#0a0a0a] py-[58px] text-white lg:py-[80px]">
       <div className="mx-auto flex w-full max-w-[1150px] flex-col items-center px-6">
@@ -115,7 +149,7 @@ export function Testimonials() {
         <FadeDown delay={0.1}>
           <div className="flex h-[15px] items-center gap-2">
             <span className="size-1.5 rounded-full bg-[#ff5500]" />
-            <p className="font-[var(--font-be-vietnam)] text-[9px] sm:text-[11px] font-bold uppercase leading-none tracking-[3px] text-white">
+            <p className="font-[var(--font-be-vietnam)] text-[10px] sm:text-[11px] font-bold uppercase leading-none tracking-[3px] text-white">
               What Our Clients Say
             </p>
           </div>
@@ -123,7 +157,7 @@ export function Testimonials() {
 
         {/* Section heading — rises up after eyebrow */}
         <FadeUp delay={0.2}>
-          <h2 className="mt-[25px] w-full text-center font-[var(--font-be-vietnam)] text-[34px] font-medium leading-tight tracking-[0%] sm:text-[48px] mb-12">
+          <h2 className="mt-[25px] w-full text-center font-[var(--font-be-vietnam)] text-[21px] font-medium leading-tight tracking-[0%] sm:text-[48px] mb-12">
             what clients say about us
           </h2>
         </FadeUp>
@@ -147,13 +181,13 @@ export function Testimonials() {
               {testimonials.map((testimonial, idx) => (
                 <div
                   key={idx}
-                  className="relative w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333333%-16px)] shrink-0 h-[420px] sm:h-[480px] snap-start overflow-hidden group/card bg-[#111]"
+                  className="relative w-[94%] sm:w-[calc(50%-12px)] lg:w-[calc(33.333333%-16px)] shrink-0 h-[420px] sm:h-[480px] snap-start overflow-hidden group/card bg-[#111]"
                 >
                   <Image
                     src={testimonial.image}
                     alt={testimonial.company}
                     fill
-                    className="object-cover object-center transition-transform duration-700 group-hover/card:scale-105"
+                    className="object-cover ml-4 sm:ml-0 object-center transition-transform duration-700 group-hover/card:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent flex flex-col justify-end p-6 sm:p-8 transition-colors duration-500 group-hover/card:from-black/90 group-hover/card:via-black/50">
                     <h3 className="text-white text-xl sm:text-2xl font-bold font-[var(--font-be-vietnam)]">

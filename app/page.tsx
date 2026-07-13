@@ -166,10 +166,10 @@ function Strategic() {
 
 function FinalCta() {
   return (
-    <section className="relative z-10 px-4 sm:px-6 py-[50px] sm:py-[80px] text-white overflow-hidden">
+    <section className="relative z-10 bg-black sm:bg-transparent px-4 sm:px-6 py-[50px] sm:py-[80px] text-white overflow-hidden">
       {/* Background Glows */}
-      <div className="pointer-events-none absolute left-[-15%] top-[-10%] h-[600px] w-[600px] rounded-full bg-[#ff5500] opacity-20 blur-[100px]" />
-      <div className="pointer-events-none absolute right-[-15%] bottom-[-10%] h-[600px] w-[600px] rounded-full bg-[#ff5500] opacity-20 blur-[100px]" />
+      <div className="hidden sm:block pointer-events-none absolute left-[-15%] top-[-10%] h-[600px] w-[600px] rounded-full bg-[#ff5500] opacity-20 blur-[100px]" />
+      <div className="hidden sm:block pointer-events-none absolute right-[-15%] bottom-[-10%] h-[600px] w-[600px] rounded-full bg-[#ff5500] opacity-20 blur-[100px]" />
 
       <div className="relative mx-auto max-w-[800px] text-center">
 
@@ -185,13 +185,13 @@ function FinalCta() {
 
         {/* Main headline — scales in for emphasis as the hero statement of the section */}
         <ScaleIn delay={0.1} startScale={0.88}>
-          <h2 className="mb-8 sm:mb-10 text-[32px] min-[375px]:text-[42px] font-medium leading-[1.05] tracking-[-6%] sm:text-[56px]">
+          <h2 className="mb-8 sm:mb-10 text-[26px] min-[375px]:text-[32px] font-medium leading-[1.05] tracking-[-6%] sm:text-[56px]">
             we are your{" "}
-            <span className="font-[var(--font-cormorant)] text-[40px] min-[375px]:text-[50px] sm:text-[72px] font-light timesFontFamily italic">
+            <span className="font-[var(--font-cormorant)] text-[34px] min-[375px]:text-[40px] sm:text-[72px] font-light timesFontFamily italic">
               360&deg;
             </span>
             <br />
-            <span className="font-[var(--font-cormorant)] text-[40px] min-[375px]:text-[50px] sm:text-[72px] font-normal timesFontFamily italic">
+            <span className="font-[var(--font-cormorant)] text-[34px] min-[375px]:text-[40px] sm:text-[72px] font-normal timesFontFamily italic">
               marketing agency
             </span>
           </h2>
@@ -217,10 +217,10 @@ function FinalCta() {
         {/* CTA buttons — rise up last */}
         <FadeUp delay={0.5}>
           <div className="mt-6 sm:mt-8 max-w-[600px] mx-auto flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link href="/contact" className="flex h-[40px] w-full sm:w-auto px-10 items-center justify-center rounded-full bg-[#ff5500] text-[12px] sm:text-[13px] font-bold text-white transition-colors uppercase hover:bg-[#ff6b1f]">
+            <Link href="/contact" className="flex h-[40px] w-max sm:w-auto px-8 sm:px-10 items-center justify-center rounded-full bg-[#ff5500] text-[12px] sm:text-[13px] font-bold text-white transition-colors uppercase hover:bg-[#ff6b1f]">
               Book a Consultation
             </Link>
-            {/* <button className="flex h-[40px] w-full sm:w-auto px-8 items-center justify-center gap-2 rounded-full border border-white bg-transparent text-[8px] font-bold text-white transition-colors hover:bg-white/5">
+            {/* <button className="flex h-[40px] w-max sm:w-auto px-8 items-center justify-center gap-2 rounded-full border border-white bg-transparent text-[8px] font-bold text-white transition-colors hover:bg-white/5">
               See How We Scale
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1 opacity-80">
                 <path d="M5 12h14"></path>

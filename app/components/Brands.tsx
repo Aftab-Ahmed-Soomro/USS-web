@@ -47,7 +47,7 @@ export function Brands() {
 
       {/* ── Section heading ── */}
       <FadeDown delay={0.1}>
-        <h2 className="text-center px-4 text-[26px] min-[375px]:text-[31px] font-medium leading-tight tracking-[-0.4px] sm:text-[40px]">
+        <h2 className="text-center px-4 text-[21px] min-[375px]:text-[21px] font-medium leading-tight tracking-[-0.4px] sm:text-[40px]">
           brands we work with
         </h2>
       </FadeDown>
@@ -76,7 +76,7 @@ export function Brands() {
       <div className="mt-[60px] sm:mt-[140px] text-center px-4">
 
         <FadeUp delay={0.1}>
-          <h2 className="text-[26px] min-[375px]:text-[31px] font-medium leading-tight tracking-[0%] sm:text-[40px]">
+          <h2 className="text-[21px] min-[375px]:text-[20px] font-medium leading-tight tracking-[0%] sm:text-[40px] whitespace-nowrap sm:whitespace-normal">
             trusted by 100+ brands worldwide
           </h2>
         </FadeUp>
@@ -87,13 +87,13 @@ export function Brands() {
             {[...ecwLogos, ...ecwLogos, ...ecwLogos].map((src, index) => (
               <article
                 key={index}
-                className="group relative h-[60px] min-[375px]:h-[75px] sm:h-[90px] lg:h-[115px] w-[160px] min-[375px]:w-[180px] sm:w-[170px] shrink-0"
+                className="group relative h-[60px] min-[375px]:h-[75px] sm:h-[90px] lg:h-[115px] w-[130px] min-[375px]:w-[150px] sm:w-[170px] shrink-0"
               >
                 <img
                   src={src}
                   alt={`Brand logo ${index}`}
                   className="w-full h-full object-contain brightness-0 invert transition duration-500
-                             group-hover:scale-105 group-hover:opacity-100"
+                             scale-[1.25] sm:scale-100 group-hover:scale-[1.35] sm:group-hover:scale-105 group-hover:opacity-100"
                 />
               </article>
             ))}
