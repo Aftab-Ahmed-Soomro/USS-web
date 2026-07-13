@@ -128,12 +128,13 @@ function Hero() {
         <Stagger staggerDelay={0.15}>
           <StaggerItem>
             <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[38px] font-bold lowercase leading-[70px] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white">
-              your website, is your
-              <br />{" "}
+              your website
+              <br />
+              is your{" "}
               <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white leading-[1.2] sm:leading-[30px] tracking-[-1px] sm:tracking-[-2.8px]">
-                hardest working 
+                hardest 
                 <br />
-                sales{" "}
+                working sales{" "}
               </span>
               tool
             </h1>
