@@ -172,30 +172,34 @@ export function Numbers({
             </div>
           </FadeLeft>
 
-          {/* CTA Button */}
-          <FadeRight delay={0.2}>
-            <Link
-              className="mt-[24px] sm:mt-[36px] inline-flex h-[34px] min-[375px]:h-[38px] min-w-[160px] min-[375px]:min-w-[178px] items-center justify-center rounded-full bg-white px-5 min-[375px]:px-7 font-[var(--font-be-vietnam)] text-[11px] min-[375px]:text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-black transition uppercase hover:bg-[#ff6b1f]"
-              href="/contact"
-            >
-              Book a Consultation
-            </Link>
-          </FadeRight>
+          {/* CTA Button (Desktop) */}
+          <div className="hidden md:block">
+            <FadeRight delay={0.2}>
+              <Link
+                className="mt-[24px] sm:mt-[36px] inline-flex h-[34px] min-[375px]:h-[38px] min-w-[160px] min-[375px]:min-w-[178px] items-center justify-center rounded-full bg-white px-5 min-[375px]:px-7 font-[var(--font-be-vietnam)] text-[11px] min-[375px]:text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-black transition uppercase hover:bg-[#ff6b1f]"
+                href="/contact"
+              >
+                Book a Consultation
+              </Link>
+            </FadeRight>
+          </div>
 
         </div>
 
         {/* Stats grid */}
-        <div className="mt-[40px] sm:mt-[58px] border-t border-white/12 pt-[32px] sm:pt-[43px]">
-          <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-[54px]">
+        <div className="mt-[32px] sm:mt-[58px] border-y border-white/12 sm:border-y-0 sm:border-t bg-black/20 sm:bg-transparent py-[16px] sm:py-0 sm:pt-[43px]">
+          <div className="grid grid-cols-4 sm:grid-cols-2 lg:grid-cols-4 divide-x divide-white/12 sm:divide-x-0 gap-0 sm:gap-8 lg:gap-[54px]">
             {stats.map((stat, index) => (
               <FadeUp key={stat.label} delay={0.3 + index * 0.12}>
-                <div className="flex items-center gap-[12px] min-[375px]:gap-[16px]">
-                  <Spark />
-                  <div>
-                    <p className="text-[36px] min-[375px]:text-[42px] font-bold leading-none tracking-[-1px] sm:text-[50px]">
+                <div className="flex items-center gap-[4px] min-[375px]:gap-[6px] sm:gap-[16px] px-[6px] sm:px-0 h-full">
+                  <div className="scale-[0.5] sm:scale-100 origin-left -ml-2 sm:ml-0 shrink-0">
+                    <Spark />
+                  </div>
+                  <div className="flex flex-col sm:block justify-center overflow-visible">
+                    <p className="text-[16px] min-[375px]:text-[20px] font-bold leading-none tracking-[-1px] sm:text-[50px]">
                       <AnimatedStat value={stat.value} />
                     </p>
-                    <p className="mt-[6px] sm:mt-[8px] text-[11px] font-light sm:text-[14px] leading-none text-white">
+                    <p className="mt-[4px] sm:mt-[8px] text-[6px] min-[375px]:text-[7px] sm:text-[14px] font-light leading-tight sm:leading-none text-white/70 sm:text-white whitespace-nowrap sm:whitespace-normal tracking-tight sm:tracking-normal">
                       {stat.label}
                     </p>
                   </div>
@@ -203,6 +207,18 @@ export function Numbers({
               </FadeUp>
             ))}
           </div>
+        </div>
+
+        {/* CTA Button (Mobile) */}
+        <div className="mt-[32px] flex justify-center pb-[16px] md:hidden">
+          <FadeUp delay={0.6}>
+            <Link
+              className="inline-flex h-[40px] min-[375px]:h-[44px] px-8 items-center justify-center rounded-full bg-white font-[var(--font-be-vietnam)] text-[12px] min-[375px]:text-[13px] tracking-[0.5px] font-bold text-black transition uppercase hover:bg-[#ff6b1f]"
+              href="/contact"
+            >
+              Book a Consultation
+            </Link>
+          </FadeUp>
         </div>
 
       </div>

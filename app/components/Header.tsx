@@ -44,7 +44,7 @@ export function Header() {
 
   return (
     <div className="bg-black sticky top-0 z-50 w-full border-b border-white/5 transition-all duration-300">
-      <header className="relative z-10 mx-auto flex w-full max-w-[1200px] flex-col px-4 sm:px-6 py-3 md:py-4 md:min-h-[80px] md:flex-row md:items-center md:justify-between md:py-0">
+      <header className="relative z-10 mx-auto flex w-full max-w-[1150px] flex-col px-4 sm:px-6 py-3 md:py-4 md:min-h-[80px] md:flex-row md:items-center md:justify-between md:py-0">
         
         {/* Top Bar for Mobile & Desktop */}
         <div className="flex w-full items-center justify-between md:w-auto md:flex-1 md:justify-start">
@@ -54,7 +54,7 @@ export function Header() {
           
           <div className="flex items-center gap-2 sm:gap-3 md:hidden">
             <Link href="/contact" passHref>
-              <Button className="h-[32px] sm:h-[38px] px-3 sm:px-4 text-[9px] min-[375px]:text-[10px] sm:text-[14px] tracking-[1px] min-[375px]:tracking-[2px] sm:tracking-[5px] font-bold uppercase whitespace-nowrap">
+              <Button className="h-[32px] sm:h-[38px] px-3 sm:px-4 !text-[10px] min-[375px]:!text-[11px] sm:!text-[12px] tracking-[1px] min-[375px]:tracking-[2px] sm:tracking-[3px] font-bold uppercase whitespace-nowrap">
                 <span className="min-[375px]:hidden">Consultation</span>
                 <span className="hidden min-[375px]:inline">Book a Consultation</span>
               </Button>

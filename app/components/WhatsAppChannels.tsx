@@ -1,0 +1,167 @@
+"use client";
+
+import Image from "next/image";
+import FadeUp from "./FadeUp";
+
+export default function WhatsAppChannels() {
+  return (
+    <section className="relative w-full overflow-hidden bg-black py-[80px] lg:py-[120px] px-4 sm:px-6">
+      <div className="mx-auto max-w-[1200px]">
+        
+        {/* Header Section */}
+        <div className="flex flex-col items-center text-center max-w-[900px] mx-auto">
+          <FadeUp delay={0.1}>
+            <h2 className="text-white flex flex-col items-center">
+              <span className="font-medium text-[28px] min-[375px]:text-[32px] sm:text-[56px] leading-[1.1] sm:leading-[63px] tracking-[-1px] sm:tracking-[-1.5px]">
+                Why WhatsApp & SMS, the
+              </span>
+              <span className="font-medium text-[28px] min-[375px]:text-[32px] sm:text-[56px] leading-[1.1] sm:leading-[63px] tracking-[-1px] sm:tracking-[-1.5px]">
+                channels <span 
+                className="italic font-normal text-[36px] min-[375px]:text-[42px] sm:text-[72px] leading-[1.1] sm:leading-[63px] tracking-[-1px] sm:tracking-[-1.5px] text-[#ff5a05] block sm:inline mt-1 sm:mt-0"
+                style={{
+                  fontFamily: '"Times New Roman", Times, serif',
+                }}
+              >
+                people actually read.
+              </span>
+              </span>
+            </h2>
+          </FadeUp>
+          
+          <FadeUp delay={0.2}>
+            <p className="mt-5 sm:mt-8 text-[#EBEBEB] font-normal text-[14px] min-[375px]:text-[15px] sm:text-[18px] leading-[1.5] sm:leading-[29.25px] max-w-[680px] mx-auto px-2 sm:px-0">
+              Email gets ignored. Phone calls get missed. WhatsApp and SMS get opened almost every time. Here's how our AI turns those conversations into <br className="hidden sm:inline" /> bookings.
+            </p>
+          </FadeUp>
+          
+          <FadeUp delay={0.3}>
+            <div className="mt-8 sm:mt-10 flex items-center p-1 bg-[#1A1A1A] rounded-full border border-white/5 w-fit mx-auto">
+              <button className="px-5 sm:px-8 py-2 sm:py-2.5 bg-[#ff5a05] rounded-full text-white font-medium text-[13px] sm:text-[14px] leading-[20px] transition-all">
+                WhatsApp
+              </button>
+              <button className="px-5 sm:px-8 py-2 sm:py-2.5 text-white/60 hover:text-white rounded-full font-medium text-[13px] sm:text-[14px] leading-[20px] transition-all">
+                SMS
+              </button>
+            </div>
+          </FadeUp>
+        </div>
+
+        {/* Content Section */}
+        <div className="mt-16 sm:mt-24 grid grid-cols-1 lg:grid-cols-[1.2fr_auto_1.3fr] gap-8 lg:gap-12 items-center">
+          
+          {/* Left Cards */}
+          <div className="flex flex-col gap-6 w-full max-w-[450px] mx-auto lg:ml-auto lg:mr-0">
+            <FadeUp delay={0.4}>
+              <Card 
+                icon="/assets/whatsapp/1.png"
+                subtitle="AVG REPLY"
+                title="< 3s"
+                heading="Instant Replies"
+                description="AI answers in seconds, 24/7 — no more missed enquiries at 2am."
+                align="right"
+              />
+            </FadeUp>
+            <FadeUp delay={0.5}>
+              <Card 
+                icon="/assets/whatsapp/2.png"
+                subtitle="CONVERSIONS"
+                title="+42%"
+                heading="Recover Lost Leads"
+                description="Auto follow-ups turn silent enquiries into confirmed bookings."
+                align="right"
+              />
+            </FadeUp>
+          </div>
+
+          {/* Center Mobile Image */}
+          <FadeUp delay={0.6} className="flex justify-center relative order-first lg:order-none mb-4 lg:mb-0">
+            <div className="relative w-[240px] min-[375px]:w-[280px] sm:w-[344px] h-[427px] min-[375px]:h-[500px] sm:h-[613px]">
+              {/* Glow behind the phone */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] bg-[#0f3b1b]/80 blur-[60px] sm:blur-[80px] rounded-[50px] pointer-events-none" />
+              <Image 
+                src="/assets/whatsapp/mobile.png"
+                alt="Mobile App"
+                fill
+                className="object-contain relative z-10"
+              />
+            </div>
+          </FadeUp>
+
+          {/* Right Cards */}
+          <div className="flex flex-col gap-6 w-full max-w-[450px] mx-auto lg:mr-auto lg:ml-0">
+            <FadeUp delay={0.7}>
+              <Card 
+                icon="/assets/whatsapp/3.png"
+                subtitle="OPEN RATE"
+                title="98%"
+                heading="Higher Open Rates"
+                description="98% of messages get read within 3 minutes. Email can't compete."
+                align="left"
+              />
+            </FadeUp>
+            <FadeUp delay={0.8}>
+              <Card 
+                icon="/assets/whatsapp/4.png"
+                subtitle="COVERAGE"
+                title="24/7"
+                heading="Human + AI"
+                description="AI handles the routine, your team steps in when it matters."
+                align="left"
+              />
+            </FadeUp>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ─── Subcomponents ─────────────────────────────────────────────────────────────
+
+interface CardProps {
+  icon: string;
+  subtitle: string;
+  title: string;
+  heading: string;
+  description: string;
+  align: "left" | "right";
+}
+
+function Card({ icon, subtitle, title, heading, description, align }: CardProps) {
+  const isRightAligned = align === "right";
+
+  return (
+    <div className={`p-5 min-[375px]:p-6 sm:p-8 rounded-[20px] sm:rounded-[24px] bg-[#111111] border border-white/5 flex flex-col ${isRightAligned ? "items-end text-right" : "items-start text-left"}`}>
+      <div className="flex items-center gap-2 sm:gap-3">
+        <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#1A1A1A] border border-white/10 flex items-center justify-center shrink-0">
+          <Image src={icon} alt="" width={16} height={16} className="object-contain w-3.5 h-3.5 sm:w-4 sm:h-4" />
+        </div>
+        <span className="text-[10px] sm:text-[12px] font-normal leading-[14px] sm:leading-[16px] tracking-[1.5px] sm:tracking-[2.16px] uppercase text-[#888888]">
+          {subtitle}
+        </span>
+      </div>
+      
+      <h3 
+        className="mt-4 sm:mt-6 text-[28px] min-[375px]:text-[32px] sm:text-[36px] font-semibold leading-[32px] sm:leading-[40px] tracking-[-0.5px] sm:tracking-[-0.9px]"
+        style={{
+          background: 'linear-gradient(90deg, #FFFFFF 0%, #FFB08C 100%)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
+          color: 'transparent'
+        }}
+      >
+        {title}
+      </h3>
+      
+      <h4 className="mt-2 text-[16px] sm:text-[18px] font-semibold leading-[24px] sm:leading-[28px] text-[#EEEEEE]">
+        {heading}
+      </h4>
+      
+      <p className="mt-1 sm:mt-2 text-[13px] font-normal leading-[20px] sm:leading-[22.75px] text-[#888888]">
+        {description}
+      </p>
+    </div>
+  );
+}

@@ -13,6 +13,9 @@ import StaggerItem from "../components/Staggeritem";
 import FadeRight from "../components/FadeRight";
 import FadeUp from "../components/FadeUp";
 import { WhyEmailFails } from "../components/WhyEmailFails";
+import WhatsAppChannels from "../components/WhatsAppChannels";
+import ConversationFlow from "../components/ConversationFlow";
+import TargetRightPeople from "../components/TargetRightPeople";
 import { WhyWhatsappWorks } from "../components/WhyWhatsappWorks";
 
 const problemPoints = [
@@ -687,6 +690,9 @@ export default function WhatsappAndSmsPage() {
               />
             </FadeUp>
                 <WhyWhatsappWorks />
+                <WhatsAppChannels />
+                <ConversationFlow />
+                <TargetRightPeople />
       <RevenueMethod />
       <RelatedProjects />
       <Testimonials />
