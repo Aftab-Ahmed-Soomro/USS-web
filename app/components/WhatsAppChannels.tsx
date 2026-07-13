@@ -53,7 +53,7 @@ export default function WhatsAppChannels() {
           <div className="flex flex-col gap-6 w-full max-w-[450px] mx-auto lg:ml-auto lg:mr-0">
             <FadeUp delay={0.4}>
               <Card 
-                icon="/assets/whatsapp/1.png"
+                icon="/assets/whatsApp/1.png"
                 subtitle="AVG REPLY"
                 title="< 3s"
                 heading="Instant Replies"
@@ -63,7 +63,7 @@ export default function WhatsAppChannels() {
             </FadeUp>
             <FadeUp delay={0.5}>
               <Card 
-                icon="/assets/whatsapp/2.png"
+                icon="/assets/whatsApp/2.png"
                 subtitle="CONVERSIONS"
                 title="+42%"
                 heading="Recover Lost Leads"
@@ -79,7 +79,7 @@ export default function WhatsAppChannels() {
               {/* Glow behind the phone */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] bg-[#0f3b1b]/80 blur-[60px] sm:blur-[80px] rounded-[50px] pointer-events-none" />
               <Image 
-                src="/assets/whatsapp/mobile.png"
+                src="/assets/whatsApp/mobile.png"
                 alt="Mobile App"
                 fill
                 className="object-contain relative z-10"
@@ -91,7 +91,7 @@ export default function WhatsAppChannels() {
           <div className="flex flex-col gap-6 w-full max-w-[450px] mx-auto lg:mr-auto lg:ml-0">
             <FadeUp delay={0.7}>
               <Card 
-                icon="/assets/whatsapp/3.png"
+                icon="/assets/whatsApp/3.png"
                 subtitle="OPEN RATE"
                 title="98%"
                 heading="Higher Open Rates"
@@ -101,7 +101,7 @@ export default function WhatsAppChannels() {
             </FadeUp>
             <FadeUp delay={0.8}>
               <Card 
-                icon="/assets/whatsapp/4.png"
+                icon="/assets/whatsApp/4.png"
                 subtitle="COVERAGE"
                 title="24/7"
                 heading="Human + AI"
@@ -134,9 +134,9 @@ function Card({ icon, subtitle, title, heading, description, align }: CardProps)
   return (
     <div className={`p-5 min-[375px]:p-6 sm:p-8 rounded-[20px] sm:rounded-[24px] bg-[#111111] border border-white/5 flex flex-col ${isRightAligned ? "items-end text-right" : "items-start text-left"}`}>
       <div className="flex items-center gap-2 sm:gap-3">
-        <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#1A1A1A] border border-white/10 flex items-center justify-center shrink-0">
+        {/* <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#1A1A1A] border border-white/10 flex items-center justify-center shrink-0">
           <Image src={icon} alt="" width={16} height={16} className="object-contain w-3.5 h-3.5 sm:w-4 sm:h-4" />
-        </div>
+        </div> */}
         <span className="text-[10px] sm:text-[12px] font-normal leading-[14px] sm:leading-[16px] tracking-[1.5px] sm:tracking-[2.16px] uppercase text-[#888888]">
           {subtitle}
         </span>
