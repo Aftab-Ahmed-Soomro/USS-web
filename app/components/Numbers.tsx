@@ -213,7 +213,7 @@ export function Numbers({
         <div className="mt-[32px] flex justify-center pb-[16px] md:hidden">
           <FadeUp delay={0.6}>
             <Link
-              className="inline-flex h-[40px] min-[375px]:h-[44px] px-8 items-center justify-center rounded-full bg-white font-[var(--font-be-vietnam)] text-[12px] min-[375px]:text-[13px] tracking-[0.5px] font-bold text-black transition uppercase hover:bg-[#ff6b1f]"
+              className="inline-flex h-[30px] min-[375px]:h-[34px] px-6 items-center justify-center rounded-full bg-white font-[var(--font-be-vietnam)] text-[10px] min-[375px]:text-[12px] tracking-[1px] font-medium text-black transition uppercase hover:bg-[#ff6b1f]"
               href="/contact"
             >
               Book a Consultation

@@ -43,7 +43,7 @@ const ecwLogos = [
 
 export function Brands() {
   return (
-    <section className="relative z-10 pb-[40px] sm:pb-[58px] pt-[40px] sm:pt-[58px] text-white bg-black">
+    <section className="relative z-10 pb-[40px] sm:pb-[58px] pt-[10px] sm:pt-[58px] text-white bg-black">
 
       {/* ── Section heading ── */}
       <FadeDown delay={0.1}>
