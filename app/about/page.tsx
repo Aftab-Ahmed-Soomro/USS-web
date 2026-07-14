@@ -49,17 +49,17 @@ export default function AboutPage() {
 
           {/* Section heading — slides in from left */}
           <FadeLeft delay={0.1}>
-            <div className="mx-auto max-w-[1150px] px-4 min-[375px]:px-6 mb-8 sm:mb-12">
+            <div className="mx-auto max-w-[1150px] px-4 min-[375px]:px-6 mb-8 sm:mb-12 text-center sm:text-start">
               <p
-                className="text-[#fff] font-medium text-[32px] min-[375px]:text-[42px] sm:text-[56px] tracking-tight leading-none"
+                className="text-[#fff] font-medium text-[32px] min-[375px]:text-[32px] sm:text-[56px] tracking-tight leading-none"
               >
                 meet our founder &
               </p>
-              <span className="text-[#fff] font-medium text-[32px] min-[375px]:text-[42px] sm:text-[56px] tracking-tight leading-none">
+              <span className="text-[#fff] font-medium text-[32px] min-[375px]:text-[32px] sm:text-[56px] tracking-tight leading-none">
                   ceo{" "}
                 </span>
               <span
-                className="text-[#FF5500] text-[32px] min-[375px]:text-[42px] sm:text-[72px] italic timesFontFamily tracking-tight leading-[0.7]"
+                className="text-[#FF5500] text-[42px] min-[375px]:text-[42px] sm:text-[72px] italic timesFontFamily tracking-tight leading-[0.7]"
                 style={{  fontWeight: 400 }}
               >
                 
@@ -68,12 +68,12 @@ export default function AboutPage() {
             </div>
           </FadeLeft>
 
-          <div className="mx-auto max-w-[1150px] px-4 min-[375px]:px-6 grid grid-cols-1 md:grid-cols-[240px_1fr] lg:grid-cols-[280px_1fr] gap-10 sm:gap-30 lg:gap-40 items-start">
+          <div className="mx-auto max-w-[1150px] px-6 min-[375px]:px-6 grid grid-cols-1 md:grid-cols-[240px_1fr] lg:grid-cols-[280px_1fr] gap-10 sm:gap-30 lg:gap-40 items-start">
 
             {/* LEFT — Portrait — slides in from left */}
             <FadeLeft delay={0.2}>
-              <div className="relative w-full max-w-[280px] mx-auto md:mx-0">
-                <div className="relative aspect-[3/4] min-w-[200px] min-[375px]:min-w-[280px] sm:min-w-[318px] w-full min-h-[300px] sm:min-h-[397.5px] overflow-hidden">
+              <div className="relative w-full max-w-[318px] mx-auto md:mx-0">
+                <div className="relative aspect-[3/4] min-w-[200px] min-[375px]:min-w-[318px] sm:min-w-[318px] w-full min-h-[300px] sm:min-h-[397.5px] overflow-hidden">
                   <Image
                     src="/assets/founder.jpg"
                     alt="Emmanuel Cole Williams, Founder and CEO of USS"
@@ -92,7 +92,7 @@ export default function AboutPage() {
 
                 {/* Bio text — rises up */}
                 <FadeUp delay={0.3}>
-                  <p className="text-[13px] sm:text-[14px] leading-[23.8px] font-light text-[#F5F5F5] max-w-full sm:max-w-[320px]">
+                  <p className="text-[13px] sm:text-[14px] leading-[23.8px] font-light text-[#F5F5F5] max-w-full sm:max-w-[320px] text-center sm:text-start">
                     My name is Emmanuel, Founder & CEO of USS. Over the past 12 years, I have built & scaled multiple businesses across the US, UK & Middle East, both my own companies and for clients. Having worked with 50+ SME clients across multiple industries at different stages of growth.
                   </p>
                 </FadeUp>
@@ -131,7 +131,7 @@ export default function AboutPage() {
 
               {/* Quote — rises up */}
               <FadeUp delay={0.45}>
-                <blockquote className="text-[1.25rem] min-[375px]:text-[1.45rem] mt-6 sm:mt-4 md:text-[1.65rem] lg:text-[32px] font-medium leading-[30px] sm:leading-[35px] tracking-[0%] text-white max-w-[500px]">
+                <blockquote className="text-[1.25rem] min-[375px]:text-[1.45rem] mt-0 sm:mt-4 md:text-[1.65rem] lg:text-[32px] font-medium leading-[30px] sm:leading-[35px] tracking-[0%] text-white max-w-[500px] text-center sm:text-start">
                   &ldquo;Structured marketing systems that generate revenue.&rdquo;
                 </blockquote>
               </FadeUp>

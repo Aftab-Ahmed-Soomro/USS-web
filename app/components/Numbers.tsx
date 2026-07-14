@@ -188,7 +188,7 @@ export function Numbers({
 
         {/* Stats grid */}
         <div className="mt-[32px] sm:mt-[58px] border-y border-white/12 sm:border-y-0 sm:border-t bg-black/20 sm:bg-transparent py-[16px] sm:py-0 sm:pt-[43px]">
-          <div className="grid grid-cols-4 sm:grid-cols-2 lg:grid-cols-4 divide-x divide-white/12 sm:divide-x-0 gap-0 sm:gap-8 lg:gap-[54px]">
+          <div className="grid grid-cols-[0.75fr_1.4fr_0.95fr_0.9fr] sm:grid-cols-2 lg:grid-cols-4 divide-x divide-white/12 sm:divide-x-0 gap-0 sm:gap-8 lg:gap-[54px]">
             {stats.map((stat, index) => (
               <FadeUp key={stat.label} delay={0.3 + index * 0.12}>
                 <div className="flex items-center gap-[4px] min-[375px]:gap-[6px] sm:gap-[16px] px-[6px] sm:px-0 h-full">

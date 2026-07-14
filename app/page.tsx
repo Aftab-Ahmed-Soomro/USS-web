@@ -157,10 +157,10 @@ function Strategic() {
                 }}
                 className="flex flex-col items-center flex-1 cursor-pointer outline-none relative"
               >
-                <span className={`font-[var(--font-cormorant)] text-[32px] min-[375px]:text-[38px] leading-[1.0] timesFontFamily transition-colors duration-300 ${activeStep === idx ? "text-[#ff5500]" : "text-black/30"}`}>
+                <span className={`font-[var(--font-cormorant)] text-[32px] min-[375px]:text-[38px] leading-[1.0] timesFontFamily transition-colors duration-300 ${activeStep === idx ? "text-[#ff5500]" : "text-black"}`}>
                   {step.number}
                 </span>
-                <span className={`text-[9px] min-[375px]:text-[10px] font-bold tracking-wider uppercase mt-1 transition-colors duration-300 ${activeStep === idx ? "text-black" : "text-black/40"}`}>
+                <span className={`text-[9px] min-[375px]:text-[10px] font-bold tracking-wider uppercase mt-1 transition-colors duration-300 ${activeStep === idx ? "text-black" : "text-black"}`}>
                   {step.title}
                 </span>
                 {activeStep === idx && (
@@ -243,7 +243,7 @@ function Strategic() {
 
 function FinalCta() {
   return (
-    <section className="relative z-10 bg-black sm:bg-transparent px-4 sm:px-6 py-[50px] sm:py-[80px] text-white overflow-hidden">
+    <section className="relative z-10 bg-black sm:bg-transparent px-4 sm:px-6 pt-[50px] pb-[20px] sm:pt-[80px] sm:pb-[80px] text-white overflow-hidden">
       {/* Background Glows */}
       <div className="hidden sm:block pointer-events-none absolute left-[-15%] top-[-10%] h-[600px] w-[600px] rounded-full bg-[#ff5500] opacity-20 blur-[100px]" />
       <div className="hidden sm:block pointer-events-none absolute right-[-15%] bottom-[-10%] h-[600px] w-[600px] rounded-full bg-[#ff5500] opacity-20 blur-[100px]" />

@@ -64,7 +64,7 @@ export default function WeAreGlobal({ images, isFooter = false }: WeAreGlobalPro
       <style>{`
         .wag-section {
           background-color: #000;
-          min-height: 100vh;
+          // min-height: 100vh;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -177,8 +177,11 @@ export default function WeAreGlobal({ images, isFooter = false }: WeAreGlobalPro
         }
 
         @media (max-width: 480px) {
+        .wag-subtitle {
+          margin: 0;
+        }
           .wag-section {
-            padding: 48px 16px;
+            padding: 0px 16px;
           }
         }
 
@@ -233,8 +236,8 @@ export default function WeAreGlobal({ images, isFooter = false }: WeAreGlobalPro
 
         {/* Subtitle — rises up after heading */}
         <FadeUp delay={0.2}>
-          <p className="wag-subtitle text-white/95">
-            Working with businesses across the<br /> United States, United Kingdom and United Arab Emirates.
+          <p className="wag-subtitle text-white/95 !text-[11px] min-[375px]:!text-[13px] sm:!text-[14px] md:!text-[16px] !leading-relaxed sm:!leading-[29.25px]">
+            Working with businesses across the<br className="hidden sm:inline" /> United States, United Kingdom and United Arab Emirates.
           </p>
         </FadeUp>
 

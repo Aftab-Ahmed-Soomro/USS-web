@@ -109,7 +109,7 @@ export function Testimonials() {
 
   useEffect(() => {
     let interval: ReturnType<typeof setInterval>;
-    
+
     const startAutoplay = () => {
       // Only autoplay on mobile screens (< 640px)
       if (window.innerWidth < 640) {
@@ -164,58 +164,58 @@ export function Testimonials() {
 
         {/* Full slider block — fades up as one unit */}
         {/* <FadeUp delay={0.3}> */}
-          <div className="w-full relative group">
+        <div className="w-full relative group">
 
-            {/* Left Arrow — slides in from left */}
-            {/* <FadeLeft delay={0.45}> */}
-              <div className="absolute -left-5 top-[calc(50%-16px)] -translate-y-1/2 z-10 opacity-100 transition-opacity cursor-pointer duration-300">
-                <ArrowButton direction="left" onClick={() => scroll("left")} />
-              </div>
-            {/* </FadeLeft> */}
+          {/* Left Arrow — slides in from left */}
+          {/* <FadeLeft delay={0.45}> */}
+          <div className="absolute -left-5 top-[calc(50%-16px)] -translate-y-1/2 z-10 opacity-100 transition-opacity cursor-pointer duration-300">
+            <ArrowButton direction="left" onClick={() => scroll("left")} />
+          </div>
+          {/* </FadeLeft> */}
 
-            {/* Scrollable cards row */}
-            <div
-              ref={scrollRef}
-              className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-8 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
-            >
-              {testimonials.map((testimonial, idx) => (
-                <div
-                  key={idx}
-                  className="relative w-[94%] sm:w-[calc(50%-12px)] lg:w-[calc(33.333333%-16px)] shrink-0 h-[420px] sm:h-[480px] snap-start overflow-hidden group/card bg-[#111]"
-                >
-                  <Image
-                    src={testimonial.image}
-                    alt={testimonial.company}
-                    fill
-                    className="object-cover ml-4 sm:ml-0 object-center transition-transform duration-700 group-hover/card:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent flex flex-col justify-end p-6 sm:p-8 transition-colors duration-500 group-hover/card:from-black/90 group-hover/card:via-black/50">
-                    <h3 className="text-white text-xl sm:text-2xl font-bold font-[var(--font-be-vietnam)]">
-                      {testimonial.company}
-                    </h3>
-                    <p className="text-[#fff] text-[11px] sm:text-xs mt-1 uppercase tracking-wider font-[var(--font-be-vietnam)] font-medium">
-                      {testimonial.author}
-                    </p>
-                    <div className="grid grid-rows-[0fr] group-hover/card:grid-rows-[1fr] transition-all duration-500 ease-in-out">
-                      <div className="overflow-hidden opacity-0 group-hover/card:opacity-100 transition-all duration-500 translate-y-4 group-hover/card:translate-y-0">
-                        <p className="text-white/97 text-xs sm:text-sm pt-3 sm:pt-4 leading-[1.6] font-[var(--font-be-vietnam)]">
-                          &ldquo;{testimonial.quote}&rdquo;
-                        </p>
-                      </div>
+          {/* Scrollable cards row */}
+          <div
+            ref={scrollRef}
+            className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-8 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+          >
+            {testimonials.map((testimonial, idx) => (
+              <div
+                key={idx}
+                className="relative w-[calc(50%-12px)] lg:w-[calc(33.333333%-16px)] shrink-0 aspect-square sm:aspect-auto sm:h-[480px] snap-start overflow-hidden group/card bg-[#111]"
+              >
+                <Image
+                  src={testimonial.image}
+                  alt={testimonial.company}
+                  fill
+                  className="object-cover object-center transition-transform duration-700 group-hover/card:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-2 sm:p-8 transition-colors duration-500 group-hover/card:from-black/90 group-hover/card:via-black/50">
+                  <h3 className="text-white text-[12px] min-[375px]:text-[12px] sm:text-2xl font-bold font-[var(--font-be-vietnam)] leading-tight">
+                    {testimonial.company}
+                  </h3>
+                  <p className="text-[#fff] text-[8px] min-[375px]:text-[8px] sm:text-xs mt-1 uppercase tracking-wider font-[var(--font-be-vietnam)] font-medium">
+                    {testimonial.author}
+                  </p>
+                  <div className="grid grid-rows-[0fr] group-hover/card:grid-rows-[1fr] transition-all duration-500 ease-in-out">
+                    <div className="overflow-hidden opacity-0 group-hover/card:opacity-100 transition-all duration-500 translate-y-4 group-hover/card:translate-y-0">
+                      <p className="text-white/97 text-[9px] min-[375px]:text-[10px] sm:text-sm pt-2 sm:pt-4 leading-[1.4] sm:leading-[1.6] font-[var(--font-be-vietnam)] line-clamp-3 sm:line-clamp-none">
+                        &ldquo;{testimonial.quote}&rdquo;
+                      </p>
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
-
-            {/* Right Arrow — slides in from right */}
-            {/* <FadeRight delay={0.45}> */}
-              <div className="absolute -right-5 top-[calc(50%-16px)] -translate-y-1/2 z-10 opacity-100 cursor-pointer transition-opacity duration-300">
-                <ArrowButton direction="right" onClick={() => scroll("right")} />
               </div>
-            {/* </FadeRight> */}
-
+            ))}
           </div>
+
+          {/* Right Arrow — slides in from right */}
+          {/* <FadeRight delay={0.45}> */}
+          <div className="absolute -right-5 top-[calc(50%-16px)] -translate-y-1/2 z-10 opacity-100 cursor-pointer transition-opacity duration-300">
+            <ArrowButton direction="right" onClick={() => scroll("right")} />
+          </div>
+          {/* </FadeRight> */}
+
+        </div>
         {/* </FadeUp> */}
 
       </div>

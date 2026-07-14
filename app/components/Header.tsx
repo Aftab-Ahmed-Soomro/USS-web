@@ -13,7 +13,7 @@ const serviceLinks = [
   { label: "Email Marketing", href: "/email-marketing", icon: "✦" },
   { label: "Social Media Management", href: "/social-media-management", icon: "✦" },
   { label: "Content Creation", href: "/content-creation", icon: "✦" },
-  { label: "Talent Management", href:"/talent-management", icon: "✦"},
+  { label: "Talent Management", href: "/talent-management", icon: "✦" },
   { label: "Website Design & Development", href: "/website", icon: "✦" }
 ];
 
@@ -45,13 +45,13 @@ export function Header() {
   return (
     <div className="bg-black sticky top-0 z-50 w-full border-b border-white/5 transition-all duration-300">
       <header className="relative z-10 mx-auto flex w-full max-w-[1150px] flex-col px-4 sm:px-6 py-5 md:py-4 md:min-h-[80px] md:flex-row md:items-center md:justify-between md:py-0">
-        
+
         {/* Top Bar for Mobile & Desktop */}
         <div className="flex w-full items-center justify-between md:w-auto md:flex-1 md:justify-start">
           <Link href="/" className="text-white font-bold text-[18px] md:text-[22px] tracking-[0.15em] uppercase transition hover:text-[#ff6b1f] shrink-0">
             USS
           </Link>
-          
+
           <div className="flex items-center gap-2 sm:gap-3 md:hidden">
             <Link href="/contact" passHref>
               <Button className="h-[32px] sm:h-[38px] px-3 sm:px-4 !text-[10px] min-[375px]:!text-[11px] sm:!text-[12px] tracking-[1px] min-[375px]:tracking-[2px] sm:tracking-[3px] font-bold uppercase whitespace-nowrap">
@@ -78,9 +78,8 @@ export function Header() {
         <nav
           id="main-navigation"
           aria-label="Main navigation"
-          className={`flex w-full flex-col gap-4 overflow-hidden transition-[max-height,opacity,margin,padding] duration-300 md:mt-0 md:w-auto md:flex-row md:items-center md:justify-center md:gap-8 lg:gap-10 md:overflow-visible md:border-0 md:pt-0 md:opacity-100 ${
-            isMenuOpen ? "max-h-[100vh] opacity-100 mt-4 pt-4 border-t border-white/10" : "max-h-0 opacity-0 mt-0 pt-0 border-t-0 md:max-h-none"
-          }`}
+          className={`flex w-full flex-col gap-4 overflow-hidden transition-[max-height,opacity,margin,padding] duration-300 md:mt-0 md:w-auto md:flex-row md:items-center md:justify-center md:gap-8 lg:gap-10 md:overflow-visible md:border-0 md:pt-0 md:opacity-100 ${isMenuOpen ? "max-h-[100vh] opacity-100 mt-4 pt-4 border-t border-white/10" : "max-h-0 opacity-0 mt-0 pt-0 border-t-0 md:max-h-none"
+            }`}
         >
           {navItems.map((item) =>
             item.hasDropdown ? (
@@ -114,9 +113,8 @@ export function Header() {
 
                 <div
                   ref={dropdownRef}
-                  className={`absolute left-1/2 top-[calc(100%+32px)] z-50 -translate-x-1/2 transition-all duration-200 hidden md:block ${
-                    isServicesOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"
-                  }`}
+                  className={`absolute left-1/2 top-[calc(100%+32px)] z-50 -translate-x-1/2 transition-all duration-200 hidden md:block ${isServicesOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"
+                    }`}
                   style={{ width: "520px" }}
                 >
                   <div className="absolute -top-[7px] left-1/2 -translate-x-1/2 h-[14px] w-[14px] rotate-45 bg-[#111]/90 backdrop-blur-md border-l border-t border-white/10" />
@@ -170,9 +168,8 @@ export function Header() {
                   </div>
 
                   <div
-                    className={`overflow-hidden transition-[max-height,opacity] duration-200 ${
-                      isMobileServicesOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
-                    }`}
+                    className={`overflow-hidden transition-[max-height,opacity] duration-200 ${isMobileServicesOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
+                      }`}
                   >
                     <div className="mt-2 flex flex-col gap-0.5 border-l border-[#ff6b1f]/30 pl-3">
                       {serviceLinks.map((service) => (
@@ -209,7 +206,7 @@ export function Header() {
         {/* Desktop Right Action */}
         <div className="hidden md:flex md:w-auto md:flex-1 md:justify-end">
           <Link className="h-[42px] inline-flex h-[48px] items-center justify-center rounded-full bg-[#ff5a05] cursor-pointer px-6 text-[13px] tracking-[0.1em] font-bold uppercase" href="/contact" passHref>
-              Book a Consultation
+            Book a Consultation
           </Link>
         </div>
 

@@ -13,7 +13,7 @@ const rawSystems = [
   { title: "SOCIAL MEDIA\nMARKETING", icon: "/assets/marketingGrowths/socialMediaIcon.png", href: "/social-media-management" },
   { title: "META\nADS", icon: "/assets/marketingGrowths/metaIcon.png", href: "/meta-ads" },
   { title: "GOOGLE\nADWORDS", icon: "/assets/marketingGrowths/googleIcon.png", href: "/google-ads" },
-  { title: "CONTENT\nCREATION", icon:  CiCamera , href: "/content-creation" },
+  { title: "CONTENT\nCREATION", icon: CiCamera, href: "/content-creation" },
   { title: "EMAIL\nMARKETING", icon: "/assets/marketingGrowths/emailIcon.png", href: "/email-marketing" },
   { title: "WHATSAPP\n& SMS", icon: "/assets/marketingGrowths/whatsappIcon.png", href: "/whatsapp-and-sms" },
   { title: "TALENT\nMANAGEMENT", icon: "/assets/marketingGrowths/talentIcon.png", href: "/talent-management" },
@@ -163,32 +163,33 @@ export function MarketingSystems() {
             const top = `calc(50% + ${r * Math.sin(rad)}%)`;
 
             return (
-              <div key={sys.title} className="absolute" style={{ left, top }}>
-                <div 
-                  className="flex items-center justify-center w-0 h-0 sm:w-auto sm:h-auto"
+              <div 
+                key={sys.title} 
+                className="absolute w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-[72px] lg:h-[72px] -ml-[20px] -mt-[20px] sm:-ml-[28px] sm:-mt-[28px] md:-ml-[32px] md:-mt-[32px] lg:-ml-[36px] lg:-mt-[36px]"
+                style={{ left, top }}
+              >
+                <div
+                  className="w-full h-full"
                   style={{ animation: "counter-orbit 60s linear infinite", transformOrigin: "center" }}
                 >
-
                   {/* ── Clickable node ── */}
                   <Link
                     href={sys.href}
-                    className="node-btn relative pointer-events-auto rounded-full flex items-center justify-center cursor-pointer
-                      w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-[72px] lg:h-[72px]
-                      -ml-[20px] -mt-[20px] sm:-ml-[28px] sm:-mt-[28px] md:-ml-[32px] md:-mt-[32px] lg:-ml-[36px] lg:-mt-[36px]"
+                    className="node-btn relative pointer-events-auto rounded-full flex items-center justify-center cursor-pointer w-full h-full"
                   >
                     {/* Icon */}
                     <div className="relative w-4 h-4 flex items-center justify-center">
-  {typeof sys.icon === "string" ? (
-    <Image
-      src={sys.icon}
-      alt={sys.title.replace("\n", " ")}
-      fill
-      className="node-icon object-contain"
-    />
-  ) : (
-    <sys.icon className="node-icon w-4 h-4 text-white" />
-  )}
-</div>
+                      {typeof sys.icon === "string" ? (
+                        <Image
+                          src={sys.icon}
+                          alt={sys.title.replace("\n", " ")}
+                          fill
+                          className="node-icon object-contain"
+                        />
+                      ) : (
+                        <sys.icon className="node-icon w-4 h-4 text-white" />
+                      )}
+                    </div>
 
                     {/* Label — above the node */}
                     <div className="node-label text-white absolute whitespace-nowrap text-[7px] sm:text-[9px] md:text-[12px] lg:text-[14px] uppercase font-medium tracking-wide flex flex-col items-center text-center bottom-full left-1/2 -translate-x-1/2 mb-3 md:mb-5">

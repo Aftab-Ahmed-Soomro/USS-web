@@ -54,7 +54,7 @@ export function HomeHero() {
 
       {/* Let's Connect — slides in from right, bottom corner */}
       {/* <FadeRight delay={0.55}> */}
-        {/* <div className="absolute bottom-4 right-4 sm:bottom-8 sm:right-6 md:bottom-12 md:right-12 z-10">
+      {/* <div className="absolute bottom-4 right-4 sm:bottom-8 sm:right-6 md:bottom-12 md:right-12 z-10">
           <Link href="#connect" className="text-white text-[16px] min-[375px]:text-[20px] md:text-[28px] tracking-tight hover:opacity-80 transition flex items-center gap-1">
             <span className="font-medium">let&apos;s</span> <span className="font-bold">connect</span>
           </Link>
