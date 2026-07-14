@@ -212,14 +212,14 @@ export function Numbers({
 
         {/* CTA Button (Mobile) */}
         <div className="mt-[32px] flex justify-center pb-[16px] md:hidden">
-          <FadeUp delay={0.6}>
+          {/* <FadeUp delay={0.6}> */}
             <Link
               className="inline-flex h-[30px] min-[375px]:h-[34px] px-6 items-center justify-center rounded-full bg-white font-[var(--font-be-vietnam)] text-[10px] min-[375px]:text-[12px] tracking-[-0.5px] sm:tracking-[1px] font-medium text-black transition uppercase hover:bg-[#ff6b1f]"
               href="/contact"
             >
               Book a Consultation
             </Link>
-          </FadeUp>
+          {/* </FadeUp> */}
         </div>
 
       </div>
