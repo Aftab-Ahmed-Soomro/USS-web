@@ -19,7 +19,7 @@ export default function ContactHero() {
       icon: Phone,
       label: "Call us to phone",
       value: "+971 58 525 8431",
-      href: "tel:+15011234567",
+      href: "tel:+971585258431",
     },
     {
       icon: MapPin,
