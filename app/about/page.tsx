@@ -45,7 +45,7 @@ export default function AboutPage() {
 
         <BrandElevationVideo />
 
-        <section className="relative overflow-hidden bg-black py-10 sm:py-16 md:py-24 lg:py-32 text-black">
+        <section className="relative overflow-hidden bg-black sm:py-16 py-12 md:py-24 lg:py-32 text-black">
 
           {/* Section heading — slides in from left */}
           <FadeLeft delay={0.1}>

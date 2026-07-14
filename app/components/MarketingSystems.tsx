@@ -30,10 +30,10 @@ const systems = rawSystems.map((sys, i) => ({
 
 export function MarketingSystems() {
   return (
-    <section className="bg-black py-20 px-4 min-h-screen flex flex-col items-center justify-center overflow-hidden">
+    <section className="bg-black py-10 sm:py-14 px-4  flex flex-col items-center justify-center overflow-hidden">
 
       {/* Header */}
-      <div className="text-center mb-16 md:mb-24 z-10 mt-10">
+      <div className="text-center mb-24 z-10 -mt-8 sm:mt-10">
         <FadeDown delay={0.1}>
           <p className="text-[#ff5500] font-[var(--font-be-vietnam)] text-[9px] sm:text-[11px] font-bold uppercase leading-none tracking-[3px] mb-4">
             OUR SOLUTIONS
@@ -97,7 +97,7 @@ export function MarketingSystems() {
       `}</style>
 
       {/* Circular Diagram */}
-      <div className="relative w-full max-w-[340px] sm:max-w-[500px] md:max-w-[750px] aspect-square mx-auto mt-8 md:mt-12">
+      <div className="relative w-full max-w-[340px] sm:max-w-[500px] md:max-w-[750px] aspect-square mx-auto mt-8 md:mt-12 scale-[1.12] sm:scale-100 origin-center">
 
         {/* Faint Concentric Circles — centered with translate, not flex-on-absolute */}
         <div className="absolute inset-0 pointer-events-none opacity-10">
@@ -135,7 +135,7 @@ export function MarketingSystems() {
         {/* Rotating Systems Container */}
         <div
           className="absolute inset-0 z-20 pointer-events-none"
-          style={{ animation: "orbit 60s linear infinite" }}
+          style={{ animation: "orbit 60s linear infinite", transformOrigin: "center" }}
         >
           {/* SVG Radial Lines */}
           <svg className="absolute inset-0 w-full h-full opacity-10">
@@ -164,7 +164,10 @@ export function MarketingSystems() {
 
             return (
               <div key={sys.title} className="absolute" style={{ left, top }}>
-                <div style={{ animation: "counter-orbit 60s linear infinite" }}>
+                <div 
+                  className="flex items-center justify-center w-0 h-0 sm:w-auto sm:h-auto"
+                  style={{ animation: "counter-orbit 60s linear infinite", transformOrigin: "center" }}
+                >
 
                   {/* ── Clickable node ── */}
                   <Link
@@ -203,7 +206,7 @@ export function MarketingSystems() {
       </div>
 
       {/* Footer Text */}
-      <div className="text-center mt-24 md:mt-32 z-10 flex flex-col items-center max-w-[800px] px-6">
+      <div className="text-center mt-16 z-10 flex flex-col items-center max-w-[800px] px-6">
         <FadeLeft delay={0.1}>
           <h3 className="text-white text-xl md:text-[34px] font-medium tracking-[-0.34px] mb-6">
             One Unified Growth Engine
