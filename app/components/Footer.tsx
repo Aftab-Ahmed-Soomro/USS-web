@@ -44,7 +44,7 @@ const servicesCol2 = [
   { name: "Web Development", href: "/services/website" },
 ];
 
-export function Footer() {
+export function Footer({ showGlobal = true }: { showGlobal?: boolean }) {
   const [isQuickLinksOpen, setIsQuickLinksOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
@@ -52,16 +52,20 @@ export function Footer() {
     <footer className="bg-[#000] text-white pt-10 sm:pt-20 pb-10 px-4 sm:px-6 font-sans">
       <div className="max-w-[1150px] mx-auto">
         {/* Top Section: Offices */}
-        <WeAreGlobal 
-          images={{
-            Dubai: "/assets/Dubai.png",
-            London: "/assets/London.png",
-            Atlanta: "/assets/Atlanta.png"
-          }}
-        />
-
-        {/* Divider */}
-        <div className="h-px bg-white/10 w-full mb-8 sm:mb-16"></div>
+        {showGlobal && (
+          <>
+            <WeAreGlobal 
+              isFooter={true}
+              images={{
+                Dubai: "/assets/Dubai.png",
+                London: "/assets/London.png",
+                Atlanta: "/assets/Atlanta.png"
+              }}
+            />
+            {/* Divider */}
+            <div className="h-px bg-white/10 w-full mb-8 sm:mb-16"></div>
+          </>
+        )}
 
         {/* Bottom Section */}
         <div className="flex flex-col lg:flex-row justify-between gap-10 sm:gap-16 lg:gap-8">

@@ -1,5 +1,9 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { Header } from "./components/Header";
 import { Brands } from "./components/Brands";
 import { Footer } from "./components/Footer";
@@ -65,6 +69,17 @@ const workWays = [
 ];
 
 function Strategic() {
+  const [activeStep, setActiveStep] = useState(0);
+  const [isAutoplay, setIsAutoplay] = useState(true);
+
+  useEffect(() => {
+    if (!isAutoplay) return;
+    const interval = setInterval(() => {
+      setActiveStep((prev) => (prev + 1) % process.length);
+    }, 4500);
+    return () => clearInterval(interval);
+  }, [isAutoplay]);
+
   return (
     <section className="bg-[#F8F8F7] pb-[40px] pt-[40px] sm:pt-[70px] text-black">
       <div className="mx-auto max-w-[1150px] px-4 sm:px-6">
@@ -79,9 +94,9 @@ function Strategic() {
 
           {/* Headline — scales in for more punch than a plain fade */}
           <ScaleIn delay={0.1} startScale={0.92}>
-            <h2 className="mt-[25px] sm:mt-[35px] text-[32px] min-[375px]:text-[42px] font-medium leading-[0.98] tracking-[-0.8px] sm:text-[56px]">
+            <h2 className="mt-[20px] sm:mt-[35px] text-[26px] min-[375px]:text-[26px] font-medium leading-[1.05] tracking-[-0.8px] sm:text-[56px]">
               a strategic process
-              <span className="mt-[15px] sm:mt-[25px] block font-[var(--font-cormorant)] text-[38px] min-[375px]:text-[51px] font-normal timesFontFamily italic leading-[0.8] tracking-[-0.8px] text-[#ff5500] sm:text-[56px]">
+              <span className="mt-[10px] sm:mt-[25px] block font-[var(--font-cormorant)] text-[30px] min-[375px]:text-[30px] font-normal timesFontFamily italic leading-[0.9] tracking-[-0.8px] text-[#ff5500] sm:text-[56px]">
                 built to perform
               </span>
             </h2>
@@ -89,7 +104,7 @@ function Strategic() {
 
           {/* Supporting copy */}
           <FadeUp delay={0.2}>
-            <p className="mx-auto mt-[20px] sm:mt-[32px] max-w-[580px] text-[15px] min-[375px]:text-[17px] sm:text-[24px] font-normal leading-[-1%]">
+            <p className="mx-auto mt-[16px] sm:mt-[32px] max-w-[580px] text-[13px] min-[375px]:text-[13px] sm:text-[24px] font-normal leading-[-1%] px-2 sm:px-0">
               Every project starts with understanding your business before we plan, create and deliver.
             </p>
           </FadeUp>
@@ -98,7 +113,7 @@ function Strategic() {
         {/* Process steps — staggered sequential reveal instead of 3 identical FadeLefts */}
         <Stagger
           staggerDelay={0.18}
-          className="mt-[60px] sm:mt-[93px] grid gap-y-10 sm:gap-y-12 md:grid-cols-3 md:gap-y-0"
+          className="mt-[60px] sm:mt-[93px] hidden md:grid md:grid-cols-3 md:gap-y-0"
         >
           {process.map((step, index) => (
             <StaggerItem key={step.number} y={50}>
@@ -129,15 +144,77 @@ function Strategic() {
           ))}
         </Stagger>
 
+        {/* Mobile-only interactive step tabs to reduce space and add premium micro-animations */}
+        <div className="mt-[35px] md:hidden block">
+          {/* Tabs row */}
+          <div className="flex justify-between items-center border-b border-black/10 pb-4 mb-6 relative">
+            {process.map((step, idx) => (
+              <button
+                key={step.number}
+                onClick={() => {
+                  setActiveStep(idx);
+                  setIsAutoplay(false);
+                }}
+                className="flex flex-col items-center flex-1 cursor-pointer outline-none relative"
+              >
+                <span className={`font-[var(--font-cormorant)] text-[32px] min-[375px]:text-[38px] leading-[1.0] timesFontFamily transition-colors duration-300 ${activeStep === idx ? "text-[#ff5500]" : "text-black/30"}`}>
+                  {step.number}
+                </span>
+                <span className={`text-[9px] min-[375px]:text-[10px] font-bold tracking-wider uppercase mt-1 transition-colors duration-300 ${activeStep === idx ? "text-black" : "text-black/40"}`}>
+                  {step.title}
+                </span>
+                {activeStep === idx && (
+                  <motion.div
+                    layoutId="activeTabUnderline"
+                    className="absolute bottom-[-17px] left-0 right-0 h-[2px] bg-[#ff5500]"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
+              </button>
+            ))}
+          </div>
+
+          {/* Active Card Body */}
+          <div className="min-h-[190px] flex flex-col justify-center bg-white border border-black/[0.04] rounded-[16px] p-6 shadow-[0_12px_24px_rgba(0,0,0,0.03)] relative overflow-hidden">
+            {/* Step label / Icon */}
+            <div className="flex items-center justify-between mb-4">
+              <span className="text-[9px] font-bold uppercase tracking-[1.5px] text-[#ff5500] bg-[#ff5500]/10 px-2.5 py-1 rounded-full">
+                Step {process[activeStep].number}
+              </span>
+              {process[activeStep].icon && (
+                <span className="grid border border-black/10 size-[32px] place-items-center rounded-full text-[#ff5500]">
+                  <img className="size-[16px]" src={process[activeStep].icon} alt="" />
+                </span>
+              )}
+            </div>
+
+            <motion.div
+              key={activeStep}
+              initial={{ opacity: 0, x: 15 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -15 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="flex flex-col"
+            >
+              <h3 className="text-[18px] font-bold leading-none tracking-[-0.5px]">
+                {process[activeStep].title}
+              </h3>
+              <p className="mt-2.5 text-[13px] leading-[22px] text-black/70">
+                {process[activeStep].copy}
+              </p>
+            </motion.div>
+          </div>
+        </div>
+
         {/* Partnership card — zoom-in feels more like a "highlight" than a fade */}
         <ScaleIn delay={0.1} startScale={0.94}>
           <div className="mx-auto mt-[40px] sm:mt-[56px] grid max-w-[900px] overflow-hidden rounded-[16px] border border-black/[0.03] bg-white shadow-[0_22px_42px_rgba(0,0,0,0.08)] md:min-h-[110px] md:grid-cols-[492px_1fr]">
-            <div className="flex items-center gap-[12px] min-[375px]:gap-[21px] px-4 min-[375px]:px-8 py-5 min-[375px]:py-7 md:px-[38px]">
+            <div className="flex items-center gap-[12px] min-[375px]:gap-[21px] px-4 min-[375px]:px-4 py-5 min-[375px]:py-7 md:px-[38px]">
               <span className="grid size-[36px] min-[375px]:size-[46px] shrink-0 place-items-center border border-gray-200 p-2.5 min-[375px]:p-3.5 rounded-full text-[22px] font-normal text-white shadow-[0_8px_16px_rgba(0,0,0,0.08)]">
                 <img src="/assets/star.png" alt="" />
               </span>
               <div>
-                <h3 className="text-[13px] min-[375px]:text-[14px] sm:text-[18px] font-bold leading-none">
+                <h3 className="text-[13px] min-[375px]:text-[13px] sm:text-[18px] font-bold leading-none">
                   A process that keeps things moving
                 </h3>
                 <p className="mt-[6px] min-[375px]:mt-[11px] max-w-[420px] text-[10px] min-[375px]:text-[11.5px] sm:text-[15px] leading-[18px] min-[375px]:leading-[24px] text-black/60">

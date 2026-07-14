@@ -96,7 +96,7 @@ export default function ContactPage() {
         <Brands />
       </div>
 
-      <Footer />
+      <Footer showGlobal={false} />
     </main>
   );
 }

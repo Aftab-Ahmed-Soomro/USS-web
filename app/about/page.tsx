@@ -37,7 +37,7 @@ function ArrowButton({ label, direction }: { label: string; direction: "left" | 
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-[#080808] text-white">
+    <div className="min-h-screen -mt-8 sm:mt-0 bg-[#080808] text-white">
       <Header />
 
       <main>

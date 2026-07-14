@@ -15,7 +15,7 @@ const regions = [
         United States
       </>
     ),
-    image: "/assets/Downtown Atlanta.webp",
+    image: "/assets/Atlanta.png",
     alt: "United States skyline at sunset",
   },
   {
@@ -27,7 +27,7 @@ const regions = [
         United Kingdom
       </>
     ),
-    image: "/assets/UK.webp",
+    image: "/assets/London.png",
     alt: "United Kingdom skyline at night",
   },
   {
@@ -39,12 +39,13 @@ const regions = [
         United Arab Emirates
       </>
     ),
-    image: "/assets/Dubai.jpeg",
+    image: "/assets/Dubai.png",
     alt: "UAE skyline at dusk",
   },
 ];
 
 interface WeAreGlobalProps {
+  isFooter?: boolean;
   images?: {
     Atlanta?: string;
     London?: string;
@@ -52,7 +53,7 @@ interface WeAreGlobalProps {
   };
 }
 
-export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
+export default function WeAreGlobal({ images, isFooter = false }: WeAreGlobalProps = {}) {
   const displayRegions = regions.map((region) => ({
     ...region,
     image: images?.[region.name as keyof typeof images] || region.image,
@@ -180,9 +181,48 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
             padding: 48px 16px;
           }
         }
+
+        .wag-carousel-container {
+          display: none;
+          width: 100%;
+          overflow: hidden;
+          margin-top: 26px;
+        }
+
+        @media (max-width: 640px) {
+          .wag-footer-carousel-active .wag-grid {
+            display: none;
+          }
+          .wag-footer-carousel-active .wag-carousel-container {
+            display: block;
+          }
+        }
+
+        .wag-carousel-track {
+          display: flex;
+          gap: 0;
+          width: max-content;
+          animation: wag-marquee-right 25s linear infinite;
+          will-change: transform;
+        }
+
+        .wag-carousel-track:hover {
+          animation-play-state: paused;
+        }
+
+        @keyframes wag-marquee-right {
+          0%   { transform: translateX(-33.3333%); }
+          100% { transform: translateX(0); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .wag-carousel-track {
+            animation: none;
+          }
+        }
       `}</style>
 
-      <section className="wag-section">
+      <section className={`wag-section ${isFooter ? "wag-footer-carousel-active" : ""}`}>
 
         {/* Heading — drops down */}
         <FadeDown delay={0.1}>
@@ -252,6 +292,114 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
           </FadeLeft>
 
         </div>
+
+        {isFooter && (
+          <div className="wag-carousel-container">
+            <div className="wag-carousel-track">
+              {/* Set 1 */}
+              <div className="flex gap-x-4 min-[375px]:gap-x-6 pr-4 min-[375px]:pr-6 shrink-0">
+                <div className="wag-card w-[290px] min-[375px]:w-[320px] shrink-0">
+                  <div className="wag-image-wrapper">
+                    <img src={displayRegions[2].image} alt={displayRegions[2].alt} />
+                  </div>
+                  <div className="wag-card-body">
+                    <h2 className="wag-card-title">{displayRegions[2].name}</h2>
+                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[2].description}</p>
+                    <br />
+                  </div>
+                </div>
+                <div className="wag-card w-[290px] min-[375px]:w-[320px] shrink-0">
+                  <div className="wag-image-wrapper">
+                    <img src={displayRegions[1].image} alt={displayRegions[1].alt} className="!object-[80%_0%]" />
+                  </div>
+                  <div className="wag-card-body">
+                    <h2 className="wag-card-title">{displayRegions[1].name}</h2>
+                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[1].description}</p>
+                    <br />
+                  </div>
+                </div>
+                <div className="wag-card w-[290px] min-[375px]:w-[320px] shrink-0">
+                  <div className="wag-image-wrapper">
+                    <img src={displayRegions[0].image} alt={displayRegions[0].alt} />
+                  </div>
+                  <div className="wag-card-body">
+                    <h2 className="wag-card-title">{displayRegions[0].name}</h2>
+                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[0].description}</p>
+                    <br />
+                  </div>
+                </div>
+              </div>
+
+              {/* Set 2 */}
+              <div className="flex gap-x-4 min-[375px]:gap-x-6 pr-4 min-[375px]:pr-6 shrink-0">
+                <div className="wag-card w-[290px] min-[375px]:w-[320px] shrink-0">
+                  <div className="wag-image-wrapper">
+                    <img src={displayRegions[2].image} alt={displayRegions[2].alt} />
+                  </div>
+                  <div className="wag-card-body">
+                    <h2 className="wag-card-title">{displayRegions[2].name}</h2>
+                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[2].description}</p>
+                    <br />
+                  </div>
+                </div>
+                <div className="wag-card w-[290px] min-[375px]:w-[320px] shrink-0">
+                  <div className="wag-image-wrapper">
+                    <img src={displayRegions[1].image} alt={displayRegions[1].alt} className="!object-[80%_0%]" />
+                  </div>
+                  <div className="wag-card-body">
+                    <h2 className="wag-card-title">{displayRegions[1].name}</h2>
+                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[1].description}</p>
+                    <br />
+                  </div>
+                </div>
+                <div className="wag-card w-[290px] min-[375px]:w-[320px] shrink-0">
+                  <div className="wag-image-wrapper">
+                    <img src={displayRegions[0].image} alt={displayRegions[0].alt} />
+                  </div>
+                  <div className="wag-card-body">
+                    <h2 className="wag-card-title">{displayRegions[0].name}</h2>
+                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[0].description}</p>
+                    <br />
+                  </div>
+                </div>
+              </div>
+
+              {/* Set 3 */}
+              <div className="flex gap-x-4 min-[375px]:gap-x-6 pr-4 min-[375px]:pr-6 shrink-0">
+                <div className="wag-card w-[290px] min-[375px]:w-[320px] shrink-0">
+                  <div className="wag-image-wrapper">
+                    <img src={displayRegions[2].image} alt={displayRegions[2].alt} />
+                  </div>
+                  <div className="wag-card-body">
+                    <h2 className="wag-card-title">{displayRegions[2].name}</h2>
+                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[2].description}</p>
+                    <br />
+                  </div>
+                </div>
+                <div className="wag-card w-[290px] min-[375px]:w-[320px] shrink-0">
+                  <div className="wag-image-wrapper">
+                    <img src={displayRegions[1].image} alt={displayRegions[1].alt} className="!object-[80%_0%]" />
+                  </div>
+                  <div className="wag-card-body">
+                    <h2 className="wag-card-title">{displayRegions[1].name}</h2>
+                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[1].description}</p>
+                    <br />
+                  </div>
+                </div>
+                <div className="wag-card w-[290px] min-[375px]:w-[320px] shrink-0">
+                  <div className="wag-image-wrapper">
+                    <img src={displayRegions[0].image} alt={displayRegions[0].alt} />
+                  </div>
+                  <div className="wag-card-body">
+                    <h2 className="wag-card-title">{displayRegions[0].name}</h2>
+                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[0].description}</p>
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </section>
     </>
   );

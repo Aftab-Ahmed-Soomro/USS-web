@@ -25,7 +25,7 @@ export function GoodCompanyMap() {
           </p>
         </FadeDown>
 
-        <div className="w-full relative max-w-[1200px] mx-auto px-2">
+        <div className="w-full relative max-w-[1200px] mx-auto  px-0 sm:px-2 pr-4 sm:pr-0 scale-[1.18] sm:scale-100 origin-center">
 
           {/* Background map lines — slides in from left */}
           <FadeLeft delay={0.3}>

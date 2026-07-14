@@ -44,7 +44,7 @@ export function Header() {
 
   return (
     <div className="bg-black sticky top-0 z-50 w-full border-b border-white/5 transition-all duration-300">
-      <header className="relative z-10 mx-auto flex w-full max-w-[1150px] flex-col px-4 sm:px-6 py-3 md:py-4 md:min-h-[80px] md:flex-row md:items-center md:justify-between md:py-0">
+      <header className="relative z-10 mx-auto flex w-full max-w-[1150px] flex-col px-4 sm:px-6 py-5 md:py-4 md:min-h-[80px] md:flex-row md:items-center md:justify-between md:py-0">
         
         {/* Top Bar for Mobile & Desktop */}
         <div className="flex w-full items-center justify-between md:w-auto md:flex-1 md:justify-start">
@@ -78,8 +78,8 @@ export function Header() {
         <nav
           id="main-navigation"
           aria-label="Main navigation"
-          className={`mt-4 flex w-full flex-col gap-4 overflow-hidden border-t border-white/10 pt-4 transition-[max-height,opacity] duration-300 md:mt-0 md:w-auto md:flex-row md:items-center md:justify-center md:gap-8 lg:gap-10 md:overflow-visible md:border-0 md:pt-0 md:opacity-100 ${
-            isMenuOpen ? "max-h-[100vh] opacity-100" : "max-h-0 opacity-0 md:max-h-none"
+          className={`flex w-full flex-col gap-4 overflow-hidden transition-[max-height,opacity,margin,padding] duration-300 md:mt-0 md:w-auto md:flex-row md:items-center md:justify-center md:gap-8 lg:gap-10 md:overflow-visible md:border-0 md:pt-0 md:opacity-100 ${
+            isMenuOpen ? "max-h-[100vh] opacity-100 mt-4 pt-4 border-t border-white/10" : "max-h-0 opacity-0 mt-0 pt-0 border-t-0 md:max-h-none"
           }`}
         >
           {navItems.map((item) =>

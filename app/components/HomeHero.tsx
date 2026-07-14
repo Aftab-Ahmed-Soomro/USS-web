@@ -1,21 +1,21 @@
 export function HomeHero() {
   return (
-    <section className="relative w-full min-h-[400px] sm:min-h-[550px] h-[100svh] max-h-[1080px] flex items-center overflow-hidden">
+    <section className="relative w-full h-auto aspect-video sm:h-[100svh] sm:min-h-[550px] max-h-[1080px] flex items-center overflow-hidden">
       {/* Background Video */}
-      <div className="absolute inset-0 z-0">
+      <div className="relative sm:absolute inset-0 w-full h-full z-0">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-center"
           preload="auto"
         >
           <source src="https://emmanuelcolewilliams.com/uss-assets/USS Main Website Showreel.mp4" type="video/mp4" />
         </video>
         {/* Cinematic gradient overlay — keeps text readable */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-black/10" />
-        <div className="absolute inset-0 bg-black/15" />
+        <div className="hidden sm:block absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-black/10" />
+        <div className="hidden sm:block absolute inset-0 bg-black/15" />
       </div>
 
       {/* Main Content */}
