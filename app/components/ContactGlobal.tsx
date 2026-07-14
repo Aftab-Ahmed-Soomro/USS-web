@@ -209,13 +209,9 @@ export default function WeAreGlobal({ images, isFooter = false }: WeAreGlobalPro
           will-change: transform;
         }
 
-        .wag-carousel-track:hover {
-          animation-play-state: paused;
-        }
-
         @keyframes wag-marquee-right {
-          0%   { transform: translateX(-33.3333%); }
-          100% { transform: translateX(0); }
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-33.3333%); }
         }
 
         @media (prefers-reduced-motion: reduce) {

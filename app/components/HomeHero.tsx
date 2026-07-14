@@ -10,6 +10,7 @@ export function HomeHero() {
           playsInline
           className="w-full h-full object-cover object-center"
           preload="auto"
+          onEnded={(e) => e.currentTarget.play()}
         >
           <source src="https://emmanuelcolewilliams.com/uss-assets/USS Main Website Showreel.mp4" type="video/mp4" />
         </video>

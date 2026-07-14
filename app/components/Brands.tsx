@@ -121,8 +121,8 @@ export function Brands() {
         /* Both scroll by exactly 1/3 (one set) so the loop is seamless
            with three duplicated sets */
         @keyframes marquee-right {
-          0%   { transform: translateX(-33.3333%); }
-          100% { transform: translateX(0); }
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-33.3333%); }
         }
 
         /* Respect reduced-motion preference */
