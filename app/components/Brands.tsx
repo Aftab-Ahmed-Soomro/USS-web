@@ -62,10 +62,12 @@ export function Brands() {
               className="group relative aspect-[176/314] w-[130px] min-[375px]:w-[150px] min-[480px]:w-[176px] shrink-0 overflow-hidden rounded-[22px] bg-black
                          sm:w-[210px] lg:w-[246px]"
             >
-              <img
+              <Image
                 src={brand.image}
                 alt="Brand campaign"
-                className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                fill
+                sizes="(max-width: 375px) 130px, (max-width: 480px) 150px, (max-width: 640px) 176px, (max-width: 1024px) 210px, 246px"
+                className="object-cover transition duration-500 group-hover:scale-105"
               />
             </article>
           ))}
