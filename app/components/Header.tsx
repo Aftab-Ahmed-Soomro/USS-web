@@ -5,22 +5,22 @@ import Link from "next/link";
 import { Button } from "./common/Button";
 
 const serviceLinks = [
-  { label: "360 Marketing", href: "/new-360-with-form", icon: "✦" },
-  { label: "Marketing Strategy", href: "/marketing-strategy", icon: "✦" },
-  { label: "Google Ads", href: "/google-ads", icon: "✦" },
-  { label: "Meta Ads", href: "/meta-ads", icon: "✦" },
-  { label: "WhatsApp & SMS", href: "/whatsapp-and-sms", icon: "✦" },
-  { label: "Email Marketing", href: "/email-marketing", icon: "✦" },
-  { label: "Social Media Management", href: "/social-media-management", icon: "✦" },
-  { label: "Content Creation", href: "/content-creation", icon: "✦" },
-  { label: "Talent Management", href: "/talent-management", icon: "✦" },
-  { label: "Website Design & Development", href: "/website", icon: "✦" }
+  { label: "360 Marketing", href: "/", icon: "✦" },
+  { label: "Marketing Strategy", href: "/", icon: "✦" },
+  { label: "Google Ads", href: "/", icon: "✦" },
+  { label: "Meta Ads", href: "/", icon: "✦" },
+  { label: "WhatsApp & SMS", href: "/", icon: "✦" },
+  { label: "Email Marketing", href: "/", icon: "✦" },
+  { label: "Social Media Management", href: "/", icon: "✦" },
+  { label: "Content Creation", href: "/", icon: "✦" },
+  { label: "Talent Management", href: "/", icon: "✦" },
+  { label: "Website Design & Development", href: "/", icon: "✦" }
 ];
 
 const navItems = [
-  { label: "ABOUT", href: "/about" },
-  { label: "SERVICES", href: "/new-360-with-form", hasDropdown: true },
-  { label: "WORK", href: "/projects" },
+  { label: "ABOUT", href: "/" },
+  { label: "SERVICES", href: "/", hasDropdown: true },
+  { label: "WORK", href: "/" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -64,7 +64,7 @@ export function Header() {
               aria-label={isMenuOpen ? "Close main navigation" : "Open main navigation"}
               aria-expanded={isMenuOpen}
               aria-controls="main-navigation"
-              className="inline-flex size-8 sm:size-10 shrink-0 flex-col items-center justify-center gap-1 sm:gap-1.5 rounded-full border border-white/25 text-white transition hover:border-[#ff6b1f] hover:text-[#ff6b1f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff5a05]"
+              className="hidden size-8 sm:size-10 shrink-0 flex-col items-center justify-center gap-1 sm:gap-1.5 rounded-full border border-white/25 text-white transition hover:border-[#ff6b1f] hover:text-[#ff6b1f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff5a05]"
               onClick={() => setIsMenuOpen((open) => !open)}
             >
               <span className={`h-0.5 w-4 sm:w-5 rounded-full bg-current transition ${isMenuOpen ? "translate-y-1.5 sm:translate-y-2 rotate-45" : ""}`} />
@@ -125,7 +125,7 @@ export function Header() {
                     <div className="p-3 grid grid-cols-2 gap-1">
                       {serviceLinks.map((service) => (
                         <Link
-                          key={service.href}
+                          key={service.label}
                           href={service.href}
                           onClick={() => setIsServicesOpen(false)}
                           className="group flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-[13px] tracking-[0.1em] font-bold uppercase text-white transition-all duration-150 hover:bg-white/[0.06] hover:text-white"
@@ -174,7 +174,7 @@ export function Header() {
                     <div className="mt-2 flex flex-col gap-0.5 border-l border-[#ff6b1f]/30 pl-3">
                       {serviceLinks.map((service) => (
                         <Link
-                          key={service.href}
+                          key={service.label}
                           href={service.href}
                           onClick={() => {
                             setIsMobileServicesOpen(false);

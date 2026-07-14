@@ -21,27 +21,27 @@ const offices = [
 ];
 
 const quickLinks = [
-  { name: "About Us", href: "/about" },
-  { name: "Services", href: "/new-360-with-form" },
-  { name: "Work", href: "/projects" },
+  { name: "About Us", href: "/" },
+  { name: "Services", href: "/" },
+  { name: "Work", href: "/" },
   { name: "Contact", href: "/contact" },
   { name: "Book a Consultation", href: "/contact" }
 ];
 
 const servicesCol1 = [
-  { name: "360 Marketing", href: "/services/new-360-with-form" },
-  { name: "Google Ads", href: "/services/google-ads" },
-  { name: "WhatsApp & SMS", href: "/services/whatsapp-and-sms" },
-  { name: "Social Media Marketing", href: "/services/social-media-management" },
-  { name: "Talent Management", href: "/services/talent-management" },
+  { name: "360 Marketing", href: "/" },
+  { name: "Google Ads", href: "/" },
+  { name: "WhatsApp & SMS", href: "/" },
+  { name: "Social Media Marketing", href: "/" },
+  { name: "Talent Management", href: "/" },
 ];
 
 const servicesCol2 = [
-  { name: "Marketing Strategy", href: "/services/marketing-strategy" },
-  { name: "Meta Ads", href: "/services/meta-ads" },
-  { name: "Email Marketing", href: "/services/email-marketing" },
-  { name: "Content Creation", href: "/services/content-creation" },
-  { name: "Web Development", href: "/services/website" },
+  { name: "Marketing Strategy", href: "/" },
+  { name: "Meta Ads", href: "/" },
+  { name: "Email Marketing", href: "/" },
+  { name: "Content Creation", href: "/" },
+  { name: "Web Development", href: "/" },
 ];
 
 export function Footer({ showGlobal = true }: { showGlobal?: boolean }) {
