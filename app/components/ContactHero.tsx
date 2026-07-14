@@ -30,7 +30,7 @@ export default function ContactHero() {
   ];
 
   return (
-    <section className="relative w-full bg-[#000] overflow-hidden py-16 sm:py-28">
+    <section className="relative w-full bg-[#000] overflow-hidden py-8 sm:py-28">
 
       {/* Ambient glow — top centre */}
       <div

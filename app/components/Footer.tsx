@@ -54,8 +54,7 @@ export function Footer({ showGlobal = true }: { showGlobal?: boolean }) {
         {/* Top Section: Offices */}
         {showGlobal && (
           <>
-            <WeAreGlobal 
-              isFooter={true}
+            <WeAreGlobal
               images={{
                 Dubai: "/assets/Dubai.png",
                 London: "/assets/London.png",
@@ -111,7 +110,7 @@ export function Footer({ showGlobal = true }: { showGlobal?: boolean }) {
           <div className="flex flex-col md:flex-row gap-4 sm:gap-16 lg:gap-24 lg:ml-auto pt-4 w-full">
             {/* Quick Links */}
             <div className="mr-0 sm:mr-14 border-b border-white/10 sm:border-none pb-4 sm:pb-0">
-              <button 
+              <button
                 onClick={() => setIsQuickLinksOpen(!isQuickLinksOpen)}
                 className="flex items-center justify-between w-full sm:pointer-events-none outline-none"
               >
@@ -130,7 +129,7 @@ export function Footer({ showGlobal = true }: { showGlobal?: boolean }) {
 
             {/* Services */}
             <div className="border-b border-white/10 sm:border-none pb-4 sm:pb-0">
-              <button 
+              <button
                 onClick={() => setIsServicesOpen(!isServicesOpen)}
                 className="flex items-center justify-between w-full sm:pointer-events-none outline-none sm:block"
               >

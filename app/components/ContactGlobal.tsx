@@ -45,7 +45,6 @@ const regions = [
 ];
 
 interface WeAreGlobalProps {
-  isFooter?: boolean;
   images?: {
     Atlanta?: string;
     London?: string;
@@ -53,7 +52,7 @@ interface WeAreGlobalProps {
   };
 }
 
-export default function WeAreGlobal({ images, isFooter = false }: WeAreGlobalProps = {}) {
+export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
   const displayRegions = regions.map((region) => ({
     ...region,
     image: images?.[region.name as keyof typeof images] || region.image,
@@ -196,10 +195,10 @@ export default function WeAreGlobal({ images, isFooter = false }: WeAreGlobalPro
         }
 
         @media (max-width: 640px) {
-          .wag-footer-carousel-active .wag-grid {
+          .wag-grid {
             display: none;
           }
-          .wag-footer-carousel-active .wag-carousel-container {
+          .wag-carousel-container {
             display: block;
           }
         }
@@ -224,7 +223,7 @@ export default function WeAreGlobal({ images, isFooter = false }: WeAreGlobalPro
         }
       `}</style>
 
-      <section className={`wag-section ${isFooter ? "wag-footer-carousel-active" : ""}`}>
+      <section className="wag-section">
 
         {/* Heading — drops down */}
         <FadeDown delay={0.1}>
@@ -295,8 +294,7 @@ export default function WeAreGlobal({ images, isFooter = false }: WeAreGlobalPro
 
         </div>
 
-        {isFooter && (
-          <div className="wag-carousel-container">
+        <div className="wag-carousel-container">
             <div className="wag-carousel-track">
               {/* Set 1 */}
               <div className="flex gap-x-4 min-[375px]:gap-x-6 pr-4 min-[375px]:pr-6 shrink-0">
@@ -401,7 +399,6 @@ export default function WeAreGlobal({ images, isFooter = false }: WeAreGlobalPro
               </div>
             </div>
           </div>
-        )}
       </section>
     </>
   );
