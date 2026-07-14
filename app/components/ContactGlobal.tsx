@@ -177,6 +177,9 @@ export default function WeAreGlobal({ images, isFooter = false }: WeAreGlobalPro
         }
 
         @media (max-width: 480px) {
+        .wag-heading {
+          font-size: 34px;
+        }
         .wag-subtitle {
           margin: 0;
         }

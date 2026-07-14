@@ -162,7 +162,7 @@ export function Numbers({
           <FadeLeft delay={0.1}>
             <div>
               <p className="text-[12px] sm:text-[14px] font-bold uppercase tracking-[1.2px]">{eyebrow}</p>
-              <h2 className="mt-[12px] sm:mt-[19px] max-w-[490px] text-[32px] min-[375px]:text-[38px] font-medium leading-[0.98] tracking-[-6%] sm:text-[48px] lg:text-[56px]">
+              <h2 className="mt-[12px] sm:mt-[19px] max-w-[490px] text-[32px] font-medium leading-[0.98] tracking-[-6%] sm:text-[48px] lg:text-[56px]">
                 {titleLines.map((line, index) => (
                   <span className="block" key={`${line}-${index}`}>
                     {line}
@@ -214,7 +214,7 @@ export function Numbers({
         <div className="mt-[32px] flex justify-center pb-[16px] md:hidden">
           <FadeUp delay={0.6}>
             <Link
-              className="inline-flex h-[30px] min-[375px]:h-[34px] px-6 items-center justify-center rounded-full bg-white font-[var(--font-be-vietnam)] text-[10px] min-[375px]:text-[12px] tracking-[1px] font-medium text-black transition uppercase hover:bg-[#ff6b1f]"
+              className="inline-flex h-[30px] min-[375px]:h-[34px] px-6 items-center justify-center rounded-full bg-white font-[var(--font-be-vietnam)] text-[10px] min-[375px]:text-[12px] tracking-[-0.5px] sm:tracking-[1px] font-medium text-black transition uppercase hover:bg-[#ff6b1f]"
               href="/contact"
             >
               Book a Consultation

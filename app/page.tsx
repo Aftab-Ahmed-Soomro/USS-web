@@ -87,16 +87,16 @@ function Strategic() {
         {/* Section label — drops in from above */}
         <div className="text-center">
           <FadeDown>
-            <p className="font-[var(--font-be-vietnam)] text-[9px] sm:text-[11px] font-bold uppercase leading-none tracking-[3px] text-[#ff5500]">
+            <p className="font-[var(--font-be-vietnam)] text-[10px] sm:text-[11px] font-bold uppercase leading-none tracking-[3px] text-[#ff5500]">
               OUR APPROACH
             </p>
           </FadeDown>
 
           {/* Headline — scales in for more punch than a plain fade */}
           <ScaleIn delay={0.1} startScale={0.92}>
-            <h2 className="mt-[20px] sm:mt-[35px] text-[26px] min-[375px]:text-[26px] font-medium leading-[1.05] tracking-[-0.8px] sm:text-[56px]">
+            <h2 className="mt-[26px] sm:mt-[35px] text-[32px] font-medium leading-[0.6] sm:leading-[1.05] tracking-[-0.8px] sm:text-[56px]">
               a strategic process
-              <span className="mt-[10px] sm:mt-[25px] block font-[var(--font-cormorant)] text-[30px] min-[375px]:text-[30px] font-normal timesFontFamily italic leading-[0.9] tracking-[-0.8px] text-[#ff5500] sm:text-[56px]">
+              <span className="mt-[10px] sm:mt-[25px] block font-[var(--font-cormorant)] text-[40px] font-normal timesFontFamily italic leading-[0.9] tracking-[-0.8px] text-[#ff5500] sm:text-[56px]">
                 built to perform
               </span>
             </h2>
@@ -104,7 +104,7 @@ function Strategic() {
 
           {/* Supporting copy */}
           <FadeUp delay={0.2}>
-            <p className="mx-auto mt-[16px] sm:mt-[32px] max-w-[580px] text-[13px] min-[375px]:text-[13px] sm:text-[24px] font-normal leading-[-1%] px-2 sm:px-0">
+            <p className="mx-auto mt-[20px] sm:mt-[32px] max-w-[580px] text-[13px] min-[375px]:text-[13px] sm:text-[24px] font-normal leading-[-1%] px-2 sm:px-0">
               Every project starts with understanding your business before we plan, create and deliver.
             </p>
           </FadeUp>
@@ -262,13 +262,13 @@ function FinalCta() {
 
         {/* Main headline — scales in for emphasis as the hero statement of the section */}
         <ScaleIn delay={0.1} startScale={0.88}>
-          <h2 className="mb-8 sm:mb-10 text-[26px] min-[375px]:text-[32px] font-medium leading-[1.05] tracking-[-6%] sm:text-[56px]">
+          <h2 className="mb-8 sm:mb-10 text-[32px] leading-[0.95] font-medium sm:leading-[1.05] tracking-[-6%] sm:text-[56px]">
             we are your{" "}
             <span className="font-[var(--font-cormorant)] text-[34px] min-[375px]:text-[40px] sm:text-[72px] font-light timesFontFamily italic">
               360&deg;
             </span>
             <br />
-            <span className="font-[var(--font-cormorant)] text-[34px] min-[375px]:text-[40px] sm:text-[72px] font-normal timesFontFamily italic">
+            <span className="font-[var(--font-cormorant)] text-[40px] sm:text-[72px] font-normal timesFontFamily italic">
               marketing agency
             </span>
           </h2>
