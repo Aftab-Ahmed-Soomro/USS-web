@@ -92,7 +92,7 @@ export default function ContactPage() {
 
       <WeAreGlobal />
 
-      <div className="bg-[#080808]">
+      <div className="bg-[#080808] hidden sm:block">
         <Brands />
       </div>
 
