@@ -56,7 +56,7 @@ export function Brands() {
       <div className="mt-[26px] w-full mx-auto overflow-hidden">
         <div className="brand-cards-track flex items-center gap-x-4 min-[375px]:gap-x-6 sm:gap-x-12">
           {/* Three sets for seamless loop */}
-          {[...brandCards, ...brandCards, ...brandCards].map((brand, index) => (
+          {[...brandCards, ...brandCards].map((brand, index) => (
             <article
               key={index}
               className="group relative aspect-[176/314] w-[130px] min-[375px]:w-[150px] min-[480px]:w-[176px] shrink-0 overflow-hidden rounded-[22px] bg-black

@@ -74,8 +74,8 @@ export function Footer({ showGlobal = true }: { showGlobal?: boolean }) {
             <div className="flex items-center justify-between mb-4 w-full">
               <h2 className="text-white text-[42px] font-bold tracking-wide">USS</h2>
               <div className="flex mr-0 sm:mr-10 items-center gap-3 text-white">
-                <a href="#" className="hover:text-[#FF5500] transition-colors"><FaLinkedin className="text-3xl" /></a>
-                <a href="#" className="hover:text-[#FF5500] transition-colors"><FaInstagramSquare className="text-3xl" /></a>
+                <a href="https://www.linkedin.com/company/united-strategic-solutions" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF5500] transition-colors"><FaLinkedin className="text-3xl" /></a>
+                <a href="https://www.instagram.com/unitedstrategicsolutions/" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF5500] transition-colors"><FaInstagramSquare className="text-3xl" /></a>
               </div>
             </div>
 

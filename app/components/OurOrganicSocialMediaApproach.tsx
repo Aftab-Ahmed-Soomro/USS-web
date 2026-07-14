@@ -3,7 +3,7 @@ import Stagger from "./Stagger";
 import StaggerItem from "./Staggeritem";
 
 const socialVisuals = Array.from({ length: 13 }, (_, i) => ({
-  src: `https://emmanuelcolewilliams.com/uss-assets/socialGrids/${i + 1}.png`,
+  src: `/assets/socialGrids/${i + 1}.png`,
   alt: `Organic Social Grid ${i + 1}`,
 }));
 
@@ -51,7 +51,6 @@ export default function OurOrganicSocialMediaApproach() {
                     src={visual.src}
                     alt={visual.alt}
                     fill
-                    unoptimized
                     sizes="(min-width: 1024px) 404px, (min-width: 640px) 292px, (min-width: 390px) 258px, 200px"
                     className="object-cover object-top hover:scale-105 transition-transform duration-700 ease-out"
                   />

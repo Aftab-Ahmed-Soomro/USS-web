@@ -19,7 +19,7 @@ export default function BrandElevationVideo() {
     <section className="relative w-full h-auto aspect-video sm:h-[100svh] sm:min-h-[720px] md:h-[120svh] overflow-hidden ">
   <video
     ref={videoRef}
-    src="https://emmanuelcolewilliams.com/uss-assets/USS AD_FINAL.mp4"
+    src="/assets/USS AD_FINAL.mp4"
     autoPlay
     loop
     muted={isMuted}

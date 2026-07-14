@@ -126,7 +126,6 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
                 style={{
                   objectPosition: project.heroImage.position ?? "center",
                 }}
-                unoptimized
               />
               <CornerFrame />
             </div>
@@ -230,7 +229,6 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
                 src={image.src}
                 alt={image.alt}
                 fill
-                unoptimized
                 sizes="(min-width: 1024px) 330px, (min-width: 640px) 45vw, 90vw"
                 className="object-cover"
                 style={{ objectPosition: image.position ?? "center" }}
@@ -253,7 +251,6 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
             src={image.src}
             alt={image.alt}
             fill
-            unoptimized
             sizes="(min-width: 1024px) 280px, (min-width: 640px) 45vw, 90vw"
             className="object-cover"
             style={{ objectPosition: image.position ?? "center" }}
@@ -417,7 +414,6 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
                       src={image.src}
                       alt={image.alt}
                       fill
-                      unoptimized
                       sizes="(min-width: 1024px) 280px, (min-width: 640px) 45vw, 90vw"
                       className="object-cover"
                       style={{ objectPosition: image.position ?? "center" }}

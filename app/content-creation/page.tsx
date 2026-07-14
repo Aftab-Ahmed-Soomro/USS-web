@@ -161,7 +161,7 @@ function VideoSection() {
               className="absolute inset-0 w-full h-full object-cover object-center"
               preload="auto"
             >
-              <source src="https://emmanuelcolewilliams.com/uss-assets/USS Main Website Showreel.mp4" type="video/mp4" />
+              <source src="/assets/USS Main Website Showreel.mp4" type="video/mp4" />
             </video>
             <div className="absolute inset-0 bg-black/14" />
             <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_20px_10px_rgba(0,0,0,0.92)] min-[480px]:shadow-[inset_0_0_40px_20px_rgba(0,0,0,0.92)] sm:shadow-[inset_0_0_92px_58px_rgba(0,0,0,0.92)]" />
