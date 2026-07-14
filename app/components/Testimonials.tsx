@@ -181,7 +181,7 @@ export function Testimonials() {
             {testimonials.map((testimonial, idx) => (
               <div
                 key={idx}
-                className="relative w-[calc(50%-12px)] lg:w-[calc(33.333333%-16px)] shrink-0 aspect-square sm:aspect-auto sm:h-[480px] snap-start overflow-hidden group/card bg-[#111]"
+                className="relative w-[calc(50%-12px)] lg:w-[calc(33.333333%-16px)] shrink-0 aspect-[3/4] sm:aspect-auto sm:h-[480px] snap-start overflow-hidden group/card bg-[#111]"
               >
                 <Image
                   src={testimonial.image}
