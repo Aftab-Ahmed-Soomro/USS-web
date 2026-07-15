@@ -3,11 +3,16 @@
 import Image from "next/image";
 import FadeDown from "./FadeDown";
 import FadeUp from "./FadeUp";
+import { useEffect, useState } from "react";
 
-const brandCards = Array.from(
+// All 37 brand card images
+const ALL_BRAND_CARDS = Array.from(
   { length: 37 },
   (_, i) => ({ image: `/assets/brands/brands/${i + 1}.webp` })
 );
+
+// Initial set — only 10 cards rendered on first paint to avoid 74 simultaneous image requests
+const INITIAL_CARDS = ALL_BRAND_CARDS.slice(0, 10);
 
 const ecwLogos = [
   "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/01-1.png",
@@ -42,6 +47,15 @@ const ecwLogos = [
 ];
 
 export function Brands() {
+  // Start with only 10 cards; after page load expand to full 37 for seamless marquee
+  const [brandCards, setBrandCards] = useState(INITIAL_CARDS);
+
+  useEffect(() => {
+    // Defer hydrating the full card set until the browser is idle
+    const id = setTimeout(() => setBrandCards(ALL_BRAND_CARDS), 800);
+    return () => clearTimeout(id);
+  }, []);
+
   return (
     <section className="relative z-10 pb-[40px] sm:pb-[58px] pt-[10px] sm:pt-[58px] text-white bg-black">
 
@@ -55,7 +69,7 @@ export function Brands() {
       {/* ── Brand Cards — horizontal left-scrolling marquee ── */}
       <div className="mt-[26px] w-full mx-auto overflow-hidden">
         <div className="brand-cards-track flex items-center gap-x-4 min-[375px]:gap-x-6 sm:gap-x-12">
-          {/* Three sets for seamless loop */}
+          {/* Two sets for seamless loop */}
           {[...brandCards, ...brandCards].map((brand, index) => (
             <article
               key={index}
@@ -120,8 +134,6 @@ export function Brands() {
           will-change: transform;
         }
 
-        /* Both scroll by exactly 1/3 (one set) so the loop is seamless
-           with three duplicated sets */
         @keyframes marquee-right {
           0%   { transform: translateX(0); }
           100% { transform: translateX(-50%); }
