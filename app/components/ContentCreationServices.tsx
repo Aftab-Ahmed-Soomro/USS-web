@@ -1,5 +1,6 @@
 import React from 'react';
 import FadeUp from './FadeUp';
+import Image from 'next/image';
 
 const ICONS = {
   strategy: (
@@ -44,14 +45,17 @@ const ICONS = {
   ),
 };
 
-function ServiceCard({ num, title, heightClass, icon }: any) {
+function ServiceCard({ num, title, heightClass, icon, image }: any) {
   return (
     <div
       className={`relative w-full ${heightClass} rounded-[24px] border border-white/[0.04] overflow-hidden p-[24px] flex flex-col justify-between group transition-transform duration-500 hover:-translate-y-1`}
-      style={{
+      style={!image ? {
         background: 'radial-gradient(circle at 30% 30%, rgba(255,85,0,0.18) 0%, rgba(15,8,5,1) 40%, rgba(5,5,5,1) 100%)'
-      }}
+      } : {}}
     >
+      {image && (
+        <Image src={image} alt={title} fill className="object-cover" sizes="(max-width: 768px) 50vw, 33vw" />
+      )}
       {/* Soft overlay gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/40 pointer-events-none" />
 
@@ -167,19 +171,19 @@ export function ContentCreationServices() {
               {/* Col 1 */}
               <div className="flex flex-col gap-[12px] sm:gap-[16px] w-1/2">
                 <FadeUp delay={0.3}>
-                  <ServiceCard num="01" title="STRATEGY" heightClass="h-[200px] sm:h-[340px]" icon={ICONS.strategy} />
+                  <ServiceCard num="01" title="STRATEGY" heightClass="h-[200px] sm:h-[340px]" icon={ICONS.strategy} image="/assets/pre and post/1.webp" />
                 </FadeUp>
                 <FadeUp delay={0.4}>
-                  <ServiceCard num="03" title="SCRIPT" heightClass="h-[140px] sm:h-[220px]" icon={ICONS.script} />
+                  <ServiceCard num="03" title="SCRIPT" heightClass="h-[140px] sm:h-[220px]" icon={ICONS.script} image="/assets/pre and post/3.webp" />
                 </FadeUp>
               </div>
               {/* Col 2 */}
               <div className="flex flex-col gap-[12px] sm:gap-[16px] w-1/2 mt-[30px] sm:mt-[40px]">
                 <FadeUp delay={0.5}>
-                  <ServiceCard num="02" title="PLANNING" heightClass="h-[140px] sm:h-[220px]" icon={ICONS.planning} />
+                  <ServiceCard num="02" title="PLANNING" heightClass="h-[140px] sm:h-[220px]" icon={ICONS.planning} image="/assets/pre and post/2.webp" />
                 </FadeUp>
                 <FadeUp delay={0.6}>
-                  <ServiceCard num="04" title="STORYBOARD" heightClass="h-[200px] sm:h-[340px]" icon={ICONS.storyboard} />
+                  <ServiceCard num="04" title="STORYBOARD" heightClass="h-[200px] sm:h-[340px]" icon={ICONS.storyboard} image="/assets/pre and post/4.webp" />
                 </FadeUp>
               </div>
             </div>
@@ -210,19 +214,19 @@ export function ContentCreationServices() {
               {/* Col 1 */}
               <div className="flex flex-col gap-[12px] sm:gap-[16px] w-1/2">
                 <FadeUp delay={0.3}>
-                  <ServiceCard num="06" title="MOTION" heightClass="h-[140px] sm:h-[220px]" icon={ICONS.motion} />
+                  <ServiceCard num="05" title="MOTION" heightClass="h-[140px] sm:h-[220px]" icon={ICONS.motion} image="/assets/pre and post/5.webp" />
                 </FadeUp>
                 <FadeUp delay={0.4}>
-                  <ServiceCard num="08" title="DELIVERY" heightClass="h-[200px] sm:h-[340px]" icon={ICONS.delivery} />
+                  <ServiceCard num="07" title="DELIVERY" heightClass="h-[200px] sm:h-[340px]" icon={ICONS.delivery} image="/assets/pre and post/7.webp" />
                 </FadeUp>
               </div>
               {/* Col 2 */}
               <div className="flex flex-col gap-[12px] sm:gap-[16px] w-1/2 mt-[30px] sm:mt-[40px]">
                 <FadeUp delay={0.5}>
-                  <ServiceCard num="05" title="EDITING" heightClass="h-[200px] sm:h-[340px]" icon={ICONS.editing} />
+                  <ServiceCard num="06" title="EDITING" heightClass="h-[200px] sm:h-[340px]" icon={ICONS.editing} image="/assets/pre and post/6.webp" />
                 </FadeUp>
                 <FadeUp delay={0.6}>
-                  <ServiceCard num="07" title="COLOR" heightClass="h-[140px] sm:h-[220px]" icon={ICONS.color} />
+                  <ServiceCard num="08" title="COLOR" heightClass="h-[140px] sm:h-[220px]" icon={ICONS.color} image="/assets/pre and post/8.webp" />
                 </FadeUp>
               </div>
             </div>
