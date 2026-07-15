@@ -20,7 +20,7 @@ const serviceLinks = [
 
 const navItems = [
   { label: "ABOUT", href: "/about", hasDropdown:false },
-  { label: "SERVICES", href: "/", hasDropdown: true },
+    { label: "SERVICES", href: "/new-360-with-form", hasDropdown: true },
   { label: "WORK", href: "/projects" },
   { label: "CONTACT", href: "/contact" },
 ];
