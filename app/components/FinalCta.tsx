@@ -30,7 +30,7 @@ export function FinalCta() {
         <ScaleIn delay={0.1} startScale={0.88}>
           <h2 className="mb-8 sm:mb-10 text-[32px] leading-[0.95] font-medium sm:leading-[1.05] tracking-[-6%] sm:text-[56px]">
             we are your{" "}
-            <span className="font-[var(--font-cormorant)] text-[34px] min-[375px]:text-[40px] sm:text-[72px] font-light timesFontFamily italic">
+            <span className="font-[var(--font-cormorant)] text-[40px] sm:text-[72px] font-light timesFontFamily italic">
               360&deg;
             </span>
             <br />

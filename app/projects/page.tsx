@@ -130,28 +130,28 @@ const labelCardVariants = {
 
 function ProjectsCta() {
   return (
-    <section className="relative z-10 px-4 min-[375px]:px-6 pb-[40px] sm:pb-[80px] -mt-20 sm:mt-0 text-white overflow-hidden">
+    <section className="relative z-10 px-4 min-[375px]:px-6 pb-[4px] sm:pb-[80px] -mt-20 sm:mt-0 text-white overflow-hidden">
       <div className="relative mx-auto max-w-[800px] text-center">
 
         {/* Eyebrow pill — drops down */}
-        <FadeDown delay={0.1}>
+        {/* <FadeDown delay={0.1}> */}
           <div className="flex items-center justify-center gap-2 mb-6 sm:mb-8">
             <div className="h-1.5 w-1.5 rounded-full bg-[#ff5500]"></div>
-            <p className="text-[9px] font-bold uppercase tracking-[3px] text-white">
+            <p className="text-[10px] font-bold uppercase tracking-[3px] text-white">
               FULL-STACK MARKETING
             </p>
           </div>
-        </FadeDown>
+        {/* </FadeDown> */}
 
         {/* Main heading — rises up */}
         <FadeUp delay={0.2}>
-          <h2 className="mb-6 sm:mb-10 text-[32px] min-[375px]:text-[42px] font-medium leading-[1.05] tracking-[-6%] sm:text-[56px]">
+          <h2 className="mb-6 sm:mb-10 font-medium text-[32px] leading-[0.95] tracking-[-6%] sm:text-[56px]">
             we are your{" "}
-            <span className="font-[var(--font-cormorant)] text-[1.1em] font-light timesFontFamily italic">
+            <span className="font-[var(--font-cormorant)] text-[40px] sm:text-[72px] text-[1.1em] font-light timesFontFamily italic">
               360&deg;
             </span>
             <br />
-            <span className="font-[var(--font-cormorant)] text-[1.1em] sm:text-[72px] tracking-[-6%] font-normal timesFontFamily italic">
+            <span className="font-[var(--font-cormorant)] text-[40px] sm:text-[72px] tracking-[-6%] font-normal timesFontFamily italic">
               marketing agency
             </span>
           </h2>
@@ -159,7 +159,7 @@ function ProjectsCta() {
 
         {/* Body copy — slides in from right */}
         <FadeRight delay={0.3}>
-          <div className="mx-auto max-w-[640px] space-y-6 sm:space-y-8 text-[12px] sm:text-[16px] leading-[1.6] sm:leading-[1.7] tracking-[0%] text-white">
+          <div className="mx-auto max-w-[640px] space-y-6 sm:space-y-8 text-[13px] min-[375px]:text-[14px] sm:text-[16px] leading-[1.6] sm:leading-[1.7] tracking-[0%] text-white">
             <p>
               Calling ourselves a data-driven, problem solving, people connecting, digital crazy,
               talent engaging creative agency is too long winded.. so we call ourselves USS.
@@ -172,19 +172,10 @@ function ProjectsCta() {
 
         {/* CTA buttons — rise up last */}
         <FadeUp delay={0.4}>
-          <div className="mt-8 sm:mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link href="/contact" className="block w-full sm:w-auto sm:inline-block">
-              <button className="h-[46px] sm:h-[40px] w-full sm:w-auto cursor-pointer px-10 rounded-full bg-[#ff5500] text-[11px] font-bold sm:text-[13px] tracking-[0.52px] text-white transition-colors uppercase hover:bg-[#ff6b1f]">
-                Book a Consultation
-              </button>
+          <div className="mt-6 sm:mt-8 max-w-[600px] mx-auto flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Link href="/contact" className="flex h-[40px] w-max sm:w-auto px-8 sm:px-10 items-center justify-center rounded-full bg-[#ff5500] text-[12px] sm:text-[13px] font-bold text-white transition-colors uppercase hover:bg-[#ff6b1f]">
+              Book a Consultation
             </Link>
-            {/* <button className="flex h-[40px] w-full sm:w-auto px-8 items-center justify-center gap-2 rounded-full border border-white bg-transparent text-[8px] font-bold sm:text-[13px] tracking-[0.52px] text-white transition-colors hover:bg-white/5">
-              See How We Scale
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1 opacity-80">
-                <path d="M5 12h14"></path>
-                <path d="m12 5 7 7-7 7"></path>
-              </svg>
-            </button> */}
           </div>
         </FadeUp>
 
@@ -197,11 +188,11 @@ function ProjectsCta() {
 
 export default function ProjectsPage() {
   return (
-    <main className="min-h-screen bg-black overflow-hidden">
+    <main className="bg-black overflow-hidden">
       <Header />
 
       {/* Hero section */}
-      <section className="bg-black px-4 min-[375px]:px-6 pb-[40px] min-[375px]:pb-[60px] pt-[80px] sm:pt-[112px] text-center text-white sm:pb-[90px]">
+      <section className="bg-black px-4 min-[375px]:px-6 pb-[40px] min-[375px]:pb-[60px] pt-[44px] sm:pt-[112px] text-center text-white sm:pb-[90px]">
         <div className="mx-auto max-w-[1150px]">
 
           {/* Eyebrow — drops down */}
@@ -213,9 +204,9 @@ export default function ProjectsPage() {
 
           {/* Main heading — rises up */}
           <FadeUp delay={0.2}>
-            <h1 className="mt-[12px] sm:mt-[20px] font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[38px] font-bold lowercase leading-[1.03] tracking-[-0.9px] text-white sm:text-[56px] sm:tracking-[-0.9px]">
+            <h1 className="mt-[12px] sm:mt-[20px] font-[var(--font-be-vietnam)] text-[28px] font-bold lowercase leading-[1.03] tracking-[-0.9px] text-white sm:text-[56px] sm:tracking-[-0.9px]">
               projects that make an{" "}
-              <span className="font-[var(--font-cormorant)] text-[1.15em] sm:text-[72px] font-extralight timesFontFamily italic tracking-[-0.9px] text-[#ff5500]">
+              <span className="font-[var(--font-cormorant)] text-[38px] sm:text-[72px] font-extralight timesFontFamily italic tracking-[-0.9px] text-[#ff5500]">
                 impact
               </span>
             </h1>
@@ -223,7 +214,7 @@ export default function ProjectsPage() {
 
           {/* Subheading — slides in from right */}
           <FadeRight delay={0.3}>
-            <p className="mt-[16px] sm:mt-[30px] font-[var(--font-be-vietnam)] text-[11px] min-[375px]:text-[12px] font-medium leading-[1.35] text-white sm:text-[16.5px]">
+            <p className="mt-[16px] sm:mt-[30px] font-[var(--font-be-vietnam)] text-[12px] font-medium leading-[1.35] text-white sm:text-[16.5px]">
               Take a look at USS projects across UK, US and Middle East
             </p>
           </FadeRight>
@@ -247,81 +238,105 @@ export default function ProjectsPage() {
               {/* Sticky category label card — slides in from left */}
               <motion.div
                 // variants={labelCardVariants}
-                className="sticky left-0 z-10 shrink-0 w-[140px] min-[375px]:w-[180px] sm:w-[270px] h-[337.5px] rounded-[16px] bg-[#0E0E0E] border border-white/5 relative p-4 sm:p-6 flex flex-col justify-between self-start"
+                className="sticky left-0 z-10 shrink-0 w-[150px] min-[375px]:w-[160px] sm:w-[270px] aspect-[4/5] rounded-[12px] sm:rounded-[16px] bg-[#0E0E0E] border border-white/5 relative p-4 sm:p-6 flex flex-col justify-between items-start self-start"
               >
                 {/* Subtle top-left glow accent */}
-                <div className="pointer-events-none absolute -top-10 -left-10 h-[120px] sm:h-[180px] w-[120px] sm:w-[180px] rounded-full bg-[#ff5500] opacity-[0.06] blur-[60px]" />
+                <div className="pointer-events-none absolute -top-10 -left-10 h-[100px] sm:h-[180px] w-[100px] sm:w-[180px] rounded-full bg-[#ff5500] opacity-[0.06] blur-[60px]" />
 
-                <div className="self-end bg-white/5 backdrop-blur-md border border-white/10 text-white/80 text-[8px] min-[375px]:text-[9px] sm:text-[10px] font-medium px-2 min-[375px]:px-3 py-1 min-[375px]:py-1.5 rounded-full font-[var(--font-inter)] tracking-[-0.2px] w-fit">
+                <div className="self-end bg-white/5 backdrop-blur-md border border-white/10 text-white/80 text-[8px] min-[375px]:text-[9px] sm:text-[10px] font-medium px-2 min-[375px]:px-3 py-1 sm:py-1.5 rounded-full font-[var(--font-inter)] tracking-[-0.2px] w-fit">
                   {category.topTag}
                 </div>
-                <div>
-                  <h2 className="text-white text-[20px] min-[375px]:text-[28px] sm:text-[32px] font-normal font-[var(--font-be-vietnam)] leading-[1.1] tracking-[-0.5px]">
+                
+                <div className="flex flex-col items-start text-left w-full">
+                  <h2 className="text-white text-[18px] min-[375px]:text-[20px] sm:text-[32px] font-normal font-[var(--font-be-vietnam)] leading-[1.1] tracking-[-0.5px] break-words">
                     {category.name}
                   </h2>
-                  <div className="mt-2 sm:mt-4 bg-white/5 border border-white/10 rounded-full px-2 min-[375px]:px-4 py-1.5 min-[375px]:py-2 text-white/70 text-[8px] min-[375px]:text-[10px] font-medium font-[var(--font-inter)] tracking-[-0.2px] hover:bg-white/10 transition-colors cursor-pointer w-fit">
+                  <div className="mt-2 sm:mt-4 bg-white/5 border border-white/10 rounded-full px-3 py-1.5 min-[375px]:px-4 min-[375px]:py-2 text-white/70 text-[8px] min-[375px]:text-[10px] font-medium font-[var(--font-inter)] tracking-[-0.2px] hover:bg-white/10 transition-colors cursor-pointer w-fit">
                     {category.bottomTag}
                   </div>
                 </div>
               </motion.div>
 
               {/* Scrollable project cards — each card staggers in */}
-              <DraggableContainer className="flex gap-4 sm:gap-6 overflow-x-auto pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden snap-x snap-mandatory">
-                {category.projects.map((project, idx) => (
-                  <motion.div
-                    key={`${category.name}-${idx}`}
-                    initial={{ opacity: 0, y: 50, scale: 0.96, filter: "blur(10px)" }}
-                    whileInView={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
-                    viewport={{ once: true, amount: 0.1 }}
-                    transition={{ duration: 0.6, delay: idx * 0.08, ease: [0.22, 1, 0.36, 1] }}
-                    className="snap-start shrink-0"
-                  >
-                    <Link
-                      href={project.href}
-                      className="relative w-[270px] aspect-[4/5] rounded-[16px] overflow-hidden group block"
+              <div className="relative flex-1 min-w-0">
+                <DraggableContainer className="flex gap-4 sm:gap-6 overflow-x-auto pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden snap-x snap-mandatory">
+                  {category.projects.map((project, idx) => (
+                    <motion.div
+                      key={`${category.name}-${idx}`}
+                      initial={{ opacity: 0, y: 50, scale: 0.96, filter: "blur(10px)" }}
+                      whileInView={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
+                      viewport={{ once: true, amount: 0.1 }}
+                      transition={{ duration: 0.6, delay: idx * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                      className="snap-start shrink-0"
                     >
-                      <Image
-                        src={project.image}
-                        alt={project.title}
-                        fill
-                        sizes="(min-width: 640px) 320px, 260px"
-                        className={`object-cover transition-transform duration-700 group-hover:scale-105 ${
-                          (project as any).imageClass || ""
-                        }`}
-                      />
-                      {/* Gradient overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-black/10 transition-opacity duration-500 group-hover:opacity-90" />
+                      <Link
+                        href={project.href}
+                        className="relative w-[150px] min-[375px]:w-[160px] sm:w-[270px] aspect-[4/5] rounded-[12px] sm:rounded-[16px] overflow-hidden group block"
+                      >
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          fill
+                          sizes="(min-width: 640px) 320px, 260px"
+                          className={`object-cover transition-transform duration-700 group-hover:scale-105 ${
+                            (project as any).imageClass || ""
+                          }`}
+                        />
+                        {/* Gradient overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-black/10 transition-opacity duration-500 group-hover:opacity-90" />
 
-                      {/* See More badge */}
-                      <div className="absolute top-5 left-5 bg-white/10 backdrop-blur-md border border-white/20 text-white text-[10px] px-3 py-1.5 rounded-full flex items-center justify-center font-[var(--font-inter)] transition-all duration-300 group-hover:bg-white/25 group-hover:scale-105">
-                        <span className="font-medium">See More &gt;</span>
-                      </div>
+                        {/* Badges Container */}
+                        <div className="absolute top-3 left-3 right-3 sm:top-5 sm:left-5 sm:right-5 flex flex-col sm:flex-row justify-between items-end sm:items-start gap-1.5 sm:gap-0 z-10 pointer-events-none">
+                          {/* See More badge */}
+                          <div className="bg-white/10 backdrop-blur-md border border-white/20 text-white text-[8px] sm:text-[10px] px-2 py-1 sm:px-3 sm:py-1.5 rounded-full flex items-center justify-center font-[var(--font-inter)] transition-all duration-300 group-hover:bg-white/25 group-hover:scale-105 pointer-events-auto">
+                            <span className="font-medium">See More &gt;</span>
+                          </div>
 
-                      {/* Tags */}
-                      <div className="absolute top-5 right-5 flex flex-wrap gap-2 pointer-events-none">
-                        {project.tags.map(tag => (
-                          <span
-                            key={tag}
-                            className="bg-white/10 backdrop-blur-md border border-white/20 text-white text-[10px] font-medium px-3 py-1.5 rounded-full font-[var(--font-inter)] tracking-[-0.2px]"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
+                          {/* Tags */}
+                          <div className="flex flex-wrap gap-1 sm:gap-2 justify-end">
+                            {project.tags.map(tag => (
+                              <span
+                                key={tag}
+                                className="bg-white/10 backdrop-blur-md border border-white/20 text-white text-[8px] sm:text-[10px] font-medium px-2 py-1 sm:px-3 sm:py-1.5 rounded-full font-[var(--font-inter)] tracking-[-0.2px]"
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
 
-                      {/* Title & description — slides up on hover */}
-                      <div className="absolute bottom-5 left-5 right-5 pointer-events-none translate-y-1 group-hover:translate-y-0 transition-transform duration-400">
-                        <h3 className="text-white text-xl sm:text-[22px] font-medium font-[var(--font-be-vietnam)] tracking-[-0.44px]">
-                          {project.title}
-                        </h3>
-                        <p className="text-white/50 text-[12px] sm:text-[16px] font-[var(--font-inter)] font-light line-clamp-2 leading-[1.4] tracking-[-0.44px]">
-                          {project.description}
-                        </p>
-                      </div>
-                    </Link>
-                  </motion.div>
-                ))}
-              </DraggableContainer>
+                        {/* Title & description — slides up on hover */}
+                        <div className="absolute bottom-3 left-3 right-3 sm:bottom-5 sm:left-5 sm:right-5 pointer-events-none translate-y-1 group-hover:translate-y-0 transition-transform duration-400">
+                          <h3 className="text-white text-[15px] sm:text-[22px] font-medium font-[var(--font-be-vietnam)] tracking-[-0.44px] leading-tight">
+                            {project.title}
+                          </h3>
+                          <p className="text-white/50 text-[11px] sm:text-[16px] font-[var(--font-inter)] font-light line-clamp-2 leading-[1.4] tracking-[-0.44px] mt-1 sm:mt-0">
+                            {project.description}
+                          </p>
+                        </div>
+                      </Link>
+                    </motion.div>
+                  ))}
+                </DraggableContainer>
+
+                {/* Arrow indicator for 3+ projects on mobile */}
+                {category.projects.length >= 3 && (
+                  <button 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const container = e.currentTarget.previousElementSibling;
+                      if (container) {
+                        container.scrollBy({ left: 160, behavior: 'smooth' });
+                      }
+                    }}
+                    className="absolute right-0 top-0 bottom-4 w-16 sm:hidden bg-gradient-to-l from-[#000000] via-black/80 to-transparent flex items-center justify-end pr-2 z-10 cursor-pointer pointer-events-auto"
+                  >
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="opacity-80 animate-pulse hover:opacity-100 transition-opacity">
+                      <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                  </button>
+                )}
+              </div>
 
             </motion.div>
           ))}
