@@ -21,9 +21,9 @@ const offices = [
 ];
 
 const quickLinks = [
-  { name: "About Us", href: "/" },
+  { name: "About Us", href: "/about" },
   { name: "Services", href: "/" },
-  { name: "Work", href: "/" },
+  { name: "Work", href: "/projects" },
   { name: "Contact", href: "/contact" },
   { name: "Book a Consultation", href: "/contact" }
 ];
