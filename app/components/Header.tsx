@@ -18,8 +18,8 @@ const serviceLinks = [
 ];
 
 const navItems = [
-  { label: "ABOUT", href: "/" },
-  { label: "SERVICES", href: "/", hasDropdown: true },
+  { label: "ABOUT", href: "/", hasDropdown:false },
+  // { label: "SERVICES", href: "/", hasDropdown: true },
   { label: "WORK", href: "/" },
   { label: "CONTACT", href: "/contact" },
 ];
