@@ -58,13 +58,13 @@ export function FinalCta() {
         </Stagger>
 
         {/* CTA buttons — rise up last */}
-        <FadeUp delay={0.5}>
+        {/* <FadeUp delay={0.5}> */}
           <div className="mt-6 sm:mt-8 max-w-[600px] mx-auto flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link href="/contact" className="flex h-[40px] w-max sm:w-auto px-8 sm:px-10 items-center justify-center rounded-full bg-[#ff5500] text-[12px] sm:text-[13px] font-bold text-white transition-colors uppercase hover:bg-[#ff6b1f]">
               Book a Consultation
             </Link>
           </div>
-        </FadeUp>
+        {/* </FadeUp> */}
 
       </div>
     </section>
