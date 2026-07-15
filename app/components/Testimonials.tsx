@@ -187,6 +187,7 @@ export function Testimonials() {
                   src={testimonial.image}
                   alt={testimonial.company}
                   fill
+                  sizes="(max-width: 1024px) 50vw, 33vw"
                   className="object-cover object-center transition-transform duration-700 group-hover/card:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-2 sm:p-8 transition-colors duration-500 group-hover/card:from-black/90 group-hover/card:via-black/50">

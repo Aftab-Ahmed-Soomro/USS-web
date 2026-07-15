@@ -92,11 +92,12 @@ export function Brands() {
                 key={index}
                 className="group relative h-[60px] min-[375px]:h-[75px] sm:h-[90px] lg:h-[115px] w-[130px] min-[375px]:w-[150px] sm:w-[170px] shrink-0"
               >
-                <img
+                <Image
                   src={src}
-                  alt={`Brand logo ${index}`}
-                  className="w-full h-full object-contain brightness-0 invert transition duration-500
-                             scale-[1.25] sm:scale-100 group-hover:scale-[1.35] sm:group-hover:scale-105 group-hover:opacity-100"
+                  alt="Partner brand logo"
+                  fill
+                  sizes="(max-width: 375px) 130px, (max-width: 640px) 150px, 170px"
+                  className="object-contain brightness-0 invert transition duration-500 scale-[1.25] sm:scale-100 group-hover:scale-[1.35] sm:group-hover:scale-105 group-hover:opacity-100"
                 />
               </article>
             ))}

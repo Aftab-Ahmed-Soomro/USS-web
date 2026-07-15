@@ -29,20 +29,26 @@ export function GoodCompanyMap() {
 
           {/* Background map lines — slides in from left */}
           <FadeLeft delay={0.3}>
-            <img
+            <Image
               src="/assets/Group 16.png"
               alt="World map background"
+              width={1200}
+              height={600}
               className="w-full h-auto mx-auto"
+              sizes="100vw"
             />
           </FadeLeft>
 
           {/* Foreground logos — slides in from right, slightly after */}
           {/* <FadeRight delay={0.45}> */}
-            <img
+            <Image
               src="/assets/map.png"
               alt="Companies we work with"
+              width={1000}
+              height={500}
               className="absolute max-w-[1000px] top-0 left-[8%] sm:left-20 w-[90%] sm:w-full h-auto mx-auto object-contain"
               style={{ padding: "inherit" }}
+              sizes="(max-width: 640px) 90vw, 1000px"
             />
           {/* </FadeRight> */}
 

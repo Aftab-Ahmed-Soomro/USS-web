@@ -94,6 +94,7 @@ export function Footer({ showGlobal = true }: { showGlobal?: boolean }) {
               <input
                 type="email"
                 placeholder="Your email"
+                aria-label="Email address"
                 className="bg-[#121212] border border-white/10 focus:border-[#FF5500] transition-colors rounded-full px-4 min-[375px]:px-6 py-3 sm:py-3.5 text-white text-[12px] sm:text-[14px] outline-none flex-grow min-w-0 placeholder-text-[#FFFFFFA6]"
                 required
               />
