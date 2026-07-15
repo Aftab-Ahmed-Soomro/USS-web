@@ -5,21 +5,22 @@ import Link from "next/link";
 import { Button } from "./common/Button";
 
 const serviceLinks = [
-  { label: "360 Marketing", href: "/", icon: "✦" },
-  { label: "Marketing Strategy", href: "/", icon: "✦" },
-  { label: "Google Ads", href: "/", icon: "✦" },
-  { label: "Meta Ads", href: "/", icon: "✦" },
-  { label: "WhatsApp & SMS", href: "/", icon: "✦" },
-  { label: "Email Marketing", href: "/", icon: "✦" },
-  { label: "Social Media Management", href: "/", icon: "✦" },
-  { label: "Content Creation", href: "/", icon: "✦" },
-  { label: "Talent Management", href: "/", icon: "✦" },
-  { label: "Website Design & Development", href: "/", icon: "✦" }
+      { label: "360 Marketing", href: "/new-360-with-form", icon: "✦" },
+  { label: "Marketing Strategy", href: "/marketing-strategy", icon: "✦" },
+  { label: "Google Ads", href: "/google-ads", icon: "✦" },
+  { label: "Meta Ads", href: "/meta-ads", icon: "✦" },
+  { label: "WhatsApp & SMS", href: "/whatsapp-and-sms", icon: "✦" },
+  { label: "Email Marketing", href: "/email-marketing", icon: "✦" },
+  { label: "Social Media Management", href: "/social-media-management", icon: "✦" },
+  { label: "Content Creation", href: "/content-creation", icon: "✦" },
+  { label: "Talent Management", href: "/talent-management", icon: "✦" },
+  { label: "Website Design & Development", href: "/website", icon: "✦" }
+
 ];
 
 const navItems = [
   { label: "ABOUT", href: "/about", hasDropdown:false },
-  // { label: "SERVICES", href: "/", hasDropdown: true },
+  { label: "SERVICES", href: "/", hasDropdown: true },
   { label: "WORK", href: "/projects" },
   { label: "CONTACT", href: "/contact" },
 ];
