@@ -11,9 +11,8 @@ export function HomeHero() {
           muted
           playsInline
           className="w-full h-full object-cover object-center"
-          preload="none"
+          preload="metadata"
           poster="/assets/hero-poster.webp"
-          onEnded={(e) => e.currentTarget.play()}
         >
           <source src="https://unitedstrategicsolutions.com/assets/USS Main Website Showreel.mp4" type="video/mp4" />
         </video>

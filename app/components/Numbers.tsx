@@ -149,7 +149,7 @@ export function Numbers({
         alt=""
         fill
         sizes="100vw"
-        priority={true}
+        loading="lazy"
         className="object-cover object-center opacity-80"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/45 to-black/20" />

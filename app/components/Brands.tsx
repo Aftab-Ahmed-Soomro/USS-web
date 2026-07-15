@@ -110,6 +110,7 @@ export function Brands() {
                   src={src}
                   alt="Partner brand logo"
                   fill
+                  loading="lazy"
                   sizes="(max-width: 375px) 130px, (max-width: 640px) 150px, 170px"
                   className="object-contain brightness-0 invert transition duration-500 scale-[1.25] sm:scale-100 group-hover:scale-[1.35] sm:group-hover:scale-105 group-hover:opacity-100"
                 />
