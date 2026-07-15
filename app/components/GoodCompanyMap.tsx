@@ -30,7 +30,7 @@ export function GoodCompanyMap() {
           {/* Background map lines — slides in from left */}
           <FadeLeft delay={0.3}>
             <Image
-              src="/assets/Group 16.png"
+              src="/assets/Group 16.webp"
               alt="World map background"
               width={1200}
               height={600}
@@ -42,7 +42,7 @@ export function GoodCompanyMap() {
           {/* Foreground logos — slides in from right, slightly after */}
           {/* <FadeRight delay={0.45}> */}
             <Image
-              src="/assets/map.png"
+              src="/assets/map.webp"
               alt="Companies we work with"
               width={1000}
               height={500}

@@ -145,11 +145,11 @@ export function Numbers({
   return (
     <section className="relative z-10 overflow-hidden bg-black px-4 sm:px-6 py-[48px] sm:py-[58px] text-white lg:py-[100px]">
       <Image
-        src="/assets/sections/numbers-space.jpg"
+        src="/assets/sections/numbers-space.webp"
         alt=""
         fill
         sizes="100vw"
-        priority={false}
+        priority={true}
         className="object-cover object-center opacity-80"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/45 to-black/20" />

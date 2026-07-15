@@ -17,62 +17,56 @@ const testimonials = [
     company: "Cinnamood",
     author: "Sabrina Gora - Brand Director",
     quote: "Launching in the UAE was an exciting milestone for our brand. The support we received helped us build strong local awareness while maintaining the look, feel, and values that define Cinnamood.",
-    image: "/assets/Testimonels/Sabrina Gora - Cinnamood.jpeg",
+    image: "/assets/Testimonels/Sabrina Gora - Cinnamood.webp",
   },
   {
     company: "Yula Lounge",
     author: "Manhal Naser - Founder",
     quote: "USS played a key role in our transition from Yalseh to Yula Lounge, helping us bring our new brand vision to life across every touchpoint. Their attention to detail and strategic support made the entire rebrand process seamless.",
-    image: "/assets/Testimonels/Manhal Naser - Yula.jpg",
+    image: "/assets/Testimonels/Manhal Naser - Yula.webp",
   },
   {
     company: "SupperClub",
     author: "Mehreen Omar - Co-Founder",
     quote: "Growing a premium membership community requires the right mix of brand, content, and communication. The strategic approach helped strengthen our presence in the market and support continued membership growth across the region.",
-    image: "/assets/Testimonels/mehreen.PNG",
+    image: "/assets/Testimonels/mehreen.webp",
   },
   {
     company: "Residency Advanced",
     author: "Humphrey Ddagirira - Founder",
     quote: "The paid search strategy delivered a consistent flow of high-quality enquiries, generating an average of 125 qualified leads per month. The results exceeded our expectations and helped us connect with the right audience at scale.",
-    image: "/assets/Testimonels/humpty.PNG",
+    image: "/assets/Testimonels/humpty.webp",
   },
   {
     company: "Women Who Thrive",
     author: "Sue & Achasah - Co-Founders",
     quote: "Our community has grown significantly over the last 15 months, both in membership and engagement. The combination of content, email marketing and social media managment has helped us reach more women and strengthen the value of our network.",
-    image: "/assets/Testimonels/Sue & Achasah - Women Who Women.jpg",
+    image: "/assets/Testimonels/Sue & Achasah - Women Who Women.webp",
   },
   {
     company: "Flowork",
     author: "Abir Moussa - CEO",
     quote: "From launch strategy to content and digital marketing, USS helped us successfully introduce flowork to the Dubai market. Their team played a crucial role in building awareness and generating momentum ahead of opening.",
-    image: "/assets/Testimonels/abeer.PNG",
+    image: "/assets/Testimonels/abeer.webp",
   },
   {
     company: "Reclaim",
     author: "Akmann Van Mary - CEO",
     quote: "Launching Reclaim in the US required more than just marketing. USS helped us build awareness, establish our brand and create a consistent customer journey across multiple channels. Their team has become a trusted extension of our business as we continue to grow.",
-    image: "/assets/Testimonels/akman.PNG",
+    image: "/assets/Testimonels/akman.webp",
   },
   {
     company: "Charbon & C",
     author: "Chareka Jolly - CEO",
     quote: "USS has been a trusted partner behind the scenes, delivering high quality work that reflects the standard we expect for our own clients. Their reliability, attention to detail and ability to work as an extension of our team has been invaluable.",
-    image: "/assets/Testimonels/char.PNG",
+    image: "/assets/Testimonels/char.webp",
   },
   {
     company: "Disturbed Innovations Group",
     author: "Co-Founders",
     quote: "We knew it was time for our brand to evolve, but translating that vision into reality was the challenge. The rebrand helped us create a more modern identity that better represents our business and connects with our audience.",
-    image: "/assets/Testimonels/Disturbed Innovations Group - Co-Founders.png",
+    image: "/assets/Testimonels/Disturbed Innovations Group - Co-Founders.webp",
   },
-  // {
-  //   company: "Afro Maya",
-  //   author: "Bemnet Maru - Founder",
-  //   quote: "Building a fashion brand requires more than great products, it requires a strong presence. The combination of strategy, content, and creative direction helped us reach new audiences and strengthen our brand online.",
-  //   image: "/assets/Testimonels/Bemnet Maru - Afro Maya.jpg",
-  // }
 ];
 
 function ArrowButton({

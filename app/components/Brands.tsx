@@ -6,7 +6,7 @@ import FadeUp from "./FadeUp";
 
 const brandCards = Array.from(
   { length: 37 },
-  (_, i) => ({ image: `/assets/brands/brands/${i + 1}.png` })
+  (_, i) => ({ image: `/assets/brands/brands/${i + 1}.webp` })
 );
 
 const ecwLogos = [
@@ -56,7 +56,7 @@ export function Brands() {
       <div className="mt-[26px] w-full mx-auto overflow-hidden">
         <div className="brand-cards-track flex items-center gap-x-4 min-[375px]:gap-x-6 sm:gap-x-12">
           {/* Three sets for seamless loop */}
-          {[...brandCards, ...brandCards, ...brandCards].map((brand, index) => (
+          {[...brandCards, ...brandCards].map((brand, index) => (
             <article
               key={index}
               className="group relative aspect-[176/314] w-[130px] min-[375px]:w-[150px] min-[480px]:w-[176px] shrink-0 overflow-hidden rounded-[22px] bg-black
@@ -66,7 +66,7 @@ export function Brands() {
                 src={brand.image}
                 alt="Brand campaign"
                 fill
-                loading="eager"
+                loading="lazy"
                 sizes="(max-width: 375px) 130px, (max-width: 480px) 150px, (max-width: 640px) 176px, (max-width: 1024px) 210px, 246px"
                 className="object-cover transition duration-500 group-hover:scale-105"
               />
@@ -87,7 +87,7 @@ export function Brands() {
         {/* ── Logo marquee — continuous scroll ── */}
         <div className="mt-[30px] sm:mt-[50px] w-full mx-auto max-w-[1000px]  overflow-hidden">
           <div className="logos-track flex items-center gap-x-0 sm:gap-x-6">
-            {[...ecwLogos, ...ecwLogos, ...ecwLogos].map((src, index) => (
+            {[...ecwLogos, ...ecwLogos].map((src, index) => (
               <article
                 key={index}
                 className="group relative h-[60px] min-[375px]:h-[75px] sm:h-[90px] lg:h-[115px] w-[130px] min-[375px]:w-[150px] sm:w-[170px] shrink-0"
@@ -124,7 +124,7 @@ export function Brands() {
            with three duplicated sets */
         @keyframes marquee-right {
           0%   { transform: translateX(0); }
-          100% { transform: translateX(-33.3333%); }
+          100% { transform: translateX(-50%); }
         }
 
         /* Respect reduced-motion preference */

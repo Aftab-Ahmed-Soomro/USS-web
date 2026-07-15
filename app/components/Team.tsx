@@ -6,37 +6,37 @@ import { useState } from "react";
 const teamMembers = [
   {
     role: "CEO/Founder",
-    image: "/assets/team/emanuel.png",
+    image: "/assets/team/emanuel.webp",
     color: "#72cc3b",
   },
   {
     role: "Marketing Director",
-    image: "/assets/team/meeral.png",
+    image: "/assets/team/meeral.webp",
     color: "#f45122",
   },
   {
     role: "Content Creator",
-    image: "/assets/team/russ.png",
+    image: "/assets/team/russ.webp",
     color: "#ff8f1a",
   },
   {
     role: "Creative Director",
-    image: "/assets/team/saadat.png",
+    image: "/assets/team/saadat.webp",
     color: "#45a9e9",
   },
   {
     role: "Social Media Manager",
-    image: "/assets/team/prag.png",
+    image: "/assets/team/prag.webp",
     color: "#72cc3b",
   },
   {
     role: "Content Creator2",
-    image: "/assets/team/max.png",
+    image: "/assets/team/max.webp",
     color: "#f45122",
   },
   {
     role: "Paid Social",
-    image: "/assets/team/tania.png",
+    image: "/assets/team/tania.webp",
     color: "#45a9e9",
   },
 ];

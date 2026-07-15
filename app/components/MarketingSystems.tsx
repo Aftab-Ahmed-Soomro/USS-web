@@ -135,7 +135,7 @@ export function MarketingSystems() {
         {/* Rotating Systems Container */}
         <div
           className="absolute inset-0 z-20 pointer-events-none"
-          style={{ animation: "orbit 60s linear infinite", transformOrigin: "center" }}
+          style={{ animation: "orbit 60s linear infinite", transformOrigin: "center", willChange: "transform" }}
         >
           {/* SVG Radial Lines */}
           <svg className="absolute inset-0 w-full h-full opacity-10">
@@ -170,7 +170,7 @@ export function MarketingSystems() {
               >
                 <div
                   className="w-full h-full"
-                  style={{ animation: "counter-orbit 60s linear infinite", transformOrigin: "center" }}
+                  style={{ animation: "counter-orbit 60s linear infinite", transformOrigin: "center", willChange: "transform" }}
                 >
                   {/* ── Clickable node ── */}
                   <Link
