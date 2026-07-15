@@ -1,14 +1,31 @@
+import dynamic from "next/dynamic";
 import { Header } from "./components/Header";
-import { Brands } from "./components/Brands";
-import { Footer } from "./components/Footer";
-import { Numbers } from "./components/Numbers";
 import { HomeHero } from "./components/HomeHero";
-import { MarketingSystems } from "./components/MarketingSystems";
-import { GoodCompanyMap } from "./components/GoodCompanyMap";
-import { Testimonials } from "./components/Testimonials";
-import { Team } from "./components/Team";
-import { Strategic } from "./components/Strategic";
-import { FinalCta } from "./components/FinalCta";
+import { Numbers } from "./components/Numbers";
+import { Brands } from "./components/Brands";
+
+// Lazy-load below-fold sections to reduce initial JS bundle and DOM size
+const MarketingSystems = dynamic(
+  () => import("./components/MarketingSystems").then((m) => ({ default: m.MarketingSystems }))
+);
+const Strategic = dynamic(
+  () => import("./components/Strategic").then((m) => ({ default: m.Strategic }))
+);
+const Testimonials = dynamic(
+  () => import("./components/Testimonials").then((m) => ({ default: m.Testimonials }))
+);
+const GoodCompanyMap = dynamic(
+  () => import("./components/GoodCompanyMap").then((m) => ({ default: m.GoodCompanyMap }))
+);
+const Team = dynamic(
+  () => import("./components/Team").then((m) => ({ default: m.Team }))
+);
+const FinalCta = dynamic(
+  () => import("./components/FinalCta").then((m) => ({ default: m.FinalCta }))
+);
+const Footer = dynamic(
+  () => import("./components/Footer").then((m) => ({ default: m.Footer }))
+);
 
 const Page = () => {
   return (

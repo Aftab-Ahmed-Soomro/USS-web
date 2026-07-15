@@ -22,8 +22,8 @@ export default function ScaleIn({
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, scale: startScale, filter: "blur(10px)" }}
-      whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+      initial={{ opacity: 0, scale: startScale }}
+      whileInView={{ opacity: 1, scale: 1 }}
       viewport={{
         once: true,
         amount: 0.3,

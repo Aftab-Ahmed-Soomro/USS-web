@@ -19,8 +19,8 @@ export default function FadeLeft({
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, x: -60, filter: "blur(14px) brightness(0.55)" }}
-      whileInView={{ opacity: 1, x: 0, filter: "blur(0px) brightness(1)" }}
+      initial={{ opacity: 0, x: -60 }}
+      whileInView={{ opacity: 1, x: 0 }}
       viewport={{
         once: true,
         amount: 0.3,

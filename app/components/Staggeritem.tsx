@@ -26,11 +26,10 @@ export default function StaggerItem({
     <motion.div
       className={className}
       variants={{
-        hidden: { opacity: 0, y, filter: "blur(10px)" },
+        hidden: { opacity: 0, y },
         visible: {
           opacity: 1,
           y: 0,
-          filter: "blur(0px)",
           transition: { duration, ease: "easeOut" },
         },
       }}
