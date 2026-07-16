@@ -45,14 +45,19 @@ const ecwLogos = [
   "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/029-1.png",
   "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/030-1.png"
 ];
+const INITIAL_LOGOS = ecwLogos.slice(0, 6);
 
 export function Brands() {
   // Start with only 10 cards; after page load expand to full 37 for seamless marquee
   const [brandCards, setBrandCards] = useState(INITIAL_CARDS);
+  const [partnerLogos, setPartnerLogos] = useState(INITIAL_LOGOS);
 
   useEffect(() => {
     // Defer hydrating the full card set until the browser is idle
-    const id = setTimeout(() => setBrandCards(ALL_BRAND_CARDS), 800);
+    const id = setTimeout(() => {
+      setBrandCards(ALL_BRAND_CARDS);
+      setPartnerLogos([...ecwLogos, ...ecwLogos]);
+    }, 800);
     return () => clearTimeout(id);
   }, []);
 
@@ -101,7 +106,7 @@ export function Brands() {
         {/* ── Logo marquee — continuous scroll ── */}
         <div className="mt-[30px] sm:mt-[50px] w-full mx-auto max-w-[1000px]  overflow-hidden">
           <div className="logos-track flex items-center gap-x-0 sm:gap-x-6">
-            {[...ecwLogos, ...ecwLogos].map((src, index) => (
+            {partnerLogos.map((src, index) => (
               <article
                 key={index}
                 className="group relative h-[60px] min-[375px]:h-[75px] sm:h-[90px] lg:h-[115px] w-[130px] min-[375px]:w-[150px] sm:w-[170px] shrink-0"
