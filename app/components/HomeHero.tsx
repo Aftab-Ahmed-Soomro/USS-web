@@ -14,7 +14,7 @@ export function HomeHero() {
           preload="metadata"
           poster="/assets/hero-poster.webp"
         >
-          <source src="https://unitedstrategicsolutions.com/assets/USS Main Website Showreel.mp4" type="video/mp4" />
+         <source src="/assets/USS Main Website Showreel.webm" type="video/webm" />
         </video>
         {/* Cinematic gradient overlay — keeps text readable */}
         <div className="hidden sm:block absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-black/10" />
