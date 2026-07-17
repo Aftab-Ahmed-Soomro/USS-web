@@ -189,7 +189,7 @@ export function Testimonials() {
               <div
                 key={idx}
                 onClick={() => setActiveIndex(isActive ? null : idx)}
-                className="relative w-[calc(33.333%-8px)] sm:w-[calc(33.333333%-16px)] lg:w-[calc(33.333333%-16px)] shrink-0 aspect-[3/4] sm:aspect-auto sm:h-[480px] snap-start overflow-hidden group/card bg-[#111] cursor-pointer"
+                className="relative w-[calc(33.333%-8px)] sm:w-[calc(33.333333%-16px)] lg:w-[calc(33.333333%-16px)] shrink-0 aspect-[176/370] sm:aspect-auto sm:h-[480px] snap-start overflow-hidden group/card bg-[#111] cursor-pointer"
               >
                 {/* Mobile image (cropped for 3-per-row) — hidden on sm+ */}
                 <div className="block sm:hidden absolute inset-0">
@@ -220,7 +220,7 @@ export function Testimonials() {
                   </p>
                   <div className={`grid transition-all duration-500 ease-in-out ${isActive ? 'grid-rows-[1fr]' : 'grid-rows-[0fr] group-hover/card:grid-rows-[1fr]'}`}>
                     <div className={`overflow-hidden transition-all duration-500 ${isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 group-hover/card:opacity-100 group-hover/card:translate-y-0'}`}>
-                      <p className="text-white/97 text-[7px] min-[375px]:text-[8px] sm:text-sm pt-2 sm:pt-4 leading-[1.4] sm:leading-[1.6] font-[var(--font-be-vietnam)] line-clamp-3 sm:line-clamp-none">
+                      <p className="text-white/97 text-[7px] min-[375px]:text-[8px] sm:text-sm pt-2 sm:pt-4 leading-[1.4] sm:leading-[1.6] font-[var(--font-be-vietnam)]">
                         &ldquo;{testimonial.quote}&rdquo;
                       </p>
                     </div>
