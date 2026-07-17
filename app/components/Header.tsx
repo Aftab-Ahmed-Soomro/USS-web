@@ -19,10 +19,10 @@ const serviceLinks = [
 ];
 
 const navItems = [
-    { label: "ABOUT", href: "/about", hasDropdown:false },
-    { label: "SERVICES", href: "/new-360-with-form", hasDropdown: true },
-  { label: "WORK", href: "/projects" },
-  { label: "CONTACT", href: "/contact" },
+  //   { label: "ABOUT", href: "/about", hasDropdown:false },
+  //   { label: "SERVICES", href: "/new-360-with-form", hasDropdown: true },
+  // { label: "WORK", href: "/projects" },
+  // { label: "CONTACT", href: "/contact" },
 ];
 
 export function Header() {
@@ -76,7 +76,7 @@ export function Header() {
         </div>
 
         {/* Navigation */}
-        <nav
+        {/* <nav
           id="main-navigation"
           aria-label="Main navigation"
           className={`flex w-full flex-col gap-4 overflow-hidden transition-[max-height,opacity,margin,padding] duration-300 md:mt-0 md:w-auto md:flex-row md:items-center md:justify-center md:gap-8 lg:gap-10 md:overflow-visible md:border-0 md:pt-0 md:opacity-100 ${isMenuOpen ? "max-h-[100vh] opacity-100 mt-4 pt-4 border-t border-white/10" : "max-h-0 opacity-0 mt-0 pt-0 border-t-0 md:max-h-none"
@@ -199,7 +199,7 @@ export function Header() {
               </Link>
             )
           )}
-        </nav>
+        </nav> */}
 
         {/* Desktop Right Action */}
         <div className="hidden md:flex md:w-auto md:flex-1 md:justify-end">

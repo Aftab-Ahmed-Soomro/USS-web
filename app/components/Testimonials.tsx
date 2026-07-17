@@ -215,9 +215,18 @@ export function Testimonials() {
                   <h3 className="text-white text-[9px] min-[375px]:text-[10px] sm:text-2xl font-bold font-[var(--font-be-vietnam)] leading-tight">
                     {testimonial.company}
                   </h3>
-                  <p className="text-[#fff] text-[7px] min-[375px]:text-[8px] sm:text-xs mt-1 uppercase tracking-wider font-[var(--font-be-vietnam)] font-medium">
+                  {/* Mobile: author name & title on separate lines; Desktop: single line */}
+                  <p className="hidden sm:block text-[#fff] text-xs mt-1 uppercase tracking-wider font-[var(--font-be-vietnam)] font-medium">
                     {testimonial.author}
                   </p>
+                  <div className="block sm:hidden mt-1">
+                    <p className="text-[#fff] text-[7px] min-[375px]:text-[8px] uppercase tracking-wider font-[var(--font-be-vietnam)] font-medium leading-tight">
+                      {testimonial.author.split(" - ")[0]}
+                    </p>
+                    <p className="text-[#fff] text-[6px] min-[375px]:text-[7px] uppercase tracking-wider font-[var(--font-be-vietnam)] font-medium leading-tight mt-1">
+                      {testimonial.author.split(" - ")[1] ?? ""}
+                    </p>
+                  </div>
                   <div className={`grid transition-all duration-500 ease-in-out ${isActive ? 'grid-rows-[1fr]' : 'grid-rows-[0fr] group-hover/card:grid-rows-[1fr]'}`}>
                     <div className={`overflow-hidden transition-all duration-500 ${isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 group-hover/card:opacity-100 group-hover/card:translate-y-0'}`}>
                       <p className="text-white/97 text-[7px] min-[375px]:text-[8px] sm:text-sm pt-2 sm:pt-4 leading-[1.4] sm:leading-[1.6] font-[var(--font-be-vietnam)]">
