@@ -51,7 +51,7 @@ export default function TeamAccordion() {
         
         {/* Heading Section */}
         <div className="mb-16 lg:mb-32">
-          <h2 className="text-[36px] md:text-[64px] lg:text-[96px] leading-[1.1] lg:leading-[123.12px] tracking-[-1px] lg:tracking-[-2.59px] font-light lowercase" style={{ fontWeight: 300 }}>
+          <h2 className="text-[36px] md:text-[64px] lg:text-[75px] leading-[1.1] lg:leading-[100px] tracking-[-1px] lg:tracking-[-2.59px] font-light lowercase" style={{ fontWeight: 300 }}>
             we are the team of<br />
             visual and <span className="relative inline-block z-10 whitespace-nowrap">
               multiverse
@@ -84,11 +84,11 @@ export default function TeamAccordion() {
                 className={`border-t border-white/20 group cursor-pointer transition-all duration-500 hover:bg-white/[0.03] overflow-hidden ${isHovered ? 'py-8 md:py-12' : 'py-5 md:py-8'}`}
                 onMouseEnter={() => setHoveredIndex(index)}
               >
-                <div className="flex flex-col lg:flex-row gap-6 lg:gap-24 items-start lg:items-start">
+                <div className="flex flex-row gap-6 lg:gap-24 items-start lg:items-start">
                   
                   {/* Big Number */}
                   <div 
-                    className={`text-[80px] lg:text-[216px] leading-[1] lg:leading-[183.6px] tracking-[-3px] lg:tracking-[-8.64px] text-white w-full lg:w-[250px] shrink-0 font-light transition-all duration-500 ${isHovered ? 'mt-0' : 'mt-[0px]'}`} 
+                    className={`text-[80px] lg:text-[216px] leading-[1] lg:leading-[183.6px] tracking-[-3px] lg:tracking-[-8.64px] text-white w-auto lg:w-[250px] shrink-0 font-light transition-all duration-500 ${isHovered ? 'mb-0' : 'mb-[-40px] lg:mb-[-110px]'}`} 
                     style={{ fontWeight: 300 }}
                   >
                     {item.id}
@@ -99,12 +99,12 @@ export default function TeamAccordion() {
                     
                     {/* Title and Plus/Minus Icon */}
                     <div className="flex justify-between items-center w-full">
-                      <h3 className="text-[20px] lg:text-[34px] leading-[1.2] lg:leading-[51px] tracking-[0.68px] uppercase text-white font-normal">
+                      <h3 className={`text-[20px] lg:text-[34px] leading-[1.2] lg:leading-[51px] tracking-[0.68px] uppercase text-white font-normal ${isHovered ? 'mb-0' : 'mb-[-40px] lg:mb-[-110px]'}`}>
                         {item.title}
                       </h3>
                       
                       {/* Icon */}
-                      <div className={`w-8 h-8 lg:w-10 lg:h-10 rounded-full border flex items-center justify-center transition-all duration-300 ${isHovered ? 'border-white text-white' : 'border-white/20 text-white/50'}`}>
+                      <div className={`w-8 h-8 lg:w-10 lg:h-10 rounded-full border flex items-center justify-center transition-all duration-300 ${isHovered ? 'border-white text-white mb-0' : 'border-white/20 text-white/50 mb-[-40px] lg:mb-[-110px]'}`}>
                         <span className="text-xl lg:text-2xl font-light leading-none mb-1">{isHovered ? '-' : '+'}</span>
                       </div>
                     </div>

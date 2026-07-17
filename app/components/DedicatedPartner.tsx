@@ -12,8 +12,8 @@ export default function DedicatedPartner() {
   ];
 
   return (
-    <section className="bg-[#000] text-white pb-16 lg:pb-24 px-6 md:px-12 lg:px-[100px] w-full flex flex-col items-center">
-      <div className="w-full max-w-[1442px]">
+    <section className="bg-[#000] text-white pb-16 lg:pb-24 px-6 w-full flex flex-col items-center">
+      <div className="w-full max-w-[1150px]">
         
         {/* Top Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 mb-20 lg:mb-48">
