@@ -6,33 +6,33 @@ import StaggerItem from "./Staggeritem";
 const imageConfigs = [
   {
     src: "/assets/black-friday/1.jpg",
-    position: "15% 5%", // Adjust if he's not centered or head is cut
+    position: "left 10%",
     scale: 1.15
   },
   {
     src: "/assets/black-friday/2.jpg",
-    position: "center 10%", 
-    scale: 1.1
+    position: "center 10%",
+    scale: 1.6
   },
   {
     src: "/assets/black-friday/3.jpg",
-    position: "center 15%",
-    scale: 1.15
+    position: "center 10%",
+    scale: 1.4
   },
   {
     src: "/assets/black-friday/4.jpg",
     position: "center 15%",
-    scale: 1.15
+    scale: 1.0
   },
   {
     src: "/assets/black-friday/5.jpg",
     position: "center 10%",
-    scale: 1.15
+    scale: 1.0
   },
   {
     src: "/assets/black-friday/6.jpg",
-    position: "center 30%",
-    scale: 1.15
+    position: "center 20%",
+    scale: 1.5
   },
 ];
 
@@ -83,7 +83,7 @@ export function BlackFridayOpportunity() {
       {/* <FadeUp> */}
         <div className="w-full mb-12 sm:mb-20">
           <div 
-             className="w-full flex gap-2 sm:gap-4 overflow-hidden relative h-[250px] sm:h-[400px] lg:h-[550px]"
+         className="w-full flex gap-2 sm:gap-4 overflow-hidden relative h-[200px] sm:h-[300px] lg:h-[380px]"
              style={{ 
                clipPath: "polygon(0% 0%, 10% 4.32%, 20% 7.68%, 30% 10.08%, 40% 11.52%, 50% 12%, 60% 11.52%, 70% 10.08%, 80% 7.68%, 90% 4.32%, 100% 0%, 100% 100%, 90% 95.68%, 80% 92.32%, 70% 89.92%, 60% 88.48%, 50% 88%, 40% 88.48%, 30% 89.92%, 20% 92.32%, 10% 95.68%, 0% 100%)"
              }}
