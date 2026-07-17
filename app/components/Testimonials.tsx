@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import FadeLeft from "./FadeLeft";
 import FadeDown from "./FadeDown";
@@ -91,6 +91,7 @@ function ArrowButton({
 
 export function Testimonials() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
@@ -172,27 +173,30 @@ export function Testimonials() {
             ref={scrollRef}
             className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-8 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
           >
-            {testimonials.map((testimonial, idx) => (
+            {testimonials.map((testimonial, idx) => {
+              const isActive = activeIndex === idx;
+              return (
               <div
                 key={idx}
-                className="relative w-[calc(50%-12px)] lg:w-[calc(33.333333%-16px)] shrink-0 aspect-[3/4] sm:aspect-auto sm:h-[480px] snap-start overflow-hidden group/card bg-[#111]"
+                onClick={() => setActiveIndex(isActive ? null : idx)}
+                className="relative w-[calc(50%-12px)] lg:w-[calc(33.333333%-16px)] shrink-0 aspect-[3/4] sm:aspect-auto sm:h-[480px] snap-start overflow-hidden group/card bg-[#111] cursor-pointer"
               >
                 <Image
                   src={testimonial.image}
                   alt={testimonial.company}
                   fill
                   sizes="(max-width: 1024px) 50vw, 33vw"
-                  className="object-cover object-center transition-transform duration-700 group-hover/card:scale-105"
+                  className={`object-cover object-center transition-transform duration-700 group-hover/card:scale-105 ${isActive ? 'scale-105' : ''}`}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-2 sm:p-8 transition-colors duration-500 group-hover/card:from-black/90 group-hover/card:via-black/50">
+                <div className={`absolute inset-0 bg-gradient-to-t flex flex-col justify-end p-2 sm:p-8 transition-colors duration-500 ${isActive ? 'from-black/90 via-black/50 to-transparent' : 'from-black/80 via-black/30 to-transparent group-hover/card:from-black/90 group-hover/card:via-black/50'}`}>
                   <h3 className="text-white text-[12px] min-[375px]:text-[12px] sm:text-2xl font-bold font-[var(--font-be-vietnam)] leading-tight">
                     {testimonial.company}
                   </h3>
                   <p className="text-[#fff] text-[8px] min-[375px]:text-[8px] sm:text-xs mt-1 uppercase tracking-wider font-[var(--font-be-vietnam)] font-medium">
                     {testimonial.author}
                   </p>
-                  <div className="grid grid-rows-[0fr] group-hover/card:grid-rows-[1fr] transition-all duration-500 ease-in-out">
-                    <div className="overflow-hidden opacity-0 group-hover/card:opacity-100 transition-all duration-500 translate-y-4 group-hover/card:translate-y-0">
+                  <div className={`grid transition-all duration-500 ease-in-out ${isActive ? 'grid-rows-[1fr]' : 'grid-rows-[0fr] group-hover/card:grid-rows-[1fr]'}`}>
+                    <div className={`overflow-hidden transition-all duration-500 ${isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 group-hover/card:opacity-100 group-hover/card:translate-y-0'}`}>
                       <p className="text-white/97 text-[9px] min-[375px]:text-[10px] sm:text-sm pt-2 sm:pt-4 leading-[1.4] sm:leading-[1.6] font-[var(--font-be-vietnam)] line-clamp-3 sm:line-clamp-none">
                         &ldquo;{testimonial.quote}&rdquo;
                       </p>
@@ -200,7 +204,7 @@ export function Testimonials() {
                   </div>
                 </div>
               </div>
-            ))}
+            )})}
           </div>
 
           {/* Right Arrow — slides in from right */}
