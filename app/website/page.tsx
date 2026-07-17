@@ -12,6 +12,10 @@ import Stagger from "../components/Stagger";
 import StaggerItem from "../components/Staggeritem";
 import { WhyEmailFails } from "../components/WhyEmailFails";
 import IndustriesServed from "../components/IndustriesServed";
+import FadeUp from "../components/FadeUp";
+import DedicatedPartner from "../components/DedicatedPartner";
+import TeamAccordion from "../components/TeamAccordion";
+import CaseStudies from "../components/CaseStudies";
 
 const inputClass =
   "mt-[6px] h-[29px] w-full rounded-[5px] border border-white/75 bg-black px-[9px] font-[var(--font-inter)] text-[10px] text-white outline-none placeholder:text-white/40 focus:border-[#ff5500]";
@@ -626,7 +630,18 @@ export default function WebsitePage() {
             centerLogo="/assets/Google__logo.webp"
             logoClassName="w-[80px] lg:w-[115px]"
             />
-            <IndustriesServed />
+            <FadeUp>
+              <DedicatedPartner />
+            </FadeUp>
+            {/* <FadeUp delay={0.1}> */}
+              <CaseStudies />
+            {/* </FadeUp> */}
+            <FadeUp delay={0.1}>
+              <TeamAccordion />
+            </FadeUp>
+            <FadeUp delay={0.1}>
+              <IndustriesServed />
+            </FadeUp>
             <RevenueMethod />
       {/* <ShowcaseIntro /> */}
       {/* <PerformSection /> */}
