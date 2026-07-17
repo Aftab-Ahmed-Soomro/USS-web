@@ -51,7 +51,7 @@ export default function DedicatedPartner() {
         </div>
 
         {/* Bottom: Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-4">
+        <div className="grid grid-cols-2 gap-12 md:flex md:justify-between w-full">
           {stats.map((stat, index) => (
             <div key={index} className="flex flex-col items-start">
               <span className="font-medium text-[56px] leading-[56px] tracking-[-1px] lg:text-[88px] lg:leading-[88px] lg:tracking-[-1.76px] align-middle mb-2 lg:mb-4">

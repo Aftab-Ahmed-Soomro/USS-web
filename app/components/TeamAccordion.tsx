@@ -50,8 +50,8 @@ export default function TeamAccordion() {
       <div className="w-full max-w-[1442px]">
         
         {/* Heading Section */}
-        <div className="mb-16 lg:mb-32">
-          <h2 className="text-[36px] md:text-[64px] lg:text-[75px] leading-[1.1] lg:leading-[100px] tracking-[-1px] lg:tracking-[-2.59px] font-light lowercase" style={{ fontWeight: 300 }}>
+        <div className="mb-12">
+          <h2 className="text-[36px] md:text-[64px] lg:text-[75px] leading-[1.1] lg:leading-[100px] tracking-[-1px] lg:tracking-[-6px] font-light lowercase" style={{ fontWeight: 300 }}>
             we are the team of<br />
             visual and <span className="relative inline-block z-10 whitespace-nowrap">
               multiverse
