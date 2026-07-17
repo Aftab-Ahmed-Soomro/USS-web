@@ -11,6 +11,13 @@ import { GoodCompanyMap } from "../components/GoodCompanyMap";
 import Stagger from "../components/Stagger";
 import StaggerItem from "../components/Staggeritem";
 import { WhyEmailFails } from "../components/WhyEmailFails";
+import { BlackFridayOpportunity } from "../components/BlackFridayOpportunity";
+import { OpportunitySection } from "../components/OpportunitySection";
+import { WhatWeDoSection } from "../components/WhatWeDoSection";
+import { SixStepSystem } from "../components/SixStepSystem";
+import { TishWondersProfile } from "../components/TishWondersProfile";
+import { SadiaPsychologyProfile } from "../components/SadiaPsychologyProfile";
+import { ProjectOverview } from "../components/ProjectOverview";
 
 type Bullet =
   | string
@@ -189,57 +196,35 @@ function SectionTitle({ title }: { title: StrategySection["title"] }) {
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-black px-4 min-[375px]:px-6 pb-[40px] pt-[40px] text-white sm:pb-[72px] sm:pt-[78px]">
-      <style>{`
-        @keyframes glow-move-tl {
-          0% { transform: translate(0, 0) scale(1); }
-          33% { transform: translate(8vw, 4vw) scale(1.15); }
-          66% { transform: translate(3vw, 8vw) scale(0.95); }
-          100% { transform: translate(0, 0) scale(1); }
-        }
-        @keyframes glow-move-br {
-          0% { transform: translate(0, 0) scale(1); }
-          33% { transform: translate(-8vw, -4vw) scale(1.15); }
-          66% { transform: translate(-3vw, -8vw) scale(0.95); }
-          100% { transform: translate(0, 0) scale(1); }
-        }
-        .animate-glow-tl {
-          animation: glow-move-tl 8s ease-in-out infinite;
-        }
-        .animate-glow-br {
-          animation: glow-move-br 8s ease-in-out infinite;
-        }
-      `}</style>
-
-      {/* Top Left Gradient */}
-      <div 
-        className="pointer-events-none absolute -left-[20%] -top-[20%] h-[80vw] max-h-[800px] min-h-[500px] w-[80vw] max-w-[800px] min-w-[500px] rounded-full opacity-40 blur-[100px] animate-glow-tl"
-        style={{ background: 'radial-gradient(circle, #FF5500 0%, rgba(255,85,0,0) 70%)' }}
-      />
-
-      {/* Bottom Right Gradient */}
-      <div 
-        className="pointer-events-none absolute -bottom-[20%] -right-[20%] h-[80vw] max-h-[800px] min-h-[500px] w-[80vw] max-w-[800px] min-w-[500px] rounded-full opacity-40 blur-[100px] animate-glow-br"
-        style={{ background: 'radial-gradient(circle, #FF5500 0%, rgba(255,85,0,0) 70%)' }}
-      />
-
-      <div className="relative z-10 mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
+    <section 
+      className="relative overflow-hidden bg-black px-4 min-[375px]:px-6 pb-[80px] pt-[120px] text-white min-h-[80vh] flex items-center bg-cover bg-[center_20%]"
+      style={{ backgroundImage: "url('/assets/talent-bgImage.png')" }}
+    >
+      {/* <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" /> */}
+      
+      <div className="relative z-10 mx-auto w-full max-w-[1150px]">
         <Stagger staggerDelay={0.15}>
           <StaggerItem>
-            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[38px] font-bold lowercase leading-[70px] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white">
-              Turn Your Personal
-              <br />
-              Brand Into Your
-              <br />
+            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[38px] font-bold capitalize leading-[1.1] tracking-[-1px] sm:tracking-[-3px] sm:text-[72px] text-white">
+              The
               {" "}
-              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] lowercase font-normal timesFontFamily italic text-[#FF5500] leading-[1.2] sm:leading-[30px] tracking-[-1px] sm:tracking-[-2.8px]">
-                Biggest Asset
+              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[96px] font-normal timesFontFamily uppercase italic text-white leading-[1.2] sm:leading-[30px] tracking-[-1px] sm:tracking-[-2.8px]">
+                Q4
               </span>
+              {" "}
+              Play
             </h1>
           </StaggerItem>
           <StaggerItem>
+            <h2 className="font-bold text-[32px] mt-12">
+              Start planning for
+              <br />
+              peak period
+            </h2>
+          </StaggerItem>
+          <StaggerItem>
             <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[515px] font-[var(--font-inter)] text-[14px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[18px]">
-              Whether you're launching a business, growing an audience, or looking to secure brand partnerships, we help build personal brands through content, strategy and consistent storytelling.
+              Q4 is the most valuable period in the content calendar. With major retail moments, increased brand investment and audiences actively searching and buying, early planning gives creators the strongest opportunity to maximise visibility and revenue. The biggest Q4 opportunities are secured before peak period begins.
             </p>
           </StaggerItem>
           <StaggerItem>
@@ -251,8 +236,6 @@ function Hero() {
             </Link>
           </StaggerItem>
         </Stagger>
-
-        <ConsultationForm />
       </div>
     </section>
   );
@@ -670,9 +653,14 @@ export default function MarketingStrategyPage() {
     <main className="min-h-screen bg-black overflow-hidden">
       <Header />
       <Hero />
-      <Numbers stats={emailStats} />
+      <BlackFridayOpportunity />
+      <OpportunitySection />
+      <WhatWeDoSection />
+      <SixStepSystem />
+      
+      {/* <Numbers stats={emailStats} /> */}
       <Brands />
-      <WhyEmailFails
+      {/* <WhyEmailFails
                   hideBadge={true}
                   heading={
                     <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
@@ -693,8 +681,29 @@ export default function MarketingStrategyPage() {
                   rightPoints={googleAdsUssPoints}
                   centerLogo="/assets/Google__logo.webp"
                   logoClassName="w-[80px] lg:w-[115px]"
-                  />
+                  /> */}
                   <RevenueMethod />
+      {/* <SixStepSystem /> */}
+      <TishWondersProfile />
+      <ProjectOverview 
+        subheading="sneak peak into picksperience launch"
+        images={[
+          "/assets/tishOverview/1.jpg",
+          "/assets/tishOverview/2.jpg",
+          "/assets/tishOverview/3.png",
+          "/assets/tishOverview/4.png"
+        ]}
+      />
+      <SadiaPsychologyProfile />
+      <ProjectOverview 
+        subheading="sneak peak into black friday launch"
+        images={[
+          "/assets/sadiaOverview/1.png",
+          "/assets/sadiaOverview/2.png",
+          "/assets/sadiaOverview/3.png",
+          "/assets/sadiaOverview/4.png"
+        ]}
+      />
       {/* <RelatedProjects /> */}
       <Testimonials />
       <Team />
