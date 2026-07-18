@@ -30,7 +30,7 @@ const leftColumnData = [
     title: "Venue 29",
     description: "a cinematic couture platform — editorial storytelling, private look books, and a made-to-measure booking flow.",
     image: "/assets/leftColumnImages/3.jpg",
-    link: "/projects/venue-29"
+    link: "https://venue-29.com/"
   }
 ];
 
@@ -60,13 +60,18 @@ const rightColumnData = [
     title: "Bushra Therapy",
     description: "a data-driven digital marketing partner for a modern brokerage — native where it beats adversity, silence where it doesn't.",
     image: "/assets/rightColumnImages/3.png",
-    link: "/projects/bushra-therapy",
+    link: "https://bushratherapy.com/",
     imageClass: "object-[10%_0%]"
   }
 ];
 
 const Card = ({ year, category, title, description, image, link, imageClass }: any) => (
-  <Link href={link || "#"} className="flex flex-col gap-6 w-full group cursor-pointer block">
+  <Link 
+    href={link || "#"} 
+    target={link?.startsWith("http") ? "_blank" : undefined}
+    rel={link?.startsWith("http") ? "noopener noreferrer" : undefined}
+    className="flex flex-col gap-6 w-full group cursor-pointer block"
+  >
     {/* Image Placeholder */}
     <div className="w-full aspect-[617/480] bg-[#111111] rounded-[20px] overflow-hidden transition-transform duration-500 group-hover:scale-[1.02] relative">
       {image && <img src={image} alt={title} className={`absolute inset-0 w-full h-full object-cover ${imageClass || "object-center"}`} />}

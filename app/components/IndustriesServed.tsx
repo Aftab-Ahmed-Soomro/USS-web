@@ -10,47 +10,41 @@ interface SlideData {
 }
 
 const defaultSlides: SlideData[] = [
+  // {
+  //   id: 1,
+  //   imageSrc: "/assets/web-carousel/1.png", // User will put the actual sources here
+  //   centerText: "We design Brand Identity for Art & Culture",
+  //   bottomText: "Restaurants, cafés, F&B groups. Menu-led design, ordering, reservation flows."
+  // },
   {
     id: 1,
-    imageSrc: "/assets/web-carousel/1.png", // User will put the actual sources here
-    centerText: "We design Brand Identity for Art & Culture",
-    bottomText: "Restaurants, cafés, F&B groups. Menu-led design, ordering, reservation flows."
+    imageSrc: "/assets/websites/Wellness.png",
+    centerText: "We create websites for Wellness Brands",
+    bottomText: ""
   },
   {
     id: 2,
-    imageSrc: "",
-    centerText: "We design E-commerce Experiences",
-    bottomText: "Retail, fashion, direct-to-consumer. High-conversion product pages and checkout flows."
+    imageSrc: "/assets/websites/Technology.png",
+    centerText: "We create websites for Technology Brands",
+    bottomText: ""
   },
   {
     id: 3,
-    imageSrc: "",
-    centerText: "We design Corporate Websites",
-    bottomText: "Finance, legal, consulting. Professional, accessible, and trust-building digital presence."
+    imageSrc: "/assets/websites/Real Estate.png",
+    centerText: "We create websites for Real Estate Brands",
+    bottomText: ""
   },
   {
     id: 4,
-    imageSrc: "",
-    centerText: "We design SaaS Platforms",
-    bottomText: "Software, tech, startups. Intuitive dashboards, onboarding flows, and user management."
+    imageSrc: "/assets/websites/Fashion.png",
+    centerText: "We create websites for Fashion Brands",
+    bottomText: ""
   },
   {
     id: 5,
-    imageSrc: "",
-    centerText: "We design Real Estate Portals",
-    bottomText: "Agencies, developers, property management. Search-led design, maps, property details."
-  },
-  {
-    id: 6,
-    imageSrc: "",
-    centerText: "We design Educational Platforms",
-    bottomText: "Schools, universities, edtech. Course catalogs, student portals, learning management."
-  },
-  {
-    id: 7,
-    imageSrc: "",
-    centerText: "We design Healthcare Websites",
-    bottomText: "Hospitals, clinics, healthtech. Patient portals, appointment booking, telehealth integration."
+    imageSrc: "/assets/websites/Events.png",
+    centerText: "We create websites for Events Brands",
+    bottomText: ""
   }
 ];
 
@@ -81,14 +75,14 @@ export default function IndustriesServed() {
       </div>
 
       {/* Carousel Section */}
-      <div className="relative w-full overflow-hidden bg-zinc-800 h-[400px] lg:h-[678px]">
+      <div className="relative w-full overflow-hidden h-[400px] lg:h-[678px]">
           {/* Main Background Image */}
           <div className="absolute inset-0 w-full h-full transition-opacity duration-500">
             {defaultSlides[currentSlide].imageSrc ? (
               <img 
                 src={defaultSlides[currentSlide].imageSrc} 
                 alt="Industry served" 
-                className="w-full h-full object-cover" 
+                className="w-full h-full object-contain" 
               />
             ) : (
               // Placeholder when imageSrc is empty
@@ -98,7 +92,7 @@ export default function IndustriesServed() {
             )}
             
             {/* Black shade overlay */}
-            <div className="absolute inset-0 bg-black/40 pointer-events-none"></div>
+            <div className="absolute inset-0 bg-black/30 pointer-events-none"></div>
           </div>
 
           {/* Centered Box Component */}

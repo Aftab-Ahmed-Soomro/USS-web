@@ -6,8 +6,10 @@ import StaggerItem from "./Staggeritem";
 
 const slides = [
   "/assets/talent-bgImage.png",
-  "/assets/talent-bgImage.png",
-  "/assets/talent-bgImage.png",
+  "/assets/webBanner/2.png",
+  "/assets/webBanner/3.png",
+  "/assets/webBanner/4.png",
+  "/assets/webBanner/5.png",
 ];
 
 export function TalentHero() {
@@ -22,20 +24,24 @@ export function TalentHero() {
 
   return (
     <section className="relative overflow-hidden bg-black text-white min-h-[80vh] flex items-center px-4 min-[375px]:px-6 pb-[80px] pt-[120px]">
-      
+
       {/* Background Slider */}
-      {slides.map((src, index) => (
-        <div 
-          key={index}
-          className="absolute inset-0 bg-cover bg-[center_20%] transition-opacity duration-1000"
-          style={{ 
-            backgroundImage: `url('${src}')`,
-            opacity: currentSlide === index ? 1 : 0,
-            zIndex: 0
-          }}
-        />
-      ))}
-      
+      <div
+        className="absolute inset-0 flex transition-transform duration-1000 ease-in-out"
+        style={{ transform: `translateX(-${currentSlide * 100}%)`, zIndex: 0 }}
+      >
+        {slides.map((src, index) => (
+          <div
+            key={index}
+            className="w-full h-full flex-shrink-0 bg-cover"
+            style={{
+              backgroundImage: `url('${src}')`,
+              backgroundPosition: src.includes('3.png') ? '80% 20%' : 'center 20%'
+            }}
+          />
+        ))}
+      </div>
+
       {/* Content */}
       <div className="relative z-10 mx-auto w-full max-w-[1150px]">
         <Stagger staggerDelay={0.15}>
@@ -79,9 +85,8 @@ export function TalentHero() {
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-              currentSlide === index ? "bg-white scale-125" : "bg-white/50 hover:bg-white/75"
-            }`}
+            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${currentSlide === index ? "bg-white scale-125" : "bg-white/50 hover:bg-white/75"
+              }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
