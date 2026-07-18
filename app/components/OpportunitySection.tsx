@@ -76,13 +76,13 @@ export function OpportunitySection() {
             <div className="absolute top-0 left-0 w-full h-full p-8 flex flex-col justify-start bg-black/20">
               <h3 
                 className="font-semibold text-white font-[var(--font-inter)] mb-2"
-                style={{ fontSize: "40px", lineHeight: "37.14px", letterSpacing: "-1.34px" }}
+                style={{ fontSize: "40px", lineHeight: "37.14px", letterSpacing: "-1.34px", textShadow: "0px 2px 10px rgba(0,0,0,0.8)" }}
               >
                 4-6x
               </h3>
               <p 
                 className="font-normal text-white/90 font-[var(--font-inter)] max-w-[280px]"
-                style={{ fontSize: "16px", lineHeight: "21.12px" }}
+                style={{ fontSize: "16px", lineHeight: "21.12px", textShadow: "0px 1px 8px rgba(0,0,0,0.8)" }}
               >
                 average uplift in affiliate conversion rates during black friday week
               </p>

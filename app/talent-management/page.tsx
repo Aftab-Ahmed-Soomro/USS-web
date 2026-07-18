@@ -649,6 +649,8 @@ export default function MarketingStrategyPage() {
           "/assets/tishOverview/3.png",
           "/assets/tishOverview/4.png"
         ]}
+        bgColor={"black"}
+        textColor={"white"}
       />
       <SadiaPsychologyProfile />
       <ProjectOverview 
@@ -659,6 +661,8 @@ export default function MarketingStrategyPage() {
           "/assets/sadiaOverview/3.png",
           "/assets/sadiaOverview/4.png"
         ]}
+        bgColor={"white"}
+        textColor={"black"}
       />
       {/* <RelatedProjects /> */}
       <Testimonials />

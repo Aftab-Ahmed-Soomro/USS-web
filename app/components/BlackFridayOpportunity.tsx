@@ -11,18 +11,19 @@ const imageConfigs = [
   },
   {
     src: "/assets/black-friday/2.jpg",
-    position: "center 10%",
+    position: "center 15%",
     scale: 1.6
   },
   {
     src: "/assets/black-friday/3.jpg",
-    position: "center 10%",
-    scale: 1.4
+    position: "60% 10%",
+    scale: 1.5
   },
   {
     src: "/assets/black-friday/4.jpg",
-    position: "center 15%",
-    scale: 1.0
+    position: "center 55%",
+    scale: 1.5,
+    fit: "contain"
   },
   {
     src: "/assets/black-friday/5.jpg",
@@ -94,7 +95,7 @@ export function BlackFridayOpportunity() {
                    src={config.src} 
                    alt={`Black Friday Creator ${i+1}`}
                    fill
-                   className="object-cover"
+                   className={config.fit ? `object-${config.fit}` : "object-cover"}
                    style={{ 
                      objectPosition: config.position,
                      transform: `scale(${config.scale})`,

@@ -46,12 +46,12 @@ export default function TeamAccordion() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(0);
 
   return (
-    <section className="bg-black text-white py-16 lg:py-24 px-6 md:px-12 lg:px-[100px] w-full flex flex-col items-center overflow-hidden">
+    <section className="bg-black text-white pt-6 pb-16 lg:pb-24 px-6 md:px-12 lg:px-[100px] w-full flex flex-col items-center overflow-hidden">
       <div className="w-full max-w-[1442px]">
         
         {/* Heading Section */}
         <div className="mb-12">
-          <h2 className="text-[36px] md:text-[64px] lg:text-[75px] leading-[1.1] lg:leading-[100px] tracking-[-1px] lg:tracking-[-6px] font-light lowercase" style={{ fontWeight: 300 }}>
+          <h2 className="text-[36px] md:text-[64px] lg:text-[75px] leading-[1] tracking-[-1px] lg:tracking-[-6px] font-light lowercase" style={{ fontWeight: 300 }}>
             we are the team of<br />
             visual and <span className="relative inline-block z-10 whitespace-nowrap">
               multiverse

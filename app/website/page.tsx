@@ -456,54 +456,54 @@ const emailStats = [
 const googleAdsBrandPoints = [
   {
     number: "01",
-    title: "Send and Forget",
+    title: "Looks Good, Does Little",
     description:
-      "Emails are only sent when there's a promotion or announcement.",
+      "The website looks polished but doesn’t guide visitors towards taking action.",
   },
   {
     number: "02",
-    title: "Every Subscriber Looks the Same",
+    title: "Confusing User Journey",
     description:
-      "The same message is sent to everyone, regardless of interests or behavior.",
+      "People struggle to find what they need or understand where to go next.",
   },
   {
     number: "03",
-    title: "No Long-Term Customer Journey",
+    title: "Slow and Hard to Use",
     description:
-      "There's no system to welcome, nurture, or retain customers after they sign up.",
+      "Poor mobile experience and slow loading make visitors leave quickly.",
   },
   {
     number: "04",
-    title: "No Clear Performance Tracking",
+    title: "Built Without Business Goals",
     description:
-      "Little reporting or optimization means opportunities are missed.",
+      "The website exists, but it isn’t helping generate enquiries or sales.",
   },
 ];
 
 const googleAdsUssPoints = [
   {
     number: "01",
-    title: "Always-On Email Strategy",
+    title: "Designed to Convert",
     description:
-      "We create an email calendar that keeps your brand consistently in front of customers.",
+      "Every page is built to guide visitors towards a clear next step.",
   },
   {
     number: "02",
-    title: "Personalized Customer Experiences",
+    title: "Clear User Journey",
     description:
-      "Campaigns are tailored to different audiences using segmentation and customer behavior.",
+      "Simple navigation and page structure make the website easy to use.",
   },
   {
     number: "03",
-    title: "Automated Customer Journeys",
+    title: "Fast and Responsive",
     description:
-      "Welcome flows, abandoned carts, post-purchase emails and retention campaigns work in the background.",
+      "Custom-built websites that work properly across mobile, tablet and desktop.",
   },
   {
     number: "04",
-    title: "Continuous Performance Optimization",
+    title: "Built Around Your Business",
     description:
-      "Every campaign is measured, refined and improved using real performance data.",
+      "The website reflects your brand and supports your wider marketing goals.",
   },
 ];
 
@@ -609,7 +609,7 @@ export default function WebsitePage() {
       <Numbers stats={emailStats} />
       <Brands />
       <WhyEmailFails
-            hideBadge={true}
+            hideBadge={false}
             heading={
               <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
                 why most{" "}
@@ -622,13 +622,13 @@ export default function WebsitePage() {
                 fails
               </h2>
             }
-            subheading="Most brands don't have a email Ads problem, they have a strategy problem."
+            subheading="Most brands don’t have a website problem, they have a structure and conversion problem."
             leftTitle="Most Brands"
             rightTitle="The USS Difference"
             leftPoints={googleAdsBrandPoints}
             rightPoints={googleAdsUssPoints}
-            centerLogo="/assets/Google__logo.webp"
-            logoClassName="w-[80px] lg:w-[115px]"
+            centerLogo="/assets/figma.png"
+            logoClassName="w-[80px] lg:w-[105px]"
             />
             <FadeUp>
               <DedicatedPartner />

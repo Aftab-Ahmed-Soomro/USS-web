@@ -27,9 +27,7 @@ export function WhatWeDoSection() {
               className="font-normal text-white/90 font-[var(--font-inter)]"
               style={{ fontSize: "16px", lineHeight: "24.8px" }}
             >
-              we work with high performing youtubers to monetize their
-              platforms effectively and maximize their revenue using
-              strategic marketing system
+              We help established YouTubers turn their audience into sustainable revenue through brand partnerships, affiliate marketing and strategic commercial growth.
             </p>
           </div>
         </FadeLeft>
@@ -46,12 +44,20 @@ export function WhatWeDoSection() {
               fill
               className="object-cover object-[30%_center]"
             />
+            <div className="absolute top-6 left-6 max-w-[220px]">
+              <p 
+                className="font-medium text-white font-[var(--font-inter)] capitalize"
+                style={{ fontSize: "16px", lineHeight: "21.12px" }}
+              >
+                Brand Partnerships
+              </p>
+            </div>
             <div className="absolute bottom-4 left-4">
               <span 
-                className="inline-block bg-white text-black rounded-full font-[var(--font-inter)] lowercase"
+                className="inline-block bg-white text-black rounded-full font-[var(--font-inter)] capitalize"
                 style={{ fontSize: "7px", lineHeight: "11.96px", padding: "4px 14px" }}
               >
-                text here
+                Partnerships
               </span>
             </div>
             </div>
@@ -66,20 +72,20 @@ export function WhatWeDoSection() {
               fill
               className="object-cover"
             />
-            <div className="absolute top-6 left-6 max-w-[220px]">
+            <div className="absolute top-6 left-6 max-w-[270px]">
               <p 
-                className="font-medium text-white font-[var(--font-inter)] lowercase"
+                className="font-medium text-white font-[var(--font-inter)] capitalize"
                 style={{ fontSize: "16px", lineHeight: "21.12px" }}
               >
-                average uplift in affiliate conversion rates during black friday week
+                Secure better brand partnerships that align with your audience and content
               </p>
             </div>
             <div className="absolute bottom-4 right-4">
               <span 
-                className="inline-block bg-transparent border border-white text-white rounded-full font-[var(--font-inter)] lowercase"
+                className="inline-block bg-transparent border border-white text-white rounded-full font-[var(--font-inter)] capitalize"
                 style={{ fontSize: "7px", lineHeight: "11.96px", padding: "4px 14px" }}
               >
-                text here
+                Partnerships
               </span>
             </div>
             </div>
@@ -94,12 +100,20 @@ export function WhatWeDoSection() {
               fill
               className="object-cover object-[40%_center]"
             />
+            <div className="absolute top-6 left-6 max-w-[220px]">
+              <p 
+                className="font-medium text-white font-[var(--font-inter)] capitalize"
+                style={{ fontSize: "16px", lineHeight: "21.12px" }}
+              >
+                Affiliate Strategy
+              </p>
+            </div>
             <div className="absolute bottom-4 left-4">
               <span 
-                className="inline-block bg-white text-black rounded-full font-[var(--font-inter)] lowercase"
+                className="inline-block bg-white text-black rounded-full font-[var(--font-inter)] capitalize"
                 style={{ fontSize: "7px", lineHeight: "11.96px", padding: "4px 14px" }}
               >
-                text here
+                Revenue Growth
               </span>
             </div>
             </div>
@@ -116,18 +130,18 @@ export function WhatWeDoSection() {
             />
             <div className="absolute top-6 left-6 max-w-[220px]">
               <p 
-                className="font-medium text-white font-[var(--font-inter)] lowercase"
+                className="font-medium text-white font-[var(--font-inter)] capitalize"
                 style={{ fontSize: "16px", lineHeight: "21.12px" }}
               >
-                average uplift in affiliate conversion rates during black friday week
+                Build additional revenue streams that continue beyond each upload.
               </p>
             </div>
             <div className="absolute bottom-4 right-4">
               <span 
-                className="inline-block bg-transparent border border-white text-white rounded-full font-[var(--font-inter)] lowercase"
+                className="inline-block bg-transparent border border-white text-white rounded-full font-[var(--font-inter)] capitalize"
                 style={{ fontSize: "7px", lineHeight: "11.96px", padding: "4px 14px" }}
               >
-                text here
+                 Revenue Growth
               </span>
             </div>
             </div>

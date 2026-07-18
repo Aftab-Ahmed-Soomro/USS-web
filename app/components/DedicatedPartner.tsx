@@ -40,12 +40,12 @@ export default function DedicatedPartner() {
               href="/contact"
               className="inline-flex items-center justify-center rounded-full border border-white/20 px-8 py-3.5 transition duration-300 hover:bg-white hover:text-black group"
             >
-              <span className="font-medium text-[14px] leading-[20px] align-middle">
-                Book a Discovery Call
+              <span className="uppercase text-[12px] sm:text-[13px] font-bold leading-[20px] align-middle">
+                Book a Consultation
               </span>
-              <span className="ml-3 transition-transform duration-300 group-hover:translate-x-1">
+              {/* <span className="ml-3 transition-transform duration-300 group-hover:translate-x-1">
                 &rarr;
-              </span>
+              </span> */}
             </Link>
           </div>
         </div>

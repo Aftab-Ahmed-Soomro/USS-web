@@ -6,11 +6,13 @@ import StaggerItem from "./Staggeritem";
 interface ProjectOverviewProps {
   subheading: string;
   images: string[];
+  bgColor: string;
+  textColor: string;
 }
 
-export function ProjectOverview({ subheading, images }: ProjectOverviewProps) {
+export function ProjectOverview({ subheading, images, bgColor, textColor }: ProjectOverviewProps) {
   return (
-    <section className="bg-black py-20 text-white overflow-hidden font-[var(--font-inter)]">
+    <section className={`bg-${bgColor} py-20 text-white overflow-hidden font-[var(--font-inter)]`}>
       <div className="w-full max-w-[1150px] px-4 mx-auto flex flex-col items-center">
         
         {/* Header */}
@@ -18,20 +20,20 @@ export function ProjectOverview({ subheading, images }: ProjectOverviewProps) {
           <div className="flex flex-col items-center mb-10 text-center">
             <h2 className="flex flex-wrap justify-center items-center gap-x-3 mb-2">
               <span 
-                className="text-white lowercase font-[var(--font-be-vietnam)]"
+                className={`text-${textColor} lowercase font-[var(--font-be-vietnam)]`}
                 style={{ fontWeight: 700, fontSize: "56px", lineHeight: "51.41px", letterSpacing: "-3px" }}
               >
                 project
               </span>
               <span 
-                className="text-white italic lowercase font-[var(--font-cormorant)] timesFontFamily"
+                className={`text-${textColor} italic lowercase font-[var(--font-cormorant)] timesFontFamily`}
                 style={{ fontWeight: 400, fontSize: "72px", lineHeight: "51.41px", letterSpacing: "-3px" }}
               >
                 overview.
               </span>
             </h2>
             <p 
-              className="text-white uppercase font-[var(--font-inter)]"
+              className={`text-${textColor} uppercase font-[var(--font-inter)]`}
               style={{ fontWeight: 500, fontSize: "24px", lineHeight: "51.41px", letterSpacing: "-1px" }}
             >
               {subheading}
