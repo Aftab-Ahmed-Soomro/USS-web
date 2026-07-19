@@ -96,8 +96,8 @@ export default function IndustriesServed() {
           </div>
 
           {/* Centered Box Component */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none px-4">
-            <div className="bg-[#f0f0f0] text-black px-6 py-2.5 lg:px-8 lg:py-3.5 rounded-sm shadow-xl font-normal text-[14px] leading-[18px] lg:text-[16px] lg:leading-[21.12px] capitalize text-center max-w-[90%]">
+          <div className="absolute inset-0 flex items-end bottom-12 justify-center pointer-events-none px-4">
+            <div className="bg-[#f0f0f0] text-black px-6 py-2.5 lg:px-8  rounded-sm shadow-xl font-normal text-[14px] leading-[18px] lg:text-[16px] lg:leading-[21.12px] capitalize text-center max-w-[90%]">
               {defaultSlides[currentSlide].centerText}
             </div>
           </div>

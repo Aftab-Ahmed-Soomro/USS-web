@@ -6,34 +6,35 @@ import StaggerItem from "./Staggeritem";
 const imageConfigs = [
   {
     src: "/assets/black-friday/1.jpg",
-    position: "left 10%",
-    scale: 1.15
+    position: "10% 0%",
+    scale: 1.2
   },
   {
     src: "/assets/black-friday/2.jpg",
-    position: "center 15%",
-    scale: 1.6
+    position: "center 0%",
+    scale: 1.4
   },
   {
     src: "/assets/black-friday/3.jpg",
-    position: "60% 10%",
-    scale: 1.5
+    position: "60% 0%",
+    scale: 1.35
   },
   {
     src: "/assets/black-friday/4.jpg",
-    position: "center 55%",
-    scale: 1.5,
+    position: "40% 50%",
+    scale: 1.35,
     fit: "contain"
   },
   {
     src: "/assets/black-friday/5.jpg",
-    position: "center 10%",
-    scale: 1.0
+    position: "50% 50%",
+    scale: 3,
+    fit: "contain"
   },
   {
     src: "/assets/black-friday/6.jpg",
-    position: "center 20%",
-    scale: 1.5
+    position: "40% 20%",
+    scale: 1.4
   },
 ];
 
@@ -84,10 +85,10 @@ export function BlackFridayOpportunity() {
       {/* <FadeUp> */}
         <div className="w-full mb-12 sm:mb-20">
           <div 
-         className="w-full flex gap-2 sm:gap-4 overflow-hidden relative h-[200px] sm:h-[300px] lg:h-[380px]"
-             style={{ 
-               clipPath: "polygon(0% 0%, 10% 4.32%, 20% 7.68%, 30% 10.08%, 40% 11.52%, 50% 12%, 60% 11.52%, 70% 10.08%, 80% 7.68%, 90% 4.32%, 100% 0%, 100% 100%, 90% 95.68%, 80% 92.32%, 70% 89.92%, 60% 88.48%, 50% 88%, 40% 88.48%, 30% 89.92%, 20% 92.32%, 10% 95.68%, 0% 100%)"
-             }}
+            className="w-full flex gap-2 sm:gap-4 overflow-hidden relative h-[250px] sm:h-[400px] lg:h-[500px]"
+            style={{ 
+              clipPath: "polygon(0% 0%, 10% 6.48%, 20% 11.52%, 30% 15.12%, 40% 17.28%, 50% 18%, 60% 17.28%, 70% 15.12%, 80% 11.52%, 90% 6.48%, 100% 0%, 100% 100%, 90% 93.52%, 80% 88.48%, 70% 84.88%, 60% 82.72%, 50% 82%, 40% 82.72%, 30% 84.88%, 20% 88.48%, 10% 93.52%, 0% 100%)"
+            }}
           >
              {imageConfigs.map((config, i) => (
                <div key={i} className="flex-1 relative h-full bg-gray-100 overflow-hidden">
