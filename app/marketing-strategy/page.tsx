@@ -480,25 +480,33 @@ function RelatedProjects() {
 function FinalCta() {
   return (
     <section className="bg-[#f5f4f1] px-6 py-[88px] text-center text-black sm:px-10 lg:px-[48px]">
-      <h2 className="mx-auto max-w-[800px] font-[var(--font-be-vietnam)] text-[36px] sm:text-[56px] font-medium lowercase leading-[1.08] tracking-[-1.44px]">
-        build a strategy that
-        <br />
-        actually{" "}
-        <span className="font-[var(--font-cormorant)] text-[1.16em] sm:text-[72px] font-normal tracking-[-1.44px] timesFontFamily italic">
-          works
-        </span>
-      </h2>
-      <p className="mx-auto mt-[15px] max-w-[800px] font-[var(--font-inter)] text-[18px] text-[#58554F] leading-[1.6] text-[-1.44px]">
-        If your marketing feels disconnected, it’s time for a clearer approach.
-      </p>
-      <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-        <Link
-          className="inline-flex h-[42px] min-w-[190px] items-center justify-center rounded-full bg-[#ff5500] px-8 font-[var(--font-be-vietnam)] text-[12px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
-          href="/contact"
-        >
-          Book a Consultation
-        </Link>
-      </div>
+      <Stagger staggerDelay={0.15}>
+        <StaggerItem>
+          <h2 className="mx-auto max-w-[800px] font-[var(--font-be-vietnam)] text-[36px] sm:text-[56px] font-medium lowercase leading-[1.08] tracking-[-1.44px]">
+            build a strategy that
+            <br />
+            actually{" "}
+            <span className="font-[var(--font-cormorant)] text-[1.16em] sm:text-[72px] font-normal tracking-[-1.44px] timesFontFamily italic">
+              works
+            </span>
+          </h2>
+        </StaggerItem>
+        <StaggerItem>
+          <p className="mx-auto mt-[15px] max-w-[800px] font-[var(--font-inter)] text-[18px] text-[#58554F] leading-[1.6] text-[-1.44px]">
+            If your marketing feels disconnected, it’s time for a clearer approach.
+          </p>
+        </StaggerItem>
+        <StaggerItem>
+          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Link
+              className="inline-flex h-[42px] min-w-[190px] items-center justify-center rounded-full bg-[#ff5500] px-8 font-[var(--font-be-vietnam)] text-[12px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
+              href="/contact"
+            >
+              Book a Consultation
+            </Link>
+          </div>
+        </StaggerItem>
+      </Stagger>
     </section>
   );
 }

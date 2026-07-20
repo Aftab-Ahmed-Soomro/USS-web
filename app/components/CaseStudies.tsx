@@ -129,51 +129,51 @@ export default function CaseStudies({
     <section className="bg-black py-16 lg:py-24 px-4 lg:px-6 w-full flex justify-center">
       <div className="w-full max-w-[1150px]">
         
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
-          
-          {/* Left Column */}
-          <div className="flex-1 flex flex-col gap-12 lg:gap-[120px] lg:order-1 order-2 mt-8 lg:mt-0">
-            {leftData.map(item => (
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+            
+            {/* Left Column */}
+            <div className="flex-1 flex flex-col gap-12 lg:gap-[120px] lg:order-1 order-2 mt-8 lg:mt-0">
+              {leftData.map(item => (
               <Card key={item.id} {...item} imageAspectRatio={imageAspectRatio} />
-            ))}
-          </div>
+              ))}
+            </div>
 
-          {/* Right Column */}
-          <div className="flex-1 flex flex-col lg:order-2 order-1">
+            {/* Right Column */}
+            <div className="flex-1 flex flex-col lg:order-2 order-1">
             
             {/* Header Area */}
-            <div className="flex flex-col gap-4 mb-12 lg:mb-16">
-              <span className="font-bold text-[12px] leading-[18px] lg:text-[14px] lg:leading-[20px] tracking-[0.05em] uppercase text-white">
-                Case Studies
-              </span>
-              
-              {heading ? (
-                heading
-              ) : (
-                <h2 className="text-white">
-                  <span className="font-medium text-[32px] leading-[40px] sm:text-[40px] sm:leading-[48px] tracking-[-2px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-3.2px]">
-                    see how we build 
-                  </span>
-                  <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[40px] leading-[40px] sm:text-[48px] sm:leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
-                    {" "}high {" "}
-                  </span>
-                  <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[40px] leading-[40px] sm:text-[48px] sm:leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
-                    performing{' '}
-                  </span>
-                  <span className="font-medium text-[32px] leading-[40px] sm:text-[40px] sm:leading-[48px] tracking-[-2px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-3.2px]">
-                    websites
-                  </span>
-                </h2>
-              )}
-              
-              {description !== undefined ? (
-                description
-              ) : (
-                <p className="font-normal text-[16px] leading-[24px] lg:text-[18px] lg:leading-[28px] text-white/90 whitespace-normal lg:whitespace-nowrap max-w-[600px]">
-                  Explore how we've helped brands transform their digital presence.
-                </p>
-              )}
-            </div>
+              <div className="flex flex-col gap-4 mb-12 lg:mb-16">
+                <span className="font-bold text-[12px] leading-[18px] lg:text-[14px] lg:leading-[20px] tracking-[0.05em] uppercase text-white">
+                  Case Studies
+                </span>
+                
+                {heading ? (
+                  heading
+                ) : (
+                  <h2 className="text-white">
+                    <span className="font-medium text-[32px] leading-[40px] sm:text-[40px] sm:leading-[48px] tracking-[-2px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-3.2px]">
+                      see how we build 
+                    </span>
+                    <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[40px] leading-[40px] sm:text-[48px] sm:leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
+                      {" "}high {" "}
+                    </span>
+                    <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[40px] leading-[40px] sm:text-[48px] sm:leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
+                      performing{' '}
+                    </span>
+                    <span className="font-medium text-[32px] leading-[40px] sm:text-[40px] sm:leading-[48px] tracking-[-2px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-3.2px]">
+                      websites
+                    </span>
+                  </h2>
+                )}
+                
+                {description !== undefined ? (
+                  description
+                ) : (
+                  <p className="font-normal text-[16px] leading-[24px] lg:text-[18px] lg:leading-[28px] text-white/90 whitespace-normal lg:whitespace-nowrap max-w-[600px]">
+                    Explore how we've helped brands transform their digital presence.
+                  </p>
+                )}
+              </div>
 
             {/* Right Column Cards */}
             <div className="flex flex-col gap-12 lg:gap-[120px]">
@@ -185,7 +185,6 @@ export default function CaseStudies({
           </div>
           
         </div>
-
       </div>
     </section>
   );

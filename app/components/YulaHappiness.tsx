@@ -1,11 +1,11 @@
 "use client";
 
-import React from "react";
+import FadeUp from "./FadeUp";
 
 export function YulaHappiness() {
   return (
     <section className="bg-black w-full flex flex-col items-center">
-      <div className="w-full relative">
+      <FadeUp delay={0.1} className="w-full relative">
         <div className="w-full aspect-[1442/677] overflow-hidden">
           <img 
             src="/assets/yulaHappiness.png" 
@@ -13,7 +13,7 @@ export function YulaHappiness() {
             className="w-full h-full object-cover"
           />
         </div>
-      </div>
+      </FadeUp>
     </section>
   );
 }
