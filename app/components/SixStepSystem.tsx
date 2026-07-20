@@ -5,7 +5,25 @@ import FadeRight from "./FadeRight";
 import Stagger from "./Stagger";
 import StaggerItem from "./Staggeritem";
 
-const steps = [
+export interface StepDetail {
+  title: string;
+  desc: string;
+}
+
+export interface StepData {
+  id: string;
+  title: string;
+  pills: string[];
+  description: string;
+  details: StepDetail[];
+}
+
+export interface SixStepSystemProps {
+  heading?: React.ReactNode;
+  data?: StepData[];
+}
+
+const defaultSteps: StepData[] = [
   {
     id: "01",
     title: "Ideation & Strategy",
@@ -82,52 +100,56 @@ const steps = [
   }
 ];
 
-export function SixStepSystem() {
+export function SixStepSystem({ heading, data = defaultSteps }: SixStepSystemProps) {
   const [activeStepId, setActiveStepId] = useState("01");
 
-  const activeStep = steps.find(s => s.id === activeStepId) || steps[0];
+  const activeStep = data.find(s => s.id === activeStepId) || data[0];
 
   return (
     <section className="bg-black py-20 text-white overflow-hidden font-[var(--font-inter)]">
       <div className="w-full max-w-[1150px] px-4 mx-auto">
-        
+
         {/* Header */}
         <FadeUp>
           <div className="mb-10 sm:mb-16 md:mb-24">
-            <h2 className="flex flex-col text-white font-medium tracking-[-1px] sm:tracking-[-2px] text-[36px] sm:text-[56px] leading-[1.1] sm:leading-[69.36px]">
-              <span>A six-step system,</span>
-              <span className="flex flex-wrap items-center gap-x-2 sm:gap-x-3">
-                <span>engineered for</span>
-                <span 
-                  className="text-[#FF5500] italic font-normal font-[var(--font-cormorant)] timesFontFamily text-[46px] sm:text-[72px] leading-[1.1] sm:leading-[69.36px] tracking-[-1.5px] sm:tracking-[-2px]"
-                >
-                  Q4 revenue.
+            {heading ? (
+              heading
+            ) : (
+              <h2 className="flex flex-col text-white font-medium tracking-[-1px] sm:tracking-[-2px] text-[36px] sm:text-[56px] leading-[1.1] sm:leading-[69.36px] ">
+                <span>A six-step system,</span>
+                <span className="flex flex-wrap items-center gap-x-2 sm:gap-x-3">
+                  <span>engineered for</span>
+                  <span
+                    className="text-[#FF5500] italic font-normal font-[var(--font-cormorant)] timesFontFamily text-[46px] sm:text-[72px] leading-[1.1] sm:leading-[69.36px] tracking-[-1.5px] sm:tracking-[-2px]"
+                  >
+                    Q4 revenue.
+                  </span>
                 </span>
-              </span>
-            </h2>
+              </h2>
+            )}
           </div>
         </FadeUp>
 
         {/* Content Layout */}
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
-          
+        <div className="flex flex-col lg:flex-row gap-8">
+
           {/* Left Column (Steps List) */}
-          <Stagger className="flex flex-col w-full lg:w-1/2 gap-6">
-            {steps.map((step) => {
+          <Stagger className="flex flex-col w-full lg:w-[55%] xl:w-[60%] gap-6">
+            {data.map((step) => {
               const isActive = step.id === activeStepId;
               return (
                 <StaggerItem key={step.id}>
-                  <div 
+                  <div
                     className="flex items-start gap-6 cursor-pointer transition-colors duration-300"
                     onMouseEnter={() => setActiveStepId(step.id)}
                   >
-                    <span 
+                    <span
                       className={`font-normal mt-2 sm:mt-3 transition-colors duration-300 text-[13px] leading-[19.5px] ${isActive ? 'text-[#FF5500]' : 'text-[#EAEAEA]'}`}
                     >
                       {step.id}
                     </span>
-                    <h3 
-                      className={`font-medium transition-colors duration-300 text-[28px] sm:text-[40px] leading-[1.2] sm:leading-[52px] tracking-[-1px] sm:tracking-[-1.04px] ${isActive ? 'text-white' : 'text-[#4A4A4A]'}`}
+                    <h3
+                      className={`font-medium transition-colors duration-300 text-[28px] sm:text-[34px] lg:text-[38px] xl:text-[40px] leading-[1.2] tracking-[-1px] whitespace-nowrap ${isActive ? 'text-white' : 'text-[#4A4A4A]'}`}
                     >
                       {step.title}
                     </h3>
@@ -138,13 +160,13 @@ export function SixStepSystem() {
           </Stagger>
 
           {/* Right Column (Details) */}
-          <FadeRight className="w-full lg:w-1/2">
+          <FadeRight className="w-full lg:w-[45%] xl:w-[40%] pl-0 lg:pl-4">
             <div className="flex flex-col w-full">
-              
+
               {/* Pills */}
               <div className="flex flex-wrap gap-2 sm:gap-3 mb-6">
                 {activeStep.pills.map((pill, idx) => (
-                  <span 
+                  <span
                     key={idx}
                     className="bg-white text-black font-medium rounded-full px-3 py-1 sm:px-4 text-[11px] leading-[16.5px]"
                   >
@@ -154,7 +176,7 @@ export function SixStepSystem() {
               </div>
 
               {/* Description */}
-              <p 
+              <p
                 className="font-normal text-[#EAEAEA] mb-8 sm:mb-10 max-w-[480px] text-[14px] leading-[22.75px]"
               >
                 {activeStep.description}
@@ -164,12 +186,12 @@ export function SixStepSystem() {
               <div className="flex flex-col">
                 {activeStep.details.map((detail, idx) => (
                   <div key={idx} className="flex flex-col py-4 border-t border-[#333333] last:border-b">
-                    <h4 
+                    <h4
                       className="font-semibold text-white mb-1 text-[13px] leading-[19.5px]"
                     >
                       {detail.title}
                     </h4>
-                    <p 
+                    <p
                       className="font-normal text-[#A0A0A0] text-[12px] leading-[18px]"
                     >
                       {detail.desc}

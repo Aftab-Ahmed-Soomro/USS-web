@@ -2,7 +2,19 @@
 
 import React, { useState } from "react";
 
-const teamData = [
+export interface TeamMember {
+  id: string;
+  title: string;
+  description: string;
+  details?: { label: string; value: string }[];
+}
+
+export interface TeamAccordionProps {
+  heading?: React.ReactNode;
+  data?: TeamMember[];
+}
+
+const defaultTeamData: TeamMember[] = [
   {
     id: "01",
     title: "BRAND DESIGNER",
@@ -42,7 +54,7 @@ const teamData = [
   }
 ];
 
-export default function TeamAccordion() {
+export default function TeamAccordion({ heading, data = defaultTeamData }: TeamAccordionProps) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(0);
 
   return (
@@ -51,32 +63,36 @@ export default function TeamAccordion() {
         
         {/* Heading Section */}
         <div className="mb-12">
-          <h2 className="text-[32px] sm:text-[36px] md:text-[64px] lg:text-[75px] leading-[1] tracking-[-1px] lg:tracking-[-6px] font-light lowercase" style={{ fontWeight: 300 }}>
-            we are the team of<br />
-            visual and <span className="relative inline-block z-10 whitespace-nowrap">
-              multiverse
-              
-              {/* Orange Glow */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[90%] bg-[#ff5500]/40 blur-[40px] -z-10 rounded-[100%] pointer-events-none"></div>
-              
-              {/* Ellipse SVG */}
-              <svg 
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[45%] w-[110%] h-[150%] pointer-events-none" 
-                viewBox="0 0 400 150" 
-                fill="none" 
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <ellipse cx="200" cy="75" rx="190" ry="40" transform="rotate(-3 200 75)" stroke="#ff5500" strokeOpacity="1.7" strokeWidth="1" />
-              </svg>
+          {heading ? (
+            heading
+          ) : (
+            <h2 className="text-[32px] sm:text-[36px] md:text-[64px] lg:text-[75px] leading-[1] tracking-[-1px] lg:tracking-[-6px] font-light lowercase" style={{ fontWeight: 300 }}>
+              we are the team of<br />
+              visual and <span className="relative inline-block z-10 whitespace-nowrap">
+                multiverse
+                
+                {/* Orange Glow */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[90%] bg-[#ff5500]/40 blur-[40px] -z-10 rounded-[100%] pointer-events-none"></div>
+                
+                {/* Ellipse SVG */}
+                <svg 
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[45%] w-[110%] h-[150%] pointer-events-none" 
+                  viewBox="0 0 400 150" 
+                  fill="none" 
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <ellipse cx="200" cy="75" rx="190" ry="40" transform="rotate(-3 200 75)" stroke="#ff5500" strokeOpacity="1.7" strokeWidth="1" />
+                </svg>
 
-            </span><br />
-            art designers
-          </h2>
+              </span><br />
+              art designers
+            </h2>
+          )}
         </div>
 
         {/* Accordion Section */}
         <div className="flex flex-col w-full border-b border-white/20">
-          {teamData.map((item, index) => {
+          {data.map((item, index) => {
             const isHovered = hoveredIndex === index;
             return (
               <div 

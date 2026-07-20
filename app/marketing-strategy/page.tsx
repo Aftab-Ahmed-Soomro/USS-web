@@ -11,7 +11,11 @@ import { GoodCompanyMap } from "../components/GoodCompanyMap";
 import Stagger from "../components/Stagger";
 import StaggerItem from "../components/Staggeritem";
 import { WhyEmailFails } from "../components/WhyEmailFails";
-
+import { GrowthRoadmap } from "../components/GrowthRoadmap";
+import { LevelsOfFunnel } from "../components/LevelsOfFunnel";
+import { StrategyByBusinessGoal } from "../components/StrategyByBusinessGoal";
+import TeamAccordion from "../components/TeamAccordion";
+import { SixStepSystem } from "../components/SixStepSystem";
 type Bullet =
   | string
   | {
@@ -654,6 +658,63 @@ const emailStats = [
   { value: "100+", label: "Brands Worldwide" },
 ];
 
+const strategyAccordionData = [
+  {
+    id: "01",
+    title: "Discovery & Research",
+    description: "We get to know your business, market, competitors and audience before any marketing begins. This gives us the insight needed to identify opportunities and build a strategy with confidence.",
+  },
+  {
+    id: "02",
+    title: "Strategic Planning",
+    description: "Using our research, we create a tailored marketing roadmap covering channels, messaging, budgets, KPIs and campaign priorities, giving your business a clear direction for growth.",
+  },
+  {
+    id: "03",
+    title: "Execution & Optimisation",
+    description: "Once your strategy is live, we monitor performance, analyse results and continuously refine campaigns to maximise ROI and uncover new opportunities.",
+  },
+  {
+    id: "04",
+    title: "Scale & Growth",
+    description: "As your business grows, so does the strategy. We introduce new channels, optimise budgets and expand activity to support long-term, sustainable growth.",
+  }
+];
+
+const rightSidePlaceholder = {
+  pills: ["Concept", "Positioning", "Audience Fit"],
+  description: "We start by identifying the right product for your niche, audience size and Q4 timing — then build the commercial architecture around it.",
+  details: [
+    {
+      title: "Product Concept & Validation",
+      desc: "The right product for your niche, audience size and Black Friday timing."
+    },
+    {
+      title: "Brand & Creative Direction",
+      desc: "Product looks and feels authentic to your personal brand."
+    },
+    {
+      title: "Launch-ready Assets",
+      desc: "Imagery, copy and sales assets ready ahead of go-live."
+    },
+    {
+      title: "Pricing & Margin Structure",
+      desc: "A commercial model that maximises revenue and stays compelling."
+    }
+  ]
+};
+
+const touchpointStepsData = [
+  { id: "01", title: "Paid Search Capture demand", ...rightSidePlaceholder },
+  { id: "02", title: "Paid Social Generate awareness", ...rightSidePlaceholder },
+  { id: "03", title: "Email Marketing Retain customers", ...rightSidePlaceholder },
+  { id: "04", title: "WhatsApp & SMS Drive action", ...rightSidePlaceholder },
+  { id: "05", title: "Website Convert visitors", ...rightSidePlaceholder },
+  { id: "06", title: "Organic Social Build authority", ...rightSidePlaceholder },
+  { id: "07", title: "SEO Long-term growth", ...rightSidePlaceholder },
+  { id: "08", title: "Content Creation Support every channel", ...rightSidePlaceholder }
+];
+
 export default function MarketingStrategyPage() {
   return (
     <main className="min-h-screen bg-black overflow-hidden">
@@ -661,7 +722,8 @@ export default function MarketingStrategyPage() {
       <Hero />
       <Numbers stats={emailStats} />
       <Brands />
-      <WhyEmailFails
+      <div className="-mb-[40px]">
+        <WhyEmailFails
                   hideBadge={true}
                   heading={
                     <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
@@ -670,7 +732,7 @@ export default function MarketingStrategyPage() {
                         className="font-normal italic text-[60px] sm:text-[72px]"
                         style={{ fontFamily: "'Times New Roman', Times, serif" }}
                       >
-                        google ads
+                        marketing strategy
                       </span>{" "}
                       fails
                     </h2>
@@ -683,7 +745,36 @@ export default function MarketingStrategyPage() {
                   centerLogo="/assets/Google__logo.webp"
                   logoClassName="w-[80px] lg:w-[115px]"
                   />
-                  <RevenueMethod />
+      </div>
+                  <GrowthRoadmap />
+                  <TeamAccordion 
+                    heading={
+                      <h2 className="text-[32px] sm:text-[36px] md:text-[64px] lg:text-[75px] leading-[1] tracking-[-1px] lg:tracking-[-6px] font-light lowercase" style={{ fontWeight: 300 }}>
+                        from strategy to scale.
+                      </h2>
+                    }
+                    data={strategyAccordionData} 
+                  />
+                  <LevelsOfFunnel />
+                  <StrategyByBusinessGoal />
+                  <SixStepSystem 
+                    heading={
+                      <h2 className="text-white font-medium tracking-[-1px] sm:tracking-[-2px] text-[36px] sm:text-[56px] leading-[1.1] sm:leading-[69.36px]">
+                        every digital touchpoint should <br className="hidden sm:block" />
+                        <span className="inline-flex items-center gap-x-2 sm:gap-x-3 mt-1 sm:mt-0">
+                          <span>have its</span>
+                          <span 
+                            className="text-white italic font-normal font-[var(--font-cormorant)] timesFontFamily text-[46px] sm:text-[72px] leading-[1.1] sm:leading-[69.36px] tracking-[-1.5px] sm:tracking-[-2px]"
+                          >
+                            own strategy
+                          </span>
+                        </span>
+                      </h2>
+                    }
+                    data={touchpointStepsData}
+                  />
+                  
+                  {/* <RevenueMethod /> */}
       {/* <RelatedProjects /> */}
       <Testimonials />
       <Team />
