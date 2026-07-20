@@ -116,13 +116,13 @@ export function ContentCreationServices() {
             </FadeUp>
 
             <FadeUp delay={0.2}>
-              <h3 className="font-[var(--font-be-vietnam)] font-light text-[48px] sm:text-[80px] leading-[1.1] sm:leading-[80px] tracking-[-2.4px] align-middle mb-[24px] sm:mb-[30px]">
+              <h3 className="font-[var(--font-be-vietnam)] font-light text-[38px] sm:text-[80px] leading-[1.1] sm:leading-[80px] tracking-[-2.4px] align-middle mb-[24px] sm:mb-[30px]">
                 Pre<br />Production
               </h3>
             </FadeUp>
 
             <FadeUp delay={0.3}>
-              <p className="font-[var(--font-inter)] font-light text-[16px] sm:text-[18px] leading-[1.6] sm:leading-[29.25px] text-white/90 align-middle mb-[24px] sm:mb-[30px] max-w-[400px]">
+              <p className="font-[var(--font-inter)] font-light text-[14px] sm:text-[18px] leading-[1.6] sm:leading-[29.25px] text-white/90 align-middle mb-[24px] sm:mb-[30px] max-w-[400px]">
                 Where the story is imagined. Strategy, structure, and the quiet architecture behind every frame that will one day exist.
               </p>
             </FadeUp>
@@ -255,13 +255,13 @@ export function ContentCreationServices() {
             </FadeUp>
 
             <FadeUp delay={0.2}>
-              <h3 className="font-[var(--font-be-vietnam)] font-light text-[48px] sm:text-[80px] leading-[1.1] sm:leading-[80px] tracking-[-2.4px] align-middle mb-[24px] sm:mb-[30px]">
+              <h3 className="font-[var(--font-be-vietnam)] font-light text-[38px] sm:text-[80px] leading-[1.1] sm:leading-[80px] tracking-[-2.4px] align-middle mb-[24px] sm:mb-[30px]">
                 Post<br />Production
               </h3>
             </FadeUp>
 
             <FadeUp delay={0.3}>
-              <p className="font-[var(--font-inter)] font-light text-[16px] sm:text-[18px] leading-[1.6] sm:leading-[29.25px] text-white/90 align-middle mb-[24px] sm:mb-[30px] max-w-[400px]">
+              <p className="font-[var(--font-inter)] font-light text-[14px] sm:text-[18px] leading-[1.6] sm:leading-[29.25px] text-white/90 align-middle mb-[24px] sm:mb-[30px] max-w-[400px]">
                 Where footage becomes a film. Editing, motion, color and sound woven together into a single continuous breath.
               </p>
             </FadeUp>

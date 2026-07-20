@@ -94,23 +94,23 @@ function Hero() {
       <div className="mx-auto grid max-w-[1150px] gap-[40px] sm:gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
-            <p className="font-[var(--font-be-vietnam)] text-[10px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white">
+            <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white">
               Content Creation
             </p>
           </StaggerItem>
           <StaggerItem>
-            <h1 className="mt-[35px] sm:mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[38px] font-bold lowercase leading-[0.5] sm:leading-[100%] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white">
+            <h1 className="mt-[35px] sm:mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[0.5] sm:leading-[100%] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white">
               content that works
               <br className="sm:hidden" /> {/* Adding hidden br if needed? No, I will not add new br */}
               <br />
               not just{" "}
-              <span className="font-[var(--font-cormorant)] text-[1.12em] leading-[1.1] sm:leading-none sm:text-[72px] lowercase font-normal timesFontFamily italic text-white tracking-[-1px] sm:tracking-[-2.8px]">
+              <span className="font-[var(--font-cormorant)] text-[42px] leading-[0.7] sm:leading-none sm:text-[72px] lowercase font-normal timesFontFamily italic text-white tracking-[-1px] sm:tracking-[-2.8px]">
                 looks good
               </span>
             </h1>
           </StaggerItem>
           <StaggerItem>
-            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[40px] max-w-[530px] font-[var(--font-inter)] text-[14px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[18px]">
+            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[40px] max-w-[530px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[18px]">
               We create high quality photo and video content designed to capture attention, reflect your brand and support your marketing across every platform.
             </p>
           </StaggerItem>
@@ -138,9 +138,9 @@ function VideoSection() {
       <div className="mx-auto text-center">
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
-            <h2 className="font-[var(--font-be-vietnam)] text-[28px] min-[375px]:text-[32px] sm:text-[56px] font-medium lowercase leading-[1.1] sm:leading-tight tracking-[-4%]">
+            <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[56px] font-medium lowercase leading-[1.1] sm:leading-tight tracking-[-4%]">
               take a look at our{" "}
-              <span className="font-[var(--font-cormorant)] text-[1.15em] sm:text-[72px] font-normal tracking-[-2%] sm:tracking-[-4%] timesFontFamily italic">
+              <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal tracking-[-2%] sm:tracking-[-4%] timesFontFamily italic">
                 creative world
               </span>
             </h2>
@@ -387,11 +387,11 @@ function FinalCta() {
           </p>
         </StaggerItem>
         <StaggerItem>
-          <h2 className="mt-[24px] sm:mt-8 font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[36px] font-medium leading-[1.08] tracking-[-1.5px] sm:text-[55px]">
+          <h2 className="mt-[24px] sm:mt-8 font-[var(--font-be-vietnam)] text-[32px] font-medium leading-[1.08] tracking-[-1.5px] sm:text-[55px]">
             create content
             <br />
             that actually{" "}
-            <span className="font-[var(--font-cormorant)] text-[1.12em] leading-[1.1] sm:leading-none font-extralight timesFontFamily italic text-[#ff5500]">
+            <span className="font-[var(--font-cormorant)] text-[42px] leading-[1.1] sm:leading-none font-extralight timesFontFamily italic text-[#ff5500]">
               performs
             </span>
           </h2>
@@ -572,7 +572,7 @@ function RelatedProjects() {
                   </div>
 
                   {/* Copy */}
-                  <p className="mt-[12px] sm:mt-[14px] max-w-[550px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.6] sm:leading-[28px] text-white/90 sm:text-white">
+                  <p className="mt-[12px] sm:mt-[14px] max-w-[550px] font-[var(--font-inter)] text-[13px] sm:text-[18px] leading-[1.6] sm:leading-[28px] text-white/90 sm:text-white">
                     {project.copy}
                   </p>
 
@@ -631,12 +631,13 @@ function RevenueMethod() {
           {CARDS_DATA.map((card, i) => (
             <FadeUp key={card.id} delay={0.1 + i * 0.1}>
               <div
+                tabIndex={0}
                 style={{
                   backgroundImage: `url(${card.bgImage})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center'
                 }}
-                className="group relative rounded-[28px] overflow-hidden p-[20px] sm:p-2 flex flex-col justify-between cursor-pointer transition-all duration-500 ease-out w-full h-[360px] sm:h-[606.93px]"
+                className="group relative rounded-[28px] overflow-hidden p-[20px] sm:p-2 flex flex-col justify-between cursor-pointer focus:outline-none transition-all duration-500 ease-out w-full h-[360px] sm:h-[606.93px]"
               >
                 {/* Card Number */}
                 <div
@@ -647,7 +648,7 @@ function RevenueMethod() {
                 </div>
 
                 {/* Bottom Content Group (Animates Up on Hover) */}
-                <div className="transform translate-y-[80px] group-hover:translate-y-0 transition-transform duration-500 ease-out will-change-transform">
+                <div className="transform translate-y-[80px] group-hover:translate-y-0 group-focus:translate-y-0 transition-transform duration-500 ease-out will-change-transform">
 
                   {/* Title */}
                   <h3
@@ -659,7 +660,7 @@ function RevenueMethod() {
 
                   {/* Description (Fades and slides in cleanly) */}
                   <p
-                    className="text-[14px] sm:text-[15.5px] font-normal leading-[1.4] sm:leading-[18.86px] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 ease-out min-h-[80px] sm:min-h-[120px]"
+                    className="text-[14px] sm:text-[15.5px] font-normal leading-[1.4] sm:leading-[18.86px] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-500 delay-75 ease-out min-h-[80px] sm:min-h-[120px]"
                     style={{ fontStyle: 'Regular' }}
                   >
                     {card.description}
@@ -687,10 +688,10 @@ export default function ContentCreationPage() {
         <WhyEmailFails
           hideBadge={false}
           heading={
-            <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
+            <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[32px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
               why most{" "}
               <span
-                className="font-normal italic text-[60px] sm:text-[72px]"
+                className="font-normal italic text-[42px] sm:text-[72px]"
                 style={{ fontFamily: "'Times New Roman', Times, serif" }}
               >
                 content assets
