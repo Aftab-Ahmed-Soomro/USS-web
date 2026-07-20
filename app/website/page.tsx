@@ -559,12 +559,13 @@ function RevenueMethod() {
           {CARDS_DATA.map((card) => (
             <StaggerItem key={card.id}>
               <div
+                tabIndex={0}
                 style={{
                   backgroundImage: `url(${card.bgImage})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center'
                 }}
-                className="group relative rounded-[28px] overflow-hidden p-6 flex flex-col justify-between cursor-pointer transition-all duration-500 ease-out w-full h-[360px] sm:h-[606.93px]"
+                className="group relative rounded-[28px] overflow-hidden p-6 flex flex-col justify-between cursor-pointer focus:outline-none transition-all duration-500 ease-out w-full h-[360px] sm:h-[606.93px]"
               >
                 {/* Card Number */}
                 <div
@@ -574,7 +575,7 @@ function RevenueMethod() {
                 </div>
 
                 {/* Bottom Content Group (Animates Up on Hover) */}
-                <div className="transform translate-y-[80px] group-hover:translate-y-0 transition-transform duration-500 ease-out will-change-transform">
+                <div className="transform translate-y-[80px] group-hover:translate-y-0 group-focus:translate-y-0 transition-transform duration-500 ease-out will-change-transform">
 
                   {/* Title */}
                   <h3
@@ -585,7 +586,7 @@ function RevenueMethod() {
 
                   {/* Description (Fades and slides in cleanly) */}
                   <p
-                    className="text-[14px] sm:text-[15.5px] font-normal leading-[1.4] sm:leading-[18.86px] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 ease-out"
+                    className="text-[14px] sm:text-[15.5px] font-normal leading-[1.4] sm:leading-[18.86px] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-500 delay-75 ease-out"
                   >
                     {card.description}
                   </p>

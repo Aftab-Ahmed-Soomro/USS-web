@@ -47,10 +47,10 @@ export default function SocialMediaRevenueMethod() {
           </StaggerItem>
 
           <StaggerItem>
-            <h2 className="text-white text-[28px] min-[360px]:text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-8 min-[390px]:mb-10 sm:mb-16">
+            <h2 className="text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-8 min-[390px]:mb-10 sm:mb-16">
               organic social{" "}
               <span
-                className="italic text-[#ff5500] font-normal text-[1.1em] tracking-[-3%] sm:text-[72px] sm:leading-[70px]"
+                className="italic text-[#ff5500] font-normal text-[42px] tracking-[-3%] sm:text-[72px] sm:leading-[70px]"
                 style={{ fontFamily: "'Times New Roman', Times, serif" }}
               >
                 step by step process
@@ -115,21 +115,22 @@ export default function SocialMediaRevenueMethod() {
               {CARDS_DATA.map((card) => (
                 <div
                   key={card.id}
+                  tabIndex={0}
                   style={{
                     backgroundImage: "url(" + card.bgImage + ")",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }}
-                  className="relative h-[340px] min-[360px]:h-[360px] min-[390px]:h-[400px] rounded-[28px] overflow-hidden p-5 min-[390px]:p-6 flex flex-col justify-between cursor-pointer"
+                  className="group relative h-[340px] min-[360px]:h-[360px] min-[390px]:h-[400px] rounded-[28px] overflow-hidden p-5 min-[390px]:p-6 flex flex-col justify-between cursor-pointer focus:outline-none"
                 >
                   <div className="text-[9.82px] font-medium tracking-[2.95px] text-white opacity-80">
                     {card.id}
                   </div>
-                  <div>
+                  <div className="transform translate-y-[80px] group-focus:translate-y-0 transition-transform duration-500 ease-out will-change-transform">
                     <h3 className="text-[20px] min-[360px]:text-[22.64px] font-normal leading-[26.78px] text-white mb-2 min-[360px]:mb-3">
                       {card.title}
                     </h3>
-                    <p className="text-[14px] min-[360px]:text-[15.5px] font-normal leading-[1.6] min-[360px]:leading-[1.8] text-white/90">
+                    <p className="text-[14px] min-[360px]:text-[15.5px] font-normal leading-[1.6] min-[360px]:leading-[1.8] text-white/90 opacity-0 group-focus:opacity-100 transition-opacity duration-500 delay-75 ease-out">
                       {card.description}
                     </p>
                   </div>

@@ -66,7 +66,7 @@ export function Strategic() {
 
           {/* Supporting copy */}
           <FadeUp delay={0.2}>
-            <p className="mx-auto mt-[20px] sm:mt-[32px] max-w-[580px] text-[13px] min-[375px]:text-[13px] sm:text-[24px] font-normal leading-[-1%] px-2 sm:px-0">
+            <p className="mx-auto mt-[20px] sm:mt-[32px] max-w-[580px] text-[13px] sm:text-[24px] font-normal leading-[-1%] px-2 sm:px-0">
               Every project starts with understanding your business before we plan, create and deliver.
             </p>
           </FadeUp>

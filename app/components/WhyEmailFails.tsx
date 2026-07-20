@@ -176,7 +176,7 @@ export function WhyEmailFails({
                             <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[32px] sm:text-[56px] font-medium leading-[1.2] sm:leading-[70px] tracking-[-1.5px]">
                                 why most{" "}
                                 <span
-                                    className="font-normal italic text-[42px] min-[375px]:text-[48px] sm:text-[70px] leading-[1.1] sm:leading-none"
+                                    className="font-normal italic text-[42px] sm:text-[70px] leading-none"
                                     style={{ fontFamily: "'Times New Roman', Times, serif" }}
                                 >
                                     email
@@ -190,7 +190,7 @@ export function WhyEmailFails({
 
                     {/* Sub-heading */}
                     <StaggerItem>
-                        <p className="mx-auto mt-[16px] sm:mt-5 max-w-[370px] text-center font-[var(--font-inter)] text-[14px] sm:text-[18px] font-normal leading-[1.6] text-white/90 sm:text-white">
+                        <p className="mx-auto mt-[16px] sm:mt-5 max-w-[370px] text-center font-[var(--font-inter)] text-[13px] sm:text-[18px] font-normal leading-[1.6] text-white/90 sm:text-white">
                             {subheading ?? "Most brands don't have an email problem, they have a strategy problem."}
                         </p>
                     </StaggerItem>

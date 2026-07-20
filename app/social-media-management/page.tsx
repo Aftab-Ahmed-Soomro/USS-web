@@ -87,16 +87,16 @@ function Hero() {
       <div className="mx-auto grid max-w-[1150px] gap-8 min-[390px]:gap-10 sm:gap-10 lg:grid-cols-[minmax(0,700px)_430px] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.15}>
           <StaggerItem>
-            <h1 className="max-w-[700px] font-[var(--font-be-vietnam)] text-[28px] min-[360px]:text-[32px] min-[390px]:text-[34px] min-[430px]:text-[36px] min-[480px]:text-[38px] font-bold lowercase leading-[1.03] tracking-[-1.5px] min-[390px]:tracking-[-2px] min-[480px]:tracking-[-3.2px] sm:tracking-[-3.2px] sm:text-[70px]">
+            <h1 className="max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[1.03] tracking-[-1.5px] min-[390px]:tracking-[-2px] min-[480px]:tracking-[-3.2px] sm:tracking-[-3.2px] sm:text-[70px]">
               social media that
               <br />
-              <span className="font-[var(--font-cormorant)] text-[1.08em] sm:text-[80px] font-normal timesFontFamily italic tracking-[-1.5px] min-[390px]:tracking-[-2px] min-[480px]:tracking-[-3.2px] sm:tracking-[-3.2px]">
+              <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[80px] font-normal timesFontFamily italic tracking-[-1.5px] min-[390px]:tracking-[-2px] min-[480px]:tracking-[-3.2px] sm:tracking-[-3.2px]">
                 delivers real {" "}
               </span>results
             </h1>
           </StaggerItem>
           <StaggerItem>
-            <p className="mt-[16px] min-[390px]:mt-[20px] min-[480px]:mt-[24px] sm:mt-[24px] max-w-[580px] font-[var(--font-inter)] text-[13px] min-[390px]:text-[14px] leading-[1.75] text-black/72 sm:text-[20px]">
+            <p className="mt-[16px] min-[390px]:mt-[20px] min-[480px]:mt-[24px] sm:mt-[24px] max-w-[580px] font-[var(--font-inter)] text-[13px] min-[390px]:text-[13px] leading-[1.75] text-black/72 sm:text-[20px]">
               Your social media is often the first impression of your business. We help brands stay active, consistent, and memorable across Instagram, LinkedIn, TikTok, YouTube, and more.
             </p>
           </StaggerItem>
@@ -183,14 +183,14 @@ function SocialServices() {
         <div className="mx-auto max-w-[1150px]">
           {/* Header */}
           <StaggerItem>
-            <p className="font-[var(--font-inter)] text-[10px] font-bold uppercase tracking-[4px] text-[#ff5500]">
+            <p className="font-[var(--font-inter)] text-[13px] font-bold uppercase tracking-[4px] text-[#ff5500]">
               SERVICES
             </p>
           </StaggerItem>
           <StaggerItem>
-            <h2 className="mt-[16px] min-[390px]:mt-[20px] sm:mt-[26px] mb-8 min-[390px]:mb-10 sm:mb-[60px] font-[var(--font-be-vietnam)] text-[28px] min-[360px]:text-[32px] min-[390px]:text-[36px] sm:text-[50px] font-medium lowercase leading-none tracking-[-1.4px]">
+            <h2 className="mt-[16px] min-[390px]:mt-[20px] sm:mt-[26px] mb-8 min-[390px]:mb-10 sm:mb-[60px] font-[var(--font-be-vietnam)] text-[32px] sm:text-[50px] font-medium lowercase leading-none tracking-[-1.4px]">
               our social media{" "}
-              <span className="font-[var(--font-cormorant)] text-[1.12em] font-extralight timesFontFamily italic tracking-[-0.04em]">
+              <span className="font-[var(--font-cormorant)] text-[42px] font-extralight timesFontFamily italic tracking-[-0.04em]">
                 services
               </span>
             </h2>
@@ -201,11 +201,12 @@ function SocialServices() {
             {socialServicesData.map((service, index) => (
               <StaggerItem key={service.title}>
                 <article
-                  className="group border-b border-white/20 py-5 min-[390px]:py-6 sm:py-8 first:border-t flex cursor-pointer transition-colors duration-300"
+                  tabIndex={0}
+                  className="group border-b border-white/20 py-5 min-[390px]:py-6 sm:py-8 first:border-t flex cursor-pointer focus:outline-none transition-colors duration-300"
                 >
                   {/* Number */}
                   <div
-                    className="w-[50px] min-[390px]:w-[70px] min-[480px]:w-[100px] sm:w-[150px] shrink-0 text-white font-medium text-[20px] min-[360px]:text-[24px] sm:text-[32px] leading-[20px] tracking-normal"
+                    className="w-[50px] min-[390px]:w-[70px] min-[480px]:w-[100px] sm:w-[150px] shrink-0 text-white font-medium text-[14px] sm:text-[32px] leading-[20px] tracking-normal"
                   >
                     {String(index + 1).padStart(2, "0")}
                   </div>
@@ -216,7 +217,7 @@ function SocialServices() {
 
                       {/* Title */}
                       <h3
-                        className="text-white font-normal text-[20px] min-[360px]:text-[24px] min-[390px]:text-[28px] sm:text-[36px] leading-[1.2] sm:leading-[40px] tracking-[-0.72px]"
+                        className="text-white font-normal text-[20px] sm:text-[36px] leading-[1.2] sm:leading-[40px] tracking-[-0.72px]"
                       >
                         {service.title}
                       </h3>
@@ -224,21 +225,21 @@ function SocialServices() {
                       {/* Icon */}
                       <div className="relative w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center ml-2 min-[390px]:ml-4 shrink-0 mt-1">
                         {/* + Icon */}
-                        <span className="absolute text-white text-xl sm:text-2xl group-hover:opacity-0 transition-opacity duration-300">
+                        <span className="absolute text-white text-xl sm:text-2xl group-hover:opacity-0 group-focus:opacity-0 transition-opacity duration-300">
                           +
                         </span>
                         {/* Orange X */}
-                        <div className="absolute w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-[#ff5500] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="absolute w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-[#ff5500] flex items-center justify-center opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300">
                           <span className="text-black text-base sm:text-lg font-medium leading-none pb-[2px]">×</span>
                         </div>
                       </div>
                     </div>
 
                     {/* Description animation (Grid trick) */}
-                    <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
+                    <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] group-focus:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
                       <div className="overflow-hidden">
                         <p
-                          className="text-white mt-3 sm:mt-4 max-w-[550px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 font-normal text-[14px] min-[360px]:text-[15px] sm:text-[20px] leading-[1.5] sm:leading-[24px] tracking-normal"
+                          className="text-white mt-3 sm:mt-4 max-w-[550px] opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-500 delay-75 font-normal text-[14px] min-[360px]:text-[15px] sm:text-[20px] leading-[1.5] sm:leading-[24px] tracking-normal"
                         >
                           {service.description}
                         </p>
@@ -333,7 +334,7 @@ function RelatedProjects() {
                     </div>
 
                     {/* Copy */}
-                    <p className="mt-[12px] sm:mt-[14px] max-w-[460px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.6] sm:leading-[28px] text-white/90 sm:text-white">
+                    <p className="mt-[12px] sm:mt-[14px] max-w-[460px] font-[var(--font-inter)] text-[13px] sm:text-[18px] leading-[1.6] sm:leading-[28px] text-white/90 sm:text-white">
                       {project.copy}
                     </p>
 
@@ -372,7 +373,7 @@ function RelatedProjects() {
 
 function FinalCta() {
   return (
-    <section className="bg-black px-4 min-[375px]:px-5 min-[480px]:px-6 sm:px-6 pt-[60px] min-[390px]:pt-[80px] sm:pt-[100px] text-white pb-[80px] min-[390px]:pb-[80px] sm:pb-20">
+    <section className="bg-black px-4 min-[375px]:px-5 min-[480px]:px-6 sm:px-6 pt-[60px] min-[390px]:pt-[80px] sm:pt-[100px] text-white pb-[100px] sm:pb-20">
       <Stagger staggerDelay={0.15}>
         <div className="mx-auto max-w-[1150px] text-center">
           <StaggerItem>
@@ -418,10 +419,10 @@ export default function SocialMediaManagementPage() {
         hideBadge={false}
         tagline="THE PROBLEM"
         heading={
-          <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
+          <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[32px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
             why your{" "}
             <span
-              className="font-normal italic text-[60px] sm:text-[72px]"
+              className="font-normal italic text-[42px] sm:text-[72px]"
               style={{ fontFamily: "'Times New Roman', Times, serif" }}
             >
               social strategy

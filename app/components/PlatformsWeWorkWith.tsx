@@ -54,7 +54,7 @@ export default function PlatformsWeWorkWith({
             heading
           ) : (
             <h2
-              className="text-white mx-auto max-w-[1150px] mb-[32px] sm:mb-10 font-medium text-[32px] sm:text-[40px] leading-none tracking-normal"
+              className="text-white mx-auto max-w-[1150px] mb-[32px] sm:mb-10 font-medium text-[29px] sm:text-[40px] leading-none tracking-normal"
             >
               platforms we work with
             </h2>
@@ -65,7 +65,8 @@ export default function PlatformsWeWorkWith({
         {platforms.map((platform, index) => (
           <StaggerItem key={platform.name}>
             <div
-              className="relative rounded-2xl overflow-hidden group"
+              tabIndex={0}
+              className="relative rounded-2xl overflow-hidden group cursor-pointer focus:outline-none"
             >
               {/* Number top left */}
               <div className="absolute top-[20px] sm:top-[24px] left-[20px] sm:left-[24px] z-20">
@@ -87,10 +88,10 @@ export default function PlatformsWeWorkWith({
                 )}
 
                 {/* Gradient overlay for readability */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-500 ease-out" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-60 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-500 ease-out" />
 
                 <div className="absolute bottom-0 left-0 right-0 px-[20px] sm:px-5 py-[24px] sm:py-6">
-                  <div className="transform translate-y-[64px] sm:translate-y-[80px] group-hover:translate-y-0 transition-transform duration-500 ease-out will-change-transform">
+                  <div className="transform translate-y-[64px] sm:translate-y-[80px] group-hover:translate-y-0 group-focus:translate-y-0 transition-transform duration-500 ease-out will-change-transform">
                     <h3
                       className="text-white mb-2 font-normal text-[22px] sm:text-[22.64px] leading-[1.3] sm:leading-[35px] tracking-normal"
                     >
@@ -98,7 +99,7 @@ export default function PlatformsWeWorkWith({
                     </h3>
                     {platform.description && (
                       <p
-                        className="text-neutral-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 ease-out font-normal text-[14px] sm:text-[15px] leading-[1.5] sm:leading-[24.38px] tracking-normal"
+                        className="text-neutral-300 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-500 delay-75 ease-out font-normal text-[14px] sm:text-[15px] leading-[1.5] sm:leading-[24.38px] tracking-normal"
                       >
                         {platform.description}
                       </p>

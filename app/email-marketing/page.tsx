@@ -143,17 +143,17 @@ function Hero() {
             </p>
           </StaggerItem>
           <StaggerItem>
-            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[38px] font-bold lowercase leading-[100%] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white">
-              turn your email database
-              <br />
+            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[100%] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white">
+              turn your email database {" "}
+              <br className="hidden sm:block" />
               into a{" "}
-              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white leading-[1.2] sm:leading-[103.04px] tracking-[-1px] sm:tracking-[-2.8px]">
+              <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white leading-[0] sm:leading-[103.04px] tracking-[-1px] sm:tracking-[-2.8px]">
                 revenue engine
               </span>
             </h1>
           </StaggerItem>
           <StaggerItem>
-            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[560px] font-[var(--font-inter)] text-[14px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[18px]">
+            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[560px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[18px]">
               We create strategic email campaigns and automated customer journeys that deliver the right message at the right time, driving retention and repeat purchases.
             </p>
           </StaggerItem>
@@ -328,11 +328,11 @@ function EmailStrategy() {
       <Stagger staggerDelay={0.15} className="mx-auto max-w-[1150px]">
         {/* Heading */}
         <StaggerItem>
-          <h2 className="lowercase text-white text-[28px] min-[375px]:text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px]">
+          <h2 className="lowercase text-white font-medium leading-[1.15] tracking-[-3%] text-[32px] sm:text-[56px] sm:leading-[70px]">
             every brand has its <br />
             own{" "}
             <span
-              className="italic text-[#ff5500] font-normal text-[34px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]"
+              className="italic text-[#ff5500] font-normal text-[42px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]"
               style={{ fontFamily: "'Times New Roman', Times, serif" }}
             >
               email strategy
@@ -445,12 +445,13 @@ function RevenueMethod() {
           {CARDS_DATA.map((card) => (
             <StaggerItem key={card.id}>
               <div
+                tabIndex={0}
                 style={{
                   backgroundImage: `url(${card.bgImage})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center'
                 }}
-                className="group relative rounded-[28px] overflow-hidden p-6 flex flex-col justify-between cursor-pointer transition-all duration-500 ease-out w-full h-[360px] sm:h-[606.93px]"
+                className="group relative rounded-[28px] overflow-hidden p-6 flex flex-col justify-between cursor-pointer focus:outline-none transition-all duration-500 ease-out w-full h-[360px] sm:h-[606.93px]"
               >
                 {/* Card Number */}
                 <div
@@ -460,7 +461,7 @@ function RevenueMethod() {
                 </div>
 
                 {/* Bottom Content Group (Animates Up on Hover) */}
-                <div className="transform translate-y-[80px] group-hover:translate-y-0 transition-transform duration-500 ease-out will-change-transform">
+                <div className="transform translate-y-[80px] group-hover:translate-y-0 group-focus:translate-y-0 transition-transform duration-500 ease-out will-change-transform">
 
                   {/* Title */}
                   <h3
@@ -471,7 +472,7 @@ function RevenueMethod() {
 
                   {/* Description (Fades and slides in cleanly) */}
                   <p
-                    className="text-[14px] sm:text-[15.5px] font-normal leading-[1.4] sm:leading-[18.86px] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 ease-out"
+                    className="text-[14px] sm:text-[15.5px] font-normal leading-[1.4] sm:leading-[18.86px] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-500 delay-75 ease-out"
                   >
                     {card.description}
                   </p>
@@ -575,7 +576,7 @@ function RelatedProjects() {
                   </div>
 
                   {/* Copy */}
-                  <p className="mt-[12px] sm:mt-[14px] max-w-[420px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.6] sm:leading-[28px] text-white/90 sm:text-white">
+                  <p className="mt-[12px] sm:mt-[14px] max-w-[420px] font-[var(--font-inter)] text-[13px] sm:text-[18px] leading-[1.6] sm:leading-[28px] text-white/90 sm:text-white">
                     {project.copy}
                   </p>
 

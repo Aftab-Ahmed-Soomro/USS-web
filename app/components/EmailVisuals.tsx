@@ -93,14 +93,14 @@ export function EmailVisuals() {
           <StaggerItem>
             <h2 className="max-w-[400px] font-[var(--font-be-vietnam)] text-[32px] sm:text-[37px] text-black font-medium leading-[1.02] tracking-[-3%] lg:text-[56px]">
                 email design{" "}
-                <span className="block font-[var(--font-cormorant)] text-[48px] sm:text-[72px] font-normal timesFontFamily leading-[1.1] sm:leading-none tracking-[-3%] italic">
+                <span className="block font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal timesFontFamily leading-[1.1] sm:leading-none tracking-[-3%] italic">
                   visuals
                 </span>
             </h2>
           </StaggerItem>
 
           <StaggerItem>
-            <p className="max-w-[580px] font-[var(--font-be-vietnam)] text-[14px] font-normal leading-[1.6] sm:leading-[32px] text-[#505050] sm:text-[18px] lg:pt-[10px]">
+            <p className="max-w-[580px] font-[var(--font-be-vietnam)] text-[13px] font-normal leading-[1.6] sm:leading-[32px] text-[#505050] sm:text-[18px] lg:pt-[10px]">
               A showcase of high converting email campaigns designed to drive revenue through personalised customer experiences.
             </p>
           </StaggerItem>

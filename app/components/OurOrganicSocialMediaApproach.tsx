@@ -23,16 +23,16 @@ export default function OurOrganicSocialMediaApproach() {
           <StaggerItem>
             <h2 className="text-black">
               <span
-                className="font-medium text-[32px] min-[390px]:text-[40px] sm:text-[56px] leading-[1.1] sm:leading-[70px] tracking-[-1.2px]"
+                className="font-medium text-[32px] sm:text-[56px] leading-[1.1] sm:leading-[70px] tracking-[-1.2px]"
               >
                 our{" "}
               </span>
-              <span className="timesFontFamily italic font-normal text-[#FF5500] text-[40px] min-[390px]:text-[52px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-1.2px]"
+              <span className="timesFontFamily italic font-normal text-[#FF5500] text-[42px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-1.2px]"
               >
                 organic{" "}
               </span>
               <span
-                className="font-medium text-[32px] min-[390px]:text-[40px] sm:text-[56px] leading-[1.1] sm:leading-[70px] tracking-[-1.2px]"
+                className="font-medium text-[32px] sm:text-[56px] leading-[1.1] sm:leading-[70px] tracking-[-1.2px]"
               >
                 social grids
               </span>
