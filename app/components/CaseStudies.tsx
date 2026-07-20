@@ -99,7 +99,30 @@ const Card = ({ year, category, title, description, image, link, imageClass }: a
   </Link>
 );
 
-export default function CaseStudies() {
+export interface CaseStudyData {
+  id: string | number;
+  year: string;
+  category: string;
+  title: string;
+  description: string;
+  image: string;
+  link?: string;
+  imageClass?: string;
+}
+
+export interface CaseStudiesProps {
+  heading?: React.ReactNode;
+  description?: React.ReactNode;
+  leftData?: CaseStudyData[];
+  rightData?: CaseStudyData[];
+}
+
+export default function CaseStudies({ 
+  heading, 
+  description, 
+  leftData = leftColumnData, 
+  rightData = rightColumnData 
+}: CaseStudiesProps) {
   return (
     <section className="bg-black py-16 lg:py-24 px-4 lg:px-6 w-full flex justify-center">
       <div className="w-full max-w-[1150px]">
@@ -108,7 +131,7 @@ export default function CaseStudies() {
           
           {/* Left Column */}
           <div className="flex-1 flex flex-col gap-12 lg:gap-[120px] lg:order-1 order-2 mt-8 lg:mt-0">
-            {leftColumnData.map(item => (
+            {leftData.map(item => (
               <Card key={item.id} {...item} />
             ))}
           </div>
@@ -122,29 +145,37 @@ export default function CaseStudies() {
                 Case Studies
               </span>
               
-              <h2 className="text-white">
-                <span className="font-medium text-[32px] leading-[40px] sm:text-[40px] sm:leading-[48px] tracking-[-2px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-3.2px]">
-                  see how we build 
-                </span>
-                <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[40px] leading-[40px] sm:text-[48px] sm:leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
-                  {" "}high {" "}
-                </span>
-                <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[40px] leading-[40px] sm:text-[48px] sm:leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
-                  performing{' '}
-                </span>
-                <span className="font-medium text-[32px] leading-[40px] sm:text-[40px] sm:leading-[48px] tracking-[-2px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-3.2px]">
-                  websites
-                </span>
-              </h2>
+              {heading ? (
+                heading
+              ) : (
+                <h2 className="text-white">
+                  <span className="font-medium text-[32px] leading-[40px] sm:text-[40px] sm:leading-[48px] tracking-[-2px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-3.2px]">
+                    see how we build 
+                  </span>
+                  <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[40px] leading-[40px] sm:text-[48px] sm:leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
+                    {" "}high {" "}
+                  </span>
+                  <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[40px] leading-[40px] sm:text-[48px] sm:leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
+                    performing{' '}
+                  </span>
+                  <span className="font-medium text-[32px] leading-[40px] sm:text-[40px] sm:leading-[48px] tracking-[-2px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-3.2px]">
+                    websites
+                  </span>
+                </h2>
+              )}
               
-              <p className="font-normal text-[16px] leading-[24px] lg:text-[18px] lg:leading-[28px] text-white/90 whitespace-normal lg:whitespace-nowrap max-w-[600px]">
-                Explore how we've helped brands transform their digital presence.
-              </p>
+              {description !== undefined ? (
+                description
+              ) : (
+                <p className="font-normal text-[16px] leading-[24px] lg:text-[18px] lg:leading-[28px] text-white/90 whitespace-normal lg:whitespace-nowrap max-w-[600px]">
+                  Explore how we've helped brands transform their digital presence.
+                </p>
+              )}
             </div>
 
             {/* Right Column Cards */}
             <div className="flex flex-col gap-12 lg:gap-[120px]">
-              {rightColumnData.map(item => (
+              {rightData.map(item => (
                 <Card key={item.id} {...item} />
               ))}
             </div>
