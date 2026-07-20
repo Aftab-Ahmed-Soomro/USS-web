@@ -6,7 +6,7 @@ import FadeUp from './FadeUp';
 
 export function LevelsOfFunnel() {
   return (
-    <section className="relative w-full bg-black py-[60px] sm:pt-32 px-4 min-[375px]:px-6 overflow-hidden">
+    <section className="relative w-full bg-black py-20px] sm:pt-32 px-4 min-[375px]:px-6 overflow-hidden">
       <div className="max-w-[1150px] mx-auto relative z-10">
         <Stagger staggerDelay={0.15}>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -14,11 +14,11 @@ export function LevelsOfFunnel() {
             {/* Left Column (Title & Main Text) */}
             <div className="lg:col-span-5 flex flex-col justify-center">
               <StaggerItem>
-                <h2 className="m-0 p-0 mb-8 text-white flex flex-col sm:flex-row sm:items-end gap-x-3">
+                <h2 className="m-0 p-0 mb-8 text-white flex flex-row flex-wrap items-baseline gap-x-2 sm:gap-x-3">
                   <span
                     style={{
                       fontWeight: 500,
-                      fontSize: 'clamp(40px, 4vw, 56px)',
+                      fontSize: 'clamp(32px, 4vw, 56px)',
                       lineHeight: '1.1',
                       letterSpacing: '-0.02em',
                       textTransform: 'lowercase',
@@ -27,15 +27,15 @@ export function LevelsOfFunnel() {
                     levels of
                   </span>
                   <span
+                    className="sm:-mt-[10px]"
                     style={{
                       fontFamily: "'Times New Roman', Times, serif",
                       fontWeight: 400,
                       fontStyle: 'italic',
-                      fontSize: 'clamp(50px, 5vw, 72px)',
+                      fontSize: 'clamp(42px, 5vw, 72px)',
                       lineHeight: '1',
                       letterSpacing: '-0.02em',
-                      textTransform: 'lowercase',
-                      marginTop: '-10px'
+                      textTransform: 'lowercase'
                     }}
                   >
                     funnel
@@ -45,11 +45,9 @@ export function LevelsOfFunnel() {
 
               <StaggerItem>
                 <p
-                  className="text-[#FFFFFF8C] mb-16 lg:mb-24 max-w-[400px]"
+                  className="text-[#FFFFFF8C] text-[13px] sm:text-[18px] sm:leading-[1.6] mb-8 lg:mb-24 max-w-[400px]"
                   style={{
                     fontWeight: 300,
-                    fontSize: '18px',
-                    lineHeight: '28.8px'
                   }}
                 >
                   The most effective marketing campaigns don't focus only on conversions. They build awareness, nurture consideration and create trust before turning interest into measurable business growth.
@@ -58,10 +56,9 @@ export function LevelsOfFunnel() {
 
               <StaggerItem>
                 <p
-                  className="text-[#FFFFFF59]"
+                  className="text-[#FFFFFF59] text-[9px] sm:text-[11px]"
                   style={{
                     fontWeight: 400,
-                    fontSize: '11px',
                     lineHeight: '16.5px',
                     letterSpacing: '3.08px',
                     textTransform: 'uppercase'
@@ -73,7 +70,7 @@ export function LevelsOfFunnel() {
             </div>
 
             {/* Middle Column (Descriptions & Arrows) */}
-            <div className="lg:col-span-3 flex flex-col justify-center relative mt-16 lg:mt-0 lg:pl-4 z-10">
+            <div className="lg:col-span-3 flex flex-col justify-center relative sm:mt-16 lg:mt-0 lg:pl-4 z-10">
 
               {/* Impressions Card */}
               <FadeUp delay={0.2}>

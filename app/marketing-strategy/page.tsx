@@ -216,13 +216,13 @@ function Hero() {
       `}</style>
 
       {/* Top Left Gradient */}
-      <div 
+      <div
         className="pointer-events-none absolute -left-[20%] -top-[20%] h-[80vw] max-h-[800px] min-h-[500px] w-[80vw] max-w-[800px] min-w-[500px] rounded-full opacity-40 blur-[100px] animate-glow-tl"
         style={{ background: 'radial-gradient(circle, #FF5500 0%, rgba(255,85,0,0) 70%)' }}
       />
 
       {/* Bottom Right Gradient */}
-      <div 
+      <div
         className="pointer-events-none absolute -bottom-[20%] -right-[20%] h-[80vw] max-h-[800px] min-h-[500px] w-[80vw] max-w-[800px] min-w-[500px] rounded-full opacity-40 blur-[100px] animate-glow-br"
         style={{ background: 'radial-gradient(circle, #FF5500 0%, rgba(255,85,0,0) 70%)' }}
       />
@@ -230,16 +230,16 @@ function Hero() {
       <div className="relative z-10 mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.15}>
           <StaggerItem>
-            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[38px] font-bold lowercase leading-[70px] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white">
+            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase sm:leading-[70px] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white">
               strategy that drives
               <br />{" "}
-              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white leading-[1.2] sm:leading-[30px] tracking-[-1px] sm:tracking-[-2.8px]">
+              <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white leading-[1] sm:leading-[30px] tracking-[-1px] sm:tracking-[-2.8px]">
                 real growth
               </span>
             </h1>
           </StaggerItem>
           <StaggerItem>
-            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[500px] font-[var(--font-inter)] text-[14px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[18px]">
+            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[500px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[18px]">
               We build clear, data-driven marketing strategies designed to scale your business not just generate leads. Trusted by brands across UAE and globally.
             </p>
           </StaggerItem>
@@ -307,28 +307,24 @@ function StrategyPanel({ section }: { section: StrategySection }) {
   // Text panel inner content aligns to max-w-[1150px] mx-auto via padding-left
   const textPanel = (
     <div
-      className={`flex min-h-[440px] flex-col justify-center py-[72px] lg:min-h-[590px] ${
-        isLight ? "bg-[#f5f4f1] text-black" : "bg-[#050505] text-white"
-      }`}
+      className={`flex min-h-[440px] flex-col justify-center py-[72px] lg:min-h-[590px] ${isLight ? "bg-[#f5f4f1] text-black" : "bg-[#050505] text-white"
+        }`}
     >
       {/* Inner wrapper: aligns content to the right edge of the max-w-[1150px] container */}
       <div
-        className={`mx-auto w-full max-w-[575px] px-6 ${
-          section.imageSide === "right" ? "lg:ml-auto lg:pr-12" : "lg:mr-auto lg:pl-12"
-        }`}
+        className={`mx-auto w-full max-w-[575px] px-6 ${section.imageSide === "right" ? "lg:ml-auto lg:pr-12" : "lg:mr-auto lg:pl-12"
+          }`}
       >
         <p
-          className={`font-[var(--font-be-vietnam)] text-[8px] sm:text-[11.2px] font-normal uppercase tracking-[2.02px] ${
-            isLight ? "text-[#58554F]" : "text-[#FF5500]"
-          }`}
+          className={`font-[var(--font-be-vietnam)] text-[8px] sm:text-[11.2px] font-normal uppercase tracking-[2.02px] ${isLight ? "text-[#58554F]" : "text-[#FF5500]"
+            }`}
         >
           {section.eyebrow}
         </p>
         <SectionTitle title={section.title} />
         <p
-          className={`mt-[25px] max-w-[370px] font-[var(--font-inter)] text-[15px] sm:text-[18px] leading-[1.55] ${
-            isLight ? "text-black/58" : "text-white"
-          }`}
+          className={`mt-[25px] max-w-[370px] font-[var(--font-inter)] text-[15px] sm:text-[18px] leading-[1.55] ${isLight ? "text-black/58" : "text-white"
+            }`}
         >
           {section.copy}
         </p>
@@ -482,17 +478,17 @@ function FinalCta() {
     <section className="bg-[#f5f4f1] px-6 py-[88px] text-center text-black sm:px-10 lg:px-[48px]">
       <Stagger staggerDelay={0.15}>
         <StaggerItem>
-          <h2 className="mx-auto max-w-[800px] font-[var(--font-be-vietnam)] text-[36px] sm:text-[56px] font-medium lowercase leading-[1.08] tracking-[-1.44px]">
+          <h2 className="mx-auto max-w-[800px] font-[var(--font-be-vietnam)] text-[32px] sm:text-[56px] font-medium lowercase leading-[1.08] tracking-[-1.44px]">
             build a strategy that
             <br />
             actually{" "}
-            <span className="font-[var(--font-cormorant)] text-[1.16em] sm:text-[72px] font-normal tracking-[-1.44px] timesFontFamily italic">
+            <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal tracking-[-1.44px] timesFontFamily italic">
               works
             </span>
           </h2>
         </StaggerItem>
         <StaggerItem>
-          <p className="mx-auto mt-[15px] max-w-[800px] font-[var(--font-inter)] text-[18px] text-[#58554F] leading-[1.6] text-[-1.44px]">
+          <p className="mx-auto mt-[15px] max-w-[800px] font-[var(--font-inter)] text-[13px] sm:text-[18px] text-[#58554F] leading-[1.6] text-[-1.44px]">
             If your marketing feels disconnected, it’s time for a clearer approach.
           </p>
         </StaggerItem>
@@ -549,7 +545,7 @@ function RevenueMethod() {
         <StaggerItem>
           <h2 className="lowercase text-white text-[28px] min-[375px]:text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-[40px] sm:mb-16">
             method to convert email database to <br />
-            
+
             <span
               className="italic text-[#ff5500] font-normal text-[36px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]"
               style={{ fontFamily: "'Times New Roman', Times, serif" }}
@@ -732,57 +728,59 @@ export default function MarketingStrategyPage() {
       <Brands />
       <div className="-mb-[40px]">
         <WhyEmailFails
-                  hideBadge={true}
-                  heading={
-                    <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
-                      why most{" "}
-                      <span
-                        className="font-normal italic text-[60px] sm:text-[72px]"
-                        style={{ fontFamily: "'Times New Roman', Times, serif" }}
-                      >
-                        marketing strategy
-                      </span>{" "}
-                      fails
-                    </h2>
-                  }
-                  subheading="Most brands don't have an email problem, they have a strategy problem."
-                  leftTitle="Most Brands"
-                  rightTitle="The USS Difference"
-                  leftPoints={googleAdsBrandPoints}
-                  rightPoints={googleAdsUssPoints}
-                  centerLogo="/assets/Google__logo.webp"
-                  logoClassName="w-[80px] lg:w-[115px]"
-                  />
+          hideBadge={true}
+          heading={
+            <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[32px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
+              why most{" "}
+              <span
+                className="font-normal italic text-[42px] sm:text-[72px]"
+                style={{ fontFamily: "'Times New Roman', Times, serif" }}
+              >
+                marketing strategy
+              </span>{" "}
+              fails
+            </h2>
+          }
+          subheading="Most brands don't have an email problem, they have a strategy problem."
+          leftTitle="Most Brands"
+          rightTitle="The USS Difference"
+          leftPoints={googleAdsBrandPoints}
+          rightPoints={googleAdsUssPoints}
+          centerLogo="/assets/Google__logo.webp"
+          logoClassName="w-[80px] lg:w-[115px]"
+        />
       </div>
-                  <GrowthRoadmap />
-                  <TeamAccordion 
-                    heading={
-                      <h2 className="text-[32px] sm:text-[36px] md:text-[64px] lg:text-[75px] leading-[1] tracking-[-1px] lg:tracking-[-6px] font-light lowercase" style={{ fontWeight: 300 }}>
-                        from strategy to scale.
-                      </h2>
-                    }
-                    data={strategyAccordionData} 
-                  />
-                  <LevelsOfFunnel />
-                  <StrategyByBusinessGoal />
-                  <SixStepSystem 
-                    heading={
-                      <h2 className="text-white font-medium tracking-[-1px] sm:tracking-[-2px] text-[36px] sm:text-[56px] leading-[1.1] sm:leading-[69.36px]">
-                        every digital touchpoint should <br className="hidden sm:block" />
-                        <span className="inline-flex items-center gap-x-2 sm:gap-x-3 mt-1 sm:mt-0">
-                          <span>have its</span>
-                          <span 
-                            className="text-white italic font-normal font-[var(--font-cormorant)] timesFontFamily text-[46px] sm:text-[72px] leading-[1.1] sm:leading-[69.36px] tracking-[-1.5px] sm:tracking-[-2px]"
-                          >
-                            own strategy
-                          </span>
-                        </span>
-                      </h2>
-                    }
-                    data={touchpointStepsData}
-                  />
-                  
-                  {/* <RevenueMethod /> */}
+      <GrowthRoadmap />
+      <TeamAccordion
+        heading={
+          <h2 className="text-[32px] sm:text-[36px] md:text-[64px] lg:text-[75px] leading-[1] tracking-[-1px] lg:tracking-[-6px] font-light lowercase" style={{ fontWeight: 300 }}>
+            from strategy to scale.
+          </h2>
+        }
+        data={strategyAccordionData}
+      />
+      <LevelsOfFunnel />
+      <StrategyByBusinessGoal />
+      <div className="-mt-[60px] sm:-mt-0">
+        <SixStepSystem
+          heading={
+            <h2 className="text-white font-medium tracking-[-1px] sm:tracking-[-2px] text-[36px] sm:text-[56px] leading-[1.1] sm:leading-[69.36px]">
+              every digital touchpoint should <br className="hidden sm:block" />
+              <span className="inline-flex items-center gap-x-2 sm:gap-x-3 sm:mt-0">
+                <span>have its</span>
+                <span
+                  className="text-white italic font-normal font-[var(--font-cormorant)] timesFontFamily text-[46px] sm:text-[72px] leading-[0] sm:leading-[69.36px] tracking-[-1.5px] sm:tracking-[-2px]"
+                >
+                  own strategy
+                </span>
+              </span>
+            </h2>
+          }
+          data={touchpointStepsData}
+        />
+      </div>
+
+      {/* <RevenueMethod /> */}
       {/* <RelatedProjects /> */}
       <Testimonials />
       <Team />
