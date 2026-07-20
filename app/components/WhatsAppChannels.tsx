@@ -98,12 +98,12 @@ export default function WhatsAppChannels() {
         <div className="flex flex-col items-center text-center max-w-[900px] mx-auto">
           <FadeUp delay={0.1}>
             <h2 className="text-white flex flex-col items-center">
-              <span className="font-medium text-[28px] min-[375px]:text-[32px] sm:text-[56px] leading-[1.1] sm:leading-[63px] tracking-[-1px] sm:tracking-[-1.5px]">
+              <span className="font-medium text-[32px] sm:text-[56px] leading-[1.1] sm:leading-[63px] tracking-[-1px] sm:tracking-[-1.5px]">
                 Why WhatsApp & SMS, the
               </span>
-              <span className="font-medium text-[28px] min-[375px]:text-[32px] sm:text-[56px] leading-[1.1] sm:leading-[63px] tracking-[-1px] sm:tracking-[-1.5px]">
+              <span className="font-medium text-[32px] sm:text-[56px] leading-[1.1] sm:leading-[63px] tracking-[-1px] sm:tracking-[-1.5px]">
                 channels <span 
-                className="italic font-normal text-[36px] min-[375px]:text-[42px] sm:text-[72px] leading-[1.1] sm:leading-[63px] tracking-[-1px] sm:tracking-[-1.5px] text-[#ff5a05] block sm:inline mt-1 sm:mt-0"
+                className="italic font-normal text-[42px] sm:text-[72px] leading-[1.1] sm:leading-[63px] tracking-[-1px] sm:tracking-[-1.5px] text-[#ff5a05] block sm:inline mt-1 sm:mt-0"
                 style={{
                   fontFamily: '"Times New Roman", Times, serif',
                 }}
@@ -115,7 +115,7 @@ export default function WhatsAppChannels() {
           </FadeUp>
           
           <FadeUp delay={0.2}>
-            <p className="mt-5 sm:mt-8 text-[#EBEBEB] font-normal text-[14px] min-[375px]:text-[15px] sm:text-[18px] leading-[1.5] sm:leading-[29.25px] max-w-[680px] mx-auto px-2 sm:px-0">
+            <p className="mt-5 sm:mt-8 text-[#EBEBEB] font-normal text-[13px]  sm:text-[18px] leading-[1.5] sm:leading-[29.25px] max-w-[680px] mx-auto px-2 sm:px-0">
               Email gets ignored. Phone calls get missed. WhatsApp and SMS get opened almost every time. Here's how our AI turns those conversations into <br className="hidden sm:inline" /> bookings.
             </p>
           </FadeUp>
@@ -226,7 +226,7 @@ function Card({ icon, subtitle, title, heading, description, align }: CardProps)
         {heading}
       </h4>
       
-      <p className="mt-1 sm:mt-2 text-[13px] font-normal leading-[20px] sm:leading-[22.75px] text-[#888888]">
+      <p className="mt-1 sm:mt-2 text-[12px] font-normal leading-[20px] sm:leading-[22.75px] text-[#888888]">
         {description}
       </p>
     </div>

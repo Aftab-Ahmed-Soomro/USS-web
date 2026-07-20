@@ -11,12 +11,12 @@ export function WhyWhatsappWorks() {
           <StaggerItem>
             <h2 className="flex flex-wrap justify-center items-center gap-x-[8px] sm:gap-x-[15px] mb-[30px] sm:mb-[50px] text-center">
               <span
-                className="lowercase font-medium text-[32px] min-[375px]:text-[38px] leading-[1.1] tracking-[-1px] sm:text-[clamp(40px,5vw,56px)] sm:leading-[clamp(50px,6vw,80px)] sm:tracking-[-3px] font-[var(--font-be-vietnam)]"
+                className="lowercase font-medium text-[32px] leading-[1.1] tracking-[-1px] sm:text-[clamp(40px,5vw,56px)] sm:leading-[clamp(50px,6vw,80px)] sm:tracking-[-3px] font-[var(--font-be-vietnam)]"
               >
                 why
               </span>
               <span
-                className="lowercase italic font-normal text-[36px] min-[375px]:text-[42px] leading-[1.1] tracking-[-1px] sm:text-[clamp(48px,6vw,72px)] sm:leading-[clamp(50px,6vw,80px)] sm:tracking-[-3px]"
+                className="lowercase italic font-normal text-[42px] leading-[1.1] tracking-[-1px] sm:text-[clamp(48px,6vw,72px)] sm:leading-[clamp(50px,6vw,80px)] sm:tracking-[-3px]"
                 style={{ fontFamily: "'Times New Roman', Times, serif" }}
               >
                 whatsapp and sms

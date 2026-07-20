@@ -93,17 +93,17 @@ function Hero() {
             <p className="mt-0 sm:mt-[32px] max-w-[600px] font-[var(--font-inter)] text-[10px] sm:text-[14px] font-bold leading-[1.7] tracking-[2.4px] text-[#FF5500] mb-[24px] sm:mb-8 uppercase">
               WhatsApp & SMS Marketing
             </p>
-            <h1 className="max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[38px] font-bold leading-[1.03] tracking-[-1px] sm:tracking-[-3.2px] sm:text-[70px]">
+            <h1 className="max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold leading-[1.03] tracking-[-1px] sm:tracking-[-3.2px] sm:text-[70px]">
               WhatsApp & SMS
               <br />
               that {" "}
-              <span className="font-[var(--font-cormorant)] text-[1.12em] leading-[1.2] sm:leading-[0.5px] sm:text-[88px] font-normal timesFontFamily italic lowercase tracking-[-1px] sm:tracking-[-3.2px]">
+              <span className="font-[var(--font-cormorant)] text-[42px] leading-[1.2] sm:leading-[0.5px] sm:text-[88px] font-normal timesFontFamily italic lowercase tracking-[-1px] sm:tracking-[-3.2px]">
                 drive results
               </span>
             </h1>
           </StaggerItem>
           <StaggerItem>
-            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[24px] max-w-[680px] font-[var(--font-inter)] text-[14px] leading-[1.6] text-black/72 sm:text-[20px] sm:leading-[1.75]">
+            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[24px] max-w-[680px] font-[var(--font-inter)] text-[13px] leading-[1.6] text-black/72 sm:text-[20px] sm:leading-[1.75]">
               We use WhatsApp and SMS to help businesses stay connected with customers through direct communication that drives enquiries, sales, and repeat purchases.
             </p>
           </StaggerItem>
@@ -364,11 +364,11 @@ function FinalCta() {
           </p>
         </StaggerItem>
         <StaggerItem>
-          <h2 className="mt-[24px] sm:mt-8 font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[36px] font-medium leading-[1.08] tracking-[-1.5px] sm:text-[55px]">
+          <h2 className="mt-[24px] sm:mt-8 font-[var(--font-be-vietnam)] text-[32px]  font-medium leading-[1.08] tracking-[-1.5px] sm:text-[55px]">
             reach your customers
             <br />
             where it{" "}
-            <span className="font-[var(--font-cormorant)] text-[1.12em] leading-[1.1] sm:leading-none sm:text-[72px] font-extralight timesFontFamily italic text-[#ff5500]">
+            <span className="font-[var(--font-cormorant)] text-[42px] leading-[1.1] sm:leading-none sm:text-[72px] font-extralight timesFontFamily italic text-[#ff5500]">
               matters most
             </span>
           </h2>
@@ -473,7 +473,7 @@ function RelatedProjects() {
                   </div>
 
                   {/* Copy */}
-                  <p className="mt-[12px] sm:mt-[14px] max-w-[800px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.6] sm:leading-[28px] text-white/90 sm:text-white">
+                  <p className="mt-[12px] sm:mt-[14px] max-w-[800px] font-[var(--font-inter)] text-[13px] sm:text-[18px] leading-[1.6] sm:leading-[28px] text-white/90 sm:text-white">
                     {project.copy}
                   </p>
 
@@ -507,18 +507,18 @@ function RelatedProjects() {
   );
 }
 
-function RevenueMethod() {
+function  RevenueMethod() {
   return (
     <div className="w-full bg-black text-white py-[50px] sm:py-20 mt-[32px] sm:mt-16 px-4 min-[375px]:px-6 min-h-screen flex flex-col justify-center items-center font-sans">
       <div className="max-w-[1150px] w-full">
 
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
-            <h2 className="lowercase text-white text-[28px] min-[375px]:text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-[40px] sm:mb-16">
+            <h2 className="lowercase text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-[40px] sm:mb-16">
               method to convert WhatsApp & SMS database to high
               {" "}
               <span
-                className="italic text-[#ff5500] font-normal text-[36px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]"
+                className="italic text-[#ff5500] font-normal text-[42px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]"
                 style={{ fontFamily: "'Times New Roman', Times, serif" }}
               >
                 performing revenue 
@@ -532,12 +532,13 @@ function RevenueMethod() {
           {CARDS_DATA.map((card, i) => (
             <FadeUp key={card.id} delay={0.1 + i * 0.1}>
               <div
+                tabIndex={0}
                 style={{
                   backgroundImage: `url(${card.bgImage})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center'
                 }}
-                className="group relative rounded-[28px] overflow-hidden p-[20px] sm:p-2 flex flex-col justify-between cursor-pointer transition-all duration-500 ease-out w-full h-[360px] sm:h-[606.93px]"
+                className="group relative rounded-[28px] overflow-hidden p-[20px] sm:p-2 flex flex-col justify-between cursor-pointer focus:outline-none transition-all duration-500 ease-out w-full h-[360px] sm:h-[606.93px]"
               >
                 {/* Card Number */}
                 <div
@@ -547,8 +548,8 @@ function RevenueMethod() {
                   {card.id}
                 </div>
 
-                {/* Bottom Content Group (Animates Up on Hover) */}
-                <div className="transform translate-y-[80px] group-hover:translate-y-0 transition-transform duration-500 ease-out will-change-transform">
+                {/* Bottom Content Group (Animates Up on Hover/Focus) */}
+                <div className="transform translate-y-[80px] group-hover:translate-y-0 group-focus:translate-y-0 transition-transform duration-500 ease-out will-change-transform">
 
                   {/* Title */}
                   <h3
@@ -560,7 +561,7 @@ function RevenueMethod() {
 
                   {/* Description (Fades and slides in cleanly) */}
                   <p
-                    className="text-[14px] sm:text-[15.5px] font-normal leading-[1.4] sm:leading-[18.86px] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 ease-out min-h-[80px] sm:min-h-[120px]"
+                    className="text-[14px] sm:text-[15.5px] font-normal leading-[1.4] sm:leading-[18.86px] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-500 delay-75 ease-out min-h-[80px] sm:min-h-[120px]"
                     style={{ fontStyle: 'Regular' }}
                   >
                     {card.description}
@@ -669,10 +670,10 @@ export default function WhatsappAndSmsPage() {
               <WhyEmailFails
                 hideBadge={false}
                 heading={
-                  <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
+                  <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[32px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
                     why most{" "}
                     <span
-                      className="font-normal italic text-[60px] sm:text-[72px]"
+                      className="font-normal italic text-[42px] sm:text-[72px]"
                       style={{ fontFamily: "'Times New Roman', Times, serif" }}
                     >
                       WhatsApp & SMS Marketing

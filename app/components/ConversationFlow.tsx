@@ -55,7 +55,7 @@ export default function ConversationFlow() {
               </h2>
             </FadeUp>
             <FadeUp delay={0.4}>
-              <p className="mt-4 font-normal text-[14px] sm:text-[16px] leading-[1.5] text-white/60">
+              <p className="mt-4 font-normal text-[13px] sm:text-[16px] leading-[1.5] text-white/60">
                 Scroll to watch the conversation unfold — the same way it happens in production.
               </p>
             </FadeUp>
