@@ -10,17 +10,17 @@ export function OpportunitySection() {
       <FadeUp>
         <div className="text-center px-4 mb-10 sm:mb-16 max-w-[1150px] mx-auto">
           <h2 
-            className="font-medium lowercase tracking-[-1px] sm:tracking-[-3px] text-white flex flex-wrap justify-center items-center gap-x-3 mb-2 sm:mb-4 font-[var(--font-be-vietnam)] text-[36px] sm:text-[56px] leading-[1.1] sm:leading-[86.48px]"
+            className="font-medium lowercase tracking-[-1px] sm:tracking-[-3px] text-white flex flex-wrap justify-center items-center gap-x-3 mb-2 sm:mb-4 font-[var(--font-be-vietnam)] text-[32px] sm:text-[56px] leading-[1.1] sm:leading-[86.48px]"
           >
             <span>the</span>
             <span 
-              className="text-[#FF5500] italic font-normal font-[var(--font-cormorant)] timesFontFamily text-[46px] sm:text-[72px] leading-[1.1] sm:leading-[86.48px] tracking-[-1.5px] sm:tracking-[-3px]"
+              className="text-[#FF5500] italic font-normal font-[var(--font-cormorant)] timesFontFamily text-[42px] sm:text-[72px] leading-[1.1] sm:leading-[86.48px] tracking-[-1.5px] sm:tracking-[-3px]"
             >
               opportunity
             </span>
           </h2>
           <p 
-            className="font-normal text-white/90 mx-auto font-[var(--font-inter)] max-w-[700px] text-[14px] sm:text-[16px] leading-[1.6] sm:leading-[24.8px]"
+            className="font-normal text-white/90 mx-auto font-[var(--font-inter)] max-w-[700px] text-[13px] sm:text-[16px] leading-[1.6] sm:leading-[24.8px]"
           >
             we work with high performing youtubers to monetize their platforms effectively and
             maximize their revenue using strategic marketing system
@@ -32,7 +32,7 @@ export function OpportunitySection() {
       <Stagger className="w-full max-w-[1200px] px-4 mx-auto flex flex-col md:flex-row justify-center items-start gap-10 md:gap-8">
         
         {/* Left Column */}
-        <StaggerItem>
+        <StaggerItem className="w-full md:w-auto">
           <div className="flex flex-col w-full md:w-[380px]">
             <div className="relative w-full h-[332px] rounded-[16px] overflow-hidden mb-5">
               <Image 
@@ -49,7 +49,7 @@ export function OpportunitySection() {
               $10.8B
             </h3>
             <p 
-              className="font-normal text-white/80 font-[var(--font-inter)] lowercase text-[14px] sm:text-[16px] leading-[1.6] sm:leading-[21.12px]"
+              className="font-normal text-white/80 font-[var(--font-inter)] lowercase text-[13px] sm:text-[16px] leading-[1.6] sm:leading-[21.12px]"
             >
               us online sales on black friday 2025
             </p>
@@ -58,7 +58,7 @@ export function OpportunitySection() {
         </StaggerItem>
 
         {/* Middle Column */}
-        {/* <StaggerItem> */}
+        <StaggerItem className="w-full md:w-auto">
           <div className="w-full md:w-[380px]">
           <div className="relative w-full h-[417px] min-h-[417px] shrink-0 rounded-[16px] overflow-hidden">
             <Image 
@@ -76,7 +76,7 @@ export function OpportunitySection() {
                 4-6x
               </h3>
               <p 
-                className="font-normal text-white/90 font-[var(--font-inter)] max-w-[280px] text-[14px] sm:text-[16px] leading-[1.6] sm:leading-[21.12px]"
+                className="font-normal text-white/90 font-[var(--font-inter)] max-w-[280px] text-[13px] sm:text-[16px] leading-[1.6] sm:leading-[21.12px]"
                 style={{ textShadow: "0px 1px 8px rgba(0,0,0,0.8)" }}
               >
                 average uplift in affiliate conversion rates during black friday week
@@ -84,10 +84,10 @@ export function OpportunitySection() {
             </div>
           </div>
           </div>
-        {/* </StaggerItem> */}
+        </StaggerItem>
 
         {/* Right Column */}
-        <StaggerItem>
+        <StaggerItem className="w-full md:w-auto">
           <div className="flex flex-col w-full md:w-[380px]">
           <div className="relative w-full h-[332px] rounded-[16px] overflow-hidden mb-5">
             <Image 
@@ -104,7 +104,7 @@ export function OpportunitySection() {
               62%
             </h3>
             <p 
-              className="font-normal text-white/80 font-[var(--font-inter)] lowercase text-[14px] sm:text-[16px] leading-[1.6] sm:leading-[21.12px]"
+              className="font-normal text-white/80 font-[var(--font-inter)] lowercase text-[13px] sm:text-[16px] leading-[1.6] sm:leading-[21.12px]"
             >
               of shoppers research purchases before buying
             </p>

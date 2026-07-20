@@ -33,10 +33,13 @@ export function TalentHero() {
         {slides.map((src, index) => (
           <div
             key={index}
-            className="w-full h-full flex-shrink-0 bg-cover"
+            className={`w-full h-full flex-shrink-0 bg-cover ${
+              src.includes('3.png') 
+                ? 'bg-[80%_20%]' 
+                : 'bg-[75%_20%] md:bg-[center_20%]'
+            }`}
             style={{
-              backgroundImage: `url('${src}')`,
-              backgroundPosition: src.includes('3.png') ? '80% 20%' : 'center 20%'
+              backgroundImage: `url('${src}')`
             }}
           />
         ))}
@@ -46,10 +49,10 @@ export function TalentHero() {
       <div className="relative z-10 mx-auto w-full max-w-[1150px]">
         <Stagger staggerDelay={0.15}>
           <StaggerItem>
-            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[28px] min-[375px]:text-[38px] font-bold capitalize leading-[1.1] tracking-[-1px] sm:tracking-[-3px] sm:text-[72px] text-white">
+            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[42px] font-bold capitalize leading-[1.1] tracking-[-1px] sm:tracking-[-3px] sm:text-[72px] text-white [text-shadow:_0_4px_12px_rgba(0,0,0,1)] md:[text-shadow:none]">
               The
               {" "}
-              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[96px] font-normal timesFontFamily uppercase italic text-white leading-[1.2] sm:leading-[30px] tracking-[-1px] sm:tracking-[-2.8px]">
+              <span className="font-[var(--font-cormorant)] text-[56px] sm:text-[96px] font-normal timesFontFamily uppercase italic text-white leading-[1.2] sm:leading-[30px] tracking-[-1px] sm:tracking-[-2.8px]">
                 Q4
               </span>
               {" "}
@@ -57,14 +60,14 @@ export function TalentHero() {
             </h1>
           </StaggerItem>
           <StaggerItem>
-            <h2 className="font-bold text-[24px] sm:text-[32px] mt-8 sm:mt-12">
+            <h2 className="font-bold text-[24px] sm:text-[32px] mt-8 sm:mt-12 [text-shadow:_0_4px_12px_rgba(0,0,0,1)] md:[text-shadow:none]">
               Start planning for
               <br />
               peak period
             </h2>
           </StaggerItem>
           <StaggerItem>
-            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[515px] font-[var(--font-inter)] text-[14px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[18px]">
+            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[515px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[18px] [text-shadow:_0_4px_12px_rgba(0,0,0,1)] md:[text-shadow:none]">
               Q4 is the most valuable period in the content calendar. With major retail moments, increased brand investment and audiences actively searching and buying, early planning gives creators the strongest opportunity to maximise visibility and revenue. The biggest Q4 opportunities are secured before peak period begins.
             </p>
           </StaggerItem>

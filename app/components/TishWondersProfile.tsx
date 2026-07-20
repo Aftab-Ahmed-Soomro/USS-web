@@ -4,12 +4,12 @@ import FadeRight from "./FadeRight";
 
 export function TishWondersProfile() {
   return (
-    <section className="bg-black py-20 text-white overflow-hidden font-[var(--font-inter)]">
+    <section className="bg-black py-6 sm:py-20 text-white overflow-hidden font-[var(--font-inter)]">
       <div className="w-full max-w-[1150px] px-4 mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start gap-12 lg:gap-16">
         
         {/* Left Column (Text & Stats) */}
         <FadeLeft>
-          <div className="flex flex-col w-full lg:max-w-[650px] pt-4 lg:pt-12">
+          <div className="flex flex-col w-full lg:max-w-[650px]  lg:pt-12">
           
           <span 
             className="font-semibold text-white mb-6 uppercase text-[12px] sm:text-[14px] leading-[1.5] sm:leading-[21px] tracking-[2.52px]"
@@ -20,8 +20,8 @@ export function TishWondersProfile() {
           <h2 
             className="font-bold text-white mb-8 sm:mb-10 text-[36px] sm:text-[44px] leading-[1.1] sm:leading-[60px] tracking-[-0.9px]"
           >
-            Tish
-            <br />
+            Tish{" "}
+            <br className="hidden sm:block" />
             Wonders
           </h2>
 
@@ -65,7 +65,7 @@ export function TishWondersProfile() {
           </div>
 
           <p 
-            className="font-normal text-[#EAEAEA] mb-8 sm:mb-10 max-w-[650px] text-[14px] sm:text-[18px] leading-[1.6] sm:leading-[32.4px]"
+            className="font-normal text-[#EAEAEA] mb-8 sm:mb-10 max-w-[650px] text-[13px] sm:text-[18px] leading-[1.6] sm:leading-[32.4px]"
           >
             Tish Wonders is a food and wellness creator sharing healthy recipes 
             and lifestyle content with a global audience. USS partnered with Tish 

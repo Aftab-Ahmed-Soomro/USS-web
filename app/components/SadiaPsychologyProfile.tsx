@@ -4,7 +4,7 @@ import FadeLeft from "./FadeLeft";
 
 export function SadiaPsychologyProfile() {
   return (
-    <section className="bg-white py-20 text-black overflow-hidden font-[var(--font-inter)]">
+    <section className="bg-white py-10 sm:py-20 text-black overflow-hidden font-[var(--font-inter)]">
       <div className="w-full max-w-[1150px] px-4 mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start gap-12">
         
         {/* Left Column (Image) */}
@@ -32,8 +32,8 @@ export function SadiaPsychologyProfile() {
           <h2 
             className="font-bold text-black mb-8 sm:mb-10 text-[36px] sm:text-[44px] leading-[1.1] sm:leading-[60px] tracking-[-0.9px]"
           >
-            Sadia
-            <br />
+            Sadia{" "}
+            <br className="hidden sm:block" />
             Psychology
           </h2>
 
@@ -80,7 +80,7 @@ export function SadiaPsychologyProfile() {
           </div>
 
           <p 
-            className="font-normal text-[#333333] mb-8 sm:mb-10 max-w-[600px] text-[14px] sm:text-[18px] leading-[1.6] sm:leading-[32.4px]"
+            className="font-normal text-[#333333] mb-8 sm:mb-10 max-w-[600px] text-[13px] sm:text-[18px] leading-[1.6] sm:leading-[32.4px]"
           >
             Sadia Psychology is a content creator and educator with a global audience of more than 800K+ Instagram & YouTube followers. USS partnered with Sadia to develop, launch and market her 2024 planner, turning her content into a physical product that resonated with her audience and sold out during the Black Friday campaign.
           </p>

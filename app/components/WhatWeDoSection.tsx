@@ -5,24 +5,24 @@ import StaggerItem from "./Staggeritem";
 
 export function WhatWeDoSection() {
   return (
-    <section className="bg-black py-20 text-white flex justify-center overflow-hidden">
+    <section className="bg-black sm:py-20 text-white flex justify-center overflow-hidden">
       <div className="w-full max-w-[1150px] px-4 mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start gap-10">
         
         {/* Left Content */}
         <FadeLeft>
           <div className="flex flex-col w-full lg:w-[460px] shrink-0 pt-4">
             <h2 
-              className="font-medium lowercase tracking-[-1px] sm:tracking-[-3px] text-white flex flex-wrap items-center gap-x-3 mb-4 sm:mb-6 font-[var(--font-be-vietnam)] text-[36px] sm:text-[56px] leading-[1.1] sm:leading-[86.48px]"
+              className="font-medium lowercase tracking-[-1px] sm:tracking-[-3px] text-white flex flex-wrap items-center gap-x-3 mb-4 sm:mb-6 font-[var(--font-be-vietnam)] text-[32px] sm:text-[56px] leading-[1.1] sm:leading-[86.48px]"
             >
               <span>what do</span>
               <span 
-                className="text-[#FF5500] italic font-normal font-[var(--font-cormorant)] timesFontFamily text-[46px] sm:text-[72px] leading-[1.1] sm:leading-[86.48px] tracking-[-1.5px] sm:tracking-[-3px]"
+                className="text-[#FF5500] italic font-normal font-[var(--font-cormorant)] timesFontFamily text-[42px] sm:text-[72px] leading-[1.1] sm:leading-[86.48px] tracking-[-1.5px] sm:tracking-[-3px]"
               >
                 we do
               </span>
             </h2>
             <p 
-              className="font-normal text-white/90 font-[var(--font-inter)] text-[14px] sm:text-[16px] leading-[1.6] sm:leading-[24.8px]"
+              className="font-normal text-white/90 font-[var(--font-inter)] text-[13px] sm:text-[16px] leading-[1.6] sm:leading-[24.8px]"
             >
               We help established YouTubers turn their audience into sustainable revenue through brand partnerships, affiliate marketing and strategic commercial growth.
             </p>
