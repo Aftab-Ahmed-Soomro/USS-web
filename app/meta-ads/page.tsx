@@ -105,15 +105,15 @@ function Hero() {
       <div className="mx-auto grid max-w-[1150px] gap-8 sm:gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
-            <h1 className="mt-[16px] min-[375px]:mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[38px] font-bold lowercase leading-[100%] tracking-[-1.5px] sm:tracking-[-3px] sm:text-[58px] text-white">
+            <h1 className="mt-[16px] min-[375px]:mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[100%] tracking-[-1.5px] sm:tracking-[-3px] sm:text-[58px] text-white">
               scale your brand with meta ads, don’t just{" "}
-              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] lowercase font-normal timesFontFamily italic text-[#FF5500] tracking-[-1.5px] sm:tracking-[-2.8px]">
+              <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-normal timesFontFamily italic text-[#FF5500] tracking-[-1.5px] sm:tracking-[-2.8px]">
                 spending more.
               </span>
             </h1>
           </StaggerItem>
           <StaggerItem>
-            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[600px] font-[var(--font-inter)] text-[14px] leading-[24px] min-[375px]:leading-[28px] sm:leading-[32px] text-white/90 sm:text-[18px]">
+            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[600px] font-[var(--font-inter)] text-[13px] leading-[24px] sm:leading-[32px] text-white/90 sm:text-[18px]">
               We create and manage Meta Ads across Facebook and Instagram, helping businesses reach the right people, generate more enquiries and grow with confidence.
             </p>
           </StaggerItem>
@@ -201,10 +201,10 @@ function WhyAdsFail() {
             <p className="font-[var(--font-be-vietnam)] text-[10px] sm:text-[12px] font-normal uppercase tracking-[4.8px] text-[#ff5500]">
               THE PROBLEM
             </p>
-            <h2 className="mt-[28px] font-[var(--font-be-vietnam)] text-[38px] font-medium lowercase leading-[1.08] tracking-[-1.4px] sm:text-[60px]">
+            <h2 className="mt-[28px] font-[var(--font-be-vietnam)] text-[32px] font-medium lowercase leading-[1.08] tracking-[-1.4px] sm:text-[60px]">
               why most
               <br />
-              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] font-normal timesFontFamily italic">
+              <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal timesFontFamily italic">
                 meta ads
               </span>{" "}
               fails
@@ -412,7 +412,7 @@ function RelatedProjects() {
                   </div>
 
                   {/* Copy */}
-                  <p className="mt-[12px] sm:mt-[14px] max-w-[550px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.6] sm:leading-[28px] text-white/90 sm:text-white">
+                  <p className="mt-[12px] sm:mt-[14px] max-w-[550px] font-[var(--font-inter)] text-[13px] sm:text-[18px] leading-[1.6] sm:leading-[28px] text-white/90 sm:text-white">
                     {project.copy}
                   </p>
 
@@ -569,11 +569,11 @@ function RevenueMethod() {
 
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
-            <h2 className="lowercase text-white text-[28px] min-[375px]:text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-[40px] sm:mb-16">
+            <h2 className="lowercase text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-[40px] sm:mb-16">
               How We Build High-Performing  <br />
               {" "}
               <span
-                className="italic text-[#ff5500] font-normal text-[36px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]"
+                className="italic text-[#ff5500] font-normal text-[42px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]"
                 style={{ fontFamily: "'Times New Roman', Times, serif" }}
               >
                 Meta Campaigns
@@ -587,6 +587,7 @@ function RevenueMethod() {
           {CARDS_DATA.map((card, i) => (
             <FadeUp key={card.id} delay={0.1 + i * 0.1}>
               <div
+                tabIndex={0}
                 style={{
                   width: '1285.61px', // Scaled proportions fallback or driven via wrapper max-width
                   maxWidth: '100%',
@@ -594,7 +595,7 @@ function RevenueMethod() {
                   backgroundSize: 'cover',
                   backgroundPosition: 'center'
                 }}
-                className="group relative rounded-[28px] overflow-hidden p-6 sm:p-2 flex flex-col justify-between cursor-pointer transition-all duration-500 ease-out w-full h-[360px] sm:h-[606.93px]"
+                className="group relative rounded-[28px] overflow-hidden p-6 sm:p-2 flex flex-col justify-between cursor-pointer focus:outline-none transition-all duration-500 ease-out w-full h-[360px] sm:h-[606.93px]"
               >
                 {/* Card Number */}
                 <div
@@ -605,7 +606,7 @@ function RevenueMethod() {
                 </div>
 
                 {/* Bottom Content Group (Animates Up on Hover) */}
-                <div className="transform translate-y-[80px] group-hover:translate-y-0 transition-transform duration-500 ease-out will-change-transform">
+                <div className="transform translate-y-[80px] group-hover:translate-y-0 group-focus:translate-y-0 transition-transform duration-500 ease-out will-change-transform">
 
                   {/* Title */}
                   <h3
@@ -617,7 +618,7 @@ function RevenueMethod() {
 
                   {/* Description (Fades and slides in cleanly) */}
                   <p
-                    className="text-[14px] sm:text-[15.5px] font-normal leading-[1.4] sm:leading-[18.86px] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 ease-out min-h-[80px] sm:min-h-[120px]"
+                    className="text-[14px] sm:text-[15.5px] font-normal leading-[1.4] sm:leading-[18.86px] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-500 delay-75 ease-out min-h-[80px] sm:min-h-[120px]"
                     style={{ fontStyle: 'Regular' }}
                   >
                     {card.description}
@@ -643,10 +644,10 @@ export default function MetaAdsPage() {
       <WhyEmailFails
               hideBadge={false}
               heading={
-                <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
+                <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[32px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
                   why most{" "}
                   <span
-                    className="font-normal italic text-[60px] sm:text-[72px]"
+                    className="font-normal italic text-[42px] sm:text-[72px]"
                     style={{ fontFamily: "'Times New Roman', Times, serif" }}
                   >
                     meta ads
@@ -660,7 +661,7 @@ export default function MetaAdsPage() {
               leftPoints={googleAdsBrandPoints}
               rightPoints={googleAdsUssPoints}
               centerLogo="/assets/meta__logo.jpg"
-      logoClassName="w-[80px] lg:w-[120px]"
+      logoClassName="w-[60px] lg:w-[120px]"
             />
       <WhyGoogleAdsWork
         imageSrc="/assets/metaSide.png"
