@@ -60,15 +60,15 @@ export default function IndustriesServed() {
   }, []);
 
   return (
-    <section className="bg-[#0b0b0b] text-white py-16 lg:py-20 w-full overflow-hidden">
+    <section className="bg-[#0b0b0b] text-white py-4 lg:py-20 w-full overflow-hidden">
       
       {/* Text Header Section */}
       <div className="w-full mx-auto px-4 sm:px-6 md:px-12 lg:px-[100px] max-w-[1442px]">
         <div className="mb-10 lg:mb-14 flex flex-col items-start text-left">
           <h2 className="text-white mb-6 font-medium text-[32px] sm:text-[36px] leading-[40px] sm:leading-[44px] tracking-[-1px] lg:text-[56px] lg:leading-[75.6px] lg:tracking-[-3.16px] align-middle">
-            Industries we have <span className="timesFontFamily font-serif text-[40px] sm:text-[48px] lg:text-[72px] font-normal italic">served</span>
+            Industries we have <span className="timesFontFamily font-serif text-[42px] sm:text-[48px] lg:text-[72px] font-normal italic">served</span>
           </h2>
-          <p className="text-[#FFFFFF] font-normal text-[16px] leading-[26px] lg:text-[20px] lg:leading-[32.5px] tracking-normal align-middle max-w-[650px]">
+          <p className="text-[#FFFFFF] font-normal text-[13px] leading-[26px] lg:text-[20px] lg:leading-[32.5px] tracking-normal align-middle max-w-[650px]">
             Our website approach combines strategy, design, custom development and ongoing optimization all under one USS roof.
           </p>
         </div>

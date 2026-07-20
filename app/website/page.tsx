@@ -132,20 +132,22 @@ function Hero() {
       <div className="relative z-10 mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.15}>
           <StaggerItem>
-            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[38px] font-bold lowercase leading-[70px] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white">
+            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase sm:leading-[70px] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white">
               your website,
-              <br />
+              <br className="hidden sm:block" />
               is your{" "}
-              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white leading-[1.2] sm:leading-[30px] tracking-[-1px] sm:tracking-[-2.8px]">
+              <br className="block sm:hidden" />
+              <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white leading-[0] sm:leading-[30px] tracking-[-1px] sm:tracking-[-2.8px]">
                 hardest
-                <br />
+                <br className="hidden sm:block" />
                 working sales{" "}
+                <br className="block sm:hidden" />
               </span>
               tool
             </h1>
           </StaggerItem>
           <StaggerItem>
-            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[500px] font-[var(--font-inter)] text-[14px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[18px]">
+            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[500px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[18px]">
               We design custom websites in Figma and develop them from the ground up, creating fast, responsive websites built to turn visitors into customers.
             </p>
           </StaggerItem>
@@ -421,11 +423,11 @@ function FinalCta() {
           </p>
         </StaggerItem>
         <StaggerItem>
-          <h2 className="mt-[24px] sm:mt-8 font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[36px] font-medium leading-[1.08] tracking-[-1.5px] sm:text-[55px]">
+          <h2 className="mt-[24px] sm:mt-8 font-[var(--font-be-vietnam)] text-[32px] font-medium leading-[1.08] tracking-[-1.5px] sm:text-[55px]">
             turn your website into
             <br />
             a{" "}
-            <span className="font-[var(--font-cormorant)] text-[1.12em] leading-[1.1] sm:leading-none font-extralight timesFontFamily italic text-[#ff5500]">
+            <span className="font-[var(--font-cormorant)] text-[42px] leading-[1.1] sm:leading-none font-extralight timesFontFamily italic text-[#ff5500]">
               growth asset
             </span>
           </h2>
@@ -542,11 +544,11 @@ function RevenueMethod() {
         {/* Header Section */}
         {/* Heading */}
         <StaggerItem>
-          <h2 className="lowercase text-white text-[28px] min-[375px]:text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-[40px] sm:mb-16">
-            method to convert email database to <br />
+          <h2 className="lowercase text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-[40px] sm:mb-16">
+            method to convert email database to <br className="hidden sm:block" />
 
             <span
-              className="italic text-[#ff5500] font-normal text-[36px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]"
+              className="italic text-[#ff5500] font-normal text-[42px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]"
               style={{ fontFamily: "'Times New Roman', Times, serif" }}
             >
               high performing revenue
@@ -611,10 +613,10 @@ export default function WebsitePage() {
       <WhyEmailFails
         hideBadge={false}
         heading={
-          <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
+          <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[32px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
             why most{" "}
             <span
-              className="font-normal italic text-[60px] sm:text-[72px]"
+              className="font-normal italic text-[42px] sm:text-[72px]"
               style={{ fontFamily: "'Times New Roman', Times, serif" }}
             >
               websites
@@ -628,7 +630,7 @@ export default function WebsitePage() {
         leftPoints={googleAdsBrandPoints}
         rightPoints={googleAdsUssPoints}
         centerLogo="/assets/figma.png"
-        logoClassName="w-[80px] lg:w-[105px]"
+        logoClassName="w-[60px] lg:w-[105px]"
       />
       <FadeUp>
         <DedicatedPartner />

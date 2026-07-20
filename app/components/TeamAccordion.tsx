@@ -70,7 +70,7 @@ export default function TeamAccordion({ heading, data = defaultTeamData }: TeamA
               {heading ? (
                 heading
               ) : (
-                <h2 className="text-[32px] sm:text-[36px] md:text-[64px] lg:text-[75px] leading-[1] tracking-[-1px] lg:tracking-[-6px] font-light lowercase" style={{ fontWeight: 300 }}>
+                <h2 className="text-[32px] sm:text-[36px] md:text-[64px] lg:text-[75px] leading-[36px] tracking-[-1px] lg:tracking-[-6px] font-light lowercase" style={{ fontWeight: 300 }}>
                   we are the team of<br />
                   visual and <span className="relative inline-block z-10 whitespace-nowrap">
                     multiverse
@@ -105,12 +105,13 @@ export default function TeamAccordion({ heading, data = defaultTeamData }: TeamA
                     key={item.id} 
                     className={`border-t border-white/20 group cursor-pointer transition-all duration-500 hover:bg-white/[0.03] overflow-hidden ${isHovered ? 'py-8 md:py-12' : 'py-5 md:py-8'}`}
                     onMouseEnter={() => setHoveredIndex(index)}
+                    onClick={() => setHoveredIndex(hoveredIndex === index ? null : index)}
                   >
                     <div className="flex flex-row gap-4 sm:gap-6 lg:gap-24 items-start lg:items-start">
                       
                       {/* Big Number */}
                       <div 
-                        className={`text-[64px] sm:text-[80px] lg:text-[216px] leading-[1] lg:leading-[183.6px] tracking-[-3px] lg:tracking-[-8.64px] text-white w-auto lg:w-[250px] shrink-0 font-light transition-all duration-500 ${isHovered ? 'mb-0' : 'mb-[-40px] lg:mb-[-110px]'}`} 
+                        className={`text-[44px] mt-2 sm:mt-0 sm:text-[80px] lg:text-[216px] leading-[1] lg:leading-[183.6px] tracking-[-3px] lg:tracking-[-8.64px] text-white w-auto lg:w-[250px] shrink-0 font-light transition-all duration-500 ${isHovered ? 'mb-0' : 'mb-[-40px] lg:mb-[-110px]'}`} 
                         style={{ fontWeight: 300 }}
                       >
                         {item.id}
