@@ -46,12 +46,12 @@ export default function TeamAccordion() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(0);
 
   return (
-    <section className="bg-black text-white pt-6 pb-16 lg:pb-24 px-6 md:px-12 lg:px-[100px] w-full flex flex-col items-center overflow-hidden">
+    <section className="bg-black text-white pt-6 pb-16 lg:pb-24 px-4 sm:px-6 md:px-12 lg:px-[100px] w-full flex flex-col items-center overflow-hidden">
       <div className="w-full max-w-[1442px]">
         
         {/* Heading Section */}
         <div className="mb-12">
-          <h2 className="text-[36px] md:text-[64px] lg:text-[75px] leading-[1] tracking-[-1px] lg:tracking-[-6px] font-light lowercase" style={{ fontWeight: 300 }}>
+          <h2 className="text-[32px] sm:text-[36px] md:text-[64px] lg:text-[75px] leading-[1] tracking-[-1px] lg:tracking-[-6px] font-light lowercase" style={{ fontWeight: 300 }}>
             we are the team of<br />
             visual and <span className="relative inline-block z-10 whitespace-nowrap">
               multiverse
@@ -84,11 +84,11 @@ export default function TeamAccordion() {
                 className={`border-t border-white/20 group cursor-pointer transition-all duration-500 hover:bg-white/[0.03] overflow-hidden ${isHovered ? 'py-8 md:py-12' : 'py-5 md:py-8'}`}
                 onMouseEnter={() => setHoveredIndex(index)}
               >
-                <div className="flex flex-row gap-6 lg:gap-24 items-start lg:items-start">
+                <div className="flex flex-row gap-4 sm:gap-6 lg:gap-24 items-start lg:items-start">
                   
                   {/* Big Number */}
                   <div 
-                    className={`text-[80px] lg:text-[216px] leading-[1] lg:leading-[183.6px] tracking-[-3px] lg:tracking-[-8.64px] text-white w-auto lg:w-[250px] shrink-0 font-light transition-all duration-500 ${isHovered ? 'mb-0' : 'mb-[-40px] lg:mb-[-110px]'}`} 
+                    className={`text-[64px] sm:text-[80px] lg:text-[216px] leading-[1] lg:leading-[183.6px] tracking-[-3px] lg:tracking-[-8.64px] text-white w-auto lg:w-[250px] shrink-0 font-light transition-all duration-500 ${isHovered ? 'mb-0' : 'mb-[-40px] lg:mb-[-110px]'}`} 
                     style={{ fontWeight: 300 }}
                   >
                     {item.id}
@@ -98,13 +98,13 @@ export default function TeamAccordion() {
                   <div className={`flex-1 w-full flex flex-col justify-start transition-all duration-500 ${isHovered ? 'pt-4 lg:pt-12' : 'pt-2 lg:pt-6'}`}>
                     
                     {/* Title and Plus/Minus Icon */}
-                    <div className="flex justify-between items-center w-full">
-                      <h3 className={`text-[20px] lg:text-[34px] leading-[1.2] lg:leading-[51px] tracking-[0.68px] uppercase text-white font-normal ${isHovered ? 'mb-0' : 'mb-[-40px] lg:mb-[-110px]'}`}>
+                    <div className="flex justify-between items-center w-full gap-2">
+                      <h3 className={`text-[18px] sm:text-[20px] lg:text-[34px] leading-[1.2] lg:leading-[51px] tracking-[0.68px] uppercase text-white font-normal ${isHovered ? 'mb-0' : 'mb-[-40px] lg:mb-[-110px]'}`}>
                         {item.title}
                       </h3>
                       
                       {/* Icon */}
-                      <div className={`w-8 h-8 lg:w-10 lg:h-10 rounded-full border flex items-center justify-center transition-all duration-300 ${isHovered ? 'border-white text-white mb-0' : 'border-white/20 text-white/50 mb-[-40px] lg:mb-[-110px]'}`}>
+                      <div className={`shrink-0 w-8 h-8 lg:w-10 lg:h-10 rounded-full border flex items-center justify-center transition-all duration-300 ${isHovered ? 'border-white text-white mb-0' : 'border-white/20 text-white/50 mb-[-40px] lg:mb-[-110px]'}`}>
                         <span className="text-xl lg:text-2xl font-light leading-none mb-1">{isHovered ? '-' : '+'}</span>
                       </div>
                     </div>

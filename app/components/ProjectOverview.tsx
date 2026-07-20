@@ -17,24 +17,21 @@ export function ProjectOverview({ subheading, images, bgColor, textColor }: Proj
         
         {/* Header */}
         <FadeUp>
-          <div className="flex flex-col items-center mb-10 text-center">
-            <h2 className="flex flex-wrap justify-center items-center gap-x-3 mb-2">
+          <div className="flex flex-col items-center mb-8 sm:mb-10 text-center">
+            <h2 className="flex flex-wrap justify-center items-center gap-x-2 sm:gap-x-3 mb-2">
               <span 
-                className={`text-${textColor} lowercase font-[var(--font-be-vietnam)]`}
-                style={{ fontWeight: 700, fontSize: "56px", lineHeight: "51.41px", letterSpacing: "-3px" }}
+                className={`text-${textColor} lowercase font-[var(--font-be-vietnam)] font-bold text-[36px] sm:text-[56px] leading-[1.1] sm:leading-[51.41px] tracking-[-1px] sm:tracking-[-3px]`}
               >
                 project
               </span>
               <span 
-                className={`text-${textColor} italic lowercase font-[var(--font-cormorant)] timesFontFamily`}
-                style={{ fontWeight: 400, fontSize: "72px", lineHeight: "51.41px", letterSpacing: "-3px" }}
+                className={`text-${textColor} italic lowercase font-[var(--font-cormorant)] timesFontFamily font-normal text-[46px] sm:text-[72px] leading-[1.1] sm:leading-[51.41px] tracking-[-1.5px] sm:tracking-[-3px]`}
               >
                 overview.
               </span>
             </h2>
             <p 
-              className={`text-${textColor} uppercase font-[var(--font-inter)]`}
-              style={{ fontWeight: 500, fontSize: "24px", lineHeight: "51.41px", letterSpacing: "-1px" }}
+              className={`text-${textColor} uppercase font-[var(--font-inter)] font-medium text-[16px] sm:text-[24px] leading-[1.4] sm:leading-[51.41px] tracking-[-0.5px] sm:tracking-[-1px]`}
             >
               {subheading}
             </p>
@@ -42,12 +39,11 @@ export function ProjectOverview({ subheading, images, bgColor, textColor }: Proj
         </FadeUp>
 
         {/* Images Grid */}
-        <Stagger className="flex flex-wrap justify-center gap-4 w-full">
+        <Stagger className="flex flex-wrap justify-center gap-4 sm:gap-4 w-full">
           {images.map((src, i) => (
             <StaggerItem key={i}>
               <div 
-                className="relative overflow-hidden shrink-0"
-                style={{ width: "260px", height: "512px", maxWidth: "100%" }}
+                className="relative overflow-hidden shrink-0 w-[260px] h-[400px] sm:h-[512px] max-w-full"
               >
                 <Image 
                   src={src}

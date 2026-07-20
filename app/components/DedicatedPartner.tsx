@@ -12,15 +12,15 @@ export default function DedicatedPartner() {
   ];
 
   return (
-    <section className="bg-[#000] text-white pb-16 lg:pb-24 px-6 w-full flex flex-col items-center">
+    <section className="bg-[#000] text-white py-16 lg:py-0 lg:pb-24 px-4 sm:px-6 w-full flex flex-col items-center">
       <div className="w-full max-w-[1150px]">
         
         {/* Top Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 mb-20 lg:mb-48">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 mb-16 lg:mb-48">
           
           {/* Left: Heading */}
           <div className="lg:col-span-8">
-            <h2 className="whitespace-normal lg:whitespace-nowrap font-normal text-[36px] leading-[44px] tracking-[-1px] lg:text-[56px] lg:leading-[79.8px] lg:tracking-[-1.52px] align-middle">
+            <h2 className="whitespace-normal lg:whitespace-nowrap font-normal text-[28px] leading-[36px] sm:text-[36px] sm:leading-[44px] tracking-[-1px] lg:text-[56px] lg:leading-[79.8px] lg:tracking-[-1.52px] align-middle">
               As your dedicated partner we<br className="hidden md:block" /> 
               create digital experiences that<br className="hidden md:block" /> 
               drive measurable growth.
@@ -28,7 +28,7 @@ export default function DedicatedPartner() {
           </div>
 
           {/* Right: Paragraph & Button */}
-          <div className="lg:col-span-4 flex flex-col items-start lg:mt-70 mt-4 -ml-26 lg:mt-0">
+          <div className="lg:col-span-4 flex flex-col items-start mt-8 sm:mt-12 lg:mt-70 ml-0 lg:-ml-26 lg:mt-0">
             <p className="font-normal text-[15px] leading-[24.38px] align-middle text-[#a3a3a3] mb-8 max-w-[500px]">
               We partner with ambitious brands and agencies to design,
               build, and refine digital products that resonate. From
@@ -51,10 +51,10 @@ export default function DedicatedPartner() {
         </div>
 
         {/* Bottom: Stats */}
-        <div className="grid grid-cols-2 gap-12 md:flex md:justify-between w-full">
+        <div className="grid grid-cols-2 gap-8 sm:gap-12 md:flex md:justify-between w-full">
           {stats.map((stat, index) => (
-            <div key={index} className="flex flex-col items-start ">
-              <span className="font-medium text-[56px] leading-[56px] tracking-[-1px] lg:text-[88px] lg:leading-[88px] lg:tracking-[-1.76px] align-middle mb-2 lg:mb-4">
+            <div key={index} className="flex flex-col items-start lg:items-start">
+              <span className="font-medium text-[40px] leading-[40px] sm:text-[48px] sm:leading-[48px] lg:text-[88px] lg:leading-[88px] tracking-[-1px] lg:tracking-[-1.76px] align-middle mb-2 lg:mb-4">
                 {stat.number}
               </span>
               <span className="font-normal text-[12px] leading-[18px] lg:text-[13px] lg:leading-[19.5px] tracking-[0.32px] align-middle text-[#a3a3a3]">

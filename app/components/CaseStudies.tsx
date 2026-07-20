@@ -104,7 +104,7 @@ export default function CaseStudies() {
     <section className="bg-black py-16 lg:py-24 px-4 lg:px-6 w-full flex justify-center">
       <div className="w-full max-w-[1150px]">
         
-        <div className="flex flex-col lg:flex-row gap-16">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           
           {/* Left Column */}
           <div className="flex-1 flex flex-col gap-12 lg:gap-[120px] lg:order-1 order-2 mt-8 lg:mt-0">
@@ -123,16 +123,16 @@ export default function CaseStudies() {
               </span>
               
               <h2 className="text-white">
-                <span className="font-medium text-[40px] leading-[48px] tracking-[-2px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-3.2px]">
+                <span className="font-medium text-[32px] leading-[40px] sm:text-[40px] sm:leading-[48px] tracking-[-2px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-3.2px]">
                   see how we build 
                 </span>
-                <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[48px] leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
+                <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[40px] leading-[40px] sm:text-[48px] sm:leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
                   {" "}high {" "}
                 </span>
-                <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[48px] leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
+                <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[40px] leading-[40px] sm:text-[48px] sm:leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
                   performing{' '}
                 </span>
-                <span className="font-medium text-[40px] leading-[48px] tracking-[-2px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-3.2px]">
+                <span className="font-medium text-[32px] leading-[40px] sm:text-[40px] sm:leading-[48px] tracking-[-2px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-3.2px]">
                   websites
                 </span>
               </h2>

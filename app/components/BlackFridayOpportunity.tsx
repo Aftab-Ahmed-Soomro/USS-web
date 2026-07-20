@@ -60,21 +60,18 @@ export function BlackFridayOpportunity() {
       <FadeUp>
         <div className="max-w-[1150px] text-center px-4 mx-auto mb-10 sm:mb-16">
           <h2 
-            className="font-medium lowercase tracking-[-3.2px] text-[#000000] mb-2 font-[var(--font-be-vietnam)]"
-            style={{ fontSize: "56px", lineHeight: "70px" }}
+            className="font-medium lowercase tracking-[-1px] sm:tracking-[-3.2px] text-[#000000] mb-2 font-[var(--font-be-vietnam)] text-[32px] sm:text-[56px] leading-[1.1] sm:leading-[70px]"
           >
             black friday is your highest
             <br />
             <span 
-              className="text-[#FF5500] italic font-medium font-[var(--font-cormorant)] timesFontFamily"
-              style={{ fontSize: "56px", lineHeight: "70px", letterSpacing: "-3.2px" }}
+              className="text-[#FF5500] italic font-medium font-[var(--font-cormorant)] timesFontFamily text-[36px] sm:text-[56px] leading-[1.1] sm:leading-[70px] tracking-[-1px] sm:tracking-[-3.2px]"
             >
               revenue opportunity
             </span>
           </h2>
           <p 
-            className="mt-6 font-normal text-[#1A1A1A] mx-auto max-w-[720px] font-[var(--font-inter)]"
-            style={{ fontSize: "18px", lineHeight: "29.25px" }}
+            className="mt-4 sm:mt-6 font-normal text-[#1A1A1A] mx-auto max-w-[720px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.6] sm:leading-[29.25px]"
           >
             Black Friday is when audiences are actively searching, comparing and ready to buy. For YouTubers with engaged, loyal communities, it’s a key opportunity to turn trusted content into meaningful brand partnerships and revenue.
           </p>
@@ -115,14 +112,12 @@ export function BlackFridayOpportunity() {
           <StaggerItem key={i}>
             <div className="flex flex-col items-center">
               <h3 
-                className="font-semibold text-black font-[var(--font-inter)] mb-4"
-                style={{ fontSize: "20px", lineHeight: "32px", letterSpacing: "-0.6px" }}
+                className="font-semibold text-black font-[var(--font-inter)] mb-2 sm:mb-4 text-[18px] sm:text-[20px] leading-[1.3] sm:leading-[32px] tracking-[-0.6px]"
               >
                 {feature.title}
               </h3>
               <p 
-                className="font-normal text-[#1A1A1A] font-[var(--font-inter)] max-w-[250px]"
-                style={{ fontSize: "16px", lineHeight: "30px", letterSpacing: "-2%" }}
+                className="font-normal text-[#1A1A1A] font-[var(--font-inter)] max-w-[250px] text-[14px] sm:text-[16px] leading-[1.6] sm:leading-[30px] tracking-[-0.02em]"
               >
                 {feature.description}
               </p>

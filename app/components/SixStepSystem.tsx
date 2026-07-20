@@ -93,14 +93,13 @@ export function SixStepSystem() {
         
         {/* Header */}
         <FadeUp>
-          <div className="mb-16 md:mb-24">
-            <h2 className="flex flex-col text-white font-medium tracking-[-2px]" style={{ fontSize: "56px", lineHeight: "69.36px" }}>
+          <div className="mb-10 sm:mb-16 md:mb-24">
+            <h2 className="flex flex-col text-white font-medium tracking-[-1px] sm:tracking-[-2px] text-[36px] sm:text-[56px] leading-[1.1] sm:leading-[69.36px]">
               <span>A six-step system,</span>
-              <span className="flex flex-wrap items-center gap-x-3">
+              <span className="flex flex-wrap items-center gap-x-2 sm:gap-x-3">
                 <span>engineered for</span>
                 <span 
-                  className="text-[#FF5500] italic font-normal font-[var(--font-cormorant)] timesFontFamily"
-                  style={{ fontSize: "72px", lineHeight: "69.36px", letterSpacing: "-2px" }}
+                  className="text-[#FF5500] italic font-normal font-[var(--font-cormorant)] timesFontFamily text-[46px] sm:text-[72px] leading-[1.1] sm:leading-[69.36px] tracking-[-1.5px] sm:tracking-[-2px]"
                 >
                   Q4 revenue.
                 </span>
@@ -123,14 +122,12 @@ export function SixStepSystem() {
                     onMouseEnter={() => setActiveStepId(step.id)}
                   >
                     <span 
-                      className={`font-normal mt-3 transition-colors duration-300 ${isActive ? 'text-[#FF5500]' : 'text-[#EAEAEA]'}`}
-                      style={{ fontSize: "13px", lineHeight: "19.5px" }}
+                      className={`font-normal mt-2 sm:mt-3 transition-colors duration-300 text-[13px] leading-[19.5px] ${isActive ? 'text-[#FF5500]' : 'text-[#EAEAEA]'}`}
                     >
                       {step.id}
                     </span>
                     <h3 
-                      className={`font-medium transition-colors duration-300 ${isActive ? 'text-white' : 'text-[#4A4A4A]'}`}
-                      style={{ fontSize: "40px", lineHeight: "52px", letterSpacing: "-1.04px" }}
+                      className={`font-medium transition-colors duration-300 text-[28px] sm:text-[40px] leading-[1.2] sm:leading-[52px] tracking-[-1px] sm:tracking-[-1.04px] ${isActive ? 'text-white' : 'text-[#4A4A4A]'}`}
                     >
                       {step.title}
                     </h3>
@@ -145,12 +142,11 @@ export function SixStepSystem() {
             <div className="flex flex-col w-full">
               
               {/* Pills */}
-              <div className="flex flex-wrap gap-3 mb-6">
+              <div className="flex flex-wrap gap-2 sm:gap-3 mb-6">
                 {activeStep.pills.map((pill, idx) => (
                   <span 
                     key={idx}
-                    className="bg-white text-black font-medium rounded-full px-4 py-1"
-                    style={{ fontSize: "11px", lineHeight: "16.5px" }}
+                    className="bg-white text-black font-medium rounded-full px-3 py-1 sm:px-4 text-[11px] leading-[16.5px]"
                   >
                     {pill}
                   </span>
@@ -159,8 +155,7 @@ export function SixStepSystem() {
 
               {/* Description */}
               <p 
-                className="font-normal text-[#EAEAEA] mb-10 max-w-[480px]"
-                style={{ fontSize: "14px", lineHeight: "22.75px" }}
+                className="font-normal text-[#EAEAEA] mb-8 sm:mb-10 max-w-[480px] text-[14px] leading-[22.75px]"
               >
                 {activeStep.description}
               </p>
@@ -170,14 +165,12 @@ export function SixStepSystem() {
                 {activeStep.details.map((detail, idx) => (
                   <div key={idx} className="flex flex-col py-4 border-t border-[#333333] last:border-b">
                     <h4 
-                      className="font-semibold text-white mb-1"
-                      style={{ fontSize: "13px", lineHeight: "19.5px" }}
+                      className="font-semibold text-white mb-1 text-[13px] leading-[19.5px]"
                     >
                       {detail.title}
                     </h4>
                     <p 
-                      className="font-normal text-[#A0A0A0]"
-                      style={{ fontSize: "12px", lineHeight: "18px" }}
+                      className="font-normal text-[#A0A0A0] text-[12px] leading-[18px]"
                     >
                       {detail.desc}
                     </p>

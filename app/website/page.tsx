@@ -118,13 +118,13 @@ function Hero() {
       `}</style>
 
       {/* Top Left Gradient */}
-      <div 
+      <div
         className="pointer-events-none absolute -left-[20%] -top-[20%] h-[80vw] max-h-[800px] min-h-[500px] w-[80vw] max-w-[800px] min-w-[500px] rounded-full opacity-40 blur-[100px] animate-glow-tl"
         style={{ background: 'radial-gradient(circle, #FF5500 0%, rgba(255,85,0,0) 70%)' }}
       />
 
       {/* Bottom Right Gradient */}
-      <div 
+      <div
         className="pointer-events-none absolute -bottom-[20%] -right-[20%] h-[80vw] max-h-[800px] min-h-[500px] w-[80vw] max-w-[800px] min-w-[500px] rounded-full opacity-40 blur-[100px] animate-glow-br"
         style={{ background: 'radial-gradient(circle, #FF5500 0%, rgba(255,85,0,0) 70%)' }}
       />
@@ -137,7 +137,7 @@ function Hero() {
               <br />
               is your{" "}
               <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white leading-[1.2] sm:leading-[30px] tracking-[-1px] sm:tracking-[-2.8px]">
-                hardest 
+                hardest
                 <br />
                 working sales{" "}
               </span>
@@ -314,11 +314,10 @@ function ServicesSection() {
                   ) : null}
                 </div>
                 <span
-                  className={`grid size-[28px] place-items-center rounded-full border font-[var(--font-inter)] text-[14px] leading-none ${
-                    service.open
+                  className={`grid size-[28px] place-items-center rounded-full border font-[var(--font-inter)] text-[14px] leading-none ${service.open
                       ? "border-[#ff5500] bg-[#ff5500] text-black"
                       : "border-white/85 text-white"
-                  }`}
+                    }`}
                 >
                   {service.open ? "x" : "+"}
                 </span>
@@ -395,18 +394,18 @@ function TrustedBrands() {
           trusted by 100+ brands worldwide
         </h2>
         <div className="mx-auto mt-[30px] flex max-w-[1150px] flex-wrap items-center justify-center gap-x-10 gap-y-8 sm:gap-x-12 lg:flex-nowrap lg:justify-between lg:gap-x-8">
-                  {trustedBrandImages.map((brand) => (
-                    <article className={`group relative h-[100px] max-w-full ${brand.className}`} key={brand.name}>
-                      <Image
-                        src={brand.image}
-                        alt={`${brand.name} brand image`}
-                        fill
-                        sizes="(min-width: 1024px) 260px, (min-width: 640px) 220px, 46vw"
-                        className="object-contain opacity-90 saturate-[0.9] transition duration-500 group-hover:scale-105 group-hover:opacity-100"
-                      />
-                    </article>
-                  ))}
-                </div>
+          {trustedBrandImages.map((brand) => (
+            <article className={`group relative h-[100px] max-w-full ${brand.className}`} key={brand.name}>
+              <Image
+                src={brand.image}
+                alt={`${brand.name} brand image`}
+                fill
+                sizes="(min-width: 1024px) 260px, (min-width: 640px) 220px, 46vw"
+                className="object-contain opacity-90 saturate-[0.9] transition duration-500 group-hover:scale-105 group-hover:opacity-100"
+              />
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -418,7 +417,7 @@ function FinalCta() {
       <Stagger staggerDelay={0.12} className="mx-auto max-w-[1150px] text-center">
         <StaggerItem>
           <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
-             Get Started
+            Get Started
           </p>
         </StaggerItem>
         <StaggerItem>
@@ -545,7 +544,7 @@ function RevenueMethod() {
         <StaggerItem>
           <h2 className="lowercase text-white text-[28px] min-[375px]:text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-[40px] sm:mb-16">
             method to convert email database to <br />
-            
+
             <span
               className="italic text-[#ff5500] font-normal text-[36px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]"
               style={{ fontFamily: "'Times New Roman', Times, serif" }}
@@ -609,55 +608,48 @@ export default function WebsitePage() {
       <Numbers stats={emailStats} />
       <Brands />
       <WhyEmailFails
-            hideBadge={false}
-            heading={
-              <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
-                why most{" "}
-                <span
-                  className="font-normal italic text-[60px] sm:text-[72px]"
-                  style={{ fontFamily: "'Times New Roman', Times, serif" }}
-                >
-                  websites
-                </span>{" "}
-                fails
-              </h2>
-            }
-            subheading="Most brands don’t have a website problem, they have a structure and conversion problem."
-            leftTitle="Most Brands"
-            rightTitle="The USS Difference"
-            leftPoints={googleAdsBrandPoints}
-            rightPoints={googleAdsUssPoints}
-            centerLogo="/assets/figma.png"
-            logoClassName="w-[80px] lg:w-[105px]"
-            />
-            <FadeUp>
-              <DedicatedPartner />
-            </FadeUp>
-            {/* <FadeUp delay={0.1}> */}
-              <CaseStudies />
-            {/* </FadeUp> */}
-            <FadeUp delay={0.1}>
-              <TeamAccordion />
-            </FadeUp>
-            <FadeUp delay={0.1}>
-              <IndustriesServed />
-            </FadeUp>
-            <RevenueMethod />
-      {/* <ShowcaseIntro /> */}
-      {/* <PerformSection /> */}
-      {/* <NumbersWebsite /> */}
-      {/* <ServicesSection /> */}
-      {/* <PortfolioSection /> */}
-      {/* <Brands /> */}
-      {/* <TrustedBrands /> */}
+        hideBadge={false}
+        heading={
+          <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[40px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
+            why most{" "}
+            <span
+              className="font-normal italic text-[60px] sm:text-[72px]"
+              style={{ fontFamily: "'Times New Roman', Times, serif" }}
+            >
+              websites
+            </span>{" "}
+            fails
+          </h2>
+        }
+        subheading="Most brands don’t have a website problem, they have a structure and conversion problem."
+        leftTitle="Most Brands"
+        rightTitle="The USS Difference"
+        leftPoints={googleAdsBrandPoints}
+        rightPoints={googleAdsUssPoints}
+        centerLogo="/assets/figma.png"
+        logoClassName="w-[80px] lg:w-[105px]"
+      />
+      <FadeUp>
+        <DedicatedPartner />
+      </FadeUp>
+      {/* <FadeUp delay={0.1}> */}
+      <CaseStudies />
+      {/* </FadeUp> */}
+      <FadeUp delay={0.1}>
+        <TeamAccordion />
+      </FadeUp>
+      <FadeUp delay={0.1}>
+        <IndustriesServed />
+      </FadeUp>
+      <RevenueMethod />
       <Testimonials />
       <Team />
       <GoodCompanyMap />
       <FinalCta />
-            <div className="mt-[-120px]">
-            
-                  <Footer />
-                  </div>
+      <div className="mt-[-120px]">
+
+        <Footer />
+      </div>
     </main>
   );
 }

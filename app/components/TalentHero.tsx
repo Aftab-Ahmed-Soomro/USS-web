@@ -46,7 +46,7 @@ export function TalentHero() {
       <div className="relative z-10 mx-auto w-full max-w-[1150px]">
         <Stagger staggerDelay={0.15}>
           <StaggerItem>
-            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[38px] font-bold capitalize leading-[1.1] tracking-[-1px] sm:tracking-[-3px] sm:text-[72px] text-white">
+            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[28px] min-[375px]:text-[38px] font-bold capitalize leading-[1.1] tracking-[-1px] sm:tracking-[-3px] sm:text-[72px] text-white">
               The
               {" "}
               <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[96px] font-normal timesFontFamily uppercase italic text-white leading-[1.2] sm:leading-[30px] tracking-[-1px] sm:tracking-[-2.8px]">
@@ -57,7 +57,7 @@ export function TalentHero() {
             </h1>
           </StaggerItem>
           <StaggerItem>
-            <h2 className="font-bold text-[32px] mt-12">
+            <h2 className="font-bold text-[24px] sm:text-[32px] mt-8 sm:mt-12">
               Start planning for
               <br />
               peak period
