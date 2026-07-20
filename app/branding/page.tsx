@@ -388,6 +388,7 @@ const MarketingStrategy = () => {
             }
             leftData={brandingLeftData}
             rightData={brandingRightData}
+            imageAspectRatio="aspect-[617/334]"
           />
           <Brands />
           <BrandingServices />

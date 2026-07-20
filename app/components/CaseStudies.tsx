@@ -65,7 +65,7 @@ const rightColumnData = [
   }
 ];
 
-const Card = ({ year, category, title, description, image, link, imageClass }: any) => (
+const Card = ({ year, category, title, description, image, link, imageClass, imageAspectRatio }: any) => (
   <Link 
     href={link || "#"} 
     target={link?.startsWith("http") ? "_blank" : undefined}
@@ -73,7 +73,7 @@ const Card = ({ year, category, title, description, image, link, imageClass }: a
     className="flex flex-col gap-6 w-full group cursor-pointer block"
   >
     {/* Image Placeholder */}
-    <div className="w-full aspect-[617/480] bg-[#111111] rounded-[20px] overflow-hidden transition-transform duration-500 group-hover:scale-[1.02] relative">
+    <div className={`w-full ${imageAspectRatio || "aspect-[617/480]"} bg-[#111111] rounded-[20px] overflow-hidden transition-transform duration-500 group-hover:scale-[1.02] relative`}>
       {image && <img src={image} alt={title} className={`absolute inset-0 w-full h-full object-cover ${imageClass || "object-center"}`} />}
     </div>
     
@@ -115,13 +115,15 @@ export interface CaseStudiesProps {
   description?: React.ReactNode;
   leftData?: CaseStudyData[];
   rightData?: CaseStudyData[];
+  imageAspectRatio?: string;
 }
 
 export default function CaseStudies({ 
   heading, 
   description, 
   leftData = leftColumnData, 
-  rightData = rightColumnData 
+  rightData = rightColumnData,
+  imageAspectRatio = "aspect-[617/480]"
 }: CaseStudiesProps) {
   return (
     <section className="bg-black py-16 lg:py-24 px-4 lg:px-6 w-full flex justify-center">
@@ -132,7 +134,7 @@ export default function CaseStudies({
           {/* Left Column */}
           <div className="flex-1 flex flex-col gap-12 lg:gap-[120px] lg:order-1 order-2 mt-8 lg:mt-0">
             {leftData.map(item => (
-              <Card key={item.id} {...item} />
+              <Card key={item.id} {...item} imageAspectRatio={imageAspectRatio} />
             ))}
           </div>
 
@@ -176,7 +178,7 @@ export default function CaseStudies({
             {/* Right Column Cards */}
             <div className="flex flex-col gap-12 lg:gap-[120px]">
               {rightData.map(item => (
-                <Card key={item.id} {...item} />
+                <Card key={item.id} {...item} imageAspectRatio={imageAspectRatio} />
               ))}
             </div>
             

@@ -5,7 +5,7 @@ import React from "react";
 export function BrandingServices() {
   return (
     <section className="bg-black pt-16 lg:pt-24 px-6 w-full flex flex-col items-center">
-      <div className="w-full max-w-[1150px] border-t border-[#333333]">
+      <div className="w-full max-w-[1150px]">
         
         {/* Top Header */}
         <div className="flex flex-col gap-4 border-b border-[#333333] pt-12 pb-12">
@@ -22,7 +22,7 @@ export function BrandingServices() {
         <div className="flex flex-col lg:flex-row w-full border-b border-[#333333]">
           
           {/* Left Block */}
-          <div className="flex flex-col flex-1 border-r-0 lg:border-r border-[#333333] pt-12 lg:pt-16 pb-12 pr-0 lg:pr-12 gap-8 lg:gap-[60px] w-full lg:max-w-[55%] xl:max-w-[700px]">
+          <div className="flex flex-col flex-1 border-r-0 lg:border-r border-[#333333] pt-6 pb-12 pr-0 lg:pr-12 gap-8 lg:gap-[60px] w-full lg:max-w-[55%] xl:max-w-[700px]">
             <div className="flex flex-col gap-6">
               <h1 className="text-white font-light text-[60px] sm:text-[100px] lg:text-[140px] leading-[1] lg:leading-[148.61px] tracking-[-1.73px]">
                 Branding
@@ -39,40 +39,40 @@ export function BrandingServices() {
           {/* Right Columns */}
           <div className="flex-1 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#333333]">
             {/* Strategy */}
-            <div className="flex flex-col justify-between pt-12 lg:pt-16 pb-8 px-6 lg:px-8 h-[300px] lg:h-auto">
+            <div className="flex flex-col justify-between pt-12 lg:pt-16 pb-8 px-1 h-[300px] lg:h-auto">
               <h5 className="text-[#666666] uppercase text-[13px] leading-[1] tracking-[1.3px] font-normal">
                 Strategy
               </h5>
               <div className="flex flex-col gap-2">
-                <span className="text-white font-bold text-[80px] lg:text-[150px] leading-[1] lg:leading-[117px] tracking-[-2px] lg:tracking-[-4.5px]">St</span>
-                <span className="text-[#FF550099] uppercase text-[9px] leading-[1] tracking-[0.9px] font-normal">
-                  FIG. 01 — DISCOVERY
+                <span className="text-white font-bold text-[80px] lg:text-[140px] leading-[1] lg:leading-[117px] tracking-[-2px] lg:tracking-[-4.5px]">St</span>
+                <span className="uppercase text-[9px] leading-[1] tracking-[0.9px] font-normal">
+                  <span className="text-[#FF5500]">FIG.</span> <span className="text-[#FFFFFF47]">01 — DISCOVERY</span>
                 </span>
               </div>
             </div>
             
             {/* Identity */}
-            <div className="flex flex-col justify-between pt-12 lg:pt-16 pb-8 px-6 lg:px-8 h-[300px] lg:h-auto">
+            <div className="flex flex-col justify-between pt-12 lg:pt-16 pb-8 px-1 h-[300px] lg:h-auto">
               <h5 className="text-[#666666] uppercase text-[13px] leading-[1] tracking-[1.3px] font-normal">
                 Identity
               </h5>
               <div className="flex flex-col gap-2">
-                <span className="text-white font-bold text-[80px] lg:text-[150px] leading-[1] lg:leading-[117px] tracking-[-2px] lg:tracking-[-4.5px]">Id</span>
-                <span className="text-[#FF550099] uppercase text-[9px] leading-[1] tracking-[0.9px] font-normal">
-                  FIG. 02 — MARKS
+                <span className="text-white font-bold text-[80px] lg:text-[140px] leading-[1] lg:leading-[117px] tracking-[-2px] lg:tracking-[-4.5px]">Id</span>
+                <span className="uppercase text-[9px] leading-[1] tracking-[0.9px] font-normal">
+                  <span className="text-[#FF5500]">FIG.</span> <span className="text-[#FFFFFF47]">02 — MARKS</span>
                 </span>
               </div>
             </div>
 
             {/* Guidelines */}
-            <div className="flex flex-col justify-between pt-12 lg:pt-16 pb-8 px-6 lg:px-8 h-[300px] lg:h-auto">
+            <div className="flex flex-col justify-between pt-12 lg:pt-16 pb-8 px-1 h-[300px] lg:h-auto">
               <h5 className="text-[#666666] uppercase text-[13px] leading-[1] tracking-[1.3px] font-normal">
                 Guidelines
               </h5>
               <div className="flex flex-col gap-2">
-                <span className="text-white font-bold text-[80px] lg:text-[150px] leading-[1] lg:leading-[117px] tracking-[-2px] lg:tracking-[-4.5px]">Gu</span>
-                <span className="text-[#FF550099] uppercase text-[9px] leading-[1] tracking-[0.9px] font-normal">
-                  FIG. 03 — SYSTEM
+                <span className="text-white font-bold text-[80px] lg:text-[140px] leading-[1] lg:leading-[117px] tracking-[-2px] lg:tracking-[-4.5px]">Gu</span>
+                <span className="uppercase text-[9px] leading-[1] tracking-[0.9px] font-normal">
+                  <span className="text-[#FF5500]">FIG.</span> <span className="text-[#FFFFFF47]">03 — SYSTEM</span>
                 </span>
               </div>
             </div>
