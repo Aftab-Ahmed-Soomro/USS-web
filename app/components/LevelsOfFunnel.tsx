@@ -45,7 +45,7 @@ export function LevelsOfFunnel() {
 
               <StaggerItem>
                 <p
-                  className="text-[#FFFFFF8C] text-[13px] sm:text-[18px] sm:leading-[1.6] mb-8 lg:mb-24 max-w-[400px]"
+                  className="text-white/90 text-[13px] sm:text-[18px] sm:leading-[1.6] mb-8 lg:mb-24 max-w-[400px]"
                   style={{
                     fontWeight: 300,
                   }}
