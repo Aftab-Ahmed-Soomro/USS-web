@@ -91,9 +91,23 @@ export function BrandingServices() {
             {bottomCards.map((card, index) => (
               <StaggerItem key={card.id}>
                 <div className="flex flex-col pt-6 sm:pt-8 pb-6 sm:pb-8 px-4 lg:px-6 gap-4 sm:gap-6 h-full">
-                  <div className="w-full aspect-[247/194] rounded-[10px] bg-[#111] overflow-hidden">
-                    <img src={card.image} alt={card.title} className="w-full h-full object-cover" />
-                  </div>
+                  {card.useBg ? (
+                    <div className={`w-full aspect-[247/194] rounded-[10px] overflow-hidden ${card.imageBg ?? 'bg-[#111]'}`}>
+                      <div
+                        className={`w-full h-full ${card.scale || ''}`}
+                        style={{
+                          backgroundImage: `url(${card.image})`,
+                          backgroundSize: 'contain',
+                          backgroundPosition: card.bgPosition || 'center',
+                          backgroundRepeat: 'no-repeat'
+                        }}
+                      />
+                    </div>
+                  ) : (
+                    <div className={`w-full aspect-[247/194] rounded-[10px] overflow-hidden ${card.imageBg ?? 'bg-[#111]'}`}>
+                      <img src={card.image} alt={card.title} className={`w-full h-full`} />
+                    </div>
+                  )}
                   <div className="flex flex-col gap-2 sm:gap-3">
                     <span className="text-[#666666] font-normal text-[12px] leading-[1] tracking-[0.72px]">
                       {card.id}
@@ -133,7 +147,11 @@ const bottomCards = [
     id: "03",
     title: "Typography",
     description: "Font selection and hierarchy.",
-    image: "/assets/brandingImages/3.png"
+    image: "/assets/brandingImages/3.png",
+    useBg: true,
+    imageBg: "bg-white",
+    scale: "scale-[1]",
+    bgPosition: "40%"
   },
   {
     id: "04",

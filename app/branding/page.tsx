@@ -142,6 +142,7 @@ const brandingRightData = [
     title: "Sales Decks",
     description: "Clear, Engaging Presentations That Help You Communicate Ideas, Showcase Your Offering And Support Every Sales Conversation.",
     image: "/assets/branding/sales.png",
+    imageClass: "object-cover object-[130%_100%]"
   },
   {
     id: 5,
@@ -199,7 +200,7 @@ function RevenueMethod() {
         <StaggerItem>
           <h2 className="lowercase text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-[40px] sm:mb-16">
             How we bring <br />
-            
+
             <span
               className="italic text-[#ff5500] font-normal text-[42px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]"
               style={{ fontFamily: "'Times New Roman', Times, serif" }}
@@ -281,13 +282,13 @@ function Hero() {
       `}</style>
 
       {/* Top Left Gradient */}
-      <div 
+      <div
         className="pointer-events-none absolute -left-[20%] -top-[20%] h-[80vw] max-h-[800px] min-h-[500px] w-[80vw] max-w-[800px] min-w-[500px] rounded-full opacity-40 blur-[100px] animate-glow-tl"
         style={{ background: 'radial-gradient(circle, #FF5500 0%, rgba(255,85,0,0) 70%)' }}
       />
 
       {/* Bottom Right Gradient */}
-      <div 
+      <div
         className="pointer-events-none absolute -bottom-[20%] -right-[20%] h-[80vw] max-h-[800px] min-h-[500px] w-[80vw] max-w-[800px] min-w-[500px] rounded-full opacity-40 blur-[100px] animate-glow-br"
         style={{ background: 'radial-gradient(circle, #FF5500 0%, rgba(255,85,0,0) 70%)' }}
       />
@@ -296,16 +297,16 @@ function Hero() {
         <Stagger staggerDelay={0.15}>
           <StaggerItem>
             <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase sm:leading-[70px] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white">
-              strategy that drives
+              From strategy and identity to every
               <br />{" "}
               <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white leading-[0] sm:leading-[30px] tracking-[-1px] sm:tracking-[-2.8px]">
-                real growth
+                brand touchpoint.
               </span>
             </h1>
           </StaggerItem>
           <StaggerItem>
-            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[500px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[18px]">
-              We build clear, data-driven marketing strategies designed to scale your business not just generate leads. Trusted by brands across UAE and globally.
+            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[550px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[18px]">
+              A strong brand is more than a logo. We develop the strategy, identity and supporting assets that help your business present itself professionally across every customer touchpoint.
             </p>
           </StaggerItem>
           <StaggerItem>
@@ -338,7 +339,8 @@ function FinalCta() {
             turn your database
             <br />
             into{" "}
-            <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[62px] leading-[1.1] sm:leading-none font-extralight timesFontFamily italic text-[#ff5500]">
+            <span className="font-[var(--font-cormorant)] text-[42
+            px] sm:text-[62px] leading-[1.1] sm:leading-none font-extralight timesFontFamily italic text-[#ff5500]">
               repeat revenue
             </span>
           </h2>
@@ -364,83 +366,85 @@ function FinalCta() {
 const MarketingStrategy = () => {
   return (
     <main className="min-h-screen bg-black overflow-hidden">
-          <Header />
-          <Hero />
-          <Numbers stats={emailStats} />
-          <CaseStudies 
-            heading={
-              <h2 className="text-white">
-                <span className="font-medium text-[32px] leading-[40px] sm:text-[40px] sm:leading-[48px] tracking-[-2px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-3.2px]">
-                  see how we create 
-                </span>
-                <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[42px] leading-[40px] sm:text-[48px] sm:leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
-                  {" "}business{" "}
-                </span>
-                <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[42px] leading-[40px] sm:text-[48px] sm:leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
-                  documents
-                </span>
-              </h2>
-            }
-            description={
-              <p className="font-normal text-[13px] leading-[24px] lg:text-[18px] lg:leading-[28px] text-white/90 max-w-[600px] mt-2">
-                Explore how we've helped businesses communicate professionally through sales decks, company profiles and branded presentations.
-              </p>
-            }
-            leftData={brandingLeftData}
-            rightData={brandingRightData}
-            imageAspectRatio="aspect-[617/334]"
-          />
-          <Brands />
-          <BrandingServices />
-          <YulaHappiness />
-          <WhyEmailFails
-                            hideBadge={true}
-                            heading={
-                              <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[32px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
-                                why most{" "}
-                                <span
-                                  className="font-normal italic text-[42px] sm:text-[72px]"
-                                  style={{ fontFamily: "'Times New Roman', Times, serif" }}
-                                >
-                                  brands
-                                </span>{" "}
-                                fails
-                              </h2>
-                            }
-                            subheading="Most brands don't have an email problem, they have a strategy problem."
-                            leftTitle="Most Brands"
-                            rightTitle="The USS Difference"
-                            leftPoints={googleAdsBrandPoints}
-                            rightPoints={googleAdsUssPoints}
-                            centerLogo="/assets/Google__logo.webp"
-                            logoClassName="w-[80px] lg:w-[115px]"
-                            />
-          <BrandIdentity />
-          <SixStepSystem 
-                              heading={
-                                <h2 className="text-white font-medium tracking-[-1px] sm:tracking-[-2px] text-[36px] sm:text-[56px] leading-[1.1] sm:leading-[69.36px]">
-                                  Before the logo comes <br className="hidden sm:block" />
-                                  <span className="inline-flex items-center gap-x-2 sm:gap-x-3 mt-1 sm:mt-0">
-                                    <span>the</span>
-                                    <span 
-                                      className="text-[#FF5500] italic font-normal font-[var(--font-cormorant)] timesFontFamily text-[46px] sm:text-[72px] leading-[1.1] sm:leading-[69.36px] tracking-[-1.5px] sm:tracking-[-2px]"
-                                    >
-                                      strategy
-                                    </span>
-                                  </span>
-                                </h2>
-                              }
-                              data={touchpointStepsData}
-                            />
-                            <RevenueMethod />
-                            <Testimonials />
-                            <Team />
-                            <GoodCompanyMap />
-                            <FinalCta />
-                                  <div className="mt-[-120px]">
-                            
-                                  <Footer />
-                                  </div>
+      <Header />
+      <Hero />
+      <Numbers stats={emailStats} />
+      <CaseStudies
+        heading={
+          <h2 className="text-white">
+            <span className="font-medium text-[32px] leading-[40px] sm:text-[40px] sm:leading-[48px] tracking-[-2px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-3.2px]">
+              see how we create
+            </span>
+            <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[42px] leading-[40px] sm:text-[48px] sm:leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
+              {" "}business{" "}
+            </span>
+            <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[42px] leading-[40px] sm:text-[48px] sm:leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
+              documents
+            </span>
+          </h2>
+        }
+        description={
+          <p className="font-normal text-[13px] leading-[24px] lg:text-[18px] lg:leading-[28px] text-white/90 max-w-[600px] mt-2">
+            Explore how we've helped businesses communicate professionally through sales decks, company profiles and branded presentations.
+          </p>
+        }
+        leftData={brandingLeftData}
+        rightData={brandingRightData}
+        imageAspectRatio="aspect-[617/344]"
+      />
+      <Brands />
+      <BrandingServices />
+      <YulaHappiness />
+      <div className="sm:-mb-[180px]">
+        <WhyEmailFails
+          hideBadge={false}
+          heading={
+            <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[32px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
+              why most{" "}
+              <span
+                className="font-normal italic text-[42px] sm:text-[72px]"
+                style={{ fontFamily: "'Times New Roman', Times, serif" }}
+              >
+                brands
+              </span>{" "}
+              fails
+            </h2>
+          }
+          subheading="Most brands don't have an email problem, they have a strategy problem."
+          leftTitle="Most Brands"
+          rightTitle="The USS Difference"
+          leftPoints={googleAdsBrandPoints}
+          rightPoints={googleAdsUssPoints}
+          centerLogo="/assets/uss-logo.png"
+          logoClassName="w-[80px] lg:w-[115px]"
+        />
+      </div>
+      <BrandIdentity />
+      <SixStepSystem
+        heading={
+          <h2 className="text-white font-medium tracking-[-1px] sm:tracking-[-2px] text-[36px] sm:text-[56px] leading-[1.1] sm:leading-[69.36px]">
+            Before the logo comes <br className="hidden sm:block" />
+            <span className="inline-flex items-center gap-x-2 sm:gap-x-3 mt-1 sm:mt-0">
+              <span>the</span>
+              <span
+                className="text-[#FF5500] italic font-normal font-[var(--font-cormorant)] timesFontFamily text-[46px] sm:text-[72px] leading-[1.1] sm:leading-[69.36px] tracking-[-1.5px] sm:tracking-[-2px]"
+              >
+                strategy
+              </span>
+            </span>
+          </h2>
+        }
+        data={touchpointStepsData}
+      />
+      <RevenueMethod />
+      <Testimonials />
+      <Team />
+      <GoodCompanyMap />
+      <FinalCta />
+      <div className="mt-[-120px]">
+
+        <Footer />
+      </div>
     </main>
   );
 };
