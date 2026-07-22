@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const cards = [
@@ -34,6 +34,7 @@ const cards = [
 
 export function PowerOf360() {
   const [items, setItems] = useState(cards);
+  const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   
   const activeItem = items[0];
   const thumbnails = items.slice(1);
@@ -65,6 +66,31 @@ export function PowerOf360() {
     });
   };
 
+  const cooldownRef = useRef<NodeJS.Timeout | null>(null);
+
+  const handleMouseEnter = (cardId: string) => {
+    // Don't start if cooldown (2s after last change) is still active
+    if (cooldownRef.current) return;
+    // Cancel any pending hover delay, restart for this card
+    if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+    hoverTimeoutRef.current = setTimeout(() => {
+      jumpTo(cardId);
+      hoverTimeoutRef.current = null;
+      // Start 2s cooldown — no hover changes during this window
+      cooldownRef.current = setTimeout(() => {
+        cooldownRef.current = null;
+      }, 1000);
+    }, 700);
+  };
+
+  const handleMouseLeave = () => {
+    // Only cancel the initial hover delay, not the cooldown
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+      hoverTimeoutRef.current = null;
+    }
+  };
+
   return (
     <section
       id="power-of-360"
@@ -80,7 +106,7 @@ export function PowerOf360() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1] }}
+          transition={{ duration: 1.6, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
           <Image
             src={activeItem.image}
@@ -245,10 +271,12 @@ export function PowerOf360() {
                   layout
                   layoutId={`card-image-${card.id}`}
                   onClick={() => jumpTo(card.id)}
+                  onMouseEnter={() => handleMouseEnter(card.id)}
+                  onMouseLeave={handleMouseLeave}
                   initial={{ opacity: 0, scale: 0.8, x: 100 }}
                   animate={{ opacity: 1, scale: 1, x: 0 }}
                   exit={{ opacity: 0, scale: 0.8, x: -100 }}
-                  transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1] }}
+                  transition={{ duration: 1.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                   className="max-md:!w-[220px] max-md:!h-[280px] max-md:snap-start relative w-[200px] h-[320px] rounded-[16px] overflow-hidden flex-shrink-0 cursor-pointer border-none p-0 group"
                   aria-label={card.label}
                 >
