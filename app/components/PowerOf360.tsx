@@ -67,11 +67,9 @@ export function PowerOf360() {
   };
 
   const cooldownRef = useRef<NodeJS.Timeout | null>(null);
+  const hoveredCardRef = useRef<string | null>(null);
 
-  const handleMouseEnter = (cardId: string) => {
-    // Don't start if cooldown (2s after last change) is still active
-    if (cooldownRef.current) return;
-    // Cancel any pending hover delay, restart for this card
+  const startHoverTimer = (cardId: string) => {
     if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
     hoverTimeoutRef.current = setTimeout(() => {
       jumpTo(cardId);
@@ -79,11 +77,24 @@ export function PowerOf360() {
       // Start 2s cooldown — no hover changes during this window
       cooldownRef.current = setTimeout(() => {
         cooldownRef.current = null;
-      }, 1000);
+        // When cooldown ends, if we are still hovering a card, start its timer
+        if (hoveredCardRef.current) {
+          startHoverTimer(hoveredCardRef.current);
+        }
+      }, 2000);
     }, 700);
   };
 
+  const handleMouseEnter = (cardId: string) => {
+    hoveredCardRef.current = cardId;
+    // Don't start if cooldown (1s after last change) is still active
+    if (cooldownRef.current) return;
+    
+    startHoverTimer(cardId);
+  };
+
   const handleMouseLeave = () => {
+    hoveredCardRef.current = null;
     // Only cancel the initial hover delay, not the cooldown
     if (hoverTimeoutRef.current) {
       clearTimeout(hoverTimeoutRef.current);
