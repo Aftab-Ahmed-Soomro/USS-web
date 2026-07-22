@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const cards = [
   {
@@ -33,44 +33,72 @@ const cards = [
 ];
 
 export function PowerOf360() {
-  const [current, setCurrent] = useState(0);
+  const [items, setItems] = useState(cards);
+  
+  const activeItem = items[0];
+  const thumbnails = items.slice(1);
 
-  const prev = () => setCurrent((c) => Math.max(0, c - 1));
-  const next = () => setCurrent((c) => Math.min(cards.length - 1, c + 1));
+  const next = () => {
+    setItems((prev) => {
+      const newItems = [...prev];
+      const first = newItems.shift();
+      if (first) newItems.push(first);
+      return newItems;
+    });
+  };
+
+  const prev = () => {
+    setItems((prev) => {
+      const newItems = [...prev];
+      const last = newItems.pop();
+      if (last) newItems.unshift(last);
+      return newItems;
+    });
+  };
+
+  const jumpTo = (cardId: string) => {
+    setItems((prev) => {
+      const idx = prev.findIndex((c) => c.id === cardId);
+      if (idx <= 0) return prev;
+      const newItems = [...prev];
+      return [...newItems.slice(idx), ...newItems.slice(0, idx)];
+    });
+  };
 
   return (
     <section
       id="power-of-360"
-      className="relative w-full overflow-hidden max-md:!min-h-0"
+      className="relative w-full overflow-hidden max-md:!min-h-0 bg-black"
       style={{ minHeight: "900px" }}
     >
-      {/* Background image */}
-      <motion.div
-        initial={{ scale: 1.1 }}
-        whileInView={{ scale: 1 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
-        viewport={{ once: true }}
-        className="absolute inset-0"
-      >
-        <Image
-          src="/assets/mainPage.png"
-          alt="The power of 360 background"
-          fill
-          className="object-cover object-center"
-          priority
-        />
-      </motion.div>
+      {/* Background image (Active Item) */}
+      <AnimatePresence initial={false}>
+        <motion.div
+          key={activeItem.id}
+          layoutId={`card-image-${activeItem.id}`}
+          className="absolute inset-0 z-0"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1] }}
+        >
+          <Image
+            src={activeItem.image}
+            alt={activeItem.alt}
+            fill
+            className="object-cover object-center"
+            priority
+          />
+        </motion.div>
+      </AnimatePresence>
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/55" />
+      <div className="absolute inset-0 bg-black/55 z-0" />
 
       {/* Content — full-width, relative so absolute children work */}
       <div className="relative z-10 w-full min-h-screen flex items-center px-6 py-80 lg:px-14 max-md:flex-col max-md:items-start max-md:justify-center max-md:py-24 max-md:gap-12">
-
         {/* ── LEFT: text block — stays on left ~40% ── */}
         <div className="flex max-w-[450px] flex-col gap-6 flex-shrink-0 max-md:max-w-full max-md:w-full">
-
-          {/* Heading */}
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -106,7 +134,6 @@ export function PowerOf360() {
             </span>
           </motion.h2>
 
-          {/* Body */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -130,7 +157,6 @@ export function PowerOf360() {
             towards the same business goals.
           </motion.p>
 
-          {/* CTA */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -141,56 +167,56 @@ export function PowerOf360() {
             <Link
               href="/contact"
               id="power-of-360-contact-us"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: "8px",
-              width: "fit-content",
-              padding: "10px 20px",
-              border: "1px solid rgba(255,255,255,0.5)",
-              borderRadius: "9999px",
-              fontFamily: "var(--font-be-vietnam), Arial, sans-serif",
-              fontWeight: 500,
-              fontSize: "14px",
-              lineHeight: "19.5px",
-              letterSpacing: "0px",
-              textTransform: "capitalize",
-              color: "#ffffff",
-              textDecoration: "none",
-              transition: "background 0.2s, border-color 0.2s",
-            }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.background =
-                "rgba(255,255,255,0.12)";
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.background =
-                "transparent";
-            }}
-          >
-            Contact Us
-            <svg
-              width="13"
-              height="13"
-              viewBox="0 0 13 13"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "8px",
+                width: "fit-content",
+                padding: "10px 20px",
+                border: "1px solid rgba(255,255,255,0.5)",
+                borderRadius: "9999px",
+                fontFamily: "var(--font-be-vietnam), Arial, sans-serif",
+                fontWeight: 500,
+                fontSize: "14px",
+                lineHeight: "19.5px",
+                letterSpacing: "0px",
+                textTransform: "capitalize",
+                color: "#ffffff",
+                textDecoration: "none",
+                transition: "background 0.2s, border-color 0.2s",
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLAnchorElement).style.background =
+                  "rgba(255,255,255,0.12)";
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLAnchorElement).style.background =
+                  "transparent";
+              }}
             >
-              <path
-                d="M1 12L12 1M12 1H4M12 1V9"
-                stroke="white"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+              Contact Us
+              <svg
+                width="13"
+                height="13"
+                viewBox="0 0 13 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M1 12L12 1M12 1H4M12 1V9"
+                  stroke="white"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
             </Link>
           </motion.div>
         </div>
 
-        {/* ── RIGHT: cards + controls — absolutely positioned, overflows right edge ── */}
+        {/* ── RIGHT: thumbnails + controls ── */}
         <div
           className="max-md:!static max-md:!transform-none max-md:!w-full max-md:!mt-4 max-md:!left-0"
           style={{
@@ -203,9 +229,8 @@ export function PowerOf360() {
             gap: "24px",
           }}
         >
-
-          {/* Cards row — no max-width, extends beyond viewport */}
-          <motion.div 
+          {/* Cards row */}
+          <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
@@ -213,37 +238,30 @@ export function PowerOf360() {
             className="max-md:-mx-6 max-md:w-[calc(100%+3rem)] max-md:px-6 max-md:overflow-x-auto max-md:snap-x max-md:snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] max-md:py-4"
             style={{ display: "flex", alignItems: "flex-end", gap: "16px" }}
           >
-            {cards.map((card, index) => {
-              const isActive = index === current;
-              return (
-                <button
+            <AnimatePresence mode="popLayout" initial={false}>
+              {thumbnails.map((card) => (
+                <motion.button
                   key={card.id}
-                  id={`power-of-360-card-${card.id}`}
-                  onClick={() => setCurrent(index)}
-                  className="max-md:!w-[220px] max-md:!h-[280px] max-md:snap-start"
-                  style={{
-                    position: "relative",
-                    width: "200px",
-                    height: index === cards.length - 1 ? "310px" : "320px",
-                    borderRadius: "16px",
-                    overflow: "hidden",
-                    flexShrink: 0,
-                    cursor: "pointer",
-                    border: "none",
-                    padding: 0,
-                    transform: isActive ? "scale(1.04)" : "scale(0.97)",
-                    transition: "transform 0.35s ease, opacity 0.35s ease",
-                    opacity: isActive ? 1 : 0.72,
-                  }}
+                  layout
+                  layoutId={`card-image-${card.id}`}
+                  onClick={() => jumpTo(card.id)}
+                  initial={{ opacity: 0, scale: 0.8, x: 100 }}
+                  animate={{ opacity: 1, scale: 1, x: 0 }}
+                  exit={{ opacity: 0, scale: 0.8, x: -100 }}
+                  transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1] }}
+                  className="max-md:!w-[220px] max-md:!h-[280px] max-md:snap-start relative w-[200px] h-[320px] rounded-[16px] overflow-hidden flex-shrink-0 cursor-pointer border-none p-0 group"
                   aria-label={card.label}
                 >
                   <Image
                     src={card.image}
                     alt={card.alt}
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
                     sizes="220px"
                   />
+
+                  {/* Dark gradient overlay for thumbnail */}
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
 
                   {/* Top number badge */}
                   <div
@@ -254,14 +272,14 @@ export function PowerOf360() {
                       display: "flex",
                       alignItems: "center",
                       gap: "6px",
-                      color: "rgba(255,255,255,0.75)",
+                      color: "rgba(255,255,255,0.9)",
                     }}
                   >
                     <span
                       style={{
                         width: "20px",
                         height: "1px",
-                        background: "rgba(255,255,255,0.6)",
+                        background: "rgba(255,255,255,0.8)",
                         display: "inline-block",
                       }}
                     />
@@ -273,7 +291,6 @@ export function PowerOf360() {
                         lineHeight: "15px",
                         letterSpacing: "2.4px",
                         textTransform: "uppercase",
-                        color: "rgba(255,255,255,0.75)",
                       }}
                     >
                       {card.id}
@@ -289,7 +306,7 @@ export function PowerOf360() {
                       right: 0,
                       padding: "40px 16px 16px",
                       background:
-                        "linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 100%)",
+                        "linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%)",
                     }}
                   >
                     <span
@@ -308,13 +325,13 @@ export function PowerOf360() {
                       {card.label}
                     </span>
                   </div>
-                </button>
-              );
-            })}
+                </motion.button>
+              ))}
+            </AnimatePresence>
           </motion.div>
 
-          {/* Controls row: arrows + progress */}
-          <motion.div 
+          {/* Controls row */}
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
@@ -326,8 +343,8 @@ export function PowerOf360() {
             <button
               id="power-of-360-prev"
               onClick={prev}
-              disabled={current === 0}
               aria-label="Previous card"
+              className="hover:bg-white/10"
               style={{
                 width: "36px",
                 height: "36px",
@@ -337,9 +354,8 @@ export function PowerOf360() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                cursor: current === 0 ? "not-allowed" : "pointer",
-                opacity: current === 0 ? 0.35 : 1,
-                transition: "opacity 0.2s",
+                cursor: "pointer",
+                transition: "all 0.2s",
                 flexShrink: 0,
               }}
             >
@@ -358,8 +374,8 @@ export function PowerOf360() {
             <button
               id="power-of-360-next"
               onClick={next}
-              disabled={current === cards.length - 1}
               aria-label="Next card"
+              className="hover:bg-white/10"
               style={{
                 width: "36px",
                 height: "36px",
@@ -369,9 +385,8 @@ export function PowerOf360() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                cursor: current === cards.length - 1 ? "not-allowed" : "pointer",
-                opacity: current === cards.length - 1 ? 0.35 : 1,
-                transition: "opacity 0.2s",
+                cursor: "pointer",
+                transition: "all 0.2s",
                 flexShrink: 0,
               }}
             >
@@ -396,7 +411,7 @@ export function PowerOf360() {
                 flexShrink: 0,
               }}
             >
-              {String(current + 1).padStart(2, "0")}
+              {activeItem.id}
             </span>
 
             {/* Progress bar */}
@@ -417,7 +432,7 @@ export function PowerOf360() {
                   left: 0,
                   top: 0,
                   height: "1px",
-                  width: `${((current + 1) / cards.length) * 100}%`,
+                  width: `${(parseInt(activeItem.id) / cards.length) * 100}%`,
                   background: "#FF5500",
                   borderRadius: "9999px",
                   transition: "width 0.35s ease",
