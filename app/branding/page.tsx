@@ -1,4 +1,4 @@
-import { Link } from "lucide-react";
+import Link from "next/link";
 import { Header } from "../components/Header";
 import Stagger from "../components/Stagger";
 import StaggerItem from "../components/Staggeritem";
