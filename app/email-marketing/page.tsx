@@ -5,7 +5,6 @@ import { EmailVisuals } from "../components/EmailVisuals";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { Numbers } from "../components/Numbers";
-import { Services } from "../components/Services";
 import { Team } from "../components/Team";
 import { Testimonials } from "../components/Testimonials";
 import { ConsultationForm } from "../components/ConsultationForm";
@@ -15,15 +14,6 @@ import { WhyEmailFails } from "../components/WhyEmailFails";
 import Stagger from "../components/Stagger";
 import StaggerItem from "../components/Staggeritem";
 import FadeRight from "../components/FadeRight";
-import FadeLeft from "../components/FadeLeft";
-
-const failPoints = [
-  "Emails sent without a clear strategy",
-  "No automated customer journeys",
-  "Generic messaging to every subscriber",
-  "Low engagement and missed revenue",
-  "No focus on retention or repeat purchases",
-];
 
 const emailStats = [
   { value: "40%", label: "Avg. Open Rate" },
@@ -237,45 +227,6 @@ function EmailOverview() {
               </StaggerItem>
             ))}
           </div>
-        </Stagger>
-      </div>
-    </section>
-  );
-}
-
-function WorkWithUs() {
-  return (
-    <section className="bg-[#f5f5f4] px-6 py-[70px] text-black  lg:py-[82px]">
-      <div className="mx-auto grid max-w-[1150px] gap-12 lg:grid-cols-[330px_minmax(0,1fr)] lg:items-center lg:gap-[72px]">
-        <Stagger staggerDelay={0.15} className="lg:pt-2">
-          <StaggerItem>
-            <h2 className="font-[var(--font-be-vietnam)] text-[36px] font-medium leading-[1.04] tracking-[-1.4px] sm:text-[48px]">
-              ways to
-              <br />
-              <span className="font-[var(--font-cormorant)] text-[1.12em] font-extralight timesFontFamily italic">work with</span> us
-            </h2>
-          </StaggerItem>
-          <StaggerItem>
-            <p className="mt-[28px] max-w-[310px] font-[var(--font-inter)] text-[14px] leading-[1.85] text-black/65">
-              Whether you&apos;re just getting started or ready to scale, we have a way to work together.
-            </p>
-          </StaggerItem>
-        </Stagger>
-
-        <Stagger staggerDelay={0.1} className="grid border-y border-black/10 sm:grid-cols-2 sm:[&>*:nth-child(2n)]:border-l sm:[&>*:nth-child(n+3)]:border-t">
-          {waysToWork.map((way) => (
-            <StaggerItem key={way.number}>
-              <article className="min-h-[176px] border-t border-black/10 py-7 first:border-t-0 sm:border-t-0 sm:px-7 sm:py-8">
-                <p className="font-[var(--font-inter)] text-[11px] leading-none text-black/70">{way.number}</p>
-                <h3 className="mt-[20px] font-[var(--font-be-vietnam)] text-[18px] font-bold leading-[1.2] tracking-[-0.3px] sm:text-[19px]">
-                  {way.title}
-                </h3>
-                <p className="mt-[18px] max-w-[290px] font-[var(--font-inter)] text-[13px] leading-[1.75] text-black/65">
-                  {way.copy}
-                </p>
-              </article>
-            </StaggerItem>
-          ))}
         </Stagger>
       </div>
     </section>

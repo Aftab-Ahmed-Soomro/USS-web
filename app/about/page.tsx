@@ -1,13 +1,11 @@
 import Image from "next/image";
 import { Footer } from "../components/Footer";
-import { Button } from "../components/common/Button";
 import { Header } from "../components/Header";
 import BrandElevationVideo from "../components/BrandElevationVideo";
 import { Numbers } from "../components/Numbers";
 import { Team } from "../components/Team";
 import WeAreUSS from "../components/Weareus";
 import FadeLeft from "../components/FadeLeft";
-import FadeDown from "../components/FadeDown";
 import FadeUp from "../components/FadeUp";
 import FadeRight from "../components/FadeRight";
 
@@ -15,25 +13,8 @@ const stats = [
 { value: "5x", label: "Up to 5X ROAS" },
   { value: "55M", label: "AED Generated in Revenue" },
   { value: "485k", label: "Leads Generated" },
-  { value: "100+", label: "Brands Worldwide" },];
-
-const team = [
-  { name: "MEET EMMANUEL", role: "CEO/Founder", image: "/assets/team/emanuel.png", color: "#72cc3b", position: "center bottom" },
-  { name: "MEET MEERAL", role: "Marketing Director", image: "/assets/team/meeral.png", color: "#f45122", position: "center bottom" },
-  { name: "MEET RUSS", role: "Content Creator", image: "/assets/team/russ.png", color: "#ff8f1a", position: "center bottom" },
-  { name: "MEET SAADAT", role: "Creative Director", image: "/assets/team/saadat.png", color: "#45a9e9", position: "center bottom" },
+  { value: "100+", label: "Brands Worldwide" },
 ];
-
-function ArrowButton({ label, direction }: { label: string; direction: "left" | "right" }) {
-  return (
-    <button
-      aria-label={label}
-      className="grid size-9 shrink-0 place-items-center rounded-full bg-white text-[19px] font-bold leading-none text-black transition hover:bg-white/90 sm:size-10"
-    >
-      {direction === "left" ? "\u2039" : "\u203a"}
-    </button>
-  );
-}
 
 export default function AboutPage() {
   return (

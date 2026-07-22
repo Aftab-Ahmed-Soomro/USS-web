@@ -13,20 +13,8 @@ import { WhyGoogleAdsWork } from "../components/WhyGoogleAdsWork";
 import PlatformsWeWorkWith from "../components/PlatformsWeWorkWith";
 import Stagger from "../components/Stagger";
 import StaggerItem from "../components/Staggeritem";
-import FadeLeft from "../components/FadeLeft";
 import FadeRight from "../components/FadeRight";
 import FadeUp from "../components/FadeUp";
-
-const inputClass =
-  "mt-[6px] h-[29px] w-full rounded-[5px] border border-black/15 bg-white px-[9px] font-[var(--font-inter)] text-[9px] text-black outline-none placeholder:text-black/35 focus:border-[#ff5500]";
-
-const failPoints = [
-  "Bidding without strategy",
-  "Poor keyword targeting",
-  "Weak landing pages",
-  "No conversion tracking",
-  "Scaling too early",
-];
 
 const relatedProjects = [
   {
@@ -89,23 +77,6 @@ const systemItems = [
   {
     title: "Ongoing Optimisation",
     copy: "We test, refine, and improve campaigns based on real performance.",
-  },
-];
-
-const projects = [
-  {
-    name: "Cinnamood",
-    year: "2024",
-    copy: "Launching a German bakery franchise into the UAE market.",
-    image: "/assets/company/cinamood-card.jpg",
-    tags: ["Web design & development", "Branding", "F&B"],
-  },
-  {
-    name: "Yula Lounge",
-    year: "2024",
-    copy: "Transforming Yalseh into Yula, a modern Dubai beach club.",
-    image: "/assets/company/yula-card.jpg",
-    tags: ["Web design & development", "Hospitality"],
   },
 ];
 
@@ -173,40 +144,6 @@ function Hero() {
   );
 }
 
-// function Hero() {
-//   return (
-//     <section className="bg-[#ff5500] px-6 pb-[57px] pt-[45px] text-white sm:pb-[68px] sm:pt-[56px] lg:pb-[75px] lg:pt-[70px]">
-//       <div className="mx-auto grid max-w-[1150px] gap-9 lg:grid-cols-[minmax(0,560px)_377px] lg:items-center lg:justify-between">
-//         <div>
-//           <p className="font-[var(--font-be-vietnam)] text-[10px] font-bold uppercase tracking-[3.2px] text-white">
-//             Google Ads
-//           </p>
-//           <h1 className="mt-[34px] max-w-[545px] font-[var(--font-be-vietnam)] text-[37px] font-medium lowercase leading-[0.98] tracking-[-1.6px] sm:text-[50px] md:text-[58px] lg:text-[62px]">
-//             capture high
-//             <br />
-//             quality leads
-//             <br />
-//             with{" "}
-//             <span className="font-[var(--font-cormorant)] text-[1.13em] font-extralight timesFontFamily italic tracking-[-0.04em]">
-//               google ads
-//             </span>
-//           </h1>
-//           <p className="mt-[21px] max-w-[485px] font-[var(--font-inter)] text-[13px] leading-[1.75] text-white/80 sm:text-[15px]">
-//             Turn searches into sales with Google Ads, built to generate qualified leads, not just clicks, by putting your business in front of customers actively searching for your products or services.
-//           </p>
-//           <Link
-//             className="mt-[24px] inline-flex h-[34px] min-w-[145px] items-center justify-center rounded-full bg-white px-6 font-[var(--font-be-vietnam)] text-[10.5px] font-bold uppercase text-black transition hover:bg-white/90"
-//             href="/contact"
-//           >
-//             Book a Consultation
-//           </Link>
-//         </div>
-//         <LightConsultationForm />
-//       </div>
-//     </section>
-//   );
-// }
-
 function GoogleAdsVisual() {
   return (
     <div className="relative aspect-[393/267] w-full max-w-[508px] overflow-hidden rounded-[6px] bg-[#f1f1ef]">
@@ -221,133 +158,8 @@ function GoogleAdsVisual() {
   );
 }
 
-function WhyAdsFail() {
-  return (
-    <section className="border-t border-[#ff5500] bg-white px-6 py-[67px] text-black lg:pb-[88px]">
-      <div className="mx-auto max-w-[1150px]">
-        <Stagger staggerDelay={0.12}>
-          <StaggerItem>
-            <p className="font-[var(--font-be-vietnam)] text-[10px] font-extrabold sm:text-[14px] uppercase text-[#ff5500]">
-              Problem
-            </p>
-          </StaggerItem>
-        </Stagger>
-
-        <div className="mt-[28px] grid gap-9 lg:grid-cols-[493px_minmax(0,509px)] lg:items-start lg:justify-between">
-          <FadeLeft delay={0.15}>
-            <div>
-              <h2 className="font-[var(--font-be-vietnam)] text-[32px] font-medium lowercase leading-[1] tracking-[-3%] sm:text-[56px]">
-                why most google
-                <br />
-                ads{" "}
-                <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal timesFontFamily italic">
-                  campaigns fail
-                </span>
-              </h2>
-              <div className="mt-[30px]">
-                <GoogleAdsVisual />
-              </div>
-            </div>
-          </FadeLeft>
-
-          <FadeRight delay={0.25}>
-            <div className="pt-[106px]">
-              <p className="max-w-[480px] font-[var(--font-be-vietnam)] text-[16px] sm:text-[20px] font-semibold leading-[1.95] text-black">
-                Most campaigns don&rsquo;t fail because of budget,
-                <br />
-                they fail because of strategy, structure, and tracking
-              </p>
-              <div className="mt-[29px] grid gap-x-[17px] sm:grid-cols-2">
-                {failPoints.map((point) => (
-                  <div
-                    className="flex min-h-[55px] items-center gap-[13px] border-t border-[#d9d9d9] font-[var(--font-be-vietnam)] text-[12px] sm:text-[16px] font-semibold leading-[1.35] text-black last:border-b sm:[&:nth-last-child(2)]:border-b"
-                    key={point}
-                  >
-                    <span className="grid size-[21px] shrink-0 place-items-center rounded-full bg-[#ff5500] text-white">
-                      <svg
-                        aria-hidden="true"
-                        className="size-[10px]"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2.5"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="m3.5 8.2 2.7 2.7 6.3-6.8" />
-                      </svg>
-                    </span>
-                    <span>{point}</span>
-                  </div>
-                ))}
-              </div>
-              <p className="mt-[28px] border-l-[4px] border-[#ff5500] pl-[7px] font-[var(--font-be-vietnam)] text-[15px] sm:text-[20px] font-semibold leading-[36px] text-black max-w-[430px]">
-                Google Ads isn't about getting more clicks. It's about attracting the right customers.
-              </p>
-            </div>
-          </FadeRight>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function Numbers() {
   return <NumbersSection eyebrow="RESULTS" stats={stats} />;
-}
-
-function GoogleServices() {
-  return (
-    <section className="overflow-hidden bg-[#050505] px-6 pt-[39px] text-white">
-      <div className="mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[450px_minmax(0,632px)] lg:items-start lg:justify-between">
-        <FadeLeft delay={0.15}>
-          <div className="relative min-h-[650px]">
-            
-            <h2 className="mt-[35px] font-[var(--font-be-vietnam)] text-[40px] font-medium lowercase leading-[1.05] tracking-[-3%] sm:text-[56px]">
-              our{" "}
-              <span className="font-[var(--font-cormorant)] text-[1.23em] sm:text-[72px] tracking-[-3%] font-normal timesFontFamily italic">
-                google ads
-              </span>
-              <br />
-              services
-            </h2>
-            <p className="mt-[35px] max-w-[400px] font-[var(--font-be-vietnam)] text-[12px] sm:text-[14px] font-normal leading-[1.50] text-white">
-              Every business has different goals. We build Google
-  Ads campaigns around what matters most to yours.
-            </p>
-            <div className="absolute -bottom-20  left-[-4px] hidden aspect-[366/398] w-[460px] lg:block">
-              <Image
-                src="/assets/meeral2.png"
-                alt="Google Ads strategist"
-                fill
-                sizes="366px"
-                className="object-contain object-bottom"
-              />
-            </div>
-          </div>
-        </FadeLeft>
-
-        <div className="grid border-white/20 lg:mt-[110px] sm:grid-cols-2 sm:[&>article:nth-child(2n)]:border-l sm:[&>article:nth-child(n+3)]:border-t">
-          {services.map((service, index) => (
-            <FadeUp key={service.title} delay={0.2 + index * 0.1}>
-              <article
-                className={`min-h-[163px] border-white/20 px-[26px] py-[30px] h-full ${
-                  index % 2 === 0 ? "sm:pl-[25px] sm:pr-[28px]" : "sm:pl-[25px] sm:pr-0"
-                }`}
-              >
-                <h3 className="font-[var(--font-be-vietnam)] text-[24px] sm:text-[30px] font-bold leading-tight">
-                  {service.title}
-                </h3>
-                <p className="mt-[24px] max-w-[220px] font-[var(--font-inter)] text-[12px] sm:text-[14px] leading-[1.85] text-white/90">
-                  {service.copy}
-                </p>
-              </article>
-            </FadeUp>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
 }
 
 function GrowthIcon() {
@@ -365,48 +177,6 @@ function GrowthIcon() {
       <path d="M3 15 9 9l4 4 7-7" />
       <path d="M15 6h5v5" />
     </svg>
-  );
-}
-
-function GrowthSystem() {
-  return (
-    <section className="bg-[#f4f4f4] px-6 py-[62px] text-black lg:pb-[55px]">
-      <div className="mx-auto max-w-[1150px]">
-        <Stagger staggerDelay={0.12}>
-          <StaggerItem>
-            <p className="font-[var(--font-be-vietnam)] text-[10px] font-extrabold sm:text-[14px] uppercase text-[#ff5500]">
-              System
-            </p>
-          </StaggerItem>
-          <StaggerItem>
-            <h2 className="mt-[30px] max-w-[660px] font-[var(--font-be-vietnam)] text-[38px] font-medium lowercase leading-[1] tracking-[-3%] sm:text-[56px]">
-              How We Build Better
-              <br />
-              <span className="font-[var(--font-cormorant)] text-[1.15em] font-normal sm:text-[72px] text-[#FF5500] timesFontFamily italic">
-                Google Ads Campaigns
-              </span>
-            </h2>
-          </StaggerItem>
-        </Stagger>
-        <div className="mt-[45px] grid border-y border-[#dadada] sm:grid-cols-2 lg:grid-cols-4">
-          {systemItems.map((item, i) => (
-            <FadeUp key={item.title} delay={0.1 + i * 0.1}>
-              <article
-                className="min-h-[244px] border-[#dadada] px-[25px] py-[37px] sm:[&:nth-child(even)]:border-l lg:border-l lg:first:border-l-0"
-              >
-                <GrowthIcon />
-                <h3 className="mt-[31px] max-w-[180px] font-[var(--font-be-vietnam)] text-[19px] font-bold leading-[1.28] tracking-[-0.45px]">
-                  {item.title}
-                </h3>
-                <p className="mt-[19px] max-w-[210px] font-[var(--font-inter)] text-[12px] sm:text-[16px] leading-[1.65] text-[#505050]">
-                  {item.copy}
-                </p>
-              </article>
-            </FadeUp>
-          ))}
-        </div>
-      </div>
-    </section>
   );
 }
 
@@ -502,59 +272,6 @@ function CaseStudies() {
             View all projects
             <span aria-hidden="true">-&gt;</span>
           </Link>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-
-
-function WorkTogether() {
-  return (
-    <section className="border-t border-black bg-white px-6 py-[66px] text-black lg:pb-[62px]">
-      <div className="mx-auto max-w-[1150px]">
-        <Stagger staggerDelay={0.12}>
-          <StaggerItem>
-            <p className="font-[var(--font-be-vietnam)] text-[9px] font-normal sm:text-[12px] uppercase tracking-[4.8px] text-[#ff5500]">
-              Ways To Work With Us
-            </p>
-          </StaggerItem>
-          <StaggerItem>
-            <h2 className="mt-[21px] font-[var(--font-be-vietnam)] text-[39px] font-medium lowercase leading-none tracking-[-3.5px] sm:text-[56px]">
-              Our Google{" "}
-              <span className="font-[var(--font-cormorant)] text-[1.16em] sm:text-[72px] tracking-[-3.5px] font-extralight timesFontFamily text-[#FF5500] italic">
-                Ads Process
-              </span>
-            </h2>
-          </StaggerItem>
-          <StaggerItem>
-            <p className="mt-[24px] max-w-[780px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.55] text-[#404040]">
-              Whether you&rsquo;re just getting started or ready to scale, we have a way to work together.
-            </p>
-          </StaggerItem>
-        </Stagger>
-        <div className="mt-[49px] grid border border-[#d8d8d8] sm:grid-cols-2">
-          {workWays.map((way, index) => (
-            <FadeUp key={way.title} delay={0.1 + index * 0.1}>
-              <article
-                className={`min-h-[188px] px-[38px] py-[40px] ${
-                  index % 2 ? "sm:border-l sm:border-[#d8d8d8]" : ""
-                } ${index > 1 ? "border-t border-[#d8d8d8]" : ""}`}
-              >
-                <div className="flex items-center gap-[10px] font-[var(--font-inter)] text-[9px] leading-none text-black/45">
-                  <span className="size-[8px] rounded-full bg-[#ff5500]" />
-                  <span>{index + 1}</span>
-                </div>
-                <h3 className="mt-[22px] font-[var(--font-be-vietnam)] text-[24px] sm:text-[30px] font-semibold leading-tight">
-                  {way.title}
-                </h3>
-                <p className="mt-[12px] max-w-[400px] font-[var(--font-inter)] text-[15px] sm:text-[18px] leading-[1.55] text-[#404040]">
-                  {way.copy}
-                </p>
-              </article>
-            </FadeUp>
-          ))}
         </div>
       </div>
     </section>
