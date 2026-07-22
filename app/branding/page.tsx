@@ -141,7 +141,7 @@ const brandingRightData = [
     category: "Sales Presentation",
     title: "Sales Decks",
     description: "Clear, Engaging Presentations That Help You Communicate Ideas, Showcase Your Offering And Support Every Sales Conversation.",
-    image: "/assets/branding/sales.png",
+    image: "/assets/History Picture.png",
     imageClass: "object-cover object-[130%_100%]"
   },
   {
