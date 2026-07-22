@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { Header } from "../components/Header";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { Button } from "../components/common/Button";
 import { ConsultationForm } from "../components/ConsultationForm";
@@ -107,15 +110,26 @@ export default function New360WithForm() {
         <Hero />
         <Brands />
         <PowerOf360 />
-        <div className="relative z-10 w-full flex justify-center items-center pt-4 sm:pt-8 bg-black">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center items-center pt-4 sm:pt-8 bg-black"
+        >
           <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
             marketing{" "}
             <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
               strategy
             </span>
           </h2>
-        </div>
-        <div className="relative z-10 w-full flex justify-center bg-black px-6">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center bg-black px-6">
           <Image
             src="/assets/360/marketing-strategy.png"
             alt="Marketing Strategy"
@@ -123,8 +137,13 @@ export default function New360WithForm() {
             height={800}
             className="w-full max-w-[1350px] h-auto object-contain rounded-2xl"
           />
-        </div>
-        <div className="relative z-10 w-full flex justify-center bg-black px-6">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center bg-black px-6">
           <Image
             src="/assets/360/level-of-funnel.png"
             alt="Marketing Strategy"
@@ -132,8 +151,13 @@ export default function New360WithForm() {
             height={800}
             className="w-full max-w-[1350px] h-auto object-contain rounded-2xl"
           />
-        </div>
-        <div className="relative z-10 w-full flex justify-center bg-black pr-20">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center bg-black pr-20">
           <Image
             src="/assets/360/strategyGoal.png"
             alt="Marketing Strategy"
@@ -141,16 +165,26 @@ export default function New360WithForm() {
             height={800}
             className="w-full max-w-[1350px] h-auto object-contain rounded-2xl"
           />
-        </div>
-        <div className="relative z-10 w-full flex justify-center items-center pt-4 sm:pt-8 bg-black">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center items-center pt-4 sm:pt-8 bg-black">
           <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
             meta{" "}
             <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
               ads
             </span>
           </h2>
-        </div>
-        <div className="relative z-10 w-full flex justify-center bg-black">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center bg-black">
           <Image
             src="/assets/360/meta-1.png"
             alt="Marketing Strategy"
@@ -158,8 +192,13 @@ export default function New360WithForm() {
             height={800}
             className="w-full h-auto object-contain rounded-2xl"
           />
-        </div>
-        <div className="relative z-10 w-full flex justify-center bg-black">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center bg-black">
           <Image
             src="/assets/360/targetPeople.png"
             alt="Marketing Strategy"
@@ -167,8 +206,13 @@ export default function New360WithForm() {
             height={800}
             className="w-full h-auto object-contain rounded-2xl"
           />
-        </div>
-        <div className="relative z-10 w-full flex justify-center bg-black px-6">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center bg-black px-6">
           <Image
             src="/assets/360/revenue1.png"
             alt="Marketing Strategy"
@@ -176,16 +220,26 @@ export default function New360WithForm() {
             height={800}
             className="w-full max-w-[1350px] h-auto object-contain rounded-2xl"
           />
-        </div>
-        <div className="relative z-10 w-full flex justify-center items-center pt-4 sm:pt-8 bg-black">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center items-center pt-4 sm:pt-8 bg-black">
           <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
             paid{" "}
             <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
               search
             </span>
           </h2>
-        </div>
-        <div className="relative z-10 w-full flex justify-center bg-black pt-20">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center bg-black pt-20">
           <Image
             src="/assets/360/paid-1.png"
             alt="Marketing Strategy"
@@ -193,8 +247,13 @@ export default function New360WithForm() {
             height={800}
             className="w-full h-auto object-contain rounded-2xl"
           />
-        </div>
-        <div className="relative z-10 w-full flex justify-center bg-black">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center bg-black">
           <Image
             src="/assets/360/platforms.png"
             alt="Marketing Strategy"
@@ -202,8 +261,13 @@ export default function New360WithForm() {
             height={800}
             className="w-full h-auto object-contain rounded-2xl"
           />
-        </div>
-        <div className="relative z-10 w-full flex justify-center bg-black px-6 -mt-20">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center bg-black px-6 -mt-20">
           <Image
             src="/assets/360/revenue2.png"
             alt="Marketing Strategy"
@@ -211,16 +275,26 @@ export default function New360WithForm() {
             height={800}
             className="w-full max-w-[1350px] h-auto object-contain rounded-2xl"
           />
-        </div>
-        <div className="relative z-10 w-full flex justify-center items-center pt-4 sm:pt-8 bg-black">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center items-center pt-4 sm:pt-8 bg-black">
           <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
             email{" "}
             <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
               marketing
             </span>
           </h2>
-        </div>
-        <div className="relative z-10 w-full flex justify-center bg-black px-6">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center bg-black px-6">
           <Image
             src="/assets/360/email-1.png"
             alt="Marketing Strategy"
@@ -228,8 +302,13 @@ export default function New360WithForm() {
             height={800}
             className="w-full max-w-[1350px] h-auto object-contain rounded-2xl"
           />
-        </div>
-        <div className="relative z-10 w-full flex justify-center bg-black px-6">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center bg-black px-6">
           <Image
             src="/assets/360/brandStrategy.png"
             alt="Marketing Strategy"
@@ -237,8 +316,13 @@ export default function New360WithForm() {
             height={800}
             className="w-full max-w-[1350px] h-auto object-contain rounded-2xl"
           />
-        </div>
-        <div className="relative z-10 w-full flex justify-center bg-black px-6">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center bg-black px-6">
           <Image
             src="/assets/360/email-visuals.png"
             alt="Marketing Strategy"
@@ -246,16 +330,26 @@ export default function New360WithForm() {
             height={800}
             className="w-full max-w-[1350px] h-auto object-contain rounded-2xl"
           />
-        </div>
-        <div className="relative z-10 w-full flex justify-center items-center -mt-8 bg-black">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center items-center -mt-8 bg-black">
           <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
             whatsapp &{" "}
             <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
               sms
             </span>
           </h2>
-        </div>
-        <div className="relative z-10 w-full flex justify-center bg-black px-6">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center bg-black px-6">
           <Image
             src="/assets/360/whatsapp.png"
             alt="Marketing Strategy"
@@ -263,8 +357,13 @@ export default function New360WithForm() {
             height={800}
             className="w-full max-w-[1350px] h-auto object-contain rounded-2xl"
           />
-        </div>
-        <div className="relative z-10 w-full flex justify-center bg-black px-6">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center bg-black px-6">
           <Image
             src="/assets/360/sms-flow.png"
             alt="Marketing Strategy"
@@ -272,16 +371,26 @@ export default function New360WithForm() {
             height={800}
             className="w-full max-w-[1350px] h-auto object-contain rounded-2xl"
           />
-        </div>
-        <div className="relative z-10 w-full flex justify-center items-center pt-4 sm:pt-8 bg-black">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center items-center pt-4 sm:pt-8 bg-black">
           <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
             social{" "}
             <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
               media
             </span>
           </h2>
-        </div>
-        <div className="relative z-10 w-full flex justify-center bg-black px-6">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center bg-black px-6">
           <Image
             src="/assets/360/social-platforms.png"
             alt="Marketing Strategy"
@@ -289,8 +398,13 @@ export default function New360WithForm() {
             height={800}
             className="w-full max-w-[1350px] h-auto object-contain rounded-2xl"
           />
-        </div>
-        <div className="relative z-10 w-full flex justify-center bg-black px-6">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center bg-black px-6">
           <Image
             src="/assets/360/quote-1.png"
             alt="Marketing Strategy"
@@ -298,8 +412,13 @@ export default function New360WithForm() {
             height={800}
             className="w-full max-w-[1350px] h-auto object-contain rounded-2xl"
           />
-        </div>
-        <div className="relative z-10 w-full flex justify-center bg-black px-6">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center bg-black px-6">
           <Image
             src="/assets/360/social-grids.png"
             alt="Marketing Strategy"
@@ -307,8 +426,13 @@ export default function New360WithForm() {
             height={800}
             className="w-full max-w-[1350px] h-auto object-contain rounded-2xl"
           />
-        </div>
-        <div className="relative z-10 w-full flex justify-center bg-black px-6">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center bg-black px-6">
           <Image
             src="/assets/360/social-services.png"
             alt="Marketing Strategy"
@@ -316,8 +440,13 @@ export default function New360WithForm() {
             height={800}
             className="w-full max-w-[1350px] h-auto object-contain rounded-2xl"
           />
-        </div>
-        <div className="relative z-10 w-full flex justify-center bg-black px-6">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center bg-black px-6">
           <Image
             src="/assets/360/revenue3.png"
             alt="Marketing Strategy"
@@ -325,16 +454,26 @@ export default function New360WithForm() {
             height={800}
             className="w-full max-w-[1350px] h-auto object-contain rounded-2xl"
           />
-        </div>
-        <div className="relative z-10 w-full flex justify-center items-center pt-4 sm:pt-8 pb-8 bg-black">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center items-center pt-4 sm:pt-8 pb-8 bg-black">
           <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
             content{" "}
             <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
               creation
             </span>
           </h2>
-        </div>
-        <div className="relative z-10 w-full flex justify-center bg-black px-6">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center bg-black px-6">
           <Image
             src="/assets/360/content-1.png"
             alt="Marketing Strategy"
@@ -342,8 +481,13 @@ export default function New360WithForm() {
             height={800}
             className="w-full max-w-[1350px] h-auto object-contain rounded-2xl"
           />
-        </div>
-        <div className="relative z-10 w-full flex justify-center bg-black px-6">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center bg-black px-6">
           <Image
             src="/assets/360/quote-2.png"
             alt="Marketing Strategy"
@@ -351,8 +495,13 @@ export default function New360WithForm() {
             height={800}
             className="w-full max-w-[1350px] h-auto object-contain rounded-2xl"
           />
-        </div>
-        <div className="relative z-10 w-full flex justify-center bg-black px-6">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center bg-black px-6">
           <Image
             src="/assets/360/grids.png"
             alt="Marketing Strategy"
@@ -360,16 +509,26 @@ export default function New360WithForm() {
             height={800}
             className="w-full max-w-[1350px] h-auto object-contain rounded-2xl"
           />
-        </div>
-        <div className="relative z-10 w-full flex justify-center items-center pt-4 sm:pt-8 bg-black">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center items-center pt-4 sm:pt-8 bg-black">
           <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
             web design{" "}
             <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
               & development
             </span>
           </h2>
-        </div>
-        <div className="relative z-10 w-full flex justify-center bg-black px-6">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center bg-black px-6">
           <Image
             src="/assets/360/dedication.png"
             alt="Marketing Strategy"
@@ -377,8 +536,13 @@ export default function New360WithForm() {
             height={800}
             className="w-full max-w-[1350px] h-auto object-contain rounded-2xl"
           />
-        </div>
-        <div className="relative z-10 w-full flex justify-center bg-black px-6">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center bg-black px-6">
           <Image
             src="/assets/360/case-1.png"
             alt="Marketing Strategy"
@@ -386,8 +550,13 @@ export default function New360WithForm() {
             height={800}
             className="w-full max-w-[1350px] h-auto object-contain rounded-2xl"
           />
-        </div>
-        <div className="relative z-10 w-full flex justify-center bg-black px-6">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center bg-black px-6">
           <Image
             src="/assets/360/mutiverse-1.png"
             alt="Marketing Strategy"
@@ -395,16 +564,26 @@ export default function New360WithForm() {
             height={800}
             className="w-full max-w-[1350px] h-auto object-contain rounded-2xl"
           />
-        </div>
-        <div className="relative z-10 w-full flex justify-center items-center pt-4 sm:pt-8 bg-black">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center items-center pt-4 sm:pt-8 bg-black">
           <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
             branding &{" "}
             <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
               graphics
             </span>
           </h2>
-        </div>
-        <div className="relative z-10 w-full flex justify-center bg-black px-6">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center bg-black px-6">
           <Image
             src="/assets/360/case-2.png"
             alt="Marketing Strategy"
@@ -412,8 +591,13 @@ export default function New360WithForm() {
             height={800}
             className="w-full max-w-[1350px] h-auto object-contain rounded-2xl"
           />
-        </div>
-        <div className="relative z-10 w-full flex justify-center bg-black px-6">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center bg-black px-6">
           <Image
             src="/assets/360/branding.png"
             alt="Marketing Strategy"
@@ -421,8 +605,13 @@ export default function New360WithForm() {
             height={800}
             className="w-full max-w-[1350px] h-auto object-contain rounded-2xl"
           />
-        </div>
-        <div className="relative z-10 w-full flex justify-center bg-black px-6">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative z-10 w-full flex justify-center bg-black px-6">
           <Image
             src="/assets/360/strategy-1.png"
             alt="Marketing Strategy"
@@ -430,7 +619,7 @@ export default function New360WithForm() {
             height={800}
             className="w-full max-w-[1350px] h-auto object-contain rounded-2xl"
           />
-        </div>
+        </motion.div>
         <Testimonials />
         <GoodCompanyMap />
         <Team />

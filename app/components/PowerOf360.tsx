@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const cards = [
   {
@@ -40,29 +41,42 @@ export function PowerOf360() {
   return (
     <section
       id="power-of-360"
-      className="relative w-full overflow-hidden"
+      className="relative w-full overflow-hidden max-md:!min-h-0"
       style={{ minHeight: "900px" }}
     >
       {/* Background image */}
-      <Image
-        src="/assets/mainPage.png"
-        alt="The power of 360 background"
-        fill
-        className="object-cover object-center"
-        priority
-      />
+      <motion.div
+        initial={{ scale: 1.1 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="absolute inset-0"
+      >
+        <Image
+          src="/assets/mainPage.png"
+          alt="The power of 360 background"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+      </motion.div>
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/55" />
 
       {/* Content — full-width, relative so absolute children work */}
-      <div className="relative z-10 w-full min-h-screen flex items-center px-6 py-80 lg:px-14">
+      <div className="relative z-10 w-full min-h-screen flex items-center px-6 py-80 lg:px-14 max-md:flex-col max-md:items-start max-md:justify-center max-md:py-24 max-md:gap-12">
 
         {/* ── LEFT: text block — stays on left ~40% ── */}
-        <div className="flex max-w-[450px] flex-col gap-6 flex-shrink-0">
+        <div className="flex max-w-[450px] flex-col gap-6 flex-shrink-0 max-md:max-w-full max-md:w-full">
 
           {/* Heading */}
-          <h2
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="max-md:!text-[40px] max-md:!leading-[48px] max-md:!tracking-tight"
             style={{
               fontFamily: "var(--font-be-vietnam), Arial, sans-serif",
               fontWeight: 500,
@@ -76,6 +90,7 @@ export function PowerOf360() {
           >
             the power of{" "}
             <span
+              className="max-md:!text-[56px] max-md:!leading-[60px]"
               style={{
                 fontFamily: "'Times New Roman', Times, serif",
                 fontWeight: 400,
@@ -89,10 +104,15 @@ export function PowerOf360() {
             >
               360
             </span>
-          </h2>
+          </motion.h2>
 
           {/* Body */}
-          <p
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="max-md:!text-[15px] max-md:!leading-[24px]"
             style={{
               fontFamily: "var(--font-be-vietnam), Arial, sans-serif",
               fontWeight: 400,
@@ -108,12 +128,19 @@ export function PowerOf360() {
             strategy, creative and execution work together, your brand stays
             consistent, projects move faster and every activity contributes
             towards the same business goals.
-          </p>
+          </motion.p>
 
           {/* CTA */}
-          <Link
-            href="/contact"
-            id="power-of-360-contact-us"
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+            viewport={{ once: true }}
+            style={{ width: "fit-content" }}
+          >
+            <Link
+              href="/contact"
+              id="power-of-360-contact-us"
             style={{
               display: "inline-flex",
               alignItems: "center",
@@ -159,11 +186,13 @@ export function PowerOf360() {
                 strokeLinejoin="round"
               />
             </svg>
-          </Link>
+            </Link>
+          </motion.div>
         </div>
 
         {/* ── RIGHT: cards + controls — absolutely positioned, overflows right edge ── */}
         <div
+          className="max-md:!static max-md:!transform-none max-md:!w-full max-md:!mt-4 max-md:!left-0"
           style={{
             position: "absolute",
             top: "50%",
@@ -176,7 +205,14 @@ export function PowerOf360() {
         >
 
           {/* Cards row — no max-width, extends beyond viewport */}
-          <div style={{ display: "flex", alignItems: "flex-end", gap: "16px" }}>
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+            viewport={{ once: true }}
+            className="max-md:-mx-6 max-md:w-[calc(100%+3rem)] max-md:px-6 max-md:overflow-x-auto max-md:snap-x max-md:snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] max-md:py-4"
+            style={{ display: "flex", alignItems: "flex-end", gap: "16px" }}
+          >
             {cards.map((card, index) => {
               const isActive = index === current;
               return (
@@ -184,6 +220,7 @@ export function PowerOf360() {
                   key={card.id}
                   id={`power-of-360-card-${card.id}`}
                   onClick={() => setCurrent(index)}
+                  className="max-md:!w-[220px] max-md:!h-[280px] max-md:snap-start"
                   style={{
                     position: "relative",
                     width: "200px",
@@ -256,6 +293,7 @@ export function PowerOf360() {
                     }}
                   >
                     <span
+                      className="max-md:!text-[16px] max-md:!leading-[20px]"
                       style={{
                         fontFamily: "var(--font-be-vietnam), Arial, sans-serif",
                         fontWeight: 600,
@@ -273,10 +311,17 @@ export function PowerOf360() {
                 </button>
               );
             })}
-          </div>
+          </motion.div>
 
           {/* Controls row: arrows + progress */}
-          <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
+            viewport={{ once: true }}
+            className="max-md:w-full max-md:mt-2"
+            style={{ display: "flex", alignItems: "center", gap: "16px" }}
+          >
             {/* Prev arrow */}
             <button
               id="power-of-360-prev"
@@ -356,6 +401,7 @@ export function PowerOf360() {
 
             {/* Progress bar */}
             <div
+              className="max-md:!max-w-none"
               style={{
                 flex: 1,
                 height: "1px",
@@ -378,7 +424,7 @@ export function PowerOf360() {
                 }}
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
