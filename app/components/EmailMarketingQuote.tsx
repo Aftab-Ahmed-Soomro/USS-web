@@ -13,11 +13,11 @@ export default function EmailMarketingQuote({first, second, third}: {first: stri
 
         <StaggerItem>
           <h2
-            className="text-white max-w-[530px] mt-[24px] sm:mt-8 font-medium text-[32px] sm:text-[40px] leading-[1.3] sm:leading-[60px] tracking-[-1px] sm:tracking-[-2.44px]"
+            className="text-white max-w-[530px] mt-[24px] sm:mt-8 font-medium text-[22px] sm:text-[40px] leading-[1.3] sm:leading-[60px] tracking-[-1px] sm:tracking-[-2.44px]"
           >
             {first} {" "}
             <span
-              className="text-[#FF5500] font-normal italic text-[38px] sm:text-[48px] leading-none tracking-[-1px] sm:tracking-[-2.44px]"
+              className="text-[#FF5500] font-normal italic text-[27px] sm:text-[48px] leading-none tracking-[-1px] sm:tracking-[-2.44px]"
               style={{
                 fontFamily: "Times New Roman, serif",
               }}

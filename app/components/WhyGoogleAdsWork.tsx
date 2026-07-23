@@ -76,7 +76,7 @@ export function WhyGoogleAdsWork({
               {items.map((item, i) => (
                 <FadeUp key={item.number} delay={0.25 + i * 0.12}>
                   <div
-                    className="relative rounded-[24px] py-[24px] sm:py-[32px] px-[16px] sm:px-[20px] flex flex-col justify-between cursor-pointer transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_40px_-10px_rgba(255,85,0,0.4)] border border-white/5 hover:border-[#ff5500]/50 active:scale-[0.98] group overflow-hidden bg-[#0a0a0a] w-full max-w-[350px] h-auto min-h-[200px] sm:min-h-[235px] sm:h-[235px]"
+                    className="relative rounded-[24px] py-[24px] sm:py-[32px] px-[16px] sm:px-[20px] flex flex-col justify-between cursor-pointer transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_40px_-10px_rgba(255,85,0,0.4)] border border-white/5 hover:border-[#ff5500]/50 active:scale-[0.98] group overflow-hidden bg-[#0a0a0a] w-full max-w-[350px] h-auto min-h-[150px] sm:min-h-[235px] sm:h-[235px]"
                     style={{
                       boxShadow: "inset 0 0 20px rgba(0,0,0,0.5)",
                     }}

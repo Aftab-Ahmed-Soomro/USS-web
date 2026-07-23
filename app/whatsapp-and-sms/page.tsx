@@ -32,10 +32,10 @@ function Hero() {
         <Stagger staggerDelay={0.15}>
           
           <StaggerItem>
-            <p className="mt-0 sm:mt-[32px] max-w-[600px] font-[var(--font-inter)] text-[10px] sm:text-[14px] font-bold leading-[1.7] tracking-[2.4px] text-[#FF5500] mb-[24px] sm:mb-8 uppercase">
+            <p className="mt-0 sm:mt-[32px] max-w-[600px] font-[var(--font-inter)] text-[10px] sm:text-[14px] font-bold leading-[1.7] tracking-[2.4px] text-[#FF5500] mb-[24px] sm:mb-8 uppercase text-center sm:text-start">
               WhatsApp & SMS Marketing
             </p>
-            <h1 className="max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold leading-[1.03] tracking-[-1px] sm:tracking-[-3.2px] sm:text-[70px]">
+            <h1 className="max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold leading-[1.03] tracking-[-1px] sm:tracking-[-3.2px] sm:text-[70px] text-center sm:text-start">
               WhatsApp & SMS
               <br />
               that {" "}
@@ -45,18 +45,20 @@ function Hero() {
             </h1>
           </StaggerItem>
           <StaggerItem>
-            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[24px] max-w-[680px] font-[var(--font-inter)] text-[13px] leading-[1.6] text-black/72 sm:text-[20px] sm:leading-[1.75]">
+            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[24px] max-w-[680px] font-[var(--font-inter)] text-[13px] leading-[1.6] text-black/72 sm:text-[20px] sm:leading-[1.75] text-center sm:text-start">
               We use WhatsApp and SMS to help businesses stay connected with customers through direct communication that drives enquiries, sales, and repeat purchases.
             </p>
           </StaggerItem>
           
           <StaggerItem>
+            <div className="flex items-center justify-center sm:justify-start">
             <Link
               className="mt-[24px] sm:mt-[25px] inline-flex h-[46px] sm:h-[38px] min-w-[176px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
               href="/contact"
             >
               Book a Consultation
             </Link>
+            </div>
           </StaggerItem>
         </Stagger>
 

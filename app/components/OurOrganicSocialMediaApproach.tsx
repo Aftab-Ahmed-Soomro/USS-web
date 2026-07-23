@@ -3,7 +3,7 @@ import Stagger from "./Stagger";
 import StaggerItem from "./Staggeritem";
 
 const socialVisuals = Array.from({ length: 13 }, (_, i) => ({
-  src: `/assets/socialGrids/${i + 1}.png`,
+  src: `https://unitedstrategicsolutions.com/assets/socialGrids/${i + 1}.png`,
   alt: `Organic Social Grid ${i + 1}`,
 }));
 

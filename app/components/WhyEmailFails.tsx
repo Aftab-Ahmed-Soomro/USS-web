@@ -308,7 +308,7 @@ export function WhyEmailFails({
                                         <img
                                             src={centerLogo ?? "/assets/klaviyo-logo-white.webp"}
                                             alt="center logo"
-                                            className={`absolute object-contain ${logoClassName ?? 'w-[90px] sm:w-[100px]'}`}
+                                            className={`absolute object-contain ${logoClassName ?? 'w-[70px] sm:w-[100px]'}`}
                                         />
                                     )}
                                 </div>

@@ -5,20 +5,42 @@ import FadeRight from "./FadeRight";
 export function TishWondersProfile() {
   return (
     <section className="bg-black py-6 sm:py-20 text-white overflow-hidden font-[var(--font-inter)]">
-      <div className="w-full max-w-[1150px] px-4 mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start gap-12 lg:gap-16">
+      <div className="w-full max-w-[1150px] px-4 mx-auto flex flex-col lg:flex-row-reverse justify-between items-center lg:items-start gap-12 lg:gap-16">
         
+        {/* Mobile Title */}
+        <div className="flex flex-col w-full lg:hidden text-left mb-[-16px]">
+          <span className="font-semibold text-white mb-4 uppercase text-[12px] sm:text-[14px] leading-[1.5] sm:leading-[21px] tracking-[2.52px]">
+            Talent Management
+          </span>
+          <h2 className="font-bold text-white text-[36px] sm:text-[44px] leading-[1.1] sm:leading-[60px] tracking-[-0.9px]">
+            Tish <br className="hidden sm:block" /> Wonders
+          </h2>
+        </div>
+
+        {/* Right Column (Image) - Moved up for mobile layout */}
+        <FadeRight className="flex-1 w-full flex justify-end">
+          <div className="relative overflow-hidden rounded-[24px] w-full max-w-[450px] lg:w-[450px] h-[400px] sm:h-[500px] lg:h-[680px] mx-auto lg:mx-0 shrink-0">
+            <Image 
+              src="/assets/tisha.jpg"
+              alt="Tish Wonders"
+              fill
+              className="object-cover object-center"
+            />
+          </div>
+        </FadeRight>
+
         {/* Left Column (Text & Stats) */}
         <FadeLeft>
           <div className="flex flex-col w-full lg:max-w-[650px]  lg:pt-12">
           
           <span 
-            className="font-semibold text-white mb-6 uppercase text-[12px] sm:text-[14px] leading-[1.5] sm:leading-[21px] tracking-[2.52px]"
+            className="hidden lg:block font-semibold text-white mb-6 uppercase text-[12px] sm:text-[14px] leading-[1.5] sm:leading-[21px] tracking-[2.52px]"
           >
             Talent Management
           </span>
           
           <h2 
-            className="font-bold text-white mb-8 sm:mb-10 text-[36px] sm:text-[44px] leading-[1.1] sm:leading-[60px] tracking-[-0.9px]"
+            className="hidden lg:block font-bold text-white mb-8 sm:mb-10 text-[36px] sm:text-[44px] leading-[1.1] sm:leading-[60px] tracking-[-0.9px]"
           >
             Tish{" "}
             <br className="hidden sm:block" />
@@ -85,18 +107,6 @@ export function TishWondersProfile() {
           </button>
           </div>
         </FadeLeft>
-
-        {/* Right Column (Image) */}
-        <FadeRight className="flex-1 w-full flex justify-end">
-          <div className="relative overflow-hidden rounded-[24px] w-full max-w-[450px] lg:w-[450px] h-[400px] sm:h-[500px] lg:h-[680px] mx-auto lg:mx-0 shrink-0">
-            <Image 
-              src="/assets/tisha.jpg"
-              alt="Tish Wonders"
-              fill
-              className="object-cover object-center"
-            />
-          </div>
-        </FadeRight>
 
       </div>
     </section>

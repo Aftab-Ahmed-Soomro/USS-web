@@ -38,12 +38,13 @@ export function ProjectOverview({ subheading, images, bgColor, textColor }: Proj
           </div>
         </FadeUp>
 
-        {/* Images Grid */}
-        <Stagger className="flex flex-wrap justify-center gap-4 sm:gap-4 w-full">
-          {images.map((src, i) => (
-            <StaggerItem key={i}>
+        {/* Images Marquee */}
+        <div className="mt-8 sm:mt-12 w-[100vw] relative left-1/2 -translate-x-1/2 overflow-hidden">
+          <div className="project-cards-track flex items-center gap-x-4 sm:gap-x-4">
+            {[...images, ...images, ...images, ...images].map((src, i) => (
               <div 
-                className="relative overflow-hidden shrink-0 w-[260px] h-[400px] sm:h-[512px] max-w-full"
+                key={i}
+                className="relative overflow-hidden shrink-0 w-[260px] h-[400px] sm:h-[512px] rounded-[16px] sm:rounded-[24px]"
               >
                 <Image 
                   src={src}
@@ -52,11 +53,30 @@ export function ProjectOverview({ subheading, images, bgColor, textColor }: Proj
                   className="object-cover object-center"
                 />
               </div>
-            </StaggerItem>
-          ))}
-        </Stagger>
+            ))}
+          </div>
+        </div>
 
       </div>
+
+      <style>{`
+        .project-cards-track {
+          width: max-content;
+          animation: marquee-project 40s linear infinite;
+          will-change: transform;
+        }
+
+        @keyframes marquee-project {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .project-cards-track {
+            animation: none;
+          }
+        }
+      `}</style>
     </section>
   );
 }

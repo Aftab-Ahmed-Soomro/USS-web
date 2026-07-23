@@ -22,7 +22,7 @@ export function WhyWhatsappWorks() {
                 whatsapp and sms
               </span>
               <span
-                className="lowercase font-medium text-[32px] min-[375px]:text-[38px] leading-[1.1] tracking-[-1px] sm:text-[clamp(40px,5vw,56px)] sm:leading-[clamp(50px,6vw,80px)] sm:tracking-[-3px] font-[var(--font-be-vietnam)]"
+                className="lowercase font-medium text-[32px] leading-[1.1] tracking-[-1px] sm:text-[clamp(40px,5vw,56px)] sm:leading-[clamp(50px,6vw,80px)] sm:tracking-[-3px] font-[var(--font-be-vietnam)]"
               >
                 work
               </span>
@@ -35,10 +35,11 @@ export function WhyWhatsappWorks() {
               {[1, 2, 3, 4, 5].map((num) => (
                 <article
                   key={num}
-                  className="group relative flex-1 cursor-pointer overflow-hidden transition-all duration-500 ease-in-out hover:flex-[2]"
+                  tabIndex={0}
+                  className="group relative flex-1 cursor-pointer overflow-hidden transition-all duration-500 ease-in-out hover:flex-[4] focus:flex-[4] sm:hover:flex-[2] sm:focus:flex-[2] outline-none"
                 >
                   <div className="absolute inset-0 z-0 h-full w-full overflow-hidden border-r border-black last:border-none">
-                    <div 
+                    <div
                       className="absolute top-0 right-0 h-full"
                       style={{ aspectRatio: "409 / 727" }}
                     >

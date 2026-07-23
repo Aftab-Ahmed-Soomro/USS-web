@@ -66,7 +66,7 @@ export default function TeamAccordion({ heading, data = defaultTeamData }: TeamA
           
           {/* Heading Section */}
           <StaggerItem>
-            <div className="mb-12">
+            <div className="sm:mb-12">
               {heading ? (
                 heading
               ) : (
@@ -111,7 +111,7 @@ export default function TeamAccordion({ heading, data = defaultTeamData }: TeamA
                       
                       {/* Big Number */}
                       <div 
-                        className={`text-[44px] mt-2 sm:mt-0 sm:text-[80px] lg:text-[216px] leading-[1] lg:leading-[183.6px] tracking-[-3px] lg:tracking-[-8.64px] text-white w-auto lg:w-[250px] shrink-0 font-light transition-all duration-500 ${isHovered ? 'mb-0' : 'mb-[-40px] lg:mb-[-110px]'}`} 
+                        className={`text-[44px] mt-2 sm:mt-0 sm:text-[80px] lg:text-[216px] leading-[1] lg:leading-[183.6px] tracking-[-3px] lg:tracking-[-8.64px] text-white w-auto lg:w-[250px] shrink-0 font-light transition-all duration-500 ${isHovered ? 'mb-0' : 'mb-[-35px] lg:mb-[-110px]'}`} 
                         style={{ fontWeight: 300 }}
                       >
                         {item.id}
@@ -122,7 +122,7 @@ export default function TeamAccordion({ heading, data = defaultTeamData }: TeamA
                         
                         {/* Title and Plus/Minus Icon */}
                         <div className="flex justify-between items-center w-full gap-2">
-                          <h3 className={`text-[18px] sm:text-[20px] lg:text-[34px] leading-[1.2] lg:leading-[51px] tracking-[0.68px] uppercase text-white font-normal ${isHovered ? 'mb-0' : 'mb-[-40px] lg:mb-[-110px]'}`}>
+                          <h3 className={`text-[18px] sm:text-[20px] lg:text-[34px] leading-[1.2] lg:leading-[51px] tracking-[0.68px] uppercase text-white font-normal ${isHovered ? 'mb-0' : 'mb-[-35px] lg:mb-[-110px]'}`}>
                             {item.title}
                           </h3>
                           

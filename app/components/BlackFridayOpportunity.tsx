@@ -1,3 +1,6 @@
+"use client";
+
+import React, { useRef } from "react";
 import Image from "next/image";
 import FadeUp from "./FadeUp";
 import Stagger from "./Stagger";
@@ -24,9 +27,9 @@ const imageConfigs = [
   {
     src: "/assets/black-friday/4.jpg",
     position: "40% 50%",
-    mobilePosition: "40% 50%",
+    mobilePosition: "50% 20%",
     scale: 1.35,
-    mobileScale: 1,
+    mobileScale: 0.85,
     fit: "contain"
   },
   {
@@ -61,18 +64,27 @@ const features = [
 ];
 
 export function BlackFridayOpportunity() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const scrollAmount = window.innerWidth;
+      scrollRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className="bg-white py-16 sm:py-24 text-black overflow-hidden flex flex-col items-center">
+    <section className="bg-white py-16 sm:py-24 text-black overflow-hidden flex flex-col items-center relative">
       {/* Header Section */}
       <FadeUp>
         <div className="max-w-[1150px] text-center px-4 mx-auto mb-10 sm:mb-16">
           <h2 
-            className="font-medium lowercase tracking-[-1px] sm:tracking-[-3.2px] text-[#000000] mb-2 font-[var(--font-be-vietnam)] text-[32px] sm:text-[56px] leading-[1.1] sm:leading-[70px]"
+            className="font-medium lowercase tracking-[-1px] sm:tracking-[-3.2px] text-[#000000] sm:mb-2 font-[var(--font-be-vietnam)] text-[32px] sm:text-[56px] leading-[1.1] sm:leading-[70px]"
           >
             black friday is your highest {" "}
             <br className="hidden sm:block" />
             <span 
-              className="text-[#FF5500] italic font-medium font-[var(--font-cormorant)] timesFontFamily text-[42px] sm:text-[56px] leading-[1.1] sm:leading-[70px] tracking-[-1px] sm:tracking-[-3.2px]"
+              className="text-[#FF5500] italic font-medium font-[var(--font-cormorant)] timesFontFamily text-[42px] sm:text-[56px] leading-[0] sm:leading-[70px] tracking-[-1px] sm:tracking-[-3.2px]"
             >
               revenue opportunity
             </span>
@@ -131,24 +143,52 @@ export function BlackFridayOpportunity() {
       {/* </FadeUp> */}
 
       {/* Features Section */}
-      <Stagger className="w-full max-w-[1150px] px-4 mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 text-center">
-        {features.map((feature, i) => (
-          <StaggerItem key={i}>
-            <div className="flex flex-col items-center">
-              <h3 
-                className="font-semibold text-black font-[var(--font-inter)] mb-2 sm:mb-4 text-[16px] sm:text-[20px] leading-[1.3] sm:leading-[32px] tracking-[-0.6px]"
-              >
-                {feature.title}
-              </h3>
-              <p 
-                className="font-normal text-[#1A1A1A] font-[var(--font-inter)] max-w-[250px] text-[13px] sm:text-[16px] leading-[1.6] sm:leading-[30px] tracking-[-0.02em]"
-              >
-                {feature.description}
-              </p>
-            </div>
-          </StaggerItem>
-        ))}
-      </Stagger>
+      <div className="relative w-full max-w-[1150px] mx-auto md:px-4">
+        {/* Mobile Navigation Arrows */}
+        <div className="absolute top-1/2 -translate-y-1/2 left-2 z-10 md:hidden">
+          <button 
+            onClick={() => scroll('left')}
+            className="w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center text-black border border-gray-100"
+            aria-label="Scroll left"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+          </button>
+        </div>
+        <div className="absolute top-1/2 -translate-y-1/2 right-2 z-10 md:hidden">
+          <button 
+            onClick={() => scroll('right')}
+            className="w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center text-black border border-gray-100"
+            aria-label="Scroll right"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </button>
+        </div>
+
+        <div ref={scrollRef} className="w-full flex overflow-x-auto snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+          <Stagger className="flex md:grid md:grid-cols-3 md:gap-12 text-center w-max md:w-full">
+            {features.map((feature, i) => (
+              <StaggerItem key={i} className="w-[100vw] md:w-auto snap-center shrink-0 px-12 md:px-0">
+                <div className="flex flex-col items-center">
+                  <h3 
+                    className="font-semibold text-black font-[var(--font-inter)] mb-2 sm:mb-4 text-[16px] sm:text-[20px] leading-[1.3] sm:leading-[32px] tracking-[-0.6px]"
+                  >
+                    {feature.title}
+                  </h3>
+                  <p 
+                    className="font-normal text-[#1A1A1A] font-[var(--font-inter)] max-w-[250px] text-[13px] sm:text-[16px] leading-[1.6] sm:leading-[30px] tracking-[-0.02em]"
+                  >
+                    {feature.description}
+                  </p>
+                </div>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </div>
     </section>
   );
 }

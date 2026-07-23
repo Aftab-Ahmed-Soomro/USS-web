@@ -128,12 +128,12 @@ function Hero() {
       <div className="relative z-10 mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.15}>
           <StaggerItem>
-            <p className="font-[var(--font-be-vietnam)] text-[10px] font-normal sm:text-[14px] uppercase tracking-[0px] text-white">
+            <p className="font-[var(--font-be-vietnam)] text-[10px] font-normal sm:text-[14px] uppercase tracking-[0px] text-white text-center sm:text-start">
               Email Marketing
             </p>
           </StaggerItem>
           <StaggerItem>
-            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[100%] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white">
+            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[100%] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white text-center sm:text-start">
               turn your email database {" "}
               <br className="hidden sm:block" />
               into a{" "}
@@ -143,17 +143,19 @@ function Hero() {
             </h1>
           </StaggerItem>
           <StaggerItem>
-            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[560px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[18px]">
+            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[560px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[18px] text-center sm:text-start">
               We create strategic email campaigns and automated customer journeys that deliver the right message at the right time, driving retention and repeat purchases.
             </p>
           </StaggerItem>
           <StaggerItem>
+            <div className="flex justify-center sm:block">
             <Link
               className="mt-[24px] sm:mt-[36px] inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
               href="/contact"
             >
               Book a Consultation
             </Link>
+            </div>
           </StaggerItem>
         </Stagger>
 

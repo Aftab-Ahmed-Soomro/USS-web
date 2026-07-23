@@ -20,7 +20,7 @@ const TIMELINE_BARS = [
 
 export function GrowthRoadmap() {
   return (
-    <section className="relative w-full bg-black pt-[40px] sm:pt-20 px-4 min-[375px]:px-6 overflow-hidden">
+    <section className="relative w-full bg-black pt-[40px] sm:pt-20 px-6 overflow-hidden">
       {/* Background glow behind header */}
       <div
         className="absolute top-0 left-0 w-[800px] h-[800px] pointer-events-none"
@@ -36,7 +36,7 @@ export function GrowthRoadmap() {
             <div className="shrink-0">
               <StaggerItem>
                 <p
-                  className="text-[#FF5500] sm:text-[13px] mb-6"
+                  className="text-[#FF5500] text-center sm:text-start sm:text-[13px] mb-6"
                   style={{
                     fontWeight: 700,
                     fontSize: '12px',
@@ -50,7 +50,7 @@ export function GrowthRoadmap() {
               </StaggerItem>
 
               <StaggerItem>
-                <h2 className="text-white m-0 p-0 flex flex-row flex-wrap items-baseline gap-x-2 sm:gap-x-3 md:flex-col md:items-start md:gap-0">
+                <h2 className="text-white m-0 p-0 flex flex-row flex-wrap justify-center items-baseline gap-x-2 sm:gap-x-3 md:flex-col md:justify-start md:items-start md:gap-0">
                   <span
                     style={{
                       fontWeight: 500,
@@ -83,14 +83,14 @@ export function GrowthRoadmap() {
             <div className="flex lg:justify-end lg:items-center h-full">
               <StaggerItem>
                 <p
-                  className="text-neutral-400 sm:mt-[70px] max-w-[700px] text-left lg:text-right"
+                  className="text-neutral-400 sm:mt-[70px] max-w-[700px] text-center lg:text-right"
                   style={{
                     fontWeight: 400,
                     fontSize: 'clamp(13px, 5vw, 18px)',
                     lineHeight: '30.6px'
                   }}
                 >
-                  Every business needs a clear direction before investing in marketing. USS <br /> builds bespoke strategic roadmap aligns your goals, audience and <br /> channels, creating a plan that evolves as your business grows.
+                  Every business needs a clear direction before investing in marketing. USS <br className='hidden sm:block' /> builds bespoke strategic roadmap aligns your goals, audience and <br className='hidden sm:block' /> channels, creating a plan that evolves as your business grows.
                 </p>
               </StaggerItem>
             </div>

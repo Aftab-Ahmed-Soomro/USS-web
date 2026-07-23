@@ -12,7 +12,7 @@ export default function DedicatedPartner() {
   ];
 
   return (
-    <section className="bg-[#000] text-white pt-4 sm:pt-0 py-0 lg:pb-24 px-4 sm:px-6 w-full flex flex-col items-center">
+    <section className="bg-[#000] text-white pt-4 pb-12 sm:pt-0 py-0 lg:pb-24 px-6 w-full flex flex-col items-center">
       <div className="w-full max-w-[1150px]">
         
         {/* Top Content Grid */}
@@ -51,13 +51,13 @@ export default function DedicatedPartner() {
         </div>
 
         {/* Bottom: Stats */}
-        <div className="grid grid-cols-2 gap-8 sm:gap-12 md:flex md:justify-between w-full">
+        <div className="flex justify-between gap-2 sm:gap-12 md:gap-0 w-full">
           {stats.map((stat, index) => (
             <div key={index} className="flex flex-col items-start lg:items-start">
               <span className="font-medium text-[40px] leading-[40px] sm:text-[48px] sm:leading-[48px] lg:text-[88px] lg:leading-[88px] tracking-[-1px] lg:tracking-[-1.76px] align-middle mb-2 lg:mb-4">
                 {stat.number}
               </span>
-              <span className="font-normal text-[12px] leading-[18px] lg:text-[13px] lg:leading-[19.5px] tracking-[0.32px] align-middle text-[#a3a3a3]">
+              <span className="font-normal text-[11px] leading-[18px] lg:text-[13px] lg:leading-[19.5px] tracking-[0.32px] align-middle text-[#a3a3a3]">
                 {stat.label}
               </span>
             </div>

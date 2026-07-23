@@ -102,7 +102,7 @@ const workWays = [
 function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#ff5500] px-4 min-[375px]:px-6 pb-[40px] pt-[40px] min-[375px]:pb-[58px] min-[375px]:pt-[56px] text-white sm:pb-[72px] sm:pt-[78px]">
-      <div className="mx-auto grid max-w-[1150px] gap-8 sm:gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
+      <div className="mx-auto grid max-w-[1150px] gap-8 sm:gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between text-center sm:text-start">
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
             <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white">
@@ -111,10 +111,10 @@ function Hero() {
           </StaggerItem>
           <StaggerItem>
             <h1 className="mt-[16px] min-[375px]:mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px]  font-bold lowercase leading-[100%] tracking-[-1.5px] sm:tracking-[-3px] sm:text-[58px] text-white">
-              capture high
-              <br />
-              quality leads
-              <br />
+              capture high {" "}
+              <br className="hidden sm:block" />
+              quality leads {" "}
+              <br className="hidden sm:block" />
               with{" "}
               <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-bold timesFontFamily italic text-white tracking-[-1.5px] sm:tracking-[-2.8px] leading-[1.1] sm:leading-none">
                 google ads
@@ -127,12 +127,14 @@ function Hero() {
             </p>
           </StaggerItem>
           <StaggerItem>
+            <div className="flex items-center justify-center sm:justify-start">
             <Link
-              className="mt-[24px] sm:mt-[30px] inline-flex w-full sm:w-auto h-[48px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-white px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-black transition uppercase hover:bg-[#ff6b1f]"
+              className="mt-[24px] sm:mt-[30px] inline-flex h-[48px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-white px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-black transition uppercase hover:bg-[#ff6b1f]"
               href="/contact"
             >
               Book a Consultation
             </Link>
+            </div>
           </StaggerItem>
         </Stagger>
 

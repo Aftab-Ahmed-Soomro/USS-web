@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Image from 'next/image';
 import Stagger from './Stagger';
 import StaggerItem from './Staggeritem';
@@ -58,6 +58,14 @@ const GOALS = [
 
 export function StrategyByBusinessGoal() {
   const [activeId, setActiveId] = useState<number | null>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const scrollAmount = 300;
+      scrollRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+    }
+  };
 
   return (
     <section className="relative w-full bg-black py-[60px] sm:py-24 px-6 overflow-hidden">
@@ -65,7 +73,7 @@ export function StrategyByBusinessGoal() {
         
         {/* Header Section */}
         <FadeUp delay={0.1}>
-          <div className="mb-4 sm:mb-12">
+          <div className="mb-4 sm:mb-12 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
             <h2 className="text-white flex flex-row flex-wrap items-baseline gap-x-2 sm:gap-x-4 m-0 p-0">
               <span
                 style={{
@@ -99,11 +107,33 @@ export function StrategyByBusinessGoal() {
 
         {/* Grid Section */}
         <Stagger staggerDelay={0.1}>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[2px] bg-black border-[2px] border-black">
+          <div className="relative">
+            {/* Left Arrow */}
+            <button 
+              onClick={() => scroll('left')}
+              className="absolute left-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full border border-white/20 flex sm:hidden items-center justify-center text-white bg-black/50 backdrop-blur-sm hover:bg-black/80 transition-colors"
+              aria-label="Scroll left"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+
+            {/* Right Arrow */}
+            <button 
+              onClick={() => scroll('right')}
+              className="absolute right-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full border border-white/20 flex sm:hidden items-center justify-center text-white bg-black/50 backdrop-blur-sm hover:bg-black/80 transition-colors"
+              aria-label="Scroll right"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+
+            <div 
+              ref={scrollRef}
+              className="flex overflow-x-auto snap-x snap-mandatory sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-[2px] bg-black border-[2px] border-black [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+            >
             {GOALS.map((goal, index) => {
               const isActive = activeId === goal.id;
               return (
-              <StaggerItem key={goal.id}>
+              <StaggerItem key={goal.id} className="w-[85vw] shrink-0 snap-center sm:w-auto">
                 <div 
                   className="group relative overflow-hidden bg-[#111] cursor-pointer w-full"
                   style={{ aspectRatio: '318.66 / 383.96' }}
@@ -155,6 +185,7 @@ export function StrategyByBusinessGoal() {
                 </div>
               </StaggerItem>
             )})}
+            </div>
           </div>
         </Stagger>
 

@@ -7,6 +7,15 @@ export function SadiaPsychologyProfile() {
     <section className="bg-white py-10 sm:py-20 text-black overflow-hidden font-[var(--font-inter)]">
       <div className="w-full max-w-[1150px] px-4 mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start gap-12">
         
+        {/* Mobile Title */}
+        <div className="flex flex-col w-full lg:hidden text-left mb-[-16px]">
+          <span className="font-semibold text-black mb-4 uppercase text-[12px] sm:text-[14px] leading-[1.5] sm:leading-[21px] tracking-[2.52px]">
+            Talent Management
+          </span>
+          <h2 className="font-bold text-black text-[36px] sm:text-[44px] leading-[1.1] sm:leading-[60px] tracking-[-0.9px]">
+            Sadia <br className="hidden sm:block" /> Psychology
+          </h2>
+        </div>
         {/* Left Column (Image) */}
         <FadeLeft className="flex-1 w-full flex justify-start">
           <div className="relative overflow-hidden rounded-[24px] w-full max-w-[440px] lg:w-[440px] h-[400px] sm:h-[500px] lg:h-[660px] mx-auto lg:mx-0 shrink-0">
@@ -24,13 +33,13 @@ export function SadiaPsychologyProfile() {
           <div className="flex flex-col w-full lg:max-w-[500px]">
           
           <span 
-            className="font-semibold text-black mb-6 uppercase text-[12px] sm:text-[14px] leading-[1.5] sm:leading-[21px] tracking-[2.52px]"
+            className="hidden lg:block font-semibold text-black mb-6 uppercase text-[12px] sm:text-[14px] leading-[1.5] sm:leading-[21px] tracking-[2.52px]"
           >
             Talent Management
           </span>
           
           <h2 
-            className="font-bold text-black mb-8 sm:mb-10 text-[36px] sm:text-[44px] leading-[1.1] sm:leading-[60px] tracking-[-0.9px]"
+            className="hidden lg:block font-bold text-black mb-8 sm:mb-10 text-[36px] sm:text-[44px] leading-[1.1] sm:leading-[60px] tracking-[-0.9px]"
           >
             Sadia{" "}
             <br className="hidden sm:block" />

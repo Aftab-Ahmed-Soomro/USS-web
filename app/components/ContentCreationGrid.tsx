@@ -27,7 +27,7 @@ export function ContentCreationGrid() {
             </FadeUp>
           </div>
         </div>
-        
+
         {/* Right Column */}
         <div className="flex flex-col gap-[16px] sm:gap-[20px] lg:gap-[29px]">
           <FadeUp delay={0.15}>
@@ -65,7 +65,7 @@ export function ContentCreationGrid() {
             </FadeUp>
           </div>
         </div>
-        
+
         {/* Right Column */}
         <div className="flex flex-col gap-[16px] sm:gap-[20px] lg:gap-[29px]">
           <FadeUp delay={0.15}>

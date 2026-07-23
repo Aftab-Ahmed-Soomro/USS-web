@@ -137,7 +137,7 @@ function VideoSection() {
       <div className="mx-auto text-center">
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
-            <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[56px] font-medium lowercase leading-[1.1] sm:leading-tight tracking-[-4%]">
+            <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[56px] font-medium lowercase leading-[1.1] sm:leading-tight tracking-[-4%] hidden">
               take a look at our{" "}
               <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal tracking-[-2%] sm:tracking-[-4%] timesFontFamily italic">
                 creative world
@@ -145,7 +145,7 @@ function VideoSection() {
             </h2>
           </StaggerItem>
           <StaggerItem>
-            <p className="mx-auto mt-[12px] sm:mt-[9px] max-w-[600px] font-[var(--font-inter)] text-[13px] sm:text-[24px] leading-[1.5] sm:leading-[1.7] text-[#FFFFFFB2] uppercase">
+            <p className="mx-auto mt-[12px] sm:mt-[9px] max-w-[600px] font-[var(--font-inter)] text-[13px] sm:text-[24px] leading-[1.5] sm:leading-[1.7] text-[#FFFFFFB2] uppercase hidden">
               See how we brought this campaign to life.
             </p>
           </StaggerItem>
@@ -160,7 +160,7 @@ function VideoSection() {
               className="absolute inset-0 w-full h-full object-cover object-center"
               preload="auto"
             >
-              <source src="/assets/USS Main Website Showreel.mp4" type="video/mp4" />
+              <source src="https://unitedstrategicsolutions.com/assets/USS Main Website Showreel.webm" type="video/webm" />
             </video>
             <div className="absolute inset-0 bg-black/14" />
             <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_20px_10px_rgba(0,0,0,0.92)] min-[480px]:shadow-[inset_0_0_40px_20px_rgba(0,0,0,0.92)] sm:shadow-[inset_0_0_92px_58px_rgba(0,0,0,0.92)]" />
@@ -498,8 +498,8 @@ export default function ContentCreationPage() {
           rightTitle="The USS Difference"
           leftPoints={googleAdsBrandPoints}
           rightPoints={googleAdsUssPoints}
-          centerLogo="/assets/camera.jpg"
-          logoClassName="w-[80px] lg:w-[110px]"
+          centerLogo="/assets/cam22.png"
+          logoClassName="w-[60px] lg:w-[100px] sm:mr-1"
         />
       </FadeUp>
         <ContentCreationServices />

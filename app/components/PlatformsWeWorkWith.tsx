@@ -1,6 +1,7 @@
-import Image from "next/image";
+"use client";
 
-import React from "react";
+import Image from "next/image";
+import React, { useRef } from "react";
 import Stagger from "./Stagger";
 import StaggerItem from "./Staggeritem";
 
@@ -46,8 +47,17 @@ export default function PlatformsWeWorkWith({
   heading,
   platforms = defaultPlatforms,
 }: PlatformsWeWorkWithProps) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const scrollAmount = scrollRef.current.clientWidth;
+      scrollRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className="bg-[#0A0A0A] py-[50px] sm:py-20 px-4 sm:px-6">
+    <section className="bg-[#0A0A0A] py-[50px] sm:py-20 px-4 sm:px-6 relative">
       <Stagger staggerDelay={0.15}>
         <StaggerItem>
           {heading ? (
@@ -61,10 +71,35 @@ export default function PlatformsWeWorkWith({
           )}
         </StaggerItem>
 
-      <div className="max-w-[1150px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[16px] sm:gap-6">
-        {platforms.map((platform, index) => (
-          <StaggerItem key={platform.name}>
-            <div
+      <div className="relative max-w-[1150px] mx-auto">
+        {/* Mobile Navigation Arrows */}
+        <div className="absolute top-1/2 -translate-y-1/2 left-2 z-10 sm:hidden">
+          <button 
+            onClick={() => scroll('left')}
+            className="w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center text-black border border-gray-200"
+            aria-label="Scroll left"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+          </button>
+        </div>
+        <div className="absolute top-1/2 -translate-y-1/2 right-2 z-10 sm:hidden">
+          <button 
+            onClick={() => scroll('right')}
+            className="w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center text-black border border-gray-200"
+            aria-label="Scroll right"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </button>
+        </div>
+
+        <div ref={scrollRef} className="w-full flex overflow-x-auto snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-[16px] sm:gap-6 pb-4 sm:pb-0">
+          {platforms.map((platform, index) => (
+            <StaggerItem key={platform.name} className="w-full shrink-0 snap-center sm:w-auto">
+              <div
               tabIndex={0}
               className="relative rounded-2xl overflow-hidden group cursor-pointer focus:outline-none"
             >
@@ -110,6 +145,7 @@ export default function PlatformsWeWorkWith({
             </div>
           </StaggerItem>
         ))}
+      </div>
       </div>
       </Stagger>
     </section>

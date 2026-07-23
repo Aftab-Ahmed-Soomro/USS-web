@@ -97,13 +97,13 @@ export default function WhatsAppChannels() {
         {/* Header Section */}
         <div className="flex flex-col items-center text-center max-w-[900px] mx-auto">
           <FadeUp delay={0.1}>
-            <h2 className="text-white flex flex-col items-center">
+            <h2 className="text-white text-center">
               <span className="font-medium text-[32px] sm:text-[56px] leading-[1.1] sm:leading-[63px] tracking-[-1px] sm:tracking-[-1.5px]">
-                Why WhatsApp & SMS, the
+                Why WhatsApp & SMS, the{" "}
               </span>
               <span className="font-medium text-[32px] sm:text-[56px] leading-[1.1] sm:leading-[63px] tracking-[-1px] sm:tracking-[-1.5px]">
                 channels <span 
-                className="italic font-normal text-[42px] sm:text-[72px] leading-[1.1] sm:leading-[63px] tracking-[-1px] sm:tracking-[-1.5px] text-[#ff5a05] block sm:inline mt-1 sm:mt-0"
+                className="italic font-normal text-[42px] sm:text-[72px] leading-[1.1] sm:leading-[63px] tracking-[-1px] sm:tracking-[-1.5px] text-[#ff5a05] inline"
                 style={{
                   fontFamily: '"Times New Roman", Times, serif',
                 }}

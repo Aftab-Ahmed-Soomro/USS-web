@@ -126,7 +126,7 @@ export default function CaseStudies({
   imageAspectRatio = "aspect-[617/480]"
 }: CaseStudiesProps) {
   return (
-    <section className="bg-black py-16 lg:py-24 px-4 lg:px-6 w-full flex justify-center">
+    <section className="bg-black py-16 lg:py-24 px-6 w-full flex justify-center">
       <div className="w-full max-w-[1150px]">
 
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">

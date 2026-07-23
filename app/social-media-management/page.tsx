@@ -85,7 +85,7 @@ function Hero() {
       <div className="mx-auto grid max-w-[1150px] gap-8 min-[390px]:gap-10 sm:gap-10 lg:grid-cols-[minmax(0,700px)_430px] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.15}>
           <StaggerItem>
-            <h1 className="max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[1.03] tracking-[-1.5px] min-[390px]:tracking-[-2px] min-[480px]:tracking-[-3.2px] sm:tracking-[-3.2px] sm:text-[70px]">
+            <h1 className="max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[1.03] tracking-[-1.5px] min-[390px]:tracking-[-2px] min-[480px]:tracking-[-3.2px] sm:tracking-[-3.2px] sm:text-[70px] text-center sm:text-start">
               social media that
               <br />
               <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[80px] font-normal timesFontFamily italic tracking-[-1.5px] min-[390px]:tracking-[-2px] min-[480px]:tracking-[-3.2px] sm:tracking-[-3.2px]">
@@ -94,22 +94,24 @@ function Hero() {
             </h1>
           </StaggerItem>
           <StaggerItem>
-            <p className="mt-[16px] min-[390px]:mt-[20px] min-[480px]:mt-[24px] sm:mt-[24px] max-w-[580px] font-[var(--font-inter)] text-[13px] min-[390px]:text-[13px] leading-[1.75] text-black/72 sm:text-[20px]">
+            <p className="mt-[16px] min-[390px]:mt-[20px] min-[480px]:mt-[24px] sm:mt-[24px] max-w-[580px] font-[var(--font-inter)] text-[13px] min-[390px]:text-[13px] leading-[1.75] text-black/72 sm:text-[20px] text-center sm:text-start">
               Your social media is often the first impression of your business. We help brands stay active, consistent, and memorable across Instagram, LinkedIn, TikTok, YouTube, and more.
             </p>
           </StaggerItem>
           <StaggerItem>
-            <p className="mt-[24px] min-[390px]:mt-[28px] min-[480px]:mt-[32px] sm:mt-[32px] max-w-[460px] font-[var(--font-inter)] text-[10px] min-[360px]:text-[11px] min-[430px]:text-[12px] sm:text-[12px] leading-[1.7] tracking-[1.5px] min-[360px]:tracking-[2px] min-[430px]:tracking-[2.64px] sm:tracking-[2.64px] text-[#06060680] uppercase">
+            <p className="mt-[24px] min-[390px]:mt-[28px] min-[480px]:mt-[32px] sm:mt-[32px] max-w-[460px] font-[var(--font-inter)] text-[10px] min-[360px]:text-[11px] min-[430px]:text-[12px] sm:text-[12px] leading-[1.7] tracking-[1.5px] min-[360px]:tracking-[2px] min-[430px]:tracking-[2.64px] sm:tracking-[2.64px] text-[#06060680] uppercase text-center sm:text-start">
               Trusted by brands across the world
             </p>
           </StaggerItem>
           <StaggerItem>
-            <Link
-              className="mt-[20px] min-[390px]:mt-[25px] sm:mt-[25px] inline-flex h-[38px] min-w-[176px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
-              href="/contact"
-            >
-              Book a Consultation
+            <div className="flex justify-center sm:justify-start">
+              <Link
+                className="mt-[20px] min-[390px]:mt-[25px] sm:mt-[25px] inline-flex h-[38px] min-w-[176px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
+                href="/contact"
+              >
+                Book a Consultation
             </Link>
+            </div>
           </StaggerItem>
         </Stagger>
 
