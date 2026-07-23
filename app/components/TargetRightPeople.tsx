@@ -149,12 +149,46 @@ export default function TargetRightPeople() {
           </StaggerItem>
         </Stagger>
 
-        {/* Curve + nodes */}
-        <div 
-          className="relative mt-[40px] sm:mt-[-75px] h-[420px] w-full overflow-x-auto sm:overflow-visible no-scrollbar"
-          style={{ WebkitOverflowScrolling: 'touch', scrollSnapType: 'x mandatory' }}
-        >
-          <div className="relative min-w-[1000px] sm:min-w-full h-full">
+        {/* Mobile View (Vertical Timeline) */}
+        <div className="sm:hidden mt-8 relative flex flex-col gap-8 px-2">
+          {/* Vertical line connector */}
+          <div className="absolute left-[30px] top-6 bottom-6 w-[2px] bg-gradient-to-b from-[rgba(255,85,0,0.1)] via-[rgba(255,85,0,0.5)] to-[rgba(255,85,0,0.1)]" />
+
+          {items.map((item, i) => {
+            const Icon = item.icon;
+            return (
+              <FadeUp key={item.number} delay={0.1 + i * 0.1} className="relative flex items-start gap-5 z-10">
+                {/* icon container */}
+                <div
+                  className="flex h-[46px] w-[46px] shrink-0 items-center justify-center rounded-[12px] border bg-[#0a0a0a]"
+                  style={{
+                    borderColor: "rgba(255,85,0,0.4)",
+                    boxShadow: "0 0 15px rgba(255,85,0,0.2), inset 0 0 10px rgba(255,85,0,0.1)",
+                  }}
+                >
+                  <Icon size={20} strokeWidth={1.5} color="#ff7a33" />
+                </div>
+
+                {/* text content */}
+                <div className="flex flex-col pt-[2px]">
+                  <span className="text-[#ff5500] font-normal text-[10px] leading-[15px] tracking-[2px] mb-1">
+                    {item.number}
+                  </span>
+                  <h3 className="text-white font-semibold text-[16px] leading-[1.2] mb-1.5">
+                    {item.title}
+                  </h3>
+                  <p className="text-white/70 font-normal text-[14px] leading-[1.4]">
+                    {item.description}
+                  </p>
+                </div>
+              </FadeUp>
+            );
+          })}
+        </div>
+
+        {/* Desktop View (Curve + nodes) */}
+        <div className="hidden sm:block relative mt-[-75px] h-[420px] w-full">
+          <div className="relative w-full h-full">
             {/* SVG arc */}
             <svg
               className="absolute inset-0 h-full w-full"
@@ -195,7 +229,7 @@ export default function TargetRightPeople() {
                 <div
                   key={item.number}
                   className="absolute flex -translate-x-1/2 flex-col items-center text-center"
-                  style={{ left: pos.left, top: `${pos.curveY}px`, width: "180px", scrollSnapAlign: 'center' }}
+                  style={{ left: pos.left, top: `${pos.curveY}px`, width: "180px" }}
                 >
                   <FadeUp delay={0.25 + i * 0.15} className="flex flex-col items-center w-full">
                     {/* connector line */}

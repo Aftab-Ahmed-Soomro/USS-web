@@ -1,10 +1,22 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Stagger from "./Stagger";
 import StaggerItem from "./Staggeritem";
 
-const CARDS_DATA = [
+export interface RevenueMethodCard {
+  id: string;
+  title: string;
+  description: string;
+  bgImage: string;
+}
+
+interface RevenueMethodProps {
+  heading?: React.ReactNode;
+  cards?: RevenueMethodCard[];
+}
+
+const DEFAULT_CARDS: RevenueMethodCard[] = [
   {
     id: '01',
     title: 'Email Strategy',
@@ -31,71 +43,110 @@ const CARDS_DATA = [
   },
 ];
 
-export function RevenueMethod() {
+const DEFAULT_HEADING = (
+  <>
+    method to convert email database to{" "}
+    <br className="hidden sm:block" />
+    <span
+      className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]"
+      style={{ fontFamily: "'Times New Roman', Times, serif" }}
+    >
+      high performing revenue
+    </span>
+  </>
+);
+
+export function RevenueMethod({ heading = DEFAULT_HEADING, cards = DEFAULT_CARDS }: RevenueMethodProps) {
   const [activeCard, setActiveCard] = useState<string | null>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const scrollAmount = scrollRef.current.clientWidth * 0.85;
+      scrollRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+    }
+  };
 
   return (
     <div className="w-full bg-black text-white py-[50px] sm:py-20 px-4 min-[375px]:px-6 min-h-screen flex flex-col justify-center items-center font-sans">
       <Stagger staggerDelay={0.15} className="max-w-[1150px] w-full">
 
-        {/* Header Section */}
         {/* Heading */}
         <StaggerItem>
           <h2 className="lowercase text-white text-[28px] min-[375px]:text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-[40px] sm:mb-16">
-            method to convert email database to <br />
-            
-            <span
-              className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]"
-              style={{ fontFamily: "'Times New Roman', Times, serif" }}
-            >
-              high performing revenue
-            </span>
+            {heading}
           </h2>
         </StaggerItem>
 
         {/* Grid Container */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[16px] sm:gap-6 justify-center items-center">
-          {CARDS_DATA.map((card) => {
-            const isActive = activeCard === card.id;
-            return (
-              <StaggerItem key={card.id}>
-                <div
-                  onClick={() => setActiveCard(isActive ? null : card.id)}
-                  style={{
-                    backgroundImage: `url(${card.bgImage})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center'
-                  }}
-                  className={`group relative rounded-[28px] overflow-hidden p-6 flex flex-col justify-between cursor-pointer transition-all duration-500 ease-out w-full h-[360px] sm:h-[606.93px]`}
-                >
-                  {/* Card Number */}
+        <div className="relative">
+          {/* Mobile Arrows */}
+          <div className="absolute top-1/2 -translate-y-1/2 left-0 z-10 sm:hidden">
+            <button
+              onClick={() => scroll('left')}
+              className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white border border-white/30"
+              aria-label="Scroll left"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+              </svg>
+            </button>
+          </div>
+          <div className="absolute top-1/2 -translate-y-1/2 right-0 z-10 sm:hidden">
+            <button
+              onClick={() => scroll('right')}
+              className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white border border-white/30"
+              aria-label="Scroll right"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </button>
+          </div>
+
+          <div ref={scrollRef} className="flex overflow-x-auto snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-[16px] sm:gap-6 px-8 sm:px-0">
+            {cards.map((card) => {
+              const isActive = activeCard === card.id;
+              return (
+                <StaggerItem key={card.id} className="w-[85vw] shrink-0 snap-center sm:w-auto">
                   <div
-                    className="text-[9.82px] font-medium leading-[14.73px] tracking-[2.95px] text-white opacity-80 align-middle"
+                    onClick={() => setActiveCard(isActive ? null : card.id)}
+                    style={{
+                      backgroundImage: `url(${card.bgImage})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center'
+                    }}
+                    className={`group relative rounded-[28px] overflow-hidden p-6 flex flex-col justify-between cursor-pointer transition-all duration-500 ease-out w-full h-[360px] sm:h-[606.93px]`}
                   >
-                    {card.id}
-                  </div>
-
-                  {/* Bottom Content Group (Animates Up on Hover or Tap) */}
-                  <div className={`transform transition-transform duration-500 ease-out will-change-transform ${isActive ? 'translate-y-0' : 'translate-y-[80px] sm:group-hover:translate-y-0'}`}>
-
-                    {/* Title */}
-                    <h3
-                      className="text-[18px] sm:text-[22.64px] font-normal leading-[1.3] sm:leading-[26.78px] tracking-[0%] text-white align-middle mb-[8px] sm:mb-3"
+                    {/* Card Number */}
+                    <div
+                      className="text-[9.82px] font-medium leading-[14.73px] tracking-[2.95px] text-white opacity-80 align-middle"
                     >
-                      {card.title}
-                    </h3>
+                      {card.id}
+                    </div>
 
-                    {/* Description (Fades and slides in cleanly) */}
-                    <p
-                      className={`text-[14px] sm:text-[15.5px] font-normal leading-[1.4] sm:leading-[18.86px] tracking-[0%] text-white/90 align-middle transition-opacity duration-500 delay-75 ease-out ${isActive ? 'opacity-100' : 'opacity-0 sm:group-hover:opacity-100'}`}
-                    >
-                      {card.description}
-                    </p>
+                    {/* Bottom Content Group (Animates Up on Hover or Tap) */}
+                    <div className={`transform transition-transform duration-500 ease-out will-change-transform ${isActive ? 'translate-y-0' : 'translate-y-[80px] sm:group-hover:translate-y-0'}`}>
+
+                      {/* Title */}
+                      <h3
+                        className="text-[18px] sm:text-[22.64px] font-normal leading-[1.3] sm:leading-[26.78px] tracking-[0%] text-white align-middle mb-[8px] sm:mb-3"
+                      >
+                        {card.title}
+                      </h3>
+
+                      {/* Description (Fades and slides in cleanly) */}
+                      <p
+                        className={`text-[14px] sm:text-[15.5px] font-normal leading-[1.4] sm:leading-[18.86px] tracking-[0%] text-white/90 align-middle transition-opacity duration-500 delay-75 ease-out ${isActive ? 'opacity-100' : 'opacity-0 sm:group-hover:opacity-100'}`}
+                      >
+                        {card.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </StaggerItem>
-            );
-          })}
+                </StaggerItem>
+              );
+            })}
+          </div>
         </div>
 
       </Stagger>

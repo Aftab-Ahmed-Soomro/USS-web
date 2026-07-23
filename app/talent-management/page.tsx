@@ -23,7 +23,7 @@ function FinalCta() {
       <Stagger staggerDelay={0.12} className="mx-auto max-w-[1150px] text-center">
         <StaggerItem>
           <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
-             Get Started
+            Get Started
           </p>
         </StaggerItem>
         <StaggerItem>
@@ -60,12 +60,12 @@ export default function MarketingStrategyPage() {
       <OpportunitySection />
       <WhatWeDoSection />
       <SixStepSystem />
-      
+
       <Brands />
-      
-                  <RevenueMethod />
+
+      <RevenueMethod />
       <TishWondersProfile />
-      <ProjectOverview 
+      <ProjectOverview
         subheading="sneak peak into picksperience launch"
         images={[
           "/assets/tishOverview/1.jpg",
@@ -77,7 +77,7 @@ export default function MarketingStrategyPage() {
         textColor={"white"}
       />
       <SadiaPsychologyProfile />
-      <ProjectOverview 
+      <ProjectOverview
         subheading="sneak peak into black friday launch"
         images={[
           "/assets/sadiaOverview/1.png",
@@ -93,9 +93,9 @@ export default function MarketingStrategyPage() {
       <GoodCompanyMap />
       <FinalCta />
       <div className="mt-[-120px]">
-            
-                  <Footer />
-                  </div>
+
+        <Footer />
+      </div>
     </main>
   );
 }

@@ -15,6 +15,7 @@ import Stagger from "../components/Stagger";
 import StaggerItem from "../components/Staggeritem";
 import FadeRight from "../components/FadeRight";
 import FadeUp from "../components/FadeUp";
+import { RevenueMethod } from "../components/RevenueMethod";
 
 const relatedProjects = [
   {
@@ -280,97 +281,6 @@ function CaseStudies() {
   );
 }
 
-// Card Data Structure
-const CARDS_DATA = [
-  {
-    id: '01',
-    title: 'Keyword Strategy',
-    description: 'We identify the keywords your customers are actively searching for and build campaigns around high-intent search terms.',
-    bgImage: '/assets/method1.png', // Replace with your image src
-  },
-  {
-    id: '02',
-    title: 'Campaign Structure',
-    description: 'We build meticulously organized campaigns designed to maximize relevance, improve Quality Score, and give precise control over your budget.',
-    bgImage: '/assets/method2.png', // Replace with your image src
-  },
-  {
-    id: '03',
-    title: 'Ad Copy & Creative',
-    description: 'Our team crafts compelling ad copy and engaging creatives that capture attention, drive higher click-through rates, and increase conversions.',
-    bgImage: '/assets/method3.png', // Replace with your image src
-  },
-  {
-    id: '04',
-    title: 'Optimisation & Growth',
-    description: 'We continuously monitor and refine your campaigns based on data-driven insights, ensuring scalable growth and maximum return on ad spend.',
-    bgImage: '/assets/method4.png', // Replace with your image src
-  },
-];
-
-function RevenueMethod() {
-  return (
-    <div className="w-full bg-black text-white py-[50px] sm:py-20 px-4 min-[375px]:px-6 min-h-screen flex flex-col justify-center items-center font-sans">
-      <div className="max-w-[1150px] w-full">
-        <Stagger staggerDelay={0.12}>
-          <StaggerItem>
-            <h2 className="lowercase text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-[40px] sm:mb-16">
-              how we capture demand  <br className="hidden sm:block" />
-              and turn it into{" "}
-              <span
-                className="italic text-[#ff5500] font-normal text-[42px] sm:text-[72px] leading-[0] sm:leading-[70px] tracking-[-3%]"
-                style={{ fontFamily: "'Times New Roman', Times, serif" }}
-              >
-                revenue
-              </span>
-            </h2>
-          </StaggerItem>
-        </Stagger>
-
-        {/* Grid Container */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[16px] sm:gap-6 justify-center items-center">
-          {CARDS_DATA.map((card, i) => (
-            <FadeUp key={card.id} delay={0.1 + i * 0.1}>
-              <div
-                tabIndex={0}
-                style={{
-                  backgroundImage: `url(${card.bgImage})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center'
-                }}
-                className="group relative rounded-[28px] overflow-hidden p-6 flex flex-col justify-between cursor-pointer focus:outline-none transition-all duration-500 ease-out w-full h-[360px] sm:h-[606.93px]"
-              >
-                <div
-                  className="text-[9.82px] font-medium leading-[14.73px] tracking-[2.95px] text-white opacity-80 align-middle"
-                  style={{ fontStyle: 'Medium' }}
-                >
-                  {card.id}
-                </div>
-
-                <div className="transform translate-y-[80px] group-hover:translate-y-0 group-focus:translate-y-0 transition-transform duration-500 ease-out will-change-transform">
-                  <h3
-                    className="text-[18px] sm:text-[22.64px] font-normal leading-[1.3] sm:leading-[26.78px] tracking-[0%] text-white align-middle mb-[8px] sm:mb-3"
-                    style={{ fontStyle: 'Regular' }}
-                  >
-                    {card.title}
-                  </h3>
-                  <p
-                    className="text-[14px] sm:text-[15.5px] font-normal leading-[1.4] sm:leading-[18.86px] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-500 delay-75 ease-out"
-                    style={{ fontStyle: 'Regular' }}
-                  >
-                    {card.description}
-                  </p>
-                </div>
-              </div>
-            </FadeUp>
-          ))}
-        </div>
-
-      </div>
-    </div>
-  );
-}
-
 function FinalCta() {
   return (
     <section className="bg-black px-4 min-[375px]:px-6 pt-[50px] sm:pt-[70px] text-white pb-30">
@@ -563,7 +473,15 @@ export default function GoogleAdsPage() {
           },
         ]}
       />
-      <RevenueMethod />
+      <RevenueMethod
+        heading={<>how we capture demand <br className="hidden sm:block" /> and turn it into{" "}<span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>revenue</span></>}
+        cards={[
+          { id: '01', title: 'Keyword Strategy', description: 'We identify the keywords your customers are actively searching for and build campaigns around high-intent search terms.', bgImage: '/assets/method1.png' },
+          { id: '02', title: 'Campaign Structure', description: 'We build meticulously organized campaigns designed to maximize relevance, improve Quality Score, and give precise control over your budget.', bgImage: '/assets/method2.png' },
+          { id: '03', title: 'Ad Copy & Creative', description: 'Our team crafts compelling ad copy and engaging creatives that capture attention, drive higher click-through rates, and increase conversions.', bgImage: '/assets/method3.png' },
+          { id: '04', title: 'Optimisation & Growth', description: 'We continuously monitor and refine your campaigns based on data-driven insights, ensuring scalable growth and maximum return on ad spend.', bgImage: '/assets/method4.png' },
+        ]}
+      />
       <CaseStudies />
       <Testimonials />
       <Team />

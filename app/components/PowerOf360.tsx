@@ -106,7 +106,6 @@ export function PowerOf360() {
     <section
       id="power-of-360"
       className="relative w-full overflow-hidden max-md:!min-h-0 bg-black"
-      style={{ minHeight: "900px" }}
     >
       {/* Background image (Active Item) */}
       <AnimatePresence initial={false}>

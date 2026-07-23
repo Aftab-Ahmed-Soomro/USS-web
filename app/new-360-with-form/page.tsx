@@ -13,6 +13,8 @@ import { Footer } from "../components/Footer";
 import Stagger from "../components/Stagger";
 import StaggerItem from "../components/Staggeritem";
 import { PowerOf360 } from "../components/PowerOf360";
+import { UssDifferentSection } from "../components/UssDifferentSection";
+import { BuildGrowthSection } from "../components/BuildGrowthSection";
 
 function Hero() {
   return (
@@ -102,14 +104,23 @@ export default function New360WithForm() {
         <Hero />
         <Brands />
         <PowerOf360 />
+        <UssDifferentSection />
+        <BuildGrowthSection />
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, margin: "-50px" }}
-          className="relative z-10 w-full flex justify-center items-center pt-4 sm:pt-8 bg-black"
+          className="relative z-10 w-full flex flex-col justify-center items-center pt-0 bg-black gap-6 sm:gap-8"
         >
-          <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
+          <a
+            href="#services-grid"
+            onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'performance' }))}
+            className="bg-[#FF5500] hover:bg-[#ff5500]/80 transition-colors text-white font-[var(--font-be-vietnam)] font-semibold text-[16px] leading-[20px] uppercase px-6 sm:px-8 py-3 sm:py-3.5 rounded-full flex items-center justify-center gap-2"
+          >
+            EXPLORE MORE PERFORMANCE SERVICES <span className="mt-[1px]">&gt;</span>
+          </a>
+          <h2 id="marketing-strategy" className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
             marketing{" "}
             <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
               strategy
@@ -163,8 +174,15 @@ export default function New360WithForm() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, margin: "-50px" }}
-          className="relative z-10 w-full flex justify-center items-center pt-4 sm:pt-8 bg-black">
-          <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
+          className="relative z-10 w-full flex flex-col justify-center items-center pt-16 sm:pt-24 bg-black gap-6 sm:gap-8">
+          <a
+            href="#services-grid"
+            onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'performance' }))}
+            className="bg-[#FF5500] hover:bg-[#ff5500]/80 transition-colors text-white font-[var(--font-be-vietnam)] font-semibold text-[16px] leading-[20px] uppercase px-6 sm:px-8 py-3 sm:py-3.5 rounded-full flex items-center justify-center gap-2"
+          >
+            EXPLORE MORE PERFORMANCE SERVICES <span className="mt-[1px]">&gt;</span>
+          </a>
+          <h2 id="meta-ads" className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
             meta{" "}
             <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
               ads
@@ -218,8 +236,15 @@ export default function New360WithForm() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, margin: "-50px" }}
-          className="relative z-10 w-full flex justify-center items-center pt-4 sm:pt-8 bg-black">
-          <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
+          className="relative z-10 w-full flex flex-col justify-center items-center pt-16 sm:pt-24 bg-black gap-6 sm:gap-8">
+          <a
+            href="#services-grid"
+            onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'performance' }))}
+            className="bg-[#FF5500] hover:bg-[#ff5500]/80 transition-colors text-white font-[var(--font-be-vietnam)] font-semibold text-[16px] leading-[20px] uppercase px-6 sm:px-8 py-3 sm:py-3.5 rounded-full flex items-center justify-center gap-2"
+          >
+            EXPLORE MORE PERFORMANCE SERVICES <span className="mt-[1px]">&gt;</span>
+          </a>
+          <h2 id="paid-search" className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
             paid{" "}
             <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
               search
@@ -273,8 +298,15 @@ export default function New360WithForm() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, margin: "-50px" }}
-          className="relative z-10 w-full flex justify-center items-center pt-4 sm:pt-8 bg-black">
-          <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
+          className="relative z-10 w-full flex flex-col justify-center items-center pt-16 sm:pt-24 bg-black gap-6 sm:gap-8">
+          <a
+            href="#services-grid"
+            onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'performance' }))}
+            className="bg-[#FF5500] hover:bg-[#ff5500]/80 transition-colors text-white font-[var(--font-be-vietnam)] font-semibold text-[16px] leading-[20px] uppercase px-6 sm:px-8 py-3 sm:py-3.5 rounded-full flex items-center justify-center gap-2"
+          >
+            EXPLORE MORE PERFORMANCE SERVICES <span className="mt-[1px]">&gt;</span>
+          </a>
+          <h2 id="email-marketing" className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
             email{" "}
             <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
               marketing
@@ -328,8 +360,15 @@ export default function New360WithForm() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, margin: "-50px" }}
-          className="relative z-10 w-full flex justify-center items-center -mt-8 bg-black">
-          <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
+          className="relative z-10 w-full flex flex-col justify-center items-center pt-8 sm:pt-16 -mt-8 bg-black gap-6 sm:gap-8">
+          <a
+            href="#services-grid"
+            onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'performance' }))}
+            className="bg-[#FF5500] hover:bg-[#ff5500]/80 transition-colors text-white font-[var(--font-be-vietnam)] font-semibold text-[16px] leading-[20px] uppercase px-6 sm:px-8 py-3 sm:py-3.5 rounded-full flex items-center justify-center gap-2"
+          >
+            EXPLORE MORE PERFORMANCE SERVICES <span className="mt-[1px]">&gt;</span>
+          </a>
+          <h2 id="whatsapp-sms" className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
             whatsapp &{" "}
             <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
               sms
@@ -369,8 +408,15 @@ export default function New360WithForm() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, margin: "-50px" }}
-          className="relative z-10 w-full flex justify-center items-center pt-4 sm:pt-8 bg-black">
-          <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
+          className="relative z-10 w-full flex flex-col justify-center items-center pt-16 sm:pt-24 bg-black gap-6 sm:gap-8">
+          <a
+            href="#services-grid"
+            onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'creative' }))}
+            className="bg-[#FF5500] hover:bg-[#ff5500]/80 transition-colors text-white font-[var(--font-be-vietnam)] font-semibold text-[16px] leading-[20px] uppercase px-6 sm:px-8 py-3 sm:py-3.5 rounded-full flex items-center justify-center gap-2"
+          >
+            EXPLORE MORE CREATIVE SERVICES <span className="mt-[1px]">&gt;</span>
+          </a>
+          <h2 id="social-media" className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
             social{" "}
             <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
               media
@@ -452,8 +498,15 @@ export default function New360WithForm() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, margin: "-50px" }}
-          className="relative z-10 w-full flex justify-center items-center pt-4 sm:pt-8 pb-8 bg-black">
-          <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
+          className="relative z-10 w-full flex flex-col justify-center items-center pt-16 sm:pt-24 pb-8 bg-black gap-6 sm:gap-8">
+          <a
+            href="#services-grid"
+            onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'creative' }))}
+            className="bg-[#FF5500] hover:bg-[#ff5500]/80 transition-colors text-white font-[var(--font-be-vietnam)] font-semibold text-[16px] leading-[20px] uppercase px-6 sm:px-8 py-3 sm:py-3.5 rounded-full flex items-center justify-center gap-2"
+          >
+            EXPLORE MORE CREATIVE SERVICES <span className="mt-[1px]">&gt;</span>
+          </a>
+          <h2 id="content-creation" className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
             content{" "}
             <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
               creation
@@ -507,8 +560,15 @@ export default function New360WithForm() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, margin: "-50px" }}
-          className="relative z-10 w-full flex justify-center items-center pt-4 sm:pt-8 bg-black">
-          <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
+          className="relative z-10 w-full flex flex-col justify-center items-center pt-16 sm:pt-24 bg-black gap-6 sm:gap-8">
+          <a
+            href="#services-grid"
+            onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'creative' }))}
+            className="bg-[#FF5500] hover:bg-[#ff5500]/80 transition-colors text-white font-[var(--font-be-vietnam)] font-semibold text-[16px] leading-[20px] uppercase px-6 sm:px-8 py-3 sm:py-3.5 rounded-full flex items-center justify-center gap-2"
+          >
+            EXPLORE MORE CREATIVE SERVICES <span className="mt-[1px]">&gt;</span>
+          </a>
+          <h2 id="web-design-development" className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
             web design{" "}
             <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
               & development
@@ -562,8 +622,15 @@ export default function New360WithForm() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, margin: "-50px" }}
-          className="relative z-10 w-full flex justify-center items-center pt-4 sm:pt-8 bg-black">
-          <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
+          className="relative z-10 w-full flex flex-col justify-center items-center pt-16 sm:pt-24 bg-black gap-6 sm:gap-8">
+          <a
+            href="#services-grid"
+            onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'creative' }))}
+            className="bg-[#FF5500] hover:bg-[#ff5500]/80 transition-colors text-white font-[var(--font-be-vietnam)] font-semibold text-[16px] leading-[20px] uppercase px-6 sm:px-8 py-3 sm:py-3.5 rounded-full flex items-center justify-center gap-2"
+          >
+            EXPLORE MORE CREATIVE SERVICES <span className="mt-[1px]">&gt;</span>
+          </a>
+          <h2 id="branding-graphics" className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
             branding &{" "}
             <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
               graphics
