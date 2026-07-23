@@ -140,8 +140,9 @@ export function SixStepSystem({ heading, data = defaultSteps }: SixStepSystemPro
               return (
                 <StaggerItem key={step.id}>
                   <div
-                    className="flex items-start gap-6 cursor-pointer transition-colors duration-300"
+                    className="flex items-start gap-4 sm:gap-6 cursor-pointer transition-colors duration-300"
                     onMouseEnter={() => setActiveStepId(step.id)}
+                    onClick={() => setActiveStepId(step.id)}
                   >
                     <span
                       className={`font-normal mt-2 sm:mt-3 transition-colors duration-300 text-[13px] leading-[19.5px] ${isActive ? 'text-[#FF5500]' : 'text-[#EAEAEA]'}`}
@@ -149,18 +150,54 @@ export function SixStepSystem({ heading, data = defaultSteps }: SixStepSystemPro
                       {step.id}
                     </span>
                     <h3
-                      className={`font-medium transition-colors duration-300 text-[28px] sm:text-[34px] lg:text-[38px] xl:text-[40px] leading-[1.2] tracking-[-1px] whitespace-nowrap ${isActive ? 'text-white' : 'text-[#4A4A4A]'}`}
+                      className={`font-medium transition-colors duration-300 text-[28px] sm:text-[34px] lg:text-[38px] xl:text-[40px] leading-[1.2] tracking-[-1px] whitespace-normal sm:whitespace-nowrap ${isActive ? 'text-white' : 'text-[#4A4A4A]'}`}
                     >
                       {step.title}
                     </h3>
                   </div>
+
+                  {/* MOBILE ACCORDION CONTENT */}
+                  {isActive && (
+                    <div className="lg:hidden mt-6 pl-10 sm:pl-[52px]">
+                      {/* Pills */}
+                      <div className="flex flex-wrap gap-2 sm:gap-3 mb-6">
+                        {step.pills.map((pill, idx) => (
+                          <span
+                            key={idx}
+                            className="bg-white text-black font-medium rounded-full px-3 py-1 sm:px-4 text-[11px] leading-[16.5px]"
+                          >
+                            {pill}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* Description */}
+                      <p className="font-normal text-[#EAEAEA] mb-4 sm:mb-10 text-[14px] leading-[22.75px]">
+                        {step.description}
+                      </p>
+
+                      {/* Details List */}
+                      <div className="flex flex-col">
+                        {step.details.map((detail, idx) => (
+                          <div key={idx} className="flex flex-col py-2 sm:py-4 border-t border-[#333333] last:border-b">
+                            <h4 className="font-semibold text-white mb-1 text-[13px] leading-[19.5px]">
+                              {detail.title}
+                            </h4>
+                            <p className="font-normal text-[#A0A0A0] text-[12px] leading-[18px]">
+                              {detail.desc}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </StaggerItem>
               );
             })}
           </Stagger>
 
-          {/* Right Column (Details) */}
-          <FadeRight className="w-full lg:w-[45%] xl:w-[40%] pl-0 lg:pl-4">
+          {/* Right Column (Details) - Desktop Only */}
+          <FadeRight className="hidden lg:block w-full lg:w-[45%] xl:w-[40%] pl-0 lg:pl-4">
             <div className="flex flex-col w-full">
 
               {/* Pills */}

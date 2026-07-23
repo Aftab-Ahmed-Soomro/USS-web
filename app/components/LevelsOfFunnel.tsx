@@ -1,12 +1,16 @@
-import React from 'react';
+"use client";
+
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Stagger from './Stagger';
 import StaggerItem from './Staggeritem';
 import FadeUp from './FadeUp';
 
 export function LevelsOfFunnel() {
+  const [showPopup, setShowPopup] = useState(false);
+
   return (
-    <section className="relative w-full bg-black py-20px] sm:pt-32 px-4 min-[375px]:px-6 overflow-hidden">
+    <section className="relative w-full bg-black py-[30px] sm:pt-32 px-4 min-[375px]:px-6 overflow-hidden">
       <div className="max-w-[1150px] mx-auto relative z-10">
         <Stagger staggerDelay={0.15}>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -45,7 +49,7 @@ export function LevelsOfFunnel() {
 
               <StaggerItem>
                 <p
-                  className="text-white/90 text-[13px] sm:text-[18px] sm:leading-[1.6] mb-8 lg:mb-24 max-w-[400px]"
+                  className="text-white/90 text-[13px] sm:text-[18px] sm:leading-[1.6] leading-[1.55] mb-8 lg:mb-24 max-w-[400px]"
                   style={{
                     fontWeight: 300,
                   }}
@@ -74,7 +78,7 @@ export function LevelsOfFunnel() {
 
               {/* Impressions Card */}
               <FadeUp delay={0.2}>
-                <div className="lg:absolute lg:-top-[150px] lg:left-4 border border-white/10 rounded-[12px] p-4 bg-[#0a0a0a]/80 backdrop-blur-sm w-[120px] mb-8 lg:mb-0">
+                <div className="hidden lg:block lg:absolute lg:-top-[150px] lg:left-4 border border-white/10 rounded-[12px] p-4 bg-[#0a0a0a]/80 backdrop-blur-sm w-[120px] mb-8 lg:mb-0">
                   <p
                     className="text-neutral-500 mb-2"
                     style={{
@@ -163,16 +167,63 @@ export function LevelsOfFunnel() {
             </div>
 
             {/* Right Column (Funnel Image) */}
-            <div className="lg:col-span-4 flex justify-center lg:justify-end items-center mt-12 lg:mt-0">
+            <div className="lg:col-span-4 flex justify-center lg:justify-end items-center mt-12 lg:mt-0 relative">
               <FadeUp delay={0.4}>
-                <Image
-                  src="/assets/funnel.png"
-                  alt="Marketing Funnel"
-                  width={500}
-                  height={500}
-                  className="w-full max-w-[320px] lg:max-w-full h-auto object-contain"
-                />
+                <div className="cursor-pointer" onClick={() => setShowPopup(true)}>
+                  <Image
+                    src="/assets/funnel.png"
+                    alt="Marketing Funnel"
+                    width={500}
+                    height={500}
+                    className="w-full max-w-[320px] lg:max-w-full h-auto object-contain"
+                  />
+                </div>
               </FadeUp>
+
+              {/* Mobile Impressions Popup */}
+              {showPopup && (
+                <div 
+                  className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm lg:hidden p-4"
+                  onClick={() => setShowPopup(false)}
+                >
+                  <div 
+                    className="border border-white/10 rounded-[12px] p-6 bg-[#0a0a0a] w-[200px] shadow-2xl relative"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <button 
+                      onClick={() => setShowPopup(false)}
+                      className="absolute top-2 right-3 text-white/50 hover:text-white"
+                    >
+                      ✕
+                    </button>
+                    <p
+                      className="text-neutral-500 mb-2 mt-2"
+                      style={{
+                        fontWeight: 400,
+                        fontSize: '11px',
+                        lineHeight: '13.5px',
+                        letterSpacing: '2.52px',
+                        textTransform: 'uppercase'
+                      }}
+                    >
+                      Impressions
+                    </p>
+                    <p
+                      className="text-white font-medium"
+                      style={{
+                        fontWeight: 600,
+                        fontSize: '32px',
+                        lineHeight: '1.2'
+                      }}
+                    >
+                      2.4M
+                    </p>
+                    <svg className="w-full h-[24px] mt-4" viewBox="0 0 100 20" preserveAspectRatio="none">
+                      <path d="M0 15 L 20 12 L 40 16 L 60 8 L 80 12 L 100 5" fill="none" stroke="#FF5500" strokeWidth="3" vectorEffect="non-scaling-stroke" />
+                    </svg>
+                  </div>
+                </div>
+              )}
             </div>
 
           </div>
