@@ -36,11 +36,11 @@ const relatedProjects = [
   {
     slug: "reclaim-us",
     name: "Reclaim",
-    image: "/assets/reclare.png",
+    image: "/assets/Reclaim grid (95).png",
     copy: "We scaled awareness and customer acquisition across the US using Meta Ads, delivering highly targeted campaigns that generated bookings while maximising return on ad spend.",
     tags: ["Meta Ads", "US Expansion", "Customer Acquisition"],
     year: "2024",
-    imageClassName: "object-cover object-[50%_55%]",
+    imageClassName: "object-cover object-[50%_30%]",
   },
   {
     slug: "supperclub",
