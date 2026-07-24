@@ -75,18 +75,17 @@ export default function IndustriesServed() {
       </div>
 
       {/* Carousel Section */}
-      <div className="relative w-full overflow-hidden h-[300px] sm:h-[400px] lg:h-[678px]">
+      <div className="relative w-full overflow-hidden">
         {/* Main Background Image */}
-        <div className="absolute inset-0 w-full h-full transition-opacity duration-500">
+        <div className="w-full transition-opacity duration-500">
           {defaultSlides[currentSlide].imageSrc ? (
             <img
               src={defaultSlides[currentSlide].imageSrc}
               alt="Industry served"
-              className="w-full h-full object-cover sm:object-contain"
+              className="w-full h-auto block"
             />
           ) : (
-            // Placeholder when imageSrc is empty
-            <div className="w-full h-full bg-zinc-800 flex items-center justify-center">
+            <div className="w-full h-[300px] sm:h-[600px] bg-zinc-800 flex items-center justify-center">
               <span className="text-zinc-600">Image Source Empty</span>
             </div>
           )}
@@ -96,8 +95,8 @@ export default function IndustriesServed() {
         </div>
 
         {/* Centered Box Component */}
-        <div className="absolute inset-0 flex items-end bottom-20 sm:bottom-16 md:bottom-12 justify-center pointer-events-none px-4 hidden sm:block">
-          <div className="bg-[#f0f0f0] text-black px-4 py-2 sm:px-6 sm:py-2.5 lg:px-8 rounded-sm shadow-xl font-normal text-[12px] sm:text-[14px] leading-[16px] sm:leading-[18px] lg:text-[16px] lg:leading-[21.12px] capitalize text-center max-w-[90%]">
+        <div className="absolute inset-0 items-end bottom-20 sm:bottom-4 justify-center pointer-events-none px-4 hidden sm:flex">
+          <div className="bg-[#f0f0f0] text-black px-4 py-2 sm:px-6 sm:py-2.5 lg:px-8 rounded-sm shadow-xl font-normal text-[12px] sm:text-[14px] leading-[16px] sm:leading-[18px] lg:text-[16px] lg:leading-[21.12px] capitalize text-center max-w-[90%] pointer-events-auto">
             {defaultSlides[currentSlide].centerText}
           </div>
         </div>
@@ -127,6 +126,7 @@ export default function IndustriesServed() {
         </div>
 
       </div>
+
     </section>
   );
 }

@@ -125,66 +125,89 @@ export default function CaseStudies({
   rightData = rightColumnData,
   imageAspectRatio = "aspect-[617/480]"
 }: CaseStudiesProps) {
+  const mobileOrder = [];
+  const maxLen = Math.max(leftData.length, rightData.length);
+  for (let i = 0; i < maxLen; i++) {
+    if (leftData[i]) mobileOrder.push(leftData[i]);
+    if (rightData[i]) mobileOrder.push(rightData[i]);
+  }
+
+  const HeaderContent = () => (
+    <>
+      <span className="font-bold text-[12px] leading-[18px] lg:text-[14px] lg:leading-[20px] tracking-[0.05em] uppercase text-white">
+        Case Studies
+      </span>
+
+      {heading ? (
+        heading
+      ) : (
+        <h2 className="text-white">
+          <span className="font-medium text-[32px] leading-[40px] sm:text-[40px] sm:leading-[48px] tracking-[-2px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-3.2px]">
+            see how we build
+          </span>
+          <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[42px] leading-[40px] sm:text-[48px] sm:leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
+            {" "}high {" "}
+          </span>
+          <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[42px] leading-[40px] sm:text-[48px] sm:leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
+            performing{' '}
+          </span>
+          <span className="font-medium text-[32px] leading-[40px] sm:text-[40px] sm:leading-[48px] tracking-[-2px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-3.2px]">
+            websites
+          </span>
+        </h2>
+      )}
+
+      {description !== undefined ? (
+        description
+      ) : (
+        <p className="font-normal text-[13px] leading-[24px] lg:text-[18px] lg:leading-[28px] text-white/90 whitespace-normal lg:whitespace-nowrap max-w-[600px]">
+          Explore how we've helped brands transform their digital presence.
+        </p>
+      )}
+    </>
+  );
+
   return (
     <section className="bg-black py-16 lg:py-24 px-6 w-full flex justify-center">
       <div className="w-full max-w-[1150px]">
 
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+        {/* Mobile View */}
+        <div className="flex flex-col lg:hidden w-full">
+          <div className="flex flex-col gap-4 mb-12">
+            <HeaderContent />
+          </div>
+          <div className="flex flex-col gap-12">
+            {mobileOrder.map(item => (
+              <Card key={item.id} {...item} imageAspectRatio={imageAspectRatio} />
+            ))}
+          </div>
+        </div>
 
+        {/* Desktop View */}
+        <div className="hidden lg:flex flex-row gap-16 w-full">
           {/* Left Column */}
-          <div className="flex-1 flex flex-col gap-12 lg:gap-[120px] lg:order-1 order-2 mt-8 lg:mt-0">
+          <div className="flex-1 flex flex-col gap-[120px]">
             {leftData.map(item => (
               <Card key={item.id} {...item} imageAspectRatio={imageAspectRatio} />
             ))}
           </div>
 
           {/* Right Column */}
-          <div className="flex-1 flex flex-col lg:order-2 order-1">
-
+          <div className="flex-1 flex flex-col">
             {/* Header Area */}
-            <div className="flex flex-col gap-4 mb-12 lg:mb-16">
-              <span className="font-bold text-[12px] leading-[18px] lg:text-[14px] lg:leading-[20px] tracking-[0.05em] uppercase text-white">
-                Case Studies
-              </span>
-
-              {heading ? (
-                heading
-              ) : (
-                <h2 className="text-white">
-                  <span className="font-medium text-[32px] leading-[40px] sm:text-[40px] sm:leading-[48px] tracking-[-2px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-3.2px]">
-                    see how we build
-                  </span>
-                  <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[42px] leading-[40px] sm:text-[48px] sm:leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
-                    {" "}high {" "}
-                  </span>
-                  <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[42px] leading-[40px] sm:text-[48px] sm:leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
-                    performing{' '}
-                  </span>
-                  <span className="font-medium text-[32px] leading-[40px] sm:text-[40px] sm:leading-[48px] tracking-[-2px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-3.2px]">
-                    websites
-                  </span>
-                </h2>
-              )}
-
-              {description !== undefined ? (
-                description
-              ) : (
-                <p className="font-normal text-[13px] leading-[24px] lg:text-[18px] lg:leading-[28px] text-white/90 whitespace-normal lg:whitespace-nowrap max-w-[600px]">
-                  Explore how we've helped brands transform their digital presence.
-                </p>
-              )}
+            <div className="flex flex-col gap-4 mb-16">
+              <HeaderContent />
             </div>
 
             {/* Right Column Cards */}
-            <div className="flex flex-col gap-12 lg:gap-[120px]">
+            <div className="flex flex-col gap-[120px]">
               {rightData.map(item => (
                 <Card key={item.id} {...item} imageAspectRatio={imageAspectRatio} />
               ))}
             </div>
-
           </div>
-
         </div>
+
       </div>
     </section>
   );

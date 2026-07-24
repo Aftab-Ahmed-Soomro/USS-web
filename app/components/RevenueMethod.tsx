@@ -80,35 +80,11 @@ export function RevenueMethod({ heading = DEFAULT_HEADING, cards = DEFAULT_CARDS
 
         {/* Grid Container */}
         <div className="relative">
-          {/* Mobile Arrows */}
-          <div className="absolute top-1/2 -translate-y-1/2 left-0 z-10 sm:hidden">
-            <button
-              onClick={() => scroll('left')}
-              className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white border border-white/30"
-              aria-label="Scroll left"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-              </svg>
-            </button>
-          </div>
-          <div className="absolute top-1/2 -translate-y-1/2 right-0 z-10 sm:hidden">
-            <button
-              onClick={() => scroll('right')}
-              className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white border border-white/30"
-              aria-label="Scroll right"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-              </svg>
-            </button>
-          </div>
-
-          <div ref={scrollRef} className="flex overflow-x-auto snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-[16px] sm:gap-6 px-8 sm:px-0">
+          <div ref={scrollRef} className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-[16px] sm:gap-6">
             {cards.map((card) => {
               const isActive = activeCard === card.id;
               return (
-                <StaggerItem key={card.id} className="w-[85vw] shrink-0 snap-center sm:w-auto">
+                <StaggerItem key={card.id} className="w-full shrink-0 sm:w-auto">
                   <div
                     onClick={() => setActiveCard(isActive ? null : card.id)}
                     style={{
@@ -116,7 +92,7 @@ export function RevenueMethod({ heading = DEFAULT_HEADING, cards = DEFAULT_CARDS
                       backgroundSize: 'cover',
                       backgroundPosition: 'center'
                     }}
-                    className={`group relative rounded-[28px] overflow-hidden p-6 flex flex-col justify-between cursor-pointer transition-all duration-500 ease-out w-full h-[360px] sm:h-[606.93px]`}
+                    className={`group relative rounded-[28px] overflow-hidden p-6 flex flex-col justify-between cursor-pointer transition-all duration-500 ease-out w-full h-[220px] sm:h-[606.93px]`}
                   >
                     {/* Card Number */}
                     <div

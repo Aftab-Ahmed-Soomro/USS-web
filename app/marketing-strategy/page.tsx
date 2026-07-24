@@ -435,23 +435,23 @@ export default function MarketingStrategyPage() {
         heading={
           <h2 className="text-[32px] sm:text-[36px] md:text-[64px] lg:text-[75px] leading-[1] tracking-[-1px] lg:tracking-[-3px] font-light lowercase" style={{ fontWeight: 300 }}>
 
-                  from strategy to <span className="relative inline-block z-10 whitespace-nowrap">
-                    scale.
+            from strategy to <span className="relative inline-block z-10 whitespace-nowrap">
+              scale.
 
-                    {/* Orange Glow */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[130%] bg-[#ff5500]/40 blur-[20px] -z-10 rounded-[100%] pointer-events-none"></div>
+              {/* Orange Glow */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[130%] bg-[#ff5500]/40 blur-[20px] -z-10 rounded-[100%] pointer-events-none"></div>
 
-                    {/* Ellipse SVG */}
-                    <svg
-                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[45%] w-[120%] h-[150%] pointer-events-none"
-                      viewBox="0 0 400 150"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <ellipse cx="200" cy="75" rx="190" ry="40" transform="rotate(-3 200 75)" stroke="#ff5500" strokeOpacity="1.7" strokeWidth="2" />
-                    </svg>
-                  </span>
-                </h2>
+              {/* Ellipse SVG */}
+              <svg
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[45%] w-[120%] h-[150%] pointer-events-none"
+                viewBox="0 0 400 150"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <ellipse cx="200" cy="75" rx="190" ry="40" transform="rotate(-3 200 75)" stroke="#ff5500" strokeOpacity="1.7" strokeWidth="2" />
+              </svg>
+            </span>
+          </h2>
         }
         data={strategyAccordionData}
       />
@@ -462,14 +462,12 @@ export default function MarketingStrategyPage() {
           heading={
             <h2 className="text-white font-medium tracking-[-1px] sm:tracking-[-2px] text-[36px] sm:text-[56px] leading-[1.1] sm:leading-[69.36px]">
               every digital touchpoint should <br className="hidden sm:block" />
-              <span className="inline-flex items-center gap-x-2 sm:gap-x-3 sm:mt-0">
-                <span>have its</span>
+              have its {" "}
                 <span
                   className="text-white italic font-normal font-[var(--font-cormorant)] timesFontFamily text-[46px] sm:text-[72px] leading-[0] sm:leading-[69.36px] tracking-[-1.5px] sm:tracking-[-2px]"
                 >
                   own strategy
                 </span>
-              </span>
             </h2>
           }
           data={touchpointStepsData}

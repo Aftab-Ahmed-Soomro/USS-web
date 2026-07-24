@@ -93,21 +93,21 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
 
             {/* Product pill — drops down */}
             <FadeDown delay={0.2}>
-              <p className="mt-[30px] sm:mt-[60px] mb-2 inline-flex w-fit max-w-[400px] items-center justify-center rounded-full bg-[#e9e9e7] px-4 py-2 text-center font-[var(--font-inter)] text-[10px] sm:text-[14px] font-normal uppercase leading-none tracking-[0.7px] text-[#242424] lg:mt-[58px]">
+              <p className="mt-[15px] sm:mt-[60px] mb-2 inline-flex w-fit max-w-[400px] items-center justify-center rounded-full bg-[#e9e9e7] px-4 py-2 text-center font-[var(--font-inter)] text-[10px] sm:text-[14px] font-normal uppercase leading-none tracking-[0.7px] text-[#242424] lg:mt-[58px]">
                 {project.productName}
               </p>
             </FadeDown>
 
             {/* Page title — slides in from left */}
             <FadeLeft delay={0.3}>
-              <h1 className="mt-[16px] sm:mt-[28px] mb-4 sm:mb-6 max-w-[480px] font-[var(--font-be-vietnam)] text-[28px] min-[375px]:text-[32px] font-bold leading-[1.35] tracking-[-0.9px] text-[#141414] sm:text-[44px]">
+              <h1 className="mt-[16px] sm:mt-[28px] mb-4 sm:mb-6 max-w-[360px] mx-auto sm:mx-0 sm:max-w-[480px] font-[var(--font-be-vietnam)] text-[28px] min-[375px]:text-[32px] font-bold leading-[1.35] tracking-[-0.9px] text-[#141414] sm:text-[44px] text-center sm:text-start">
                 {project.title}
               </h1>
             </FadeLeft>
 
             {/* Description — rises up */}
             <FadeUp delay={0.4}>
-              <p className="mt-[10px] sm:mt-[15px] max-w-[490px] font-[var(--font-inter)] text-[12px] font-normal leading-[1.6] sm:leading-[1.72] tracking-[-0.18px] text-[#707070] sm:text-[16px]">
+              <p className="mt-[10px] sm:mt-[15px] max-w-[490px] font-[var(--font-inter)] text-[12px] font-normal leading-[1.6] sm:leading-[1.72] tracking-[-0.18px] text-[#707070] text-center sm:text-start sm:text-[16px]">
                 {project.description}
               </p>
             </FadeUp>
@@ -200,76 +200,76 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
 
             {/* Gallery grid — each image staggered up */}
             {project.galleryLayout === "centerVideo" ? (
-  <div className="mt-[15px] flex flex-col items-center gap-[12px] sm:gap-[18px] sm:flex-row sm:items-stretch sm:justify-center lg:gap-[24px]">
-    {project.galleryImages.map((image, idx) => {
-      const isCenter = idx === 1;
-      const isVideo = image.src.toLowerCase().endsWith(".mov") || image.src.toLowerCase().endsWith(".mp4");
+              <div className="mt-[15px] flex flex-col items-center gap-[12px] sm:gap-[18px] sm:flex-row sm:items-stretch sm:justify-center lg:gap-[24px]">
+                {project.galleryImages.map((image, idx) => {
+                  const isCenter = idx === 1;
+                  const isVideo = image.src.toLowerCase().endsWith(".mov") || image.src.toLowerCase().endsWith(".mp4");
 
-      return (
-        <FadeUp key={image.alt} delay={0.25 + idx * 0.1}>
-          <div
-            className={
-              isCenter
-                ? "relative h-[300px] min-[375px]:h-[340px] w-full max-w-[280px] overflow-hidden bg-[#171717] sm:h-[480px] sm:w-[340px] sm:max-w-none"
-                : "relative h-[260px] min-[375px]:h-[280px] w-full max-w-[240px] overflow-hidden bg-[#171717] sm:h-[360px] sm:w-[280px] lg:h-[480px] lg:w-[330px] sm:max-w-none sm:self-center"
-            }
-          >
-            {isVideo ? (
-              <video
-                src={image.src}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="absolute inset-0 h-full w-full object-cover"
-                style={{ objectPosition: image.position ?? "center" }}
-              />
+                  return (
+                    <FadeUp key={image.alt} delay={0.25 + idx * 0.1}>
+                      <div
+                        className={
+                          isCenter
+                            ? "relative h-[300px] min-[375px]:h-[340px] w-full max-w-[280px] overflow-hidden bg-[#171717] sm:h-[480px] sm:w-[340px] sm:max-w-none"
+                            : "relative h-[260px] min-[375px]:h-[280px] w-full max-w-[240px] overflow-hidden bg-[#171717] sm:h-[360px] sm:w-[280px] lg:h-[480px] lg:w-[330px] sm:max-w-none sm:self-center"
+                        }
+                      >
+                        {isVideo ? (
+                          <video
+                            src={image.src}
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            className="absolute inset-0 h-full w-full object-cover"
+                            style={{ objectPosition: image.position ?? "center" }}
+                          />
+                        ) : (
+                          <Image
+                            src={image.src}
+                            alt={image.alt}
+                            fill
+                            sizes="(min-width: 1024px) 330px, (min-width: 640px) 45vw, 90vw"
+                            className="object-cover"
+                            style={{ objectPosition: image.position ?? "center" }}
+                          />
+                        )}
+                        {image.overlay ? (
+                          <div className="absolute inset-0 -z-0 bg-[#36023d]/45 mix-blend-multiply" />
+                        ) : null}
+                      </div>
+                    </FadeUp>
+                  );
+                })}
+              </div>
             ) : (
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                sizes="(min-width: 1024px) 330px, (min-width: 640px) 45vw, 90vw"
-                className="object-cover"
-                style={{ objectPosition: image.position ?? "center" }}
-              />
+              <div className="mt-[15px] grid gap-[12px] min-[375px]:gap-[18px] sm:grid-cols-2 lg:grid-cols-4 lg:gap-[20px]">
+                {project.galleryImages.map((image, idx) => (
+                  <FadeUp key={image.alt} delay={0.25 + idx * 0.1}>
+                    <div className="relative h-[260px] min-[375px]:h-[310px] overflow-hidden bg-[#171717] sm:h-[390px] lg:h-[510px]">
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        fill
+                        sizes="(min-width: 1024px) 280px, (min-width: 640px) 45vw, 90vw"
+                        className="object-cover"
+                        style={{ objectPosition: image.position ?? "center" }}
+                      />
+                      {image.overlay ? (
+                        <div className="absolute inset-0 -z-0 bg-[#36023d]/45 mix-blend-multiply" />
+                      ) : null}
+                    </div>
+                  </FadeUp>
+                ))}
+              </div>
             )}
-            {image.overlay ? (
-              <div className="absolute inset-0 -z-0 bg-[#36023d]/45 mix-blend-multiply" />
-            ) : null}
-          </div>
-        </FadeUp>
-      );
-    })}
-  </div>
-) : (
-  <div className="mt-[15px] grid gap-[12px] min-[375px]:gap-[18px] sm:grid-cols-2 lg:grid-cols-4 lg:gap-[20px]">
-    {project.galleryImages.map((image, idx) => (
-      <FadeUp key={image.alt} delay={0.25 + idx * 0.1}>
-        <div className="relative h-[260px] min-[375px]:h-[310px] overflow-hidden bg-[#171717] sm:h-[390px] lg:h-[510px]">
-          <Image
-            src={image.src}
-            alt={image.alt}
-            fill
-            sizes="(min-width: 1024px) 280px, (min-width: 640px) 45vw, 90vw"
-            className="object-cover"
-            style={{ objectPosition: image.position ?? "center" }}
-          />
-          {image.overlay ? (
-            <div className="absolute inset-0 -z-0 bg-[#36023d]/45 mix-blend-multiply" />
-          ) : null}
-        </div>
-      </FadeUp>
-    ))}
-  </div>
-)}
           </div>
         </section>
       )}
 
       {/* ── GOAL / WORK / OUTCOME SECTION ── */}
 
-      <section className="bg-[#f7f7f5] px-4 min-[375px]:px-6 pb-[40px] pt-[40px] sm:pb-[82px] sm:pt-[82px]">
+      <section className="bg-[#f7f7f5] px-6 pb-[40px] pt-[40px] sm:pb-[82px] sm:pt-[82px]">
         <div className="mx-auto grid max-w-[1150px] gap-12 sm:gap-14 lg:grid-cols-[840px_300px] lg:gap-[30px]">
           <div>
             {/* The Goal — slides in from left */}
@@ -375,7 +375,7 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
               {project.socialGridImage ? (
                 <img
                   src={project.socialGridImage}
-                  className="mt-[70px] w-full max-w-[389px] h-[480px]"
+                  className="mt-[70px] w-full max-w-[389px] h-[480px] object-contain"
                   alt=""
                 />
               ) : null}
@@ -406,15 +406,15 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
             </FadeUp>
 
             {/* Gallery grid — each image staggered up */}
-            <div className="mt-[15px] grid gap-[18px] sm:grid-cols-2 lg:grid-cols-4 lg:gap-[20px]">
+            <div className="mt-[15px] flex flex-row gap-[6px] min-[375px]:gap-[10px] sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-[18px] lg:gap-[20px]">
               {project.galleryImages.map((image, idx) => (
-                <FadeUp key={image.alt} delay={0.25 + idx * 0.1}>
-                  <div className="relative h-[310px] overflow-hidden bg-[#171717] sm:h-[390px] lg:h-[510px]">
+                <FadeUp key={image.alt} delay={0.25 + idx * 0.1} className="flex-1">
+                  <div className="relative h-[220px] min-[375px]:h-[260px] w-full overflow-hidden bg-[#171717] sm:h-[390px] lg:h-[510px]">
                     <Image
                       src={image.src}
                       alt={image.alt}
                       fill
-                      sizes="(min-width: 1024px) 280px, (min-width: 640px) 45vw, 90vw"
+                      sizes="(min-width: 1024px) 280px, (min-width: 640px) 45vw, 25vw"
                       className="object-cover"
                       style={{ objectPosition: image.position ?? "center" }}
                     />

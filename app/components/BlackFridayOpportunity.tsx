@@ -90,7 +90,7 @@ export function BlackFridayOpportunity() {
             </span>
           </h2>
           <p 
-            className="mt-4 sm:mt-6 font-normal text-[#1A1A1A] mx-auto max-w-[720px] font-[var(--font-inter)] text-[13px] sm:text-[18px] leading-[1.6] sm:leading-[29.25px]"
+            className="mt-4 sm:mt-6 font-normal text-[#1A1A1A] mx-auto max-w-[720px] font-[var(--font-inter)] text-[13px] sm:text-[18px] leading-[1.6] sm:leading-[29.25px] px-6"
           >
             Black Friday is when audiences are actively searching, comparing and ready to buy. For YouTubers with engaged, loyal communities, it’s a key opportunity to turn trusted content into meaningful brand partnerships and revenue.
           </p>

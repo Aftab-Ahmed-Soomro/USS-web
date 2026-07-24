@@ -107,9 +107,10 @@ function Hero() {
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
             <h1 className="mt-[16px] min-[375px]:mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[100%] tracking-[-1.5px] sm:tracking-[-3px] sm:text-[58px] text-white text-center sm:text-start">
-              scale your brand with meta ads, don’t just{" "}
+              scale your brand with <br className="block sm:hidden" />
+              meta ads, don’t just <br className="block sm:hidden" />
               <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-normal timesFontFamily italic text-[#FF5500] tracking-[-1.5px] sm:tracking-[-2.8px]">
-                spending more.
+                spend more.
               </span>
             </h1>
           </StaggerItem>
@@ -442,7 +443,9 @@ export default function MetaAdsPage() {
           },
         ]}
       />
-      <TargetRightPeople />
+      <div className="sm:-mb-0 -mb-10">
+        <TargetRightPeople />
+      </div>
             
       <RevenueMethod
         heading={<>How We Build High-Performing <br className="hidden sm:block" />{" "}<span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>Meta Campaigns</span></>}
@@ -453,8 +456,10 @@ export default function MetaAdsPage() {
           { id: '04', title: 'Optimisation & Scaling', description: 'We continuously monitor performance metrics to refine campaigns, maximizing return on ad spend and scaling what works best.', bgImage: '/assets/method4.png' },
         ]}
       />
-      <RelatedProjects />
+      {/* <div className="sm:-mt-0 -mt-45"> */}
+
       <Testimonials />
+      {/* </div> */}
       <Team />
       <GoodCompanyMap />
       <FinalCta />

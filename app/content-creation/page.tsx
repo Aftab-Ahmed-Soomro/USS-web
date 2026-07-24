@@ -94,12 +94,12 @@ function Hero() {
       <div className="mx-auto grid max-w-[1150px] gap-[40px] sm:gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
-            <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white">
+            <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white text-center sm:text-start">
               Content Creation
             </p>
           </StaggerItem>
           <StaggerItem>
-            <h1 className="mt-[35px] sm:mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[0.5] sm:leading-[100%] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white">
+            <h1 className="mt-[35px] sm:mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[0.5] sm:leading-[100%] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white text-center sm:text-start">
               content that works
               <br className="sm:hidden" /> {/* Adding hidden br if needed? No, I will not add new br */}
               <br />
@@ -110,17 +110,19 @@ function Hero() {
             </h1>
           </StaggerItem>
           <StaggerItem>
-            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[40px] max-w-[530px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[18px]">
+            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[40px] max-w-[530px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[18px] text-center sm:text-start">
               We create high quality photo and video content designed to capture attention, reflect your brand and support your marketing across every platform.
             </p>
           </StaggerItem>
           <StaggerItem>
-            <Link
-              className="mt-[24px] sm:mt-[30px] inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-white px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-black transition uppercase hover:bg-[#ff6b1f]"
-              href="/contact"
-            >
-              Book a Consultation
-            </Link>
+            <div className="flex justify-center sm:justify-start">
+              <Link
+                className="mt-[24px] sm:mt-[30px] inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-white px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-black transition uppercase hover:bg-[#ff6b1f]"
+                href="/contact"
+              >
+                Book a Consultation
+              </Link>
+            </div>
           </StaggerItem>
         </Stagger>
 
@@ -152,7 +154,7 @@ function VideoSection() {
           </StaggerItem>
         </Stagger>
         <FadeUp delay={0.3}>
-          <div className="relative mx-auto mt-[24px] sm:mt-[38px] aspect-[1040/515] w-full overflow-hidden rounded-[8px] sm:rounded-[4px] shadow-[0_0_42px_rgba(255,255,255,0)]">
+          <div className="relative mx-auto mt-[24px] sm:mt-[38px] aspect-[16/12] sm:aspect-[1040/515] w-full overflow-hidden rounded-[8px] sm:rounded-[4px] shadow-[0_0_42px_rgba(255,255,255,0)]">
             <video
               autoPlay
               loop
@@ -178,7 +180,7 @@ function FinalCta() {
       <Stagger staggerDelay={0.12} className="mx-auto max-w-[1150px] text-center">
         <StaggerItem>
           <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
-             LET&apos;S CREATE
+            LET&apos;S CREATE
           </p>
         </StaggerItem>
         <StaggerItem>
@@ -401,11 +403,11 @@ export default function ContentCreationPage() {
           rightTitle="The USS Difference"
           leftPoints={googleAdsBrandPoints}
           rightPoints={googleAdsUssPoints}
-          centerLogo="/assets/cam22.png"
-          logoClassName="w-[60px] lg:w-[100px] sm:mr-1"
+          centerLogo="/assets/cam23.jpg"
+          logoClassName="w-[50px] lg:w-[90px] sm:mr-1"
         />
       </FadeUp>
-        <ContentCreationServices />
+      <ContentCreationServices />
       <FadeUp delay={0.2}>
         <div className="mt-[-10px] sm:mt-[-80px]">
           <EmailMarketingQuote first={"your social media is your"} second={"digital window"} third={"shop front"} />
@@ -435,9 +437,9 @@ export default function ContentCreationPage() {
       </FadeUp>
       <FinalCta />
       <div className="mt-[-120px]">
-      
-            <Footer />
-            </div>
+
+        <Footer />
+      </div>
     </main>
   );
 }

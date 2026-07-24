@@ -8,6 +8,7 @@ interface FadeUpProps {
   delay?: number;
   duration?: number;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 export default function FadeUp({
@@ -15,10 +16,12 @@ export default function FadeUp({
   delay = 0,
   duration = 0.6,
   className = "",
+  style,
 }: FadeUpProps) {
   return (
     <motion.div
       className={className}
+      style={style}
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{

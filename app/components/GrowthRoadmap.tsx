@@ -9,14 +9,17 @@ const MONTHS = [
 
 // Visual positioning matching the design
 const TIMELINE_BARS = [
-  { label: "Discovery", left: "0%", width: "17%" },
-  { label: "Research", left: "8%", width: "22%" },
-  { label: "Strategy", left: "22%", width: "23%" },
-  { label: "Planning", left: "38%", width: "22%" },
-  { label: "Execution", left: "55%", width: "20%" },
-  { label: "Optimisation", left: "70%", width: "20%" },
-  { label: "Scale", left: "84%", width: "16%" },
+  { label: "Discovery",     left: "0%",  width: "17%", startMonth: 1, endMonth: 2,   color: '#FF5500' },
+  { label: "Research",      left: "8%",  width: "22%", startMonth: 1, endMonth: 3,   color: '#FF5500' },
+  { label: "Strategy",      left: "22%", width: "23%", startMonth: 2, endMonth: 4,   color: '#FF5500' },
+  { label: "Planning",      left: "38%", width: "22%", startMonth: 3, endMonth: 5,   color: '#FF5500' },
+  { label: "Execution",     left: "55%", width: "20%", startMonth: 4, endMonth: 6,   color: '#FF5500' },
+  { label: "Optimisation",  left: "70%", width: "20%", startMonth: 5, endMonth: 7,   color: '#FF5500' },
+  { label: "Scale",         left: "84%", width: "16%", startMonth: 6, endMonth: 7,   color: '#FF5500' },
 ];
+
+// Short month labels for mobile cards
+const SHORT_MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"];
 
 export function GrowthRoadmap() {
   return (
@@ -96,11 +99,10 @@ export function GrowthRoadmap() {
             </div>
           </div>
 
-          {/* Timeline Grid Section */}
+          {/* ── DESKTOP: horizontal Gantt chart ── */}
           <StaggerItem>
-            {/* Scrollable container for mobile */}
-            <div className="w-full overflow-x-auto pt-6 pb-16 scrollbar-hide overflow-y-hidden">
-              <div className="min-w-[1150px] w-full pr-6">
+            <div className="hidden md:block w-full pt-6 pb-16">
+              <div className="w-full">
 
                 {/* Timeline Header (Months) */}
                 <div className="flex pl-[150px] border-b border-white/10 pb-4">
@@ -131,7 +133,6 @@ export function GrowthRoadmap() {
                         className="flex-1 border-l border-white/[0.03]"
                       />
                     ))}
-                    {/* Final right border */}
                     <div className="border-l border-white/[0.03]" />
                   </div>
 
@@ -173,6 +174,83 @@ export function GrowthRoadmap() {
               </div>
             </div>
           </StaggerItem>
+
+          {/* ── MOBILE: 2-column compact grid ── */}
+          <div className="md:hidden pb-16">
+            <div className="grid grid-cols-2 gap-3">
+              {TIMELINE_BARS.map((bar, index) => {
+                const startPct = parseFloat(bar.left);
+                const widthPct = parseFloat(bar.width);
+                const isLastAlone = index === TIMELINE_BARS.length - 1 && TIMELINE_BARS.length % 2 !== 0;
+
+                return (
+                  <FadeUp
+                    key={bar.label}
+                    delay={0.06 + index * 0.07}
+                    style={isLastAlone ? { gridColumn: '1 / -1' } : undefined}
+                  >
+                    <div
+                      className="rounded-xl p-3"
+                      style={{
+                        background: isLastAlone ? '#FF5500' : 'rgba(255,255,255,0.04)',
+                        border: isLastAlone ? '1px solid #FF5500' : '1px solid rgba(255,255,255,0.07)',
+                      }}
+                    >
+                      {/* Number + Label */}
+                      <div className="flex items-center gap-2 mb-3">
+                        <span
+                          className="flex items-center justify-center rounded-full shrink-0"
+                          style={{
+                            width: 26,
+                            height: 26,
+                            background: isLastAlone ? 'rgba(255,255,255,0.25)' : 'rgba(255,85,0,0.15)',
+                            border: isLastAlone ? '1px solid rgba(255,255,255,0.4)' : '1px solid rgba(255,85,0,0.35)',
+                            color: isLastAlone ? '#fff' : '#FF5500',
+                            fontSize: '11px',
+                            fontWeight: 700,
+                          }}
+                        >
+                          {String(index + 1).padStart(2, '0')}
+                        </span>
+                        <span
+                          className="leading-tight"
+                          style={{ fontWeight: 600, fontSize: '15px', color: isLastAlone ? '#fff' : '#fff' }}
+                        >
+                          {bar.label}
+                        </span>
+                      </div>
+
+                      {/* Mini bar */}
+                      <div className="relative h-[6px] rounded-full" style={{ background: isLastAlone ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.06)' }}>
+                        <div
+                          className="absolute top-0 bottom-0 rounded-full"
+                          style={{
+                            left: `${startPct}%`,
+                            width: `${widthPct}%`,
+                            background: isLastAlone ? '#fff' : '#FF5500',
+                            boxShadow: isLastAlone ? '0 0 8px rgba(255,255,255,0.4)' : '0 0 8px rgba(255,85,0,0.5)',
+                          }}
+                        />
+                      </div>
+
+                      {/* Full month axis */}
+                      <div className="flex justify-between mt-1.5">
+                        {SHORT_MONTHS.map((m) => (
+                          <span
+                            key={m}
+                            style={{ fontSize: '9px', color: isLastAlone ? 'rgba(255,255,255,0.55)' : 'rgba(255,255,255,0.25)', fontWeight: 500 }}
+                          >
+                            {m}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </FadeUp>
+                );
+              })}
+            </div>
+          </div>
+
         </Stagger>
       </div>
     </section>

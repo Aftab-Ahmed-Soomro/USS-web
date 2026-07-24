@@ -101,13 +101,13 @@ const defaultSteps: StepData[] = [
 ];
 
 export function SixStepSystem({ heading, data = defaultSteps }: SixStepSystemProps) {
-  const [activeStepId, setActiveStepId] = useState("01");
+  const [activeStepId, setActiveStepId] = useState<string | null>(null);
 
-  const activeStep = data.find(s => s.id === activeStepId) || data[0];
+  const activeStep = activeStepId ? data.find(s => s.id === activeStepId) || data[0] : data[0];
 
   return (
     <section className="bg-black py-20 text-white overflow-hidden font-[var(--font-inter)]">
-      <div className="w-full max-w-[1150px] px-4 mx-auto">
+      <div className="w-full max-w-[1150px] px-6 mx-auto">
 
         {/* Header */}
         <FadeUp>
@@ -136,28 +136,29 @@ export function SixStepSystem({ heading, data = defaultSteps }: SixStepSystemPro
           {/* Left Column (Steps List) */}
           <Stagger className="flex flex-col w-full lg:w-[55%] xl:w-[60%] gap-6">
             {data.map((step) => {
-              const isActive = step.id === activeStepId;
+              const isActiveMobile = step.id === activeStepId;
+              const isActiveDesktop = activeStepId ? step.id === activeStepId : step.id === data[0].id;
               return (
                 <StaggerItem key={step.id}>
                   <div
                     className="flex items-start gap-4 sm:gap-6 cursor-pointer transition-colors duration-300"
                     onMouseEnter={() => setActiveStepId(step.id)}
-                    onClick={() => setActiveStepId(step.id)}
+                    onClick={() => setActiveStepId(isActiveMobile ? null : step.id)}
                   >
                     <span
-                      className={`font-normal mt-2 sm:mt-3 transition-colors duration-300 text-[13px] leading-[19.5px] ${isActive ? 'text-[#FF5500]' : 'text-[#EAEAEA]'}`}
+                      className={`font-normal mt-2 sm:mt-3 transition-colors duration-300 text-[13px] leading-[19.5px] ${isActiveMobile ? 'max-lg:text-[#FF5500]' : 'max-lg:text-[#EAEAEA]'} ${isActiveDesktop ? 'lg:text-[#FF5500]' : 'lg:text-[#EAEAEA]'}`}
                     >
                       {step.id}
                     </span>
                     <h3
-                      className={`font-medium transition-colors duration-300 text-[28px] sm:text-[34px] lg:text-[38px] xl:text-[40px] leading-[1.2] tracking-[-1px] whitespace-normal sm:whitespace-nowrap ${isActive ? 'text-white' : 'text-[#4A4A4A]'}`}
+                      className={`font-medium transition-colors duration-300 text-[28px] sm:text-[34px] lg:text-[38px] xl:text-[40px] leading-[1.2] tracking-[-1px] whitespace-normal sm:whitespace-nowrap ${isActiveMobile ? 'max-lg:text-white' : 'max-lg:text-[#4A4A4A]'} ${isActiveDesktop ? 'lg:text-white' : 'lg:text-[#4A4A4A]'}`}
                     >
                       {step.title}
                     </h3>
                   </div>
 
                   {/* MOBILE ACCORDION CONTENT */}
-                  {isActive && (
+                  {isActiveMobile && (
                     <div className="lg:hidden mt-6 pl-10 sm:pl-[52px]">
                       {/* Pills */}
                       <div className="flex flex-wrap gap-2 sm:gap-3 mb-6">

@@ -47,15 +47,6 @@ export default function PlatformsWeWorkWith({
   heading,
   platforms = defaultPlatforms,
 }: PlatformsWeWorkWithProps) {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  const scroll = (direction: 'left' | 'right') => {
-    if (scrollRef.current) {
-      const scrollAmount = scrollRef.current.clientWidth;
-      scrollRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
-    }
-  };
-
   return (
     <section className="bg-[#0A0A0A] py-[50px] sm:py-20 px-4 sm:px-6 relative">
       <Stagger staggerDelay={0.15}>
@@ -72,45 +63,21 @@ export default function PlatformsWeWorkWith({
         </StaggerItem>
 
       <div className="relative max-w-[1150px] mx-auto">
-        {/* Mobile Navigation Arrows */}
-        <div className="absolute top-1/2 -translate-y-1/2 left-2 z-10 sm:hidden">
-          <button 
-            onClick={() => scroll('left')}
-            className="w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center text-black border border-gray-200"
-            aria-label="Scroll left"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-            </svg>
-          </button>
-        </div>
-        <div className="absolute top-1/2 -translate-y-1/2 right-2 z-10 sm:hidden">
-          <button 
-            onClick={() => scroll('right')}
-            className="w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center text-black border border-gray-200"
-            aria-label="Scroll right"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-            </svg>
-          </button>
-        </div>
-
-        <div ref={scrollRef} className="w-full flex overflow-x-auto snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-[16px] sm:gap-6 pb-4 sm:pb-0">
+        <div className="w-full grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 pb-4 sm:pb-0">
           {platforms.map((platform, index) => (
-            <StaggerItem key={platform.name} className="w-full shrink-0 snap-center sm:w-auto">
+            <StaggerItem key={platform.name} className="w-full h-full">
               <div
               tabIndex={0}
-              className="relative rounded-2xl overflow-hidden group cursor-pointer focus:outline-none"
+              className="relative h-full rounded-xl sm:rounded-2xl overflow-hidden group cursor-pointer focus:outline-none"
             >
               {/* Number top left */}
-              <div className="absolute top-[20px] sm:top-[24px] left-[20px] sm:left-[24px] z-20">
-                <span className="text-white/70 font-[var(--font-inter)] text-[10px] font-semibold tracking-[2px] uppercase">
+              <div className="absolute top-[16px] sm:top-[24px] left-[16px] sm:left-[24px] z-20">
+                <span className="text-white/70 font-[var(--font-inter)] text-[9px] sm:text-[10px] font-semibold tracking-[1.5px] sm:tracking-[2px] uppercase">
                   0{index + 1}
                 </span>
               </div>
 
-              <div className="relative w-full aspect-[4/5] min-h-[360px] sm:min-h-[490px]">
+              <div className="relative w-full aspect-[4/5] min-h-[220px] sm:min-h-[490px] h-full flex flex-col">
                 {platform.imageSrc ? (
                   <Image
                     src={platform.imageSrc}
@@ -123,18 +90,19 @@ export default function PlatformsWeWorkWith({
                 )}
 
                 {/* Gradient overlay for readability */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-60 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-500 ease-out" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent opacity-85 sm:opacity-60 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-500 ease-out" />
 
-                <div className="absolute bottom-0 left-0 right-0 px-[20px] sm:px-5 py-[24px] sm:py-6">
-                  <div className="transform translate-y-[64px] sm:translate-y-[80px] group-hover:translate-y-0 group-focus:translate-y-0 transition-transform duration-500 ease-out will-change-transform">
+                <div className="absolute bottom-0 left-0 right-0 px-[16px] sm:px-5 py-[16px] sm:py-6">
+                  {/* On mobile, text is always shown (translate-y-0). On sm+, it slides up on hover */}
+                  <div className="transform translate-y-0 sm:translate-y-[80px] group-hover:translate-y-0 group-focus:translate-y-0 transition-transform duration-500 ease-out will-change-transform">
                     <h3
-                      className="text-white mb-2 font-normal text-[22px] sm:text-[22.64px] leading-[1.3] sm:leading-[35px] tracking-normal"
+                      className="text-white mb-1.5 sm:mb-2 font-medium text-[16px] sm:text-[22.64px] leading-[1.2] sm:leading-[35px] tracking-normal"
                     >
                       {platform.name}
                     </h3>
                     {platform.description && (
                       <p
-                        className="text-neutral-300 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-500 delay-75 ease-out font-normal text-[14px] sm:text-[15px] leading-[1.5] sm:leading-[24.38px] tracking-normal"
+                        className="text-neutral-300 opacity-100 sm:opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-500 delay-75 ease-out font-normal text-[11px] sm:text-[15px] leading-[1.4] sm:leading-[24.38px] tracking-normal line-clamp-3 sm:line-clamp-none"
                       >
                         {platform.description}
                       </p>
