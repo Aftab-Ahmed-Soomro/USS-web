@@ -457,6 +457,7 @@ export default function MetaAdsPage() {
         ]}
       />
       {/* <div className="sm:-mt-0 -mt-45"> */}
+      <RelatedProjects />
 
       <Testimonials />
       {/* </div> */}
