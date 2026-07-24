@@ -433,9 +433,25 @@ export default function MarketingStrategyPage() {
       <GrowthRoadmap />
       <TeamAccordion
         heading={
-          <h2 className="text-[32px] sm:text-[36px] md:text-[64px] lg:text-[75px] leading-[1] tracking-[-1px] lg:tracking-[-6px] font-light lowercase" style={{ fontWeight: 300 }}>
-            from strategy to scale.
-          </h2>
+          <h2 className="text-[32px] sm:text-[36px] md:text-[64px] lg:text-[75px] leading-[1] tracking-[-1px] lg:tracking-[-3px] font-light lowercase" style={{ fontWeight: 300 }}>
+
+                  from strategy to <span className="relative inline-block z-10 whitespace-nowrap">
+                    scale.
+
+                    {/* Orange Glow */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[130%] bg-[#ff5500]/40 blur-[20px] -z-10 rounded-[100%] pointer-events-none"></div>
+
+                    {/* Ellipse SVG */}
+                    <svg
+                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[45%] w-[120%] h-[150%] pointer-events-none"
+                      viewBox="0 0 400 150"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <ellipse cx="200" cy="75" rx="190" ry="40" transform="rotate(-3 200 75)" stroke="#ff5500" strokeOpacity="1.7" strokeWidth="2" />
+                    </svg>
+                  </span>
+                </h2>
         }
         data={strategyAccordionData}
       />

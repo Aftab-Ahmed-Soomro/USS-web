@@ -401,9 +401,12 @@ export default function GoogleAdsPage() {
       />
       <div className="mt-[0px] sm:mt-[-60px]">
         <WhyGoogleAdsWork
-        imageSrc="/assets/googleside.jpg"
-        imageAlt="Team working on Google Ads strategy"
-        headingItalic="google ads"
+          imageSrc="/assets/googleside.jpg"
+          imageAlt="Team working on Google Ads strategy"
+          logoSrc="/assets/google_logo_2.png"
+          logoClassName="h-[1em] sm:h-[1.25em] w-auto object-contain inline-block self-center mt-1 sm:mt-1.5"
+          headingItalic="ads"
+          headingSuffix="work"
         items={[
           {
             number: "01",

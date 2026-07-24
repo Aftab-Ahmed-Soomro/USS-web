@@ -411,7 +411,10 @@ export default function MetaAdsPage() {
       <WhyGoogleAdsWork
         imageSrc="/assets/metaSide.png"
         imageAlt="Meta Ads strategy expert"
-        headingItalic="meta ads"
+        logoSrc="/assets/meta_logo_2.png"
+        headingPrefix="Meta"
+        headingItalic="ads"
+        headingSuffix="works"
         items={[
           {
             number: "01",
@@ -440,7 +443,6 @@ export default function MetaAdsPage() {
         ]}
       />
       <TargetRightPeople />
-      
             
       <RevenueMethod
         heading={<>How We Build High-Performing <br className="hidden sm:block" />{" "}<span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>Meta Campaigns</span></>}

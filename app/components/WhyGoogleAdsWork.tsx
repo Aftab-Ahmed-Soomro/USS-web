@@ -15,6 +15,10 @@ interface WhyAdsWorkProps {
   imageAlt?: string;
   headingItalic: string;
   items: WhyAdsItem[];
+  logoSrc?: string;
+  headingSuffix?: string;
+  headingPrefix?: string;
+  logoClassName?: string;
 }
 
 export function WhyGoogleAdsWork({
@@ -22,6 +26,10 @@ export function WhyGoogleAdsWork({
   imageAlt = "Side image",
   headingItalic,
   items,
+  logoSrc,
+  headingSuffix = "works",
+  headingPrefix,
+  logoClassName,
 }: WhyAdsWorkProps) {
   return (
     <section className="bg-[#000] mx-auto overflow-hidden w-full">
@@ -56,16 +64,32 @@ export function WhyGoogleAdsWork({
             <div className="w-full flex justify-center">
               <FadeRight delay={0.1}>
               <h2
-                className="text-white mb-[24px] sm:mb-[40px] text-center lg:text-left pr-1 font-[var(--font-be-vietnam)] font-medium text-[32px] min-[375px]:text-[36px] sm:text-[clamp(36px,5vw,56px)] leading-[1.1] tracking-[-1.5px] sm:tracking-[-3px] lowercase"
+                className="text-white mb-[24px] sm:mb-[40px] text-center lg:text-left pr-1 font-[var(--font-be-vietnam)] font-medium text-[32px] min-[375px]:text-[36px] sm:text-[clamp(36px,5vw,56px)] leading-[1.1] tracking-[-1.5px] sm:tracking-[-3px] flex items-center justify-center lg:justify-start gap-1.5 sm:gap-2.5 flex-wrap"
               >
-                why{" "}
+                <span>why</span>
+                {logoSrc && (
+                  <span className="inline-flex items-center shrink-0 mx-1 sm:mx-1.5">
+                    <Image
+                      src={logoSrc}
+                      alt="Logo"
+                      width={180}
+                      height={60}
+                      className={logoClassName || "h-[0.85em] sm:h-[0.9em] w-auto object-contain inline-block self-center"}
+                    />
+                  </span>
+                )}
+                {headingPrefix && (
+                  <span className="font-medium text-[32px] min-[375px]:text-[36px] sm:text-[clamp(36px,5vw,56px)] tracking-[-1.5px] sm:tracking-[-3px]">
+                    {headingPrefix}
+                  </span>
+                )}
                 <span
                   className="font-normal italic text-[38px] min-[375px]:text-[44px] sm:text-[clamp(44px,6vw,72px)] tracking-[-1.5px] sm:tracking-[-3px]"
                   style={{ fontFamily: "'Times New Roman', Times, serif" }}
                 >
                   {headingItalic}
-                </span>{" "}
-                work
+                </span>
+                <span>{headingSuffix}</span>
               </h2>
             </FadeRight>
             </div>

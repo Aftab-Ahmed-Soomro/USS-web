@@ -102,6 +102,28 @@ export function BuildGrowthSection() {
           sizes="(max-width: 1024px) 100vw, 1000px"
           priority
         />
+
+        {/* Clickable Overlay for Left Circle (Performance) */}
+        <button
+          onClick={() => {
+            setActiveTab("performance");
+            document.getElementById("services-grid")?.scrollIntoView({ behavior: "smooth" });
+          }}
+          className="absolute left-[2%] top-[12%] w-[45%] h-[76%] rounded-full cursor-pointer z-10 focus:outline-none"
+          title="Click to view Performance services"
+          aria-label="Select Performance Services"
+        />
+
+        {/* Clickable Overlay for Right Circle (Creative) */}
+        <button
+          onClick={() => {
+            setActiveTab("creative");
+            document.getElementById("services-grid")?.scrollIntoView({ behavior: "smooth" });
+          }}
+          className="absolute right-[4%] top-[12%] w-[45%] h-[76%] rounded-full cursor-pointer z-10 focus:outline-none"
+          title="Click to view Creative services"
+          aria-label="Select Creative Services"
+        />
       </motion.div>
 
       {/* TOGGLES */}
@@ -155,8 +177,8 @@ export function BuildGrowthSection() {
             }`}
         >
           {/* Left Circle & Content */}
-          <div className="xl:absolute xl:left-0 xl:top-0 relative w-full max-w-[400px] sm:max-w-[750px] aspect-square flex flex-col items-center xl:items-start justify-center xl:justify-start xl:pt-16 shrink-0 z-0 mx-auto xl:mx-0">
-            <div className="absolute inset-0 z-0 pointer-events-none -left-[10%] xl:-left-[25%] scale-[1.2]">
+          <div className="xl:absolute xl:-left-24 2xl:-left-44 xl:top-0 relative w-full max-w-[400px] sm:max-w-[750px] aspect-square flex flex-col items-center xl:items-start justify-center xl:justify-start xl:pt-16 shrink-0 z-0 mx-auto xl:mx-0">
+            <div className="absolute inset-0 z-0 pointer-events-none -left-[10%] xl:-left-[35%] 2xl:-left-[45%] scale-[1.35]">
               <Image
                 src="/assets/performanceCircle2.png"
                 alt="Performance Circle"
@@ -311,8 +333,8 @@ export function BuildGrowthSection() {
             }`}
         >
           {/* Left Circle & Content */}
-          <div className="xl:absolute xl:left-0 xl:top-0 relative w-full max-w-[400px] sm:max-w-[650px] aspect-square flex flex-col items-center xl:items-start justify-center xl:justify-start xl:pt-16 shrink-0 z-0 mx-auto xl:mx-0">
-            <div className="absolute inset-0 z-0 pointer-events-none -left-[10%] xl:-left-[30%] scale-[1.3]">
+          <div className="xl:absolute xl:-left-24 2xl:-left-44 xl:top-0 relative w-full max-w-[400px] sm:max-w-[650px] aspect-square flex flex-col items-center xl:items-start justify-center xl:justify-start xl:pt-16 shrink-0 z-0 mx-auto xl:mx-0">
+            <div className="absolute inset-0 z-0 pointer-events-none -left-[10%] xl:-left-[35%] 2xl:-left-[45%] scale-[1.35]">
               <Image
                 src="/assets/creativeCircle.png"
                 alt="Creative Circle"
