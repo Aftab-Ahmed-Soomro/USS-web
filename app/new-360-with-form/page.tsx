@@ -1035,7 +1035,7 @@ export default function New360WithForm() {
         </a>
       </motion.div>
 
-      <Testimonials />360
+      <Testimonials />
       <GoodCompanyMap />
       <Team />
       <Footer />
