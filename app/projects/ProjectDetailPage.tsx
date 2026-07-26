@@ -405,11 +405,35 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
               </p>
             </FadeUp>
 
-            {/* Gallery grid — each image staggered up */}
-            <div className="mt-[15px] flex flex-row gap-[6px] min-[375px]:gap-[10px] sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-[18px] lg:gap-[20px]">
+            {/* Mobile Carousel Loop (like Brands.tsx) — prevents images from being cut off */}
+            <div className="mt-[20px] mb-[20px] w-full overflow-hidden block sm:hidden">
+              <div className="project-overview-track flex items-center gap-x-3 min-[375px]:gap-x-4">
+                {[...project.galleryImages, ...project.galleryImages, ...project.galleryImages, ...project.galleryImages].map((image, idx) => (
+                  <div
+                    key={`${image.alt}-${idx}`}
+                    className="relative h-[220px] min-[375px]:h-[260px] w-[140px] shrink-0 overflow-hidden rounded-[14px] bg-[#171717]"
+                  >
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      sizes="230px"
+                      className="object-cover"
+                      style={{ objectPosition: image.position ?? "center" }}
+                    />
+                    {image.overlay ? (
+                      <div className="absolute inset-0 -z-0 bg-[#36023d]/45 mix-blend-multiply" />
+                    ) : null}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Desktop Grid — unchanged */}
+            <div className="mt-[15px] hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-[18px] lg:gap-[20px]">
               {project.galleryImages.map((image, idx) => (
                 <FadeUp key={image.alt} delay={0.25 + idx * 0.1} className="flex-1">
-                  <div className="relative h-[220px] min-[375px]:h-[260px] w-full overflow-hidden bg-[#171717] sm:h-[390px] lg:h-[510px]">
+                  <div className="relative w-full overflow-hidden bg-[#171717] sm:h-[390px] lg:h-[510px]">
                     <Image
                       src={image.src}
                       alt={image.alt}
@@ -425,6 +449,23 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
                 </FadeUp>
               ))}
             </div>
+
+            <style>{`
+              .project-overview-track {
+                width: max-content;
+                animation: project-overview-marquee 35s linear infinite;
+                will-change: transform;
+              }
+              @keyframes project-overview-marquee {
+                0%   { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+              }
+              @media (prefers-reduced-motion: reduce) {
+                .project-overview-track {
+                  animation: none;
+                }
+              }
+            `}</style>
           </div>
         </section>
       )}

@@ -57,7 +57,7 @@ export default function PlatformsWeWorkWith({
             heading
           ) : (
             <h2
-              className="text-white mx-auto max-w-[1150px] mb-[32px] sm:mb-10 font-medium text-[29px] sm:text-[40px] leading-none tracking-normal"
+              className="text-white mx-auto max-w-[1150px] mb-[32px] sm:mb-10 font-medium text-[29px] sm:text-[40px] leading-none tracking-normal text-center sm:text-left"
             >
               platforms we work with
             </h2>

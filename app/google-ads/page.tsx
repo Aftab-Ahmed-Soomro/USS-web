@@ -438,7 +438,7 @@ export default function GoogleAdsPage() {
       <PlatformsWeWorkWith
         heading={
           <h2
-            className="text-white mx-auto max-w-[1150px] mb-10 tracking-[-1.5px]"
+            className="text-white mx-auto max-w-[1150px] mb-10 tracking-[-1.5px] text-center sm:text-left"
             style={{
               fontWeight: 500,
               fontSize: "clamp(32px, 5vw, 56px)",

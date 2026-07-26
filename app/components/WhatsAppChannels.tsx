@@ -98,18 +98,22 @@ export default function WhatsAppChannels() {
         <div className="flex flex-col items-center text-center max-w-[900px] mx-auto">
           <FadeUp delay={0.1}>
             <h2 className="text-white text-center">
-              <span className="font-medium text-[32px] sm:text-[56px] leading-[1.1] sm:leading-[63px] tracking-[-1px] sm:tracking-[-1.5px]">
-                Why WhatsApp & SMS, the{" "}
+              <span className="font-medium text-[32px] sm:text-[56px] leading-[1.15] sm:leading-[63px] tracking-[-1px] sm:tracking-[-1.5px]">
+                Why WhatsApp & SMS,
+                <br className="block sm:hidden" />
+                <span className="hidden sm:inline"> </span>
+                the channels{" "}
               </span>
-              <span className="font-medium text-[32px] sm:text-[56px] leading-[1.1] sm:leading-[63px] tracking-[-1px] sm:tracking-[-1.5px]">
-                channels <span 
-                className="italic font-normal text-[42px] sm:text-[72px] leading-[1.1] sm:leading-[63px] tracking-[-1px] sm:tracking-[-1.5px] text-[#ff5a05] inline"
+              <span
+                className="italic font-normal text-[38px] sm:text-[72px] leading-[1.15] sm:leading-[63px] tracking-[-1px] sm:tracking-[-1.5px] text-[#ff5a05] inline"
                 style={{
                   fontFamily: '"Times New Roman", Times, serif',
                 }}
               >
-                people actually read.
-              </span>
+                people
+                <br className="block sm:hidden" />
+                <span className="hidden sm:inline"> </span>
+                actually read.
               </span>
             </h2>
           </FadeUp>
