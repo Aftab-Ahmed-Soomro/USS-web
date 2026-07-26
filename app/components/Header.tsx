@@ -4,19 +4,30 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "./common/Button";
 
-const serviceLinks = [
-      { label: "360 Marketing", href: "/new-360-with-form", icon: "✦" },
-  { label: "Marketing Strategy", href: "/marketing-strategy", icon: "✦" },
-  { label: "Google Ads", href: "/google-ads", icon: "✦" },
-  { label: "Meta Ads", href: "/meta-ads", icon: "✦" },
-  { label: "WhatsApp & SMS", href: "/whatsapp-and-sms", icon: "✦" },
-  { label: "Email Marketing", href: "/email-marketing", icon: "✦" },
-  { label: "Social Media Management", href: "/social-media-management", icon: "✦" },
-  { label: "Content Creation", href: "/content-creation", icon: "✦" },
-  { label: "Talent Management", href: "/talent-management", icon: "✦" },
-  { label: "Website Design & Development", href: "/website", icon: "✦" }
-
-];
+const servicesData = {
+  top: { label: "360 Marketing", href: "/new-360-with-form" },
+  performance: {
+    title: "Performance Marketing",
+    items: [
+      { label: "Marketing Strategy", href: "/marketing-strategy" },
+      { label: "Google Ads", href: "/google-ads" },
+      { label: "Meta Ads", href: "/meta-ads" },
+      { label: "Email Marketing", href: "/email-marketing" },
+      { label: "WhatsApp & SMS", href: "/whatsapp-and-sms" },
+    ],
+  },
+  creative: {
+    title: "Creative Marketing",
+    items: [
+      { label: "Social Media Marketing", href: "/social-media-management" },
+      { label: "Content Creation", href: "/content-creation" },
+      { label: "Website UX Design", href: "/website" },
+      { label: "Website Development", href: "/website" },
+      { label: "Branding & Graphics", href: "/branding" },
+    ],
+  },
+  bottom: { label: "Talent Management", href: "/talent-management" },
+};
 
 const navItems = [
     { label: "ABOUT", href: "/about", hasDropdown:false },
@@ -65,7 +76,7 @@ export function Header() {
               aria-label={isMenuOpen ? "Close main navigation" : "Open main navigation"}
               aria-expanded={isMenuOpen}
               aria-controls="main-navigation"
-              className="hidden size-8 sm:size-10 shrink-0 flex-col items-center justify-center gap-1 sm:gap-1.5 rounded-full border border-white/25 text-white transition hover:border-[#ff6b1f] hover:text-[#ff6b1f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff5a05]"
+              className="inline-flex size-8 sm:size-10 shrink-0 flex-col items-center justify-center gap-1 sm:gap-1.5 rounded-full border border-white/25 text-white transition hover:border-[#ff6b1f] hover:text-[#ff6b1f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff5a05]"
               onClick={() => setIsMenuOpen((open) => !open)}
             >
               <span className={`h-0.5 w-4 sm:w-5 rounded-full bg-current transition ${isMenuOpen ? "translate-y-1.5 sm:translate-y-2 rotate-45" : ""}`} />
@@ -114,27 +125,120 @@ export function Header() {
                   ref={dropdownRef}
                   className={`absolute left-1/2 top-[calc(100%+32px)] z-50 -translate-x-1/2 transition-all duration-200 hidden md:block ${isServicesOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"
                     }`}
-                  style={{ width: "520px" }}
+                  style={{ width: "640px" }}
                 >
-                  <div className="absolute -top-[7px] left-1/2 -translate-x-1/2 h-[14px] w-[14px] rotate-45 bg-[#111]/90 backdrop-blur-md border-l border-t border-white/10" />
+                  <div className="absolute -top-[7px] left-1/2 -translate-x-1/2 h-[14px] w-[14px] rotate-45 bg-[#111]/95 backdrop-blur-md border-l border-t border-white/10" />
 
-                  <div className="relative rounded-xl border border-white/10 bg-[#111]/90 backdrop-blur-md shadow-2xl shadow-black/60 overflow-hidden">
+                  <div className="relative rounded-xl border border-white/10 bg-[#111]/95 backdrop-blur-md shadow-2xl shadow-black/60 overflow-hidden">
                     <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-[#ff6b1f] to-transparent" />
 
-                    <div className="p-3 grid grid-cols-2 gap-1">
-                      {serviceLinks.map((service) => (
+                    <div className="p-5">
+                      {/* Top Item: 360 Marketing */}
+                      <div className="pb-4 mb-4 border-b border-white/10">
                         <Link
-                          key={service.label}
-                          href={service.href}
+                          href={servicesData.top.href}
                           onClick={() => setIsServicesOpen(false)}
-                          className="group flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-[13px] tracking-[0.1em] font-bold uppercase text-white transition-all duration-150 hover:bg-white/[0.06] hover:text-white"
+                          className="group flex items-center justify-between rounded-xl p-3 bg-white/[0.04] border border-white/5 transition-all duration-200 hover:bg-white/[0.08] hover:border-[#ff6b1f]/40"
                         >
-                          <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-white/5 text-[#ff6b1f] text-[10px] transition group-hover:bg-[#ff6b1f]/15">
-                            ✦
-                          </span>
-                          {service.label}
+                          <div className="flex items-center gap-3">
+                            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#ff6b1f]/15 text-[#ff6b1f] text-[12px] transition group-hover:bg-[#ff6b1f] group-hover:text-black">
+                              ✦
+                            </span>
+                            <span className="text-[15px] font-bold tracking-[0.05em] text-white group-hover:text-[#ff6b1f] transition">
+                              {servicesData.top.label}
+                            </span>
+                          </div>
+                          <svg
+                            className="size-4 text-white/40 transition-transform duration-200 group-hover:translate-x-1 group-hover:text-[#ff6b1f]"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                          </svg>
                         </Link>
-                      ))}
+                      </div>
+
+                      {/* Two Columns: Performance Marketing & Creative Marketing */}
+                      <div className="grid grid-cols-2 gap-6 pb-4 mb-4 border-b border-white/10">
+                        {/* Column 1: Performance Marketing */}
+                        <div>
+                          <div className="flex items-center gap-2 px-3 pb-2.5 mb-1 border-b border-white/10">
+                            <span className="text-[#ff6b1f] text-[10px]">●</span>
+                            <h3 className="text-[14px] font-bold tracking-[0.05em] text-white">
+                              {servicesData.performance.title}
+                            </h3>
+                          </div>
+                          <div className="flex flex-col gap-0.5 mt-1">
+                            {servicesData.performance.items.map((service) => (
+                              <Link
+                                key={service.label}
+                                href={service.href}
+                                onClick={() => setIsServicesOpen(false)}
+                                className="group flex items-center gap-2.5 rounded-lg px-3 py-2 text-[13px] tracking-[0.03em] font-medium text-white/80 transition-all duration-150 hover:bg-white/[0.06] hover:text-white hover:translate-x-0.5"
+                              >
+                                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded bg-white/5 text-[#ff6b1f] text-[9px] transition group-hover:bg-[#ff6b1f]/20">
+                                  ✦
+                                </span>
+                                <span>{service.label}</span>
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Column 2: Creative Marketing */}
+                        <div>
+                          <div className="flex items-center gap-2 px-3 pb-2.5 mb-1 border-b border-white/10">
+                            <span className="text-[#ff6b1f] text-[10px]">●</span>
+                            <h3 className="text-[14px] font-bold tracking-[0.05em] text-white">
+                              {servicesData.creative.title}
+                            </h3>
+                          </div>
+                          <div className="flex flex-col gap-0.5 mt-1">
+                            {servicesData.creative.items.map((service) => (
+                              <Link
+                                key={service.label}
+                                href={service.href}
+                                onClick={() => setIsServicesOpen(false)}
+                                className="group flex items-center gap-2.5 rounded-lg px-3 py-2 text-[13px] tracking-[0.03em] font-medium text-white/80 transition-all duration-150 hover:bg-white/[0.06] hover:text-white hover:translate-x-0.5"
+                              >
+                                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded bg-white/5 text-[#ff6b1f] text-[9px] transition group-hover:bg-[#ff6b1f]/20">
+                                  ✦
+                                </span>
+                                <span>{service.label}</span>
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Bottom Item: Talent Management */}
+                      <div>
+                        <Link
+                          href={servicesData.bottom.href}
+                          onClick={() => setIsServicesOpen(false)}
+                          className="group flex items-center justify-between rounded-xl p-3 bg-white/[0.04] border border-white/5 transition-all duration-200 hover:bg-white/[0.08] hover:border-[#ff6b1f]/40"
+                        >
+                          <div className="flex items-center gap-3">
+                            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#ff6b1f]/15 text-[#ff6b1f] text-[12px] transition group-hover:bg-[#ff6b1f] group-hover:text-black">
+                              ✦
+                            </span>
+                            <span className="text-[15px] font-bold tracking-[0.05em] text-white group-hover:text-[#ff6b1f] transition">
+                              {servicesData.bottom.label}
+                            </span>
+                          </div>
+                          <svg
+                            className="size-4 text-white/40 transition-transform duration-200 group-hover:translate-x-1 group-hover:text-[#ff6b1f]"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                          </svg>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -166,24 +270,90 @@ export function Header() {
                   </div>
 
                   <div
-                    className={`overflow-hidden transition-[max-height,opacity] duration-200 ${isMobileServicesOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
+                    className={`overflow-hidden transition-[max-height,opacity] duration-300 ${isMobileServicesOpen ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
                       }`}
                   >
-                    <div className="mt-2 flex flex-col gap-0.5 border-l border-[#ff6b1f]/30 pl-3">
-                      {serviceLinks.map((service) => (
-                        <Link
-                          key={service.label}
-                          href={service.href}
-                          onClick={() => {
-                            setIsMobileServicesOpen(false);
-                            setIsMenuOpen(false);
-                          }}
-                          className="flex items-center gap-2 py-1.5 text-[13px] sm:text-[14px] leading-tight tracking-[0.05em] sm:tracking-[0.1em] font-bold uppercase text-white/60 transition hover:text-white"
-                        >
-                          <span className="text-[#ff6b1f] text-[8px]">✦</span>
-                          {service.label}
-                        </Link>
-                      ))}
+                    <div className="mt-3 flex flex-col gap-2 sm:gap-4 border-l-2 border-[#ff6b1f]/40 pl-3 sm:pl-4">
+                      {/* Top Item: 360 Marketing */}
+                      <Link
+                        href={servicesData.top.href}
+                        onClick={() => {
+                          setIsMobileServicesOpen(false);
+                          setIsMenuOpen(false);
+                        }}
+                        className="flex items-center gap-2.5 py-1 text-[14px] font-normal tracking-[0.05em] text-white transition hover:text-[#ff6b1f]"
+                      >
+                        <span className="text-[#ff6b1f] text-[10px]">✦</span>
+                        {servicesData.top.label}
+                      </Link>
+
+                      <div className="h-[1px] w-full bg-white/10" />
+
+                      {/* Two columns or stacked categories */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        {/* Performance Marketing */}
+                        <div className="flex flex-col gap-1.5">
+                          <div className="flex items-center gap-2 text-[13px] font-bold tracking-[0.05em] text-white pb-1">
+                            <span className="text-[#ff6b1f] text-[10px]">●</span>
+                            <span>{servicesData.performance.title}</span>
+                          </div>
+                          <div className="flex flex-col gap-1 pl-2 border-l border-white/10">
+                            {servicesData.performance.items.map((service) => (
+                              <Link
+                                key={service.label}
+                                href={service.href}
+                                onClick={() => {
+                                  setIsMobileServicesOpen(false);
+                                  setIsMenuOpen(false);
+                                }}
+                                className="flex items-center gap-2 py-1.5 text-[13px] sm:text-[14px] font-medium tracking-[0.03em] text-white/75 transition hover:text-white"
+                              >
+                                <span className="text-[#ff6b1f] text-[8px]">✦</span>
+                                {service.label}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Creative Marketing */}
+                        <div className="flex flex-col gap-1.5">
+                          <div className="flex items-center gap-2 text-[13px] font-bold tracking-[0.05em] text-white pb-1">
+                            <span className="text-[#ff6b1f] text-[10px]">●</span>
+                            <span>{servicesData.creative.title}</span>
+                          </div>
+                          <div className="flex flex-col gap-1 pl-2 border-l border-white/10">
+                            {servicesData.creative.items.map((service) => (
+                              <Link
+                                key={service.label}
+                                href={service.href}
+                                onClick={() => {
+                                  setIsMobileServicesOpen(false);
+                                  setIsMenuOpen(false);
+                                }}
+                                className="flex items-center gap-2 py-1.5 text-[13px] sm:text-[14px] font-medium tracking-[0.03em] text-white/75 transition hover:text-white"
+                              >
+                                <span className="text-[#ff6b1f] text-[8px]">✦</span>
+                                {service.label}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="h-[1px] w-full bg-white/10" />
+
+                      {/* Bottom Item: Talent Management */}
+                      <Link
+                        href={servicesData.bottom.href}
+                        onClick={() => {
+                          setIsMobileServicesOpen(false);
+                          setIsMenuOpen(false);
+                        }}
+                        className="flex items-center gap-2.5 py-1 text-[14px] font-normal -mt-2 tracking-[0.05em] text-white transition hover:text-[#ff6b1f]"
+                      >
+                        <span className="text-[#ff6b1f] text-[10px]">✦</span>
+                        {servicesData.bottom.label}
+                      </Link>
                     </div>
                   </div>
                 </div>
