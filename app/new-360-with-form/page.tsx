@@ -622,9 +622,9 @@ export default function New360WithForm() {
         <a
           href="#services-grid"
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'performance' }))}
-          className="bg-[#FF5500] hover:bg-[#ff5500]/80 transition-colors text-white font-[var(--font-be-vietnam)] font-semibold text-[16px] leading-[20px] uppercase px-6 sm:px-8 py-3 sm:py-3.5 rounded-full flex items-center justify-center gap-2"
+          className="inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
         >
-          EXPLORE MORE PERFORMANCE SERVICES <span className="mt-[1px]">&gt;</span>
+          EXPLORE MORE PERFORMANCE SERVICES &gt;
         </a>
       </motion.div>
       <motion.div
@@ -693,9 +693,9 @@ export default function New360WithForm() {
         <a
           href="#services-grid"
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'performance' }))}
-          className="bg-[#FF5500] hover:bg-[#ff5500]/80 transition-colors text-white font-[var(--font-be-vietnam)] font-semibold text-[16px] leading-[20px] uppercase px-6 sm:px-8 py-3 sm:py-3.5 rounded-full flex items-center justify-center gap-2"
+          className="inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
         >
-          EXPLORE MORE PERFORMANCE SERVICES <span className="mt-[1px]">&gt;</span>
+          EXPLORE MORE PERFORMANCE SERVICES &gt;
         </a>
       </motion.div>
       <motion.div
@@ -804,9 +804,9 @@ export default function New360WithForm() {
         <a
           href="#services-grid"
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'performance' }))}
-          className="bg-[#FF5500] hover:bg-[#ff5500]/80 transition-colors text-white font-[var(--font-be-vietnam)] font-semibold text-[16px] leading-[20px] uppercase px-6 sm:px-8 py-3 sm:py-3.5 rounded-full flex items-center justify-center gap-2"
+          className="inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
         >
-          EXPLORE MORE PERFORMANCE SERVICES <span className="mt-[1px]">&gt;</span>
+          EXPLORE MORE PERFORMANCE SERVICES &gt;
         </a>
       </motion.div>
       <motion.div
@@ -834,9 +834,9 @@ export default function New360WithForm() {
         <a
           href="#services-grid"
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'performance' }))}
-          className="bg-[#FF5500] hover:bg-[#ff5500]/80 transition-colors text-white font-[var(--font-be-vietnam)] font-semibold text-[16px] leading-[20px] uppercase px-6 sm:px-8 py-3 sm:py-3.5 rounded-full flex items-center justify-center gap-2"
+          className="inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
         >
-          EXPLORE MORE PERFORMANCE SERVICES <span className="mt-[1px]">&gt;</span>
+          EXPLORE MORE PERFORMANCE SERVICES &gt;
         </a>
       </motion.div>
       <motion.div
@@ -865,9 +865,9 @@ export default function New360WithForm() {
         <a
           href="#services-grid"
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'performance' }))}
-          className="bg-[#FF5500] hover:bg-[#ff5500]/80 transition-colors text-white font-[var(--font-be-vietnam)] font-semibold text-[16px] leading-[20px] uppercase px-6 sm:px-8 py-3 sm:py-3.5 rounded-full flex items-center justify-center gap-2"
+          className="inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
         >
-          EXPLORE MORE PERFORMANCE SERVICES <span className="mt-[1px]">&gt;</span>
+          EXPLORE MORE PERFORMANCE SERVICES &gt;
         </a>
       </motion.div>
       <motion.div
@@ -898,9 +898,9 @@ export default function New360WithForm() {
         <a
           href="#services-grid"
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'creative' }))}
-          className="bg-[#FF5500] hover:bg-[#ff5500]/80 transition-colors text-white font-[var(--font-be-vietnam)] font-semibold text-[16px] leading-[20px] uppercase px-6 sm:px-8 py-3 sm:py-3.5 rounded-full flex items-center justify-center gap-2"
+          className="inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
         >
-          EXPLORE MORE CREATIVE SERVICES <span className="mt-[1px]">&gt;</span>
+          EXPLORE MORE CREATIVE SERVICES &gt;
         </a>
       </motion.div>
       <motion.div
@@ -930,9 +930,9 @@ export default function New360WithForm() {
         <a
           href="#services-grid"
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'creative' }))}
-          className="bg-[#FF5500] hover:bg-[#ff5500]/80 transition-colors text-white font-[var(--font-be-vietnam)] font-semibold text-[16px] leading-[20px] uppercase px-6 sm:px-8 py-3 sm:py-3.5 rounded-full flex items-center justify-center gap-2"
+          className="inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
         >
-          EXPLORE MORE CREATIVE SERVICES <span className="mt-[1px]">&gt;</span>
+          EXPLORE MORE CREATIVE SERVICES &gt;
         </a>
       </motion.div>
 
@@ -961,9 +961,9 @@ export default function New360WithForm() {
         <a
           href="#services-grid"
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'creative' }))}
-          className="bg-[#FF5500] hover:bg-[#ff5500]/80 transition-colors text-white font-[var(--font-be-vietnam)] font-semibold text-[16px] leading-[20px] uppercase px-6 sm:px-8 py-3 sm:py-3.5 rounded-full flex items-center justify-center gap-2"
+          className="inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
         >
-          EXPLORE MORE CREATIVE SERVICES <span className="mt-[1px]">&gt;</span>
+          EXPLORE MORE CREATIVE SERVICES &gt;
         </a>
       </motion.div>
 
@@ -1029,9 +1029,9 @@ export default function New360WithForm() {
         <a
           href="#services-grid"
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'creative' }))}
-          className="bg-[#FF5500] hover:bg-[#ff5500]/80 transition-colors text-white font-[var(--font-be-vietnam)] font-semibold text-[16px] leading-[20px] uppercase px-6 sm:px-8 py-3 sm:py-3.5 rounded-full flex items-center justify-center gap-2"
+          className="inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
         >
-          EXPLORE MORE CREATIVE SERVICES <span className="mt-[1px]">&gt;</span>
+          EXPLORE MORE CREATIVE SERVICES &gt;
         </a>
       </motion.div>
 

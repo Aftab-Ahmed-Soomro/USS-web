@@ -8,7 +8,7 @@ export function OpportunitySection() {
     <section className="bg-black py-20 text-white flex flex-col items-center overflow-hidden">
       {/* Header Section */}
       <FadeUp>
-        <div className="text-center px-4 mb-10 sm:mb-16 max-w-[1150px] mx-auto">
+        <div className="text-center px-6 mb-10 sm:mb-16 max-w-[1150px] mx-auto">
           <h2 
             className="font-medium lowercase tracking-[-1px] sm:tracking-[-3px] text-white flex flex-wrap justify-center items-center gap-x-3 mb-2 sm:mb-4 font-[var(--font-be-vietnam)] text-[32px] sm:text-[56px] leading-[1.1] sm:leading-[86.48px]"
           >
@@ -29,7 +29,7 @@ export function OpportunitySection() {
       </FadeUp>
 
       {/* Image Grid Section */}
-      <Stagger className="w-full max-w-[1200px] px-4 mx-auto flex flex-col md:flex-row justify-center items-start gap-10 md:gap-8">
+      <Stagger className="w-full max-w-[1200px] px-5.5 mx-auto flex flex-col md:flex-row justify-center items-start gap-10 md:gap-8">
         
         {/* Left Column */}
         <StaggerItem className="w-full md:w-auto">

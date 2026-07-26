@@ -115,12 +115,6 @@ export function TalentHero() {
             </StaggerItem>
 
             <StaggerItem>
-              <h2 className="font-bold text-[22px] min-[375px]:text-[24px] leading-[1.2] mt-4 text-white/95 tracking-[-0.5px] text-center sm:text-start">
-                Start planning for peak period
-              </h2>
-            </StaggerItem>
-
-            <StaggerItem>
               <p className="mt-4 font-[var(--font-inter)] text-[13px] leading-[1.65] text-white/75 text-center sm:text-start">
                 Q4 is the most valuable period in the content calendar. With major retail moments, increased brand investment and audiences actively searching and buying, early planning gives creators the strongest opportunity to maximise visibility and revenue. The biggest Q4 opportunities are secured before peak period begins.
               </p>
@@ -140,7 +134,16 @@ export function TalentHero() {
         </div>
 
         {/* Mobile Image Slider (Below Text, Clean images scrolling with NO text overlay) */}
-        <div className="relative mx-auto w-full max-w-[1150px] h-[260px] min-[375px]:h-[320px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+        <div className="relative mx-auto w-full max-w-[1150px] h-[300px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0a0a0a]">
+          {/* Text Overlaid on Left of Mobile Image Carousel */}
+          <div className="absolute top-[45%] -translate-y-1/2 left-6 z-10 max-w-[60%] pointer-events-none">
+            <h2 className="font-bold text-[22px] leading-[1.35] text-white tracking-[-0.5px] drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+              Start planning
+              <br />
+              for peak period
+            </h2>
+          </div>
+
           <div
             className="w-full h-full flex transition-transform duration-700 ease-in-out"
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -155,7 +158,7 @@ export function TalentHero() {
                   alt={`Q4 Play banner ${index + 1}`}
                   fill
                   sizes="100vw"
-                  className="object-cover object-center"
+                  className="object-cover object-[70%_center]"
                   priority={index === 0}
                 />
               </div>

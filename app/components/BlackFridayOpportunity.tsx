@@ -77,9 +77,9 @@ export function BlackFridayOpportunity() {
     <section className="bg-white py-16 sm:py-24 text-black overflow-hidden flex flex-col items-center relative">
       {/* Header Section */}
       <FadeUp>
-        <div className="max-w-[1150px] text-center px-4 mx-auto mb-10 sm:mb-16">
+        <div className="max-w-[1150px] text-center px-6 mx-auto mb-10 sm:mb-16">
           <h2 
-            className="font-medium lowercase tracking-[-1px] sm:tracking-[-3.2px] text-[#000000] sm:mb-2 font-[var(--font-be-vietnam)] text-[32px] sm:text-[56px] leading-[1.1] sm:leading-[70px]"
+            className="font-medium lowercase tracking-[-1px] sm:tracking-[-3.2px] text-[#000000] sm:mb-2 font-[var(--font-be-vietnam)] text-[32px] sm:text-[56px] leading-[1.2] sm:leading-[70px]"
           >
             black friday is your highest {" "}
             <br className="hidden sm:block" />
@@ -179,7 +179,7 @@ export function BlackFridayOpportunity() {
                     {feature.title}
                   </h3>
                   <p 
-                    className="font-normal text-[#1A1A1A] font-[var(--font-inter)] max-w-[250px] text-[13px] sm:text-[16px] leading-[1.6] sm:leading-[30px] tracking-[-0.02em]"
+                    className="font-normal text-[#1A1A1A] font-[var(--font-inter)] max-w-[280px] text-[13px] sm:text-[16px] leading-[1.6] sm:leading-[30px] tracking-[-0.02em]"
                   >
                     {feature.description}
                   </p>

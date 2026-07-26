@@ -6,7 +6,7 @@ import StaggerItem from "./Staggeritem";
 export function WhatWeDoSection() {
   return (
     <section className="bg-black sm:py-20 text-white flex justify-center overflow-hidden">
-      <div className="w-full max-w-[1150px] px-4 mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start gap-10">
+      <div className="w-full max-w-[1150px] px-6 mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start gap-10">
         
         {/* Left Content */}
         <FadeLeft>
@@ -34,7 +34,7 @@ export function WhatWeDoSection() {
           
           {/* Box 1 (Top Left) */}
           <StaggerItem className="w-full">
-            <div className="relative overflow-hidden w-full max-w-[380px] h-[282px] mx-auto lg:mx-0 lg:ml-auto rounded-[16px]">
+            <div className="relative overflow-hidden w-full max-w-[420px] h-[282px] mx-auto lg:mx-0 lg:ml-auto rounded-[16px]">
             <Image 
               src="/assets/boxPics/1.png"
               alt="What we do 1"
@@ -60,7 +60,7 @@ export function WhatWeDoSection() {
 
           {/* Box 2 (Top Right) */}
           <StaggerItem className="w-full">
-            <div className="relative overflow-hidden w-full max-w-[380px] h-[282px] mx-auto lg:mx-0 lg:ml-auto rounded-[16px]">
+            <div className="relative overflow-hidden w-full max-w-[420px] h-[282px] mx-auto lg:mx-0 lg:ml-auto rounded-[16px]">
             <Image 
               src="/assets/boxPics/2.png"
               alt="What we do 2"
@@ -86,7 +86,7 @@ export function WhatWeDoSection() {
 
           {/* Box 3 (Bottom Left) */}
           <StaggerItem className="w-full">
-            <div className="relative overflow-hidden w-full max-w-[380px] h-[282px] mx-auto lg:mx-0 lg:ml-auto rounded-[16px]">
+            <div className="relative overflow-hidden w-full max-w-[420px] h-[282px] mx-auto lg:mx-0 lg:ml-auto rounded-[16px]">
             <Image 
               src="/assets/boxPics/3.png"
               alt="What we do 3"
@@ -112,7 +112,7 @@ export function WhatWeDoSection() {
 
           {/* Box 4 (Bottom Right) */}
           <StaggerItem className="w-full">
-            <div className="relative overflow-hidden w-full max-w-[380px] h-[282px] mx-auto lg:mx-0 lg:ml-auto rounded-[16px]">
+            <div className="relative overflow-hidden w-full max-w-[420px] h-[282px] mx-auto lg:mx-0 lg:ml-auto rounded-[16px]">
             <Image 
               src="/assets/boxPics/4.png"
               alt="What we do 4"

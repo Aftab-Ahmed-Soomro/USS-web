@@ -17,7 +17,7 @@ const deliverableItems = [
 
 export function PerformanceMarketing() {
   return (
-    <section className="bg-[#f5f4f1] px-6 py-16 sm:py-20 lg:px-12 xl:px-20">
+    <section className="bg-[#f5f4f1] px-6 py-16 sm:py-20">
       <div className="mx-auto max-w-[1200px] grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
         {/* ── LEFT: Text Column ── */}
