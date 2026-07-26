@@ -16,7 +16,7 @@ export default function DedicatedPartner() {
       <div className="w-full max-w-[1150px]">
         
         {/* Top Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 mb-16 lg:mb-48">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 mb-10 lg:mb-48">
           
           {/* Left: Heading */}
           <div className="lg:col-span-8">
@@ -53,11 +53,11 @@ export default function DedicatedPartner() {
         {/* Bottom: Stats */}
         <div className="flex justify-between gap-2 sm:gap-12 md:gap-0 w-full">
           {stats.map((stat, index) => (
-            <div key={index} className="flex flex-col items-start lg:items-start">
-              <span className="font-medium text-[40px] leading-[40px] sm:text-[48px] sm:leading-[48px] lg:text-[88px] lg:leading-[88px] tracking-[-1px] lg:tracking-[-1.76px] align-middle mb-2 lg:mb-4">
+            <div key={index} className="flex flex-col items-start">
+              <span className="font-medium text-[24px] min-[375px]:text-[28px] leading-[1.1] sm:text-[48px] sm:leading-[48px] lg:text-[88px] lg:leading-[88px] tracking-[-0.5px] lg:tracking-[-1.76px] mb-1.5 sm:mb-2 lg:mb-4">
                 {stat.number}
               </span>
-              <span className="font-normal text-[11px] leading-[18px] lg:text-[13px] lg:leading-[19.5px] tracking-[0.32px] align-middle text-[#a3a3a3]">
+              <span className="font-normal text-[10px] min-[375px]:text-[11px] leading-[1.3] lg:text-[13px] lg:leading-[19.5px] tracking-[0.32px] text-[#a3a3a3]">
                 {stat.label}
               </span>
             </div>

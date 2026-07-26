@@ -464,7 +464,7 @@ export default function MarketingStrategyPage() {
               every digital touchpoint should <br className="hidden sm:block" />
               have its {" "}
                 <span
-                  className="text-white italic font-normal font-[var(--font-cormorant)] timesFontFamily text-[46px] sm:text-[72px] leading-[0] sm:leading-[69.36px] tracking-[-1.5px] sm:tracking-[-2px]"
+                  className="text-[#FF5500] italic font-normal font-[var(--font-cormorant)] timesFontFamily text-[46px] sm:text-[72px] leading-[0] sm:leading-[69.36px] tracking-[-1.5px] sm:tracking-[-2px]"
                 >
                   own strategy
                 </span>

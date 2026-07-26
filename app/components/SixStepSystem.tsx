@@ -146,12 +146,12 @@ export function SixStepSystem({ heading, data = defaultSteps }: SixStepSystemPro
                     onClick={() => setActiveStepId(isActiveMobile ? null : step.id)}
                   >
                     <span
-                      className={`font-normal mt-2 sm:mt-3 transition-colors duration-300 text-[13px] leading-[19.5px] ${isActiveMobile ? 'max-lg:text-[#FF5500]' : 'max-lg:text-[#EAEAEA]'} ${isActiveDesktop ? 'lg:text-[#FF5500]' : 'lg:text-[#EAEAEA]'}`}
+                      className={`font-normal mt-1 sm:mt-3 transition-colors duration-300 text-[13px] leading-[19.5px] ${isActiveMobile ? 'max-lg:text-[#FF5500]' : 'max-lg:text-[#EAEAEA]'} ${isActiveDesktop ? 'lg:text-[#FF5500]' : 'lg:text-[#EAEAEA]'}`}
                     >
                       {step.id}
                     </span>
                     <h3
-                      className={`font-medium transition-colors duration-300 text-[28px] sm:text-[34px] lg:text-[38px] xl:text-[40px] leading-[1.2] tracking-[-1px] whitespace-normal sm:whitespace-nowrap ${isActiveMobile ? 'max-lg:text-white' : 'max-lg:text-[#4A4A4A]'} ${isActiveDesktop ? 'lg:text-white' : 'lg:text-[#4A4A4A]'}`}
+                      className={`font-medium transition-colors duration-300 text-[24px] sm:text-[34px] lg:text-[38px] xl:text-[40px] leading-[1.2] tracking-[-1px] whitespace-normal sm:whitespace-nowrap ${isActiveMobile ? 'max-lg:text-white' : 'max-lg:text-[#4A4A4A]'} ${isActiveDesktop ? 'lg:text-white' : 'lg:text-[#4A4A4A]'}`}
                     >
                       {step.title}
                     </h3>

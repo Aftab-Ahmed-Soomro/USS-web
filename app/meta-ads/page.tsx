@@ -413,7 +413,7 @@ export default function MetaAdsPage() {
         imageSrc="/assets/metaSide.png"
         imageAlt="Meta Ads strategy expert"
         logoSrc="/assets/meta_logo_2.png"
-        headingPrefix="Meta"
+        // headingPrefix="Meta"
         headingItalic="ads"
         headingSuffix="works"
         items={[

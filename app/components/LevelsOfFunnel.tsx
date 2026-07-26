@@ -275,11 +275,19 @@ export function LevelsOfFunnel() {
                               {lvl.name}
                             </span>
                           </div>
-                          <span className={`text-xs transition-transform duration-300 ${
-                            isActive ? "text-[#FF5500] rotate-90" : "text-white/40"
-                          }`}>
-                            ▶
-                          </span>
+                          <svg
+                            className={`size-4 shrink-0 transition-transform duration-300 ${
+                              isActive ? "text-[#FF5500] rotate-90" : "text-white/40"
+                            }`}
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
+                            <path d="M9 18l6-6-6-6" />
+                          </svg>
                         </button>
 
                         {/* Collapsible Text Content */}

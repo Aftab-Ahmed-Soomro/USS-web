@@ -101,22 +101,29 @@ export function RevenueMethod({ heading = DEFAULT_HEADING, cards = DEFAULT_CARDS
                       {card.id}
                     </div>
 
-                    {/* Bottom Content Group (Animates Up on Hover or Tap) */}
-                    <div className={`transform transition-transform duration-500 ease-out will-change-transform ${isActive ? 'translate-y-0' : 'translate-y-[80px] sm:group-hover:translate-y-0'}`}>
-
-                      {/* Title */}
+                    {/* Bottom Content Group */}
+                    <div className="mt-auto flex flex-col justify-end">
+                      {/* Title - Always 100% visible, never cut off */}
                       <h3
-                        className="text-[18px] sm:text-[22.64px] font-normal leading-[1.3] sm:leading-[26.78px] tracking-[0%] text-white align-middle mb-[8px] sm:mb-3"
+                        className="text-[18px] sm:text-[22.64px] font-normal leading-[1.3] sm:leading-[26.78px] tracking-[0%] text-white align-middle transition-transform duration-300"
                       >
                         {card.title}
                       </h3>
 
-                      {/* Description (Fades and slides in cleanly) */}
-                      <p
-                        className={`text-[14px] sm:text-[15.5px] font-normal leading-[1.4] sm:leading-[18.86px] tracking-[0%] text-white/90 align-middle transition-opacity duration-500 delay-75 ease-out ${isActive ? 'opacity-100' : 'opacity-0 sm:group-hover:opacity-100'}`}
+                      {/* Description - Expands smoothly on Hover or Tap */}
+                      <div
+                        className={`grid transition-all duration-500 ease-in-out sm:group-hover:grid-rows-[1fr] sm:group-hover:opacity-100 ${
+                          isActive ? 'grid-rows-[1fr] opacity-100 mt-2 sm:mt-3' : 'grid-rows-[0fr] opacity-0 mt-0 sm:group-hover:mt-2 sm:group-hover:sm:mt-3'
+                        }`}
                       >
-                        {card.description}
-                      </p>
+                        <div className="overflow-hidden">
+                          <p
+                            className="text-[14px] sm:text-[15.5px] font-normal leading-[1.4] sm:leading-[18.86px] tracking-[0%] text-white/90 align-middle"
+                          >
+                            {card.description}
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </StaggerItem>

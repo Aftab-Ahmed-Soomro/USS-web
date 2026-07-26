@@ -93,7 +93,7 @@ export function EmailVisuals() {
           <StaggerItem>
             <h2 className="max-w-[400px] font-[var(--font-be-vietnam)] text-[32px] sm:text-[37px] text-black font-medium leading-[1.02] tracking-[-3%] lg:text-[56px]">
                 email design{" "}
-                <span className="block font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal timesFontFamily leading-[1.1] sm:leading-none tracking-[-3%] italic">
+                <span className="sm:block font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal timesFontFamily leading-[1.1] sm:leading-none tracking-[-3%] italic">
                   visuals
                 </span>
             </h2>

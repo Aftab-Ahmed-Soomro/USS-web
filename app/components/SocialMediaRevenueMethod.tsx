@@ -27,6 +27,7 @@ const CARDS_DATA = [
 
 export default function SocialMediaRevenueMethod() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [activeMobileIndex, setActiveMobileIndex] = useState<number | null>(null);
 
   const getFlex = (index: number): number => {
     if (hoveredIndex === null) return index === 0 ? 2 : 1;
@@ -112,30 +113,42 @@ export default function SocialMediaRevenueMethod() {
 
             {/* Mobile: stacked */}
             <div className="flex md:hidden flex-col gap-4 min-[390px]:gap-6">
-              {CARDS_DATA.map((card) => (
-                <div
-                  key={card.id}
-                  tabIndex={0}
-                  style={{
-                    backgroundImage: "url(" + card.bgImage + ")",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }}
-                  className="group relative h-[340px] min-[360px]:h-[360px] min-[390px]:h-[400px] rounded-[28px] overflow-hidden p-5 min-[390px]:p-6 flex flex-col justify-between cursor-pointer focus:outline-none"
-                >
-                  <div className="text-[9.82px] font-medium tracking-[2.95px] text-white opacity-80">
-                    {card.id}
+              {CARDS_DATA.map((card, index) => {
+                const isMobileActive = activeMobileIndex === index;
+                return (
+                  <div
+                    key={card.id}
+                    tabIndex={0}
+                    onClick={() => setActiveMobileIndex(isMobileActive ? null : index)}
+                    style={{
+                      backgroundImage: "url(" + card.bgImage + ")",
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }}
+                    className="group relative h-[220px] rounded-[28px] overflow-hidden p-6 flex flex-col justify-between cursor-pointer focus:outline-none"
+                  >
+                    <div className="text-[9.82px] font-medium tracking-[2.95px] text-white opacity-80">
+                      {card.id}
+                    </div>
+                    <div className="mt-auto flex flex-col justify-end">
+                      <h3 className="text-[18px] sm:text-[22.64px] font-normal leading-[1.3] sm:leading-[26.78px] tracking-[0%] text-white transition-transform duration-300">
+                        {card.title}
+                      </h3>
+                      <div
+                        className={`grid transition-all duration-500 ease-in-out ${
+                          isMobileActive ? 'grid-rows-[1fr] opacity-100 mt-2 sm:mt-3' : 'grid-rows-[0fr] opacity-0 mt-0'
+                        }`}
+                      >
+                        <div className="overflow-hidden">
+                          <p className="text-[14px] sm:text-[15.5px] font-normal leading-[1.4] sm:leading-[18.86px] tracking-[0%] text-white/90">
+                            {card.description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="transform translate-y-[80px] group-focus:translate-y-0 transition-transform duration-500 ease-out will-change-transform">
-                    <h3 className="text-[20px] min-[360px]:text-[22.64px] font-normal leading-[26.78px] text-white mb-2 min-[360px]:mb-3">
-                      {card.title}
-                    </h3>
-                    <p className="text-[14px] min-[360px]:text-[15.5px] font-normal leading-[1.6] min-[360px]:leading-[1.8] text-white/90 opacity-0 group-focus:opacity-100 transition-opacity duration-500 delay-75 ease-out">
-                      {card.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </StaggerItem>
 

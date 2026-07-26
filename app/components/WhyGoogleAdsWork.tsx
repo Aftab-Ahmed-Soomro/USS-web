@@ -59,32 +59,32 @@ export function WhyGoogleAdsWork({
           </FadeLeft>
 
           {/* Right - Content */}
-            <div className="flex-1 w-full flex flex-col justify-center items-center px-4 sm:px-6 lg:px-0 py-[40px] sm:py-[60px] lg:py-0">
+            <div className="flex-1 w-full flex flex-col justify-center items-center px-6 py-[40px] sm:py-[60px] lg:py-0">
             {/* Heading */}
             <div className="w-full flex justify-center">
               <FadeRight delay={0.1}>
               <h2
-                className="text-white mb-[24px] sm:mb-[40px] text-center lg:text-left pr-1 font-[var(--font-be-vietnam)] font-medium text-[32px] min-[375px]:text-[36px] sm:text-[clamp(36px,5vw,56px)] leading-[1.1] tracking-[-1.5px] sm:tracking-[-3px] flex items-center justify-center lg:justify-start gap-1.5 sm:gap-2.5 flex-wrap"
+                className="text-white mb-[24px] sm:mb-[40px] text-center lg:text-left pr-1 font-[var(--font-be-vietnam)] font-medium text-[22px] min-[360px]:text-[26px] min-[400px]:text-[30px] sm:text-[clamp(36px,5vw,56px)] leading-[1.1] tracking-[-1px] sm:tracking-[-3px] flex items-center justify-center lg:justify-start gap-1 sm:gap-2.5 flex-nowrap whitespace-nowrap"
               >
                 <span>why</span>
                 {logoSrc && (
-                  <span className="inline-flex items-center shrink-0 mx-1 sm:mx-1.5">
+                  <span className="inline-flex items-center shrink-0 mx-0.5 sm:mx-1.5">
                     <Image
                       src={logoSrc}
                       alt="Logo"
                       width={180}
                       height={60}
-                      className={logoClassName || "h-[0.85em] sm:h-[0.9em] w-auto object-contain inline-block self-center"}
+                      className={logoClassName || "h-[0.75em] sm:h-[0.9em] w-auto object-contain inline-block self-center"}
                     />
                   </span>
                 )}
                 {headingPrefix && (
-                  <span className="font-medium text-[32px] min-[375px]:text-[36px] sm:text-[clamp(36px,5vw,56px)] tracking-[-1.5px] sm:tracking-[-3px]">
+                  <span className="font-medium text-[22px] min-[360px]:text-[26px] min-[400px]:text-[30px] sm:text-[clamp(36px,5vw,56px)] tracking-[-1px] sm:tracking-[-3px]">
                     {headingPrefix}
                   </span>
                 )}
                 <span
-                  className="font-normal italic text-[38px] min-[375px]:text-[44px] sm:text-[clamp(44px,6vw,72px)] tracking-[-1.5px] sm:tracking-[-3px]"
+                  className="font-normal italic text-[26px] min-[360px]:text-[32px] min-[400px]:text-[36px] sm:text-[clamp(44px,6vw,72px)] tracking-[-1px] sm:tracking-[-3px]"
                   style={{ fontFamily: "'Times New Roman', Times, serif" }}
                 >
                   {headingItalic}

@@ -138,7 +138,7 @@ function Hero() {
               turn your email database {" "}
               <br className="hidden sm:block" />
               into a{" "}
-              <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white leading-[0] sm:leading-[103.04px] tracking-[-1px] sm:tracking-[-2.8px]">
+              <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white leading-[1.1] sm:leading-[103.04px] tracking-[-1px] sm:tracking-[-2.8px]">
                 revenue engine
               </span>
             </h1>
