@@ -36,22 +36,21 @@ export function WhyWhatsappWorks() {
         </Stagger>
         <FadeUp delay={0.2}>
           <div className="relative w-full mt-8 sm:mt-12">
-            <div 
+            <div
               className="flex w-full h-[400px] sm:h-[500px] lg:h-[700px] flex-row gap-0 overflow-hidden"
               onMouseLeave={() => setActive(3)}
             >
-              {[1, 2, 3, 4, 5].map((num) => (
+              {[3, 2, 1, 4, 5].map((num) => (
                 <article
                   key={num}
                   tabIndex={0}
                   onMouseEnter={() => setActive(num)}
                   onClick={() => setActive(num)}
                   onFocus={() => setActive(num)}
-                  className={`group relative cursor-pointer overflow-hidden transition-all duration-500 ease-in-out outline-none ${
-                    active === num
+                  className={`group relative cursor-pointer overflow-hidden transition-all duration-500 ease-in-out outline-none ${active === num
                       ? "flex-[4] sm:flex-[2]"
                       : "flex-1"
-                  }`}
+                    }`}
                 >
                   <div className="absolute inset-0 z-0 h-full w-full overflow-hidden border-r border-black last:border-none">
                     <div
@@ -62,7 +61,7 @@ export function WhyWhatsappWorks() {
                         src={`/assets/whatsapp-and-sms/${num}.png`}
                         alt={`Why WhatsApp and SMS Work ${num}`}
                         fill
-                        className="object-cover object-left"
+                        className="object-cover object-right"
                         sizes="(max-width: 640px) 225px, (max-width: 1024px) 282px, 394px"
                       />
                     </div>

@@ -59,9 +59,9 @@ const rightColumnData = [
     category: "Wellness Business",
     title: "Bushra Therapy",
     description: "a data-driven digital marketing partner for a modern brokerage — native where it beats adversity, silence where it doesn't.",
-    image: "/assets/rightColumnImages/3.png",
+    image: "/assets/WebsiteWithoutCTA.png",
     link: "https://bushratherapy.com/",
-    imageClass: "object-[10%_0%]"
+    imageClass: "object-[58%_0%]"
   }
 ];
 

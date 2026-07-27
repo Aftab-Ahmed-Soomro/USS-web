@@ -148,7 +148,7 @@ export function BuildGrowthSection() {
       </motion.div>
 
       {/* TAB CONTENTS WITH BEHTREEN ANIMATION */}
-      <div className="relative w-full max-w-[1250px] mx-auto mt-16 sm:mt-24 px-4 pb-20 grid grid-cols-1 grid-rows-1">
+      <div className="relative w-full max-w-[1250px] mx-auto mt-8 sm:mt-24 px-4 pb-20 grid grid-cols-1 grid-rows-1">
 
         {/* PERFORMANCE TAB CONTENT */}
         <div
@@ -158,7 +158,7 @@ export function BuildGrowthSection() {
             }`}
         >
           {/* Left Circle & Content */}
-          <div className="xl:absolute xl:-left-24 2xl:-left-44 xl:top-0 relative w-full max-w-[450px] sm:max-w-[750px] aspect-square flex flex-col items-start justify-center xl:justify-start xl:pt-16 shrink-0 z-0 mx-auto xl:mx-0">
+          <div className="hidden sm:block xl:absolute xl:-left-24 2xl:-left-44 xl:top-0 relative w-full max-w-[450px] sm:max-w-[750px] aspect-square flex flex-col items-start justify-center xl:justify-start xl:pt-16 shrink-0 z-0 mx-auto xl:mx-0">
             <div className="absolute inset-0 z-0 pointer-events-none -left-[10%] xl:-left-[35%] 2xl:-left-[45%] scale-[1.35]">
               <Image
                 src="/assets/performanceCircle2.png"
@@ -289,7 +289,7 @@ export function BuildGrowthSection() {
             }`}
         >
           {/* Left Circle & Content */}
-          <div className="xl:absolute xl:-left-24 2xl:-left-44 xl:top-0 relative w-full max-w-[450px] sm:max-w-[650px] aspect-square flex flex-col items-start justify-center xl:justify-start xl:pt-16 shrink-0 z-0 mx-auto xl:mx-0">
+          <div className="hidden sm:block xl:absolute xl:-left-24 2xl:-left-44 xl:top-0 relative w-full max-w-[450px] sm:max-w-[650px] aspect-square flex flex-col items-start justify-center xl:justify-start xl:pt-16 shrink-0 z-0 mx-auto xl:mx-0">
             <div className="absolute inset-0 z-0 pointer-events-none -left-[22%] xl:-left-[35%] 2xl:-left-[45%] scale-[1.35]">
               <Image
                 src="/assets/creativeCircle.png"
@@ -341,7 +341,7 @@ export function BuildGrowthSection() {
                     <p className="font-[var(--font-be-vietnam)] font-light text-[11px] leading-[1.35] text-[#A3A3A3] group-hover:text-white/90 mt-1 line-clamp-3">{card.desc}</p>
                   </div>
                   <div className="mt-auto pt-2 flex items-center">
-                    <a href={card.href} className="flex items-center justify-between gap-1 w-full bg-[#FF5500] group-hover:bg-white text-white group-hover:text-black font-[var(--font-be-vietnam)] font-medium text-[10px] leading-none px-3 py-2 rounded-full transition-colors duration-300 cursor-pointer">
+                    <a href={card.href} className="flex items-center justify-between gap-1 w-full bg-white text-black group-hover:bg-white group-hover:text-black font-[var(--font-be-vietnam)] font-medium text-[10px] leading-none px-3 py-2 rounded-full transition-colors duration-300 cursor-pointer">
                       <span className="truncate">{card.link}</span>
                       <span className="text-[12px] leading-none shrink-0">&gt;</span>
                     </a>
@@ -372,7 +372,7 @@ export function BuildGrowthSection() {
                       <p className="font-[var(--font-be-vietnam)] font-light text-[16px] leading-[24.38px] text-[#A3A3A3] group-hover:text-white/90 mt-4">{card.desc}</p>
                     </div>
                     <div className="mt-auto pt-6 flex items-center">
-                      <a href={card.href} className="flex items-center gap-1.5 bg-[#FF5500] group-hover:bg-white text-white group-hover:text-black font-[var(--font-be-vietnam)] font-medium text-xs leading-[20px] px-5 py-2.5 rounded-full transition-colors duration-300 cursor-pointer">
+                      <a href={card.href} className="flex items-center gap-1.5 bg-white text-black group-hover:bg-white group-hover:text-black font-[var(--font-be-vietnam)] font-medium text-xs leading-[20px] px-5 py-2.5 rounded-full transition-colors duration-300 cursor-pointer">
                         {card.link}
                         <span className="text-[14px] leading-none mb-[1px] ml-1">&gt;</span>
                       </a>
@@ -400,7 +400,7 @@ export function BuildGrowthSection() {
                       <p className="font-[var(--font-be-vietnam)] font-light text-[16px] leading-[24.38px] text-[#A3A3A3] group-hover:text-white/90 mt-4">{card.desc}</p>
                     </div>
                     <div className="mt-auto pt-6 flex items-center">
-                      <a href={card.href} className="flex items-center gap-1.5 bg-[#FF5500] group-hover:bg-white text-white group-hover:text-black font-[var(--font-be-vietnam)] font-medium text-xs leading-[20px] px-5 py-2.5 rounded-full transition-colors duration-300 whitespace-nowrap cursor-pointer">
+                      <a href={card.href} className="flex items-center gap-1.5 bg-white text-black group-hover:bg-white group-hover:text-black font-[var(--font-be-vietnam)] font-medium text-xs leading-[20px] px-5 py-2.5 rounded-full transition-colors duration-300 whitespace-nowrap cursor-pointer">
                         {card.link}
                         <span className="text-[14px] leading-none mb-[1px] ml-1">&gt;</span>
                       </a>
