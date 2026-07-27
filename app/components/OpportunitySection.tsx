@@ -59,30 +59,43 @@ export function OpportunitySection() {
 
         {/* Middle Column */}
         <StaggerItem className="w-full md:w-auto">
-          <div className="w-full md:w-[380px]">
-          <div className="relative w-full h-[417px] min-h-[417px] shrink-0 rounded-[16px] overflow-hidden">
-            <Image 
-              src="/assets/opportunity/2.jpg"
-              alt="Content Creation"
-              fill
-              className="object-cover object-center"
-            />
-            {/* Overlay Text */}
-            <div className="absolute top-0 left-0 w-full h-full p-8 flex flex-col justify-start bg-black/20">
+          <div className="flex flex-col w-full md:w-[380px]">
+            <div className="relative w-full h-[332px] md:h-[417px] md:min-h-[417px] shrink-0 rounded-[16px] overflow-hidden mb-5 md:mb-0">
+              <Image 
+                src="/assets/opportunity/2.jpg"
+                alt="Content Creation"
+                fill
+                className="object-cover object-center"
+              />
+              {/* Overlay Text - Desktop Only */}
+              <div className="hidden md:flex absolute top-0 left-0 w-full h-full p-8 flex-col justify-start bg-black/20">
+                <h3 
+                  className="font-semibold text-white font-[var(--font-inter)] mb-2 text-[32px] sm:text-[40px] leading-[1.1] sm:leading-[37.14px] tracking-[-1px] sm:tracking-[-1.34px]"
+                  style={{ textShadow: "0px 2px 10px rgba(0,0,0,0.8)" }}
+                >
+                  4-6x
+                </h3>
+                <p 
+                  className="font-normal text-white/90 font-[var(--font-inter)] max-w-[280px] text-[13px] sm:text-[16px] leading-[1.6] sm:leading-[21.12px]"
+                  style={{ textShadow: "0px 1px 8px rgba(0,0,0,0.8)" }}
+                >
+                  average uplift in affiliate conversion rates during black friday week
+                </p>
+              </div>
+            </div>
+            {/* Text - Mobile Only */}
+            <div className="text-left md:hidden">
               <h3 
-                className="font-semibold text-white font-[var(--font-inter)] mb-2 text-[32px] sm:text-[40px] leading-[1.1] sm:leading-[37.14px] tracking-[-1px] sm:tracking-[-1.34px]"
-                style={{ textShadow: "0px 2px 10px rgba(0,0,0,0.8)" }}
+                className="font-semibold text-white font-[var(--font-inter)] mb-1 text-[32px] sm:text-[40px] leading-[1.1] sm:leading-[37.14px] tracking-[-1px] sm:tracking-[-1.34px]"
               >
                 4-6x
               </h3>
               <p 
-                className="font-normal text-white/90 font-[var(--font-inter)] max-w-[280px] text-[13px] sm:text-[16px] leading-[1.6] sm:leading-[21.12px]"
-                style={{ textShadow: "0px 1px 8px rgba(0,0,0,0.8)" }}
+                className="font-normal text-white/80 font-[var(--font-inter)] lowercase text-[13px] sm:text-[16px] leading-[1.6] sm:leading-[21.12px]"
               >
                 average uplift in affiliate conversion rates during black friday week
               </p>
             </div>
-          </div>
           </div>
         </StaggerItem>
 

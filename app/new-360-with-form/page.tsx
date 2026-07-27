@@ -234,25 +234,25 @@ function Hero() {
         <Stagger staggerDelay={0.15}>
 
           <StaggerItem>
-            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[50%] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white">
-              we don’t just {" "}
+            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold  leading-[50%] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white">
+              We don’t just {" "}
               <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white tracking-[-1px] sm:tracking-[-2.8px]">
-                market
+                market.
               </span>
             </h1>
-            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[50%] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white">
-              we scale{" "}
+            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold  leading-[50%] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white">
+              We scale{" "}
               <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white tracking-[-1px] sm:tracking-[-2.8px]">
-                brands
+                brands.
               </span>
             </h1>
           </StaggerItem>
           <StaggerItem>
             <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[600px] font-[var(--font-inter)] text-[13px] text-white/90 sm:text-[18px]">
-              We are a 360 digital marketing agency that combine strategy, creative and performance marketing into one connected system designed to scale your business.
+              Our 360 marketing approach brings strategy, creative and performance together, creating one connected system that works towards the same goal.
             </p>
             <p className="mt-[40px] max-w-[600px] font-[var(--font-inter)] text-[13px]  text-white/90 sm:text-[18px]">
-              Trusted by 100+ SMEs across UK, US & UAE.
+Trusted by over 100 businesses across the UK, US and UAE
             </p>
           </StaggerItem>
           <StaggerItem>

@@ -203,36 +203,70 @@ function Card({ icon, subtitle, title, heading, description, align }: CardProps)
   const isRightAligned = align === "right";
 
   return (
-    <div className={`p-5 min-[375px]:p-6 sm:p-8 rounded-[20px] sm:rounded-[24px] bg-[#111111] border border-white/5 flex flex-col ${isRightAligned ? "items-end text-right" : "items-start text-left"}`}>
-      <div className="flex items-center gap-2 sm:gap-3">
-        {/* <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#1A1A1A] border border-white/10 flex items-center justify-center shrink-0">
-          <Image src={icon} alt="" width={16} height={16} className="object-contain w-3.5 h-3.5 sm:w-4 sm:h-4" />
-        </div> */}
-        <span className="text-[10px] sm:text-[12px] font-normal leading-[14px] sm:leading-[16px] tracking-[1.5px] sm:tracking-[2.16px] uppercase text-[#888888]">
-          {subtitle}
-        </span>
+    <>
+      {/* ── Mobile layout: stat left, text right ── */}
+      <div className={`sm:hidden p-4 rounded-[20px] bg-[#111111] border border-white/5 flex flex-row items-center gap-3`}>
+        {/* Stat on the left */}
+        <div className="flex-shrink-0 w-[72px]">
+          <h3
+            className="text-[26px] font-semibold leading-[30px] tracking-[-0.5px]"
+            style={{
+              background: 'linear-gradient(90deg, #FFFFFF 0%, #FFB08C 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              color: 'transparent'
+            }}
+          >
+            {title}
+          </h3>
+        </div>
+        {/* Text on the right */}
+        <div className="flex flex-col flex-1">
+          <span className="text-[9px] font-normal leading-[14px] tracking-[1.5px] uppercase text-[#888888]">
+            {subtitle}
+          </span>
+          <h4 className="mt-1 text-[13px] font-semibold leading-[18px] text-[#EEEEEE]">
+            {heading}
+          </h4>
+          <p className="mt-0.5 text-[11px] font-normal leading-[16px] text-[#888888]">
+            {description}
+          </p>
+        </div>
       </div>
-      
-      <h3 
-        className="mt-4 sm:mt-6 text-[28px] min-[375px]:text-[32px] sm:text-[36px] font-semibold leading-[32px] sm:leading-[40px] tracking-[-0.5px] sm:tracking-[-0.9px]"
-        style={{
-          background: 'linear-gradient(90deg, #FFFFFF 0%, #FFB08C 100%)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-          color: 'transparent'
-        }}
-      >
-        {title}
-      </h3>
-      
-      <h4 className="mt-2 text-[16px] sm:text-[18px] font-semibold leading-[24px] sm:leading-[28px] text-[#EEEEEE]">
-        {heading}
-      </h4>
-      
-      <p className="mt-1 sm:mt-2 text-[12px] font-normal leading-[20px] sm:leading-[22.75px] text-[#888888]">
-        {description}
-      </p>
-    </div>
+
+      {/* ── Desktop layout: original vertical card ── */}
+      <div className={`hidden sm:flex p-8 rounded-[24px] bg-[#111111] border border-white/5 flex-col ${isRightAligned ? "items-end text-right" : "items-start text-left"}`}>
+        <div className="flex items-center gap-3">
+          {/* <div className="w-8 h-8 rounded-full bg-[#1A1A1A] border border-white/10 flex items-center justify-center shrink-0">
+            <Image src={icon} alt="" width={16} height={16} className="object-contain w-4 h-4" />
+          </div> */}
+          <span className="text-[12px] font-normal leading-[16px] tracking-[2.16px] uppercase text-[#888888]">
+            {subtitle}
+          </span>
+        </div>
+
+        <h3
+          className="mt-6 text-[36px] font-semibold leading-[40px] tracking-[-0.9px]"
+          style={{
+            background: 'linear-gradient(90deg, #FFFFFF 0%, #FFB08C 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            color: 'transparent'
+          }}
+        >
+          {title}
+        </h3>
+
+        <h4 className="mt-2 text-[18px] font-semibold leading-[28px] text-[#EEEEEE]">
+          {heading}
+        </h4>
+
+        <p className="mt-2 text-[12px] font-normal leading-[22.75px] text-[#888888]">
+          {description}
+        </p>
+      </div>
+    </>
   );
 }

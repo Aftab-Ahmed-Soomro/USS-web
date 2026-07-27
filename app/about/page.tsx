@@ -69,12 +69,12 @@ export default function AboutPage() {
             <div className="flex flex-col w-full">
 
               {/* Bio + Map row */}
-              <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 lg:gap-16 mb-6">
+              <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 lg:gap-14 mb-6">
 
                 {/* Bio text — rises up */}
                 <FadeUp delay={0.3}>
-                  <p className="text-[13px] sm:text-[14px] leading-[23.8px] font-light text-[#F5F5F5] max-w-full sm:max-w-[320px] text-center sm:text-start">
-                    My name is Emmanuel, Founder & CEO of USS. Over the past 12 years, I have built & scaled multiple businesses across the US, UK & Middle East, both my own companies and for clients. Having worked with 50+ SME clients across multiple industries at different stages of growth.
+                  <p className="text-[13px] sm:text-[14px] leading-[23.8px] font-light text-[#F5F5F5] max-w-full sm:max-w-[350px] text-center sm:text-start">
+                    My name is Emmanuel, Founder & CEO of USS. I've built and scaled multiple businesses, both my own companies and for clients. Having worked with over 50 SME clients across a wide range of industries, I've seen what it takes to grow a business at every stage.
                   </p>
                 </FadeUp>
 
@@ -113,13 +113,13 @@ export default function AboutPage() {
               {/* Quote — rises up */}
               <FadeUp delay={0.45}>
                 <blockquote className="text-[1.25rem] min-[375px]:text-[1.45rem] mt-0 sm:mt-4 md:text-[1.65rem] lg:text-[32px] font-medium leading-[30px] sm:leading-[35px] tracking-[0%] text-white max-w-[500px] text-center sm:text-start">
-                  &ldquo;Structured marketing systems that generate revenue.&rdquo;
+                  &ldquo;Structured marketing systems built for long term growth.&rdquo;
                 </blockquote>
               </FadeUp>
 
               {/* Signed row — slides in from right */}
               <FadeRight delay={0.55}>
-                <div className="mt-10 sm:mt-22 flex items-center w-full gap-4">
+                <div className="mt-10 sm:mt-24 flex items-center w-full gap-4">
                   <div className="h-[1px] bg-white/20 flex-grow" />
                   <span className="text-[#F5F5F5] text-[9px] font-medium tracking-[3px] shrink-0 uppercase">
                     Signed, E.C.W.

@@ -28,8 +28,8 @@ const steps = [
 
 export default function ConversationFlow() {
   return (
-    <section className="w-full bg-black py-16 sm:py-20 lg:py-32 px-3 sm:px-6 overflow-hidden">
-      <div className="mx-auto max-w-[1100px]">
+    <section className="w-full bg-black py-16 sm:py-20 lg:py-32 px-6 overflow-hidden">
+      <div className="mx-auto max-w-[1150px]">
 
         {/* Header with Icons (Row layout on both Mobile & Desktop) */}
         <div className="flex flex-row items-center justify-between w-full mb-12 sm:mb-16 md:mb-24 gap-2 sm:gap-6">
@@ -39,7 +39,7 @@ export default function ConversationFlow() {
               alt="WhatsApp"
               width={100}
               height={100}
-              className="w-[45px] h-[45px] min-[375px]:w-[55px] min-[375px]:h-[55px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px] object-contain"
+              className="w-[45px] h-[45px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px] object-contain"
             />
           </FadeUp>
 
@@ -67,7 +67,7 @@ export default function ConversationFlow() {
               alt="Message"
               width={100}
               height={100}
-              className="w-[45px] h-[45px] min-[375px]:w-[55px] min-[375px]:h-[55px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px] object-contain"
+              className="w-[45px] h-[45px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px] object-contain"
             />
           </FadeUp>
         </div>

@@ -74,7 +74,7 @@ export function WhyGoogleAdsWork({
                       alt="Logo"
                       width={180}
                       height={60}
-                      className={logoClassName || "h-[0.75em] sm:h-[0.9em] w-auto object-contain inline-block self-center"}
+                      className={logoClassName || "h-[0.85em] sm:h-[0.9em] w-auto object-contain inline-block self-center mt-0.5 sm:mt-0"}
                     />
                   </span>
                 )}
@@ -84,8 +84,8 @@ export function WhyGoogleAdsWork({
                   </span>
                 )}
                 <span
-                  className="font-normal italic text-[26px] min-[360px]:text-[32px] min-[400px]:text-[36px] sm:text-[clamp(44px,6vw,72px)] tracking-[-1px] sm:tracking-[-3px]"
-                  style={{ fontFamily: "'Times New Roman', Times, serif" }}
+                  className="font-medium text-[22px] min-[360px]:text-[26px] min-[400px]:text-[30px] sm:text-[clamp(36px,5vw,56px)] tracking-[-1px] sm:tracking-[-3px]"
+                  
                 >
                   {headingItalic}
                 </span>

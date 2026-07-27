@@ -413,8 +413,8 @@ export default function SocialMediaManagementPage() {
         <EmailMarketingQuote first={"your social media is your"} second={"digital window"} third={"shop front"} />
       </div>
       <OurOrganicSocialMediaApproach />
-      <RelatedProjects />
       <SocialMediaRevenueMethod />
+      <RelatedProjects />
       <SocialServices />
       <Testimonials />
       <GoodCompanyMap />

@@ -35,7 +35,7 @@ const cards = [
 export function PowerOf360() {
   const [items, setItems] = useState(cards);
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  
+
   const activeItem = items[0];
   const thumbnails = items.slice(1);
 
@@ -89,7 +89,7 @@ export function PowerOf360() {
     hoveredCardRef.current = cardId;
     // Don't start if cooldown (1s after last change) is still active
     if (cooldownRef.current) return;
-    
+
     startHoverTimer(cardId);
   };
 
@@ -102,6 +102,21 @@ export function PowerOf360() {
     }
   };
 
+  const handleCardClick = (cardId: string) => {
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+      hoverTimeoutRef.current = null;
+    }
+    jumpTo(cardId);
+    if (cooldownRef.current) clearTimeout(cooldownRef.current);
+    cooldownRef.current = setTimeout(() => {
+      cooldownRef.current = null;
+      if (hoveredCardRef.current) {
+        startHoverTimer(hoveredCardRef.current);
+      }
+    }, 1000);
+  };
+
   return (
     <section
       id="power-of-360"
@@ -111,12 +126,11 @@ export function PowerOf360() {
       <AnimatePresence initial={false}>
         <motion.div
           key={activeItem.id}
-          layoutId={`card-image-${activeItem.id}`}
           className="absolute inset-0 z-0"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+          transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
         >
           <Image
             src={activeItem.image}
@@ -132,7 +146,7 @@ export function PowerOf360() {
       <div className="absolute inset-0 bg-black/55 z-0" />
 
       {/* Content — full-width, relative so absolute children work */}
-      <div className="relative z-10 w-full min-h-screen flex items-center px-6 py-80 lg:px-14 max-md:flex-col max-md:items-start max-md:justify-center max-md:py-24 max-md:gap-12">
+      <div className="relative z-10 w-full flex items-center px-6 pt-24 pb-10 sm:py-80 lg:px-14 max-md:flex-col max-md:items-start max-md:justify-center max-md:gap-4">
         {/* ── LEFT: text block — stays on left ~40% ── */}
         <div className="flex max-w-[450px] flex-col gap-6 flex-shrink-0 max-md:max-w-full max-md:w-full">
           <motion.h2
@@ -279,15 +293,15 @@ export function PowerOf360() {
                 <motion.button
                   key={card.id}
                   layout
-                  layoutId={`card-image-${card.id}`}
-                  onClick={() => jumpTo(card.id)}
+                  layoutId={`thumb-card-${card.id}`}
+                  onClick={() => handleCardClick(card.id)}
                   onMouseEnter={() => handleMouseEnter(card.id)}
                   onMouseLeave={handleMouseLeave}
-                  initial={{ opacity: 0, scale: 0.8, x: 100 }}
+                  initial={{ opacity: 0, scale: 0.9, x: 50 }}
                   animate={{ opacity: 1, scale: 1, x: 0 }}
-                  exit={{ opacity: 0, scale: 0.8, x: -100 }}
-                  transition={{ duration: 1.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-                  className="max-md:!w-[220px] max-md:!h-[280px] max-md:snap-start relative w-[200px] h-[320px] rounded-[16px] overflow-hidden flex-shrink-0 cursor-pointer border-none p-0 group"
+                  exit={{ opacity: 0, scale: 0.9, x: -50 }}
+                  transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                  className="max-md:!w-[220px] max-md:!h-[280px] max-md:snap-start relative w-[200px] h-[320px] rounded-[16px] overflow-hidden flex-shrink-0 cursor-pointer border border-white/10 hover:border-white/40 transition-colors duration-300 p-0 group"
                   aria-label={card.label}
                 >
                   <Image
