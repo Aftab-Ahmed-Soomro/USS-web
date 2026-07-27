@@ -15,22 +15,22 @@ export function LevelsOfFunnel() {
       id: "awareness" as const,
       number: "01",
       name: "Awareness",
-      title: "Build Visibility",
-      desc: "Build Visibility. Introduce your brand to the right audience and generate awareness at scale.",
+      title: "Build Awareness",
+      desc: " Introduce your brand to the right audience and create visibility at scale.",
     },
     {
       id: "consideration" as const,
       number: "02",
       name: "Consideration",
-      title: "Create Demand",
-      desc: "Create Demand. Educate, engage and build trust with people actively considering your solution.",
+      title: "Create Consideration",
+      desc: " Build trust through valuable content, consistent messaging and meaningful engagement.",
     },
     {
       id: "conversion" as const,
       number: "03",
       name: "Conversion",
-      title: "Drive Action",
-      desc: "Drive Action. Turn high-intent audiences into enquiries, purchases or loyal customers.",
+      title: "Drive Conversions",
+      desc: " Turn high intent audiences into enquiries, customers and long term business growth.",
     },
   ];
 
@@ -38,12 +38,12 @@ export function LevelsOfFunnel() {
     <section className="relative w-full bg-black py-[30px] sm:pt-32 px-4 min-[375px]:px-6 overflow-hidden">
       <div className="max-w-[1150px] mx-auto relative z-10">
         <Stagger staggerDelay={0.15}>
-          <div className="flex flex-col lg:grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+          <div className="flex flex-col lg:grid lg:grid-cols-12 gap-8 lg:gap-14 items-center">
 
             {/* Title Column (Order 1 on mobile, Col 1-5 on desktop) */}
             <div className="order-1 lg:order-1 lg:col-span-5 flex flex-col justify-center w-full">
               <StaggerItem>
-                <h2 className="m-0 p-0 mb-4 sm:mb-8 text-white flex flex-row flex-wrap items-baseline gap-x-2 sm:gap-x-3">
+                <h2 className="m-0 p-0 mb-4 sm:mb-8 text-white flex flex-row flex-nowrap whitespace-nowrap items-baseline gap-x-2 sm:gap-x-3">
                   <span
                     style={{
                       fontWeight: 500,
@@ -53,7 +53,7 @@ export function LevelsOfFunnel() {
                       textTransform: 'lowercase',
                     }}
                   >
-                    levels of
+                    full funnel
                   </span>
                   <span
                     className="sm:-mt-[10px]"
@@ -67,7 +67,7 @@ export function LevelsOfFunnel() {
                       textTransform: 'lowercase'
                     }}
                   >
-                    funnel
+                    marketing
                   </span>
                 </h2>
               </StaggerItem>
@@ -76,10 +76,10 @@ export function LevelsOfFunnel() {
               <div className="hidden lg:block">
                 <StaggerItem>
                   <p
-                    className="text-white/90 text-[18px] leading-[1.6] mb-24 max-w-[400px]"
+                    className="text-white/90 text-[18px] leading-[1.6] mb-16 max-w-[400px]"
                     style={{ fontWeight: 300 }}
                   >
-                    The most effective marketing campaigns don't focus only on conversions. They build awareness, nurture consideration and create trust before turning interest into measurable business growth.
+                    Customers don't buy the first time they discover your brand. Every stage of the journey plays a role. They build awareness, create demand and convert high-intent audiences into customers through a connected full funnel approach.
                   </p>
                 </StaggerItem>
 
@@ -93,7 +93,7 @@ export function LevelsOfFunnel() {
                       textTransform: 'uppercase'
                     }}
                   >
-                    full marketing funnel
+                    3 CORE STAGES
                   </p>
                 </StaggerItem>
               </div>
@@ -169,7 +169,7 @@ export function LevelsOfFunnel() {
                     className="text-white/90 text-[13px] leading-[1.55] mb-6"
                     style={{ fontWeight: 300 }}
                   >
-                    The most effective marketing campaigns don't focus only on conversions. They build awareness, nurture consideration and create trust before turning interest into measurable business growth.
+                    Customers don't buy the first time they discover your brand. Every stage of the journey plays a role. They build awareness, create demand and convert high-intent audiences into customers through a connected full funnel approach.
                   </p>
                 </StaggerItem>
 
@@ -183,13 +183,13 @@ export function LevelsOfFunnel() {
                       textTransform: 'uppercase'
                     }}
                   >
-                    full marketing funnel
+                    3 CORE STAGES
                   </p>
                 </StaggerItem>
               </div>
 
               {/* Impressions Card (Desktop Only) */}
-              <FadeUp delay={0.2}>
+              {/* <FadeUp delay={0.2}>
                 <div className="hidden lg:block lg:absolute lg:-top-[150px] lg:left-4 border border-white/10 rounded-[12px] p-4 bg-[#0a0a0a]/80 backdrop-blur-sm w-[120px] mb-8 lg:mb-0">
                   <p
                     className="text-neutral-500 mb-2"
@@ -217,15 +217,23 @@ export function LevelsOfFunnel() {
                     <path d="M0 15 L 20 12 L 40 16 L 60 8 L 80 12 L 100 5" fill="none" stroke="#FF5500" strokeWidth="2" vectorEffect="non-scaling-stroke" />
                   </svg>
                 </div>
-              </FadeUp>
+              </FadeUp> */}
 
-              {/* Desktop View: Stacked Descriptions */}
-              <div className="hidden lg:flex flex-col gap-[70px]">
+              {/* Desktop View: Stacked Descriptions with Titles */}
+              <div className="hidden lg:flex flex-col gap-[50px]">
                 {levelsData.map((lvl) => (
                   <StaggerItem key={lvl.id}>
-                    <div className="flex flex-row items-center justify-start gap-6">
+                    <div className="flex flex-col gap-1.5">
+                      <div className="flex flex-row items-center justify-start gap-4">
+                        <h3 className="text-white font-medium text-[15px] tracking-tight">
+                          {lvl.title}
+                        </h3>
+                        <svg width="30" height="14" viewBox="0 0 30 14" fill="none" stroke="currentColor" strokeWidth="2" className="text-white shrink-0">
+                          <path d="M8 1L1 7M1 7L8 13M1 7H30" />
+                        </svg>
+                      </div>
                       <p
-                        className="text-neutral-300 flex-1 text-left"
+                        className="text-neutral-300 text-left"
                         style={{
                           fontWeight: 400,
                           fontSize: '12px',
@@ -234,9 +242,6 @@ export function LevelsOfFunnel() {
                       >
                         {lvl.desc}
                       </p>
-                      <svg width="30" height="14" viewBox="0 0 30 14" fill="none" stroke="currentColor" strokeWidth="2" className="text-white shrink-0">
-                        <path d="M8 1L1 7M1 7L8 13M1 7H30" />
-                      </svg>
                     </div>
                   </StaggerItem>
                 ))}
@@ -272,7 +277,7 @@ export function LevelsOfFunnel() {
                             <span className={`text-[14px] font-medium tracking-tight ${
                               isActive ? "text-white" : "text-white/80"
                             }`}>
-                              {lvl.name}
+                              {lvl.title}
                             </span>
                           </div>
                           <svg

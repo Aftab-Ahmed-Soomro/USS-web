@@ -235,13 +235,13 @@ function Hero() {
 
           <StaggerItem>
             <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold  leading-[50%] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white">
-              We don’t just {" "}
+              we don’t just {" "}
               <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white tracking-[-1px] sm:tracking-[-2.8px]">
                 market.
               </span>
             </h1>
             <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold  leading-[50%] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white">
-              We scale{" "}
+              we scale{" "}
               <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white tracking-[-1px] sm:tracking-[-2.8px]">
                 brands.
               </span>
@@ -591,7 +591,7 @@ export default function New360WithForm() {
         heading={
           <h2 className="text-[32px] sm:text-[36px] md:text-[64px] lg:text-[75px] leading-[1] tracking-[-1px] lg:tracking-[-3px] font-light lowercase" style={{ fontWeight: 300 }}>
 
-                  from strategy to <span className="relative inline-block z-10 whitespace-nowrap">
+                  from discovery to <span className="relative inline-block z-10 whitespace-nowrap">
                     scale.
 
                     {/* Orange Glow */}

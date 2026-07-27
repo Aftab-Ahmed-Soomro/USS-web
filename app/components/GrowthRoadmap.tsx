@@ -48,7 +48,7 @@ export function GrowthRoadmap() {
                     textTransform: 'uppercase'
                   }}
                 >
-                  04 ROADMAP
+                  THE JOURNEY
                 </p>
               </StaggerItem>
 
@@ -93,7 +93,7 @@ export function GrowthRoadmap() {
                     lineHeight: '30.6px'
                   }}
                 >
-                  Every business needs a clear direction before investing in marketing. USS <br className='hidden sm:block' /> builds bespoke strategic roadmap aligns your goals, audience and <br className='hidden sm:block' /> channels, creating a plan that evolves as your business grows.
+                  Every strategy starts with understanding your business. From there, <br className='hidden sm:block' /> we create a marketing roadmap built around your goals, <br className='hidden sm:block' /> audience and market over a 3 - 6 month time period.
                 </p>
               </StaggerItem>
             </div>

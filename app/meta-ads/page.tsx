@@ -39,7 +39,7 @@ const relatedProjects = [
     image: "/assets/Reclaim grid (95).png",
     copy: "We scaled awareness and customer acquisition across the US using Meta Ads, delivering highly targeted campaigns that generated bookings while maximising return on ad spend.",
     tags: ["Meta Ads", "US Expansion", "Customer Acquisition"],
-    year: "2024",
+    year: "2026",
     imageClassName: "object-cover object-[50%_30%]",
   },
   {
@@ -48,7 +48,7 @@ const relatedProjects = [
     image: "/assets/club.jpg",
     copy: "Using Meta Ads to grow SupperClub memberships, promoting exclusive experiences from 5-star hotel, restaurant and spa partners through highly targeted acquisition campaigns.",
     tags: ["Membership Growth", "Meta Ads", "Hospitality"],
-    year: "2024",
+    year: "2026",
     imageClassName: "object-cover object-[50%_65%]",
   },
 ];
@@ -106,17 +106,21 @@ function Hero() {
       <div className="mx-auto grid max-w-[1150px] gap-8 sm:gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
+                      <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white text-center sm:text-start">
+                        PAID SOCIAL
+                      </p>
+                    </StaggerItem>
+          <StaggerItem>
             <h1 className="mt-[16px] min-[375px]:mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[100%] tracking-[-1.5px] sm:tracking-[-3px] sm:text-[58px] text-white text-center sm:text-start">
-              scale your brand with <br className="block sm:hidden" />
-              meta ads, don’t just <br className="block sm:hidden" />
+              Turn reach into revenue with <br className="block sm:hidden" />
               <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-normal timesFontFamily italic text-[#FF5500] tracking-[-1.5px] sm:tracking-[-2.8px]">
-                spend more.
+                Meta Ads
               </span>
             </h1>
           </StaggerItem>
           <StaggerItem>
             <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[600px] font-[var(--font-inter)] text-[13px] leading-[24px] sm:leading-[32px] text-white/90 sm:text-[18px] text-center sm:text-start">
-              We create and manage Meta Ads across Facebook and Instagram, helping businesses reach the right people, generate more enquiries and grow with confidence.
+              We help businesses reach, engage and convert the right audience through data led paid social campaigns across Meta and LinkedIn.
             </p>
           </StaggerItem>
           {/* <StaggerItem>
@@ -208,13 +212,26 @@ function RelatedProjects() {
         <div className="flex items-center justify-between gap-6">
           <Stagger staggerDelay={0.12}>
             <StaggerItem>
-              <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[56px] font-medium lowercase leading-none tracking-[-0.96px]">
-                related{" "}
-                <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal timesFontFamily italic tracking-[-0.96px]">
-                  projects
-                </span>
-              </h2>
-            </StaggerItem>
+                          <p className="font-[var(--font-be-vietnam)] text-[9px] sm:text-[12px] font-normal uppercase tracking-[4.8px] text-[#ff5500]">
+                            RECENT PROJECTS
+                          </p>
+                        </StaggerItem>
+            <StaggerItem>
+                          <h2 className="mt-[16px] sm:mt-[24px] max-w-[650px] font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[38px] font-medium lowercase leading-[0.9] tracking-[-1.4px] sm:text-[56px]">
+                            see how we turn 
+                            <br />
+                            {" "}
+                            <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] font-normal timesFontFamily italic leading-[1.1] sm:leading-none">
+                              social into growth
+                            </span>
+                          </h2>
+                                      </StaggerItem>
+                          
+            <StaggerItem>
+                          <p className="mt-[14px] max-w-[600px] sm:mt-[18px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.5] text-white/90 sm:text-white">
+                            Explore how we've helped brands build awareness, generate qualified leads and grow through Meta Ads.
+                          </p>
+                        </StaggerItem>
           </Stagger>
 
           <FadeRight delay={0.3}>
@@ -421,25 +438,25 @@ export default function MetaAdsPage() {
             number: "01",
             icon: "/assets/GoogleAds/icon1.png",
             title: "Reach Your Ideal Audience",
-            description: "Target customers based on interests, behaviours, location and intent.",
+            description: "Reach customers by interests, behaviours, location and demographics.",
           },
           {
             number: "02",
             icon: "/assets/GoogleAds/icon2.png",
             title: "Generate Qualified Leads",
-            description: "Drive enquiries from people actively interested in your product or service.",
+            description: "Drive enquiries from people interested in your products or services.",
           },
           {
             number: "03",
             icon: "/assets/GoogleAds/icon3.png",
-            title: "Increase Sales",
-            description: "Convert website visitors into paying customers with conversion-focused campaigns.",
+            title: "Increase Conversions",
+            description: "Turn interested audiences into customers with conversion focused campaigns.",
           },
           {
             number: "04",
             icon: "/assets/GoogleAds/icon4.png",
             title: "Retarget Warm Audiences",
-            description: "Stay visible to people who have already visited your website or engaged with your brand.",
+            description: "Reconnect with people who have already engaged with your business.",
           },
         ]}
       />
@@ -450,10 +467,10 @@ export default function MetaAdsPage() {
       <RevenueMethod
         heading={<>How We Build High-Performing <br className="hidden sm:block" />{" "}<span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>Meta Campaigns</span></>}
         cards={[
-          { id: '01', title: 'Campaign Strategy', description: 'Every campaign starts with a clear objective. We define your goals, audience, budget and messaging before any ad goes live.', bgImage: '/assets/method1.png' },
-          { id: '02', title: 'Audience Targeting', description: 'We identify and engage the most relevant demographics through data-driven targeting strategies, ensuring your ads reach the right people.', bgImage: '/assets/method2.png' },
-          { id: '03', title: 'Creative & Ad Content', description: 'Our team crafts compelling visuals and persuasive copy that capture attention and drive meaningful engagement from your audience.', bgImage: '/assets/method3.png' },
-          { id: '04', title: 'Optimisation & Scaling', description: 'We continuously monitor performance metrics to refine campaigns, maximizing return on ad spend and scaling what works best.', bgImage: '/assets/method4.png' },
+          { id: '01', title: 'Campaign Strategy', description: 'We define your objectives, audience, budget and campaign structure before launching.', bgImage: '/assets/method1.png' },
+          { id: '02', title: 'Audience Targeting', description: 'We build targeted audiences using demographics, interests, behaviours and customer data.', bgImage: '/assets/method2.png' },
+          { id: '03', title: 'Creative & Ad Content', description: 'We create engaging ad creatives and messaging designed to capture attention and drive action.', bgImage: '/assets/method3.png' },
+          { id: '04', title: 'Optimisation & Scaling', description: 'We continuously test, refine and scale campaigns using real performance data.', bgImage: '/assets/method4.png' },
         ]}
       />
       {/* <div className="sm:-mt-0 -mt-45"> */}

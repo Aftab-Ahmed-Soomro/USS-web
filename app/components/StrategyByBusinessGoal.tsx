@@ -9,49 +9,49 @@ const GOALS = [
   {
     id: 1,
     title: 'Lead Generation',
-    description: 'Generate a consistent flow of qualified leads through the right channels, messaging and strategy.',
+    description: 'Generate high quality leads from the audiences most likely to become customers',
     image: '/assets/businessGoal/1.jpg'
   },
   {
     id: 2,
     title: 'New Location Opening',
-    description: 'Generate a consistent flow of qualified leads through the right channels, messaging and strategy.',
+    description: 'Build local awareness and drive footfall before, during and after launch',
     image: '/assets/businessGoal/2.jpg'
   },
   {
     id: 3,
     title: 'Membership Growth',
-    description: 'Generate a consistent flow of qualified leads through the right channels, messaging and strategy.',
+    description: 'Increase memberships through targeted campaigns designed to attract and convert',
     image: '/assets/businessGoal/3.jpg'
   },
   {
     id: 4,
     title: 'Brand Launch',
-    description: 'Generate a consistent flow of qualified leads through the right channels, messaging and strategy.',
+    description: 'Introduce your brand to the right audience and make a strong first impression',
     image: '/assets/businessGoal/4.png'
   },
   {
     id: 5,
     title: 'Event Promotion',
-    description: 'Generate a consistent flow of qualified leads through the right channels, messaging and strategy.',
+    description: 'Reach the right audience and drive attendance for your event.',
     image: '/assets/businessGoal/5.jpg'
   },
   {
     id: 6,
     title: 'Revenue Growth',
-    description: 'Generate a consistent flow of qualified leads through the right channels, messaging and strategy.',
+    description: 'Increase sales by identifying new opportunities and improving marketing performance',
     image: '/assets/businessGoal/6.jpg'
   },
   {
     id: 7,
     title: 'Customer Retention',
-    description: 'Generate a consistent flow of qualified leads through the right channels, messaging and strategy.',
+    description: 'Build stronger customer relationships beyond the first purchase',
     image: '/assets/businessGoal/7.png'
   },
   {
     id: 8,
     title: 'Market Expansion',
-    description: 'Generate a consistent flow of qualified leads through the right channels, messaging and strategy.',
+    description: 'Enter new markets with a strategy tailored to local audiences and demand.',
     image: '/assets/businessGoal/8.jpg'
   }
 ];
@@ -76,7 +76,7 @@ export function StrategyByBusinessGoal() {
                   textTransform: 'lowercase'
                 }}
               >
-                strategy by
+                strategy for every
               </span>
               <span
                 className="sm:-mt-[5px]"

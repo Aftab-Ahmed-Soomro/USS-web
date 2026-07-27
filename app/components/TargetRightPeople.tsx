@@ -7,25 +7,74 @@ import {
   ShoppingBag,
   Briefcase,
   Target,
+  Users,
+  Crown,
+  Calendar,
+  UserPlus,
   type LucideIcon,
 } from "lucide-react";
 import Stagger from "./Stagger";
 import StaggerItem from "./Staggeritem";
 import FadeUp from "./FadeUp";
 
-interface TargetItem {
+export interface TargetItem {
   number: string;
-  icon: LucideIcon;
+  icon?: LucideIcon | string;
   title: string;
   description: string;
 }
 
-const items: TargetItem[] = [
+export interface TargetRightPeopleProps {
+  items?: TargetItem[];
+  title?: React.ReactNode;
+}
+
+const iconMap: Record<string, LucideIcon> = {
+  Users2,
+  MapPin,
+  Heart,
+  ShoppingBag,
+  Briefcase,
+  Target,
+  Users,
+  Crown,
+  Calendar,
+  UserPlus,
+};
+
+function renderIcon(
+  iconProp: LucideIcon | string | undefined,
+  fallbackIcon: LucideIcon,
+  size: number
+) {
+  if (!iconProp) {
+    const Fallback = fallbackIcon;
+    return <Fallback size={size} strokeWidth={1.5} color="#ff7a33" />;
+  }
+  if (typeof iconProp === "string") {
+    if (iconProp.startsWith("/")) {
+      return (
+        <img
+          src={iconProp}
+          alt=""
+          className="object-contain"
+          style={{ width: size, height: size }}
+        />
+      );
+    }
+    const MappedIcon = iconMap[iconProp] || fallbackIcon;
+    return <MappedIcon size={size} strokeWidth={1.5} color="#ff7a33" />;
+  }
+  const IconComp = iconProp;
+  return <IconComp size={size} strokeWidth={1.5} color="#ff7a33" />;
+}
+
+const defaultItems: TargetItem[] = [
   {
     number: "01",
     icon: Users2,
     title: "Demographics",
-    description: "Age, gender, language and household profile.",
+    description: " Age, gender, language, household income and life stage.",
   },
   {
     number: "02",
@@ -42,14 +91,14 @@ const items: TargetItem[] = [
   {
     number: "04",
     icon: ShoppingBag,
-    title: "Behavior",
-    description: "Shopping habits, online activity and purchase intent.",
+    title: "Behaviours",
+    description: "Shopping habits, online activity and customer behaviours.",
   },
   {
     number: "05",
     icon: Briefcase,
     title: "Professional",
-    description: "Job titles, industries and business decision-makers.",
+    description: "Job titles, industries, employers and business decision makers.",
   },
   {
     number: "06",
@@ -60,16 +109,8 @@ const items: TargetItem[] = [
   },
 ];
 
-/**
- * The curve is a quadratic bezier: P(t) = (1-t)^2 * P0 + 2(1-t)t * P1 + t^2 * P2
- * P0 = (-50, -30), P1 = (700, 260), P2 = (1450, -30)  [in the 0-1400 x 0-200 viewBox]
- *
- * We pick each node's x position (as % of the 1400-wide box), solve for t,
- * then compute the curve's y at that t. The "drop" is how far (in px, at
- * the 420px container height scale) the connector line must travel from
- * the top of the curve container down to the curve itself, so the line
- * visually touches the arc exactly like in the mockup.
- */
+const defaultIcons = [Users2, MapPin, Heart, ShoppingBag, Briefcase, Target];
+
 const VIEWBOX_W = 1400;
 const VIEWBOX_H = 420;
 const CONTAINER_H = 420;
@@ -95,20 +136,30 @@ function solveTForX(targetX: number) {
   return (lo + hi) / 2;
 }
 
-// Evenly distribute the 6 nodes
-const leftPercents = [8.33, 25, 41.66, 58.33, 75, 91.66];
-const ICON_ROW_TOP = 320; 
+function getPositions(count: number) {
+  const leftPercents = Array.from({ length: count }, (_, i) => {
+    return ((i + 0.5) / count) * 100;
+  });
+  const ICON_ROW_TOP = 320;
 
-const positions = leftPercents.map((leftPct) => {
-  const targetX = (leftPct / 100) * VIEWBOX_W;
-  const t = solveTForX(targetX);
-  const yInViewBox = bezierY(t);
-  const curveY = (yInViewBox / VIEWBOX_H) * CONTAINER_H;
-  const lineHeight = Math.max(ICON_ROW_TOP - curveY, 0);
-  return { left: `${leftPct}%`, curveY, lineHeight };
-});
+  return leftPercents.map((leftPct) => {
+    const targetX = (leftPct / 100) * VIEWBOX_W;
+    const t = solveTForX(targetX);
+    const yInViewBox = bezierY(t);
+    const curveY = (yInViewBox / VIEWBOX_H) * CONTAINER_H;
+    const lineHeight = Math.max(ICON_ROW_TOP - curveY, 0);
+    return { left: `${leftPct}%`, curveY, lineHeight };
+  });
+}
 
-export default function TargetRightPeople() {
+export default function TargetRightPeople({
+  items: customItems,
+  title,
+}: TargetRightPeopleProps) {
+  const displayItems =
+    customItems && customItems.length > 0 ? customItems : defaultItems;
+  const positions = getPositions(displayItems.length);
+
   return (
     <section className="relative w-full overflow-hidden bg-black py-[60px] sm:py-40 px-4 sm:px-6">
       <style>{`
@@ -131,59 +182,63 @@ export default function TargetRightPeople() {
 
       <div className="relative mx-auto max-w-[1150px]">
         {/* Heading */}
-        <Stagger staggerDelay={0.12}>
-          <StaggerItem>
-            <h2
-              className="lowercase text-center text-white font-[var(--font-be-vietnam)] font-medium text-[36px] sm:text-[56px] leading-[1.2] sm:leading-[80px] tracking-[-1.5px] sm:tracking-[-3px]"
-            >
-              target the{" "}
-              <span
-                className="italic font-normal text-[44px] sm:text-[72px] leading-[1.2] sm:leading-[80px] tracking-[-1.5px] sm:tracking-[-3px] text-[#ff5500]"
-                style={{
-                  fontFamily: '"Times New Roman", Times, serif',
-                }}
-              >
-                right people
-              </span>
-            </h2>
-          </StaggerItem>
-        </Stagger>
+        {title ? (
+          title
+        ) : (
+          <Stagger staggerDelay={0.12}>
+            <StaggerItem>
+              <h2 className="lowercase text-center text-white font-[var(--font-be-vietnam)] font-medium text-[36px] sm:text-[56px] leading-[1.2] sm:leading-[80px] tracking-[-1.5px] sm:tracking-[-3px]">
+                target the{" "}
+                <span
+                  className="italic font-normal text-[44px] sm:text-[72px] leading-[1.2] sm:leading-[80px] tracking-[-1.5px] sm:tracking-[-3px] text-[#ff5500]"
+                  style={{
+                    fontFamily: '"Times New Roman", Times, serif',
+                  }}
+                >
+                  right people
+                </span>
+              </h2>
+            </StaggerItem>
+          </Stagger>
+        )}
 
         {/* Mobile View (Vertical Timeline) */}
         <div className="sm:hidden mt-8 relative flex flex-col gap-8 px-2">
           {/* Vertical line connector */}
           <div className="absolute left-[30px] top-6 bottom-6 w-[2px] bg-gradient-to-b from-[rgba(255,85,0,0.1)] via-[rgba(255,85,0,0.5)] to-[rgba(255,85,0,0.1)]" />
 
-          {items.map((item, i) => {
-            const Icon = item.icon;
-            return (
-              <FadeUp key={item.number} delay={0.1 + i * 0.1} className="relative flex items-start gap-5 z-10">
-                {/* icon container */}
-                <div
-                  className="flex h-[46px] w-[46px] shrink-0 items-center justify-center rounded-[12px] border bg-[#0a0a0a]"
-                  style={{
-                    borderColor: "rgba(255,85,0,0.4)",
-                    boxShadow: "0 0 15px rgba(255,85,0,0.2), inset 0 0 10px rgba(255,85,0,0.1)",
-                  }}
-                >
-                  <Icon size={20} strokeWidth={1.5} color="#ff7a33" />
-                </div>
+          {displayItems.map((item, i) => (
+            <FadeUp
+              key={item.number || i}
+              delay={0.1 + i * 0.1}
+              className="relative flex items-start gap-5 z-10"
+            >
+              {/* icon container */}
+              <div
+                className="flex h-[46px] w-[46px] shrink-0 items-center justify-center rounded-[12px] border bg-[#0a0a0a]"
+                style={{
+                  borderColor: "rgba(255,85,0,0.4)",
+                  boxShadow:
+                    "0 0 15px rgba(255,85,0,0.2), inset 0 0 10px rgba(255,85,0,0.1)",
+                }}
+              >
+                {renderIcon(item.icon, defaultIcons[i % defaultIcons.length], 20)}
+              </div>
 
-                {/* text content */}
-                <div className="flex flex-col pt-[2px]">
-                  <span className="text-[#ff5500] font-normal text-[10px] leading-[15px] tracking-[2px] mb-1">
-                    {item.number}
-                  </span>
-                  <h3 className="text-white font-semibold text-[16px] leading-[1.2] mb-1.5">
-                    {item.title}
-                  </h3>
-                  <p className="text-white/70 font-normal text-[14px] leading-[1.4]">
-                    {item.description}
-                  </p>
-                </div>
-              </FadeUp>
-            );
-          })}
+              {/* text content */}
+              <div className="flex flex-col pt-[2px]">
+                <span className="text-[#ff5500] font-normal text-[10px] leading-[15px] tracking-[2px] mb-1">
+                  {item.number}
+                </span>
+                <h3 className="text-white font-semibold text-[16px] leading-[1.2] mb-1.5">
+                  {item.title}
+                </h3>
+                <p className="text-white/70 font-normal text-[14px] leading-[1.4]">
+                  {item.description}
+                </p>
+              </div>
+            </FadeUp>
+          ))}
         </div>
 
         {/* Desktop View (Curve + nodes) */}
@@ -195,7 +250,7 @@ export default function TargetRightPeople() {
               viewBox={`0 0 ${VIEWBOX_W} ${VIEWBOX_H}`}
               preserveAspectRatio="none"
               fill="none"
-              style={{ overflow: 'visible' }}
+              style={{ overflow: "visible" }}
             >
               <defs>
                 <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
@@ -222,29 +277,34 @@ export default function TargetRightPeople() {
             </svg>
 
             {/* Nodes */}
-            {items.map((item, i) => {
-              const Icon = item.icon;
+            {displayItems.map((item, i) => {
               const pos = positions[i];
               return (
                 <div
-                  key={item.number}
+                  key={item.number || i}
                   className="absolute flex -translate-x-1/2 flex-col items-center text-center"
-                  style={{ left: pos.left, top: `${pos.curveY}px`, width: "180px" }}
+                  style={{
+                    left: pos.left,
+                    top: `${pos.curveY}px`,
+                    width: "180px",
+                  }}
                 >
-                  <FadeUp delay={0.25 + i * 0.15} className="flex flex-col items-center w-full">
+                  <FadeUp
+                    delay={0.25 + i * 0.15}
+                    className="flex flex-col items-center w-full"
+                  >
                     {/* connector line */}
                     <div
                       style={{
                         width: "1px",
                         height: `${pos.lineHeight}px`,
-                        background: "linear-gradient(180deg, rgba(255,85,0,0.8), rgba(255,85,0,0.2))",
+                        background:
+                          "linear-gradient(180deg, rgba(255,85,0,0.8), rgba(255,85,0,0.2))",
                       }}
                     />
 
                     {/* label */}
-                    <span
-                      className="mt-4 text-gray-500 font-normal text-[10px] leading-[15px] tracking-[3px]"
-                    >
+                    <span className="mt-4 text-gray-500 font-normal text-[10px] leading-[15px] tracking-[3px]">
                       {item.number}
                     </span>
 
@@ -253,24 +313,26 @@ export default function TargetRightPeople() {
                       className="mt-3 flex h-14 w-14 items-center justify-center rounded-[14px] border"
                       style={{
                         borderColor: "rgba(255,85,0,0.4)",
-                        background: "linear-gradient(180deg, rgba(255,85,0,0.1), rgba(255,85,0,0.02))",
-                        boxShadow: "0 0 20px rgba(255,85,0,0.2), inset 0 0 10px rgba(255,85,0,0.1)",
+                        background:
+                          "linear-gradient(180deg, rgba(255,85,0,0.1), rgba(255,85,0,0.02))",
+                        boxShadow:
+                          "0 0 20px rgba(255,85,0,0.2), inset 0 0 10px rgba(255,85,0,0.1)",
                       }}
                     >
-                      <Icon size={24} strokeWidth={1.5} color="#ff7a33" />
+                      {renderIcon(
+                        item.icon,
+                        defaultIcons[i % defaultIcons.length],
+                        24
+                      )}
                     </div>
 
                     {/* title */}
-                    <h3
-                      className="mt-4 text-white font-semibold text-[15px] leading-[19.5px]"
-                    >
+                    <h3 className="mt-4 text-white font-semibold text-[15px] leading-[19.5px]">
                       {item.title}
                     </h3>
 
                     {/* description */}
-                    <p
-                      className="mt-2 text-white/80 font-normal text-[13px] leading-[1.4]"
-                    >
+                    <p className="mt-2 text-white/80 font-normal text-[13px] leading-[1.4]">
                       {item.description}
                     </p>
                   </FadeUp>

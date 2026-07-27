@@ -107,14 +107,12 @@ function Hero() {
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
             <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white">
-              Google Ads
+              PAID SEARCH
             </p>
           </StaggerItem>
           <StaggerItem>
             <h1 className="mt-[16px] min-[375px]:mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px]  font-bold lowercase leading-[100%] tracking-[-1.5px] sm:tracking-[-3px] sm:text-[58px] text-white">
-              capture high {" "}
-              <br className="hidden sm:block" />
-              quality leads {" "}
+              Generate qualified leads  {" "}
               <br className="hidden sm:block" />
               with{" "}
               <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-bold timesFontFamily italic text-white tracking-[-1.5px] sm:tracking-[-2.8px] leading-[1.1] sm:leading-none">
@@ -124,7 +122,7 @@ function Hero() {
           </StaggerItem>
           <StaggerItem>
             <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[40px] max-w-[530px] font-[var(--font-inter)] text-[13px] leading-[20px] sm:leading-[32px] text-white/90 sm:text-[18px]">
-              Turn searches into sales with Google Ads, built to generate qualified leads, not just clicks, by putting your business in front of customers actively searching for your products or services.
+              Google Ads lead generation campaigns connect your business with customers actively searching for your products or services, converting search demand into enquiries.
             </p>
           </StaggerItem>
           <StaggerItem>
@@ -191,22 +189,22 @@ function CaseStudies() {
           <Stagger staggerDelay={0.12}>
             <StaggerItem>
               <p className="font-[var(--font-be-vietnam)] text-[9px] sm:text-[12px] font-normal uppercase tracking-[4.8px] text-[#ff5500]">
-                PROJECTS
+                OUR WORK
               </p>
             </StaggerItem>
             <StaggerItem>
               <h2 className="mt-[16px] sm:mt-[24px] max-w-[650px] font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[38px] font-medium lowercase leading-[0.9] tracking-[-1.4px] sm:text-[56px]">
-                see how we turn
-                <br />
-                search{" "}
+                See how search 
+                {/* <br /> */}
+                {" "}
                 <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] font-normal timesFontFamily italic leading-[1.1] sm:leading-none">
-                  into revenue
+                  becomes revenue.
                 </span>
               </h2>
             </StaggerItem>
             <StaggerItem>
-              <p className="mt-[14px] sm:mt-[18px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.5] text-white/90 sm:text-white">
-                Explore how we've helped brands generate high-quality leads and scale through Google Ads.
+              <p className="mt-[14px] max-w-[600px] sm:mt-[18px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.5] text-white/90 sm:text-white">
+                From lead generation to business growth, explore how we've delivered measurable results across a range of industries.
               </p>
             </StaggerItem>
           </Stagger>
@@ -411,26 +409,26 @@ export default function GoogleAdsPage() {
           {
             number: "01",
             icon: "/assets/GoogleAds/icon1.png",
-            title: "Reach Your Ideal Audience",
-            description: "Target customers based on interests, behaviours, location and intent.",
+            title: "Reach the Right Customers",
+            description: "Show your business to people actively searching for the products or services you provide.",
           },
           {
             number: "02",
             icon: "/assets/GoogleAds/icon2.png",
-            title: "Generate Qualified Leads",
-            description: "Drive enquiries from people actively interested in your product or service.",
+            title: "Measurable Results",
+            description: "Track clicks, enquiries and conversions to understand exactly how your campaigns are performing.",
           },
           {
             number: "03",
             icon: "/assets/GoogleAds/icon3.png",
-            title: "Increase Sales",
-            description: "Convert website visitors into paying customers with conversion-focused campaigns.",
+            title: "Flexible Budget",
+            description: "Control how much you spend, adjust budgets at any time and scale campaigns as your business grows.",
           },
           {
             number: "04",
             icon: "/assets/GoogleAds/icon4.png",
-            title: "Retarget Warm Audiences",
-            description: "Stay visible to people who have already visited your website or engaged with your brand.",
+            title: "Fast Visibility",
+            description: "Appear in Google search results as soon as your campaigns go live, without waiting for organic rankings.",
           },
         ]}
       />
@@ -446,32 +444,32 @@ export default function GoogleAdsPage() {
               fontFamily: "var(--font-be-vietnam, var(--font-inter))",
             }}
           >
-            platforms we work with
+            Campaigns Built Around Your Goals
           </h2>
         }
         platforms={[
           {
             name: "Search Campaigns",
             description:
-              "Reach, engage and convert customers across Facebook and Instagram through high-performing paid campaigns.",
+              "Appear in Google Search results when customers are actively looking for your products or services",
             imageSrc: "/assets/1.png",
           },
           {
             name: "Performance Max",
             description:
-              "Maximise conversions across all Google channels using AI-driven campaigns.",
+              "Reach customers across Google's entire network using AI powered campaigns designed to maximise performance",
             imageSrc: "/assets/googlePlatforms/2.png",
           },
           {
             name: "YouTube Campaigns",
             description:
-              "Engage audiences with compelling video ads across YouTube and the web.",
+              "Build awareness through engaging video campaigns that reach audiences while they watch the content they love",
             imageSrc: "/assets/googlePlatforms/3.png",
           },
           {
             name: "Display Ads",
             description:
-              "Build brand awareness and retarget visitors with visually striking image ads.",
+              "Keep your brand visible across millions of websites and apps with visually engaging display advertising.",
             imageSrc: "/assets/googlePlatforms/4.png",
           },
         ]}
@@ -479,10 +477,10 @@ export default function GoogleAdsPage() {
       <RevenueMethod
         heading={<>how we capture demand <br className="hidden sm:block" /> and turn it into{" "}<span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>revenue</span></>}
         cards={[
-          { id: '01', title: 'Keyword Strategy', description: 'We identify the keywords your customers are actively searching for and build campaigns around high-intent search terms.', bgImage: '/assets/method1.png' },
-          { id: '02', title: 'Campaign Structure', description: 'We build meticulously organized campaigns designed to maximize relevance, improve Quality Score, and give precise control over your budget.', bgImage: '/assets/method2.png' },
-          { id: '03', title: 'Ad Copy & Creative', description: 'Our team crafts compelling ad copy and engaging creatives that capture attention, drive higher click-through rates, and increase conversions.', bgImage: '/assets/method3.png' },
-          { id: '04', title: 'Optimisation & Growth', description: 'We continuously monitor and refine your campaigns based on data-driven insights, ensuring scalable growth and maximum return on ad spend.', bgImage: '/assets/method4.png' },
+          { id: '01', title: 'Research & Keyword Strategy', description: 'We identify the keywords your customers are actively searching for and build campaigns around the opportunities most likely to perform.', bgImage: '/assets/method1.png' },
+          { id: '02', title: 'Campaign Planning', description: 'We structure campaigns around your objectives, creating tailored targeting, ad messaging and bidding strategies for stronger performance.', bgImage: '/assets/method2.png' },
+          { id: '03', title: 'Forecasting & Investment', description: 'Before launching, we forecast the budget required to achieve your KPIs, expected leads and estimated campaign performance.', bgImage: '/assets/method3.png' },
+          { id: '04', title: 'Launch & Optimisation', description: 'Once campaigns are live, we continuously monitor performance, refining targeting, budgets and ads to maximise results over time.', bgImage: '/assets/method4.png' },
         ]}
       />
       <CaseStudies />

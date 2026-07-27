@@ -13,7 +13,7 @@ export default function EmailMarketingQuote({first, second, third}: {first: stri
 
         <StaggerItem>
           <h2
-            className="text-white max-w-[530px] mt-[24px] sm:mt-8 font-medium text-[22px] sm:text-[40px] leading-[1.3] sm:leading-[60px] tracking-[-1px] sm:tracking-[-2.44px]"
+            className="text-white max-w-[650px] mt-[24px] sm:mt-8 font-medium text-[22px] sm:text-[40px] leading-[1.3] sm:leading-[60px] tracking-[-1px] sm:tracking-[-2.44px]"
           >
             {first} {" "}
             <span
@@ -37,13 +37,13 @@ export default function EmailMarketingQuote({first, second, third}: {first: stri
           <img src="/assets/bigCommaLeft.png" alt="" />
         </StaggerItem>
 
-        <StaggerItem>
+        {/* <StaggerItem>
           <p
             className="text-white font-medium text-[16px] sm:text-[20px] leading-none tracking-[-0.5px] sm:tracking-[-1px]"
           >
             Strategy. Precision. Growth.
           </p>
-        </StaggerItem>
+        </StaggerItem> */}
       </Stagger>
     </section>
   );

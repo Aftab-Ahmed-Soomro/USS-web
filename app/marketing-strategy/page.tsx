@@ -55,17 +55,22 @@ function Hero() {
       <div className="relative z-10 mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.15}>
           <StaggerItem>
+                      <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white text-center sm:text-start">
+                        Marketing strategy
+                      </p>
+                    </StaggerItem>
+          <StaggerItem>
             <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[1.4] sm:leading-[70px] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white text-center sm:text-start">
-              strategy that drives
+              Turn strategy into 
               <br />{" "}
               <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white leading-[0.7] sm:leading-[30px] tracking-[-1px] sm:tracking-[-2.8px]">
-                real growth
+                business growth.
               </span>
             </h1>
           </StaggerItem>
           <StaggerItem>
             <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[500px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[18px] text-center sm:text-start">
-              We build clear, data-driven marketing strategies designed to scale your business not just generate leads. Trusted by brands across UAE and globally.
+              We build clear, data driven marketing strategies designed to scale your business, not just generate leads. By understanding your goals, audience and market, we create a roadmap that supports long term business growth.
             </p>
           </StaggerItem>
           <StaggerItem>
@@ -123,61 +128,61 @@ function FinalCta() {
 const googleAdsBrandPoints = [
   {
     number: "01",
-    title: "Send and Forget",
+    title: "Unclear Business Goals",
     description:
-      "Emails are only sent when there's a promotion or announcement.",
+      "Marketing starts before clear business objectives have been defined.",
   },
   {
     number: "02",
-    title: "Every Subscriber Looks the Same",
+    title: "No Defined Audience",
     description:
-      "The same message is sent to everyone, regardless of interests or behavior.",
+      "Campaigns target everyone instead of the customers most likely to convert.",
   },
   {
     number: "03",
-    title: "No Long-Term Customer Journey",
+    title: "Disconnected Channels",
     description:
-      "There's no system to welcome, nurture, or retain customers after they sign up.",
+      "Social media, paid ads and email operate separately instead of working together.",
   },
   {
     number: "04",
-    title: "No Clear Performance Tracking",
+    title: "Limited Performance Tracking",
     description:
-      "Little reporting or optimization means opportunities are missed.",
+      "Marketing success is difficult to measure without clear objectives or KPIs.",
   },
 ];
 
 const googleAdsUssPoints = [
   {
     number: "01",
-    title: "Always-On Email Strategy",
+    title: "Business First Strategy",
     description:
-      "We create an email calendar that keeps your brand consistently in front of customers.",
+      "Every recommendation starts with your business objectives before any marketing begins.",
   },
   {
     number: "02",
-    title: "Personalized Customer Experiences",
+    title: "Audience Led Planning",
     description:
-      "Campaigns are tailored to different audiences using segmentation and customer behavior.",
+      "We build your strategy around the people most likely to become customers.",
   },
   {
     number: "03",
-    title: "Automated Customer Journeys",
+    title: "Integrated Marketing Approach",
     description:
-      "Welcome flows, abandoned carts, post-purchase emails and retention campaigns work in the background.",
+      "Every marketing channel works together as one connected strategy built for growth.",
   },
   {
     number: "04",
-    title: "Continuous Performance Optimization",
+    title: "Continuous Optimisation",
     description:
-      "Every campaign is measured, refined and improved using real performance data.",
+      "Performance is reviewed regularly to improve results and support long term growth.",
   },
 ];
 
 const emailStats = [
-  { value: "5x", label: "ROAS Achieved" },
-  { value: "55M", label: "AED Generated in Revenue" },
-  { value: "500K", label: "Leads Delivered" },
+  { value: "5x", label: "Up to 5X ROAS" },
+  { value: "55M", label: "AED in Revenue" },
+  { value: "485k", label: "Leads Generated" },
   { value: "100+", label: "Brands Worldwide" },
 ];
 
@@ -185,22 +190,22 @@ const strategyAccordionData = [
   {
     id: "01",
     title: "Discovery & Research",
-    description: "We get to know your business, market, competitors and audience before any marketing begins. This gives us the insight needed to identify opportunities and build a strategy with confidence.",
+    description: "We begin by understanding your business, audience, competitors and market to identify opportunities and challenges.",
   },
   {
     id: "02",
-    title: "Strategic Planning",
-    description: "Using our research, we create a tailored marketing roadmap covering channels, messaging, budgets, KPIs and campaign priorities, giving your business a clear direction for growth.",
+    title: "Strategic & Planning",
+    description: "Using our research, we create a tailored marketing roadmap covering objectives, channels, messaging, budgets and KPIs.",
   },
   {
     id: "03",
-    title: "Execution & Optimisation",
-    description: "Once your strategy is live, we monitor performance, analyse results and continuously refine campaigns to maximise ROI and uncover new opportunities.",
+    title: "Launch & Optimisation",
+    description: "Your strategy is brought to life across the right marketing channels, with ongoing monitoring and optimisation to improve performance.",
   },
   {
     id: "04",
     title: "Scale & Growth",
-    description: "As your business grows, so does the strategy. We introduce new channels, optimise budgets and expand activity to support long-term, sustainable growth.",
+    description: "As your business grows, we continue refining your strategy, identifying new opportunities and improving performance.",
   }
 ];
 
@@ -416,12 +421,12 @@ export default function MarketingStrategyPage() {
                 className="font-normal italic text-[42px] sm:text-[72px]"
                 style={{ fontFamily: "'Times New Roman', Times, serif" }}
               >
-                marketing strategy
+                marketing strategies
               </span>{" "}
-              fails
+              fail
             </h2>
           }
-          subheading="Most brands don't have an email problem, they have a strategy problem."
+          subheading="Most businesses don't have a marketing problem, they have a strategy problem."
           leftTitle="Most Brands"
           rightTitle="The USS Difference"
           leftPoints={googleAdsBrandPoints}
@@ -435,7 +440,7 @@ export default function MarketingStrategyPage() {
         heading={
           <h2 className="text-[32px] sm:text-[36px] md:text-[64px] lg:text-[75px] leading-[1] tracking-[-1px] lg:tracking-[-3px] font-light lowercase" style={{ fontWeight: 300 }}>
 
-            from strategy to <span className="relative inline-block z-10 whitespace-nowrap">
+            from discovery to <span className="relative inline-block z-10 whitespace-nowrap">
               scale.
 
               {/* Orange Glow */}
@@ -461,8 +466,8 @@ export default function MarketingStrategyPage() {
         <SixStepSystem
           heading={
             <h2 className="text-white font-medium tracking-[-1px] sm:tracking-[-2px] text-[36px] sm:text-[56px] leading-[1.1] sm:leading-[69.36px]">
-              every digital touchpoint should <br className="hidden sm:block" />
-              have its {" "}
+              every digital touchpoint <br className="hidden sm:block" />
+              needs its {" "}
                 <span
                   className="text-[#FF5500] italic font-normal font-[var(--font-cormorant)] timesFontFamily text-[46px] sm:text-[72px] leading-[0] sm:leading-[69.36px] tracking-[-1.5px] sm:tracking-[-2px]"
                 >

@@ -46,7 +46,7 @@ function Hero() {
           </StaggerItem>
           <StaggerItem>
             <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[24px] max-w-[680px] font-[var(--font-inter)] text-[13px] leading-[1.6] text-black/72 sm:text-[20px] sm:leading-[1.75] text-center sm:text-start">
-              We use WhatsApp and SMS to help businesses stay connected with customers through direct communication that drives enquiries, sales, and repeat purchases.
+              Reach customers instantly through direct, personalised messaging that drives engagement, enquiries and repeat purchases.
             </p>
           </StaggerItem>
           
@@ -106,13 +106,13 @@ function FinalCta() {
 
 const relatedProjects = [
   {
-    slug: "blank-dxb",
-    name: "Blank DXB",
-    image: "/assets/dxb.jpg",
-    copy: "With a strong Meta Ads execution we focused on Paid Media during Blank DXB launch. We were able to target demand on a granular level making budget efficiency higher.",
-    tags: ["Paid Media", "Meta Ads Targeting", "Lead Generation"],
+    slug: "agency-8",
+    name: "Agency 8",
+    image: "/assets/allProjects/agency8.png",
+    copy: "Through strategic WhatsApp and SMS campaigns, we helped Agency 8 engage prospective buyers, nurture enquiries and keep clients informed throughout the property journey.",
+    tags: ["WhatsApp Marketing", "SMS Campaigns", "Lead Generation "],
     year: "2024",
-    imageClassName: "object-cover",
+    imageClassName: "object-cover object-[30%_70%]",
   },
   {
     slug: "supperclub",
@@ -134,16 +134,16 @@ function RelatedProjects() {
           <Stagger staggerDelay={0.12}>
             <StaggerItem>
               <p className="font-[var(--font-be-vietnam)] text-[12px] font-normal uppercase tracking-[4px] text-[#ff5500] mb-[16px]">
-                PROJECTS
+                RECENT PROJECTS
               </p>
               <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[56px] font-medium lowercase leading-none tracking-[-0.96px]">
-                see how we{" "}
+                see how we{" "} <br />
                 <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal timesFontFamily italic tracking-[-0.96px]">
-                  scale brands.
+                  connect with customers
                 </span>
               </h2>
               <p className="mt-[16px] font-[var(--font-inter)] text-[14px] sm:text-[18px] text-white/90">
-                Explore how we&apos;ve helped brands grow through Meta Ads.
+                Explore how we've helped brands engage customers through strategic WhatsApp and SMS campaigns.
               </p>
             </StaggerItem>
           </Stagger>
@@ -231,13 +231,13 @@ function  RevenueMethod() {
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
             <h2 className="lowercase text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-[40px] sm:mb-16">
-              method to convert WhatsApp & SMS database to high
-              {" "}
+              our approach to turning
+              <br /> {" "}
               <span
                 className="italic text-[#ff5500] font-normal text-[42px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]"
                 style={{ fontFamily: "'Times New Roman', Times, serif" }}
               >
-                performing revenue 
+                conversations into revenue
               </span>
             </h2>
           </StaggerItem>
@@ -297,26 +297,26 @@ function  RevenueMethod() {
 const CARDS_DATA = [
   {
     id: '01',
-    title: 'Keyword Strategy',
-    description: 'We identify the keywords your customers are actively searching for and build campaigns around high-intent search terms.',
+    title: 'Audience Segmentation',
+    description: 'Create targeted customer groups based on behaviour, purchase history, location and engagement to deliver more relevant messaging',
     bgImage: '/assets/method1.png', // Replace with your image src
   },
   {
     id: '02',
-    title: 'Campaign Structure',
-    description: 'We build meticulously organized campaigns designed to maximize relevance, improve Quality Score, and give precise control over your budget.',
+    title: 'Campaign Strategy',
+    description: 'Plan each campaign around clear objectives, customer journeys and the right communication channels to maximise results',
     bgImage: '/assets/method2.png', // Replace with your image src
   },
   {
     id: '03',
-    title: 'Ad Copy & Creative',
-    description: 'Our team crafts compelling ad copy and engaging creatives that capture attention, drive higher click-through rates, and increase conversions.',
+    title: 'Messaging & Automation',
+    description: 'Create personalised messages and automated workflows that engage customers at every stage of their journey',
     bgImage: '/assets/method3.png', // Replace with your image src
   },
   {
     id: '04',
-    title: 'Optimisation & Growth',
-    description: 'We continuously monitor and refine your campaigns based on data-driven insights, ensuring scalable growth and maximum return on ad spend.',
+    title: 'Reporting & Optimisation',
+    description: 'Track performance, refine campaigns and continuously optimise messaging to improve engagement and conversions.',
     bgImage: '/assets/method4.png', // Replace with your image src
   },
 ];
@@ -375,6 +375,45 @@ const googleAdsUssPoints = [
   },
 ];
 
+const whatsappSmsTargetItems = [
+  {
+    number: "01",
+    icon: "Users2",
+    title: "New Customers",
+    description: "First time enquiries and new customer introductions",
+  },
+  {
+    number: "02",
+    icon: "Users",
+    title: "Existing Customers",
+    description: "Keep current customers informed and engaged",
+  },
+  {
+    number: "03",
+    icon: "Crown",
+    title: "VIP Customers",
+    description: "Reward loyal customers with exclusive updates and offers",
+  },
+  {
+    number: "04",
+    icon: "ShoppingBag",
+    title: "Abandoned Carts",
+    description: "Recover lost sales with timely reminder messages",
+  },
+  {
+    number: "05",
+    icon: "Calendar",
+    title: "Appointments",
+    description: "Send confirmations, reminders and follow up messages",
+  },
+  {
+    number: "06",
+    icon: "Target",
+    title: "Customer Behaviour",
+    description: "Target customers based on actions, purchases or engagement",
+  },
+];
+
 export default function WhatsappAndSmsPage() {
   return (
     <main className="min-h-screen bg-[#080808] overflow-hidden">
@@ -409,7 +448,7 @@ export default function WhatsappAndSmsPage() {
                 <WhyWhatsappWorks />
                 <WhatsAppChannels />
                 <ConversationFlow />
-                <TargetRightPeople />
+                <TargetRightPeople items={whatsappSmsTargetItems} />
       <RevenueMethod />
       <RelatedProjects />
       <Testimonials />

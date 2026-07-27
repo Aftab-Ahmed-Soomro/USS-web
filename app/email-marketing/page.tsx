@@ -47,22 +47,22 @@ const systemItems = [
   {
     number: "01",
     title: "Automated Customer Journeys",
-    copy: "Email flows that welcome customers and encourage repeat purchases.",
+    copy: "Automated email flows that welcome, retarget and retain customers.",
   },
   {
     number: "02",
     title: "Campaign Planning",
-    copy: "Strategic campaigns built around launches and promotions.",
+    copy: "Strategic campaigns aligned with launches, promotions and key business moments.",
   },
   {
     number: "03",
     title: "Segmentation and Personalisation",
-    copy: "Sending the right message to the right audience.",
+    copy: "Relevant content delivered to the right audience at the right time.",
   },
   {
     number: "04",
-    title: "Reporting and Optimisation",
-    copy: "Tracking results to improve performance over time.",
+    title: "Reporting & Optimisation",
+    copy: "Continuous reporting and optimisation to improve campaign performance.",
   },
 ];
 
@@ -145,7 +145,7 @@ function Hero() {
           </StaggerItem>
           <StaggerItem>
             <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[560px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[18px] text-center sm:text-start">
-              We create strategic email campaigns and automated customer journeys that deliver the right message at the right time, driving retention and repeat purchases.
+              We create strategic email campaigns and automated journeys that increase retention, drive repeat purchases and maximise customer value.
             </p>
           </StaggerItem>
           <StaggerItem>
@@ -241,37 +241,40 @@ const steps = [
     title: "Brand & Story",
     icon: "/assets/rocket.png", // add icon src here
     points: [
-      "Introduce your business",
-      "USP focus",
-      "Share your founder's journey",
-      "Build trust through authentic storytelling",
+      "Introduce your brand and values",
+      "Meet the team snippet",
+      "Share your founders story",
+      "Build trust through authentic content",
     ],
   },
   {
-    title: "Products & Services Spotlight",
+    title: "Products & Services",
     icon: "/assets/cardbox.png", // add icon src here
     points: [
-      "Showcase products or services",
+      "Showcase products and services",
       "Highlight new launches and offers",
-      "Explain features and benefits",
+      "Explain key features and benefits",
+      "Encourage enquiries and purchases"
     ],
   },
   {
-    title: "Education and Value",
+    title: "Education & Value",
     icon: "/assets/bulb.png", // add icon src here
     points: [
-      "Tips, guides and expert advice",
+      "Share tips, guides and insights",
       "Answer FAQ's",
       "Help customers make informed decisions",
+      "Position your brand as the expert"
     ],
   },
   {
     title: "Promotions & Updates",
     icon: "/assets/siren.png", // add icon src here
     points: [
-      "Exclusive offers and launches",
-      "Seasonal campaigns",
-      "Company news and announcements",
+      "Promote offers and campaigns",
+      "Announce new products and launches",
+      "Share company news and updates",
+      "Re-engage existing customers"
     ],
   },
 ];
@@ -449,21 +452,40 @@ function RelatedProjects() {
       <div className="mx-auto max-w-[1150px]">
         {/* Header */}
         <div className="flex items-center justify-between gap-6">
-          <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[56px] font-medium lowercase leading-none tracking-[-0.96px]">
-            related{" "}
-            <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal timesFontFamily italic tracking-[-0.96px]">
-              projects
-            </span>
-          </h2>
-
-          <Link
-            href="/projects"
-            className="hidden sm:inline-flex shrink-0 items-center gap-2 rounded-full border border-white px-5 py-3 font-[var(--font-inter)] text-[12px] text-white sm:text-[15px]"
-          >
-            View all projects
-            <img src="/assets/rightArrowMed.png" className="w-4 h-4" alt="" />
-          </Link>
-        </div>
+                  <Stagger staggerDelay={0.12}>
+                    <StaggerItem>
+                                  <p className="font-[var(--font-be-vietnam)] text-[9px] sm:text-[12px] font-normal uppercase tracking-[4.8px] text-[#ff5500]">
+                                    RECENT PROJECTS
+                                  </p>
+                                </StaggerItem>
+                    <StaggerItem>
+                                  <h2 className="mt-[16px] sm:mt-[24px] max-w-[650px] font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[38px] font-medium lowercase leading-[0.9] tracking-[-1.4px] sm:text-[56px]">
+                                    see how we
+                                    <br />
+                                    {" "}
+                                    <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] font-normal timesFontFamily italic leading-[1.1] sm:leading-none">
+                                      drive retention
+                                    </span>
+                                  </h2>
+                                              </StaggerItem>
+                                  
+                    <StaggerItem>
+                                  <p className="mt-[14px] max-w-[600px] sm:mt-[18px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.5] text-white/90 sm:text-white">
+                                    Explore how we've helped brands strengthen customer relationships, increase repeat purchases and maximise the value of every email.
+                                  </p>
+                                </StaggerItem>
+                  </Stagger>
+        
+                  <FadeRight delay={0.3}>
+                    <Link
+                      href="/projects"
+                      className="hidden sm:inline-flex shrink-0 items-center gap-2 rounded-full border border-white px-5 py-3 font-[var(--font-inter)] text-[12px] text-white sm:text-[15px]"
+                    >
+                      View all projects
+                      <img src="/assets/rightArrowMed.png" className="w-4 h-4" alt="" />
+                    </Link>
+                  </FadeRight>
+                </div>
 
         {/* Cards */}
         <div className="mt-[24px] sm:mt-[40px] grid gap-[16px] sm:gap-[24px] md:grid-cols-2">

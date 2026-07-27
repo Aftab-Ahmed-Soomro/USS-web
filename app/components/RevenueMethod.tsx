@@ -20,38 +20,38 @@ const DEFAULT_CARDS: RevenueMethodCard[] = [
   {
     id: '01',
     title: 'Email Strategy',
-    description: 'Every successful campaign starts with a clear strategy. We build a tailored email plan around your goals, customer journey and opportunities for growth.',
+    description: 'Every successful campaign starts with a clear strategy aligned to your business goals.',
     bgImage: '/assets/method1.png',
   },
   {
     id: '02',
-    title: 'KPIs & Performance',
-    description: 'We track every metric meticulously, ensuring your campaigns are continuously optimized for open rates, click-throughs, and conversions.',
+    title: 'Email Automation & Flows',
+    description: 'Build automated email journeys that engage customers at every stage of their lifecycle.',
     bgImage: '/assets/method2.png',
   },
   {
     id: '03',
-    title: 'Email Design',
-    description: 'Beautiful, responsive designs tailored to your brand identity. We craft visually stunning, conversion-focused emails that captivate your audience.',
+    title: 'Email Design & Content',
+    description: 'Engaging email design and compelling content that encourages opens, clicks and conversions.',
     bgImage: '/assets/method3.png',
   },
   {
     id: '04',
     title: 'Customer Segmentation',
-    description: 'Delivering the right message to the right person. We break down your database to hyper-target and maximize your ROI.',
+    description: 'Delivering the right message to the right audience at the right stage of their journey.',
     bgImage: '/assets/method4.png',
   },
 ];
 
 const DEFAULT_HEADING = (
   <>
-    method to convert email database to{" "}
+    how we build{" "}
     <br className="hidden sm:block" />
     <span
       className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]"
       style={{ fontFamily: "'Times New Roman', Times, serif" }}
     >
-      high performing revenue
+      High Performing Email Campaigns
     </span>
   </>
 );

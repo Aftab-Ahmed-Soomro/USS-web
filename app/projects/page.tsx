@@ -198,7 +198,7 @@ export default function ProjectsPage() {
           {/* Eyebrow — drops down */}
           <FadeDown delay={0.1}>
             <p className="font-[var(--font-be-vietnam)] text-[11px] sm:text-[13px] font-medium uppercase leading-none tracking-[2px] sm:tracking-[3px] text-white flex items-center justify-center">
-              OUR PORTFOLIO
+              OUR WORK
             </p>
           </FadeDown>
 
@@ -214,8 +214,8 @@ export default function ProjectsPage() {
 
           {/* Subheading — slides in from right */}
           <FadeRight delay={0.3}>
-            <p className="mt-[16px] sm:mt-[30px] font-[var(--font-be-vietnam)] text-[12px] font-medium leading-[1.35] text-white sm:text-[16.5px]">
-              Take a look at USS projects across UK, US and Middle East
+            <p className="mt-[16px] max-w-[800px] mx-auto sm:mt-[30px] font-[var(--font-be-vietnam)] text-[12px] font-medium leading-[1.35] text-white sm:text-[16.5px]">
+              Explore USS projects across branding, websites, creative and performance marketing for clients across the UK, US and Middle East.
             </p>
           </FadeRight>
 

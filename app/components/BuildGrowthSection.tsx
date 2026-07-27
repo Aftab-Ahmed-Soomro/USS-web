@@ -6,18 +6,18 @@ import { motion } from "framer-motion";
 
 const performanceCards = [
   { id: "01", title: "Marketing Strategy", desc: "Turning business goals into clear marketing plans.", link: "Explore Strategy", href: "#marketing-strategy" },
-  { id: "02", title: "Paid Social", desc: "Creative campaigns designed to generate measurable results", link: "Explore Paid Social", href: "#meta-ads" },
-  { id: "03", title: "Paid Search", desc: "Reaching customers when they're ready to take action.", link: "Explore Paid Search", href: "#paid-search" },
-  { id: "04", title: "Email Marketing", desc: "Automated journeys that strengthen customer relationships.", link: "Explore Email Marketing", href: "#email-marketing" },
+  { id: "02", title: "Paid Social", desc: "Campaigns designed to reach and convert the right audience.", link: "Explore Paid Social", href: "#meta-ads" },
+  { id: "03", title: "Paid Search", desc: "Capturing demand when customers are ready to purchase.", link: "Explore Paid Search", href: "#paid-search" },
+  { id: "04", title: "Email Marketing", desc: "Driving repeat purchases through personalised communication.", link: "Explore Email Marketing", href: "#email-marketing" },
   { id: "05", title: "WhatsApp & SMS", desc: "Direct communication that keeps your audience connected.", link: "Explore WhatsApp & SMS", href: "#whatsapp-sms" },
 ];
 
 const creativeCards = [
-  { id: "01", title: "Social Media", desc: "Consistent content that keeps your brand visible.", link: "Explore Social Media", href: "#social-media" },
-  { id: "02", title: "Content Creation", desc: "Creative designed to engage, inspire and perform.", link: "Explore Content Creation", href: "#content-creation" },
-  { id: "03", title: "Website Design", desc: "Websites designed to convert visitors into customers.", link: "Explore Website Design", href: "#web-design-development" },
-  { id: "04", title: "Website Development", desc: "Full responsive custom coded website", link: "Explore Development", href: "#web-design-development" },
-  { id: "05", title: "Branding & Graphics", desc: "Visual identities that create recognition and consistency.", link: "Explore Branding", href: "#branding-graphics" },
+  { id: "01", title: "Social Media", desc: "Building a consistent presence across every platform.", link: "Explore Social Media", href: "#social-media" },
+  { id: "02", title: "Content Creation", desc: "Creating content that captures attention and reflects your brand.", link: "Explore Content Creation", href: "#content-creation" },
+  { id: "03", title: "Website Design", desc: "Creating UX that helps users find what they need.", link: "Explore Website Design", href: "#web-design-development" },
+  { id: "04", title: "Website Development", desc: "Building fast, responsive websites that perform.", link: "Explore Development", href: "#web-design-development" },
+  { id: "05", title: "Branding & Graphics", desc: "Creating visual identities people recognise and remember.", link: "Explore Branding", href: "#branding-graphics" },
 ];
 
 export function BuildGrowthSection() {
@@ -52,14 +52,14 @@ export function BuildGrowthSection() {
             </span>
           </div>
           <div className="font-[var(--font-be-vietnam)] font-medium text-[30px] sm:text-[56px] leading-[1.1] sm:leading-[64.51px] tracking-[-1.15px] lowercase">
-            one system, two disciplines
+            connected by strategy.
           </div>
         </h2>
 
         {/* DESCRIPTION */}
-        <p className="font-[var(--font-be-vietnam)] font-light text-[13px] sm:text-[16.8px] leading-[1.6] sm:leading-[26.88px] text-[#F4F2EE8F] mt-6 sm:mt-8 max-w-[450px] mx-auto">
-          Every engagement blends both. Choose a discipline
-          <br className="hidden sm:block" /> below to see how we approach it on its own.
+        <p className="font-[var(--font-be-vietnam)] font-light text-[13px] sm:text-[16.8px] leading-[1.6] sm:leading-[26.88px] text-[#F4F2EE8F] mt-6 sm:mt-8 max-w-[550px] mx-auto">
+          Whether you're focused on growth, brand or both, explore 
+          <br className="hidden sm:block" /> the two areas below to see how we can support your business.
         </p>
       </motion.div>
 
