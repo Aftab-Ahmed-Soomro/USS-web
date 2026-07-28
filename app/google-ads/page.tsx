@@ -112,9 +112,10 @@ function Hero() {
           </StaggerItem>
           <StaggerItem>
             <h1 className="mt-[16px] min-[375px]:mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px]  font-bold lowercase leading-[100%] tracking-[-1.5px] sm:tracking-[-3px] sm:text-[58px] text-white">
-              Generate qualified leads  {" "}
+              Generate qualified  {" "}
               <br className="hidden sm:block" />
-              with{" "}
+              leads with{" "}
+              <br className="hidden sm:block" />
               <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-bold timesFontFamily italic text-white tracking-[-1.5px] sm:tracking-[-2.8px] leading-[1.1] sm:leading-none">
                 google ads
               </span>
@@ -316,54 +317,54 @@ function FinalCta() {
 const googleAdsBrandPoints = [
   {
     number: "01",
-    title: "Wasted Budget",
+    title: "No Clear Strategy",
     description:
-      "Budget is spent on keywords that don't convert.",
+      "Campaigns launch without a defined strategy or clear objectives.",
   },
   {
     number: "02",
-    title: "Poor Campaign Structure",
+    title: "Reaching the Wrong People",
     description:
-      "Poor campaign structure makes it harder to improve performance.",
+      "Broad targeting wastes budget on the wrong audiences.",
   },
   {
     number: "03",
-    title: "Weak Ad Copy",
+    title: "No Landing Page",
     description:
-      "Ads don't stand out or encourage people to click and engage.",
+      "Traffic is sent to generic website pages not landing pages.",
   },
   {
     number: "04",
     title: "Set and Forget",
     description:
-      "Campaigns run without A/B testing or optimisation.",
+      "Little testing or ongoing optimisation after launch.",
   },
 ];
 
 const googleAdsUssPoints = [
   {
     number: "01",
-    title: "High-Intent Targeting",
+    title: "Strategy First",
     description:
-      "We target searches that are ready to convert.",
+      "Every campaign starts with a tailored Google Ads strategy.",
   },
   {
     number: "02",
-    title: "Built for Performance",
+    title: "Smarter Targeting",
     description:
-      "Campaigns structured for better results and scalability.",
+      "Reach the audiences most likely to enquire and convert",
   },
   {
     number: "03",
-    title: "Ads That Drive Action",
+    title: "Dedicated Landing Pages",
     description:
-      "Copy written to increase clicks and enquiries",
+      "Purpose built pages designed to increase conversions.",
   },
   {
     number: "04",
-    title: "Always Optimising",
+    title: "Continuous Optimisation",
     description:
-      "Continuous improvements based on real campaign data",
+      "Ongoing testing keeps campaigns improving every month.",
   },
 ];
 
@@ -376,6 +377,7 @@ export default function GoogleAdsPage() {
       <Brands />
       
       <WhyEmailFails
+      tagline="THE OPPORTUNITY"
       hideBadge={false}
       heading={
         <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[32px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">

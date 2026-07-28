@@ -15,12 +15,12 @@ const brandPoints: Point[] = [
     {
         number: "02",
         title: "Every Subscriber Looks the Same",
-        description: "The same message is sent to everyone, regardless of interests or behavior.",
+        description: "The same message is sent to every subscriber, regardless of behaviour.",
     },
     {
         number: "03",
         title: "No Long-Term Customer Journey",
-        description: "There's no system to welcome, nurture, or retain customers after they sign up.",
+        description: "No automated flows to welcome, recover or retain customers.",
     },
     {
         number: "04",
@@ -33,22 +33,22 @@ const ussPoints: Point[] = [
     {
         number: "01",
         title: "Always-On Email Strategy",
-        description: "We create a strategic email calendar that drives consistent engagement.",
+        description: "Strategic email calendars that keep your brand consistently visible.",
     },
     {
         number: "02",
-        title: "Personalized Customer Experiences",
-        description: "Every customer receives content relevant to their interests.",
+        title: "Personalised Customer Experiences",
+        description: "Every subscriber receives content relevant to their interests and behaviour.",
     },
     {
         number: "03",
         title: "Automated Customer Journeys",
-        description: "Automated flows nurture leads and recover lost revenue.",
+        description: "Welcome, abandoned cart and post purchase flows working automatically.",
     },
     {
         number: "04",
-        title: "Continuous Performance Optimization",
-        description: "Every campaign is measured, refined and improved using real performance data.",
+        title: "Continuous Performance Optimisation",
+        description: "Every campaign is measured, refined and improved over time.",
     },
 ];
 

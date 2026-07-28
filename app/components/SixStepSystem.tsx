@@ -13,9 +13,9 @@ export interface StepDetail {
 export interface StepData {
   id: string;
   title: string;
-  pills: string[];
+  pills?: string[];
   description: string;
-  details: StepDetail[];
+  details?: StepDetail[];
 }
 
 export interface SixStepSystemProps {
@@ -231,16 +231,18 @@ export function SixStepSystem({ heading, data = defaultSteps }: SixStepSystemPro
                   {isActiveMobile && (
                     <div className="lg:hidden mt-6 pl-10 sm:pl-[52px]">
                       {/* Pills */}
-                      <div className="flex flex-wrap gap-2 sm:gap-3 mb-6">
-                        {step.pills.map((pill, idx) => (
-                          <span
-                            key={idx}
-                            className="bg-white text-black font-medium rounded-full px-3 py-1 sm:px-4 text-[11px] leading-[16.5px]"
-                          >
-                            {pill}
-                          </span>
-                        ))}
-                      </div>
+                      {step.pills && step.pills.length > 0 && (
+                        <div className="flex flex-wrap gap-2 sm:gap-3 mb-6">
+                          {step.pills.map((pill, idx) => (
+                            <span
+                              key={idx}
+                              className="bg-white text-black font-medium rounded-full px-3 py-1 sm:px-4 text-[11px] leading-[16.5px]"
+                            >
+                              {pill}
+                            </span>
+                          ))}
+                        </div>
+                      )}
 
                       {/* Description */}
                       <p className="font-normal text-[#EAEAEA] mb-4 sm:mb-10 text-[14px] leading-[22.75px]">
@@ -248,20 +250,22 @@ export function SixStepSystem({ heading, data = defaultSteps }: SixStepSystemPro
                       </p>
 
                       {/* Details List */}
-                      <div className="flex flex-col">
-                        {step.details.map((detail, idx) => (
-                          <div key={idx} className="flex flex-col py-2 sm:py-3 border-t border-[#333333] last:border-b">
-                            <h4 className={`font-semibold text-white text-[13px] leading-[19.5px] ${detail.desc ? 'mb-1' : ''}`}>
-                              {detail.title}
-                            </h4>
-                            {detail.desc && (
-                              <p className="font-normal text-[#A0A0A0] text-[12px] leading-[18px]">
-                                {detail.desc}
-                              </p>
-                            )}
-                          </div>
-                        ))}
-                      </div>
+                      {step.details && step.details.length > 0 && (
+                        <div className="flex flex-col">
+                          {step.details.map((detail, idx) => (
+                            <div key={idx} className="flex flex-col py-2 sm:py-3 border-t border-[#333333] last:border-b">
+                              <h4 className={`font-semibold text-white text-[13px] leading-[19.5px] ${detail.desc ? 'mb-1' : ''}`}>
+                                {detail.title}
+                              </h4>
+                              {detail.desc && (
+                                <p className="font-normal text-[#A0A0A0] text-[12px] leading-[18px]">
+                                  {detail.desc}
+                                </p>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   )}
                 </StaggerItem>
@@ -274,43 +278,47 @@ export function SixStepSystem({ heading, data = defaultSteps }: SixStepSystemPro
             <div className="flex flex-col w-full">
 
               {/* Pills */}
-              <div className="flex flex-wrap gap-2 sm:gap-3 mb-6">
-                {activeStep.pills.map((pill, idx) => (
-                  <span
-                    key={idx}
-                    className="bg-white text-black font-medium rounded-full px-3 py-1 sm:px-4 text-[11px] leading-[16.5px]"
-                  >
-                    {pill}
-                  </span>
-                ))}
-              </div>
+              {activeStep?.pills && activeStep.pills.length > 0 && (
+                <div className="flex flex-wrap gap-2 sm:gap-3 mb-6">
+                  {activeStep.pills.map((pill, idx) => (
+                    <span
+                      key={idx}
+                      className="bg-white text-black font-medium rounded-full px-3 py-1 sm:px-4 text-[11px] leading-[16.5px]"
+                    >
+                      {pill}
+                    </span>
+                  ))}
+                </div>
+              )}
 
               {/* Description */}
               <p
                 className="font-normal text-[#EAEAEA] mb-8 sm:mb-10 max-w-[480px] text-[14px] leading-[22.75px]"
               >
-                {activeStep.description}
+                {activeStep?.description}
               </p>
 
               {/* Details List */}
-              <div className="flex flex-col">
-                {activeStep.details.map((detail, idx) => (
-                  <div key={idx} className="flex flex-col py-3 border-t border-[#333333] last:border-b">
-                    <h4
-                      className={`font-semibold text-white text-[13px] leading-[19.5px] ${detail.desc ? 'mb-1' : ''}`}
-                    >
-                      {detail.title}
-                    </h4>
-                    {detail.desc && (
-                      <p
-                        className="font-normal text-[#A0A0A0] text-[12px] leading-[18px]"
+              {activeStep?.details && activeStep.details.length > 0 && (
+                <div className="flex flex-col">
+                  {activeStep.details.map((detail, idx) => (
+                    <div key={idx} className="flex flex-col py-3 border-t border-[#333333] last:border-b">
+                      <h4
+                        className={`font-semibold text-white text-[13px] leading-[19.5px] ${detail.desc ? 'mb-1' : ''}`}
                       >
-                        {detail.desc}
-                      </p>
-                    )}
-                  </div>
-                ))}
-              </div>
+                        {detail.title}
+                      </h4>
+                      {detail.desc && (
+                        <p
+                          className="font-normal text-[#A0A0A0] text-[12px] leading-[18px]"
+                        >
+                          {detail.desc}
+                        </p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
 
             </div>
           </FadeRight>

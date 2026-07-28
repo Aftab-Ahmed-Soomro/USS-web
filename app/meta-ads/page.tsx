@@ -348,25 +348,25 @@ const googleAdsBrandPoints = [
     number: "01",
     title: "No Clear Strategy",
     description:
-      "Campaigns are launched without a clear plan or defined business goal.",
+      "Campaigns launch without a defined direction or purpose.",
   },
   {
     number: "02",
-    title: "Reaching the Wrong People",
+    title: "Broad Targeting",
     description:
-      "Ads are shown to people who aren't likely to become customers.",
+      "Ads are shown to people unlikely to take action.",
   },
   {
     number: "03",
     title: "Weak Creative",
     description:
-      "The ads don't grab attention, explain the offer or encourage people to take action.",
+      "Creative fails to communicate the value of your brand",
   },
   {
     number: "04",
     title: "Set and Forget",
     description:
-      "Campaigns are left running with little testing or optimisation, so performance stalls.",
+      "Once live, campaigns receive minimal attention",
   },
 ];
 
@@ -375,25 +375,25 @@ const googleAdsUssPoints = [
     number: "01",
     title: "Strategy First",
     description:
-      "Every campaign starts with clear goals, the right audience and a plan to achieve them.",
+      "Every campaign is built around clear objectives and a defined strategy.",
   },
   {
     number: "02",
     title: "Smarter Targeting",
     description:
-      "We target the people most likely to become customers, not just the biggest audience.",
+      "Target the audiences most likely to engage with your brand.",
   },
   {
     number: "03",
     title: "Creative That Performs",
     description:
-      "We create ads designed to stop the scroll and generate clicks, leads and sales.",
+      "Creative designed around your audience and campaign objectives.",
   },
   {
     number: "04",
-    title: "Always Improving",
+    title: "Continuous Optimisation",
     description:
-      "We continuously test, refine and optimise campaigns to get more from your ad spend.",
+      "Regular testing and optimisation to improve campaign performance.",
   },
 ];
 
@@ -405,6 +405,7 @@ export default function MetaAdsPage() {
       <Numbers />
       <Brands />
       <WhyEmailFails
+              tagline="THE OPPORTUNITY"
               hideBadge={false}
               heading={
                 <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[32px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">

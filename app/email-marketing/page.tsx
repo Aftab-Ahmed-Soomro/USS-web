@@ -559,7 +559,7 @@ export default function EmailMarketingPage() {
       <Hero />
       <Numbers stats={emailStats} />
       <EmailMarketingQuote first={"email marketing should contribute to"} second={"35%"} third={"of your business revenue with the right strategy and execution"} />
-      <WhyEmailFails />
+      <WhyEmailFails tagline="THE OPPORTUNITY" />
       <EmailOverview />
       <Brands />
       <EmailStrategy />

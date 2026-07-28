@@ -212,195 +212,51 @@ const strategyAccordionData = [
 const touchpointStepsData = [
   {
     id: "01",
-    title: "Paid Search Capture demand",
-    pills: ["Google Ads", "PPC", "Intent-Based"],
-    description: "We target high-intent buyers at the exact moment they're searching — capturing demand with precision-crafted campaigns built to convert, not just click.",
-    details: [
-      {
-        title: "Keyword Strategy & Match Types",
-        desc: "Targeting the right search terms at every stage of the buyer journey."
-      },
-      {
-        title: "Ad Copy & Extensions",
-        desc: "Compelling search ads with structured snippets, callouts and sitelinks."
-      },
-      {
-        title: "Bid Management & ROAS Targets",
-        desc: "Smart bidding strategies optimised for revenue, not vanity metrics."
-      },
-      {
-        title: "Negative Keyword Refinement",
-        desc: "Continuously pruning wasteful spend to protect your budget."
-      }
-    ]
+    title: "Email Marketing",
+    description:
+      "Your email strategy should be tailored around the customer lifecycle, delivering the right message at the right time to encourage repeat purchases and long term loyalty.",
   },
   {
     id: "02",
-    title: "Paid Social Generate awareness",
-    pills: ["Meta Ads", "TikTok", "Creative-Led"],
-    description: "We build scroll-stopping creatives and audience systems across Meta and TikTok — turning cold audiences into warm prospects and loyal customers.",
-    details: [
-      {
-        title: "Audience Segmentation & Lookalikes",
-        desc: "Building layered audience structures that scale without wasted spend."
-      },
-      {
-        title: "Creative Testing Framework",
-        desc: "Rapid iteration on hooks, formats and messaging to find winners fast."
-      },
-      {
-        title: "Funnel-Specific Ad Formats",
-        desc: "TOF awareness through to BOF retargeting — every stage covered."
-      },
-      {
-        title: "Budget Allocation & Scaling",
-        desc: "Intelligent spend distribution across winning ad sets as they grow."
-      }
-    ]
+    title: "Google Ads",
+    description:
+      "Your Google Ads strategy should focus on capturing high intent searches, ensuring your business appears when customers are actively looking for your products or services.",
   },
   {
     id: "03",
-    title: "Email Marketing Retain customers",
-    pills: ["Klaviyo", "Flows", "Segmentation"],
-    description: "Email is your highest-ROI owned channel. We build automated flows and broadcast campaigns that retain customers, recover revenue and drive repeat purchases.",
-    details: [
-      {
-        title: "Core Flow Architecture",
-        desc: "Welcome, abandoned cart, post-purchase and win-back flows that work 24/7."
-      },
-      {
-        title: "List Segmentation & Personalisation",
-        desc: "The right message to the right person at the right time — every send."
-      },
-      {
-        title: "Campaign Calendar & Cadence",
-        desc: "Consistent broadcast campaigns aligned to your promotions and seasonality."
-      },
-      {
-        title: "Deliverability & List Health",
-        desc: "Protecting sender reputation so your emails actually reach the inbox."
-      }
-    ]
+    title: "Meta Ads",
+    description:
+      "Your Meta Ads strategy should build awareness and generate demand by reaching the right audiences before they're ready to buy.",
   },
   {
     id: "04",
-    title: "WhatsApp & SMS Drive action",
-    pills: ["WhatsApp", "SMS", "Direct Response"],
-    description: "The most direct line to your customer. We deploy high-converting WhatsApp and SMS campaigns that drive immediate action with near-100% open rates.",
-    details: [
-      {
-        title: "Broadcast Campaign Strategy",
-        desc: "Timely, personalised messages sent at moments that drive the most conversions."
-      },
-      {
-        title: "Opt-in List Growth",
-        desc: "Building compliant, high-quality subscriber lists that grow with your brand."
-      },
-      {
-        title: "Automated Conversation Flows",
-        desc: "Two-way messaging sequences that nurture and convert without manual effort."
-      },
-      {
-        title: "Offer & Urgency Messaging",
-        desc: "Copy that creates genuine excitement and drives clicks in under 30 seconds."
-      }
-    ]
+    title: "WhatsApp & SMS",
+    description:
+      "Your messaging strategy should deliver timely, relevant communication that encourages action without overwhelming your audience.",
   },
   {
     id: "05",
-    title: "Website Convert visitors",
-    pills: ["CRO", "UX", "Landing Pages"],
-    description: "Traffic means nothing without conversion. We optimise your website experience — from landing pages to checkout — to turn more visitors into paying customers.",
-    details: [
-      {
-        title: "Conversion Rate Optimisation",
-        desc: "Data-led improvements to pages that are losing revenue right now."
-      },
-      {
-        title: "Landing Page Design & Build",
-        desc: "High-converting pages built for specific campaigns and traffic sources."
-      },
-      {
-        title: "A/B Testing & Experimentation",
-        desc: "Continuous testing to find what moves the needle on your revenue."
-      },
-      {
-        title: "Checkout & UX Friction Removal",
-        desc: "Eliminating the drop-off points that are costing you sales every day."
-      }
-    ]
+    title: "Website",
+    description:
+      "Your website strategy should guide visitors towards the actions that matter most, whether that's making an enquiry, booking a service or completing a purchase.",
   },
   {
     id: "06",
-    title: "Organic Social Build authority",
-    pills: ["Instagram", "TikTok", "Brand Voice"],
-    description: "Organic social builds the trust that paid can't buy. We develop a content strategy and posting cadence that grows your following and reinforces your brand authority.",
-    details: [
-      {
-        title: "Content Strategy & Pillars",
-        desc: "A structured approach to what you post, why you post it, and when."
-      },
-      {
-        title: "Platform-Specific Formats",
-        desc: "Content tailored to how each platform's algorithm rewards engagement."
-      },
-      {
-        title: "Community Engagement",
-        desc: "Building genuine two-way relationships that turn followers into advocates."
-      },
-      {
-        title: "Brand Voice & Consistency",
-        desc: "A cohesive tone and aesthetic across every post, story and reel."
-      }
-    ]
+    title: "Organic Social",
+    description:
+      "Your social strategy should build credibility through consistent content that keeps your brand visible and relevant.",
   },
   {
     id: "07",
-    title: "SEO Long-term growth",
-    pills: ["Technical SEO", "Content", "Authority"],
-    description: "SEO is your compounding asset. We build organic visibility through technical foundations, strategic content and authority-building that grows your traffic month after month.",
-    details: [
-      {
-        title: "Technical SEO Audit & Fixes",
-        desc: "Fixing the crawlability, speed and structure issues holding your rankings back."
-      },
-      {
-        title: "Keyword Research & Mapping",
-        desc: "Identifying the search terms your ideal customers are using right now."
-      },
-      {
-        title: "On-Page Optimisation",
-        desc: "Optimising every page for relevance, intent match and search visibility."
-      },
-      {
-        title: "Link Building & Authority",
-        desc: "Earning high-quality backlinks that signal trust and push you up the rankings."
-      }
-    ]
+    title: "Content Creation",
+    description:
+      "Your content strategy should support every marketing channel with creative tailored to different audiences and stages of the funnel.",
   },
   {
     id: "08",
-    title: "Content Creation Support every channel",
-    pills: ["Video", "Copywriting", "Creative Assets"],
-    description: "Great content powers every channel. We produce the creative assets, video content and copy that fuel your ads, social, email and SEO — all aligned to your brand.",
-    details: [
-      {
-        title: "Video Production & Editing",
-        desc: "Short-form and long-form video content built for performance and platform."
-      },
-      {
-        title: "Ad Creative & Graphic Design",
-        desc: "Scroll-stopping visuals tailored to each ad format and audience."
-      },
-      {
-        title: "Copywriting & Messaging",
-        desc: "Words that sell — from ad hooks to product descriptions and email subject lines."
-      },
-      {
-        title: "Content Repurposing System",
-        desc: "Maximising every piece of content across multiple channels and formats."
-      }
-    ]
+    title: "Branding & Graphics",
+    description:
+      "Your brand strategy should create consistency across every touchpoint, helping customers recognise and remember your business.",
   }
 ];
 

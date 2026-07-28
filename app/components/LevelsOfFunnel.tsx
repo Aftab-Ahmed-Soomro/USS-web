@@ -43,19 +43,20 @@ export function LevelsOfFunnel() {
             {/* Title Column (Order 1 on mobile, Col 1-5 on desktop) */}
             <div className="order-1 lg:order-1 lg:col-span-5 flex flex-col justify-center w-full">
               <StaggerItem>
-                <h2 className="m-0 p-0 mb-4 sm:mb-8 text-white flex flex-row flex-nowrap whitespace-nowrap items-baseline gap-x-2 sm:gap-x-3">
+                <h2 className="m-0 p-0 mb-4 sm:mb-8 text-white flex flex-col items-baseline gap-x-2 sm:gap-x-3">
                   <span
                     style={{
                       fontWeight: 500,
                       fontSize: 'clamp(32px, 4vw, 56px)',
-                      lineHeight: '1.1',
+                      lineHeight: '0.4',
                       letterSpacing: '-0.02em',
                       textTransform: 'lowercase',
                     }}
                   >
                     full funnel
                   </span>
-                  <span
+                  <br />
+                  <p
                     className="sm:-mt-[10px]"
                     style={{
                       fontFamily: "'Times New Roman', Times, serif",
@@ -68,7 +69,7 @@ export function LevelsOfFunnel() {
                     }}
                   >
                     marketing
-                  </span>
+                  </p>
                 </h2>
               </StaggerItem>
 
