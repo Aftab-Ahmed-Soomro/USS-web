@@ -72,7 +72,7 @@ export function BuildGrowthSection() {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <Image
-          src="/assets/creativeSection2.png"
+          src="/assets/ChatGPT-Generated.png"
           alt="Performance and Creative overlap"
           fill
           className="object-contain mix-blend-screen brightness-95 contrast-110 pr-6"
