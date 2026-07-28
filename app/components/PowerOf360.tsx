@@ -13,7 +13,8 @@ const cards = [
     titleHighlight: "360",
     description:
       "Growth rarely comes from a single campaign. It comes from connecting every part of your marketing behind one clear direction. With strategy, creative and performance working together, your brand stays consistent and your marketing becomes more effective.",
-    image: "/assets/directionCard.jpg",
+    image: "/assets/power/direction.png",
+    bgImage: "/assets/power/directionLarge.png",
     alt: "One Direction card",
   },
   {
@@ -23,7 +24,8 @@ const cards = [
     titleHighlight: "team",
     description:
       "At USS, we become an extension of your team. By taking the time to understand your business, we make better decisions, communicate more effectively and keep every project moving in the right direction.",
-    image: "/assets/teamCard.jpg",
+    image: "/assets/power/team.png",
+    bgImage: "/assets/power/teamLarge.png",
     alt: "One Team card",
   },
   {
@@ -33,7 +35,8 @@ const cards = [
     titleHighlight: "brand",
     description:
       "A strong brand is built through consistency. At USS, we make sure every touchpoint reflects the same identity, helping your business build trust and lasting brand value.",
-    image: "/assets/brandCard.jpg",
+    image: "/assets/power/brand.png",
+    bgImage: "/assets/power/brandLarge.jpeg",
     alt: "One Brand card",
   },
   {
@@ -43,7 +46,8 @@ const cards = [
     titleHighlight: "goal",
     description:
       "Every decision should support a bigger objective. At USS, we keep your long term business goals at the centre of every strategy, campaign and recommendation, ensuring every digital touchpoint moves your business forward.",
-    image: "/assets/goalCard.jpg",
+    image: "/assets/power/goal.png",
+    bgImage: "/assets/power/goalLarge.png",
     alt: "One Goal card",
   },
 ];
@@ -149,7 +153,7 @@ export function PowerOf360() {
           transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
         >
           <Image
-            src={activeItem.image}
+            src={activeItem.bgImage}
             alt={activeItem.alt}
             fill
             className="object-cover object-center"

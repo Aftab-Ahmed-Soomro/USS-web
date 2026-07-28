@@ -130,25 +130,25 @@ const googleAdsBrandPoints = [
     number: "01",
     title: "Unclear Business Goals",
     description:
-      "Marketing starts before clear business objectives have been defined.",
+      "Marketing begins before clear business objectives are defined.",
   },
   {
     number: "02",
-    title: "No Defined Audience",
+    title: "Market Position",
     description:
-      "Campaigns target everyone instead of the customers most likely to convert.",
+      "No clear point of difference from competitors.",
   },
   {
     number: "03",
     title: "Disconnected Channels",
     description:
-      "Social media, paid ads and email operate separately instead of working together.",
+      "Channels operate separately instead of working together.",
   },
   {
     number: "04",
-    title: "Limited Performance Tracking",
+    title: "Short Term Thinking",
     description:
-      "Marketing success is difficult to measure without clear objectives or KPIs.",
+      "Marketing decisions focus on immediate results.",
   },
 ];
 
@@ -157,25 +157,25 @@ const googleAdsUssPoints = [
     number: "01",
     title: "Business First Strategy",
     description:
-      "Every recommendation starts with your business objectives before any marketing begins.",
+      "Every recommendation starts with your business objectives",
   },
   {
     number: "02",
-    title: "Audience Led Planning",
+    title: "Competitive Positioning",
     description:
-      "We build your strategy around the people most likely to become customers.",
+      "Stand out with a clear market position.",
   },
   {
     number: "03",
     title: "Integrated Marketing Approach",
     description:
-      "Every marketing channel works together as one connected strategy built for growth.",
+      "Every marketing channel works together as one connected strategy",
   },
   {
     number: "04",
-    title: "Continuous Optimisation",
+    title: "Long Term Growth",
     description:
-      "Performance is reviewed regularly to improve results and support long term growth.",
+      "A roadmap built for lasting business growth.",
   },
 ];
 
@@ -269,6 +269,7 @@ export default function MarketingStrategyPage() {
       <Brands />
       <div className="sm:-mb-[120px] -mb-0">
         <WhyEmailFails
+          tagline="THE OPPORTUNITY"
           hideBadge={true}
           heading={
             <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[32px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
