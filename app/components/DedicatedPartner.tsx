@@ -16,7 +16,7 @@ export default function DedicatedPartner() {
       <div className="w-full max-w-[1150px]">
         
         {/* Top Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 mb-10 lg:mb-48">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 mb-14">
           
           {/* Left: Heading */}
           <div className="lg:col-span-8">
