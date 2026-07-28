@@ -28,74 +28,144 @@ const defaultSteps: StepData[] = [
     id: "01",
     title: "Ideation & Strategy",
     pills: ["Concept", "Positioning", "Audience Fit"],
-    description: "We start by identifying the right product for your niche, audience size and Q4 timing — then build the commercial architecture around it.",
+    description: "We start by identifying the right product for your niche, audience size and Q4 timing, then build the commercial strategy around it.",
     details: [
       {
         title: "Product Concept & Validation",
-        desc: "The right product for your niche, audience size and Black Friday timing."
+        desc: "The right product for your niche, audience size and Black Friday timing"
       },
       {
         title: "Brand & Creative Direction",
-        desc: "Product looks and feels authentic to your personal brand."
+        desc: "Product positioning, messaging and creative built around your audience"
       },
       {
         title: "Launch-ready Assets",
-        desc: "Imagery, copy and sales assets ready ahead of go-live."
+        desc: "Imagery, copy and sales assets prepared ahead of launch"
       },
       {
         title: "Pricing & Margin Structure",
-        desc: "A commercial model that maximises revenue and stays compelling."
+        desc: "A commercial model that maximises revenue while remaining competitive."
       }
     ]
   },
   {
     id: "02",
     title: "Production",
-    pills: ["Manufacturing", "Quality Control"],
-    description: "Placeholder description for Production step.",
+    pills: ["Creative", "Content", "Assets"],
+    description: "Every asset is produced with the launch in mind, ensuring your audience experiences a consistent brand across every touchpoint.",
     details: [
-      { title: "Sourcing", desc: "Finding the right manufacturing partners." },
-      { title: "Sampling", desc: "Iterating on product samples for perfection." }
+      {
+        title: "Content Production",
+        desc: "Creating photography and video assets for launch"
+      },
+      {
+        title: "Website & Landing Pages",
+        desc: "Building high-converting pages designed to sell"
+      },
+      {
+        title: "Sales & Marketing Assets",
+        desc: "Emails, adverts, graphics and promotional materials"
+      },
+      {
+        title: "Creative Review & Approval",
+        desc: "Final quality checks before launch."
+      }
     ]
   },
   {
     id: "03",
     title: "Marketing Execution",
-    pills: ["Content", "Ads", "Email"],
-    description: "Placeholder description for Marketing Execution step.",
+    pills: ["Campaign", "Launch", "Growth"],
+    description: "A complete Black Friday marketing strategy designed to build anticipation before launch and maximise conversions once live.",
     details: [
-      { title: "Campaign Strategy", desc: "Planning the rollout of marketing materials." },
-      { title: "Ad Creatives", desc: "Designing high-converting ad creatives." }
+      {
+        title: "Campaign Strategy & Roadmap",
+        desc: "A full launch plan covering messaging, timing, content windows and targeting"
+      },
+      {
+        title: "Content Integration Planning",
+        desc: "Planning how products are naturally introduced across content"
+      },
+      {
+        title: "Paid Media & Amplification",
+        desc: "Extending reach through paid advertising and remarketing"
+      },
+      {
+        title: "Urgency & Scarcity Mechanics",
+        desc: "Limited offers and countdown messaging designed to increase conversions"
+      }
     ]
   },
   {
     id: "04",
     title: "Campaign Launch & Scale",
-    pills: ["Go-live", "Optimization"],
-    description: "Placeholder description for Campaign Launch & Scale step.",
+    pills: ["Optimisation", "Revenue", "Performance"],
+    description: "Once campaigns go live, performance is monitored continuously to maximise sales throughout the launch.",
     details: [
-      { title: "Launch Day", desc: "Coordinating all channels for a massive launch." },
-      { title: "Scaling Ads", desc: "Increasing budget on winning ad sets." }
+      {
+        title: "Live Campaign Management",
+        desc: "Monitoring campaign performance in real time"
+      },
+      {
+        title: "Creative Optimisation",
+        desc: "Refreshing creatives and messaging based on results"
+      },
+      {
+        title: "Budget Optimisation",
+        desc: "Scaling the best-performing audiences and campaigns"
+      },
+      {
+        title: "Revenue Growth",
+        desc: "Maximising sales throughout the campaign period."
+      }
     ]
   },
   {
     id: "05",
     title: "Fulfilment",
-    pills: ["Logistics", "Support"],
-    description: "Placeholder description for Fulfilment step.",
+    pills: ["Operations", "Logistics", "Customer Experience"],
+    description: "Operational systems ensure every customer receives a smooth experience from purchase through to delivery",
     details: [
-      { title: "Shipping", desc: "Ensuring timely delivery to customers." },
-      { title: "Customer Service", desc: "Handling inquiries and support tickets." }
+      {
+        title: "Storefront & Checkout Setup",
+        desc: "Building the sales infrastructure and purchase journey"
+      },
+      {
+        title: "Order Processing",
+        desc: "Managing orders from purchase through to dispatch"
+      },
+      {
+        title: "Inventory & Stock Management",
+        desc: "Monitoring stock availability throughout the campaign"
+      },
+      {
+        title: "Customer Service",
+        desc: "Handling customer queries while protecting your brand reputation."
+      }
     ]
   },
   {
     id: "06",
     title: "Post Campaign & Debrief",
-    pills: ["Analytics", "Planning"],
-    description: "Placeholder description for Post Campaign & Debrief step.",
+    pills: ["Reporting", "Insights", "Planning"],
+    description: "Every campaign finishes with a commercial review, identifying what worked and how the next launch can perform even better.",
     details: [
-      { title: "Data Review", desc: "Analyzing campaign performance metrics." },
-      { title: "Next Steps", desc: "Planning for the next big opportunity." }
+      {
+        title: "Campaign Performance Report",
+        desc: "Revenue, traffic, conversion rates and ROI analysis"
+      },
+      {
+        title: "Audience Insights & Behaviour",
+        desc: "Understanding purchasing behaviour and highest-performing content"
+      },
+      {
+        title: "Revenue & Margin Review",
+        desc: "Reviewing commercial performance and profitability"
+      },
+      {
+        title: "Next Campaign Playbook",
+        desc: "A strategic blueprint built from the learnings of the previous launch."
+      }
     ]
   }
 ];
@@ -180,13 +250,15 @@ export function SixStepSystem({ heading, data = defaultSteps }: SixStepSystemPro
                       {/* Details List */}
                       <div className="flex flex-col">
                         {step.details.map((detail, idx) => (
-                          <div key={idx} className="flex flex-col py-2 sm:py-4 border-t border-[#333333] last:border-b">
-                            <h4 className="font-semibold text-white mb-1 text-[13px] leading-[19.5px]">
+                          <div key={idx} className="flex flex-col py-2 sm:py-3 border-t border-[#333333] last:border-b">
+                            <h4 className={`font-semibold text-white text-[13px] leading-[19.5px] ${detail.desc ? 'mb-1' : ''}`}>
                               {detail.title}
                             </h4>
-                            <p className="font-normal text-[#A0A0A0] text-[12px] leading-[18px]">
-                              {detail.desc}
-                            </p>
+                            {detail.desc && (
+                              <p className="font-normal text-[#A0A0A0] text-[12px] leading-[18px]">
+                                {detail.desc}
+                              </p>
+                            )}
                           </div>
                         ))}
                       </div>
@@ -223,17 +295,19 @@ export function SixStepSystem({ heading, data = defaultSteps }: SixStepSystemPro
               {/* Details List */}
               <div className="flex flex-col">
                 {activeStep.details.map((detail, idx) => (
-                  <div key={idx} className="flex flex-col py-4 border-t border-[#333333] last:border-b">
+                  <div key={idx} className="flex flex-col py-3 border-t border-[#333333] last:border-b">
                     <h4
-                      className="font-semibold text-white mb-1 text-[13px] leading-[19.5px]"
+                      className={`font-semibold text-white text-[13px] leading-[19.5px] ${detail.desc ? 'mb-1' : ''}`}
                     >
                       {detail.title}
                     </h4>
-                    <p
-                      className="font-normal text-[#A0A0A0] text-[12px] leading-[18px]"
-                    >
-                      {detail.desc}
-                    </p>
+                    {detail.desc && (
+                      <p
+                        className="font-normal text-[#A0A0A0] text-[12px] leading-[18px]"
+                      >
+                        {detail.desc}
+                      </p>
+                    )}
                   </div>
                 ))}
               </div>

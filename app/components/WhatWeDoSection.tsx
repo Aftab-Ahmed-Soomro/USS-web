@@ -14,7 +14,7 @@ export function WhatWeDoSection() {
             <h2 
               className="font-medium lowercase tracking-[-1px] sm:tracking-[-3px] text-white flex flex-wrap items-center gap-x-3 mb-4 sm:mb-6 font-[var(--font-be-vietnam)] text-[32px] sm:text-[56px] leading-[1.1] sm:leading-[86.48px]"
             >
-              <span>what do</span>
+              <span>what</span>
               <span 
                 className="text-[#FF5500] italic font-normal font-[var(--font-cormorant)] timesFontFamily text-[42px] sm:text-[72px] leading-[1.1] sm:leading-[86.48px] tracking-[-1.5px] sm:tracking-[-3px]"
               >
@@ -71,7 +71,7 @@ export function WhatWeDoSection() {
               <p 
                 className="font-medium text-white font-[var(--font-inter)] capitalize text-[14px] sm:text-[16px] leading-[1.4] sm:leading-[21.12px]"
               >
-                Secure better brand partnerships that align with your audience and content
+                Connect creators with brands that genuinely fit their audience and campaign objectives.
               </p>
             </div>
             <div className="absolute bottom-4 right-4">
@@ -97,7 +97,7 @@ export function WhatWeDoSection() {
               <p 
                 className="font-medium text-white font-[var(--font-inter)] capitalize text-[14px] sm:text-[16px] leading-[1.4] sm:leading-[21.12px]"
               >
-                Affiliate Strategy
+                Commercial Growth
               </p>
             </div>
             <div className="absolute bottom-4 left-4">
@@ -119,11 +119,12 @@ export function WhatWeDoSection() {
               fill
               className="object-cover"
             />
-            <div className="absolute top-4 sm:top-6 left-4 sm:left-6 max-w-[220px]">
+            <div className="absolute top-4 sm:top-6 left-4 sm:left-6 max-w-[270px]">
               <p 
                 className="font-medium text-white font-[var(--font-inter)] capitalize text-[14px] sm:text-[16px] leading-[1.4] sm:leading-[21.12px]"
               >
-                Build additional revenue streams that continue beyond each upload.
+                Turn creator influence into measurable revenue through strategic campaign execution.
+
               </p>
             </div>
             <div className="absolute bottom-4 right-4">

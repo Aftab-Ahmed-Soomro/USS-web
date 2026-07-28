@@ -17,7 +17,7 @@ export function BrandIdentity() {
                 brand identity
               </h2>
               <p className="text-white/90 font-normal text-[13px] sm:text-[18px] leading-[1.6] sm:leading-[32px] text-center max-w-[600px]">
-                Most brands don't have an email problem, they have a strategy problem.
+                Every brand identity is built around your business, creating a distinctive visual system that remains consistent across every customer touchpoint.
               </p>
             </div>
           </StaggerItem>

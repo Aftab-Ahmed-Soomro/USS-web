@@ -9,24 +9,40 @@ const cards = [
   {
     id: "01",
     label: "One Direction",
+    titlePrefix: "the power of ",
+    titleHighlight: "360",
+    description:
+      "Growth rarely comes from a single campaign. It comes from connecting every part of your marketing behind one clear direction. With strategy, creative and performance working together, your brand stays consistent and your marketing becomes more effective.",
     image: "/assets/directionCard.jpg",
     alt: "One Direction card",
   },
   {
     id: "02",
     label: "One Team",
+    titlePrefix: "one ",
+    titleHighlight: "team",
+    description:
+      "At USS, we become an extension of your team. By taking the time to understand your business, we make better decisions, communicate more effectively and keep every project moving in the right direction.",
     image: "/assets/teamCard.jpg",
     alt: "One Team card",
   },
   {
     id: "03",
     label: "One Brand",
+    titlePrefix: "one ",
+    titleHighlight: "brand",
+    description:
+      "A strong brand is built through consistency. At USS, we make sure every touchpoint reflects the same identity, helping your business build trust and lasting brand value.",
     image: "/assets/brandCard.jpg",
     alt: "One Brand card",
   },
   {
     id: "04",
     label: "One Goal",
+    titlePrefix: "one ",
+    titleHighlight: "goal",
+    description:
+      "Every decision should support a bigger objective. At USS, we keep your long term business goals at the centre of every strategy, campaign and recommendation, ensuring every digital touchpoint moves your business forward.",
     image: "/assets/goalCard.jpg",
     alt: "One Goal card",
   },
@@ -149,63 +165,63 @@ export function PowerOf360() {
       <div className="relative z-10 w-full flex items-center px-6 pt-24 pb-10 sm:py-80 lg:px-14 max-md:flex-col max-md:items-start max-md:justify-center max-md:gap-4">
         {/* ── LEFT: text block — stays on left ~40% ── */}
         <div className="flex max-w-[450px] flex-col gap-6 flex-shrink-0 max-md:max-w-full max-md:w-full">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="max-md:!text-[40px] max-md:!leading-[48px] max-md:!tracking-tight"
-            style={{
-              fontFamily: "var(--font-be-vietnam), Arial, sans-serif",
-              fontWeight: 500,
-              fontSize: "56px",
-              lineHeight: "81.6px",
-              letterSpacing: "-1.6px",
-              textTransform: "lowercase",
-              color: "#ffffff",
-              margin: 0,
-            }}
-          >
-            the power of{" "}
-            <span
-              className="max-md:!text-[56px] max-md:!leading-[60px]"
-              style={{
-                fontFamily: "'Times New Roman', Times, serif",
-                fontWeight: 400,
-                fontStyle: "italic",
-                fontSize: "72px",
-                lineHeight: "81.6px",
-                letterSpacing: "-1.6px",
-                textTransform: "lowercase",
-                color: "#FF5500",
-              }}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeItem.id}
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.35, ease: "easeOut" }}
+              className="flex flex-col gap-6"
             >
-              360
-            </span>
-          </motion.h2>
+              <h2
+                className="max-md:!text-[40px] max-md:!leading-[48px] max-md:!tracking-tight"
+                style={{
+                  fontFamily: "var(--font-be-vietnam), Arial, sans-serif",
+                  fontWeight: 500,
+                  fontSize: "56px",
+                  lineHeight: "81.6px",
+                  letterSpacing: "-1.6px",
+                  textTransform: "lowercase",
+                  color: "#ffffff",
+                  margin: 0,
+                }}
+              >
+                {activeItem.titlePrefix}
+                <span
+                  className="max-md:!text-[56px] max-md:!leading-[60px]"
+                  style={{
+                    fontFamily: "'Times New Roman', Times, serif",
+                    fontWeight: 400,
+                    fontStyle: "italic",
+                    fontSize: "72px",
+                    lineHeight: "81.6px",
+                    letterSpacing: "-1.6px",
+                    textTransform: "lowercase",
+                    color: "#FF5500",
+                  }}
+                >
+                  {activeItem.titleHighlight}
+                </span>
+              </h2>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-            viewport={{ once: true }}
-            className="max-md:!text-[15px] max-md:!leading-[24px]"
-            style={{
-              fontFamily: "var(--font-be-vietnam), Arial, sans-serif",
-              fontWeight: 400,
-              fontSize: "17px",
-              lineHeight: "28px",
-              letterSpacing: "0%",
-              color: "rgba(255,255,255,0.85)",
-              margin: 0,
-            }}
-          >
-            Growth rarely comes from a single campaign. It comes from connecting
-            every part of your marketing behind one clear direction. When
-            strategy, creative and execution work together, your brand stays
-            consistent, projects move faster and every activity contributes
-            towards the same business goals.
-          </motion.p>
+              <p
+                className="max-md:!text-[15px] max-md:!leading-[24px] min-h-[140px] sm:min-h-[120px]"
+                style={{
+                  fontFamily: "var(--font-be-vietnam), Arial, sans-serif",
+                  fontWeight: 400,
+                  fontSize: "17px",
+                  lineHeight: "28px",
+                  letterSpacing: "0%",
+                  color: "rgba(255,255,255,0.85)",
+                  margin: 0,
+                  minHeight: "120px",
+                }}
+              >
+                {activeItem.description}
+              </p>
+            </motion.div>
+          </AnimatePresence>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -245,7 +261,7 @@ export function PowerOf360() {
                   "transparent";
               }}
             >
-              Contact Us
+              Book a Consultation
               <svg
                 width="13"
                 height="13"

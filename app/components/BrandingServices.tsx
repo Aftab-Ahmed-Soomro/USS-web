@@ -34,7 +34,7 @@ export function BrandingServices() {
                     Branding
                   </h1>
                   <p className="text-[#a3a3a3] font-light text-[13px] sm:text-[19px] leading-[1.6] sm:leading-[29.45px] max-w-[580px]">
-                    A brand is more than a logo. We build strategic identities that create recognition, consistency and long-term brand value across every customer touchpoint.
+                    We create the visual foundations of your brand, including your logo, colour palette, typography, brand guidelines and supporting assets.
                   </p>
                 </div>
                 <div className="w-full max-w-[644px] rounded-[10px] overflow-hidden aspect-[644/194] bg-[#111]">
@@ -134,19 +134,19 @@ const bottomCards = [
   {
     id: "01",
     title: "Logo Design",
-    description: "Simple and memorable logo systems.",
+    description: "Create distinctive logos that represent your business and leave a lasting impression.",
     image: "/assets/brandingImages/1.png"
   },
   {
     id: "02",
     title: "Colour Palette",
-    description: "Strategic colour systems for digital and print.",
+    description: "Develop a colour system that creates consistency across every touchpoint.",
     image: "/assets/brandingImages/2.png"
   },
   {
     id: "03",
     title: "Typography",
-    description: "Font selection and hierarchy.",
+    description: "Select primary and secondary fonts that strengthen readability and reinforce your brand identity.",
     image: "/assets/brandingImages/3.png",
     useBg: true,
     imageBg: "bg-white",
@@ -156,13 +156,13 @@ const bottomCards = [
   {
     id: "04",
     title: "Brand Guidelines",
-    description: "Rules for consistent brand application.",
+    description: "Document the rules that keep your brand consistent across every platform and asset.",
     image: "/assets/brandingImages/4.png"
   },
   {
     id: "05",
     title: "Brand Assets",
-    description: "Social media, stationery and marketing assets.",
+    description: "Design supporting materials including social media templates, stationery, presentations and marketing collateral.",
     image: "/assets/brandingImages/5.png"
   }
 ];

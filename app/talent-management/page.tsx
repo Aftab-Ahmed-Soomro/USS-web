@@ -66,7 +66,7 @@ export default function MarketingStrategyPage() {
       <RevenueMethod />
       <TishWondersProfile />
       <ProjectOverview
-        subheading="sneak peak into picksperience launch"
+        subheading="SNEAK PEEK INTO THE Q4 LAUNCH"
         images={[
           "/assets/tishOverview/1.jpg",
           "/assets/tishOverview/2.jpg",
@@ -78,7 +78,7 @@ export default function MarketingStrategyPage() {
       />
       <SadiaPsychologyProfile />
       <ProjectOverview
-        subheading="sneak peak into black friday launch"
+        subheading="inside the launch."
         images={[
           "/assets/sadiaOverview/1.png",
           "/assets/sadiaOverview/2.png",

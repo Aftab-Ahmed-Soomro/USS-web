@@ -53,28 +53,83 @@ const problems = [
 
 const socialServicesData = [
   {
-    title: "Monthly Content Calendars",
-    description: "Plan months of strategic content that keeps your brand consistent and visible."
+    title: "Content Strategy",
+    description: "Build a social media strategy aligned with your brand, audience and business objectives.",
+    whatsIncluded: [
+      "Social media strategy",
+      "Audience research",
+      "Competitor analysis",
+      "Content pillars",
+      "Monthly content calendars",
+      "Campaign planning",
+      "Platform strategy"
+    ]
   },
   {
-    title: "Publishing & Scheduling",
-    description: "We handle the logistics of posting at optimal times across all your social channels."
+    title: "Content Creation",
+    description: "Create engaging, platform specific content designed to strengthen your brand",
+    whatsIncluded: [
+      "Graphic design",
+      "Short form video editing",
+      "Reels creation",
+      "Photography direction",
+      "Copywriting",
+      "Carousel design",
+      "Motion graphics",
+      "Creative concepts"
+    ]
   },
   {
-    title: "Community Engagement",
-    description: "Actively interact with your audience to foster relationships and build brand loyalty."
+    title: "Publishing & Management",
+    description: "Manage your channels to keep your social media active and consistent.",
+    whatsIncluded: [
+      "Content scheduling",
+      "Multi platform publishing",
+      "Community management",
+      "Direct message management",
+      "Profile optimisation",
+      "Platform management"
+    ]
   },
   {
-    title: "Account Management",
-    description: "Comprehensive day-to-day oversight of your social profiles to ensure brand safety and responsiveness."
+    title: "Community Management",
+    description: "Build stronger relationships through active audience engagement",
+    whatsIncluded: [
+      "Comment responses",
+      "Direct message replies",
+      "Audience engagement",
+      "Community growth",
+      "Brand monitoring",
+      "Customer interactions"
+    ]
   },
   {
-    title: "Performance Insights",
-    description: "Detailed analytics and reporting to measure success and uncover new opportunities."
+    title: "Reporting & Insights",
+    description: "Measure performance and identify opportunities for growth.",
+    whatsIncluded: [
+      "Monthly reporting",
+      "Engagement analysis",
+      "Reach & impressions",
+      "Audience insights",
+      "Content performance",
+      "Competitor benchmarking",
+      "KPI tracking",
+      "Strategic recommendations"
+    ]
   },
   {
-    title: "Continuous Improvements",
-    description: "Iterative strategy refinements based on real-time data to maximize your social ROI."
+    title: "Optimisation",
+    description: "Continuously refine your strategy using performance data.",
+    whatsIncluded: [
+      "Performance reviews",
+      "Content optimisation",
+      "A/B testing",
+      "Trend analysis",
+      "Strategy refinement",
+      "Posting optimisation",
+      "Creative recommendations",
+      "Continuous improvement"
+    ]
   }
 ];
 
@@ -140,13 +195,13 @@ function SocialServices() {
           {/* Header */}
           <StaggerItem>
             <p className="font-[var(--font-inter)] text-[13px] font-bold uppercase tracking-[4px] text-[#ff5500]">
-              SERVICES
+              OUR SERVICES
             </p>
           </StaggerItem>
           <StaggerItem>
             <h2 className="mt-[16px] min-[390px]:mt-[20px] sm:mt-[26px] mb-8 min-[390px]:mb-10 sm:mb-[60px] font-[var(--font-be-vietnam)] text-[32px] sm:text-[50px] font-medium lowercase leading-none tracking-[-1.4px]">
               our social media{" "}
-              <span className="font-[var(--font-cormorant)] text-[42px] font-extralight timesFontFamily italic tracking-[-0.04em]">
+              <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[70px] font-extralight timesFontFamily italic tracking-[-0.04em]">
                 services
               </span>
             </h2>
@@ -191,14 +246,29 @@ function SocialServices() {
                       </div>
                     </div>
 
-                    {/* Description animation (Grid trick) */}
+                    {/* Description & What's included animation (Grid trick) */}
                     <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] group-focus:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
                       <div className="overflow-hidden">
                         <p
-                          className="text-white mt-3 sm:mt-4 max-w-[550px] opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-500 delay-75 font-normal text-[14px] min-[360px]:text-[15px] sm:text-[20px] leading-[1.5] sm:leading-[24px] tracking-normal"
+                          className="text-white/90 mt-3 sm:mt-4 max-w-[650px] opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-500 delay-75 font-normal text-[14px] min-[360px]:text-[15px] sm:text-[18px] leading-[1.5] sm:leading-[26px] tracking-normal"
                         >
                           {service.description}
                         </p>
+                        {service.whatsIncluded && service.whatsIncluded.length > 0 && (
+                          <div className="mt-4 sm:mt-5 pt-4 border-t border-white/10 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-500 delay-100">
+                            <p className="font-[var(--font-inter)] text-[12px] sm:text-[13px] font-bold uppercase tracking-[1.5px] text-[#ff5500] mb-2.5">
+                              What's included:
+                            </p>
+                            <ul className="grid grid-cols-1 min-[480px]:grid-cols-2 gap-x-6 gap-y-1.5 text-[13px] sm:text-[15px] font-light text-white/80">
+                              {service.whatsIncluded.map((item, i) => (
+                                <li key={i} className="flex items-center gap-2">
+                                  <span className="text-[#ff5500]">•</span>
+                                  <span>{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>

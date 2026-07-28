@@ -177,7 +177,7 @@ export function BuildGrowthSection() {
                 Performance
               </h3>
               <p className="font-[var(--font-be-vietnam)] font-normal text-[13px] leading-none text-white mt-1">
-                Measurable growth
+                Growth through data
               </p>
               <div
                 onClick={() => setActiveTab("creative")}

@@ -18,93 +18,114 @@ import { GoodCompanyMap } from "../components/GoodCompanyMap";
 import { Footer } from "../components/Footer";
 
 const emailStats = [
-  { value: "5x", label: "ROAS Achieved" },
-  { value: "55M", label: "AED Generated in Revenue" },
-  { value: "500K", label: "Leads Delivered" },
+  { value: "150+", label: "Brand Identities Created" },
+  { value: "500+", label: "Brand Assets Designed" },
   { value: "100+", label: "Brands Worldwide" },
+  { value: "10+", label: "Years Experience" },
 ];
 
-const rightSidePlaceholder = {
-  pills: ["Concept", "Positioning", "Audience Fit"],
-  description: "We start by identifying the right product for your niche, audience size and Q4 timing — then build the commercial architecture around it.",
-  details: [
-    {
-      title: "Product Concept & Validation",
-      desc: "The right product for your niche, audience size and Black Friday timing."
-    },
-    {
-      title: "Brand & Creative Direction",
-      desc: "Product looks and feels authentic to your personal brand."
-    },
-    {
-      title: "Launch-ready Assets",
-      desc: "Imagery, copy and sales assets ready ahead of go-live."
-    },
-    {
-      title: "Pricing & Margin Structure",
-      desc: "A commercial model that maximises revenue and stays compelling."
-    }
-  ]
-};
-
 const touchpointStepsData = [
-  { id: "01", title: "Business Discovery", ...rightSidePlaceholder },
-  { id: "02", title: "Audience Research", ...rightSidePlaceholder },
-  { id: "03", title: "Competitor Analysis", ...rightSidePlaceholder },
-  { id: "04", title: "Brand Direction", ...rightSidePlaceholder }
+  {
+    id: "01",
+    title: "Business Discovery",
+    pills: ["Discovery", "Strategy", "Workshop"],
+    description: "We begin by understanding your business, audience and long-term objectives before shaping the direction of your brand.",
+    details: [
+      { title: "Business Goals", desc: "" },
+      { title: "Audience Research", desc: "" },
+      { title: "Competitor Analysis", desc: "" },
+      { title: "Brand Vision", desc: "" }
+    ]
+  },
+  {
+    id: "02",
+    title: "Audience Research",
+    pills: ["Research", "Audience", "Insights"],
+    description: "We identify your ideal audience, understand their behaviours and uncover the insights that influence purchasing decisions.",
+    details: [
+      { title: "Customer Personas", desc: "" },
+      { title: "User Behaviour", desc: "" },
+      { title: "Market Insights", desc: "" },
+      { title: "Buying Journey", desc: "" }
+    ]
+  },
+  {
+    id: "03",
+    title: "Competitor Analysis",
+    pills: ["Market", "Positioning", "Research"],
+    description: "We evaluate your competitors to identify opportunities, define your positioning and differentiate your brand.",
+    details: [
+      { title: "Competitor Review", desc: "" },
+      { title: "Market Position", desc: "" },
+      { title: "Industry Trends", desc: "" },
+      { title: "Brand Opportunities", desc: "" }
+    ]
+  },
+  {
+    id: "04",
+    title: "Brand Direction",
+    pills: ["Identity", "Creative", "Strategy"],
+    description: "We define the creative direction that shapes your visual identity, ensuring consistency across every brand touchpoint.",
+    details: [
+      { title: "Creative Direction", desc: "" },
+      { title: "Visual Identity", desc: "" },
+      { title: "Brand Personality", desc: "" },
+      { title: "Design Principles", desc: "" }
+    ]
+  }
 ];
 
 const googleAdsBrandPoints = [
   {
     number: "01",
-    title: "Send and Forget",
+    title: "Inconsistent Identity",
     description:
-      "Emails are only sent when there's a promotion or announcement.",
+      "Different logos, colours and visuals create confusion.",
   },
   {
     number: "02",
-    title: "Every Subscriber Looks the Same",
+    title: "Generic Design",
     description:
-      "The same message is sent to everyone, regardless of interests or behavior.",
+      "A brand that looks like everyone else is difficult to remember.",
   },
   {
     number: "03",
-    title: "No Long-Term Customer Journey",
+    title: "No Brand Guidelines",
     description:
-      "There's no system to welcome, nurture, or retain customers after they sign up.",
+      "Without clear standards, every touchpoint feels different.",
   },
   {
     number: "04",
-    title: "No Clear Performance Tracking",
+    title: "Design Without Purpose",
     description:
-      "Little reporting or optimization means opportunities are missed.",
+      "Creative assets look good but don't strengthen the brand.",
   },
 ];
 
 const googleAdsUssPoints = [
   {
     number: "01",
-    title: "Always-On Email Strategy",
+    title: "Strategic Brand Identity",
     description:
-      "We create an email calendar that keeps your brand consistently in front of customers.",
+      "Every visual element is designed around your business and audience.",
   },
   {
     number: "02",
-    title: "Personalized Customer Experiences",
+    title: "Distinctive Design",
     description:
-      "Campaigns are tailored to different audiences using segmentation and customer behavior.",
+      "Create a memorable identity that stands apart from competitors.",
   },
   {
     number: "03",
-    title: "Automated Customer Journeys",
+    title: "Consistent Brand System",
     description:
-      "Welcome flows, abandoned carts, post-purchase emails and retention campaigns work in the background.",
+      "Guidelines ensure every touchpoint feels recognisable and cohesive.",
   },
   {
     number: "04",
-    title: "Continuous Performance Optimization",
+    title: "Purposeful Creative Assets",
     description:
-      "Every campaign is measured, refined and improved using real performance data.",
+      "Every design supports your brand, marketing and long term growth.",
   },
 ];
 
@@ -114,7 +135,7 @@ const brandingLeftData = [
     year: "Featured Work",
     category: "Company Profile",
     title: "Company Profiles",
-    description: "a professionally designed overview of your business, helping you introduce your company, services and expertise with confidence.",
+    description: "Professionally designed company profiles that introduce your business, communicate your expertise and build credibility with potential clients.",
     image: "/assets/branding/company.png",
   },
   {
@@ -122,7 +143,7 @@ const brandingLeftData = [
     year: "Featured Work",
     category: "Marketing Collateral",
     title: "Brochures",
-    description: "Beautifully Designed Brochures That Present Your Products, Services Or Brand In A Clear And Visually Engaging Way.",
+    description: "Premium brochures that showcase your products, services and brand through clear, engaging visual communication.",
     image: "/assets/branding/brochures.png",
   },
   {
@@ -130,7 +151,7 @@ const brandingLeftData = [
     year: "Featured Work",
     category: "Client Success",
     title: "Case Studies",
-    description: "Real Examples Of Your Work, Highlighting Projects, Outcomes And The Value You've Delivered For Your Clients.",
+    description: "Professional case studies that demonstrate your work, showcase measurable outcomes and build trust through real client success stories.",
     image: "/assets/branding/case.png",
   }
 ];
@@ -141,7 +162,7 @@ const brandingRightData = [
     year: "Featured Work",
     category: "Sales Presentation",
     title: "Sales Decks",
-    description: "Clear, Engaging Presentations That Help You Communicate Ideas, Showcase Your Offering And Support Every Sales Conversation.",
+    description: "Sales presentations designed to communicate your brand value, support conversations and improve client engagement.",
     image: "/assets/History Picture.png",
     imageClass: "object-cover object-[130%_100%]"
   },
@@ -150,7 +171,7 @@ const brandingRightData = [
     year: "Featured Work",
     category: "Business Pitch",
     title: "Pitch Decks",
-    description: "Professional Presentations Designed To Communicate Your Vision, Explain Your Business And Support Investor Or Client Meetings.",
+    description: "Strategic pitch presentations designed to communicate your vision, support investment opportunities and win new business.",
     image: "/assets/branding/pitch.png",
   },
   {
@@ -158,7 +179,7 @@ const brandingRightData = [
     year: "Featured Work",
     category: "Investment Materials",
     title: "Investor Decks",
-    description: "Present Your Business, Vision And Growth Plans With A Professionally Designed Investment Presentation.",
+    description: "Investor presentations that clearly communicate your business model, growth strategy and long term vision with confidence.",
     image: "/assets/branding/investor.png",
   }
 ];
@@ -204,6 +225,11 @@ function Hero() {
       <div className="relative z-10 mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.15}>
           <StaggerItem>
+                      <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white text-center sm:text-start">
+                        BRANDING & GRAPHICS
+                      </p>
+                    </StaggerItem>
+          <StaggerItem>
             <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase sm:leading-[70px] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white">
               From strategy and identity to every
               <br />{" "}
@@ -214,7 +240,7 @@ function Hero() {
           </StaggerItem>
           <StaggerItem>
             <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[550px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[18px]">
-              A strong brand is more than a logo. We develop the strategy, identity and supporting assets that help your business present itself professionally across every customer touchpoint.
+              A strong brand is more than a logo. We create brand identities, guidelines and creative assets that build recognition, consistency and trust across every customer touchpoint.
             </p>
           </StaggerItem>
           <StaggerItem>
@@ -287,13 +313,13 @@ const MarketingStrategy = () => {
               {" "}business{" "}
             </span>
             <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[42px] leading-[40px] sm:text-[48px] sm:leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
-              documents
+              assets
             </span>
           </h2>
         }
         description={
           <p className="font-normal text-[13px] leading-[24px] lg:text-[18px] lg:leading-[28px] text-white/90 max-w-[600px] mt-2">
-            Explore how we've helped businesses communicate professionally through sales decks, company profiles and branded presentations.
+            Professionally designed business documents that strengthen your brand, communicate your value and support every client conversation.
           </p>
         }
         leftData={brandingLeftData}
@@ -318,13 +344,14 @@ const MarketingStrategy = () => {
               fails
             </h2>
           }
-          subheading="Most brands don't have an email problem, they have a strategy problem."
+          subheading="Most brands don't have a design problem, they have a consistency and identity problem."
           leftTitle="Most Brands"
           rightTitle="The USS Difference"
           leftPoints={googleAdsBrandPoints}
           rightPoints={googleAdsUssPoints}
           centerLogo="/assets/uss-logo.png"
           logoClassName="w-[80px] lg:w-[115px]"
+          tagline="THE OPPORTUNITY"
         />
       </div>
       <BrandIdentity />
@@ -345,12 +372,13 @@ const MarketingStrategy = () => {
         data={touchpointStepsData}
       />
       <RevenueMethod
+        tagline="OUR PROCESS"
         heading={<>How we bring <br className="hidden sm:block" /><span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>your brand to life</span></>}
         cards={[
-          { id: '01', title: 'Discover', description: 'We get to know your business, audience and ambitions before any creative work begins.', bgImage: '/assets/method1.png' },
-          { id: '02', title: 'Define', description: 'We map your positioning, tone of voice and brand values to form a clear creative direction.', bgImage: '/assets/method2.png' },
-          { id: '03', title: 'Design', description: 'Beautiful, responsive designs tailored to your brand identity. We craft visually stunning assets that captivate your audience.', bgImage: '/assets/method3.png' },
-          { id: '04', title: 'Deliver', description: 'We deliver your complete brand assets ready to launch across every customer touchpoint.', bgImage: '/assets/method4.png' },
+          { id: '01', title: 'Discover', description: 'Understand your business, audience, competitors and long term goals to build a strong strategic foundation', bgImage: '/assets/method1.png' },
+          { id: '02', title: 'Define', description: 'Define your positioning, messaging and creative direction before developing your visual identity', bgImage: '/assets/method2.png' },
+          { id: '03', title: 'Design', description: 'Design a distinctive visual identity, logo system and supporting brand assets that reflect your business', bgImage: '/assets/method3.png' },
+          { id: '04', title: 'Deliver', description: 'Deliver complete brand guidelines, launch-ready assets and everything needed for a consistent rollout.', bgImage: '/assets/method4.png' },
         ]}
       />
       <Testimonials />

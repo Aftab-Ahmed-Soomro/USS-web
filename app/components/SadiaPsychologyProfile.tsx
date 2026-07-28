@@ -10,7 +10,7 @@ export function SadiaPsychologyProfile() {
         {/* Mobile Title */}
         <div className="flex flex-col w-full lg:hidden text-left mb-[-16px]">
           <span className="font-semibold text-black mb-4 uppercase text-[12px] sm:text-[14px] leading-[1.5] sm:leading-[21px] tracking-[2.52px]">
-            Talent Management
+            OUR RECENT PROJECTS
           </span>
           <h2 className="font-bold text-black text-[36px] sm:text-[44px] leading-[1.1] sm:leading-[60px] tracking-[-0.9px]">
             Sadia <br className="hidden sm:block" /> Psychology
@@ -35,7 +35,7 @@ export function SadiaPsychologyProfile() {
           <span 
             className="hidden lg:block font-semibold text-black mb-6 uppercase text-[12px] sm:text-[14px] leading-[1.5] sm:leading-[21px] tracking-[2.52px]"
           >
-            Talent Management
+            OUR RECENT PROJECTS
           </span>
           
           <h2 
@@ -91,7 +91,7 @@ export function SadiaPsychologyProfile() {
           <p 
             className="font-normal text-[#333333] mb-8 sm:mb-10 max-w-[600px] text-[13px] sm:text-[18px] leading-[1.6] sm:leading-[32.4px]"
           >
-            Sadia Psychology is a content creator and educator with a global audience of more than 800K+ Instagram & YouTube followers. USS partnered with Sadia to develop, launch and market her 2024 planner, turning her content into a physical product that resonated with her audience and sold out during the Black Friday campaign.
+            Sadia Psychology is a content creator and educator with a highly engaged global audience. USS partnered with Sadia to develop her commercial strategy, build a dedicated website and deliver a Black Friday launch that successfully turned her audience into customers.
           </p>
 
           <button 

@@ -8,6 +8,7 @@ export interface TeamMember {
   id: string;
   title: string;
   description: string;
+  responsibilities?: string[];
   details?: { label: string; value: string }[];
 }
 
@@ -19,39 +20,46 @@ export interface TeamAccordionProps {
 const defaultTeamData: TeamMember[] = [
   {
     id: "01",
-    title: "BRAND DESIGNER",
-    description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
-    details: [
-      { label: "Location", value: "Stockholm" },
-      { label: "Domenste iouco", value: "notte nome" },
-      { label: "Work experience", value: "4+ years" }
+    title: "Website Strategist",
+    description: "Defines the website structure, customer journey and conversion strategy before design begins.",
+    responsibilities: [
+      "Discovery workshops",
+      "Information architecture",
+      "User journeys",
+      "Conversion strategy"
     ]
   },
   {
     id: "02",
-    title: "MARKETING",
-    description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    details: [
-      { label: "Location", value: "Stockholm" },
-      { label: "Work experience", value: "3+ years" }
+    title: "UX/UI Designer",
+    description: "Designs creative user experiences and premium interfaces that reflect your brand.",
+    responsibilities: [
+      "Wireframes",
+      "UI Design",
+      "Prototypes",
+      "Design Systems"
     ]
   },
   {
     id: "03",
-    title: "VR DESIGNER",
-    description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    details: [
-      { label: "Location", value: "London" },
-      { label: "Work experience", value: "5+ years" }
+    title: "Web Developer",
+    description: "Builds fast, responsive websites with clean code and seamless functionality.",
+    responsibilities: [
+      "Front end Development",
+      "CMS Integration",
+      "Responsive Development",
+      "Performance Optimisation"
     ]
   },
   {
     id: "04",
-    title: "WEB DEVELOP",
-    description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    details: [
-      { label: "Location", value: "Dubai" },
-      { label: "Work experience", value: "2+ years" }
+    title: "QA & Optimisation",
+    description: "Tests, refines and optimises every website before launch.",
+    responsibilities: [
+      "Cross-browser Testing",
+      "Speed Optimisation",
+      "SEO Checks",
+      "Quality Assurance"
     ]
   }
 ];
@@ -138,10 +146,26 @@ export default function TeamAccordion({ heading, data = defaultTeamData }: TeamA
                           className={`grid transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${isHovered ? 'grid-rows-[1fr] opacity-100 mt-4 lg:mt-6' : 'grid-rows-[0fr] opacity-0 mt-0'}`}
                         >
                           <div className="overflow-hidden">
-                            <div className="max-w-[500px]">
-                              <p className="text-[13px] leading-[22.1px] font-light text-[#a3a3a3] mb-6">
+                            <div className="max-w-[550px]">
+                              <p className="text-[13px] leading-[22.1px] font-light text-[#a3a3a3] mb-4">
                                 {item.description}
                               </p>
+
+                              {item.responsibilities && item.responsibilities.length > 0 && (
+                                <div className="mb-4">
+                                  <p className="text-[13px] font-medium text-white mb-2">
+                                    Responsibilities
+                                  </p>
+                                  <ul className="flex flex-col gap-1 text-[#a3a3a3] text-[13px] leading-[22.1px] font-light">
+                                    {item.responsibilities.map((resp, i) => (
+                                      <li key={i} className="flex items-center gap-2">
+                                        <span className="text-[#ff5500]">•</span>
+                                        <span>{resp}</span>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
 
                               {item.details && (
                                 <ul className="flex flex-col gap-1 text-white/90 text-[13px] leading-[22.1px] font-light">

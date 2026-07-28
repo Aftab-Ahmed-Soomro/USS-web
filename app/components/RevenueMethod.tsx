@@ -20,39 +20,39 @@ interface RevenueMethodProps {
 const DEFAULT_CARDS: RevenueMethodCard[] = [
   {
     id: '01',
-    title: 'Email Strategy',
-    description: 'Every successful campaign starts with a clear strategy aligned to your business goals.',
+    title: 'Ideation & Strategy',
+    description: 'We identify the right product, positioning and commercial strategy before preparing the launch.',
     bgImage: '/assets/method1.png',
   },
   {
     id: '02',
-    title: 'Email Automation & Flows',
-    description: 'Build automated email journeys that engage customers at every stage of their lifecycle.',
+    title: 'Production',
+    description: 'We create every asset needed for launch, from content and creative to websites and sales materials.',
     bgImage: '/assets/method2.png',
   },
   {
     id: '03',
-    title: 'Email Design & Content',
-    description: 'Engaging email design and compelling content that encourages opens, clicks and conversions.',
+    title: 'Marketing Strategy & Execution',
+    description: 'We build demand through launch planning, paid media, content integration and conversion-focused campaigns.',
     bgImage: '/assets/method3.png',
   },
   {
     id: '04',
-    title: 'Customer Segmentation',
-    description: 'Delivering the right message to the right audience at the right stage of their journey.',
+    title: 'Campaign Launch & Scale',
+    description: 'Once live, we monitor performance, optimise campaigns and scale what delivers the strongest results.',
     bgImage: '/assets/method4.png',
   },
 ];
 
 const DEFAULT_HEADING = (
   <>
-    how we build{" "}
+    how we maximise{" "}
     <br className="hidden sm:block" />
     <span
       className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]"
       style={{ fontFamily: "'Times New Roman', Times, serif" }}
     >
-      High Performing Email Campaigns
+      Q4 revenue
     </span>
   </>
 );

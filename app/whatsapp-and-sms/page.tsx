@@ -332,19 +332,19 @@ const googleAdsBrandPoints = [
     number: "02",
     title: "Everyone Gets the Same Message",
     description:
-      "Every customer receives identical messages regardless of interests or behaviour.",
+      "The same message is sent to every customer, regardless of behaviour.",
   },
   {
     number: "03",
     title: "No Customer Journey",
     description:
-      "There's no automated communication before or after a purchase.",
+      "No automated messaging before, during or after the customer journey.",
   },
   {
     number: "04",
     title: "No Performance Tracking",
     description:
-      "Messages are sent without measuring what drives engagement or sales.",
+      "Campaigns run without measuring engagement, conversions or sales.",
   },
 ];
 
@@ -353,25 +353,25 @@ const googleAdsUssPoints = [
     number: "01",
     title: "Planned Messaging Strategy",
     description:
-      "Every campaign is planned around your customer journey and business goals.",
+      "Every campaign is planned around your business goals and customer journey.",
   },
   {
     number: "02",
     title: "Smart Audience Segmentation",
     description:
-      "Customers receive messages based on behaviour, interests and purchase history.",
+      "Messages are tailored using customer behaviour, interests and purchase history.",
   },
   {
     number: "03",
     title: "Automated Customer Journeys",
     description:
-      "Flows nurture customers before and after purchase without manual work.",
+      "Automated flows engage customers before, during and after every purchase.",
   },
   {
     number: "04",
     title: "Continuous Optimisation",
     description:
-      "We refine campaigns using real performance data to improve results over time.",
+      "Campaigns are continually refined using real performance data.",
   },
 ];
 
@@ -423,6 +423,7 @@ export default function WhatsappAndSmsPage() {
       <Brands />
       <FadeUp delay={0.2}>
               <WhyEmailFails
+                tagline="THE OPPORTUNITY"
                 hideBadge={false}
                 heading={
                   <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[32px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
@@ -436,7 +437,7 @@ export default function WhatsappAndSmsPage() {
                     fails
                   </h2>
                 }
-                subheading="Most brands don't have an email problem, they have a strategy problem."
+                subheading="Most brands don't have a WhatsApp & SMS marketing problem.They have a strategy problem."
                 leftTitle="Most Brands"
                 rightTitle="The USS Difference"
                 leftPoints={googleAdsBrandPoints}

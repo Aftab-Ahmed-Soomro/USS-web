@@ -10,7 +10,7 @@ export function TishWondersProfile() {
         {/* Mobile Title */}
         <div className="flex flex-col w-full lg:hidden text-left mb-[-16px]">
           <span className="font-semibold text-white mb-4 uppercase text-[12px] sm:text-[14px] leading-[1.5] sm:leading-[21px] tracking-[2.52px]">
-            Talent Management
+            OUR RECENT PROJECTS
           </span>
           <h2 className="font-bold text-white text-[36px] sm:text-[44px] leading-[1.1] sm:leading-[60px] tracking-[-0.9px]">
             Tish <br className="hidden sm:block" /> Wonders
@@ -36,7 +36,7 @@ export function TishWondersProfile() {
           <span 
             className="hidden lg:block font-semibold text-white mb-6 uppercase text-[12px] sm:text-[14px] leading-[1.5] sm:leading-[21px] tracking-[2.52px]"
           >
-            Talent Management
+            OUR RECENT PROJECTS
           </span>
           
           <h2 
@@ -89,11 +89,7 @@ export function TishWondersProfile() {
           <p 
             className="font-normal text-[#EAEAEA] mb-8 sm:mb-10 max-w-[650px] text-[13px] sm:text-[18px] leading-[1.6] sm:leading-[32.4px]"
           >
-            Tish Wonders is a food and wellness creator sharing healthy recipes 
-            and lifestyle content with a global audience. USS partnered with Tish 
-            to launch her healthy cooking e-book, supporting the campaign with 
-            a dedicated website, email marketing and a Black Friday launch strategy 
-            that turned audience engagement into sales.
+Tish Wonders is a food and wellness creator with a highly engaged audience across YouTube, Instagram and TikTok. USS partnered with Tish to develop her Q4 commercial strategy, launch a dedicated website and build a Black Friday campaign designed to turn her audience into customers.
           </p>
 
           <button 
