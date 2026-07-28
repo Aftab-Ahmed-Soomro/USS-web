@@ -1,13 +1,30 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import FadeUp from "./FadeUp";
 import Stagger from "./Stagger";
 import StaggerItem from "./Staggeritem";
 
+const items = [3, 2, 1, 4, 5];
+
 export function WhyWhatsappWorks() {
   const [active, setActive] = useState<number>(3);
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (isHovered) return;
+
+    const interval = setInterval(() => {
+      setActive((prev) => {
+        const currentIndex = items.indexOf(prev);
+        const nextIndex = (currentIndex + 1) % items.length;
+        return items[nextIndex];
+      });
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [isHovered]);
 
   return (
     <section className="w-full text-white">
@@ -26,11 +43,6 @@ export function WhyWhatsappWorks() {
               >
                 instantly
               </span>
-              {/* <span
-                className="lowercase font-medium text-[32px] leading-[1.1] tracking-[-1px] sm:text-[clamp(40px,5vw,56px)] sm:leading-[clamp(50px,6vw,80px)] sm:tracking-[-3px] font-[var(--font-be-vietnam)]"
-              >
-                
-              </span> */}
             </h2>
           </StaggerItem>
         </Stagger>
@@ -38,19 +50,21 @@ export function WhyWhatsappWorks() {
           <div className="relative w-full mt-8 sm:mt-12">
             <div
               className="flex w-full h-[400px] sm:h-[500px] lg:h-[700px] flex-row gap-0 overflow-hidden"
-              onMouseLeave={() => setActive(3)}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
             >
-              {[3, 2, 1, 4, 5].map((num) => (
+              {items.map((num) => (
                 <article
                   key={num}
                   tabIndex={0}
                   onMouseEnter={() => setActive(num)}
                   onClick={() => setActive(num)}
                   onFocus={() => setActive(num)}
-                  className={`group relative cursor-pointer overflow-hidden transition-all duration-500 ease-in-out outline-none ${active === num
+                  className={`group relative cursor-pointer overflow-hidden transition-all duration-500 ease-in-out outline-none ${
+                    active === num
                       ? "flex-[4] sm:flex-[2]"
                       : "flex-1"
-                    }`}
+                  }`}
                 >
                   <div className="absolute inset-0 z-0 h-full w-full overflow-hidden border-r border-black last:border-none">
                     <div
@@ -75,3 +89,4 @@ export function WhyWhatsappWorks() {
     </section>
   );
 }
+

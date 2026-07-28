@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import { Header } from "./components/Header";
 import { HomeHero } from "./components/HomeHero";
+import { UssDifferentSection } from "./components/UssDifferentSection";
 
 // Lazy-load below-fold sections to reduce initial JS bundle and DOM size
 const Numbers = dynamic(
@@ -46,6 +47,7 @@ const Page = () => {
       <Strategic />
       <Testimonials />
       <GoodCompanyMap />
+      <UssDifferentSection />
       <Team />
       <FinalCta />
       <Footer />

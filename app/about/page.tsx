@@ -8,6 +8,7 @@ import WeAreUSS from "../components/Weareus";
 import FadeLeft from "../components/FadeLeft";
 import FadeUp from "../components/FadeUp";
 import FadeRight from "../components/FadeRight";
+import { UssDifferentSection } from "../components/UssDifferentSection";
 
 const stats = [
 { value: "5x", label: "Up to 5X ROAS" },
@@ -132,7 +133,7 @@ export default function AboutPage() {
         </section>
 
         <Numbers stats={stats} />
-
+        <UssDifferentSection />               
         <Team />
       </main>
 
