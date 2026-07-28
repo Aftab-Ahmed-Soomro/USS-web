@@ -20,25 +20,25 @@ const defaultPlatforms: Platform[] = [
   {
     name: "Meta",
     description:
-      "Reach, engage and convert customers across Facebook and Instagram through high-performing paid campaigns.",
+      "Create engaging content across Facebook, Instagram to build awareness, strengthen your brand and grow your community.",
     imageSrc: "/assets/platforms/meta.png",
   },
   {
     name: "YouTube",
     description:
-    "Create video campaigns that educate, build trust and convert viewers into customers.",
+    "Develop long form videos and YouTube shorts that educate, entertain and keep your audience coming back.",
     imageSrc: "/assets/platforms/youtube.png",
   },
   {
     name: "LinkedIn",
     description:
-      "Generate qualified B2B leads through strategic content, paid advertising and professional outreach.",
+      "Build credibility through thought leadership, company updates and content that connects with professional audiences.",
     imageSrc: "/assets/platforms/linkedin.png",
   },
   {
     name: "TikTok",
     description:
-      "Capture attention with high-impact short-form video designed for modern audiences.",
+      "Create trend led content designed to increase reach, engagement and brand awareness.",
     imageSrc: "/assets/platforms/2.png",
   },
 ];

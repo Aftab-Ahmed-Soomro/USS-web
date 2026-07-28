@@ -13,6 +13,7 @@ export interface RevenueMethodCard {
 
 interface RevenueMethodProps {
   heading?: React.ReactNode;
+  tagline?: string;
   cards?: RevenueMethodCard[];
 }
 
@@ -56,7 +57,9 @@ const DEFAULT_HEADING = (
   </>
 );
 
-export function RevenueMethod({ heading = DEFAULT_HEADING, cards = DEFAULT_CARDS }: RevenueMethodProps) {
+const DEFAULT_TAGLINE = ' OUR PROCESS'
+
+export function RevenueMethod({ heading = DEFAULT_HEADING, tagline = DEFAULT_TAGLINE, cards = DEFAULT_CARDS }: RevenueMethodProps) {
   const [activeCard, setActiveCard] = useState<string | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -70,6 +73,12 @@ export function RevenueMethod({ heading = DEFAULT_HEADING, cards = DEFAULT_CARDS
   return (
     <div className="w-full bg-black text-white py-[50px] sm:py-20 px-4 min-[375px]:px-6 min-h-screen flex flex-col justify-center items-center font-sans">
       <Stagger staggerDelay={0.15} className="max-w-[1150px] w-full">
+
+        <StaggerItem>
+          <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-[#ff5500] text-center sm:text-start">
+            {tagline}
+          </p>
+        </StaggerItem>
 
         {/* Heading */}
         <StaggerItem>

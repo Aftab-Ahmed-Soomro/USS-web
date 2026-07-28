@@ -10,7 +10,7 @@ const leftColumnData = [
     year: "2026",
     category: "Marketing Agency",
     title: "Disturbed Innovations Group",
-    description: "a cinematic couture platform — editorial storytelling, private look books, and a made-to-measure booking flow.",
+    description: "A premium corporate website built to reposition the brand and communicate its innovation-led services",
     image: "/assets/leftColumnImages/1.png",
     link: "/projects/disturbed-innovations"
   },
@@ -28,7 +28,7 @@ const leftColumnData = [
     year: "2025",
     category: "Professional Services",
     title: "Venue 29",
-    description: "a cinematic couture platform — editorial storytelling, private look books, and a made-to-measure booking flow.",
+    description: "A bold event venue website designed to showcase experiences, increase enquiries and support bookings",
     image: "/assets/leftColumnImages/3.jpg",
     link: "https://venue-29.com/"
   }
@@ -40,7 +40,7 @@ const rightColumnData = [
     year: "2025",
     category: "Real Estate",
     title: "Agency 8",
-    description: "a data-driven digital marketing partner for a modern brokerage — native where it beats adversity, silence where it doesn't.",
+    description: "A luxury real estate website designed to showcase premium developments while delivering a seamless property browsing experience",
     image: "/assets/rightColumnImages/1.png",
     link: "/projects/agency-8"
   },
@@ -49,7 +49,7 @@ const rightColumnData = [
     year: "2025",
     category: "Restaurant Group",
     title: "Afro Maya",
-    description: "qsr and restaurant identity formed with a reservation-and-ordering menu system built for repeat guests.",
+    description: " A luxury fashion website designed to showcase collections, strengthen the brand identity and create a seamless online experience.",
     image: "/assets/rightColumnImages/2.png",
     link: "/projects/afro-maya"
   },
@@ -58,7 +58,7 @@ const rightColumnData = [
     year: "2025",
     category: "Wellness Business",
     title: "Bushra Therapy",
-    description: "a data-driven digital marketing partner for a modern brokerage — native where it beats adversity, silence where it doesn't.",
+    description: "A specialist healthcare website designed to build trust, improve accessibility and simplify the patient journey",
     image: "/assets/WebsiteWithoutCTA.png",
     link: "https://bushratherapy.com/",
     imageClass: "object-[58%_0%]"
@@ -135,7 +135,7 @@ export default function CaseStudies({
   const HeaderContent = () => (
     <>
       <span className="font-bold text-[12px] leading-[18px] lg:text-[14px] lg:leading-[20px] tracking-[0.05em] uppercase text-white">
-        Case Studies
+        RECENT PROJECTS
       </span>
 
       {heading ? (
@@ -143,17 +143,17 @@ export default function CaseStudies({
       ) : (
         <h2 className="text-white">
           <span className="font-medium text-[32px] leading-[40px] sm:text-[40px] sm:leading-[48px] tracking-[-2px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-3.2px]">
-            see how we build
+            see how we create  
           </span>
           <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[42px] leading-[40px] sm:text-[48px] sm:leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
-            {" "}high {" "}
+            {" "}digital {" "}
           </span>
           <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[42px] leading-[40px] sm:text-[48px] sm:leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
-            performing{' '}
+            experiences{' '}
           </span>
-          <span className="font-medium text-[32px] leading-[40px] sm:text-[40px] sm:leading-[48px] tracking-[-2px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-3.2px]">
+          {/* <span className="font-medium text-[32px] leading-[40px] sm:text-[40px] sm:leading-[48px] tracking-[-2px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-3.2px]">
             websites
-          </span>
+          </span> */}
         </h2>
       )}
 

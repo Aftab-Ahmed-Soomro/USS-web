@@ -57,6 +57,11 @@ function Hero() {
       <div className="relative z-10 mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.15}>
           <StaggerItem>
+                      <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white text-center sm:text-start">
+                        WEBSITE TRANSFORMATION
+                      </p>
+                    </StaggerItem>
+          <StaggerItem>
             <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[1.35] sm:leading-[70px] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white text-center sm:text-start">
               your website,{" "}
               <br className="hidden sm:block" />
@@ -67,14 +72,13 @@ function Hero() {
                 <br className="hidden sm:block" />
                 working{" "}
                 <br className="block sm:hidden" />
-                sales {" "}
+                asset {" "}
               </span>
-              tool
             </h1>
           </StaggerItem>
           <StaggerItem>
             <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[500px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[18px] text-center sm:text-start">
-              We design custom websites in Figma and develop them from the ground up, creating fast, responsive websites built to turn visitors into customers.
+              We design and develop bespoke websites that combine strategy, performance and user experience to turn visitors into customers.
             </p>
           </StaggerItem>
           <StaggerItem>
@@ -130,10 +134,10 @@ function FinalCta() {
 }
 
 const emailStats = [
-  { value: "24.8M+", label: "Messages Delivered" },
-  { value: "3.6M+", label: "Customer Conversations" },
-  { value: "412K+", label: "Leads Generated" },
-  { value: "100+", label: "Brands Worldwide" },
+  { value: "120+", label: "Websites Designed" },
+  { value: "98%", label: "Client Satisfaction" },
+  { value: "1.2M+", label: "Website Visitors Generated" },
+  { value: "15+", label: "Industries Served" },
 ];
 
 const googleAdsBrandPoints = [
@@ -198,6 +202,7 @@ export default function WebsitePage() {
       <Numbers stats={emailStats} />
       <Brands />
       <WhyEmailFails
+        tagline= "THE OPPORTUNITY"
         hideBadge={false}
         heading={
           <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[32px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
@@ -208,10 +213,10 @@ export default function WebsitePage() {
             >
               websites
             </span>{" "}
-            fails
+            don't convert
           </h2>
         }
-        subheading="Most brands don’t have a website problem, they have a structure and conversion problem."
+        subheading="Most brands don't have a website problem. They have a user experience, messaging and conversion problem."
         leftTitle="Most Brands"
         rightTitle="The USS Difference"
         leftPoints={googleAdsBrandPoints}
@@ -232,10 +237,10 @@ export default function WebsitePage() {
       <RevenueMethod
         heading={<>our website development <br className="hidden sm:block" /><span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>process</span></>}
         cards={[
-          { id: '01', title: 'Discovery & Strategy', description: 'We understand your goals, audience and brand before designing a single pixel.', bgImage: '/assets/method1.png' },
-          { id: '02', title: 'Design & Prototype', description: 'We craft high-fidelity designs that reflect your brand and are optimized for conversion.', bgImage: '/assets/method2.png' },
-          { id: '03', title: 'Development', description: 'We build fast, responsive websites that perform beautifully across all devices.', bgImage: '/assets/method3.png' },
-          { id: '04', title: 'Launch & Optimize', description: 'We launch your site and monitor performance, continuously optimizing for results.', bgImage: '/assets/method4.png' },
+          { id: '01', title: 'Discovery & Strategy', description: 'Understand your business, audience and objectives while defining the website structure, user journeys and conversion strategy.', bgImage: '/assets/method1.png' },
+          { id: '02', title: 'Design & Prototype', description: 'Create wireframes and UX designs that bring your brand to life before development begins.', bgImage: '/assets/method2.png' },
+          { id: '03', title: 'Development', description: 'Build a fast, responsive website with clean code and a user first experience.', bgImage: '/assets/method3.png' },
+          { id: '04', title: 'Launch & Optimisation', description: 'Launch, test and continuously optimise your website to improve performance, user experience and conversions.', bgImage: '/assets/method4.png' },
         ]}
       />
       <Testimonials />

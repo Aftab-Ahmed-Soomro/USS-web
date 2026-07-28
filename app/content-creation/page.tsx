@@ -100,10 +100,10 @@ function Hero() {
           </StaggerItem>
           <StaggerItem>
             <h1 className="mt-[35px] sm:mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[0.5] sm:leading-[100%] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white text-center sm:text-start">
-              content that works
+              content that does
               <br className="sm:hidden" /> {/* Adding hidden br if needed? No, I will not add new br */}
               <br />
-              not just{" "}
+              more than{" "}
               <span className="font-[var(--font-cormorant)] text-[42px] leading-[0.7] sm:leading-none sm:text-[72px] lowercase font-normal timesFontFamily italic text-white tracking-[-1px] sm:tracking-[-2.8px]">
                 looks good
               </span>
@@ -111,7 +111,7 @@ function Hero() {
           </StaggerItem>
           <StaggerItem>
             <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[40px] max-w-[530px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[18px] text-center sm:text-start">
-              We create high quality photo and video content designed to capture attention, reflect your brand and support your marketing across every platform.
+              We create high quality photo and video content designed to capture attention, strengthen your brand and support every stage of your marketing.
             </p>
           </StaggerItem>
           <StaggerItem>
@@ -211,73 +211,73 @@ function FinalCta() {
 const googleAdsBrandPoints = [
   {
     number: "01",
-    title: "Send and Forget",
+    title: "Looks Good, Doesn't Perform",
     description:
-      "Emails are only sent when there's a promotion or announcement.",
+      "A visually appealing website without a clear purpose or direction.",
   },
   {
     number: "02",
-    title: "Every Subscriber Looks the Same",
+    title: "Confusing User Experience",
     description:
-      "The same message is sent to everyone, regardless of interests or behavior.",
+      "Visitors struggle to navigate or find the information they need.",
   },
   {
     number: "03",
-    title: "No Long-Term Customer Journey",
+    title: "Slow & Outdated",
     description:
-      "There's no system to welcome, nurture, or retain customers after they sign up.",
+      "Poor performance, responsiveness & technical execution damage experience.",
   },
   {
     number: "04",
-    title: "No Clear Performance Tracking",
+    title: "No Clear Conversion Path",
     description:
-      "Little reporting or optimization means opportunities are missed.",
+      "Users visit the website but don't know what to do next.",
   },
 ];
 
 const googleAdsUssPoints = [
   {
     number: "01",
-    title: "Always-On Email Strategy",
+    title: "Strategy Before Design",
     description:
-      "We create an email calendar that keeps your brand consistently in front of customers.",
+      "Every website starts with business goals, user journeys and conversion strategy.",
   },
   {
     number: "02",
-    title: "Personalized Customer Experiences",
+    title: "User Experience First",
     description:
-      "Campaigns are tailored to different audiences using segmentation and customer behavior.",
+      "Simple navigation and layouts designed around real users.",
   },
   {
     number: "03",
-    title: "Automated Customer Journeys",
+    title: "Built for Performance",
     description:
-      "Welcome flows, abandoned carts, post-purchase emails and retention campaigns work in the background.",
+      "Fast, responsive websites optimised for every device and browser.",
   },
   {
     number: "04",
-    title: "Continuous Performance Optimization",
+    title: "Designed to Convert",
     description:
-      "Every campaign is measured, refined and improved using real performance data.",
+      "Every page is built with clear calls to action that turn visitors into enquiries.",
   },
 ];
 
 const relatedProjects = [
   {
-    slug: "blank-dxb",
-    name: "Blank DXB",
-    image: "/assets/dxb.jpg",
-    copy: "With a strong Meta Ads execution we focused on Paid Media during Blank DXB launch. We were able to target demand on a granular level making budget efficiency higher.",
-    tags: ["Paid Media", "Meta Ads Targeting", "Lead Generation"],
+    slug: "cinamood",
+    name: "Cinnamood",
+    image: "/assets/projectsPagePics/cinamood.jpg",
+    copy: "We supported the launch of Cinnamood in the UAE by creating premium photo and video content that captured the brand experience and generated excitement across social media.",
+    tags: ["Content Creation", "Food & Beverage", "Launch Campaign"],
     year: "2024",
     imageClassName: "object-cover object-[50%_55%]",
   },
   {
-    slug: "supperclub",
-    name: "SupperClub",
-    image: "/assets/club.jpg",
-    copy: "We increased SupperClub membership using Meta Ads to drive members using creative assets and location targeting.",
-    tags: ["Membership Increase", "Hospitality"],
+    slug: "yula-lounge",
+    name: "Yula Lounge",
+    image: "/assets/yula2.jpg",
+    copy: "We created lifestyle photography and video content that showcased Yula's new identity, helping establish a premium social presence following the venue's transformation.",
+    tags: ["Content Creation", "Hospitality", "Brand Launch"],
     year: "2024",
     imageClassName: "object-cover object-[50%_65%]",
   },
@@ -288,28 +288,41 @@ function RelatedProjects() {
     <section className="bg-[#080808] px-4 min-[375px]:px-6 py-[40px] sm:py-[56px] text-white">
       <div className="mx-auto max-w-[1150px]">
         {/* Header */}
-        <div className="flex items-center justify-between gap-6">
-          <Stagger staggerDelay={0.12}>
-            <StaggerItem>
-              <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[56px] font-medium lowercase leading-none tracking-[-0.96px]">
-                related{" "}
-                <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal timesFontFamily italic tracking-[-0.96px]">
-                  projects
-                </span>
-              </h2>
-            </StaggerItem>
-          </Stagger>
-
-          <FadeRight delay={0.3}>
-            <Link
-              href="/projects"
-              className="hidden sm:inline-flex shrink-0 items-center gap-2 rounded-full border border-white px-5 py-3 font-[var(--font-inter)] text-[12px] text-white sm:text-[15px]"
-            >
-              View all projects
-              <img src="/assets/rightArrowMed.png" className="w-4 h-4" alt="" />
-            </Link>
-          </FadeRight>
-        </div>
+         <div className="flex items-center justify-between gap-6">
+                            <Stagger staggerDelay={0.12}>
+                              <StaggerItem>
+                                            <p className="font-[var(--font-be-vietnam)] text-[9px] sm:text-[12px] font-normal uppercase tracking-[4.8px] text-[#ff5500]">
+                                              RECENT PROJECTS
+                                            </p>
+                                          </StaggerItem>
+                              <StaggerItem>
+                                            <h2 className="mt-[16px] sm:mt-[24px] max-w-[650px] font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[38px] font-medium lowercase leading-[0.9] tracking-[-1.4px] sm:text-[56px]">
+                                              see how we bring
+                                              <br />
+                                              {" "}
+                                              <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] font-normal timesFontFamily italic leading-[1.1] sm:leading-none">
+                                                brands to life
+                                              </span>
+                                            </h2>
+                                                        </StaggerItem>
+                                            
+                              <StaggerItem>
+                                            <p className="mt-[14px] max-w-[600px] sm:mt-[18px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.5] text-white/90 sm:text-white">
+                                              Explore how we've helped brands tell their story through premium photography, videography and creative content designed to capture attention and strengthen brand identity.
+                                            </p>
+                                          </StaggerItem>
+                            </Stagger>
+                  
+                            <FadeRight delay={0.3}>
+                              <Link
+                                href="/projects"
+                                className="hidden sm:inline-flex shrink-0 items-center gap-2 rounded-full border border-white px-5 py-3 font-[var(--font-inter)] text-[12px] text-white sm:text-[15px]"
+                              >
+                                View all projects
+                                <img src="/assets/rightArrowMed.png" className="w-4 h-4" alt="" />
+                              </Link>
+                            </FadeRight>
+                          </div>
 
         {/* Cards */}
         <div className="mt-[24px] sm:mt-[40px] grid gap-[16px] sm:gap-[24px] md:grid-cols-2">
@@ -386,19 +399,20 @@ export default function ContentCreationPage() {
       <FadeUp delay={0.2}>
         <WhyEmailFails
           hideBadge={false}
+          tagline="THE OPPORTUNITY"
           heading={
             <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[32px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
-              why most{" "}
+              why your{" "}
               <span
                 className="font-normal italic text-[42px] sm:text-[72px]"
                 style={{ fontFamily: "'Times New Roman', Times, serif" }}
               >
-                content assets
+                content
               </span>{" "}
-              fails
+              isn't working
             </h2>
           }
-          subheading="Most brands don't have an email problem, they have a strategy problem."
+          subheading="Creating content is easy. Creating content that supports your marketing strategy is where most brands fall short."
           leftTitle="Most Brands"
           rightTitle="The USS Difference"
           leftPoints={googleAdsBrandPoints}
@@ -410,19 +424,19 @@ export default function ContentCreationPage() {
       <ContentCreationServices />
       <FadeUp delay={0.2}>
         <div className="mt-[-10px] sm:mt-[-80px]">
-          <EmailMarketingQuote first={"your social media is your"} second={"digital window"} third={"shop front"} />
+          <EmailMarketingQuote first={""} second={"65% "} third={"of people are visual learners."} />
         </div>
       </FadeUp>
       <FadeUp delay={0.2}>
         <ContentCreationGrid />
       </FadeUp>
       <RevenueMethod
-        heading={<>our content creation{" "}<span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>process</span></>}
+        heading={<>see how we build{" "}<span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>brands</span></>}
         cards={[
-          { id: '01', title: 'Discovery & Planning', description: 'Understanding your goals, audience and creative direction.', bgImage: '/assets/method1.png' },
-          { id: '02', title: 'Creative Direction', description: 'Crafting unique visual styles to elevate your brand story.', bgImage: '/assets/method2.png' },
-          { id: '03', title: 'Production', description: 'Bringing ideas to life with high quality video and photos.', bgImage: '/assets/method3.png' },
-          { id: '04', title: 'Editing & Delivery', description: 'Polishing the footage into final assets ready for release.', bgImage: '/assets/method4.png' },
+          { id: '01', title: 'Discovery & Planning', description: 'Understand your brand, audience, objectives and creative direction before production begins.', bgImage: '/assets/method1.png' },
+          { id: '02', title: 'Creative Planning', description: 'Develop concepts, storyboards, shot lists and production schedules ready for filming.', bgImage: '/assets/method2.png' },
+          { id: '03', title: 'Production', description: 'Capture high quality photography and videography with professional direction and execution.', bgImage: '/assets/method3.png' },
+          { id: '04', title: 'Post-Production', description: 'Edit, refine and optimise every asset for delivery across digital, social and paid media.', bgImage: '/assets/method4.png' },
         ]}
       />
       <RelatedProjects />

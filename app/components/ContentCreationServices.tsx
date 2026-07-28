@@ -86,7 +86,7 @@ export function ContentCreationServices() {
         <div className="mb-[60px] sm:mb-[100px]">
           <FadeUp delay={0.1}>
             <h4 className="font-[var(--font-inter)] text-[#ff5500] font-bold text-[14px] leading-[16px] tracking-[2.64px] uppercase mb-6">
-              Services
+              OUR SERVICES
             </h4>
           </FadeUp>
           <FadeUp delay={0.2}>
@@ -123,13 +123,13 @@ export function ContentCreationServices() {
 
             <FadeUp delay={0.3}>
               <p className="font-[var(--font-inter)] font-light text-[14px] sm:text-[18px] leading-[1.6] sm:leading-[29.25px] text-white/90 align-middle mb-[24px] sm:mb-[30px] max-w-[400px]">
-                Where the story is imagined. Strategy, structure, and the quiet architecture behind every frame that will one day exist.
+                 Every successful piece of content starts long before the camera rolls. We define the creative direction, plan every detail and build a production roadmap aligned with your brand and campaign objectives.
               </p>
             </FadeUp>
 
             <FadeUp delay={0.4}>
               <p className="font-[var(--font-inter)] font-normal text-[11px] leading-[16.5px] tracking-[1.65px] align-middle text-white/60 uppercase mb-[30px] sm:mb-[40px]">
-                From blank page to blueprint.
+                FROM CONCEPT TO SHOOT DAY
               </p>
             </FadeUp>
 
@@ -262,27 +262,27 @@ export function ContentCreationServices() {
 
             <FadeUp delay={0.3}>
               <p className="font-[var(--font-inter)] font-light text-[14px] sm:text-[18px] leading-[1.6] sm:leading-[29.25px] text-white/90 align-middle mb-[24px] sm:mb-[30px] max-w-[400px]">
-                Where footage becomes a film. Editing, motion, color and sound woven together into a single continuous breath.
+                 This is where ideas come to life. From directing talent to capturing every shot, we produce high quality content designed for campaigns, social media and brand storytelling.
               </p>
             </FadeUp>
 
             <FadeUp delay={0.4}>
               <p className="font-[var(--font-inter)] font-normal text-[11px] leading-[16.5px] tracking-[1.65px] align-middle text-white/60 uppercase mb-[30px] sm:mb-[40px]">
-                From raw material to release.
+                FROM SHOOT DAY TO FINAL FOOTAGE
               </p>
             </FadeUp>
 
             {/* Pills */}
             <div className="flex flex-wrap gap-[10px]">
               {[
-                "Editing",
-                "Motion Design",
-                "Color Grading",
-                "Sound Design",
-                "VFX & Compositing",
-                "Subtitles & Localization",
-                "Format Delivery",
-                "Archive & Handoff",
+                "Photography",
+                "Videography",
+                "Creative Direction",
+                "Drone Footage",
+                "Product Shoots",
+                "Lifestyle Shoots",
+                "Brand Films",
+                "On-Location Production",
               ].map((tag, i) => (
                 <FadeUp key={tag} delay={0.4 + i * 0.05}>
                   <div className="flex items-center justify-center gap-2 px-[14px] py-[8px] sm:py-[10px] rounded-full border border-white/10 bg-[#0a0a0a]/50">

@@ -7,20 +7,20 @@ import StaggerItem from "./Staggeritem";
 const CARDS_DATA = [
   {
     id: "01",
-    title: "Social Media Strategy",
-    description: "Every successful campaign starts with a clear strategy. We build a tailored plan around your goals, customer journey and opportunities for growth.",
+    title: "Brand Strategy",
+    description: "Define your audience, content pillars and platform strategy before creating content",
     bgImage: "/assets/method1.png",
   },
   {
     id: "02",
-    title: "Social media execution",
-    description: "We implement the strategy with precision, creating high-quality content, managing scheduling, and engaging with your audience to build a loyal community.",
+    title: "Content Creation",
+    description: "Produce platform specific content that strengthens your brand and keeps your audience engaged",
     bgImage: "/assets/method2.png",
   },
   {
     id: "03",
-    title: "Maintenance",
-    description: "Ongoing optimization and active monitoring ensure your profiles remain relevant. We analyze performance data to refine tactics and sustain long-term growth.",
+    title: "Performance & Optimisation",
+    description: "Measure performance, refine your strategy and continuously improve your social presence.",
     bgImage: "/assets/method3.png",
   },
 ];
@@ -43,18 +43,18 @@ export default function SocialMediaRevenueMethod() {
         <div className="max-w-[1150px] w-full mx-auto">
           <StaggerItem>
             <p className="font-[var(--font-inter)] text-[10px] font-bold uppercase tracking-[4px] text-[#ff5500] mb-4">
-              PROCESS
+              OUR PROCESS
             </p>
           </StaggerItem>
 
           <StaggerItem>
             <h2 className="text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-8 min-[390px]:mb-10 sm:mb-16">
-              organic social{" "}
+              how we build{" "}
               <span
                 className="italic text-[#ff5500] font-normal text-[42px] tracking-[-3%] sm:text-[72px] sm:leading-[70px]"
                 style={{ fontFamily: "'Times New Roman', Times, serif" }}
               >
-                step by step process
+                social brands
               </span>
             </h2>
           </StaggerItem>

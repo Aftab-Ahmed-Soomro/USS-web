@@ -85,17 +85,22 @@ function Hero() {
       <div className="mx-auto grid max-w-[1150px] gap-8 min-[390px]:gap-10 sm:gap-10 lg:grid-cols-[minmax(0,700px)_430px] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.15}>
           <StaggerItem>
+                                <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white text-center sm:text-start">
+                                  ORGANIC SOCIAL
+                                </p>
+                              </StaggerItem>
+          <StaggerItem>
             <h1 className="max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[1.03] tracking-[-1.5px] min-[390px]:tracking-[-2px] min-[480px]:tracking-[-3.2px] sm:tracking-[-3.2px] sm:text-[70px] text-center sm:text-start">
-              social media that
-              <br />
+              social media that builds{" "}
+              {/* <br /> */}
               <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[80px] font-normal timesFontFamily italic tracking-[-1.5px] min-[390px]:tracking-[-2px] min-[480px]:tracking-[-3.2px] sm:tracking-[-3.2px]">
-                delivers real {" "}
-              </span>results
+                communities and trust{" "}
+              </span>
             </h1>
           </StaggerItem>
           <StaggerItem>
             <p className="mt-[16px] min-[390px]:mt-[20px] min-[480px]:mt-[24px] sm:mt-[24px] max-w-[580px] font-[var(--font-inter)] text-[13px] min-[390px]:text-[13px] leading-[1.75] text-black/72 sm:text-[20px] text-center sm:text-start">
-              Your social media is often the first impression of your business. We help brands stay active, consistent, and memorable across Instagram, LinkedIn, TikTok, YouTube, and more.
+              Grow an engaged audience through consistent content, creative storytelling and meaningful conversations across Instagram, TikTok, LinkedIn and more.
             </p>
           </StaggerItem>
           <StaggerItem>
@@ -213,24 +218,41 @@ function RelatedProjects() {
       <Stagger staggerDelay={0.15}>
         <div className="mx-auto max-w-[1150px]">
           {/* Header */}
-          <StaggerItem>
-            <div className="flex items-center justify-between gap-6">
-              <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[56px] font-medium lowercase leading-none tracking-[-0.96px]">
-                related{" "}
-                <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal timesFontFamily italic tracking-[-0.96px]">
-                  projects
-                </span>
-              </h2>
-
-              <Link
-                href="/projects"
-                className="hidden sm:inline-flex shrink-0 items-center gap-2 rounded-full border border-white px-5 py-3 font-[var(--font-inter)] text-[12px] text-white sm:text-[15px]"
-              >
-                View all projects
-                <img src="/assets/rightArrowMed.png" className="w-4 h-4" alt="" />
-              </Link>
-            </div>
-          </StaggerItem>
+          <div className="flex items-center justify-between gap-6">
+                    <Stagger staggerDelay={0.12}>
+                      <StaggerItem>
+                                    <p className="font-[var(--font-be-vietnam)] text-[9px] sm:text-[12px] font-normal uppercase tracking-[4.8px] text-[#ff5500]">
+                                      RECENT PROJECTS
+                                    </p>
+                                  </StaggerItem>
+                      <StaggerItem>
+                                    <h2 className="mt-[16px] sm:mt-[24px] max-w-[650px] font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[38px] font-medium lowercase leading-[0.9] tracking-[-1.4px] sm:text-[56px]">
+                                      see how we build
+                                      <br />
+                                      {" "}
+                                      <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] font-normal timesFontFamily italic leading-[1.1] sm:leading-none">
+                                        brands
+                                      </span>
+                                    </h2>
+                                                </StaggerItem>
+                                    
+                      <StaggerItem>
+                                    <p className="mt-[14px] max-w-[600px] sm:mt-[18px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.5] text-white/90 sm:text-white">
+                                      Explore how we've helped brands grow their audience, strengthen their online presence and build engaged communities through organic social media.
+                                    </p>
+                                  </StaggerItem>
+                    </Stagger>
+          
+                    <FadeRight delay={0.3}>
+                      <Link
+                        href="/projects"
+                        className="hidden sm:inline-flex shrink-0 items-center gap-2 rounded-full border border-white px-5 py-3 font-[var(--font-inter)] text-[12px] text-white sm:text-[15px]"
+                      >
+                        View all projects
+                        <img src="/assets/rightArrowMed.png" className="w-4 h-4" alt="" />
+                      </Link>
+                    </FadeRight>
+                  </div>
 
           {/* Cards */}
           <div className="mt-[24px] sm:mt-[40px] grid gap-[16px] sm:gap-[24px] md:grid-cols-2">
@@ -345,7 +367,7 @@ export default function SocialMediaManagementPage() {
       <Brands />
       <WhyEmailFails
         hideBadge={false}
-        tagline="THE PROBLEM"
+        tagline="THE OPPORTUNITY"
         heading={
           <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[32px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
             why your{" "}
@@ -361,51 +383,51 @@ export default function SocialMediaManagementPage() {
         }
         centerLogo="/assets/organic__icon.png"
       logoClassName="w-[80px] lg:w-[125px]"
-        subheading=""
+        subheading="Many brands are active on social media, but without a clear strategy, consistent content and a defined brand identity"
         leftTitle="Most Brands"
         rightTitle="The USS Difference"
         leftPoints={[
           {
             number: "01",
-            title: "Posting Without A Plan",
-            description: "Content is published without a clear strategy or long term direction.",
+            title: "Posting Without A Strategy",
+            description: "Content is published without a clear direction or long term purpose",
           },
           {
             number: "02",
-            title: "Inconsistent Brand Presence",
-            description: "Different styles, messages and visuals make it difficult to build recognition.",
+            title: "Inconsistent Brand Identity",
+            description: "Different styles and messages create an inconsistent brand experience",
           },
           {
             number: "03",
-            title: "Content That Doesn't Add Value",
-            description: "Posts focus on selling instead of educating, entertaining or building trust.",
+            title: "Content That Doesn't Engage",
+            description: "Posts focus on selling instead of providing value to the audience",
           },
           {
             number: "04",
-            title: "No Clear Content Pillars",
-            description: "Without consistent themes, content lacks direction and becomes difficult to sustain.",
+            title: "Chasing Every Trend",
+            description: "Content follows trends rather than building a recognisable brand.",
           },
         ]}
         rightPoints={[
           {
             number: "01",
-            title: "Content Strategy First",
-            description: "Every post is planned around your business goals and audience.",
+            title: "Strategy Before Content",
+            description: "Every post is planned around your business goals and audience",
           },
           {
             number: "02",
-            title: "A Consistent Brand Presence",
-            description: "Consistent messaging and visuals that build brand recognition.",
+            title: "Consistent Brand Identity",
+            description: "Unified messaging and creative across every platform",
           },
           {
             number: "03",
-            title: "Content People Want to Engage With",
-            description: "Content that educates, entertains and builds lasting trust.",
+            title: "Content With Purpose",
+            description: "Content designed to educate, entertain and build trust",
           },
           {
             number: "04",
             title: "Defined Content Pillars",
-            description: "A structured content plan that keeps your socials consistent.",
+            description: "A structured content framework that keeps your brand consistent.",
           },
         ]}
       />
