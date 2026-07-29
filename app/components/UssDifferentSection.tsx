@@ -54,7 +54,7 @@ export function UssDifferentSection() {
   const allVideos = cards.flatMap(card => card.videos);
 
   return (
-    <section 
+    <section
       className="relative z-10 bg-[#000] text-white overflow-hidden py-[30px] sm:py-[100px]"
       style={{
         backgroundImage: "url('/assets/bgMain.png')",
@@ -69,12 +69,12 @@ export function UssDifferentSection() {
 
       <div className="mx-auto flex max-w-[1150px] px-4 flex-col items-center relative z-10 w-full -mt-5 sm:-mt-0">
         {/* Animated Heading */}
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full px-4 sm:px-0 text-center font-[var(--font-be-vietnam)] text-[28px] sm:text-[56px] font-normal leading-[1.2] sm:leading-[18.33px] tracking-[-0.02em] pb-5 sm:pb-16"
+          className="w-full px-4 sm:px-0 text-center font-[var(--font-be-vietnam)] text-[28px] sm:text-[56px] font-normal leading-[1.2] sm:leading-[18.33px] tracking-[-0.02em] pb-5 sm:pb-16 mr-3"
         >
           what&apos;s make{" "}
           <span className="text-[38px] sm:text-[72px] font-normal timesFontFamily italic tracking-[-0.02em] text-[#ff5500]">
@@ -85,18 +85,18 @@ export function UssDifferentSection() {
         {/* Desktop Layout (lg screens and above - with reveal stagger & hover animation) */}
         <div className="hidden lg:flex w-full flex-row justify-center items-center gap-6 lg:gap-8 mt-4 sm:mt-8">
           {cards.map((card, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, y: 50, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               whileHover={{ y: -10, scale: 1.02 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ 
-                duration: 0.6, 
+              transition={{
+                duration: 0.6,
                 delay: index * 0.15,
-                ease: [0.16, 1, 0.3, 1] 
+                ease: [0.16, 1, 0.3, 1]
               }}
-              className="relative w-full max-w-[405px] aspect-[405/620] group cursor-pointer transition-shadow rounded-2xl overflow-hidden shadow-2xl hover:shadow-[#ff5500]/20"
+              className="relative w-full max-w-[405px] aspect-[405/700] group cursor-pointer transition-shadow rounded-2xl overflow-hidden shadow-2xl hover:shadow-[#ff5500]/20"
             >
               <div className="w-full h-full transition-transform duration-500 group-hover:scale-105">
                 <SequentialVideoPlayer videos={card.videos} />
@@ -115,7 +115,7 @@ export function UssDifferentSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-20px" }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="relative w-full aspect-[405/620] group rounded-md min-[375px]:rounded-lg overflow-hidden shadow-lg"
+                className="relative w-full aspect-[405/700] group rounded-md min-[375px]:rounded-lg overflow-hidden shadow-lg"
               >
                 <div className="w-full h-full">
                   <SequentialVideoPlayer videos={card.videos} />

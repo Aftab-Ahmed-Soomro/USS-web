@@ -35,7 +35,7 @@ export function WhyWhatsappWorks() {
               <span
                 className="lowercase font-medium text-[32px] leading-[1.1] tracking-[-1px] sm:text-[clamp(40px,5vw,56px)] sm:leading-[clamp(50px,6vw,80px)] sm:tracking-[-3px] font-[var(--font-be-vietnam)]"
               >
-                connect with customers
+                connect with <br className="block sm:hidden" /> customers
               </span>
               <span
                 className="lowercase italic font-normal text-[42px] leading-[1.1] tracking-[-1px] sm:text-[clamp(48px,6vw,72px)] sm:leading-[clamp(50px,6vw,80px)] sm:tracking-[-3px]"

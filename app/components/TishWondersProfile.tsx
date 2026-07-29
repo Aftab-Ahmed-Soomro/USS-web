@@ -53,7 +53,7 @@ export function TishWondersProfile() {
             <div className="flex flex-col">
               <img className="w-5 h-5 mb-3" src="/assets/youIcon.png" alt="" />
               <span className="font-semibold text-white text-[12px] sm:text-[14px] leading-[1.5] sm:leading-[21px]">YouTube</span>
-              <span className="font-bold text-white mt-1 text-[24px] sm:text-[32px] leading-[1.2] sm:leading-[48px] tracking-[-0.64px]">2.8M</span>
+              <span className="font-bold text-white mt-1 text-[24px] sm:text-[32px] leading-[1.2] sm:leading-[48px] tracking-[-0.64px]">545K</span>
               <span className="font-normal text-[#A0A0A0] text-[12px] sm:text-[14px] leading-[1.5] sm:leading-[21px]">Subscribers</span>
             </div>
 
@@ -68,7 +68,7 @@ export function TishWondersProfile() {
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
               </svg>
               <span className="font-semibold text-white text-[12px] sm:text-[14px] leading-[1.5] sm:leading-[21px]">Instagram</span>
-              <span className="font-bold text-white mt-1 text-[24px] sm:text-[32px] leading-[1.2] sm:leading-[48px] tracking-[-0.64px]">1.7M</span>
+              <span className="font-bold text-white mt-1 text-[24px] sm:text-[32px] leading-[1.2] sm:leading-[48px] tracking-[-0.64px]">119K</span>
               <span className="font-normal text-[#A0A0A0] text-[12px] sm:text-[14px] leading-[1.5] sm:leading-[21px]">Followers</span>
             </div>
 
@@ -81,7 +81,7 @@ export function TishWondersProfile() {
                 <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
               </svg>
               <span className="font-semibold text-white text-[12px] sm:text-[14px] leading-[1.5] sm:leading-[21px]">TikTok</span>
-              <span className="font-bold text-white mt-1 text-[24px] sm:text-[32px] leading-[1.2] sm:leading-[48px] tracking-[-0.64px]">5.2M</span>
+              <span className="font-bold text-white mt-1 text-[24px] sm:text-[32px] leading-[1.2] sm:leading-[48px] tracking-[-0.64px]">18K</span>
               <span className="font-normal text-[#A0A0A0] text-[12px] sm:text-[14px] leading-[1.5] sm:leading-[21px]">Followers</span>
             </div>
           </div>
