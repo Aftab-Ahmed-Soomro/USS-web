@@ -104,7 +104,7 @@ export function BrandingServices() {
                       />
                     </div>
                   ) : (
-                    <div className={`w-full aspect-[247/194] rounded-[10px] overflow-hidden ${card.imageBg ?? 'bg-[#111]'}`}>
+                    <div className={`w-full aspect-[247/180] rounded-[10px] overflow-hidden ${card.imageBg ?? 'bg-[#111]'}`}>
                       <img src={card.image} alt={card.title} className={`w-full h-full`} />
                     </div>
                   )}
