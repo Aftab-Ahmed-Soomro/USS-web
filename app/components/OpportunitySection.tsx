@@ -20,10 +20,9 @@ export function OpportunitySection() {
             </span>
           </h2>
           <p 
-            className="font-normal text-white/90 mx-auto font-[var(--font-inter)] max-w-[700px] text-[13px] sm:text-[16px] leading-[1.6] capitalize sm:leading-[24.8px]"
+            className="font-normal text-white/90 mx-auto font-[var(--font-inter)] max-w-[700px] text-[13px] sm:text-[16px] leading-[1.6]  sm:leading-[24.8px]"
           >
-            we work with high performing youtubers to monetize their platforms effectively and
-            maximize their revenue using strategic marketing system
+            We work with high performing youtubers to monetise their platforms effectively and maximize their revenue using strategic marketing system
           </p>
         </div>
       </FadeUp>

@@ -5,10 +5,10 @@ import Link from "next/link";
 
 export default function DedicatedPartner() {
   const stats = [
-    { number: "146+", label: "Projects Delivered" },
-    { number: "92+", label: "Happy Clients" },
-    { number: "11+", label: "Industries" },
-    { number: "7+", label: "Years Experience" },
+    { number: "120+", label: "Websites Designed" },
+    { number: "98%", label: "Client Satisfaction" },
+    { number: "1.2M+", label: "Website Visitors Generated" },
+    { number: "15+", label: "Industries Served" },
   ];
 
   return (
