@@ -390,7 +390,7 @@ function EmailStrategy() {
                         className="object-contain w-[48px] h-[48px] sm:w-[56px] sm:h-[56px]"
                         style={{
                           filter:
-                            "brightness(0) saturate(100%) invert(52%) sepia(85%) saturate(1633%) hue-rotate(346deg) brightness(90%) contrast(90%)",
+                            "brightness(0) saturate(100%) invert(52%) sepia(85%) saturate(1633%) hue-rotate(346deg) brightness(90di%) contrast(90%)",
                         }}
                       />
                     ) : null}

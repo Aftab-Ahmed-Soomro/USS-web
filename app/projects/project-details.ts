@@ -880,7 +880,7 @@ export const projectDetails = [
     description:
       "Reclaim is a US travel service designed to simplify the airport experience by allowing passengers to skip check-in entirely. By collecting luggage directly from a customer's home, hotel, or Airbnb and checking it in with the airline, reclaim offers a more seamless and convenient way to travel.",
     heroImage: {
-      src: "/assets/reclaimMainPic.png",
+      src: "https://unitedstrategicsolutions.com/assets/reclaimMainImage.png",
       alt: "Travelers with luggage inside an airport terminal",
       position: "50% 50%",
     },

@@ -37,7 +37,7 @@ const categories = [
     projects: [
       { title: "Flowork", description: "Office Opening in Dubai Hills", image: "/assets/projectsPagePics/flowork.png", tags: ["Business Launch"], href: "/projects/flowork" },
       { title: "Residency Advanced", description: "Paid Search Lead Generation", image: "/assets/projectsPagePics/residency.png", tags: ["Google Ads"], href: "/projects/residency-advanced" },
-      { title: "Reclaim", description: "Launching Reclaim in the US", image: "/assets/projectsPagePics/reclaim.png", tags: ["US Expansion"], href: "/projects/reclaim-us" }
+      { title: "Reclaim", description: "Launching Reclaim in the US", image: "/assets/reclaimMainPic.png", tags: ["US Expansion"], href: "/projects/reclaim-us" }
     ]
   },
   {
