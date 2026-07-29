@@ -582,7 +582,7 @@ export default function EmailMarketingPage() {
       <EmailStrategy />
       <EmailVisuals />
       <RevenueMethod
-        heading={<>How We Build High-Performing <br className="hidden sm:block" />{" "}<span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>Email Campaigns</span></>}
+        heading={<>how we build <br className="block sm:hidden" /> high performing <br className="block" />{" "}<span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>email campaigns</span></>}
         cards={[
           { id: '01', title: 'Email Strategy', description: 'Every successful campaign starts with a clear strategy aligned to your business goals.', bgImage: '/assets/method1.png' },
           { id: '02', title: 'Email Automation & Flows', description: 'Build automated email journeys that engage customers at every stage of their lifecycle.', bgImage: '/assets/method2.png' },

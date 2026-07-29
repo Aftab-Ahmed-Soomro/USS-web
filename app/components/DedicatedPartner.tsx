@@ -54,7 +54,7 @@ export default function DedicatedPartner() {
               <span className="font-medium text-[24px] min-[375px]:text-[28px] leading-[1.1] sm:text-[48px] sm:leading-[48px] lg:text-[88px] lg:leading-[88px] tracking-[-0.5px] lg:tracking-[-1.76px] mb-1.5 sm:mb-2 lg:mb-4">
                 {stat.number}
               </span>
-              <span className="font-normal text-[10px] min-[375px]:text-[11px] leading-[1.3] lg:text-[13px] lg:leading-[19.5px] tracking-[0.32px] text-[#a3a3a3]">
+              <span className="font-normal text-[7px] leading-[1.3] lg:text-[13px] lg:leading-[19.5px] tracking-[0.32px] text-[#a3a3a3]">
                 {stat.label}
               </span>
             </div>

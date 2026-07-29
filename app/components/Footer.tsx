@@ -138,24 +138,18 @@ export function Footer({ showGlobal = true }: { showGlobal?: boolean }) {
                 <span className="text-[#FF5500] sm:hidden text-[22px] leading-none">{isServicesOpen ? "−" : "+"}</span>
               </button>
 
-              <div className={`flex flex-col sm:flex-row gap-4 sm:gap-10 overflow-hidden transition-all duration-300 ${isServicesOpen ? "max-h-[600px] opacity-100 mt-4 sm:mt-6" : "max-h-0 opacity-0 mt-0 sm:max-h-none sm:opacity-100 sm:mt-6"}`}>
+              <div className={`grid grid-cols-2 gap-4 sm:flex sm:flex-row sm:gap-10 overflow-hidden transition-all duration-300 ${isServicesOpen ? "max-h-[600px] opacity-100 mt-4 sm:mt-6" : "max-h-0 opacity-0 mt-0 sm:max-h-none sm:opacity-100 sm:mt-6"}`}>
                 <ul className="flex flex-col gap-[14px]">
                   {servicesCol1.map(service => (
                     <li key={service.name}>
-                      <Link href={service.href} className="text-white text-[13px] sm:text-[14px] hover:text-[#FF5500] transition-colors sm:whitespace-nowrap">{service.name}</Link>
-                    </li>
-                  ))}
-                  {/* On mobile, col2 merges into col1 to form a single column */}
-                  {servicesCol2.map(service => (
-                    <li key={service.name} className="sm:hidden">
-                      <Link href={service.href} className="text-white text-[13px] sm:text-[14px] hover:text-[#FF5500] transition-colors">{service.name}</Link>
+                      <Link href={service.href} className="text-white text-[13px] sm:text-[14px] hover:text-[#FF5500] transition-colors whitespace-normal sm:whitespace-nowrap">{service.name}</Link>
                     </li>
                   ))}
                 </ul>
-                <ul className="hidden sm:flex flex-col gap-[14px]">
+                <ul className="flex flex-col gap-[14px]">
                   {servicesCol2.map(service => (
                     <li key={service.name}>
-                      <Link href={service.href} className="text-white text-[13px] sm:text-[14px] hover:text-[#FF5500] transition-colors sm:whitespace-nowrap">{service.name}</Link>
+                      <Link href={service.href} className="text-white text-[13px] sm:text-[14px] hover:text-[#FF5500] transition-colors whitespace-normal sm:whitespace-nowrap">{service.name}</Link>
                     </li>
                   ))}
                 </ul>

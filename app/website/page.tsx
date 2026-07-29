@@ -213,6 +213,7 @@ export default function WebsitePage() {
             >
               websites
             </span>{" "}
+            <br className="block sm:hidden" />
             don't convert
           </h2>
         }

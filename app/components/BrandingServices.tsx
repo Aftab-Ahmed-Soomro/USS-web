@@ -136,7 +136,7 @@ const bottomCards = [
     title: "Logo Design",
     description: "Create distinctive logos that represent your business and leave a lasting impression.",
     image: "/assets/brandingImages/1.png",
-    aspectRatio: "aspect-[247/194]"
+    aspectRatio: "aspect-[247/204]"
   },
   {
     id: "02",

@@ -409,6 +409,7 @@ export default function ContentCreationPage() {
               >
                 content
               </span>{" "}
+            <br className="block sm:hidden" />
               isn't working
             </h2>
           }
