@@ -13,6 +13,7 @@ export interface StepDetail {
 export interface StepData {
   id: string;
   title: string;
+  category?: string;
   pills?: string[];
   description: string;
   details?: StepDetail[];
@@ -21,6 +22,7 @@ export interface StepData {
 export interface SixStepSystemProps {
   heading?: React.ReactNode;
   data?: StepData[];
+  cardStyle?: boolean;
 }
 
 const defaultSteps: StepData[] = [
@@ -170,7 +172,7 @@ const defaultSteps: StepData[] = [
   }
 ];
 
-export function SixStepSystem({ heading, data = defaultSteps }: SixStepSystemProps) {
+export function SixStepSystem({ heading, data = defaultSteps, cardStyle = false }: SixStepSystemProps) {
   const [activeStepId, setActiveStepId] = useState<string | null>(null);
 
   const activeStep = activeStepId ? data.find(s => s.id === activeStepId) || data[0] : data[0];
@@ -229,99 +231,174 @@ export function SixStepSystem({ heading, data = defaultSteps }: SixStepSystemPro
 
                   {/* MOBILE ACCORDION CONTENT */}
                   {isActiveMobile && (
-                    <div className="lg:hidden mt-6 pl-10 sm:pl-[52px]">
-                      {/* Pills */}
-                      {step.pills && step.pills.length > 0 && (
-                        <div className="flex flex-wrap gap-2 sm:gap-3 mb-6">
-                          {step.pills.map((pill, idx) => (
-                            <span
-                              key={idx}
-                              className="bg-white text-black font-medium rounded-full px-3 py-1 sm:px-4 text-[11px] leading-[16.5px]"
-                            >
-                              {pill}
-                            </span>
-                          ))}
-                        </div>
-                      )}
-
-                      {/* Description */}
-                      <p className="font-normal text-[#EAEAEA] mb-4 sm:mb-10 text-[14px] leading-[22.75px]">
-                        {step.description}
-                      </p>
-
-                      {/* Details List */}
-                      {step.details && step.details.length > 0 && (
-                        <div className="flex flex-col">
-                          {step.details.map((detail, idx) => (
-                            <div key={idx} className="flex flex-col py-2 sm:py-3 border-t border-[#333333] last:border-b">
-                              <h4 className={`font-semibold text-white text-[13px] leading-[19.5px] ${detail.desc ? 'mb-1' : ''}`}>
-                                {detail.title}
-                              </h4>
-                              {detail.desc && (
-                                <p className="font-normal text-[#A0A0A0] text-[12px] leading-[18px]">
-                                  {detail.desc}
-                                </p>
-                              )}
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
+                    cardStyle ? (
+                      <div className="lg:hidden mt-4 mb-2 p-5 rounded-2xl bg-[#0c0c0c] border border-white/10 relative overflow-hidden">
+                        {step.pills && step.pills.length > 0 && (
+                          <div className="flex flex-wrap gap-2 mb-4">
+                            {step.pills.map((pill, idx) => (
+                              <span
+                                key={idx}
+                                className="bg-[#FF5500]/10 border border-[#FF5500]/30 text-[#FF5500] font-medium rounded-full px-3 py-0.5 text-[11px]"
+                              >
+                                {pill}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                        <p className="font-light text-[#EAEAEA] mb-4 text-[13.5px] leading-[1.6]">
+                          {step.description}
+                        </p>
+                        {step.details && step.details.length > 0 && (
+                          <div className="flex flex-col gap-2.5">
+                            {step.details.map((detail, idx) => (
+                              <div key={idx} className="flex flex-col p-3 rounded-lg bg-white/[0.03] border border-white/5">
+                                <div className="flex items-center gap-2">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-[#FF5500] shrink-0" />
+                                  <h4 className="font-semibold text-white text-[13px] leading-[1.3]">
+                                    {detail.title}
+                                  </h4>
+                                </div>
+                                {detail.desc && (
+                                  <p className="font-normal text-[#A0A0A0] text-[12px] leading-[1.45] mt-1 pl-3.5">
+                                    {detail.desc}
+                                  </p>
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ) : (
+                      <div className="lg:hidden mt-6 pl-10 sm:pl-[52px]">
+                        {step.pills && step.pills.length > 0 && (
+                          <div className="flex flex-wrap gap-2 sm:gap-3 mb-6">
+                            {step.pills.map((pill, idx) => (
+                              <span
+                                key={idx}
+                                className="bg-white text-black font-medium rounded-full px-3 py-1 sm:px-4 text-[11px] leading-[16.5px]"
+                              >
+                                {pill}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                        <p className="font-normal text-[#EAEAEA] mb-4 sm:mb-10 text-[14px] leading-[22.75px]">
+                          {step.description}
+                        </p>
+                        {step.details && step.details.length > 0 && (
+                          <div className="flex flex-col">
+                            {step.details.map((detail, idx) => (
+                              <div key={idx} className="flex flex-col py-2 sm:py-3 border-t border-[#333333] last:border-b">
+                                <h4 className={`font-semibold text-white text-[13px] leading-[19.5px] ${detail.desc ? 'mb-1' : ''}`}>
+                                  {detail.title}
+                                </h4>
+                                {detail.desc && (
+                                  <p className="font-normal text-[#A0A0A0] text-[12px] leading-[18px]">
+                                    {detail.desc}
+                                  </p>
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    )
                   )}
                 </StaggerItem>
               );
             })}
           </Stagger>
 
-          {/* Right Column (Details) - Desktop Only */}
-          <FadeRight className="hidden lg:block w-full lg:w-[45%] xl:w-[40%] pl-0 lg:pl-4">
-            <div className="flex flex-col w-full">
-
-              {/* Pills */}
-              {activeStep?.pills && activeStep.pills.length > 0 && (
-                <div className="flex flex-wrap gap-2 sm:gap-3 mb-6">
-                  {activeStep.pills.map((pill, idx) => (
-                    <span
-                      key={idx}
-                      className="bg-white text-black font-medium rounded-full px-3 py-1 sm:px-4 text-[11px] leading-[16.5px]"
-                    >
-                      {pill}
-                    </span>
-                  ))}
+          {/* Right Column - Desktop Only */}
+          {cardStyle ? (
+            <FadeRight className="hidden lg:block w-full lg:w-[45%] xl:w-[42%] pl-0 lg:pl-4">
+              <div className="relative w-full rounded-3xl bg-[#0c0c0c] border border-white/10 p-7 sm:p-9 overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.8)] backdrop-blur-xl">
+                <div className="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-[#FF5500]/15 blur-[80px]" />
+                <div className="flex items-center justify-between mb-6 pb-4 border-b border-white/10">
+                  <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF5500]/10 border border-[#FF5500]/30 text-[#FF5500] font-semibold text-[11px] uppercase tracking-[1.5px]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#FF5500] shadow-[0_0_8px_#FF5500] animate-pulse" />
+                    {activeStep?.category || (parseInt(activeStep?.id || "1", 10) <= 4 ? "Performance Marketing" : "Creative Marketing")}
+                  </span>
                 </div>
-              )}
-
-              {/* Description */}
-              <p
-                className="font-normal text-[#EAEAEA] mb-8 sm:mb-10 max-w-[480px] text-[14px] leading-[22.75px]"
-              >
-                {activeStep?.description}
-              </p>
-
-              {/* Details List */}
-              {activeStep?.details && activeStep.details.length > 0 && (
-                <div className="flex flex-col">
-                  {activeStep.details.map((detail, idx) => (
-                    <div key={idx} className="flex flex-col py-3 border-t border-[#333333] last:border-b">
-                      <h4
-                        className={`font-semibold text-white text-[13px] leading-[19.5px] ${detail.desc ? 'mb-1' : ''}`}
+                <h3 className="text-white font-semibold text-[22px] sm:text-[24px] leading-[1.3] mb-3">
+                  {activeStep?.title}
+                </h3>
+                <p className="font-light text-[#D4D4D4] text-[14px] sm:text-[15px] leading-[1.65] mb-6">
+                  {activeStep?.description}
+                </p>
+                {activeStep?.pills && activeStep.pills.length > 0 && (
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {activeStep.pills.map((pill, idx) => (
+                      <span
+                        key={idx}
+                        className="bg-white/5 border border-white/10 text-white/90 font-medium rounded-full px-3 py-1 text-[11px] leading-[16.5px] tracking-wide"
                       >
-                        {detail.title}
-                      </h4>
-                      {detail.desc && (
-                        <p
-                          className="font-normal text-[#A0A0A0] text-[12px] leading-[18px]"
-                        >
-                          {detail.desc}
-                        </p>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              )}
-
-            </div>
-          </FadeRight>
+                        {pill}
+                      </span>
+                    ))}
+                  </div>
+                )}
+                {activeStep?.details && activeStep.details.length > 0 && (
+                  <div className="flex flex-col gap-3 mt-4">
+                    {activeStep.details.map((detail, idx) => (
+                      <div
+                        key={idx}
+                        className="group relative flex flex-col p-4 rounded-xl bg-white/[0.03] border border-white/5 hover:border-[#FF5500]/40 transition-all duration-300"
+                      >
+                        <div className="flex items-center gap-2.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#FF5500] shrink-0" />
+                          <h4 className="font-semibold text-white text-[14px] leading-[1.3]">
+                            {detail.title}
+                          </h4>
+                        </div>
+                        {detail.desc && (
+                          <p className="font-normal text-[#A0A0A0] text-[12.5px] leading-[1.5] mt-1.5 pl-4">
+                            {detail.desc}
+                          </p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </FadeRight>
+          ) : (
+            <FadeRight className="hidden lg:block w-full lg:w-[45%] xl:w-[40%] pl-0 lg:pl-4">
+              <div className="flex flex-col w-full">
+                {activeStep?.pills && activeStep.pills.length > 0 && (
+                  <div className="flex flex-wrap gap-2 sm:gap-3 mb-6">
+                    {activeStep.pills.map((pill, idx) => (
+                      <span
+                        key={idx}
+                        className="bg-white text-black font-medium rounded-full px-3 py-1 sm:px-4 text-[11px] leading-[16.5px]"
+                      >
+                        {pill}
+                      </span>
+                    ))}
+                  </div>
+                )}
+                <p className="font-normal text-[#EAEAEA] mb-8 sm:mb-10 max-w-[480px] text-[14px] leading-[22.75px]">
+                  {activeStep?.description}
+                </p>
+                {activeStep?.details && activeStep.details.length > 0 && (
+                  <div className="flex flex-col">
+                    {activeStep.details.map((detail, idx) => (
+                      <div key={idx} className="flex flex-col py-3 border-t border-[#333333] last:border-b">
+                        <h4 className={`font-semibold text-white text-[13px] leading-[19.5px] ${detail.desc ? 'mb-1' : ''}`}>
+                          {detail.title}
+                        </h4>
+                        {detail.desc && (
+                          <p className="font-normal text-[#A0A0A0] text-[12px] leading-[18px]">
+                            {detail.desc}
+                          </p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </FadeRight>
+          )}
 
         </div>
       </div>

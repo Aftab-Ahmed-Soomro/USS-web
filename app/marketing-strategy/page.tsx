@@ -213,48 +213,56 @@ const touchpointStepsData = [
   {
     id: "01",
     title: "Email Marketing",
+    category: "Performance Marketing",
     description:
       "Your email strategy should be tailored around the customer lifecycle, delivering the right message at the right time to encourage repeat purchases and long term loyalty.",
   },
   {
     id: "02",
     title: "Google Ads",
+    category: "Performance Marketing",
     description:
       "Your Google Ads strategy should focus on capturing high intent searches, ensuring your business appears when customers are actively looking for your products or services.",
   },
   {
     id: "03",
     title: "Meta Ads",
+    category: "Performance Marketing",
     description:
       "Your Meta Ads strategy should build awareness and generate demand by reaching the right audiences before they're ready to buy.",
   },
   {
     id: "04",
     title: "WhatsApp & SMS",
+    category: "Performance Marketing",
     description:
       "Your messaging strategy should deliver timely, relevant communication that encourages action without overwhelming your audience.",
   },
   {
     id: "05",
     title: "Website",
+    category: "Creative Marketing",
     description:
       "Your website strategy should guide visitors towards the actions that matter most, whether that's making an enquiry, booking a service or completing a purchase.",
   },
   {
     id: "06",
     title: "Organic Social",
+    category: "Creative Marketing",
     description:
       "Your social strategy should build credibility through consistent content that keeps your brand visible and relevant.",
   },
   {
     id: "07",
     title: "Content Creation",
+    category: "Creative Marketing",
     description:
       "Your content strategy should support every marketing channel with creative tailored to different audiences and stages of the funnel.",
   },
   {
     id: "08",
     title: "Branding & Graphics",
+    category: "Creative Marketing",
     description:
       "Your brand strategy should create consistency across every touchpoint, helping customers recognise and remember your business.",
   }
@@ -349,6 +357,7 @@ export default function MarketingStrategyPage() {
           }
         `}</style>
         <SixStepSystem
+          cardStyle={true}
           heading={
             <h2 className="text-white font-medium tracking-[-1px] sm:tracking-[-2px] text-[36px] sm:text-[56px] leading-[1.1] sm:leading-[69.36px]">
               every digital touchpoint <br className="hidden sm:block" />
