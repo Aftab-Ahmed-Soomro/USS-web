@@ -21,7 +21,7 @@ export function WhyWhatsappWorks() {
         const nextIndex = (currentIndex + 1) % items.length;
         return items[nextIndex];
       });
-    }, 1000);
+    }, 1500);
 
     return () => clearInterval(interval);
   }, [isHovered]);
@@ -60,7 +60,7 @@ export function WhyWhatsappWorks() {
                   onMouseEnter={() => setActive(num)}
                   onClick={() => setActive(num)}
                   onFocus={() => setActive(num)}
-                  className={`group relative cursor-pointer overflow-hidden transition-all duration-500 ease-in-out outline-none ${
+                  className={`group relative cursor-pointer overflow-hidden transition-all duration-230 ease-in-out outline-none ${
                     active === num
                       ? "flex-[4] sm:flex-[2]"
                       : "flex-1"

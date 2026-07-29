@@ -369,26 +369,43 @@ function EmailStrategy() {
                   {step.title}
                 </h3>
 
-                {/* Icon circle + connecting line */}
-                {/* <div className="relative flex items-center justify-start w-full">
+                {/* Icon container + connecting line */}
+                <div className="relative flex items-center justify-start w-full">
                   <div
-                    className="relative z-10 flex shrink-0 items-center justify-center rounded-full bg-white w-[108px] h-[108px]"
+                    className="relative z-10 flex shrink-0 items-center justify-center rounded-[24px] border w-[96px] h-[96px] sm:w-[108px] sm:h-[108px]"
+                    style={{
+                      borderColor: "rgba(255,85,0,0.4)",
+                      background:
+                        "linear-gradient(180deg, rgba(255,85,0,0.1), rgba(255,85,0,0.02))",
+                      boxShadow:
+                        "0 0 20px rgba(255,85,0,0.2), inset 0 0 10px rgba(255,85,0,0.1)",
+                    }}
                   >
                     {step.icon ? (
-                      <Image
+                      <Image 
                         src={step.icon}
                         alt={step.title}
                         width={56}
                         height={56}
-                        className="object-contain w-[56px] h-[56px]"
+                        className="object-contain w-[48px] h-[48px] sm:w-[56px] sm:h-[56px]"
+                        style={{
+                          filter:
+                            "brightness(0) saturate(100%) invert(52%) sepia(85%) saturate(1633%) hue-rotate(346deg) brightness(90%) contrast(90%)",
+                        }}
                       />
                     ) : null}
                   </div>
 
                   {i < steps.length - 1 && (
-                    <div className="absolute left-[108px] top-1/2 hidden h-px w-[calc(100%-108px+24px)] -translate-y-1/2 bg-white/40 lg:block" />
+                    <div
+                      className="absolute left-[108px] top-1/2 hidden h-[2px] w-[calc(100%-108px+24px)] -translate-y-1/2 lg:block"
+                      style={{
+                        background:
+                          "linear-gradient(90deg, rgba(255,85,0,0.8), rgba(255,85,0,0.2))",
+                      }}
+                    />
                   )}
-                </div> */}
+                </div>
 
                 {/* Points */}
                 <ul className="mt-6 space-y-2 flex flex-col items-start w-full">

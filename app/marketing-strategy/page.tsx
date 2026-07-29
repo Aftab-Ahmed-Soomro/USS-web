@@ -55,13 +55,13 @@ function Hero() {
       <div className="relative z-10 mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.15}>
           <StaggerItem>
-                      <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white text-center sm:text-start">
-                        Marketing strategy
-                      </p>
-                    </StaggerItem>
+            <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white text-center sm:text-start">
+              Marketing strategy
+            </p>
+          </StaggerItem>
           <StaggerItem>
             <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[1.4] sm:leading-[70px] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white text-center sm:text-start">
-              Turn strategy into 
+              Turn strategy into
               <br />{" "}
               <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white leading-[0.7] sm:leading-[30px] tracking-[-1px] sm:tracking-[-2.8px]">
                 business growth.
@@ -319,17 +319,45 @@ export default function MarketingStrategyPage() {
       />
       <LevelsOfFunnel />
       <StrategyByBusinessGoal />
-      <div className="-mt-[60px] sm:-mt-0">
+      <div className="-mt-[60px] sm:-mt-0 marketing-six-step-wrapper">
+        <style>{`
+          .marketing-six-step-wrapper .cursor-pointer > span {
+            font-size: 14px !important;
+          }
+          .marketing-six-step-wrapper p {
+            font-size: 14px !important;
+            line-height: 1.6 !important;
+          }
+          @media (min-width: 640px) {
+            .marketing-six-step-wrapper .cursor-pointer > span {
+              font-size: 14px !important;
+            }
+            .marketing-six-step-wrapper p {
+              font-size: 14px !important;
+            }
+          }
+          @media (min-width: 1024px) {
+            .marketing-six-step-wrapper .cursor-pointer > span {
+              font-size: 20px !important;
+              margin-top: 8px !important;
+            }
+            .marketing-six-step-wrapper p {
+              font-size: 19px !important;
+              line-height: 1.65 !important;
+              max-width: 620px !important;
+            }
+          }
+        `}</style>
         <SixStepSystem
           heading={
             <h2 className="text-white font-medium tracking-[-1px] sm:tracking-[-2px] text-[36px] sm:text-[56px] leading-[1.1] sm:leading-[69.36px]">
               every digital touchpoint <br className="hidden sm:block" />
               needs its {" "}
-                <span
-                  className="text-[#FF5500] italic font-normal font-[var(--font-cormorant)] timesFontFamily text-[46px] sm:text-[72px] leading-[0] sm:leading-[69.36px] tracking-[-1.5px] sm:tracking-[-2px]"
-                >
-                  own strategy
-                </span>
+              <span
+                className="text-[#FF5500] italic font-normal font-[var(--font-cormorant)] timesFontFamily text-[46px] sm:text-[72px] leading-[0] sm:leading-[69.36px] tracking-[-1.5px] sm:tracking-[-2px]"
+              >
+                own strategy
+              </span>
             </h2>
           }
           data={touchpointStepsData}

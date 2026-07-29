@@ -51,7 +51,7 @@ export function OpportunitySection() {
             <p 
               className="font-normal text-white/80 font-[var(--font-inter)] capitalize text-[13px] sm:text-[16px] leading-[1.6] sm:leading-[21.12px]"
             >
-              us online sales on black friday 2025
+              US online sales on black friday 2025
             </p>
           </div>
           </div>

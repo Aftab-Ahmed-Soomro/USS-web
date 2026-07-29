@@ -55,7 +55,7 @@ export function UssDifferentSection() {
 
   return (
     <section 
-      className="relative z-10 bg-[#0a0a0a] text-white overflow-hidden py-[30px] sm:py-[100px]"
+      className="relative z-10 bg-[#000] text-white overflow-hidden py-[30px] sm:py-[100px]"
       style={{
         backgroundImage: "url('/assets/bgMain.png')",
         backgroundSize: 'cover',
@@ -63,11 +63,11 @@ export function UssDifferentSection() {
       }}
     >
       {/* Background Ambient Glow */}
-      <div 
+      {/* <div 
         className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#ff5500]/15 rounded-full blur-[140px] opacity-60"
-      />
+      /> */}
 
-      <div className="mx-auto flex max-w-[1150px] px-0 sm:px-6 flex-col items-center relative z-10 w-full">
+      <div className="mx-auto flex max-w-[1150px] px-4 flex-col items-center relative z-10 w-full -mt-5 sm:-mt-0">
         {/* Animated Heading */}
         <motion.h2 
           initial={{ opacity: 0, y: 30 }}

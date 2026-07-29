@@ -165,9 +165,9 @@ export function PowerOf360() {
       {/* Dark overlay */}
       <div className="hidden md:block absolute inset-0 bg-black/55 z-0" />
 
-      {/* Content — full-width, relative so absolute children work */}
-      <div className="relative z-10 w-full flex items-center px-6 pt-6 pb-10 sm:py-80 lg:px-14 max-md:flex-col max-md:items-start max-md:justify-center max-md:gap-4">
-        {/* ── LEFT: text block — stays on left ~40% ── */}
+      {/* Content — max-w-[1150px] container so left side aligns cleanly on large screens */}
+      <div className="relative z-10 mx-auto max-w-[1150px] w-full flex items-center px-6 pt-6 pb-10 sm:py-80 max-md:flex-col max-md:items-start max-md:justify-center max-md:gap-4">
+        {/* ── LEFT: text block — stays on left ── */}
         <div className="flex max-w-[450px] flex-col gap-6 flex-shrink-0 max-md:max-w-full max-md:w-full">
           <AnimatePresence mode="wait">
             <motion.div
@@ -288,12 +288,8 @@ export function PowerOf360() {
 
         {/* ── RIGHT: thumbnails + controls ── */}
         <div
-          className="max-md:!static max-md:!transform-none max-md:!w-full max-md:!mt-4 max-md:!left-0"
+          className="max-md:!static max-md:!transform-none max-md:!w-full max-md:!mt-4 md:absolute md:top-1/2 md:-translate-y-1/2 px-6 md:left-[480px] lg:left-[500px]"
           style={{
-            position: "absolute",
-            top: "50%",
-            left: "42%",
-            transform: "translateY(-50%)",
             display: "flex",
             flexDirection: "column",
             gap: "24px",

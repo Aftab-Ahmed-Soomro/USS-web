@@ -234,7 +234,7 @@ function Hero() {
         <Stagger staggerDelay={0.15}>
 
           <StaggerItem>
-            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold  leading-[30%] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white text-center sm:text-start">
+            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold  leading-[30%] sm:leading-[95%] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white text-center sm:text-start">
               we don’t just {" "}
               <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white tracking-[-1px] sm:tracking-[-2.8px]">
                 market.
@@ -392,23 +392,9 @@ function EmailStrategy() {
           scrollbar-width: none;
         }
 
-        @media (max-width: 639px) {
-          .email-cards-track {
-            width: max-content;
-            animation: email-marquee 20s linear infinite;
-            will-change: transform;
-          }
-        }
-        
         @keyframes email-marquee {
           0%   { transform: translateX(0); }
           100% { transform: translateX(-50%); }
-        }
-        
-        @media (prefers-reduced-motion: reduce) {
-          .email-cards-track {
-            animation: none;
-          }
         }
       `}</style>
       <Stagger staggerDelay={0.15} className="mx-auto max-w-[1150px]">
@@ -426,25 +412,68 @@ function EmailStrategy() {
           </h2>
         </StaggerItem>
 
-        {/* Steps */}
-        <div className="mt-[40px] sm:mt-20 w-full overflow-hidden sm:overflow-visible sm:px-4">
-          <div className="email-cards-track flex sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-x-6 gap-y-12 sm:gap-y-16 pb-6 sm:pb-0 px-4 sm:px-0">
-            {[...steps, ...steps].map((step, i) => (
+        {/* Mobile: left-line timeline */}
+        <div className="mt-[40px] sm:hidden w-full px-4">
+          <div className="relative pl-8">
+            {/* Left vertical line */}
+            <div className="absolute left-[15px] top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#ff5500]/0 via-[#ff5500]/50 to-[#ff5500]/0">
+              <div className="absolute top-0 bottom-0 left-1/2 w-[6px] -translate-x-1/2 bg-[#ff5500] blur-[8px] opacity-40" />
+            </div>
+
+            <div className="flex flex-col">
+              {steps.map((step, i) => (
+                <StaggerItem
+                  key={i}
+                  className="relative flex flex-row items-start w-full py-6"
+                >
+                  {/* Dot on the line */}
+                  <div className="absolute left-[-21px] top-7 w-[12px] h-[12px] rounded-full bg-[#ff5500] shadow-[0_0_10px_3px_rgba(255,85,0,0.6)] z-20 shrink-0" />
+
+                  {/* All content on the right */}
+                  <div className="flex flex-col items-start text-left w-full">
+                    <div className="inline-flex px-2.5 py-1 rounded-full border border-[#ff5500]/40 bg-[#ff5500]/10 w-fit mb-2">
+                      <span className="font-semibold text-[10px] leading-tight tracking-[0.6px] text-[#ff5500]">
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                    </div>
+                    <h3 className="font-semibold text-[17px] leading-[1.25] tracking-[-0.4px] text-white mb-2.5">
+                      {step.title}
+                    </h3>
+                    <ul className="space-y-1.5 flex flex-col items-start w-full">
+                      {step.points.map((point) => (
+                        <li key={point} className="flex gap-2 text-white/60 text-[13px] leading-[1.5] items-start text-left">
+                          <span className="text-[#ff5500] shrink-0 mt-[1px]">·</span>
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </StaggerItem>
+              ))}
+            </div>
+          </div>
+        </div>
+
+
+        {/* Desktop: original horizontal layout */}
+        <div className="hidden sm:block mt-20 w-full overflow-visible px-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-16">
+            {steps.map((step, i) => (
               <StaggerItem
                 key={i}
-                className={`relative flex-none w-[280px] sm:w-auto flex flex-col items-center text-center sm:block sm:text-left sm:items-start bg-[#111] sm:bg-transparent p-8 sm:p-0 rounded-[28px] sm:rounded-none border border-white/10 sm:border-none ${i >= steps.length ? 'sm:hidden block' : 'block'}`}
+                className="relative block text-left"
               >
                 {/* Title */}
                 <h3
-                  className="order-2 sm:order-none mt-5 sm:mt-0 mb-[16px] sm:mb-6 text-white font-semibold text-[18px] sm:text-[20px] leading-[1.3] sm:leading-[32px] tracking-[-0.6px] min-h-0 sm:min-h-[64px]"
+                  className="mb-6 text-white font-semibold text-[20px] leading-[32px] tracking-[-0.6px] min-h-[32px]"
                 >
                   {step.title}
                 </h3>
 
                 {/* Icon circle + connecting line */}
-                <div className="relative flex items-center justify-center sm:justify-start w-full order-1 sm:order-none">
+                {/* <div className="relative flex items-center justify-start w-full">
                   <div
-                    className="relative z-10 flex shrink-0 items-center justify-center rounded-full bg-white w-[72px] h-[72px] sm:w-[108px] sm:h-[108px]"
+                    className="relative z-10 flex shrink-0 items-center justify-center rounded-full bg-white w-[108px] h-[108px]"
                   >
                     {step.icon ? (
                       <Image
@@ -452,22 +481,22 @@ function EmailStrategy() {
                         alt={step.title}
                         width={56}
                         height={56}
-                        className="object-contain w-[36px] h-[36px] sm:w-[56px] sm:h-[56px]"
+                        className="object-contain w-[56px] h-[56px]"
                       />
                     ) : null}
                   </div>
 
                   {i < steps.length - 1 && (
-                    <div className="absolute left-[80px] sm:left-[108px] top-1/2 hidden h-px w-[calc(100%-80px+24px)] sm:w-[calc(100%-108px+24px)] -translate-y-1/2 bg-white/40 lg:block" />
+                    <div className="absolute left-[108px] top-1/2 hidden h-px w-[calc(100%-108px+24px)] -translate-y-1/2 bg-white/40 lg:block" />
                   )}
-                </div>
+                </div> */}
 
                 {/* Points */}
-                <ul className="order-3 sm:order-none mt-[8px] sm:mt-6 space-y-3 sm:space-y-2 flex flex-col items-start w-full">
+                <ul className="mt-6 space-y-2 flex flex-col items-start w-full">
                   {step.points.map((point) => (
                     <li
                       key={point}
-                      className="flex sm:max-w-[250px] gap-2 text-white/80 sm:text-white font-normal text-[14px] sm:text-[16px] leading-[1.4] sm:leading-[30px] tracking-[-0.02em] items-start text-left"
+                      className="flex max-w-[250px] gap-2 text-white font-normal text-[16px] leading-[30px] tracking-[-0.02em] items-start text-left"
                     >
                       <span className="text-[#ff5500] shrink-0">·</span>
                       <span>{point}</span>
