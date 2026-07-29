@@ -17,6 +17,7 @@ import WhatsAppChannels from "../components/WhatsAppChannels";
 import ConversationFlow from "../components/ConversationFlow";
 import TargetRightPeople from "../components/TargetRightPeople";
 import { WhyWhatsappWorks } from "../components/WhyWhatsappWorks";
+import { RevenueMethod } from "../components/RevenueMethod";
 
 const emailStats = [
   { value: "24.8M+", label: "Messages Delivered" },
@@ -223,75 +224,6 @@ function RelatedProjects() {
   );
 }
 
-function  RevenueMethod() {
-  return (
-    <div className="w-full bg-black text-white py-[50px] sm:py-20 mt-[32px] sm:mt-16 px-4 min-[375px]:px-6 min-h-screen flex flex-col justify-center items-center font-sans">
-      <div className="max-w-[1150px] w-full">
-
-        <Stagger staggerDelay={0.12}>
-          <StaggerItem>
-            <h2 className="lowercase text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-[40px] sm:mb-16">
-              our approach to turning
-              <br /> {" "}
-              <span
-                className="italic text-[#ff5500] font-normal text-[42px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]"
-                style={{ fontFamily: "'Times New Roman', Times, serif" }}
-              >
-                conversations into revenue
-              </span>
-            </h2>
-          </StaggerItem>
-        </Stagger>
-
-        {/* Grid Container */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[16px] sm:gap-6 justify-center items-center">
-          {CARDS_DATA.map((card, i) => (
-            <FadeUp key={card.id} delay={0.1 + i * 0.1}>
-              <div
-                tabIndex={0}
-                style={{
-                  backgroundImage: `url(${card.bgImage})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center'
-                }}
-                className="group relative rounded-[28px] overflow-hidden p-[20px] sm:p-2 flex flex-col justify-between cursor-pointer focus:outline-none transition-all duration-500 ease-out w-full h-[360px] sm:h-[606.93px]"
-              >
-                {/* Card Number */}
-                <div
-                  className="text-[9.82px] font-medium leading-[14.73px] tracking-[2.95px] text-white opacity-80 align-middle"
-                  style={{ fontStyle: 'Medium' }}
-                >
-                  {card.id}
-                </div>
-
-                {/* Bottom Content Group (Animates Up on Hover/Focus) */}
-                <div className="transform translate-y-[80px] group-hover:translate-y-0 group-focus:translate-y-0 transition-transform duration-500 ease-out will-change-transform">
-
-                  {/* Title */}
-                  <h3
-                    className="text-[18px] sm:text-[22.64px] font-normal leading-[1.3] sm:leading-[26.78px] tracking-[0%] text-white align-middle mb-[8px] sm:mb-3 min-h-[48px] sm:min-h-[60px]"
-                    style={{ fontStyle: 'Regular' }}
-                  >
-                    {card.title}
-                  </h3>
-
-                  {/* Description (Fades and slides in cleanly) */}
-                  <p
-                    className="text-[14px] sm:text-[15.5px] font-normal leading-[1.4] sm:leading-[18.86px] tracking-[0%] text-white/90 align-middle opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-500 delay-75 ease-out min-h-[80px] sm:min-h-[120px]"
-                    style={{ fontStyle: 'Regular' }}
-                  >
-                    {card.description}
-                  </p>
-                </div>
-              </div>
-            </FadeUp>
-          ))}
-        </div>
-
-      </div>
-    </div>
-  );
-}
 
 // Card Data Structure
 const CARDS_DATA = [
@@ -450,7 +382,20 @@ export default function WhatsappAndSmsPage() {
                 <WhatsAppChannels />
                 <ConversationFlow />
                 <TargetRightPeople items={whatsappSmsTargetItems} />
-      <RevenueMethod />
+      <RevenueMethod
+        heading={
+          <>
+            our approach to turning <br className="hidden sm:block" />{" "}
+            <span
+              className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]"
+              style={{ fontFamily: "'Times New Roman', Times, serif" }}
+            >
+              conversations into revenue
+            </span>
+          </>
+        }
+        cards={CARDS_DATA}
+      />
       <RelatedProjects />
       <Testimonials />
       <Team />

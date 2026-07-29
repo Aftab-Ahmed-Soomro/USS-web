@@ -21,7 +21,7 @@ export function WhyWhatsappWorks() {
         const nextIndex = (currentIndex + 1) % items.length;
         return items[nextIndex];
       });
-    }, 3000);
+    }, 1000);
 
     return () => clearInterval(interval);
   }, [isHovered]);

@@ -230,17 +230,17 @@ function Hero() {
         style={{ background: 'radial-gradient(circle, #FF5500 0%, rgba(255,85,0,0) 70%)' }}
       />
 
-      <div className="relative z-10 mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
+      <div className="relative z-10 mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between text-center sm:text-start">
         <Stagger staggerDelay={0.15}>
 
           <StaggerItem>
-            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold  leading-[50%] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white">
+            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold  leading-[30%] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white text-center sm:text-start">
               we don’t just {" "}
               <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white tracking-[-1px] sm:tracking-[-2.8px]">
                 market.
               </span>
             </h1>
-            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold  leading-[50%] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white">
+            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold  leading-[50%] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white text-center sm:text-start">
               we scale{" "}
               <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white tracking-[-1px] sm:tracking-[-2.8px]">
                 brands.
@@ -248,20 +248,23 @@ function Hero() {
             </h1>
           </StaggerItem>
           <StaggerItem>
-            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[600px] font-[var(--font-inter)] text-[13px] text-white/90 sm:text-[18px]">
+            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[600px] font-[var(--font-inter)] text-[13px] text-white/90 sm:text-[18px] text-center sm:text-start">
               Our 360 marketing approach brings strategy, creative and performance together, creating one connected system that works towards the same goal.
             </p>
-            <p className="mt-[40px] max-w-[600px] font-[var(--font-inter)] text-[13px]  text-white/90 sm:text-[18px]">
+            <p className="mt-[40px] max-w-[600px] font-[var(--font-inter)] text-[13px]  text-white/90 sm:text-[18px] text-center sm:text-start">
 Trusted by over 100 businesses across the UK, US and UAE
             </p>
           </StaggerItem>
           <StaggerItem>
-            <Link
+            <div className="flex justify-center sm:justify-start">
+              
+              <Link
               className="mt-[24px] sm:mt-[36px] inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
               href="/contact"
             >
               Book a Consultation
             </Link>
+            </div>
           </StaggerItem>
         </Stagger>
 
@@ -624,7 +627,7 @@ export default function New360WithForm() {
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'performance' }))}
           className="inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
         >
-          EXPLORE MORE PERFORMANCE SERVICES &gt;
+          EXPLORE MORE SERVICES &gt;
         </a>
       </motion.div>
       <motion.div
@@ -695,7 +698,7 @@ export default function New360WithForm() {
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'performance' }))}
           className="inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
         >
-          EXPLORE MORE PERFORMANCE SERVICES &gt;
+          EXPLORE MORE SERVICES &gt;
         </a>
       </motion.div>
       <motion.div
@@ -806,7 +809,7 @@ export default function New360WithForm() {
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'performance' }))}
           className="inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
         >
-          EXPLORE MORE PERFORMANCE SERVICES &gt;
+          EXPLORE MORE SERVICES &gt;
         </a>
       </motion.div>
       <motion.div
@@ -836,7 +839,7 @@ export default function New360WithForm() {
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'performance' }))}
           className="inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
         >
-          EXPLORE MORE PERFORMANCE SERVICES &gt;
+          EXPLORE MORE SERVICES &gt;
         </a>
       </motion.div>
       <motion.div
@@ -867,7 +870,7 @@ export default function New360WithForm() {
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'performance' }))}
           className="inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
         >
-          EXPLORE MORE PERFORMANCE SERVICES &gt;
+          EXPLORE MORE SERVICES &gt;
         </a>
       </motion.div>
       <motion.div
@@ -900,7 +903,7 @@ export default function New360WithForm() {
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'creative' }))}
           className="inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
         >
-          EXPLORE MORE CREATIVE SERVICES &gt;
+          EXPLORE MORE SERVICES &gt;
         </a>
       </motion.div>
       <motion.div
@@ -932,7 +935,7 @@ export default function New360WithForm() {
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'creative' }))}
           className="inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
         >
-          EXPLORE MORE CREATIVE SERVICES &gt;
+          EXPLORE MORE SERVICES &gt;
         </a>
       </motion.div>
 
@@ -963,7 +966,7 @@ export default function New360WithForm() {
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'creative' }))}
           className="inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
         >
-          EXPLORE MORE CREATIVE SERVICES &gt;
+          EXPLORE MORE SERVICES &gt;
         </a>
       </motion.div>
 
@@ -1031,7 +1034,7 @@ export default function New360WithForm() {
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'creative' }))}
           className="inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
         >
-          EXPLORE MORE CREATIVE SERVICES &gt;
+          EXPLORE MORE SERVICES &gt;
         </a>
       </motion.div>
 

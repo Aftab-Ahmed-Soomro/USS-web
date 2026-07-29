@@ -47,7 +47,7 @@ const DEFAULT_CARDS: RevenueMethodCard[] = [
 const DEFAULT_HEADING = (
   <>
     how we maximise{" "}
-    <br className="hidden sm:block" />
+    <br className="block" />
     <span
       className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]"
       style={{ fontFamily: "'Times New Roman', Times, serif" }}
@@ -71,18 +71,18 @@ export function RevenueMethod({ heading = DEFAULT_HEADING, tagline = DEFAULT_TAG
   };
 
   return (
-    <div className="w-full bg-black text-white py-[50px] sm:py-20 px-4 min-[375px]:px-6 min-h-screen flex flex-col justify-center items-center font-sans">
+    <div className="w-full bg-black text-white py-[50px] sm:py-20 px-6 min-h-screen flex flex-col justify-center items-center font-sans">
       <Stagger staggerDelay={0.15} className="max-w-[1150px] w-full">
 
         <StaggerItem>
-          <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-[#ff5500] text-center sm:text-start">
+          <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-[#ff5500] text-center sm:text-start mb-4">
             {tagline}
           </p>
         </StaggerItem>
 
         {/* Heading */}
         <StaggerItem>
-          <h2 className="lowercase text-white text-[28px] min-[375px]:text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-[40px] sm:mb-16">
+          <h2 className=" text-white text-[28px] min-[375px]:text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-[40px] sm:mb-16">
             {heading}
           </h2>
         </StaggerItem>

@@ -161,7 +161,7 @@ function ProjectsCta() {
         <FadeRight delay={0.3}>
           <div className="mx-auto max-w-[640px] space-y-6 sm:space-y-8 text-[13px] min-[375px]:text-[14px] sm:text-[16px] leading-[1.6] sm:leading-[1.7] tracking-[0%] text-white">
             <p>
-              Calling ourselves a data driven, problem solving, peoplE connecting, digitally obsessed, talent powered digital marketing agency felt a little long winded… so we call ourselves USS.
+              Calling ourselves a data driven, problem solving, people connecting, digitally obsessed, talent powered digital marketing agency felt a little long winded… so we call ourselves USS.
             </p>
             {/* <p>
               We bring all digital platforms to one connected system designed to scale.
@@ -214,7 +214,7 @@ export default function ProjectsPage() {
           {/* Subheading — slides in from right */}
           <FadeRight delay={0.3}>
             <p className="mt-[16px] max-w-[800px] mx-auto sm:mt-[30px] font-[var(--font-be-vietnam)] text-[12px] font-normal leading-[24px] text-[#F5F5F5] sm:text-[16.5px]">
-              Explore USS projects across branding, websites, creative and performance marketing for clients across the UK, US and Middle East.
+              Explore USS projects across branding, websites, creative <br className="block sm:hidden" /> and performance marketing for clients <br className="block sm:hidden" /> across the UK, US and Middle East.
             </p>
           </FadeRight>
 
@@ -292,7 +292,7 @@ export default function ProjectsPage() {
                           </div>
 
                           {/* Tags */}
-                          <div className="flex flex-wrap gap-1 sm:gap-2 justify-end">
+                          <div className="hidden sm:flex flex-wrap gap-1 sm:gap-2 justify-end">
                             {project.tags.map(tag => (
                               <span
                                 key={tag}

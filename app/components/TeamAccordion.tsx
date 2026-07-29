@@ -145,7 +145,11 @@ export default function TeamAccordion({ heading, data = defaultTeamData }: TeamA
                         >
                           <div className="overflow-hidden">
                             <div className="max-w-[550px]">
-                              <p className="text-[13px] leading-[22.1px] font-light text-[#a3a3a3] mb-4">
+                              <p style={{
+                                fontWeight: 400,
+                                fontSize: 'clamp(13px, 5vw, 18px)',
+                                lineHeight: '26px'
+                              }} className=" text-[#a3a3a3] mb-4">
                                 {item.description}
                               </p>
 

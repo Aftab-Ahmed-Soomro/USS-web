@@ -146,7 +146,7 @@ export function PowerOf360() {
       <AnimatePresence initial={false}>
         <motion.div
           key={activeItem.id}
-          className="absolute inset-0 z-0"
+          className="hidden md:block absolute inset-0 z-0"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -163,10 +163,10 @@ export function PowerOf360() {
       </AnimatePresence>
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/55 z-0" />
+      <div className="hidden md:block absolute inset-0 bg-black/55 z-0" />
 
       {/* Content — full-width, relative so absolute children work */}
-      <div className="relative z-10 w-full flex items-center px-6 pt-24 pb-10 sm:py-80 lg:px-14 max-md:flex-col max-md:items-start max-md:justify-center max-md:gap-4">
+      <div className="relative z-10 w-full flex items-center px-6 pt-6 pb-10 sm:py-80 lg:px-14 max-md:flex-col max-md:items-start max-md:justify-center max-md:gap-4">
         {/* ── LEFT: text block — stays on left ~40% ── */}
         <div className="flex max-w-[450px] flex-col gap-6 flex-shrink-0 max-md:max-w-full max-md:w-full">
           <AnimatePresence mode="wait">
@@ -292,7 +292,7 @@ export function PowerOf360() {
           style={{
             position: "absolute",
             top: "50%",
-            left: "45%",
+            left: "42%",
             transform: "translateY(-50%)",
             display: "flex",
             flexDirection: "column",
@@ -321,15 +321,15 @@ export function PowerOf360() {
                   animate={{ opacity: 1, scale: 1, x: 0 }}
                   exit={{ opacity: 0, scale: 0.9, x: -50 }}
                   transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                  className="max-md:!w-[220px] max-md:!h-[280px] max-md:snap-start relative w-[200px] h-[320px] rounded-[16px] overflow-hidden flex-shrink-0 cursor-pointer border border-white/10 hover:border-white/40 transition-colors duration-300 p-0 group"
+                  className="max-md:!w-[220px] max-md:!h-[320px] max-md:snap-start relative w-[260px] h-[380px] rounded-[16px] overflow-hidden flex-shrink-0 cursor-pointer border border-white/10 hover:border-white/40 transition-colors duration-300 p-0 group"
                   aria-label={card.label}
                 >
                   <Image
                     src={card.image}
                     alt={card.alt}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    sizes="220px"
+                    className="object-cover object-[center_15%] transition-transform duration-500 group-hover:scale-110"
+                    sizes="(max-width: 768px) 240px, 260px"
                   />
 
                   {/* Dark gradient overlay for thumbnail */}
@@ -391,7 +391,7 @@ export function PowerOf360() {
                         letterSpacing: "-0.2px",
                         color: "#ffffff",
                         display: "block",
-                        textAlign: "left",
+                        textAlign: "center",
                       }}
                     >
                       {card.label}

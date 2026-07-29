@@ -466,7 +466,7 @@ export default function MetaAdsPage() {
       </div>
             
       <RevenueMethod
-        heading={<>How We Build High-Performing <br className="hidden sm:block" />{" "}<span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>Meta Campaigns</span></>}
+        heading={<>How We Build <br className="block sm:hidden" /> High Performing <br className="hidden sm:block" />{" "}<span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>  <br className="block sm:hidden" /> Meta Campaigns</span></>}
         cards={[
           { id: '01', title: 'Campaign Strategy', description: 'We define your objectives, audience, budget and campaign structure before launching.', bgImage: '/assets/method1.png' },
           { id: '02', title: 'Audience Targeting', description: 'We build targeted audiences using demographics, interests, behaviours and customer data.', bgImage: '/assets/method2.png' },

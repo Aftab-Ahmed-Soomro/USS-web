@@ -8,10 +8,10 @@ export function BrandingServices() {
   return (
     <section className="bg-black pt-10 sm:pt-16 lg:pt-24 px-4 sm:px-6 w-full flex flex-col items-center">
       <div className="w-full max-w-[1150px]">
-        <Stagger staggerDelay={0.15}>
+        {/* <Stagger staggerDelay={0.15}> */}
           
           {/* Top Header */}
-          <StaggerItem>
+          {/* <StaggerItem> */}
             <div className="flex flex-col gap-3 sm:gap-4 border-b border-[#333333] pt-8 sm:pt-12 pb-8 sm:pb-12">
               <h4 className="text-[#FF5500] uppercase text-[12px] leading-[1] tracking-[2.08px] font-semibold">
                 Our Services
@@ -21,10 +21,10 @@ export function BrandingServices() {
                 <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[42px] sm:text-[72px] leading-[1.2] sm:leading-[74px] tracking-[-0.5px] sm:tracking-[-1.92px]">in branding</span>
               </h2>
             </div>
-          </StaggerItem>
+          {/* </StaggerItem> */}
 
           {/* Middle Section */}
-          <StaggerItem>
+          {/* <StaggerItem> */}
             <div className="flex flex-col lg:flex-row w-full border-b border-[#333333]">
               
               {/* Left Block */}
@@ -84,12 +84,12 @@ export function BrandingServices() {
                 </div>
               </div>
             </div>
-          </StaggerItem>
+          {/* </StaggerItem> */}
 
           {/* Bottom Cards Section */}
           <div className="grid grid-cols-1 min-[480px]:grid-cols-2 lg:grid-cols-5 border-b border-[#333333] divide-y min-[480px]:divide-y-0 lg:divide-y-0 lg:divide-x divide-[#333333] min-[480px]:[&>*:nth-child(odd)]:border-r min-[480px]:[&>*:nth-child(odd)]:border-[#333333] min-[480px]:[&>*]:border-b min-[480px]:[&>*]:border-[#333333] min-[480px]:[&>*:nth-last-child(-n+2)]:border-b-0">
             {bottomCards.map((card, index) => (
-              <StaggerItem key={card.id}>
+              // <StaggerItem key={card.id}>
                 <div className="flex flex-col pt-6 sm:pt-8 pb-6 sm:pb-8 px-4 lg:px-6 gap-4 sm:gap-6 h-full">
                   {card.useBg ? (
                     <div className={`w-full aspect-[247/194] rounded-[10px] overflow-hidden ${card.imageBg ?? 'bg-[#111]'}`}>
@@ -120,11 +120,11 @@ export function BrandingServices() {
                     </p>
                   </div>
                 </div>
-              </StaggerItem>
+              // </StaggerItem>
             ))}
           </div>
 
-        </Stagger>
+        {/* </Stagger> */}
       </div>
     </section>
   );

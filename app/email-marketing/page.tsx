@@ -364,13 +364,13 @@ function EmailStrategy() {
               >
                 {/* Title */}
                 <h3
-                  className="mb-6 text-white font-semibold text-[20px] leading-[32px] tracking-[-0.6px] min-h-[64px]"
+                  className="mb-6 text-white font-semibold text-[20px] leading-[32px] tracking-[-0.6px] min-h-[32px]"
                 >
                   {step.title}
                 </h3>
 
                 {/* Icon circle + connecting line */}
-                <div className="relative flex items-center justify-start w-full">
+                {/* <div className="relative flex items-center justify-start w-full">
                   <div
                     className="relative z-10 flex shrink-0 items-center justify-center rounded-full bg-white w-[108px] h-[108px]"
                   >
@@ -388,7 +388,7 @@ function EmailStrategy() {
                   {i < steps.length - 1 && (
                     <div className="absolute left-[108px] top-1/2 hidden h-px w-[calc(100%-108px+24px)] -translate-y-1/2 bg-white/40 lg:block" />
                   )}
-                </div>
+                </div> */}
 
                 {/* Points */}
                 <ul className="mt-6 space-y-2 flex flex-col items-start w-full">

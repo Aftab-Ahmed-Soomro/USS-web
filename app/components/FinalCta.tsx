@@ -45,7 +45,7 @@ export function FinalCta() {
           <div className="mx-auto max-w-[600px] space-y-6 sm:space-y-8 text-[13px] min-[375px]:text-[14px] sm:text-[15px] leading-[24px] sm:leading-[27px] text-white">
             <StaggerItem y={20}>
               <p>
-                Calling ourselves a data driven, problem solving, peoplE connecting, digitally obsessed, talent powered digital marketing agency felt a little long winded… so we call ourselves USS.
+                Calling ourselves a data driven, problem solving, people connecting, digitally obsessed, talent powered digital marketing agency felt a little long winded… so we call ourselves USS.
               </p>
             </StaggerItem>
             {/* <StaggerItem y={20}>

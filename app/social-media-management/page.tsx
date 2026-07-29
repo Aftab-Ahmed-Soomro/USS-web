@@ -506,8 +506,8 @@ export default function SocialMediaManagementPage() {
       </div>
       <OurOrganicSocialMediaApproach />
       <SocialMediaRevenueMethod />
-      <RelatedProjects />
       <SocialServices />
+      <RelatedProjects />
       <Testimonials />
       <GoodCompanyMap />
       <Team />

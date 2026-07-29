@@ -86,11 +86,9 @@ export function GrowthRoadmap() {
             <div className="flex lg:justify-end lg:items-center h-full">
               <StaggerItem>
                 <p
-                  className="text-neutral-400 sm:mt-[70px] max-w-[700px] text-center lg:text-right"
+                  className="text-neutral-400 text-[13px] sm:text-[18px] leading-[1.6] sm:leading-[30.6px] sm:mt-[70px] max-w-[700px] text-center lg:text-right"
                   style={{
-                    fontWeight: 400,
-                    fontSize: 'clamp(13px, 5vw, 18px)',
-                    lineHeight: '30.6px'
+                    fontWeight: 400
                   }}
                 >
                   Every strategy starts with understanding your business. From there, <br className='hidden sm:block' /> we create a marketing roadmap built around your goals, <br className='hidden sm:block' /> audience and market over a 3 - 6 month time period.

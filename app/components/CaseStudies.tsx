@@ -16,7 +16,7 @@ const leftColumnData = [
   },
   {
     id: 2,
-    year: "2025",
+    year: "2026",
     category: "Restaurant Group",
     title: "Coshe Juices",
     description: "qsr and restaurant identity formed with a reservation-and-ordering menu system built for repeat guests.",
@@ -37,7 +37,7 @@ const leftColumnData = [
 const rightColumnData = [
   {
     id: 4,
-    year: "2025",
+    year: "2026",
     category: "Real Estate",
     title: "Agency 8",
     description: "A luxury real estate website designed for users to explore exclusive developments across rental, sales and off plan.",
@@ -46,7 +46,7 @@ const rightColumnData = [
   },
   {
     id: 5,
-    year: "2025",
+    year: "2026",
     category: "Restaurant Group",
     title: "Afro Maya",
     description: " A fashion website designed to highlight new collections and build brand presence.",

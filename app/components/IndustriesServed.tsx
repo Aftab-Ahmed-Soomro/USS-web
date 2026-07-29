@@ -68,7 +68,7 @@ export default function IndustriesServed() {
 
       {/* Text Header Section */}
       <div className="w-full mx-auto px-6 max-w-[1442px]">
-        <div className="mb-10 lg:mb-14 flex flex-col items-start text-left">
+        <div className="mb-10 lg:mb-14 flex flex-col  sm:items-start items-center text-center sm:text-left">
           <h2 className="text-white mb-6 font-medium text-[32px] sm:text-[36px] leading-[40px] sm:leading-[44px] tracking-[-1px] lg:text-[56px] lg:leading-[75.6px] lg:tracking-[-3.16px] align-middle">
             Industries we have <span className="timesFontFamily font-serif text-[42px] sm:text-[48px] lg:text-[72px] font-normal italic">served</span>
           </h2>

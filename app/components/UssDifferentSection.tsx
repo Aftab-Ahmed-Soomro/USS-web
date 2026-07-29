@@ -55,7 +55,7 @@ export function UssDifferentSection() {
 
   return (
     <section 
-      className="relative z-10 bg-[#0a0a0a] text-white overflow-hidden py-[50px] sm:py-[100px]"
+      className="relative z-10 bg-[#0a0a0a] text-white overflow-hidden py-[30px] sm:py-[100px]"
       style={{
         backgroundImage: "url('/assets/bgMain.png')",
         backgroundSize: 'cover',
@@ -96,7 +96,7 @@ export function UssDifferentSection() {
                 delay: index * 0.15,
                 ease: [0.16, 1, 0.3, 1] 
               }}
-              className="relative w-full max-w-[405px] aspect-[405/620] group cursor-pointer transition-shadow rounded-2xl overflow-hidden shadow-2xl hover:shadow-[#ff5500]/20 bg-black/40 p-2 sm:p-3"
+              className="relative w-full max-w-[405px] aspect-[405/620] group cursor-pointer transition-shadow rounded-2xl overflow-hidden shadow-2xl hover:shadow-[#ff5500]/20"
             >
               <div className="w-full h-full transition-transform duration-500 group-hover:scale-105">
                 <SequentialVideoPlayer videos={card.videos} />
@@ -106,7 +106,7 @@ export function UssDifferentSection() {
         </div>
 
         {/* Mobile Layout (below lg screens) */}
-        <div className="lg:hidden w-full mt-6 px-1 min-[375px]:px-1.5">
+        <div className="lg:hidden w-full mt-0 px-1 min-[375px]:px-1.5">
           <div className="grid grid-cols-3 gap-1 min-[375px]:gap-1.5 w-full mx-auto">
             {cards.map((card, index) => (
               <motion.div
@@ -115,7 +115,7 @@ export function UssDifferentSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-20px" }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="relative w-full aspect-[405/620] group rounded-md min-[375px]:rounded-lg overflow-hidden shadow-lg bg-black/40 p-1"
+                className="relative w-full aspect-[405/620] group rounded-md min-[375px]:rounded-lg overflow-hidden shadow-lg"
               >
                 <div className="w-full h-full">
                   <SequentialVideoPlayer videos={card.videos} />

@@ -270,7 +270,7 @@ export default function MarketingStrategyPage() {
       <div className="sm:-mb-[120px] -mb-0">
         <WhyEmailFails
           tagline="THE OPPORTUNITY"
-          hideBadge={true}
+          hideBadge={false}
           heading={
             <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[32px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
               why most{" "}
@@ -278,7 +278,7 @@ export default function MarketingStrategyPage() {
                 className="font-normal italic text-[42px] sm:text-[72px]"
                 style={{ fontFamily: "'Times New Roman', Times, serif" }}
               >
-                marketing strategies
+                marketing <br /> strategies
               </span>{" "}
               fail
             </h2>
@@ -288,7 +288,7 @@ export default function MarketingStrategyPage() {
           rightTitle="The USS Difference"
           leftPoints={googleAdsBrandPoints}
           rightPoints={googleAdsUssPoints}
-          centerLogo="/assets/Google__logo.webp"
+          centerLogo="/assets/uss-logo.png"
           logoClassName="w-[80px] lg:w-[115px]"
         />
       </div>

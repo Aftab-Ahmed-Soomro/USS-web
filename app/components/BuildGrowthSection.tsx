@@ -44,7 +44,7 @@ export function BuildGrowthSection() {
             <span className="timesFontFamily italic font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[64.51px] tracking-[-1.15px] lowercase text-[#FF5500]">
               performance
             </span>
-            <span className="font-[var(--font-be-vietnam)] font-medium text-[30px] sm:text-[56px] leading-[1.1] sm:leading-[64.51px] tracking-[-1.15px] lowercase">
+            <span className="font-[var(--font-be-vietnam)] font-medium text-[30px] sm:text-[56px] leading-[1.1] sm:leading-[64.51px] tracking-[-1.15px] lowercase mt-1">
               and
             </span>
             <span className="timesFontFamily italic font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[64.51px] tracking-[-1.15px] lowercase text-[#FF5500]">
@@ -159,7 +159,7 @@ export function BuildGrowthSection() {
         >
           {/* Left Circle & Content */}
           <div className="hidden sm:block xl:absolute xl:-left-24 2xl:-left-44 xl:top-0 relative w-full max-w-[450px] sm:max-w-[750px] aspect-square flex flex-col items-start justify-center xl:justify-start xl:pt-16 shrink-0 z-0 mx-auto xl:mx-0">
-            <div className="absolute inset-0 z-0 pointer-events-none -left-[10%] xl:-left-[35%] 2xl:-left-[45%] scale-[1.35]">
+            <div className="absolute inset-0 z-0 pointer-events-none -left-[10%] xl:-left-[15%] 2xl:-left-[15%] scale-[1.35]">
               <Image
                 src="/assets/performanceCircle2.png"
                 alt="Performance Circle"
@@ -172,7 +172,7 @@ export function BuildGrowthSection() {
                 sizes="(max-width: 1280px) 100vw, 600px"
               />
             </div>
-            <div className="relative z-10 flex flex-col items-start gap-2 pl-0 xl:pl-4 text-left mt-10 xl:mt-0 mb-6 sm:mb-0 sm:pt-50">
+            <div className="relative z-10 flex flex-col items-start gap-2 pl-0 xl:pl-14 text-left mt-10 xl:mt-0 mb-6 sm:mb-0 sm:pt-50">
               <h3 className="font-[var(--font-be-vietnam)] font-semibold text-[32px] leading-none text-white capitalize">
                 Performance
               </h3>

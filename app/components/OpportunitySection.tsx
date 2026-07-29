@@ -20,7 +20,7 @@ export function OpportunitySection() {
             </span>
           </h2>
           <p 
-            className="font-normal text-white/90 mx-auto font-[var(--font-inter)] max-w-[700px] text-[13px] sm:text-[16px] leading-[1.6] sm:leading-[24.8px]"
+            className="font-normal text-white/90 mx-auto font-[var(--font-inter)] max-w-[700px] text-[13px] sm:text-[16px] leading-[1.6] capitalize sm:leading-[24.8px]"
           >
             we work with high performing youtubers to monetize their platforms effectively and
             maximize their revenue using strategic marketing system
@@ -49,7 +49,7 @@ export function OpportunitySection() {
               $10.8B
             </h3>
             <p 
-              className="font-normal text-white/80 font-[var(--font-inter)] lowercase text-[13px] sm:text-[16px] leading-[1.6] sm:leading-[21.12px]"
+              className="font-normal text-white/80 font-[var(--font-inter)] capitalize text-[13px] sm:text-[16px] leading-[1.6] sm:leading-[21.12px]"
             >
               us online sales on black friday 2025
             </p>
@@ -76,7 +76,7 @@ export function OpportunitySection() {
                   4-6x
                 </h3>
                 <p 
-                  className="font-normal text-white/90 font-[var(--font-inter)] max-w-[280px] text-[13px] sm:text-[16px] leading-[1.6] sm:leading-[21.12px]"
+                  className="font-normal text-white/90 font-[var(--font-inter)] max-w-[280px] text-[13px] sm:text-[16px] capitalize leading-[1.6] sm:leading-[21.12px]"
                   style={{ textShadow: "0px 1px 8px rgba(0,0,0,0.8)" }}
                 >
                   average uplift in affiliate conversion rates during black friday week
@@ -91,7 +91,7 @@ export function OpportunitySection() {
                 4-6x
               </h3>
               <p 
-                className="font-normal text-white/80 font-[var(--font-inter)] lowercase text-[13px] sm:text-[16px] leading-[1.6] sm:leading-[21.12px]"
+                className="font-normal text-white/80 font-[var(--font-inter)] capitalize text-[13px] sm:text-[16px] leading-[1.6] sm:leading-[21.12px]"
               >
                 average uplift in affiliate conversion rates during black friday week
               </p>
@@ -117,7 +117,7 @@ export function OpportunitySection() {
               62%
             </h3>
             <p 
-              className="font-normal text-white/80 font-[var(--font-inter)] lowercase text-[13px] sm:text-[16px] leading-[1.6] sm:leading-[21.12px]"
+              className="font-normal text-white/80 font-[var(--font-inter)] capitalize text-[13px] sm:text-[16px] leading-[1.6] sm:leading-[21.12px]"
             >
               of shoppers research purchases before buying
             </p>

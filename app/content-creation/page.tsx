@@ -267,7 +267,7 @@ const relatedProjects = [
     slug: "cinamood",
     name: "Cinnamood",
     image: "/assets/projectsPagePics/cinamood.jpg",
-    copy: "We supported the launch of Cinnamood in the UAE by creating premium photo and video content that captured the brand experience and generated excitement across social media.",
+    copy: "We supported the launch of Cinnamood in the UAE with photo and video content that showcased the brand and generated excitement across social media.",
     tags: ["Content Creation", "Food & Beverage", "Launch Campaign"],
     year: "2024",
     imageClassName: "object-cover object-[50%_55%]",
@@ -308,7 +308,7 @@ function RelatedProjects() {
                                             
                               <StaggerItem>
                                             <p className="mt-[14px] max-w-[600px] sm:mt-[18px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.5] text-white/90 sm:text-white">
-                                              Explore how we've helped brands tell their story through premium photography, videography and creative content designed to capture attention and strengthen brand identity.
+                                              Explore how we've helped brands tell their story through photography, videography and creative content designed to capture attention and strengthen brand identity.
                                             </p>
                                           </StaggerItem>
                             </Stagger>

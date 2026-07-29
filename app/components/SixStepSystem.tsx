@@ -186,7 +186,7 @@ export function SixStepSystem({ heading, data = defaultSteps }: SixStepSystemPro
               heading
             ) : (
               <h2 className="flex flex-col text-white font-medium tracking-[-1px] sm:tracking-[-2px] text-[36px] sm:text-[56px] leading-[1.1] sm:leading-[69.36px] ">
-                <span>A six-step system,</span>
+                <span>A six step system,</span>
                 <span className="flex flex-wrap items-center gap-x-2 sm:gap-x-3">
                   <span>engineered for</span>
                   <span
