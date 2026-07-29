@@ -357,7 +357,7 @@ export default function TargetRightPeople({
                     {item.points && item.points.length > 0 ? (
                       <ul className="mt-2 space-y-1 flex flex-col items-start text-left w-full">
                         {item.points.map((point) => (
-                          <li key={point} className="flex gap-1.5 text-white/70 text-[12px] leading-[1.4] items-start">
+                          <li key={point} className="flex gap-1.5 text-white/70 whitespace-nowrap text-[12px] leading-[1.4] items-start">
                             <span className="text-[#ff5500] shrink-0 mt-[1px]">·</span>
                             <span>{point}</span>
                           </li>

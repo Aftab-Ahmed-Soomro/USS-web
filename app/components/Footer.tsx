@@ -92,7 +92,7 @@ export function Footer({ showGlobal = true }: { showGlobal?: boolean }) {
         )}
 
         {/* Bottom Section */}
-        <div className="flex flex-col lg:flex-row justify-between gap-10 sm:gap-16 lg:gap-8">
+        <div className="flex flex-col lg:flex-row justify-between gap-10 sm:gap-16 lg:gap-24">
 
           {/* Left Column */}
           <div className="flex flex-col w-full lg:w-[420px]">
