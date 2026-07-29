@@ -74,10 +74,10 @@ export function UssDifferentSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full px-4 sm:px-0 text-center font-[var(--font-be-vietnam)] text-[32px] sm:text-[56px] font-normal leading-[1.2] sm:leading-[18.33px] tracking-[-0.02em] pb-5 sm:pb-16"
+          className="w-full px-4 sm:px-0 text-center font-[var(--font-be-vietnam)] text-[28px] sm:text-[56px] font-normal leading-[1.2] sm:leading-[18.33px] tracking-[-0.02em] pb-5 sm:pb-16"
         >
           what&apos;s make{" "}
-          <span className="text-[42px] sm:text-[72px] font-normal timesFontFamily italic tracking-[-0.02em] text-[#ff5500]">
+          <span className="text-[38px] sm:text-[72px] font-normal timesFontFamily italic tracking-[-0.02em] text-[#ff5500]">
             uss different
           </span>
         </motion.h2>

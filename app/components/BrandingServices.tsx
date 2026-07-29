@@ -92,7 +92,7 @@ export function BrandingServices() {
               // <StaggerItem key={card.id}>
                 <div className="flex flex-col pt-6 sm:pt-8 pb-6 sm:pb-8 px-4 lg:px-6 gap-4 sm:gap-6 h-full">
                   {card.useBg ? (
-                    <div className={`w-full aspect-[247/194] rounded-[10px] overflow-hidden ${card.imageBg ?? 'bg-[#111]'}`}>
+                    <div className={`w-full ${card.aspectRatio ?? 'aspect-[247/194]'} rounded-[10px] overflow-hidden ${card.imageBg ?? 'bg-[#111]'}`}>
                       <div
                         className={`w-full h-full ${card.scale || ''}`}
                         style={{
@@ -104,7 +104,7 @@ export function BrandingServices() {
                       />
                     </div>
                   ) : (
-                    <div className={`w-full aspect-[247/180] rounded-[10px] overflow-hidden ${card.imageBg ?? 'bg-[#111]'}`}>
+                    <div className={`w-full ${card.aspectRatio ?? 'aspect-[247/180]'} rounded-[10px] overflow-hidden ${card.imageBg ?? 'bg-[#111]'}`}>
                       <img src={card.image} alt={card.title} className={`w-full h-full`} />
                     </div>
                   )}
@@ -135,7 +135,8 @@ const bottomCards = [
     id: "01",
     title: "Logo Design",
     description: "Create distinctive logos that represent your business and leave a lasting impression.",
-    image: "/assets/brandingImages/1.png"
+    image: "/assets/brandingImages/1.png",
+    aspectRatio: "aspect-[247/194]"
   },
   {
     id: "02",
