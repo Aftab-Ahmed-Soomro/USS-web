@@ -12,7 +12,7 @@ const rawSystems = [
   { title: "MARKETING\nSTRATEGY", icon: "/assets/marketingGrowths/marketingSvg.png", href: "/marketing-strategy" },
   { title: "SOCIAL MEDIA\nMARKETING", icon: "/assets/marketingGrowths/socialMediaIcon.png", href: "/social-media-management" },
   { title: "META\nADS", icon: "/assets/marketingGrowths/metaIcon.png", href: "/meta-ads" },
-  { title: "GOOGLE\nADWORDS", icon: "/assets/marketingGrowths/googleIcon.png", href: "/google-ads" },
+  { title: "GOOGLE\nADS", icon: "/assets/marketingGrowths/googleIcon.png", href: "/google-ads" },
   { title: "CONTENT\nCREATION", icon: CiCamera, href: "/content-creation" },
   { title: "EMAIL\nMARKETING", icon: "/assets/marketingGrowths/emailIcon.png", href: "/email-marketing" },
   { title: "WHATSAPP\n& SMS", icon: "/assets/marketingGrowths/whatsappIcon.png", href: "/whatsapp-and-sms" },

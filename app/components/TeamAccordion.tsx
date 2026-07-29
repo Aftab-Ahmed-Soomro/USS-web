@@ -23,10 +23,10 @@ const defaultTeamData: TeamMember[] = [
     title: "Website Strategist",
     description: "Defines the website structure, customer journey and conversion strategy before design begins.",
     responsibilities: [
-      "Discovery workshops",
-      "Information architecture",
-      "User journeys",
-      "Conversion strategy"
+      "Website kick-off session",
+      "Website sitemap",
+      "User journey experience",
+      "Landing page strategy"
     ]
   },
   {
@@ -35,15 +35,14 @@ const defaultTeamData: TeamMember[] = [
     description: "Designs creative user experiences and premium interfaces that reflect your brand.",
     responsibilities: [
       "Wireframes",
-      "UI Design",
-      "Prototypes",
-      "Design Systems"
+      "UX / UI Design",
+      "Figma Designs"
     ]
   },
   {
     id: "03",
     title: "Web Developer",
-    description: "Builds fast, responsive websites with clean code and seamless functionality.",
+    description: "Builds fast, responsive websites that are custom coded",
     responsibilities: [
       "Front end Development",
       "CMS Integration",
@@ -56,9 +55,8 @@ const defaultTeamData: TeamMember[] = [
     title: "QA & Optimisation",
     description: "Tests, refines and optimises every website before launch.",
     responsibilities: [
-      "Cross-browser Testing",
+      "Cross -browser Testing",
       "Speed Optimisation",
-      "SEO Checks",
       "Quality Assurance"
     ]
   }

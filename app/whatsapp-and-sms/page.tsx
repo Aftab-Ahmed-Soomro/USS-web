@@ -109,9 +109,9 @@ const relatedProjects = [
     slug: "agency-8",
     name: "Agency 8",
     image: "/assets/allProjects/agency8.png",
-    copy: "Through strategic WhatsApp and SMS campaigns, we helped Agency 8 engage prospective buyers, nurture enquiries and keep clients informed throughout the property journey.",
+    copy: "We used WhatsApp and SMS campaigns to connect Agency 8 with buyers, follow up on enquiries and keep clients updated throughout their property journey.",
     tags: ["WhatsApp Marketing", "SMS Campaigns", "Lead Generation "],
-    year: "2024",
+    year: "2026",
     imageClassName: "object-cover object-[30%_70%]",
   },
   {
@@ -120,7 +120,7 @@ const relatedProjects = [
     image: "/assets/club.jpg",
     copy: "We increased SupperClub membership using Meta Ads to drive members using creative assets and location targeting.",
     tags: ["Membership Increase", "Hospitality"],
-    year: "2024",
+    year: "2026",
     imageClassName: "object-cover object-[50%_65%]",
   },
 ];
@@ -326,7 +326,7 @@ const googleAdsBrandPoints = [
     number: "01",
     title: "Random Campaigns",
     description:
-      "Messages are only sent during promotions or last minute announcements.",
+      "Messages are sent during promotions or last minute announcements.",
   },
   {
     number: "02",
@@ -359,7 +359,7 @@ const googleAdsUssPoints = [
     number: "02",
     title: "Smart Audience Segmentation",
     description:
-      "Messages are tailored using customer behaviour, interests and purchase history.",
+      "Messages are personalised using customer behaviour and interests.",
   },
   {
     number: "03",

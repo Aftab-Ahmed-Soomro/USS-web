@@ -46,7 +46,7 @@ const relatedProjects = [
     slug: "supperclub",
     name: "SupperClub",
     image: "/assets/club.jpg",
-    copy: "Using Meta Ads to grow SupperClub memberships, promoting exclusive experiences from 5-star hotel, restaurant and spa partners through highly targeted acquisition campaigns.",
+    copy: "Using Meta Ads to grow SupperClub memberships, promoting exclusive experiences from 5 star hotel, restaurant and spa partners through highly targeted conversion campaigns.",
     tags: ["Membership Growth", "Meta Ads", "Hospitality"],
     year: "2026",
     imageClassName: "object-cover object-[50%_65%]",

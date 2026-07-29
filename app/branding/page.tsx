@@ -29,11 +29,11 @@ const touchpointStepsData = [
     id: "01",
     title: "Business Discovery",
     pills: ["Discovery", "Strategy", "Workshop"],
-    description: "We begin by understanding your business, audience and long-term objectives before shaping the direction of your brand.",
+    description: "Before any creative work begins, we take the time to understand your business, your goals and where you want the brand to go.",
     details: [
       { title: "Business Goals", desc: "" },
-      { title: "Audience Research", desc: "" },
-      { title: "Competitor Analysis", desc: "" },
+      { title: "Audience", desc: "" },
+      { title: "Competitors", desc: "" },
       { title: "Brand Vision", desc: "" }
     ]
   },
@@ -41,36 +41,36 @@ const touchpointStepsData = [
     id: "02",
     title: "Audience Research",
     pills: ["Research", "Audience", "Insights"],
-    description: "We identify your ideal audience, understand their behaviours and uncover the insights that influence purchasing decisions.",
+    description: "Understanding who you're speaking to helps shape every decision, from your messaging to your visual identity.",
     details: [
       { title: "Customer Personas", desc: "" },
       { title: "User Behaviour", desc: "" },
-      { title: "Market Insights", desc: "" },
-      { title: "Buying Journey", desc: "" }
+      { title: "Buying Journey", desc: "" },
+      { title: "Customer Insights", desc: "" }
     ]
   },
   {
     id: "03",
     title: "Competitor Analysis",
     pills: ["Market", "Positioning", "Research"],
-    description: "We evaluate your competitors to identify opportunities, define your positioning and differentiate your brand.",
+    description: "We review your market to understand what's working, what's missing and where your brand can stand apart.",
     details: [
       { title: "Competitor Review", desc: "" },
       { title: "Market Position", desc: "" },
       { title: "Industry Trends", desc: "" },
-      { title: "Brand Opportunities", desc: "" }
+      { title: "Opportunities", desc: "" }
     ]
   },
   {
     id: "04",
     title: "Brand Direction",
     pills: ["Identity", "Creative", "Strategy"],
-    description: "We define the creative direction that shapes your visual identity, ensuring consistency across every brand touchpoint.",
+    description: "Using everything we've learned, we define the creative direction that will guide your brand across every touchpoint.",
     details: [
       { title: "Creative Direction", desc: "" },
       { title: "Visual Identity", desc: "" },
       { title: "Brand Personality", desc: "" },
-      { title: "Design Principles", desc: "" }
+      { title: "Design Guidelines", desc: "" }
     ]
   }
 ];
@@ -231,16 +231,16 @@ function Hero() {
                     </StaggerItem>
           <StaggerItem>
             <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase sm:leading-[70px] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white">
-              From strategy and identity to every
+              From strategy to every
               <br />{" "}
               <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white leading-[0] sm:leading-[30px] tracking-[-1px] sm:tracking-[-2.8px]">
-                brand touchpoint.
+                brand touchpoint
               </span>
             </h1>
           </StaggerItem>
           <StaggerItem>
             <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[550px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[18px]">
-              A strong brand is more than a logo. We create brand identities, guidelines and creative assets that build recognition, consistency and trust across every customer touchpoint.
+              A strong brand is more than a logo. We create brand identities, guidelines, business presentations and creative assets that build recognition, consistency and trust across every customer touchpoint.
             </p>
           </StaggerItem>
           <StaggerItem>
@@ -364,7 +364,7 @@ const MarketingStrategy = () => {
               <span
                 className="text-[#FF5500] italic font-normal font-[var(--font-cormorant)] timesFontFamily text-[46px] sm:text-[72px] leading-[1.1] sm:leading-[69.36px] tracking-[-1.5px] sm:tracking-[-2px]"
               >
-                strategy
+                strategy.
               </span>
             </span>
           </h2>

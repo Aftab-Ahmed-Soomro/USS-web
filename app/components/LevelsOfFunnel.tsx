@@ -30,7 +30,7 @@ export function LevelsOfFunnel() {
       number: "03",
       name: "Conversion",
       title: "Drive Conversions",
-      desc: " Turn high intent audiences into enquiries, customers and long term business growth.",
+      desc: " Turn audiences into enquiries, customers and long term business growth.",
     },
   ];
 
@@ -80,7 +80,7 @@ export function LevelsOfFunnel() {
                     className="text-white/90 text-[18px] leading-[1.6] mb-16 max-w-[400px]"
                     style={{ fontWeight: 300 }}
                   >
-                    Customers don't buy the first time they discover your brand. Every stage of the journey plays a role. They build awareness, create demand and convert high-intent audiences into customers through a connected full funnel approach.
+                    Customers don't buy the first time they discover your brand. Every stage of the journey plays a role. They build awareness, create demand and convert your audiences into customers through a connected full funnel approach.
                   </p>
                 </StaggerItem>
 
@@ -170,13 +170,13 @@ export function LevelsOfFunnel() {
                     className="text-white/90 text-[13px] leading-[1.55] mb-6"
                     style={{ fontWeight: 300 }}
                   >
-                    Customers don't buy the first time they discover your brand. Every stage of the journey plays a role. They build awareness, create demand and convert high-intent audiences into customers through a connected full funnel approach.
+                    Customers don't buy the first time they discover your brand. Every stage of the journey plays a role. They build awareness, create demand and convert your audiences into customers through a connected full funnel approach.
                   </p>
                 </StaggerItem>
 
                 <StaggerItem>
                   <p
-                    className="text-[#FFFFFF59] text-[9px] mb-6"
+                    className="text-[#FFFFFF] text-[9px] mb-6"
                     style={{
                       fontWeight: 400,
                       lineHeight: '16.5px',

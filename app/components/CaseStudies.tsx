@@ -10,7 +10,7 @@ const leftColumnData = [
     year: "2026",
     category: "Marketing Agency",
     title: "Disturbed Innovations Group",
-    description: "A premium corporate website built to reposition the brand and communicate its innovation-led services",
+    description: "A technology website showcasing immersive experiences and digital innovation.",
     image: "/assets/leftColumnImages/1.png",
     link: "/projects/disturbed-innovations"
   },
@@ -40,7 +40,7 @@ const rightColumnData = [
     year: "2025",
     category: "Real Estate",
     title: "Agency 8",
-    description: "A luxury real estate website designed to showcase premium developments while delivering a seamless property browsing experience",
+    description: "A luxury real estate website designed for users to explore exclusive developments across rental, sales and off plan.",
     image: "/assets/rightColumnImages/1.png",
     link: "/projects/agency-8"
   },
@@ -49,7 +49,7 @@ const rightColumnData = [
     year: "2025",
     category: "Restaurant Group",
     title: "Afro Maya",
-    description: " A luxury fashion website designed to showcase collections, strengthen the brand identity and create a seamless online experience.",
+    description: " A fashion website designed to highlight new collections and build brand presence.",
     image: "/assets/rightColumnImages/2.png",
     link: "/projects/afro-maya"
   },
@@ -92,7 +92,7 @@ const Card = ({ year, category, title, description, image, link, imageClass, ima
       </h3>
 
       {/* Description */}
-      <p className="font-normal text-[12px] sm:text-[16px] leading-[22px] lowercase text-white/90 max-w-[450px]">
+      <p className="font-normal text-[12px] sm:text-[16px] leading-[22px] text-white/90 max-w-[450px]">
         {description}
       </p>
     </div>

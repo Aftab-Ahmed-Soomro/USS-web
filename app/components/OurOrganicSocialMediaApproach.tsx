@@ -16,7 +16,7 @@ export default function OurOrganicSocialMediaApproach() {
             <p
               className="uppercase mb-4 font-medium text-[14px] leading-[16px] tracking-[-1.2px] text-[#ff5500]"
             >
-              Our Approach
+              Our Work
             </p>
           </StaggerItem>
 

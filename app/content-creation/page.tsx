@@ -211,54 +211,54 @@ function FinalCta() {
 const googleAdsBrandPoints = [
   {
     number: "01",
-    title: "Looks Good, Doesn't Perform",
+    title: "No Clear Content Strategy",
     description:
-      "A visually appealing website without a clear purpose or direction.",
+      "Content is created without a clear purpose or plan.",
   },
   {
     number: "02",
-    title: "Confusing User Experience",
+    title: "Generic Content",
     description:
-      "Visitors struggle to navigate or find the information they need.",
+      "Content fails to reflect the brand or audience.",
   },
   {
     number: "03",
-    title: "Slow & Outdated",
+    title: "Inconsistent Content",
     description:
-      "Poor performance, responsiveness & technical execution damage experience.",
+      "Irregular posting weakens brand consistency.",
   },
   {
     number: "04",
-    title: "No Clear Conversion Path",
+    title: "No Clear Direction",
     description:
-      "Users visit the website but don't know what to do next.",
+      "Posting becomes reactive instead of planned.",
   },
 ];
 
 const googleAdsUssPoints = [
   {
     number: "01",
-    title: "Strategy Before Design",
+    title: "Strategy Before Creation",
     description:
-      "Every website starts with business goals, user journeys and conversion strategy.",
+      "Every piece of content supports your business goals.",
   },
   {
     number: "02",
-    title: "User Experience First",
+    title: "Audience Focused Content",
     description:
-      "Simple navigation and layouts designed around real users.",
+      "Content created around your audience and brand.",
   },
   {
     number: "03",
-    title: "Built for Performance",
+    title: "Consistent Content Delivery",
     description:
-      "Fast, responsive websites optimised for every device and browser.",
+      "Planned content that keeps your brand visible.",
   },
   {
     number: "04",
-    title: "Designed to Convert",
+    title: "Content That Performs",
     description:
-      "Every page is built with clear calls to action that turn visitors into enquiries.",
+      "Every piece has a clear purpose and objective.",
   },
 ];
 

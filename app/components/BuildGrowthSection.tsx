@@ -13,9 +13,9 @@ const performanceCards = [
 ];
 
 const creativeCards = [
-  { id: "01", title: "Social Media", desc: "Building a consistent presence across every platform.", link: "Explore Social Media", href: "#social-media" },
+  { id: "01", title: "Social Media", desc: "Build strong social presence across Meta, LinkedIn, Tiktok and more", link: "Explore Social Media", href: "#social-media" },
   { id: "02", title: "Content Creation", desc: "Creating content that captures attention and reflects your brand.", link: "Explore Content Creation", href: "#content-creation" },
-  { id: "03", title: "Website Design", desc: "Creating UX that helps users find what they need.", link: "Explore Website Design", href: "#web-design-development" },
+  { id: "03", title: "Website Design", desc: "Creating visually strong UX designs that helps users find what they need", link: "Explore Website Design", href: "#web-design-development" },
   { id: "04", title: "Website Development", desc: "Building fast, responsive websites that perform.", link: "Explore Development", href: "#web-design-development" },
   { id: "05", title: "Branding & Graphics", desc: "Creating visual identities people recognise and remember.", link: "Explore Branding", href: "#branding-graphics" },
 ];

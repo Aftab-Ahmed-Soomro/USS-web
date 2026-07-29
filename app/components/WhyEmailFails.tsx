@@ -19,7 +19,7 @@ const brandPoints: Point[] = [
     },
     {
         number: "03",
-        title: "No Long-Term Customer Journey",
+        title: "No Long Term Customer Journey",
         description: "No automated flows to welcome, recover or retain customers.",
     },
     {
@@ -32,7 +32,7 @@ const brandPoints: Point[] = [
 const ussPoints: Point[] = [
     {
         number: "01",
-        title: "Always-On Email Strategy",
+        title: "Always on Email Strategy",
         description: "Strategic email calendars that keep your brand consistently visible.",
     },
     {

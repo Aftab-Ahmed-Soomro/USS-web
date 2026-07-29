@@ -101,7 +101,7 @@ export function EmailVisuals() {
 
           <StaggerItem>
             <p className="max-w-[580px] font-[var(--font-be-vietnam)] text-[13px] font-normal leading-[1.6] sm:leading-[32px] text-[#505050] sm:text-[18px] lg:pt-[10px]">
-              A showcase of high converting email campaigns designed to drive revenue through personalised customer experiences.
+              Take a look at some of the email campaigns we've created to engage customers and drive revenue.
             </p>
           </StaggerItem>
         </Stagger>

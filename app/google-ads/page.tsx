@@ -38,7 +38,7 @@ const relatedProjects = [
 
 const stats = [
   { value: "43.8M+", label: "Search Impressions" },
-  { value: "6.2M+", label: "High-Intent Clicks" },
+  { value: "6.2M+", label: "Quality Clicks" },
   { value: "287K+", label: "Qualified Leads" },
   { value: "4.3x", label: "Average ROAS" },
 ];

@@ -158,11 +158,11 @@ function Hero() {
               Grow an engaged audience through consistent content, creative storytelling and meaningful conversations across Instagram, TikTok, LinkedIn and more.
             </p>
           </StaggerItem>
-          <StaggerItem>
+          {/* <StaggerItem>
             <p className="mt-[24px] min-[390px]:mt-[28px] min-[480px]:mt-[32px] sm:mt-[32px] max-w-[460px] font-[var(--font-inter)] text-[10px] min-[360px]:text-[11px] min-[430px]:text-[12px] sm:text-[12px] leading-[1.7] tracking-[1.5px] min-[360px]:tracking-[2px] min-[430px]:tracking-[2.64px] sm:tracking-[2.64px] text-[#06060680] uppercase text-center sm:text-start">
               Trusted by brands across the world
             </p>
-          </StaggerItem>
+          </StaggerItem> */}
           <StaggerItem>
             <div className="flex justify-center sm:justify-start">
               <Link

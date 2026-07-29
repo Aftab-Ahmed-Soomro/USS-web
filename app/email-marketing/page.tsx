@@ -188,8 +188,8 @@ function EmailOverview() {
         {/* Text content */}
         <Stagger staggerDelay={0.1} className="order-1 text-white lg:col-start-1 lg:row-start-1 lg:max-w-[680px]">
           <StaggerItem>
-            <p className="mb-[20px] text-[11px] font-normal leading-[19.6px] tracking-[0%] text-white sm:text-[14px]">
-              Our Email System for Retention and Growth
+            <p className="mb-[20px] uppercase text-[11px] font-normal leading-[19.6px] tracking-[0%] text-white sm:text-[14px]">
+              Our Email System for Retention & Growth
             </p>
           </StaggerItem>
 
@@ -564,7 +564,15 @@ export default function EmailMarketingPage() {
       <Brands />
       <EmailStrategy />
       <EmailVisuals />
-      <RevenueMethod />
+      <RevenueMethod
+        heading={<>How We Build High-Performing <br className="hidden sm:block" />{" "}<span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>Email Campaigns</span></>}
+        cards={[
+          { id: '01', title: 'Email Strategy', description: 'Every successful campaign starts with a clear strategy aligned to your business goals.', bgImage: '/assets/method1.png' },
+          { id: '02', title: 'Email Automation & Flows', description: 'Build automated email journeys that engage customers at every stage of their lifecycle.', bgImage: '/assets/method2.png' },
+          { id: '03', title: 'Email Design & Content', description: 'Engaging email design and compelling content that encourages opens, clicks and conversions.', bgImage: '/assets/method3.png' },
+          { id: '04', title: 'Customer Segmentation', description: 'Delivering the right message to the right audience at the right stage of their journey.', bgImage: '/assets/method4.png' },
+        ]}
+      />
       <RelatedProjects />
       <Testimonials />
       <GoodCompanyMap />

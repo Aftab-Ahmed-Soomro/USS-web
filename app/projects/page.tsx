@@ -138,7 +138,7 @@ function ProjectsCta() {
           <div className="flex items-center justify-center gap-2 mb-6 sm:mb-8">
             <div className="h-1.5 w-1.5 rounded-full bg-[#ff5500]"></div>
             <p className="text-[10px] font-bold uppercase tracking-[3px] text-white">
-              FULL-STACK MARKETING
+              DIGITAL TRANSFORMATION
             </p>
           </div>
         {/* </FadeDown> */}
@@ -161,12 +161,11 @@ function ProjectsCta() {
         <FadeRight delay={0.3}>
           <div className="mx-auto max-w-[640px] space-y-6 sm:space-y-8 text-[13px] min-[375px]:text-[14px] sm:text-[16px] leading-[1.6] sm:leading-[1.7] tracking-[0%] text-white">
             <p>
-              Calling ourselves a data-driven, problem solving, people connecting, digital crazy,
-              talent engaging creative agency is too long winded.. so we call ourselves USS.
+              Calling ourselves a data driven, problem solving, peoplE connecting, digitally obsessed, talent powered digital marketing agency felt a little long winded… so we call ourselves USS.
             </p>
-            <p>
+            {/* <p>
               We bring all digital platforms to one connected system designed to scale.
-            </p>
+            </p> */}
           </div>
         </FadeRight>
 
@@ -214,7 +213,7 @@ export default function ProjectsPage() {
 
           {/* Subheading — slides in from right */}
           <FadeRight delay={0.3}>
-            <p className="mt-[16px] max-w-[800px] mx-auto sm:mt-[30px] font-[var(--font-be-vietnam)] text-[12px] font-medium leading-[1.35] text-white sm:text-[16.5px]">
+            <p className="mt-[16px] max-w-[800px] mx-auto sm:mt-[30px] font-[var(--font-be-vietnam)] text-[12px] font-normal leading-[24px] text-[#F5F5F5] sm:text-[16.5px]">
               Explore USS projects across branding, websites, creative and performance marketing for clients across the UK, US and Middle East.
             </p>
           </FadeRight>
@@ -286,9 +285,9 @@ export default function ProjectsPage() {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-black/10 transition-opacity duration-500 group-hover:opacity-90" />
 
                         {/* Badges Container */}
-                        <div className="absolute top-3 left-3 right-3 sm:top-5 sm:left-5 sm:right-5 flex flex-col sm:flex-row justify-between items-end sm:items-start gap-1.5 sm:gap-0 z-10 pointer-events-none">
+                        <div className="absolute top-2.5 left-2.5 right-2.5 sm:top-5 sm:left-5 sm:right-5 flex flex-row justify-between items-start gap-1 z-10 pointer-events-none">
                           {/* See More badge */}
-                          <div className="bg-white/10 backdrop-blur-md border border-white/20 text-white text-[8px] sm:text-[10px] px-2 py-1 sm:px-3 sm:py-1.5 rounded-full flex items-center justify-center font-[var(--font-inter)] transition-all duration-300 group-hover:bg-white/25 group-hover:scale-105 pointer-events-auto">
+                          <div className="bg-white/10 backdrop-blur-md border border-white/20 text-white text-[7.5px] min-[375px]:text-[8.5px] sm:text-[10px] px-2 py-0.5 sm:px-3 sm:py-1.5 rounded-full flex items-center justify-center font-[var(--font-inter)] transition-all duration-300 group-hover:bg-white/25 group-hover:scale-105 pointer-events-auto shrink-0">
                             <span className="font-medium">See More &gt;</span>
                           </div>
 
@@ -297,7 +296,7 @@ export default function ProjectsPage() {
                             {project.tags.map(tag => (
                               <span
                                 key={tag}
-                                className="bg-white/10 backdrop-blur-md border border-white/20 text-white text-[8px] sm:text-[10px] font-medium px-2 py-1 sm:px-3 sm:py-1.5 rounded-full font-[var(--font-inter)] tracking-[-0.2px]"
+                                className="bg-white/10 backdrop-blur-md border border-white/20 text-white text-[7.5px] min-[375px]:text-[8.5px] sm:text-[10px] font-medium px-2 py-0.5 sm:px-3 sm:py-1.5 rounded-full font-[var(--font-inter)] tracking-[-0.2px]"
                               >
                                 {tag}
                               </span>

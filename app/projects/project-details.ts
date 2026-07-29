@@ -413,7 +413,7 @@ export const projectDetails = [
     productName: "SupperClub",
     title: "Scaling SupperClub Membership",
     description:
-      "SupperClub is a premium dining and lifestyle membership offering access to exclusive benefits across 700+ venues, including top restaurants and 5-star hotels. USS partnered with SupperClub to support their growth and increase membership through a full-scale marketing approach.",
+      "SupperClub is a premium dining and lifestyle membership offering access to exclusive benefits across 700+ venues, including top restaurants and 5 star hotels. USS partnered with SupperClub to support their growth and increase membership through a full-scale marketing approach.",
     heroImage: {
       src: "https://unitedstrategicsolutions.com/assets/supperclub/Supperclub.png",
       alt: "SupperClub poolside dining and cocktail experience",

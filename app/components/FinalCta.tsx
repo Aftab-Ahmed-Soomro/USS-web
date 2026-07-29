@@ -21,7 +21,7 @@ export function FinalCta() {
           <div className="flex items-center justify-center gap-2 mb-6 sm:mb-8">
             <div className="h-1.5 w-1.5 rounded-full bg-[#ff5500]"></div>
             <p className="text-[10px] font-bold uppercase tracking-[2px] text-white">
-              FULL-STACK MARKETING
+              DIGITAL TRANSFORMATION
             </p>
           </div>
         </FadeDown>
@@ -45,15 +45,14 @@ export function FinalCta() {
           <div className="mx-auto max-w-[600px] space-y-6 sm:space-y-8 text-[13px] min-[375px]:text-[14px] sm:text-[15px] leading-[24px] sm:leading-[27px] text-white">
             <StaggerItem y={20}>
               <p>
-                Calling ourselves a data-driven, problem solving, people connecting, digital crazy,
-                talent engaging creative agency is too long winded.. so we call ourselves USS.
+                Calling ourselves a data driven, problem solving, peoplE connecting, digitally obsessed, talent powered digital marketing agency felt a little long winded… so we call ourselves USS.
               </p>
             </StaggerItem>
-            <StaggerItem y={20}>
+            {/* <StaggerItem y={20}>
               <p>
                 We bring all digital platforms to one connected system designed to scale.
               </p>
-            </StaggerItem>
+            </StaggerItem> */}
           </div>
         </Stagger>
 
