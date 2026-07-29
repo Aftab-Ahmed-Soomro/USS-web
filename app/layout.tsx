@@ -25,8 +25,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "360 Digital Marketing Agency",
-  description: "A digital marketing agency landing page.",
+  title: "We Are USS | 360 Digital Marketing Agency",
+  description: "Operating across the UAE, UK & US. Building marketing systems designs for growth.",
 };
 
 export default function RootLayout({
