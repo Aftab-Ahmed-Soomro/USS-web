@@ -203,9 +203,10 @@ export default function ProjectsPage() {
 
           {/* Main heading — rises up */}
           <FadeUp delay={0.2}>
-            <h1 className="mt-[12px] sm:mt-[20px] font-[var(--font-be-vietnam)] text-[28px] font-bold lowercase leading-[1.03] tracking-[-0.9px] text-white sm:text-[56px] sm:tracking-[-0.9px]">
-              projects that make an{" "}
-              <span className="font-[var(--font-cormorant)] text-[38px] sm:text-[72px] font-extralight timesFontFamily italic tracking-[-0.9px] text-[#ff5500]">
+            <h1 className="mt-[12px] sm:mt-[20px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[1] tracking-[-0.9px] text-white sm:text-[56px] sm:tracking-[-0.9px]">
+              projects that make
+              <br className="block sm:hidden" /> an{" "}
+              <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-extralight timesFontFamily italic tracking-[-0.9px] text-[#ff5500]">
                 impact
               </span>
             </h1>
@@ -214,7 +215,7 @@ export default function ProjectsPage() {
           {/* Subheading — slides in from right */}
           <FadeRight delay={0.3}>
             <p className="mt-[16px] max-w-[800px] mx-auto sm:mt-[30px] font-[var(--font-be-vietnam)] text-[12px] font-normal leading-[24px] text-[#F5F5F5] sm:text-[16.5px]">
-              Explore USS projects across branding, websites, creative <br className="block sm:hidden" /> and performance marketing for clients <br className="block sm:hidden" /> across the UK, US and Middle East.
+              Explore our work across the UK, US and Middle East 
             </p>
           </FadeRight>
 

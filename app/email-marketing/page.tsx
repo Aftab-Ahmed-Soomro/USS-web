@@ -15,6 +15,7 @@ import Stagger from "../components/Stagger";
 import StaggerItem from "../components/Staggeritem";
 import { RevenueMethod } from "../components/RevenueMethod";
 import FadeRight from "../components/FadeRight";
+import TargetRightPeople, { TargetItem } from "../components/TargetRightPeople";
 
 const emailStats = [
   { value: "40%", label: "Avg. Open Rate" },
@@ -92,7 +93,7 @@ const waysToWork = [
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-black px-4 min-[375px]:px-6 pb-[40px] pt-[40px] text-white sm:pb-[72px] sm:pt-[78px]">
+    <section className="relative overflow-hidden bg-black px-6 pb-[40px] pt-[40px] text-white sm:pb-[72px] sm:pt-[78px]">
       <style>{`
         @keyframes glow-move-tl {
           0% { transform: translate(0, 0) scale(1); }
@@ -236,195 +237,74 @@ function EmailOverview() {
   );
 }
 
-const steps = [
+const emailStrategyItems: TargetItem[] = [
   {
+    number: "01",
+    icon: "/assets/rocket.png",
     title: "Brand & Story",
-    icon: "/assets/rocket.png", // add icon src here
     points: [
       "Introduce your brand and values",
       "Meet the team snippet",
-      "Share your founders story",
+      "Share your founder's story",
       "Build trust through authentic content",
     ],
   },
   {
+    number: "02",
+    icon: "/assets/cardbox.png",
     title: "Products & Services",
-    icon: "/assets/cardbox.png", // add icon src here
     points: [
       "Showcase products and services",
       "Highlight new launches and offers",
       "Explain key features and benefits",
-      "Encourage enquiries and purchases"
+      "Encourage enquiries and purchases",
     ],
   },
   {
+    number: "03",
+    icon: "/assets/bulb.png",
     title: "Education & Value",
-    icon: "/assets/bulb.png", // add icon src here
     points: [
       "Share tips, guides and insights",
       "Answer FAQ's",
       "Help customers make informed decisions",
-      "Position your brand as the expert"
+      "Position your brand as the expert",
     ],
   },
   {
+    number: "04",
+    icon: "/assets/siren.png",
     title: "Promotions & Updates",
-    icon: "/assets/siren.png", // add icon src here
     points: [
       "Promote offers and campaigns",
       "Announce new products and launches",
       "Share company news and updates",
-      "Re-engage existing customers"
+      "Re-engage existing customers",
     ],
   },
 ];
 
 function EmailStrategy() {
   return (
-    <section className="relative overflow-hidden bg-black py-[50px] sm:py-20">
-      <style>{`
-        .no-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-        .no-scrollbar {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-
-        @keyframes email-marquee {
-          0%   { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-      `}</style>
-      <Stagger staggerDelay={0.15} className="mx-auto max-w-[1150px]">
-        {/* Heading */}
-        <StaggerItem>
-          <h2 className="lowercase text-white font-medium leading-[1.15] tracking-[-3%] text-[32px] sm:text-[56px] sm:leading-[70px] px-4 min-[375px]:px-6 sm:px-4">
-            every brand has its <br />
-            own{" "}
-            <span
-              className="italic text-[#ff5500] font-normal text-[42px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]"
-              style={{ fontFamily: "'Times New Roman', Times, serif" }}
-            >
-              email strategy
-            </span>
-          </h2>
-        </StaggerItem>
-
-        {/* Mobile: left-line timeline */}
-        <div className="mt-[40px] sm:hidden w-full px-4">
-          <div className="relative pl-8">
-            {/* Left vertical line */}
-            <div className="absolute left-[15px] top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#ff5500]/0 via-[#ff5500]/50 to-[#ff5500]/0">
-              <div className="absolute top-0 bottom-0 left-1/2 w-[6px] -translate-x-1/2 bg-[#ff5500] blur-[8px] opacity-40" />
-            </div>
-
-            <div className="flex flex-col">
-              {steps.map((step, i) => (
-                <StaggerItem
-                  key={i}
-                  className="relative flex flex-row items-start w-full py-6"
-                >
-                  {/* Dot on the line */}
-                  <div className="absolute left-[-21px] top-7 w-[12px] h-[12px] rounded-full bg-[#ff5500] shadow-[0_0_10px_3px_rgba(255,85,0,0.6)] z-20 shrink-0" />
-
-                  {/* All content on the right */}
-                  <div className="flex flex-col items-start text-left w-full">
-                    <div className="inline-flex px-2.5 py-1 rounded-full border border-[#ff5500]/40 bg-[#ff5500]/10 w-fit mb-2">
-                      <span className="font-semibold text-[10px] leading-tight tracking-[0.6px] text-[#ff5500]">
-                        {String(i + 1).padStart(2, '0')}
-                      </span>
-                    </div>
-                    <h3 className="font-semibold text-[17px] leading-[1.25] tracking-[-0.4px] text-white mb-2.5">
-                      {step.title}
-                    </h3>
-                    <ul className="space-y-1.5 flex flex-col items-start w-full">
-                      {step.points.map((point) => (
-                        <li key={point} className="flex gap-2 text-white/60 text-[13px] leading-[1.5] items-start text-left">
-                          <span className="text-[#ff5500] shrink-0 mt-[1px]">·</span>
-                          <span>{point}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </StaggerItem>
-              ))}
-            </div>
-          </div>
-        </div>
-
-
-        {/* Desktop: original horizontal layout */}
-        <div className="hidden sm:block mt-20 w-full overflow-visible px-4">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-16">
-            {steps.map((step, i) => (
-              <StaggerItem
-                key={i}
-                className="relative block text-left"
+    <TargetRightPeople
+      items={emailStrategyItems}
+      title={
+        <Stagger staggerDelay={0.12}>
+          <StaggerItem>
+            <h2 className="lowercase text-center text-white font-[var(--font-be-vietnam)] font-medium text-[36px] sm:text-[56px] leading-[1.2] sm:leading-[80px] tracking-[-1.5px] sm:tracking-[-3px]">
+              every brand has its <br className="hidden sm:block" />
+              own{" "}
+              <span
+                className="italic text-[#ff5500] font-normal text-[44px] sm:text-[72px] leading-[1.2] sm:leading-[80px] tracking-[-1.5px] sm:tracking-[-3px]"
+                style={{ fontFamily: "'Times New Roman', Times, serif" }}
               >
-                {/* Title */}
-                <h3
-                  className="mb-6 text-white font-semibold text-[20px] leading-[32px] tracking-[-0.6px] min-h-[32px]"
-                >
-                  {step.title}
-                </h3>
-
-                {/* Icon container + connecting line */}
-                <div className="relative flex items-center justify-start w-full">
-                  <div
-                    className="relative z-10 flex shrink-0 items-center justify-center rounded-[24px] border w-[96px] h-[96px] sm:w-[108px] sm:h-[108px]"
-                    style={{
-                      borderColor: "rgba(255,85,0,0.4)",
-                      background:
-                        "linear-gradient(180deg, rgba(255,85,0,0.1), rgba(255,85,0,0.02))",
-                      boxShadow:
-                        "0 0 20px rgba(255,85,0,0.2), inset 0 0 10px rgba(255,85,0,0.1)",
-                    }}
-                  >
-                    {step.icon ? (
-                      <Image 
-                        src={step.icon}
-                        alt={step.title}
-                        width={56}
-                        height={56}
-                        className="object-contain w-[48px] h-[48px] sm:w-[56px] sm:h-[56px]"
-                        style={{
-                          filter:
-                            "brightness(0) saturate(100%) invert(42%) sepia(93%) saturate(1352%) hue-rotate(346deg) brightness(90%) contrast(90%)",
-                        }}
-                      />
-                    ) : null}
-                  </div>
-
-                  {i < steps.length - 1 && (
-                    <div
-                      className="absolute left-[108px] top-1/2 hidden h-[2px] w-[calc(100%-108px+24px)] -translate-y-1/2 lg:block"
-                      style={{
-                        background:
-                          "linear-gradient(90deg, rgba(255,85,0,0.8), rgba(255,85,0,0.2))",
-                      }}
-                    />
-                  )}
-                </div>
-
-                {/* Points */}
-                <ul className="mt-6 space-y-2 flex flex-col items-start w-full">
-                  {step.points.map((point) => (
-                    <li
-                      key={point}
-                      className="flex max-w-[250px] gap-2 text-white font-normal text-[16px] leading-[30px] tracking-[-0.02em] items-start text-left"
-                    >
-                      <span className="text-[#ff5500] shrink-0">·</span>
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </StaggerItem>
-            ))}
-          </div>
-        </div>
-      </Stagger>
-    </section>
+                email strategy
+              </span>
+            </h2>
+          </StaggerItem>
+        </Stagger>
+      }
+    />
   );
 }
 

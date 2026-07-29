@@ -364,7 +364,7 @@ export default function WhatsappAndSmsPage() {
                       className="font-normal italic text-[42px] sm:text-[72px]"
                       style={{ fontFamily: "'Times New Roman', Times, serif" }}
                     >
-                      WhatsApp & SMS Marketing
+                      WhatsApp & SMS <span className="lowercase">Marketing</span>
                     </span>{" "}
                     fails
                   </h2>

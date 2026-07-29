@@ -26,7 +26,7 @@ export function BuildGrowthSection() {
 
   return (
     <section id="build-growth" className="bg-black text-white py-[60px] sm:py-[100px] flex flex-col items-center overflow-hidden">
-      <motion.div 
+      <motion.div
         className="text-center px-4 max-w-[1150px] mx-auto w-full"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -58,13 +58,13 @@ export function BuildGrowthSection() {
 
         {/* DESCRIPTION */}
         <p className="font-[var(--font-be-vietnam)] font-light text-[13px] sm:text-[16.8px] leading-[1.6] sm:leading-[26.88px] text-[#F4F2EE8F] mt-6 sm:mt-8 max-w-[550px] mx-auto">
-          Whether you're focused on growth, brand or both, explore 
+          Whether you're focused on growth, brand or both, explore
           <br className="hidden sm:block" /> the two areas below to see how we can support your business.
         </p>
       </motion.div>
 
       {/* IMAGE */}
-      <motion.div 
+      <motion.div
         className="relative w-full max-w-[1150px] aspect-[1000/600] mt-10 sm:mt-0 px-4"
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -108,8 +108,8 @@ export function BuildGrowthSection() {
       </motion.div>
 
       {/* TOGGLES */}
-      <motion.div 
-        id="services-grid" 
+      <motion.div
+        id="services-grid"
         className="mt-8 sm:mt-4 flex items-center justify-center p-1.5 rounded-full bg-[#111111] border border-white/5 scroll-mt-24"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -153,13 +153,13 @@ export function BuildGrowthSection() {
         {/* PERFORMANCE TAB CONTENT */}
         <div
           className={`col-start-1 row-start-1 transition-all duration-700 ease-out w-full flex flex-col xl:items-end ${activeTab === "performance"
-              ? "opacity-100 translate-y-0 pointer-events-auto scale-100 blur-none"
-              : "opacity-0 translate-y-8 pointer-events-none scale-[0.98] blur-[2px]"
+            ? "opacity-100 translate-y-0 pointer-events-auto scale-100 blur-none"
+            : "opacity-0 translate-y-8 pointer-events-none scale-[0.98] blur-[2px]"
             }`}
         >
           {/* Left Circle & Content */}
           <div className="hidden sm:block xl:absolute xl:-left-24 2xl:-left-44 xl:top-0 relative w-full max-w-[450px] sm:max-w-[750px] aspect-square flex flex-col items-start justify-center xl:justify-start xl:pt-16 shrink-0 z-0 mx-auto xl:mx-0">
-            <div className="absolute inset-0 z-0 pointer-events-none -left-[10%] xl:-left-[15%] 2xl:-left-[15%] scale-[1.35]">
+            <div className="absolute inset-0 z-0 pointer-events-none -left-[10%] xl:-left-[15%] 2xl:-left-[45%] scale-[1.35]">
               <Image
                 src="/assets/performanceCircle2.png"
                 alt="Performance Circle"
@@ -172,7 +172,7 @@ export function BuildGrowthSection() {
                 sizes="(max-width: 1280px) 100vw, 600px"
               />
             </div>
-            <div className="relative z-10 flex flex-col items-start gap-2 pl-0 xl:pl-14 text-left mt-10 xl:mt-0 mb-6 sm:mb-0 sm:pt-50">
+            <div className="relative z-10 flex flex-col items-start gap-2 pl-0 xl:pl-14 2xl:pl-0 text-left mt-10 xl:mt-0 mb-6 sm:mb-0 sm:pt-50">
               <h3 className="font-[var(--font-be-vietnam)] font-semibold text-[32px] leading-none text-white capitalize">
                 Performance
               </h3>
@@ -193,8 +193,8 @@ export function BuildGrowthSection() {
             {/* Mobile View: Grid Layout (2 in a row, all cards visible) */}
             <div className="grid grid-cols-2 gap-3 w-full sm:hidden">
               {performanceCards.map((card, idx) => (
-                <motion.div 
-                  key={card.id} 
+                <motion.div
+                  key={card.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={activeTab === "performance" ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.45, delay: idx * 0.06, ease: "easeOut" }}
@@ -224,8 +224,8 @@ export function BuildGrowthSection() {
               {/* Top Row (Cards 1, 2) */}
               <div className="flex flex-row gap-4 sm:gap-6 justify-center xl:justify-end w-full">
                 {performanceCards.slice(0, 2).map((card, idx) => (
-                  <motion.div 
-                    key={card.id} 
+                  <motion.div
+                    key={card.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={activeTab === "performance" ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ duration: 0.45, delay: idx * 0.08, ease: "easeOut" }}
@@ -252,8 +252,8 @@ export function BuildGrowthSection() {
               {/* Bottom Row (Cards 3, 4, 5) */}
               <div className="flex flex-row flex-wrap xl:flex-nowrap gap-4 sm:gap-6 justify-center xl:justify-end w-full mt-2 sm:mt-0">
                 {performanceCards.slice(2).map((card, idx) => (
-                  <motion.div 
-                    key={card.id} 
+                  <motion.div
+                    key={card.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={activeTab === "performance" ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ duration: 0.45, delay: (idx + 2) * 0.08, ease: "easeOut" }}
@@ -284,13 +284,13 @@ export function BuildGrowthSection() {
         {/* CREATIVE TAB CONTENT */}
         <div
           className={`col-start-1 row-start-1 transition-all duration-700 ease-out w-full flex flex-col xl:items-end ${activeTab === "creative"
-              ? "opacity-100 translate-y-0 pointer-events-auto scale-100 blur-none"
-              : "opacity-0 translate-y-8 pointer-events-none scale-[0.98] blur-[2px]"
+            ? "opacity-100 translate-y-0 pointer-events-auto scale-100 blur-none"
+            : "opacity-0 translate-y-8 pointer-events-none scale-[0.98] blur-[2px]"
             }`}
         >
           {/* Left Circle & Content */}
           <div className="hidden sm:block xl:absolute xl:-left-24 2xl:-left-44 xl:top-0 relative w-full max-w-[450px] sm:max-w-[650px] aspect-square flex flex-col items-start justify-center xl:justify-start xl:pt-16 shrink-0 z-0 mx-auto xl:mx-0">
-            <div className="absolute inset-0 z-0 pointer-events-none -left-[22%] xl:-left-[35%] 2xl:-left-[45%] scale-[1.35]">
+            <div className="absolute inset-0 z-0 pointer-events-none -left-[22%] xl:-left-[35%] 2xl:-left-[65%] scale-[1.55]">
               <Image
                 src="/assets/creativeCircle.png"
                 alt="Creative Circle"
@@ -303,7 +303,7 @@ export function BuildGrowthSection() {
                 sizes="(max-width: 1280px) 100vw, 600px"
               />
             </div>
-            <div className="relative z-10 flex flex-col items-start gap-2 pl-0 xl:pl-4 text-left mt-10 xl:mt-0 sm:pt-50">
+            <div className="relative z-10 flex flex-col items-start gap-2 pl-0 xl:pl-4 2xl:pl-0 text-left mt-10 xl:mt-0 sm:pt-50">
               <h3 className="font-[var(--font-be-vietnam)] font-semibold text-[32px] leading-none text-white xl:text-black capitalize max-xl:drop-shadow-lg max-xl:[text-shadow:_0_2px_16px_rgba(0,0,0,0.95),_0_0_25px_rgba(0,0,0,0.9)]">
                 Creative
               </h3>
@@ -324,8 +324,8 @@ export function BuildGrowthSection() {
             {/* Mobile View: Grid Layout (2 in a row, all cards visible) */}
             <div className="grid grid-cols-2 gap-3 w-full sm:hidden">
               {creativeCards.map((card, idx) => (
-                <motion.div 
-                  key={card.id} 
+                <motion.div
+                  key={card.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={activeTab === "creative" ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.45, delay: idx * 0.06, ease: "easeOut" }}
@@ -355,8 +355,8 @@ export function BuildGrowthSection() {
               {/* Top Row (Cards 1, 2) */}
               <div className="flex flex-row gap-4 sm:gap-6 justify-center xl:justify-end w-full">
                 {creativeCards.slice(0, 2).map((card, idx) => (
-                  <motion.div 
-                    key={card.id} 
+                  <motion.div
+                    key={card.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={activeTab === "creative" ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ duration: 0.45, delay: idx * 0.08, ease: "easeOut" }}
@@ -383,8 +383,8 @@ export function BuildGrowthSection() {
               {/* Bottom Row (Cards 3, 4, 5) */}
               <div className="flex flex-row flex-wrap xl:flex-nowrap gap-4 sm:gap-6 justify-center xl:justify-end w-full mt-2 sm:mt-0">
                 {creativeCards.slice(2).map((card, idx) => (
-                  <motion.div 
-                    key={card.id} 
+                  <motion.div
+                    key={card.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={activeTab === "creative" ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ duration: 0.45, delay: (idx + 2) * 0.08, ease: "easeOut" }}

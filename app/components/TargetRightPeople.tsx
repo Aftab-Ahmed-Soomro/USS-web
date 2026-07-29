@@ -1,5 +1,6 @@
 "use client";
 
+import { useId } from "react";
 import {
   Users2,
   MapPin,
@@ -21,7 +22,8 @@ export interface TargetItem {
   number: string;
   icon?: LucideIcon | string;
   title: string;
-  description: string;
+  description?: string;
+  points?: string[];
 }
 
 export interface TargetRightPeopleProps {
@@ -58,7 +60,12 @@ function renderIcon(
           src={iconProp}
           alt=""
           className="object-contain"
-          style={{ width: size, height: size }}
+          style={{
+            width: size,
+            height: size,
+            filter:
+              "brightness(0) saturate(100%) invert(42%) sepia(93%) saturate(1352%) hue-rotate(346deg) brightness(100%) contrast(100%)",
+          }}
         />
       );
     }
@@ -156,12 +163,16 @@ export default function TargetRightPeople({
   items: customItems,
   title,
 }: TargetRightPeopleProps) {
+  const rawId = useId();
+  const filterId = `glow-${rawId.replace(/:/g, "")}`;
+  const gradientId = `arcFade-${rawId.replace(/:/g, "")}`;
+
   const displayItems =
     customItems && customItems.length > 0 ? customItems : defaultItems;
   const positions = getPositions(displayItems.length);
 
   return (
-    <section className="relative w-full overflow-hidden bg-black py-[60px] sm:py-40 px-4 sm:px-6">
+    <section className="relative w-full overflow-hidden bg-black py-[60px] sm:pt-40 sm:pb-30 px-4 sm:px-6">
       <style>{`
         .no-scrollbar::-webkit-scrollbar {
           display: none;
@@ -233,27 +244,38 @@ export default function TargetRightPeople({
                 <h3 className="text-white font-semibold text-[16px] leading-[1.2] mb-1.5">
                   {item.title}
                 </h3>
-                <p className="text-white/70 font-normal text-[14px] leading-[1.4]">
-                  {item.description}
-                </p>
+                {item.points && item.points.length > 0 ? (
+                  <ul className="space-y-1 flex flex-col items-start w-full mt-1">
+                    {item.points.map((point) => (
+                      <li key={point} className="flex gap-2 text-white/70 text-[13px] leading-[1.4] items-start text-left">
+                        <span className="text-[#ff5500] shrink-0 mt-[1px]">·</span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-white/70 font-normal text-[14px] leading-[1.4]">
+                    {item.description}
+                  </p>
+                )}
               </div>
             </FadeUp>
           ))}
         </div>
 
         {/* Desktop View (Curve + nodes) */}
-        <div className="hidden sm:block relative mt-[-75px] h-[420px] w-full">
+        <div className="hidden sm:block relative mt-[-75px] min-h-[540px] w-full">
           <div className="relative w-full h-full">
             {/* SVG arc */}
             <svg
-              className="absolute inset-0 h-full w-full"
+              className="pointer-events-none absolute left-0 top-0 h-[420px] w-full"
               viewBox={`0 0 ${VIEWBOX_W} ${VIEWBOX_H}`}
               preserveAspectRatio="none"
               fill="none"
               style={{ overflow: "visible" }}
             >
               <defs>
-                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                <filter id={filterId} x="-20%" y="-20%" width="140%" height="140%">
                   <feGaussianBlur stdDeviation="6" result="blur" />
                   <feMerge>
                     <feMergeNode in="blur" />
@@ -261,7 +283,7 @@ export default function TargetRightPeople({
                     <feMergeNode in="SourceGraphic" />
                   </feMerge>
                 </filter>
-                <linearGradient id="arcFade" x1="0%" y1="0%" x2="100%" y2="0%">
+                <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="0%">
                   <stop offset="0%" stopColor="#ff5500" stopOpacity="0" />
                   <stop offset="15%" stopColor="#ff5500" stopOpacity="1" />
                   <stop offset="85%" stopColor="#ff5500" stopOpacity="1" />
@@ -270,9 +292,9 @@ export default function TargetRightPeople({
               </defs>
               <path
                 d={`M ${P0.x} ${P0.y} Q ${P1.x} ${P1.y} ${P2.x} ${P2.y}`}
-                stroke="url(#arcFade)"
-                strokeWidth="2.5"
-                filter="url(#glow)"
+                stroke={`url(#${gradientId})`}
+                strokeWidth="3"
+                filter={`url(#${filterId})`}
               />
             </svg>
 
@@ -286,7 +308,7 @@ export default function TargetRightPeople({
                   style={{
                     left: pos.left,
                     top: `${pos.curveY}px`,
-                    width: "180px",
+                    width: "200px",
                   }}
                 >
                   <FadeUp
@@ -331,10 +353,21 @@ export default function TargetRightPeople({
                       {item.title}
                     </h3>
 
-                    {/* description */}
-                    <p className="mt-2 text-white/80 font-normal text-[13px] leading-[1.4]">
-                      {item.description}
-                    </p>
+                    {/* description or points */}
+                    {item.points && item.points.length > 0 ? (
+                      <ul className="mt-2 space-y-1 flex flex-col items-start text-left w-full">
+                        {item.points.map((point) => (
+                          <li key={point} className="flex gap-1.5 text-white/70 text-[12px] leading-[1.4] items-start">
+                            <span className="text-[#ff5500] shrink-0 mt-[1px]">·</span>
+                            <span>{point}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="mt-2 text-white/80 font-normal text-[13px] leading-[1.4]">
+                        {item.description}
+                      </p>
+                    )}
                   </FadeUp>
                 </div>
               );

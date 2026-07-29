@@ -31,17 +31,17 @@ const quickLinks = [
 const servicesCol1 = [
   { name: "360 Marketing", href: "/new-360-with-form" },
   { name: "Google Ads", href: "/google-ads" },
+  { name: "Meta Ads", href: "/meta-ads" },
+  { name: "Email Marketing", href: "/email-marketing" },
   { name: "WhatsApp & SMS", href: "/whatsapp-and-sms" },
-  { name: "Social Media Marketing", href: "/social-media-management" },
-  { name: "Talent Management", href: "/talent-management" },
 ];
 
 const servicesCol2 = [
   { name: "Marketing Strategy", href: "/marketing-strategy" },
-  { name: "Meta Ads", href: "/meta-ads" },
-  { name: "Email Marketing", href: "/email-marketing" },
+  { name: "Social Media Marketing", href: "/social-media-management" },
   { name: "Content Creation", href: "/content-creation" },
   { name: "Web Development", href: "/website" },
+  { name: "Branding & Graphics", href: "/branding" },
 ];
 
 const servicesData = {

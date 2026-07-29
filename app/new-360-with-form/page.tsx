@@ -896,10 +896,10 @@ export default function New360WithForm() {
         className="relative z-10 w-full flex flex-col justify-center items-center pt-8 sm:pt-16 bg-black gap-6 sm:gap-8">
 
         <h2 id="whatsapp-sms" className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
-          whatsapp &{" "}
+          {/* whatsapp &{" "}
           <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
             sms
-          </span>
+          </span> */}
         </h2>
       </motion.div>
       <WhyWhatsappWorks />

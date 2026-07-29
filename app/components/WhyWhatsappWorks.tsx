@@ -31,18 +31,21 @@ export function WhyWhatsappWorks() {
       <div className="mx-auto max-w-[1150px] px-4 min-[375px]:px-6">
         <Stagger staggerDelay={0.15}>
           <StaggerItem>
-            <h2 className="flex flex-wrap justify-center items-center gap-x-[8px] sm:gap-x-[15px] mb-[30px] sm:mb-[50px] text-center">
-              <span
-                className="lowercase font-medium text-[32px] leading-[1.1] tracking-[-1px] sm:text-[clamp(40px,5vw,56px)] sm:leading-[clamp(50px,6vw,80px)] sm:tracking-[-3px] font-[var(--font-be-vietnam)]"
-              >
-                connect with <br className="block sm:hidden" /> customers
+            <h2 className="text-center mb-[30px] sm:mb-[50px]">
+              <span className="block lowercase font-medium text-[32px] leading-[1] tracking-[-1px] sm:text-[clamp(40px,5vw,56px)] sm:leading-[40px] sm:tracking-[-3px] font-[var(--font-be-vietnam)]">
+                connect with your
               </span>
-              <span
-                className="lowercase italic font-normal text-[42px] leading-[1.1] tracking-[-1px] sm:text-[clamp(48px,6vw,72px)] sm:leading-[clamp(50px,6vw,80px)] sm:tracking-[-3px]"
-                style={{ fontFamily: "'Times New Roman', Times, serif" }}
-              >
-                instantly
-              </span>
+              <div className="flex flex-wrap justify-center items-baseline gap-x-[8px] sm:gap-x-[15px]">
+                <span className="lowercase font-medium text-[32px] leading-[1.1] tracking-[-1px] sm:text-[clamp(40px,5vw,56px)] sm:leading-[clamp(50px,6vw,80px)] sm:tracking-[-3px] font-[var(--font-be-vietnam)]">
+                  customers
+                </span>
+                <span
+                  className="lowercase italic font-normal text-[42px] leading-[1.1] tracking-[-1px] sm:text-[clamp(48px,6vw,72px)] sm:leading-[clamp(50px,6vw,80px)] sm:tracking-[-3px]"
+                  style={{ fontFamily: "'Times New Roman', Times, serif" }}
+                >
+                  instantly
+                </span>
+              </div>
             </h2>
           </StaggerItem>
         </Stagger>
