@@ -79,12 +79,12 @@ export function BlackFridayOpportunity() {
       <FadeUp>
         <div className="max-w-[1150px] text-center px-6 mx-auto mb-10 sm:mb-16">
           <h2 
-            className="font-medium lowercase tracking-[-1px] sm:tracking-[-3.2px] text-[#000000] sm:mb-2 font-[var(--font-be-vietnam)] text-[32px] sm:text-[56px] leading-[1.2] sm:leading-[70px]"
+            className="font-medium lowercase tracking-[-1px] sm:tracking-[-3.2px] text-[#000000] sm:mb-2 font-[var(--font-be-vietnam)] text-[28px] sm:text-[56px] leading-[1.2] sm:leading-[70px]"
           >
             black friday is your highest {" "}
             <br className="hidden sm:block" />
             <span 
-              className="text-[#FF5500] italic font-medium font-[var(--font-cormorant)] timesFontFamily text-[42px] sm:text-[56px] leading-[0] sm:leading-[70px] tracking-[-1px] sm:tracking-[-3.2px]"
+              className="text-[#FF5500] italic font-medium font-[var(--font-cormorant)] timesFontFamily text-[38px] sm:text-[56px] leading-[0] sm:leading-[70px] tracking-[-1px] sm:tracking-[-3.2px]"
             >
               revenue opportunity
             </span>

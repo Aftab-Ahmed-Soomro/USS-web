@@ -29,20 +29,45 @@ const quickLinks = [
 ];
 
 const servicesCol1 = [
-  { name: "360 Marketing", href: "/" },
-  { name: "Google Ads", href: "/" },
-  { name: "WhatsApp & SMS", href: "/" },
-  { name: "Social Media Marketing", href: "/" },
-  { name: "Talent Management", href: "/" },
+  { name: "360 Marketing", href: "/new-360-with-form" },
+  { name: "Google Ads", href: "/google-ads" },
+  { name: "WhatsApp & SMS", href: "/whatsapp-and-sms" },
+  { name: "Social Media Marketing", href: "/social-media-management" },
+  { name: "Talent Management", href: "/talent-management" },
 ];
 
 const servicesCol2 = [
-  { name: "Marketing Strategy", href: "/" },
-  { name: "Meta Ads", href: "/" },
-  { name: "Email Marketing", href: "/" },
-  { name: "Content Creation", href: "/" },
-  { name: "Web Development", href: "/" },
+  { name: "Marketing Strategy", href: "/marketing-strategy" },
+  { name: "Meta Ads", href: "/meta-ads" },
+  { name: "Email Marketing", href: "/email-marketing" },
+  { name: "Content Creation", href: "/content-creation" },
+  { name: "Web Development", href: "/website" },
 ];
+
+const servicesData = {
+  top: { label: "360 Marketing", href: "/new-360-with-form" },
+  performance: {
+    title: "Performance Marketing",
+    items: [
+      { label: "Marketing Strategy", href: "/marketing-strategy" },
+      { label: "Google Ads", href: "/google-ads" },
+      { label: "Meta Ads", href: "/meta-ads" },
+      { label: "Email Marketing", href: "/email-marketing" },
+      { label: "WhatsApp & SMS", href: "/whatsapp-and-sms" },
+    ],
+  },
+  creative: {
+    title: "Creative Marketing",
+    items: [
+      { label: "Social Media Marketing", href: "/social-media-management" },
+      { label: "Content Creation", href: "/content-creation" },
+      { label: "Website UX Design", href: "/website" },
+      { label: "Website Development", href: "/website" },
+      { label: "Branding & Graphics", href: "/branding" },
+    ],
+  },
+  bottom: { label: "Talent Management", href: "/talent-management" },
+};
 
 export function Footer({ showGlobal = true }: { showGlobal?: boolean }) {
   const [isQuickLinksOpen, setIsQuickLinksOpen] = useState(false);
@@ -119,13 +144,18 @@ export function Footer({ showGlobal = true }: { showGlobal?: boolean }) {
                 <span className="text-[#FF5500] sm:hidden text-[22px] leading-none">{isQuickLinksOpen ? "−" : "+"}</span>
               </button>
 
-              <ul className={`flex flex-col gap-[14px] overflow-hidden transition-all duration-300 ${isQuickLinksOpen ? "max-h-[300px] opacity-100 mt-4 sm:mt-6" : "max-h-0 opacity-0 mt-0 sm:max-h-none sm:opacity-100 sm:mt-6"}`}>
-                {quickLinks.map(link => (
-                  <li key={link.name}>
-                    <Link href={link.href} className="text-white text-[13px] sm:text-[14px] hover:text-[#FF5500] transition-colors">{link.name}</Link>
-                  </li>
-                ))}
-              </ul>
+              <div className={`overflow-hidden transition-all duration-300 ${isQuickLinksOpen ? "max-h-[300px] opacity-100 mt-3 sm:mt-6" : "max-h-0 opacity-0 mt-0 sm:max-h-none sm:opacity-100 sm:mt-6"}`}>
+                <ul className="flex flex-col gap-2.5 sm:gap-[14px] border-l-2 border-[#FF5500]/40 pl-3 sm:border-none sm:pl-0">
+                  {quickLinks.map(link => (
+                    <li key={link.name}>
+                      <Link href={link.href} className="flex items-center gap-2 py-0.5 text-[13px] sm:text-[14px] font-medium text-white/80 hover:text-[#FF5500] transition-colors">
+                        <span className="text-[#FF5500] text-[9px] shrink-0 sm:hidden">✦</span>
+                        <span>{link.name}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
             {/* Services */}
@@ -138,21 +168,93 @@ export function Footer({ showGlobal = true }: { showGlobal?: boolean }) {
                 <span className="text-[#FF5500] sm:hidden text-[22px] leading-none">{isServicesOpen ? "−" : "+"}</span>
               </button>
 
-              <div className={`grid grid-cols-2 gap-4 sm:flex sm:flex-row sm:gap-10 overflow-hidden transition-all duration-300 ${isServicesOpen ? "max-h-[600px] opacity-100 mt-4 sm:mt-6" : "max-h-0 opacity-0 mt-0 sm:max-h-none sm:opacity-100 sm:mt-6"}`}>
-                <ul className="flex flex-col gap-[14px]">
-                  {servicesCol1.map(service => (
-                    <li key={service.name}>
-                      <Link href={service.href} className="text-white text-[13px] sm:text-[14px] hover:text-[#FF5500] transition-colors whitespace-normal sm:whitespace-nowrap">{service.name}</Link>
-                    </li>
-                  ))}
-                </ul>
-                <ul className="flex flex-col gap-[14px]">
-                  {servicesCol2.map(service => (
-                    <li key={service.name}>
-                      <Link href={service.href} className="text-white text-[13px] sm:text-[14px] hover:text-[#FF5500] transition-colors whitespace-normal sm:whitespace-nowrap">{service.name}</Link>
-                    </li>
-                  ))}
-                </ul>
+              <div className={`overflow-hidden transition-all duration-300 ${isServicesOpen ? "max-h-[1000px] opacity-100 mt-3 sm:mt-6" : "max-h-0 opacity-0 mt-0 sm:max-h-none sm:opacity-100 sm:mt-6"}`}>
+                
+                {/* Mobile View: 2 side-by-side columns */}
+                <div className="sm:hidden border-l-2 border-[#FF5500]/40 pl-3 grid grid-cols-2 gap-3">
+                  {/* Column 1: 360 Marketing + Performance Marketing */}
+                  <div className="flex flex-col gap-2.5">
+                    <Link
+                      href={servicesData.top.href}
+                      className="flex items-center gap-1.5 py-0.5 text-[13px] font-normal text-white transition hover:text-[#FF5500]"
+                    >
+                      <span className="text-[#FF5500] text-[9px] shrink-0">✦</span>
+                      <span>{servicesData.top.label}</span>
+                    </Link>
+
+                    <div className="h-[1px] w-full bg-white/10" />
+
+                    <div className="flex flex-col gap-1.5">
+                      <div className="flex items-center gap-1.5 text-[12px] font-bold tracking-[0.03em] text-white py-0.5">
+                        <span className="text-[#FF5500] text-[8px] shrink-0">●</span>
+                        <span>{servicesData.performance.title}</span>
+                      </div>
+                      <div className="flex flex-col gap-1.5 pl-2 border-l border-white/10">
+                        {servicesData.performance.items.map((service) => (
+                          <Link
+                            key={service.label}
+                            href={service.href}
+                            className="flex items-center gap-1.5 py-0.5 text-[12px] font-medium text-white/80 transition hover:text-[#FF5500]"
+                          >
+                            <span className="text-[#FF5500] text-[7px] shrink-0">✦</span>
+                            <span>{service.label}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Column 2: Talent Management + Creative Marketing */}
+                  <div className="flex flex-col gap-2.5">
+                    <Link
+                      href={servicesData.bottom.href}
+                      className="flex items-center gap-1.5 py-0.5 text-[13px] font-normal text-white transition hover:text-[#FF5500]"
+                    >
+                      <span className="text-[#FF5500] text-[9px] shrink-0">✦</span>
+                      <span>{servicesData.bottom.label}</span>
+                    </Link>
+
+                    <div className="h-[1px] w-full bg-white/10" />
+
+                    <div className="flex flex-col gap-1.5">
+                      <div className="flex items-center gap-1.5 text-[12px] font-bold tracking-[0.03em] text-white py-0.5">
+                        <span className="text-[#FF5500] text-[8px] shrink-0">●</span>
+                        <span>{servicesData.creative.title}</span>
+                      </div>
+                      <div className="flex flex-col gap-1.5 pl-2 border-l border-white/10">
+                        {servicesData.creative.items.map((service) => (
+                          <Link
+                            key={service.label}
+                            href={service.href}
+                            className="flex items-center gap-1.5 py-0.5 text-[12px] font-medium text-white/80 transition hover:text-[#FF5500]"
+                          >
+                            <span className="text-[#FF5500] text-[7px] shrink-0">✦</span>
+                            <span>{service.label}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Desktop View: Original clean 2-column layout */}
+                <div className="hidden sm:flex sm:flex-row sm:gap-10">
+                  <ul className="flex flex-col gap-[14px]">
+                    {servicesCol1.map(service => (
+                      <li key={service.name}>
+                        <Link href={service.href} className="text-white/80 text-[13px] sm:text-[14px] hover:text-[#FF5500] transition-colors whitespace-nowrap">{service.name}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                  <ul className="flex flex-col gap-[14px]">
+                    {servicesCol2.map(service => (
+                      <li key={service.name}>
+                        <Link href={service.href} className="text-white/80 text-[13px] sm:text-[14px] hover:text-[#FF5500] transition-colors whitespace-nowrap">{service.name}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
               </div>
             </div>
           </div>
