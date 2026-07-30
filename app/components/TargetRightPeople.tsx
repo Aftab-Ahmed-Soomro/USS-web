@@ -59,6 +59,8 @@ function renderIcon(
         <img
           src={iconProp}
           alt=""
+          loading="lazy"
+          decoding="async"
           className="object-contain"
           style={{
             width: size,

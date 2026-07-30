@@ -319,7 +319,7 @@ function RelatedProjects() {
                         className="hidden sm:inline-flex shrink-0 items-center gap-2 rounded-full border border-white px-5 py-3 font-[var(--font-inter)] text-[12px] text-white sm:text-[15px]"
                       >
                         View all projects
-                        <img src="/assets/rightArrowMed.png" className="w-4 h-4" alt="" />
+                        <img src="/assets/rightArrowMed.png" className="w-4 h-4" alt="" loading="lazy" decoding="async" />
                       </Link>
                     </FadeRight>
                   </div>

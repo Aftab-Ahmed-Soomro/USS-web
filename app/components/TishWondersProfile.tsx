@@ -51,7 +51,7 @@ export function TishWondersProfile() {
           <div className="flex items-start justify-between sm:justify-start gap-4 sm:gap-14 mb-8 sm:mb-10 w-full">
             {/* YouTube */}
             <div className="flex flex-col">
-              <img className="w-5 h-5 mb-3" src="/assets/youIcon.png" alt="" />
+              <img className="w-5 h-5 mb-3" src="/assets/youIcon.png" alt="" loading="lazy" decoding="async" />
               <span className="font-semibold text-white text-[12px] sm:text-[14px] leading-[1.5] sm:leading-[21px]">YouTube</span>
               <span className="font-bold text-white mt-1 text-[24px] sm:text-[32px] leading-[1.2] sm:leading-[48px] tracking-[-0.64px]">545K</span>
               <span className="font-normal text-[#A0A0A0] text-[12px] sm:text-[14px] leading-[1.5] sm:leading-[21px]">Subscribers</span>

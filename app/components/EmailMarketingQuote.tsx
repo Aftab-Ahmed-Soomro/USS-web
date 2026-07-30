@@ -7,8 +7,8 @@ export default function EmailMarketingQuote({first, second, third}: {first: stri
     <section className="bg-black w-full py-[50px] sm:py-20 px-4 min-[375px]:px-6 flex flex-col items-center justify-center text-center overflow-hidden">
       <Stagger staggerDelay={0.15} className="flex flex-col items-center justify-center text-center w-full">
         <StaggerItem className="flex gap-1">
-          <img src="/assets/bigComma.png" alt="" />
-          <img src="/assets/bigComma.png" alt="" />
+          <img src="/assets/bigComma.png" alt="" loading="lazy" decoding="async" />
+          <img src="/assets/bigComma.png" alt="" loading="lazy" decoding="async" />
         </StaggerItem>
 
         <StaggerItem>
@@ -33,8 +33,8 @@ export default function EmailMarketingQuote({first, second, third}: {first: stri
         </ScaleIn>
 
         <StaggerItem className="flex gap-1 mb-4">
-          <img src="/assets/bigCommaLeft.png" alt="" />
-          <img src="/assets/bigCommaLeft.png" alt="" />
+          <img src="/assets/bigCommaLeft.png" alt="" loading="lazy" decoding="async" />
+          <img src="/assets/bigCommaLeft.png" alt="" loading="lazy" decoding="async" />
         </StaggerItem>
 
         {/* <StaggerItem>

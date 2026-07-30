@@ -10,6 +10,8 @@ export function YulaHappiness() {
           <img 
             src="/assets/yulaHappiness.png" 
             alt="Yula Happiness" 
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover object-center"
           />
         </div>

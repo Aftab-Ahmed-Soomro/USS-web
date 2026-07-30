@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const ICONS = {
   strategy: (
-    <img src="/assets/pre1.png" />
+    <img src="/assets/pre1.png" alt="" loading="lazy" decoding="async" />
   ),
   planning: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -20,10 +20,10 @@ const ICONS = {
     </svg>
   ),
   storyboard: (
-    <img src="/assets/pre4.png" />
+    <img src="/assets/pre4.png" alt="" loading="lazy" decoding="async" />
   ),
   motion: (
-    <img src="/assets/post6.png" />
+    <img src="/assets/post6.png" alt="" loading="lazy" decoding="async" />
   ),
   editing: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -41,7 +41,7 @@ const ICONS = {
     </svg>
   ),
   color: (
-    <img src="/assets/post7.png" />
+    <img src="/assets/post7.png" alt="" loading="lazy" decoding="async" />
   ),
 };
 

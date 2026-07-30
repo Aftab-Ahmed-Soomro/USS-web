@@ -49,6 +49,10 @@ export default function RootLayout({
         {/* Preconnect to brand logo host — 29 external PNGs in Brands marquee */}
         <link rel="preconnect" href="https://emmanuelcolewilliams.com" />
         <link rel="dns-prefetch" href="https://emmanuelcolewilliams.com" />
+        {/* Preconnect to Calendly for booking widgets */}
+        <link rel="preconnect" href="https://calendly.com" />
+        <link rel="preconnect" href="https://assets.calendly.com" />
+        <link rel="dns-prefetch" href="https://calendly.com" />
       </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

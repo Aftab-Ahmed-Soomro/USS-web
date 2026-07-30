@@ -264,7 +264,7 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
           <FadeUp delay={0.4}>
             <div className="wag-card">
               <div className="wag-image-wrapper">
-                <img src={displayRegions[1].image} alt={displayRegions[1].alt} className="!object-[80%_0%]" />
+                <img src={displayRegions[1].image} alt={displayRegions[1].alt} loading="lazy" decoding="async" className="!object-[80%_0%]" />
               </div>
               <div className="wag-card-body">
                 <h2 className="wag-card-title">{displayRegions[1].name}</h2>
@@ -280,7 +280,7 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
           <FadeLeft delay={0.3}>
             <div className="wag-card">
               <div className="wag-image-wrapper">
-                <img src={displayRegions[0].image} alt={displayRegions[0].alt} />
+                <img src={displayRegions[0].image} alt={displayRegions[0].alt} loading="lazy" decoding="async" />
               </div>
               <div className="wag-card-body">
                 <h2 className="wag-card-title">{displayRegions[0].name}</h2>

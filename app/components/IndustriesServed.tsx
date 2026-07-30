@@ -90,6 +90,8 @@ export default function IndustriesServed() {
             <img
               src={defaultSlides[currentSlide].imageSrc}
               alt="Industry served"
+              loading="lazy"
+              decoding="async"
               className="w-full h-auto block"
             />
           ) : (
