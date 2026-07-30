@@ -22,7 +22,7 @@ export function ConsultationForm() {
 
         <div className="mt-[22px] -mx-[22px] -mb-[25px] flex flex-col justify-center overflow-hidden rounded-b-[12px]">
           <StaggerItem>
-            <InlineWidget 
+            <InlineWidget
               url="https://calendly.com/unitedstrategicsolutions/30min"
               styles={{ minWidth: "320px", height: "440px" }}
             />
@@ -50,7 +50,7 @@ export function LightConsultationForm() {
 
         <div className="mt-[22px] -mx-[22px] -mb-[25px] flex flex-col justify-center overflow-hidden rounded-b-[12px]">
           <StaggerItem>
-            <InlineWidget 
+            <InlineWidget
               url="https://calendly.com/unitedstrategicsolutions/30min"
               styles={{ minWidth: "320px", height: "440px" }}
             />

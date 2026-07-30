@@ -182,7 +182,7 @@ export default function ContactHero() {
               className="w-full max-w-[460px] rounded-[12px] border border-white/[0.08] bg-gradient-to-br from-white/[0.06] to-white/[0.02] flex flex-col gap-[18px] backdrop-blur-sm overflow-hidden"
               style={{ boxShadow: "0 32px 80px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.06)" }}
             >
-              <InlineWidget 
+              <InlineWidget
                 url="https://calendly.com/unitedstrategicsolutions/30min"
                 styles={{ minWidth: "100%", height: "580px", borderRadius: "16px" }}
               />

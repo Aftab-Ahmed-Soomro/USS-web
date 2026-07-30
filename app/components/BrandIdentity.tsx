@@ -47,24 +47,17 @@ export function BrandIdentity() {
             <div className="flex flex-col gap-2">
               <StaggerItem>
                 <div className="relative w-full aspect-[434/293] rounded-[17.15px] overflow-hidden group">
-                  <img src="/assets/brandIdentity/1.png" alt="Brand Identity" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                  {/* <div className="absolute bottom-5 left-6">
-                    <span className="text-white font-bold text-[18px] sm:text-[20.9px] leading-[120%]">Strategic Focus</span>
-                  </div> */}
+                  <img src="/assets/brandIdentity/1.png" alt="Brand Identity" loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 </div>
               </StaggerItem>
               <StaggerItem>
                 <div className="relative w-full aspect-[434/293] rounded-[17.15px] overflow-hidden group">
-                  <img src="/assets/brandIdentity/2.png" alt="Brand Identity" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                  {/* <div className="absolute bottom-5 left-6">
-                    <span className="text-white font-bold text-[18px] sm:text-[20.9px] leading-[120%]">Strategic Focus</span>
-                  </div> */}
+                  <img src="/assets/brandIdentity/2.png" alt="Brand Identity" loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 </div>
               </StaggerItem>
               <StaggerItem>
                 <div className="relative w-full aspect-[434/293] rounded-[17.15px] overflow-hidden group">
-                  <img src="/assets/brandIdentity/3.png" alt="Brand Identity" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                  {/* White background, text might be hidden or intentional */}
+                  <img src="/assets/brandIdentity/3.png" alt="Brand Identity" loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 </div>
               </StaggerItem>
             </div>
@@ -73,18 +66,12 @@ export function BrandIdentity() {
             <div className="flex flex-col gap-2">
               <StaggerItem>
                 <div className="relative w-full aspect-[434/592] rounded-[17.15px] overflow-hidden group">
-                  <img src="/assets/brandIdentity/middle.png" alt="Brand Identity" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                  {/* <div className="absolute bottom-5 left-6">
-                    <span className="text-white font-bold text-[18px] sm:text-[20.9px] leading-[120%]">Strategic Focus</span>
-                  </div> */}
+                  <img src="/assets/brandIdentity/middle.png" alt="Brand Identity" loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 </div>
               </StaggerItem>
               <StaggerItem>
                 <div className="relative w-full aspect-[434/293] rounded-[17.15px] overflow-hidden group">
-                  <img src="/assets/brandIdentity/4.png" alt="Brand Identity" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                  {/* <div className="absolute bottom-5 left-6">
-                    <span className="text-white font-bold text-[18px] sm:text-[20.9px] leading-[120%]">Strategic Focus</span>
-                  </div> */}
+                  <img src="/assets/brandIdentity/4.png" alt="Brand Identity" loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 </div>
               </StaggerItem>
             </div>
@@ -93,23 +80,17 @@ export function BrandIdentity() {
             <div className="flex flex-col gap-2">
               <StaggerItem>
                 <div className="relative w-full aspect-[434/293] rounded-[17.15px] overflow-hidden group">
-                  <img src="/assets/brandIdentity/5.png" alt="Brand Identity" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                  {/* <div className="absolute bottom-5 left-6">
-                    <span className="text-white font-bold text-[18px] sm:text-[20.9px] leading-[120%]">Strategic Focus</span>
-                  </div> */}
+                  <img src="/assets/brandIdentity/5.png" alt="Brand Identity" loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 </div>
               </StaggerItem>
               <StaggerItem>
                 <div className="relative w-full aspect-[434/293] rounded-[17.15px] overflow-hidden group">
-                  <img src="/assets/brandIdentity/6.png" alt="Brand Identity" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <img src="/assets/brandIdentity/6.png" alt="Brand Identity" loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 </div>
               </StaggerItem>
               <StaggerItem>
                 <div className="relative w-full aspect-[434/293] rounded-[17.15px] overflow-hidden group">
-                  <img src="/assets/brandIdentity/7.jpg" alt="Brand Identity" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                  {/* <div className="absolute bottom-5 left-6">
-                    <span className="text-white font-bold text-[18px] sm:text-[20.9px] leading-[120%]">Strategic Focus</span>
-                  </div> */}
+                  <img src="/assets/brandIdentity/7.jpg" alt="Brand Identity" loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 </div>
               </StaggerItem>
             </div>

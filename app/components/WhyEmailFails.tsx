@@ -250,11 +250,13 @@ export function WhyEmailFails({
                         <div className="absolute left-1/2 top-[230px] -translate-x-1/2 -translate-y-1/2 z-0">
                             <ScaleIn delay={0.4} duration={0.8}>
                                 <div className="relative flex items-center justify-center">
-                                    <img src="/assets/circled.png" alt="" className="w-[310px] object-contain" />
+                                    <img src="/assets/circled.png" alt="" loading="lazy" decoding="async" className="w-[310px] object-contain" />
                                     {!hideBadge && (
                                         <img
                                             src={centerLogo ?? "/assets/klaviyo-logo-white.webp"}
                                             alt="center logo"
+                                            loading="lazy"
+                                            decoding="async"
                                             className={`absolute ml-1 object-contain ${logoClassName ?? 'w-[140px]'}`}
                                         />
                                     )}
@@ -303,11 +305,13 @@ export function WhyEmailFails({
                         <div className="my-[32px] sm:my-12 flex justify-center">
                             <ScaleIn delay={0.3} duration={0.6}>
                                 <div className="relative flex items-center justify-center">
-                                    <img src="/assets/circled.png" alt="" className="w-[180px] sm:w-[200px] object-contain" />
+                                    <img src="/assets/circled.png" alt="" loading="lazy" decoding="async" className="w-[180px] sm:w-[200px] object-contain" />
                                     {!hideBadge && (
                                         <img
                                             src={centerLogo ?? "/assets/klaviyo-logo-white.webp"}
                                             alt="center logo"
+                                            loading="lazy"
+                                            decoding="async"
                                             className={`absolute object-contain ${logoClassName ?? 'w-[70px] sm:w-[100px]'}`}
                                         />
                                     )}

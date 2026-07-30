@@ -38,7 +38,7 @@ export function BrandingServices() {
                   </p>
                 </div>
                 <div className="w-full max-w-[644px] rounded-[10px] overflow-hidden aspect-[644/194] bg-[#111]">
-                  <img src="/assets/yulaBranding.png" alt="Branding lounge" className="w-full h-full object-cover" />
+                  <img src="/assets/yulaBranding.png" alt="Branding lounge" loading="lazy" decoding="async" className="w-full h-full object-cover" />
                 </div>
               </div>
 
@@ -105,7 +105,7 @@ export function BrandingServices() {
                     </div>
                   ) : (
                     <div className={`w-full ${card.aspectRatio ?? 'aspect-[247/180]'} rounded-[10px] overflow-hidden ${card.imageBg ?? 'bg-[#111]'}`}>
-                      <img src={card.image} alt={card.title} className={`w-full h-full`} />
+                      <img src={card.image} alt={card.title} loading="lazy" decoding="async" className={`w-full h-full`} />
                     </div>
                   )}
                   <div className="flex flex-col gap-2 sm:gap-3">

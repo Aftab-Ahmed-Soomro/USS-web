@@ -74,7 +74,7 @@ const Card = ({ year, category, title, description, image, link, imageClass, ima
   >
     {/* Image Placeholder */}
     <div className={`w-full ${imageAspectRatio || "aspect-[617/480]"} bg-[#111111] rounded-[20px] overflow-hidden transition-transform duration-500 group-hover:scale-[1.02] relative`}>
-      {image && <img src={image} alt={title} className={`absolute inset-0 w-full h-full object-cover ${imageClass || "object-center"}`} />}
+      {image && <img src={image} alt={title} loading="lazy" decoding="async" className={`absolute inset-0 w-full h-full object-cover ${imageClass || "object-center"}`} />}
     </div>
 
     {/* Content */}

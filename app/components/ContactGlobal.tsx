@@ -246,7 +246,7 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
           <FadeRight delay={0.3}>
             <div className="wag-card">
               <div className="wag-image-wrapper">
-                <img src={displayRegions[2].image} alt={displayRegions[2].alt} />
+                <img src={displayRegions[2].image} alt={displayRegions[2].alt} loading="lazy" decoding="async" />
               </div>
               <div className="wag-card-body">
                 <h2 className="wag-card-title">{displayRegions[2].name}</h2>
@@ -300,7 +300,7 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
               <div className="flex gap-x-4 min-[375px]:gap-x-6 pr-4 min-[375px]:pr-6 shrink-0">
                 <div className="wag-card w-[290px] min-[375px]:w-[320px] shrink-0">
                   <div className="wag-image-wrapper">
-                    <img src={displayRegions[2].image} alt={displayRegions[2].alt} />
+                    <img src={displayRegions[2].image} alt={displayRegions[2].alt} loading="lazy" decoding="async" />
                   </div>
                   <div className="wag-card-body">
                     <h2 className="wag-card-title">{displayRegions[2].name}</h2>
@@ -334,7 +334,7 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
               <div className="flex gap-x-4 min-[375px]:gap-x-6 pr-4 min-[375px]:pr-6 shrink-0">
                 <div className="wag-card w-[290px] min-[375px]:w-[320px] shrink-0">
                   <div className="wag-image-wrapper">
-                    <img src={displayRegions[2].image} alt={displayRegions[2].alt} />
+                    <img src={displayRegions[2].image} alt={displayRegions[2].alt} loading="lazy" decoding="async" />
                   </div>
                   <div className="wag-card-body">
                     <h2 className="wag-card-title">{displayRegions[2].name}</h2>
@@ -368,7 +368,7 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
               <div className="flex gap-x-4 min-[375px]:gap-x-6 pr-4 min-[375px]:pr-6 shrink-0">
                 <div className="wag-card w-[290px] min-[375px]:w-[320px] shrink-0">
                   <div className="wag-image-wrapper">
-                    <img src={displayRegions[2].image} alt={displayRegions[2].alt} />
+                    <img src={displayRegions[2].image} alt={displayRegions[2].alt} loading="lazy" decoding="async" />
                   </div>
                   <div className="wag-card-body">
                     <h2 className="wag-card-title">{displayRegions[2].name}</h2>

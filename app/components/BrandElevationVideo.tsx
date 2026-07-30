@@ -24,7 +24,7 @@ export default function BrandElevationVideo() {
     loop
     muted={isMuted}
     playsInline
-    preload="auto"
+    preload="metadata"
     width={1920}
     height={1080}
     className="absolute inset-0 w-full h-full object-cover object-center"
