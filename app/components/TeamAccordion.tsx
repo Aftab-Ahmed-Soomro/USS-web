@@ -83,16 +83,23 @@ export default function TeamAccordion({ heading, data = defaultTeamData }: TeamA
                     specialists
 
                     {/* Orange Glow */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[90%] bg-[#ff5500]/40 blur-[40px] -z-10 rounded-[100%] pointer-events-none"></div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[115%] h-[135%] bg-[#ff5500]/30 blur-[24px] -z-10 rounded-[100%] pointer-events-none"></div>
 
-                    {/* Ellipse SVG */}
+                    {/* Hand-Drawn Circle SVG */}
                     <svg
-                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[45%] w-[110%] h-[190%] pointer-events-none"
+                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[48%] w-[128%] h-[160%] pointer-events-none overflow-visible"
                       viewBox="0 0 400 150"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <ellipse cx="200" cy="75" rx="190" ry="40" transform="rotate(-3 200 75)" stroke="#ff5500" strokeOpacity="1.7" strokeWidth="1.5" />
+                      <path
+                        d="M 32,72 C 22,32 90,14 205,15 C 320,16 388,32 384,72 C 380,112 315,138 195,136 C 75,134 16,108 26,66 C 34,36 102,20 220,18"
+                        stroke="#ff5500"
+                        strokeWidth="3.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="opacity-95"
+                      />
                     </svg>
 
                   </span><br />
