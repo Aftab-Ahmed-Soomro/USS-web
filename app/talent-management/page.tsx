@@ -65,7 +65,7 @@ export default function MarketingStrategyPage() {
 
       <RevenueMethod />
       <TishWondersProfile />
-      <ProjectOverview
+      {/* <ProjectOverview
         subheading="SNEAK PEEK INTO THE Q4 LAUNCH"
         images={[
           "/assets/tishOverview/1.jpg",
@@ -75,9 +75,9 @@ export default function MarketingStrategyPage() {
         ]}
         bgColor={"black"}
         textColor={"white"}
-      />
+      /> */}
       <SadiaPsychologyProfile />
-      <ProjectOverview
+      {/* <ProjectOverview
         subheading="inside the launch."
         images={[
           "/assets/sadiaOverview/1.png",
@@ -87,7 +87,7 @@ export default function MarketingStrategyPage() {
         ]}
         bgColor={"white"}
         textColor={"black"}
-      />
+      /> */}
       <Testimonials />
       <Team />
       <GoodCompanyMap />

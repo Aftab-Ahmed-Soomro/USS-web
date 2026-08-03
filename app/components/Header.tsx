@@ -30,10 +30,10 @@ const servicesData = {
 };
 
 const navItems = [
-    { label: "ABOUT", href: "/about", hasDropdown:false },
-    { label: "SERVICES", href: "/new-360-with-form", hasDropdown: true },
-  { label: "WORK", href: "/projects" },
-  { label: "CONTACT", href: "/contact" },
+    { label: "About US", href: "/about", hasDropdown:false },
+    { label: "Our Services", href: "/new-360-with-form", hasDropdown: true },
+  { label: "Our Work", href: "/projects" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 export function Header() {
@@ -65,11 +65,12 @@ export function Header() {
           </Link>
 
           <div className="flex items-center gap-2 sm:gap-3 md:hidden">
-            <Link href="/contact" passHref>
-              <Button className="h-[32px] sm:h-[38px] px-3 sm:px-4 !text-[10px] min-[375px]:!text-[11px] sm:!text-[12px] tracking-[0px] sm:tracking-[3px] font-bold uppercase whitespace-nowrap">
-                <span className="min-[375px]:hidden">Consultation</span>
-                <span className="hidden min-[375px]:inline">Book a Consultation</span>
-              </Button>
+            <Link
+              className="inline-flex h-[32px] sm:h-[38px] px-3 sm:px-5 items-center justify-center rounded-full bg-[#ff6b1f] font-[var(--font-be-vietnam)] text-[10px] min-[375px]:text-[11px] sm:text-[12px] tracking-[0.52px] font-bold text-white transition uppercase whitespace-nowrap hover:bg-white hover:text-black"
+              href="/contact"
+            >
+              <span className="min-[375px]:hidden">Consultation</span>
+              <span className="hidden min-[375px]:inline">Book a Consultation</span>
             </Link>
             <button
               type="button"
@@ -373,7 +374,10 @@ export function Header() {
 
         {/* Desktop Right Action */}
         <div className="hidden md:flex md:w-auto md:flex-1 md:justify-end">
-          <Link className="h-[42px] inline-flex h-[48px] items-center justify-center rounded-full bg-[#ff5a05] cursor-pointer px-6 text-[13px] tracking-[0.1em] font-bold uppercase" href="/contact" passHref>
+          <Link
+            className="inline-flex h-[34px] min-[375px]:h-[38px] min-w-[160px] min-[375px]:min-w-[178px] items-center justify-center rounded-full bg-[#ff6b1f] px-5 min-[375px]:px-7 font-[var(--font-be-vietnam)] text-[11px] min-[375px]:text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-white hover:text-black"
+            href="/contact"
+          >
             Book a Consultation
           </Link>
         </div>

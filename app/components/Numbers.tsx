@@ -26,13 +26,14 @@ type NumbersProps = {
 
 const defaultStats: NumberStat[] = [
   { value: "5x", label: "Up to 5X ROAS" },
-  { value: "55M", label: "AED in Revenue" },
-  { value: "485k", label: "Leads Generated" },
+  { value: "50+", label: "Start Ups Turned Profitable" },
+  { value: "75M+", label: "AED In Client Revenue" },
+  { value: "645k+", label: "Leads Generated for clients" },
   { value: "100+", label: "Brands Worldwide" },
 ];
 
 // ─── parseValue ───────────────────────────────────────────────────────────────
-// Splits "55M", "500k", "100+", "5x", "0.2%" into
+// Splits "75M+", "500k", "100+", "5x", "0.2%" into
 // { prefix, number, suffix, decimals }
 // so we can count only the numeric part, preserving decimal precision.
 
@@ -176,7 +177,7 @@ export function Numbers({
           <div className="hidden md:block">
             <FadeRight delay={0.2}>
               <Link
-                className="mt-[24px] sm:mt-[36px] inline-flex h-[34px] min-[375px]:h-[38px] min-w-[160px] min-[375px]:min-w-[178px] items-center justify-center rounded-full bg-white px-5 min-[375px]:px-7 font-[var(--font-be-vietnam)] text-[11px] min-[375px]:text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-black transition uppercase hover:bg-[#ff6b1f]"
+                className="mt-[24px] sm:mt-[36px] inline-flex h-[34px] min-[375px]:h-[38px] min-w-[160px] min-[375px]:min-w-[178px] items-center justify-center rounded-full bg-white px-5 min-[375px]:px-7 font-[var(--font-be-vietnam)] text-[11px] min-[375px]:text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-black transition uppercase hover:bg-[#ff6b1f] hover:text-white"
                 href="/contact"
               >
                 Book a Consultation
@@ -188,37 +189,58 @@ export function Numbers({
 
         {/* Stats grid */}
         <div className="mt-[32px] sm:mt-[58px] border-y border-white/12 sm:border-y-0 sm:border-t bg-black/20 sm:bg-transparent py-[16px] sm:py-0 sm:pt-[43px]">
-                    <div className="grid grid-cols-4 sm:grid-cols-2 lg:grid-cols-4 divide-x divide-white/12 sm:divide-x-0 gap-0 sm:gap-8 lg:gap-[54px]">
-
-            {stats.map((stat, index) => (
-              <FadeUp key={stat.label} delay={0.3 + index * 0.12}>
-                <div className="flex items-center gap-[4px] min-[375px]:gap-[6px] sm:gap-[16px] px-[6px] sm:px-0 h-full">
-                  <div className="scale-[0.5] sm:scale-100 origin-left -ml-2 sm:ml-0 shrink-0">
-                    <Spark />
+          {stats.length === 5 ? (
+            <div className="grid grid-cols-5 divide-x divide-white/12 sm:divide-x-0 gap-0 sm:gap-6 lg:gap-[40px]">
+              {stats.map((stat, index) => (
+                <FadeUp key={stat.label} delay={0.3 + index * 0.12}>
+                  <div className="flex items-center gap-[2px] min-[375px]:gap-[4px] sm:gap-[12px] px-[2px] sm:px-0 h-full overflow-hidden">
+                    <div className="scale-[0.45] min-[375px]:scale-[0.5] sm:scale-100 origin-left -ml-2 sm:ml-0 shrink-0">
+                      <Spark />
+                    </div>
+                    <div className="flex flex-col justify-center min-w-0">
+                      <p className="text-[14px] min-[375px]:text-[17px] font-bold leading-none tracking-[-1px] sm:text-[36px] lg:text-[46px]">
+                        <AnimatedStat value={stat.value} />
+                      </p>
+                      <p className="mt-[3px] sm:mt-[8px] text-[6px] min-[375px]:text-[7px] sm:text-[12px] lg:text-[13px] font-light leading-[1.15] sm:leading-none text-white/80 sm:text-white whitespace-normal break-words max-w-[55px] min-[375px]:max-w-[70px] sm:max-w-none">
+                        {stat.label}
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex flex-col sm:block justify-center overflow-visible">
-                    <p className="text-[16px] min-[375px]:text-[20px] font-bold leading-none tracking-[-1px] sm:text-[50px]">
-                      <AnimatedStat value={stat.value} />
-                    </p>
-                    <p className="mt-[4px] sm:mt-[8px] text-[6px] min-[375px]:text-[7px] sm:text-[14px] font-light leading-tight sm:leading-none text-white/70 sm:text-white whitespace-nowrap sm:whitespace-normal tracking-tight sm:tracking-normal">
-                      {stat.label}
-                    </p>
+                </FadeUp>
+              ))}
+            </div>
+          ) : (
+            <div className="grid grid-cols-4 sm:grid-cols-2 lg:grid-cols-4 divide-x divide-white/12 sm:divide-x-0 gap-0 sm:gap-8 lg:gap-[54px]">
+              {stats.map((stat, index) => (
+                <FadeUp key={stat.label} delay={0.3 + index * 0.12}>
+                  <div className="flex items-center gap-[4px] min-[375px]:gap-[6px] sm:gap-[16px] px-[6px] sm:px-0 h-full overflow-hidden">
+                    <div className="scale-[0.5] sm:scale-100 origin-left -ml-2 sm:ml-0 shrink-0">
+                      <Spark />
+                    </div>
+                    <div className="flex flex-col justify-center min-w-0">
+                      <p className="text-[16px] min-[375px]:text-[20px] font-bold leading-none tracking-[-1px] sm:text-[50px]">
+                        <AnimatedStat value={stat.value} />
+                      </p>
+                      <p className="mt-[4px] sm:mt-[8px] text-[7px] min-[375px]:text-[8px] sm:text-[14px] font-light leading-tight sm:leading-none text-white/70 sm:text-white whitespace-normal break-words max-w-[80px] sm:max-w-none tracking-tight sm:tracking-normal">
+                        {stat.label}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </FadeUp>
-            ))}
-          </div>
+                </FadeUp>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* CTA Button (Mobile) */}
         <div className="mt-[32px] flex justify-center pb-[16px] md:hidden">
           {/* <FadeUp delay={0.6}> */}
-            <Link
-              className="inline-flex h-[30px] min-[375px]:h-[34px] px-6 items-center justify-center rounded-full bg-white font-[var(--font-be-vietnam)] text-[10px] min-[375px]:text-[12px] tracking-[-0.5px] sm:tracking-[1px] font-medium text-black transition uppercase hover:bg-[#ff6b1f]"
-              href="/contact"
-            >
-              Book a Consultation
-            </Link>
+          <Link
+            className="inline-flex h-[30px] min-[375px]:h-[34px] px-6 items-center justify-center rounded-full bg-white font-[var(--font-be-vietnam)] text-[10px] min-[375px]:text-[12px] tracking-[-0.5px] sm:tracking-[1px] font-medium text-black transition uppercase hover:bg-[#ff6b1f] hover:text-white"
+            href="/contact"
+          >
+            Book a Consultation
+          </Link>
           {/* </FadeUp> */}
         </div>
 

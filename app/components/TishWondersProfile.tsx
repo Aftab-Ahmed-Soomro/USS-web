@@ -1,6 +1,7 @@
 import Image from "next/image";
 import FadeLeft from "./FadeLeft";
 import FadeRight from "./FadeRight";
+import FadeUp from "./FadeUp";
 
 export function TishWondersProfile() {
   return (
@@ -17,21 +18,79 @@ export function TishWondersProfile() {
           </h2>
         </div>
 
-        {/* Right Column (Image) - Moved up for mobile layout */}
-        <FadeRight className="flex-1 w-full flex justify-end">
-          <div className="relative overflow-hidden rounded-[24px] w-full max-w-[450px] lg:w-[450px] h-[400px] sm:h-[500px] lg:h-[680px] mx-auto lg:mx-0 shrink-0">
-            <Image 
-              src="/assets/tisha.jpg"
-              alt="Tish Wonders"
-              fill
-              className="object-cover object-center"
-            />
+        {/* Right Column (Collage Grid) - Moved up for mobile layout */}
+        <FadeRight className="w-full lg:w-[500px] shrink-0 h-[480px] sm:h-[580px] lg:h-[650px]">
+          <div className="grid grid-cols-3 gap-2.5 sm:gap-4 w-full h-full">
+            {/* Left Column (spans 2) */}
+            <div className="col-span-2 flex flex-col gap-2.5 sm:gap-4 h-full">
+              <FadeUp delay={0.1} className="w-full h-[54%]">
+                <div className="relative w-full h-full rounded-[12px] sm:rounded-[20px] overflow-hidden bg-[#111]">
+                  <Image 
+                    src="/assets/tisha.jpg"
+                    alt="Tish Wonders 1"
+                    fill
+                    className="object-cover object-center hover:scale-105 transition-transform duration-700"
+                    sizes="(max-width: 768px) 66vw, 30vw"
+                  />
+                </div>
+              </FadeUp>
+              <div className="grid grid-cols-2 gap-2.5 sm:gap-4 w-full h-[43%]">
+                <FadeUp delay={0.2} className="w-full h-full">
+                  <div className="relative w-full h-full rounded-[12px] sm:rounded-[20px] overflow-hidden bg-[#111]">
+                    <Image 
+                      src="/assets/tishOverview/1.jpg"
+                      alt="Tish Wonders 2"
+                      fill
+                      className="object-cover object-center hover:scale-105 transition-transform duration-700"
+                      sizes="(max-width: 768px) 33vw, 15vw"
+                    />
+                  </div>
+                </FadeUp>
+                <FadeUp delay={0.3} className="w-full h-full">
+                  <div className="relative w-full h-full rounded-[12px] sm:rounded-[20px] overflow-hidden bg-[#111]">
+                    <Image 
+                      src="/assets/tishOverview/2.jpg"
+                      alt="Tish Wonders 3"
+                      fill
+                      className="object-cover object-center hover:scale-105 transition-transform duration-700"
+                      sizes="(max-width: 768px) 33vw, 15vw"
+                    />
+                  </div>
+                </FadeUp>
+              </div>
+            </div>
+
+            {/* Right Column */}
+            <div className="flex flex-col gap-2.5 sm:gap-4 h-full">
+              <FadeUp delay={0.15} className="w-full h-[36%]">
+                <div className="relative w-full h-full rounded-[12px] sm:rounded-[20px] overflow-hidden bg-[#111]">
+                  <Image 
+                    src="/assets/tishOverview/3.png"
+                    alt="Tish Wonders 4"
+                    fill
+                    className="object-cover object-center hover:scale-105 transition-transform duration-700"
+                    sizes="(max-width: 768px) 33vw, 15vw"
+                  />
+                </div>
+              </FadeUp>
+              <FadeUp delay={0.35} className="w-full h-[61%]">
+                <div className="relative w-full h-full rounded-[12px] sm:rounded-[20px] overflow-hidden bg-[#111]">
+                  <Image 
+                    src="/assets/tishOverview/4.png"
+                    alt="Tish Wonders 5"
+                    fill
+                    className="object-cover object-center hover:scale-105 transition-transform duration-700"
+                    sizes="(max-width: 768px) 33vw, 15vw"
+                  />
+                </div>
+              </FadeUp>
+            </div>
           </div>
         </FadeRight>
 
         {/* Left Column (Text & Stats) */}
-        <FadeLeft>
-          <div className="flex flex-col w-full lg:max-w-[650px]  lg:pt-12">
+        <FadeLeft className="flex-1 w-full max-w-[550px]">
+          <div className="flex flex-col w-full lg:pt-0">
           
           <span 
             className="hidden lg:block font-semibold text-white mb-6 uppercase text-[12px] sm:text-[14px] leading-[1.5] sm:leading-[21px] tracking-[2.52px]"

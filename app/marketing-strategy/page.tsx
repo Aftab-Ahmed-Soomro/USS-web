@@ -181,8 +181,9 @@ const googleAdsUssPoints = [
 
 const emailStats = [
   { value: "5x", label: "Up to 5X ROAS" },
-  { value: "55M", label: "AED in Revenue" },
-  { value: "485k", label: "Leads Generated" },
+  { value: "50+", label: "Start Ups Turned Profitable" },
+  { value: "75M+", label: "AED In Client Revenue" },
+  { value: "645k+", label: "Leads Generated for clients" },
   { value: "100+", label: "Brands Worldwide" },
 ];
 

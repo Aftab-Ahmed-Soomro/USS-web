@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 // All 37 brand card images
 const ALL_BRAND_CARDS = Array.from(
-  { length: 37 },
+  { length: 41 },
   (_, i) => ({ image: `/assets/brands/brands/${i + 1}.webp` })
 );
 
@@ -24,21 +24,25 @@ const ecwLogos = [
   "https://emmanuelcolewilliams.com/wp-content/uploads/2026/05/08.png",
   "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/09-1.png",
   "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/010-1.png",
+  "/assets/newLogos/Precision Talk.png",
   "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/011-1.png",
   "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/012-1.png",
   "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/013-1.png",
   "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/014-1.png",
   "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/015-1.png",
+  "/assets/newLogos/Golden-Falcon-white-transparent.png",
   "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/016-1.png",
   "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/017-1.png",
   "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/018-1.png",
   "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/019-1.png",
   "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/020-1.png",
+  "/assets/newLogos/Beyond Performance.png",
   "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/021-1.png",
   "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/022-1.png",
   "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/023-1.png",
   "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/024-1.png",
   "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/025-1.png",
+  "/assets/newLogos/Anthalora.png",
   "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/026-1.png",
   "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/027-1.png",
   "https://emmanuelcolewilliams.com/wp-content/uploads/2026/04/028-1.png",

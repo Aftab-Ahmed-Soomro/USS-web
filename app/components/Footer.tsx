@@ -8,23 +8,23 @@ import { useState } from "react";
 const offices = [
   {
     city: "Dubai",
-    lines: ["Flowork Offices, Business Park 4,", "Dubai Hills, United Arab Emirates"],
-  },
-  {
-    city: "London",
-    lines: ["Office 4, Green Dragon House", "London, CR0 1FS, United Kingdom"],
+    lines: ["Flowork Offices", "Business Park 4", "Dubai Hills, United Arab Emirates"],
   },
   {
     city: "Atlanta",
-    lines: ["Office 1175, Peachtree St NE, #", "Atlanta, GA 30361, United States"],
+    lines: ["Office 1175", "Peachtree Street NE", "30361","Atlanta",  "United States"],
+  },
+  {
+    city: "London",
+    lines: ["Office 4", "Green Dragon House", "CR0 1FS", "London", "United Kingdom"],
   },
 ];
 
 const quickLinks = [
   { name: "About Us", href: "/about" },
-  { name: "Services", href: "/" },
-  { name: "Work", href: "/projects" },
-  { name: "Contact", href: "/contact" },
+  { name: "Our Services", href: "/" },
+  { name: "Our Work", href: "/projects" },
+  { name: "Contact Us", href: "/contact" },
   { name: "Book a Consultation", href: "/contact" }
 ];
 

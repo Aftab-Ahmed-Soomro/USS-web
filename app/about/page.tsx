@@ -11,9 +11,10 @@ import FadeRight from "../components/FadeRight";
 import { UssDifferentSection } from "../components/UssDifferentSection";
 
 const stats = [
-{ value: "5x", label: "Up to 5X ROAS" },
-  { value: "55M", label: "AED Generated in Revenue" },
-  { value: "485k", label: "Leads Generated" },
+  { value: "5x", label: "Up to 5X ROAS" },
+  { value: "50+", label: "Start Ups Turned Profitable" },
+  { value: "75M+", label: "AED In Client Revenue" },
+  { value: "645k+", label: "Leads Generated for clients" },
   { value: "100+", label: "Brands Worldwide" },
 ];
 
@@ -38,13 +39,13 @@ export default function AboutPage() {
                 meet our founder &
               </p>
               <span className="text-[#fff] font-medium text-[32px] min-[375px]:text-[32px] sm:text-[56px] tracking-tight leading-none">
-                  ceo{" "}
-                </span>
+                ceo{" "}
+              </span>
               <span
                 className="text-[#FF5500] text-[42px] min-[375px]:text-[42px] sm:text-[72px] italic timesFontFamily tracking-tight leading-[0.7]"
-                style={{  fontWeight: 400 }}
+                style={{ fontWeight: 400 }}
               >
-                
+
                 emmanuel
               </span>
             </div>
@@ -133,7 +134,7 @@ export default function AboutPage() {
         </section>
 
         <Numbers stats={stats} />
-        <UssDifferentSection />               
+        <UssDifferentSection />
         <Team />
       </main>
 

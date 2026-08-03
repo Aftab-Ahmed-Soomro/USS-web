@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -36,6 +36,14 @@ const cards = [
 
 function SequentialVideoPlayer({ videos }: { videos: string[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setCurrentIndex((prev) => (prev + 1) % videos.length);
+    }, 20000); // 20 seconds
+
+    return () => clearTimeout(timer);
+  }, [currentIndex, videos.length]);
 
   return (
     <video

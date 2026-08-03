@@ -6,24 +6,15 @@ import FadeUp from "./FadeUp";
 import FadeRight from "./FadeRight";
 
 const regions = [
-  {
-    name: "Atlanta",
-    description: (
-      <>
-        Office 1175, Peachtree St NE,<br />
-        Atlanta, 30361,<br />
-        United States
-      </>
-    ),
-    image: "/assets/Atlanta.png",
-    alt: "United States skyline at sunset",
-  },
+  
   {
     name: "London",
     description: (
       <>
-        Office 4, Green Dragon House,<br />
-        London, CR0 1FS,<br />
+        Office 4<br /> 
+        Green Dragon House<br />
+        CR0 1FS<br />
+        London<br />
         United Kingdom
       </>
     ),
@@ -31,11 +22,26 @@ const regions = [
     alt: "United Kingdom skyline at night",
   },
   {
+    name: "Atlanta",
+    description: (
+      <>
+        Office 1175<br /> 
+        Peachtree Street NE<br />
+        30361<br />
+        Atlanta<br />
+        United States
+      </>
+    ),
+    image: "/assets/Atlanta.png",
+    alt: "United States skyline at sunset",
+  },
+  {
     name: "Dubai",
     description: (
       <>
         Flowork Offices<br />
-        Business Park 4, Dubai Hills<br />
+        Business Park 4<br /> 
+        Dubai Hills<br />
         United Arab Emirates
       </>
     ),
