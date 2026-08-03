@@ -7,7 +7,8 @@ const IMAGES = [
   "/assets/about-slider-images/1.jpeg",
   "/assets/about-slider-images/2.jpeg",
   "/assets/about-slider-images/3.jpeg",
-  "/assets/about-slider-images/4.jpeg",
+  "/assets/about-slider-images/4.png",
+  "/assets/about-slider-images/5.jpeg",
 ];
 
 const AUTOPLAY_INTERVAL = 4000;

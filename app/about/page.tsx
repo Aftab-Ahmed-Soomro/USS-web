@@ -113,7 +113,7 @@ export default function AboutPage() {
 
               {/* Quote — rises up */}
               <FadeUp delay={0.45}>
-                <blockquote className="text-[1.25rem]text-[1.45rem] mt-0 sm:mt-4 md:text-[1.65rem] lg:text-[32px] font-medium leading-[30px] sm:leading-[35px] tracking-[0%] text-white max-w-[500px] text-center sm:text-start">
+                <blockquote className="text-[1.25rem] mt-0 sm:mt-4 md:text-[1.65rem] lg:text-[32px] font-medium leading-[30px] sm:leading-[35px] tracking-[0%] text-white max-w-[500px] text-center sm:text-start">
                   &ldquo;Structured marketing systems built for long term growth.&rdquo;
                 </blockquote>
               </FadeUp>
