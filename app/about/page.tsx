@@ -76,7 +76,7 @@ export default function AboutPage() {
                 {/* Bio text — rises up */}
                 <FadeUp delay={0.3}>
                   <p className="text-[13px] sm:text-[14px] leading-[23.8px] font-light text-[#F5F5F5] max-w-full sm:max-w-[350px] text-center sm:text-start">
-                    My name is Emmanuel, Founder & CEO of USS. I've built and scaled multiple businesses, both my own companies and for clients. Having worked with over 50 SME clients across a wide range of industries, I've seen what it takes to grow a business at every stage.
+                    My name is Emmanuel, Founder & CEO of USS. I've built &  scaled multiple businesses, both my own companies & on behalf of our clients. Having worked with 50+ SME clients across a wide range of industries, I've seen what it takes to grow a business at every stage.
                   </p>
                 </FadeUp>
 
@@ -121,11 +121,15 @@ export default function AboutPage() {
 
               {/* Signed row — slides in from right */}
               <FadeRight delay={0.55}>
-                <div className="mt-10 sm:mt-24 flex items-center w-full gap-4">
+                <div className="mt-10 sm:mt-12 flex items-center w-full gap-4">
                   <div className="h-[1px] bg-white/20 flex-grow" />
-                  <span className="text-[#F5F5F5] text-[9px] font-medium tracking-[3px] shrink-0 uppercase">
-                    Signed, E.C.W.
-                  </span>
+                  <Image
+                    src="/assets/Signature.png"
+                    alt="Signature"
+                    width={240}
+                    height={80}
+                    className="h-16 sm:h-26 w-auto object-contain shrink-0 brightness-0 invert"
+                  />
                 </div>
               </FadeRight>
 

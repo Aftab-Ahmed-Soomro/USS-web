@@ -7,31 +7,28 @@ import { motion } from "framer-motion";
 const cards = [
   {
     videos: [
+      "https://unitedstrategicsolutions.com/assets/360_home/GALA BEHIND THE SCENE EDIT.webm",
       "https://unitedstrategicsolutions.com/assets/360_home/Agency 8 Event.webm",
-      "https://unitedstrategicsolutions.com/assets/360_home/Cinnamood BTS shoot.webm",
-      "https://unitedstrategicsolutions.com/assets/360_home/DIRECTION 3.webm",
-      "https://unitedstrategicsolutions.com/assets/360_home/Dubai hills office v2_prob3.webm",
+      "https://unitedstrategicsolutions.com/assets/360_home/USS-x-WWT-Gala.webm"
     ],
-    alt: "USS Different 1",
+    alt: "LEFT",
   },
   {
     videos: [
-      "https://unitedstrategicsolutions.com/assets/360_home/GALA BEHIND THE SCENE EDIT.webm",
       "https://unitedstrategicsolutions.com/assets/360_home/Hot seat 1 updated w_captions.webm",
-      "https://unitedstrategicsolutions.com/assets/360_home/Hot seat 1.webm",
+      "https://unitedstrategicsolutions.com/assets/360_home/Dubai hills office v2_prob3.webm",
+      "https://unitedstrategicsolutions.com/assets/360_home/Whats-new.webm",
+      "https://unitedstrategicsolutions.com/assets/360_home/USS-narrator-updated.webm"
+    ],
+    alt: "MIDDLE",
+  },
+  {
+    videos: [
+      "https://unitedstrategicsolutions.com/assets/360_home/Cinnamood BTS shoot.webm",
       "https://unitedstrategicsolutions.com/assets/360_home/Idea 8 - BTS v2.webm",
     ],
-    alt: "USS Different 2",
-  },
-  {
-    videos: [
-      "https://unitedstrategicsolutions.com/assets/360_home/Motion USS.webm",
-      "https://unitedstrategicsolutions.com/assets/360_home/USS-narrator-updated.webm",
-      "https://unitedstrategicsolutions.com/assets/360_home/USS-x-WWT-Gala.webm",
-      "https://unitedstrategicsolutions.com/assets/360_home/Whats-new.webm",
-    ],
-    alt: "USS Different 3",
-  },
+    alt: "RIGHT",
+  }
 ];
 
 function SequentialVideoPlayer({ videos }: { videos: string[] }) {

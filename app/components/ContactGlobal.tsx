@@ -14,7 +14,7 @@ const regions = [
         Office 4<br /> 
         Green Dragon House<br />
         CR0 1FS<br />
-        London<br />
+        {/* London<br /> */}
         United Kingdom
       </>
     ),
@@ -28,7 +28,7 @@ const regions = [
         Office 1175<br /> 
         Peachtree Street NE<br />
         30361<br />
-        Atlanta<br />
+        {/* Atlanta<br /> */}
         United States
       </>
     ),

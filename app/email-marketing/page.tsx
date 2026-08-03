@@ -195,7 +195,7 @@ function EmailOverview() {
           </StaggerItem>
 
           <StaggerItem>
-            <h2 className="text-[30px] min-[375px]:text-[32px] font-medium leading-[1.1] tracking-[-1.5px] sm:text-[56px] sm:leading-[70px]">
+            <h2 className="text-[30px] lowercase min-[375px]:text-[32px] font-medium leading-[1.1] tracking-[-1.5px] sm:text-[56px] sm:leading-[70px]">
               Our Approach to <br />
               <span
                 className="text-[36px] font-normal italic tracking-[-1.5px] text-[#ff5500] sm:text-[72px] sm:leading-[70px]"

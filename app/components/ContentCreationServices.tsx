@@ -103,7 +103,7 @@ export function ContentCreationServices() {
         <div className="flex flex-col lg:flex-row justify-between gap-[60px] lg:gap-[100px] mb-[120px]">
           {/* Left Text */}
           <div className="lg:w-[45%] flex flex-col">
-            <FadeUp delay={0.1}>
+            {/* <FadeUp delay={0.1}>
               <div className="flex items-center gap-4 mb-[30px] sm:mb-[40px]">
                 <span className="font-[var(--font-inter)] text-[#ff5500] font-medium text-[16px] leading-[16.5px] tracking-[4.4px] align-middle">
                   01
@@ -113,7 +113,7 @@ export function ContentCreationServices() {
                   CHAPTER ONE
                 </span>
               </div>
-            </FadeUp>
+            </FadeUp> */}
 
             <FadeUp delay={0.2}>
               <h3 className="font-[var(--font-be-vietnam)] font-light text-[38px] sm:text-[80px] leading-[1.1] sm:leading-[80px] tracking-[-2.4px] align-middle mb-[24px] sm:mb-[30px]">
@@ -159,13 +159,13 @@ export function ContentCreationServices() {
 
           {/* Right Grid */}
           <div className="lg:w-[50%] flex flex-col">
-            <FadeUp delay={0.2}>
+            {/* <FadeUp delay={0.2}>
               <div className="flex justify-between items-center mb-[20px] sm:mb-[30px]">
                 <span className="font-[var(--font-inter)] font-light text-[10px] leading-[15px] tracking-[3px] align-middle text-white/60 uppercase">
                   COMPOSITION / 01
                 </span>
               </div>
-            </FadeUp>
+            </FadeUp> */}
 
             <div className="flex gap-[12px] sm:gap-[16px]">
               {/* Col 1 */}
@@ -202,13 +202,13 @@ export function ContentCreationServices() {
         <div className="flex flex-col-reverse lg:flex-row justify-between gap-[60px] lg:gap-[100px]">
           {/* Left Grid */}
           <div className="lg:w-[50%] flex flex-col">
-            <FadeUp delay={0.2}>
+            {/* <FadeUp delay={0.2}>
               <div className="flex justify-between items-center mb-[20px] sm:mb-[30px]">
                 <span className="font-[var(--font-inter)] font-light text-[10px] leading-[15px] tracking-[3px] align-middle text-white/60 uppercase">
                   COMPOSITION / 02
                 </span>
               </div>
-            </FadeUp>
+            </FadeUp> */}
 
             <div className="flex gap-[12px] sm:gap-[16px]">
               {/* Col 1 */}
@@ -242,7 +242,7 @@ export function ContentCreationServices() {
 
           {/* Right Text */}
           <div className="lg:w-[45%] flex flex-col">
-            <FadeUp delay={0.1}>
+            {/* <FadeUp delay={0.1}>
               <div className="flex items-center gap-4 mb-[30px] sm:mb-[40px]">
                 <span className="font-[var(--font-inter)] text-[#ff5500] font-medium text-[16px] leading-[16.5px] tracking-[4.4px] align-middle">
                   02
@@ -252,7 +252,7 @@ export function ContentCreationServices() {
                   CHAPTER TWO
                 </span>
               </div>
-            </FadeUp>
+            </FadeUp> */}
 
             <FadeUp delay={0.2}>
               <h3 className="font-[var(--font-be-vietnam)] font-light text-[38px] sm:text-[80px] leading-[1.1] sm:leading-[80px] tracking-[-2.4px] align-middle mb-[24px] sm:mb-[30px]">

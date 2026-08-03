@@ -110,21 +110,30 @@ export function Brands() {
         {/* ── Logo marquee — continuous scroll ── */}
         <div className="mt-[30px] sm:mt-[50px] w-full mx-auto max-w-[1000px]  overflow-hidden">
           <div className="logos-track flex items-center gap-x-0 sm:gap-x-6">
-            {partnerLogos.map((src, index) => (
-              <article
-                key={index}
-                className="group relative h-[60px] min-[375px]:h-[75px] sm:h-[90px] lg:h-[115px] w-[130px] min-[375px]:w-[150px] sm:w-[170px] shrink-0"
-              >
-                <Image
-                  src={src}
-                  alt="Partner brand logo"
-                  fill
-                  loading="lazy"
-                  sizes="(max-width: 375px) 130px, (max-width: 640px) 150px, 170px"
-                  className="object-contain brightness-0 invert transition duration-500 scale-[1.25] sm:scale-100 group-hover:scale-[1.35] sm:group-hover:scale-105 group-hover:opacity-100"
-                />
-              </article>
-            ))}
+            {partnerLogos.map((src, index) => {
+              const isLargeLogo =
+                src.includes("Golden-Falcon") || src.includes("022-1.png");
+
+              return (
+                <article
+                  key={index}
+                  className="group relative h-[60px] min-[375px]:h-[75px] sm:h-[90px] lg:h-[115px] w-[130px] min-[375px]:w-[150px] sm:w-[170px] shrink-0"
+                >
+                  <Image
+                    src={src}
+                    alt="Partner brand logo"
+                    fill
+                    loading="lazy"
+                    sizes="(max-width: 375px) 130px, (max-width: 640px) 150px, 170px"
+                    className={`object-contain brightness-0 invert transition duration-500 group-hover:opacity-100 ${
+                      isLargeLogo
+                        ? "scale-[0.85] sm:scale-[0.7] group-hover:scale-[0.95] sm:group-hover:scale-[0.75]"
+                        : "scale-[1.25] sm:scale-100 group-hover:scale-[1.35] sm:group-hover:scale-105"
+                    }`}
+                  />
+                </article>
+              );
+            })}
           </div>
         </div>
       </div>

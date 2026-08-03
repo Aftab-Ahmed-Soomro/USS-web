@@ -76,31 +76,11 @@ export default function TeamAccordion({ heading, data = defaultTeamData }: TeamA
               {heading ? (
                 heading
               ) : (
-                <h2 className="text-[32px] sm:text-[36px] md:text-[64px] lg:text-[75px] leading-[1] tracking-[-1px] lg:tracking-[-6px] font-light lowercase" style={{ fontWeight: 300 }}>
+                <h2 className="text-[32px] sm:text-[36px] md:text-[64px] lg:text-[75px] leading-[1] tracking-[-1.5px] sm:tracking-[-3px] font-light lowercase" style={{ fontWeight: 300 }}>
 
                   every website is built by<br />
-                  a team of <span className="relative inline-block z-10 whitespace-nowrap">
+                  a team of <span className="relative inline-block z-10 whitespace-nowrap text-[#ff5500] timesFontFamily italic text-[42px] sm:text-[51px] md:text-[79px] lg:text-[90px]">
                     specialists
-
-                    {/* Orange Glow */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[115%] h-[135%] bg-[#ff5500]/30 blur-[24px] -z-10 rounded-[100%] pointer-events-none"></div>
-
-                    {/* Hand-Drawn Circle SVG */}
-                    <svg
-                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[48%] w-[128%] h-[160%] pointer-events-none overflow-visible"
-                      viewBox="0 0 400 150"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M 32,72 C 22,32 90,14 205,15 C 320,16 388,32 384,72 C 380,112 315,138 195,136 C 75,134 16,108 26,66 C 34,36 102,20 220,18"
-                        stroke="#ff5500"
-                        strokeWidth="3.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="opacity-95"
-                      />
-                    </svg>
 
                   </span><br />
                   {/* art designers */}

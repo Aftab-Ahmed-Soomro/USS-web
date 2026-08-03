@@ -73,7 +73,7 @@ export default function ConversationFlow() {
               </span>
             </FadeUp>
             <FadeUp delay={0.3}>
-              <h2 className="mt-1.5 sm:mt-3 font-semibold text-[22px] min-[375px]:text-[26px] sm:text-[40px] md:text-[52px] leading-[1.1] tracking-[-0.5px] sm:tracking-[-1px] text-white">
+              <h2 className="mt-1.5 sm:mt-3 font-semibold lowercase text-[22px] min-[375px]:text-[26px] sm:text-[40px] md:text-[52px] leading-[1.1] tracking-[-0.5px] sm:tracking-[-1px] text-white">
                 Customer Flow
               </h2>
             </FadeUp>

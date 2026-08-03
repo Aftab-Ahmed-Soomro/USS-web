@@ -27,7 +27,7 @@ export default function OurOrganicSocialMediaApproach() {
               >
                 our{" "}
               </span>
-              <span className="timesFontFamily italic font-normal text-[#FF5500] text-[42px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-1.2px]"
+              <span className="timesFontFamily italic font-normal text-[#FF5500] text-[42px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-1.5px]"
               >
                 organic{" "}
               </span>

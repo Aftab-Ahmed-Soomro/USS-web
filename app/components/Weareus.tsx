@@ -42,10 +42,10 @@ export default function WeAreUSS() {
         <FadeRight delay={0.1} className="relative z-10">
           <div className="relative z-1000 flex items-center justify-center sm:justify-start lg:justify-end py-8 sm:py-16 lg:py-0 ml-0 lg:-ml-2 order-3 lg:order-none">
             <div className="text-center sm:text-left lg:text-right text-[#FFFFFF] max-w-[440px] flex flex-col gap-6 sm:gap-8">
-              <p className="text-[13px] sm:text-[14px] leading-[28px] sm:leading-[32.5px] font-normal tracking-[-0.1px]">
+              <p className="text-[13px] sm:text-[18px] leading-[28px] sm:leading-[32.5px] font-normal tracking-[-0.1px]">
                 At USS, we believe great marketing starts with understanding your business. For over 10 years, we've partnered with brands across the UK, US and Middle East, creating strategies, campaigns and creatives built around your goals.
               </p>
-              <p className="text-[13px] sm:text-[14px] leading-[28px] sm:leading-[32.5px] font-normal tracking-[-0.1px]">
+              <p className="text-[13px] sm:text-[18px] leading-[28px] sm:leading-[32.5px] font-normal tracking-[-0.1px]">
                 No two businesses are the same, neither is our approach.
               </p>
             </div>

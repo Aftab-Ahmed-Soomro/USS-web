@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import FadeRight from "./FadeRight";
 import FadeLeft from "./FadeLeft";
@@ -18,18 +19,18 @@ export function SadiaPsychologyProfile() {
           </h2>
         </div>
         {/* Left Column (Collage Grid) */}
-        <FadeLeft className="w-full lg:w-[500px] shrink-0 h-[480px] sm:h-[580px] lg:h-[650px]">
-          <div className="grid grid-cols-3 gap-2.5 sm:gap-4 w-full h-full">
-            {/* Left Column (spans 2) */}
-            <div className="col-span-2 flex flex-col gap-2.5 sm:gap-4 h-full">
+        <FadeLeft className="w-full lg:w-[540px] shrink-0 h-[480px] sm:h-[580px] lg:h-[650px]">
+          <div className="grid grid-cols-5 gap-2.5 sm:gap-4 w-full h-full">
+            {/* Left Column (spans 3) */}
+            <div className="col-span-3 flex flex-col gap-2.5 sm:gap-4 h-full">
               <FadeUp delay={0.1} className="w-full h-[54%]">
                 <div className="relative w-full h-full rounded-[12px] sm:rounded-[20px] overflow-hidden bg-[#f0f0f0]">
                   <Image 
-                    src="/assets/psycho.png"
+                    src="/assets/sadiq.png"
                     alt="Sadia Psychology 1"
                     fill
                     className="object-cover object-center hover:scale-105 transition-transform duration-700"
-                    sizes="(max-width: 768px) 66vw, 30vw"
+                    sizes="(max-width: 768px) 60vw, 30vw"
                   />
                 </div>
               </FadeUp>
@@ -41,7 +42,7 @@ export function SadiaPsychologyProfile() {
                       alt="Sadia Psychology 2"
                       fill
                       className="object-cover object-center hover:scale-105 transition-transform duration-700"
-                      sizes="(max-width: 768px) 33vw, 15vw"
+                      sizes="(max-width: 768px) 30vw, 15vw"
                     />
                   </div>
                 </FadeUp>
@@ -52,15 +53,15 @@ export function SadiaPsychologyProfile() {
                       alt="Sadia Psychology 3"
                       fill
                       className="object-cover object-center hover:scale-105 transition-transform duration-700"
-                      sizes="(max-width: 768px) 33vw, 15vw"
+                      sizes="(max-width: 768px) 30vw, 15vw"
                     />
                   </div>
                 </FadeUp>
               </div>
             </div>
 
-            {/* Right Column */}
-            <div className="flex flex-col gap-2.5 sm:gap-4 h-full">
+            {/* Right Column (spans 2) */}
+            <div className="col-span-2 flex flex-col gap-2.5 sm:gap-4 h-full">
               <FadeUp delay={0.15} className="w-full h-[36%]">
                 <div className="relative w-full h-full rounded-[12px] sm:rounded-[20px] overflow-hidden bg-[#f0f0f0]">
                   <Image 
@@ -68,18 +69,18 @@ export function SadiaPsychologyProfile() {
                     alt="Sadia Psychology 4"
                     fill
                     className="object-cover object-center hover:scale-105 transition-transform duration-700"
-                    sizes="(max-width: 768px) 33vw, 15vw"
+                    sizes="(max-width: 768px) 40vw, 20vw"
                   />
                 </div>
               </FadeUp>
               <FadeUp delay={0.35} className="w-full h-[61%]">
                 <div className="relative w-full h-full rounded-[12px] sm:rounded-[20px] overflow-hidden bg-[#f0f0f0]">
                   <Image 
-                    src="/assets/sadiaOverview/4.png"
+                    src="/assets/sadiq2.jpeg"
                     alt="Sadia Psychology 5"
                     fill
                     className="object-cover object-center hover:scale-105 transition-transform duration-700"
-                    sizes="(max-width: 768px) 33vw, 15vw"
+                    sizes="(max-width: 768px) 40vw, 20vw"
                   />
                 </div>
               </FadeUp>
@@ -153,7 +154,8 @@ export function SadiaPsychologyProfile() {
             Sadia Psychology is a content creator and educator with a highly engaged global audience. USS partnered with Sadia to develop her commercial strategy, build a dedicated website and deliver a Black Friday launch that successfully turned her audience into customers.
           </p>
 
-          <button 
+          <Link 
+            href="/projects/sadia-psychology"
             className="font-normal flex items-center justify-center gap-2 border border-black rounded-full px-8 py-3 w-fit hover:bg-black hover:text-white transition-colors text-[14px] sm:text-[15px] leading-[1.5] sm:leading-[22.5px]"
           >
             See More
@@ -161,7 +163,7 @@ export function SadiaPsychologyProfile() {
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
-          </button>
+          </Link>
           </div>
         </FadeRight>
 
