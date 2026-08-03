@@ -11,10 +11,9 @@ import FadeRight from "../components/FadeRight";
 import { UssDifferentSection } from "../components/UssDifferentSection";
 
 const stats = [
-  { value: "5x", label: "Up to 5X ROAS" },
-  { value: "50+", label: "Start Ups Turned Profitable" },
   { value: "75M+", label: "AED In Client Revenue" },
-  { value: "645k+", label: "Leads Generated for clients" },
+  { value: "645k+", label: "Leads Generated for Clients" },
+  { value: "50+", label: "Start Ups Turned Profitable" },
   { value: "100+", label: "Brands Worldwide" },
 ];
 
@@ -75,7 +74,7 @@ export default function AboutPage() {
 
                 {/* Bio text — rises up */}
                 <FadeUp delay={0.3}>
-                  <p className="text-[13px] sm:text-[14px] leading-[23.8px] font-light text-[#F5F5F5] max-w-full sm:max-w-[350px] text-center sm:text-start">
+                  <p className="text-[13px] sm:text-[17px] leading-[23.8px] font-light text-[#F5F5F5] max-w-full sm:max-w-[350px] text-center sm:text-start">
                     My name is Emmanuel, Founder & CEO of USS. I've built &  scaled multiple businesses, both my own companies & on behalf of our clients. Having worked with 50+ SME clients across a wide range of industries, I've seen what it takes to grow a business at every stage.
                   </p>
                 </FadeUp>
@@ -114,21 +113,21 @@ export default function AboutPage() {
 
               {/* Quote — rises up */}
               <FadeUp delay={0.45}>
-                <blockquote className="text-[1.25rem] min-[375px]:text-[1.45rem] mt-0 sm:mt-4 md:text-[1.65rem] lg:text-[32px] font-medium leading-[30px] sm:leading-[35px] tracking-[0%] text-white max-w-[500px] text-center sm:text-start">
+                <blockquote className="text-[1.25rem]text-[1.45rem] mt-0 sm:mt-4 md:text-[1.65rem] lg:text-[32px] font-medium leading-[30px] sm:leading-[35px] tracking-[0%] text-white max-w-[500px] text-center sm:text-start">
                   &ldquo;Structured marketing systems built for long term growth.&rdquo;
                 </blockquote>
               </FadeUp>
 
               {/* Signed row — slides in from right */}
               <FadeRight delay={0.55}>
-                <div className="mt-10 sm:mt-12 flex items-center w-full gap-4">
+                <div className="-mt-4 flex items-center w-full gap-4">
                   <div className="h-[1px] bg-white/20 flex-grow" />
                   <Image
                     src="/assets/Signature.png"
                     alt="Signature"
-                    width={240}
-                    height={80}
-                    className="h-16 sm:h-26 w-auto object-contain shrink-0 brightness-0 invert"
+                    width={360}
+                    height={120}
+                    className="h-20 sm:h-36 lg:h-40 w-auto object-contain shrink-0 brightness-0 invert"
                   />
                 </div>
               </FadeRight>
