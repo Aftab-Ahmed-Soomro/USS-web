@@ -131,6 +131,24 @@ function Spark() {
   );
 }
 
+function renderLabel(label: string) {
+  if (label === "Brands Worldwide") {
+    return (
+      <>
+        Brands<br className="sm:hidden" /> Worldwide
+      </>
+    );
+  }
+  if (label.includes("\n")) {
+    return label.split("\n").map((line, idx) => (
+      <span key={idx} className="block sm:inline">
+        {line}{idx < label.split("\n").length - 1 ? " " : ""}
+      </span>
+    ));
+  }
+  return label;
+}
+
 // ─── Numbers ──────────────────────────────────────────────────────────────────
 
 export function Numbers({
@@ -207,7 +225,7 @@ export function Numbers({
                           <AnimatedStat value={stat.value} />
                         </p>
                         <p className="mt-[3px] sm:mt-[8px] text-[7.5px] min-[375px]:text-[8.5px] sm:text-[12px] lg:text-[13px] font-light leading-[1.15] sm:leading-[1.3] text-white/80 sm:text-white whitespace-normal break-words max-w-[68px] min-[375px]:max-w-[82px] sm:max-w-none">
-                          {stat.label}
+                          {renderLabel(stat.label)}
                         </p>
                       </div>
                     </div>
@@ -228,7 +246,7 @@ export function Numbers({
                         <AnimatedStat value={stat.value} />
                       </p>
                       <p className="mt-[4px] sm:mt-[8px] text-[7px] min-[375px]:text-[8px] sm:text-[14px] font-light leading-tight sm:leading-none text-white/70 sm:text-white whitespace-normal break-words max-w-[80px] sm:max-w-none tracking-tight sm:tracking-normal">
-                        {stat.label}
+                        {renderLabel(stat.label)}
                       </p>
                     </div>
                   </div>
