@@ -1874,7 +1874,7 @@ galleryImages: [
     heroImage: {
       src: "https://unitedstrategicsolutions.com/assets/fabri/fabri.jpg",
       alt: "Fabri Elite personal brand hero image",
-      position: "50% 50%",
+      position: "50% 40%",
     },
     overviewSubtitle: "FABRI ELITE AGENCY",
     galleryImages: [
@@ -1884,7 +1884,7 @@ galleryImages: [
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/fabri/2.jpg",
+        src: "/assets/fabra.jpg",
         alt: "Fabri Elite presenting",
         position: "50% 50%",
       },
