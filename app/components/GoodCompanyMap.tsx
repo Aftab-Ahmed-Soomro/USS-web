@@ -10,7 +10,7 @@ export function GoodCompanyMap() {
       src: "/assets/mapLogos/1.png",
       alt: "Precision Talk",
       // Mobile settings (screen < 640px)
-      mobilePos: "top-[74%] left-[80%]",
+      mobilePos: "top-[68%] left-[77%]",
       mobileSize: "w-[45px]",
       // Desktop settings (screen >= 640px)
       desktopPos: "sm:top-[66%] sm:left-[80%]",
@@ -30,7 +30,7 @@ export function GoodCompanyMap() {
       src: "/assets/mapLogos/3.png",
       alt: "Hiba by Amthakara",
       // Mobile settings
-      mobilePos: "top-[58%] left-[32%]",
+      mobilePos: "top-[58%] left-[30.5%]",
       mobileSize: "w-[40px]",
       // Desktop settings
       desktopPos: "sm:top-[58%] sm:left-[34%]",
@@ -89,7 +89,7 @@ export function GoodCompanyMap() {
               alt="Companies we work with"
               width={1000}
               height={500}
-              className="absolute max-w-[1000px] top-0 left-[8%] sm:left-20 w-[90%] sm:w-full h-auto mx-auto object-contain"
+              className="absolute max-w-[1000px] top-0 left-[6%] sm:left-20 w-[90%] sm:w-full h-auto mx-auto object-contain"
               style={{ padding: "inherit" }}
               sizes="(max-width: 640px) 90vw, 1000px"
             />
