@@ -25,7 +25,7 @@ export function BuildGrowthSection() {
 
 
   return (
-    <section id="build-growth" className="bg-black text-white py-[60px] sm:py-[100px] flex flex-col items-center overflow-hidden">
+    <section id="build-growth" className="bg-black text-white pt-[60px] pb-0 sm:pb-10 sm:pt-[100px] flex flex-col items-center overflow-hidden">
       <motion.div
         className="text-center px-4 max-w-[1150px] mx-auto w-full"
         initial={{ opacity: 0, y: 30 }}

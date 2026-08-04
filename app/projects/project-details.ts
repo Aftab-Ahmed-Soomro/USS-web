@@ -120,19 +120,20 @@ export const projectDetails = [
       },
     ],
     focusAreas: ["WhatsApp Marketing", "Email Marketing", "Website Transformation"],
-    videoTitle: "mall of emirates launch",
+    videoTitle: "explore real estate in dubai",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
       src: "https://unitedstrategicsolutions.com/assets/blurred.png",
       alt: "Blurred video preview of the Agency 8 real estate campaign",
       position: "50% 44%",
     },
+    videoSrc: "https://unitedstrategicsolutions.com/assets/agency/Elite Residences Penthouse 8101.mp4",
     metadata: {
       title: "Agency 8 Email & WhatsApp Strategy | USS Projects",
       description:
         "A USS project overview for Agency 8, covering custom website development, email marketing, WhatsApp marketing integration, and digital strategy.",
     },
-    hideVideoSection: true,
+    // hideVideoSection: true,
   },
   {
     slug: "sadia-psychology",

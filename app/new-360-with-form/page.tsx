@@ -549,7 +549,7 @@ export default function New360WithForm() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-50px" }}
-        className="relative z-10 w-full flex flex-col justify-center items-center pt-0 bg-black gap-6 sm:gap-8 mb-20"
+        className="relative z-10 w-full flex flex-col justify-center items-center pt-0 bg-black gap-6 sm:gap-8 mb-10 sm:mb-15"
       >
         <h2 id="marketing-strategy" className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
           marketing{" "}
