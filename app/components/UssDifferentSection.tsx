@@ -16,7 +16,6 @@ const cards = [
   {
     videos: [
       "https://unitedstrategicsolutions.com/assets/360_home/Hot seat 1 updated w_captions.webm",
-      "https://unitedstrategicsolutions.com/assets/360_home/Dubai hills office v2_prob3.webm",
       "https://unitedstrategicsolutions.com/assets/360_home/Whats-new.webm",
       "https://unitedstrategicsolutions.com/assets/360_home/USS-narrator-updated.webm"
     ],
@@ -26,6 +25,7 @@ const cards = [
     videos: [
       "https://unitedstrategicsolutions.com/assets/360_home/Cinnamood BTS shoot.webm",
       "https://unitedstrategicsolutions.com/assets/360_home/Idea 8 - BTS v2.webm",
+      "https://unitedstrategicsolutions.com/assets/360_home/Dubai hills office v2_prob3.webm"
     ],
     alt: "RIGHT",
   }
