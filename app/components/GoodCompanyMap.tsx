@@ -5,6 +5,33 @@ import FadeUp from "./FadeUp";
 import FadeRight from "./FadeRight";
 
 export function GoodCompanyMap() {
+  const mapLogos = [
+    {
+      src: "/assets/mapLogos/1.png",
+      alt: "Precision Talk",
+      className: "top-[66%] left-[80%]",
+      imgClass: "w-[85px] sm:w-[120px] md:w-[140px] lg:w-[155px]",
+    },
+    {
+      src: "/assets/mapLogos/2.png",
+      alt: "Golden Falcon",
+      className: "top-[56%] left-[78%]",
+      imgClass: "w-[60px] sm:w-[80px] md:w-[95px] lg:w-[110px]",
+    },
+    {
+      src: "/assets/mapLogos/3.png",
+      alt: "Hiba by Amthakara",
+      className: "top-[58%] left-[34%]",
+      imgClass: "w-[75px] sm:w-[105px] md:w-[125px] lg:w-[140px]",
+    },
+    {
+      src: "/assets/mapLogos/4.png",
+      alt: "Beyond Performance",
+      className: "top-[25%] left-[58%]",
+      imgClass: "w-[85px] sm:w-[120px] md:w-[140px] lg:w-[155px]",
+    },
+  ];
+
   return (
     <section className="relative z-10 border-t border-t-black w-full bg-white py-[50px] sm:py-16 md:py-24 px-4 min-[375px]:px-6 overflow-hidden">
       <div className="w-full max-w-[1150px] mx-auto flex flex-col items-center ">
@@ -51,6 +78,23 @@ export function GoodCompanyMap() {
               sizes="(max-width: 640px) 90vw, 1000px"
             />
           {/* </FadeRight> */}
+
+          {/* Additional 4 logos placed at vacant map locations */}
+          {mapLogos.map((logo, index) => (
+            <FadeUp
+              key={index}
+              delay={0.4 + index * 0.1}
+              className={`absolute ${logo.className} z-20`}
+            >
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                width={160}
+                height={160}
+                className={`${logo.imgClass} h-auto object-contain transition-transform duration-300 pointer-events-auto`}
+              />
+            </FadeUp>
+          ))}
 
         </div>
       </div>
