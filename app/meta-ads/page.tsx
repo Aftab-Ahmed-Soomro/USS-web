@@ -319,11 +319,11 @@ function FinalCta() {
           </p>
         </StaggerItem>
         <StaggerItem>
-          <h2 className="mt-[24px] sm:mt-8 font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[36px] font-medium leading-[1.08] tracking-[-1.5px] sm:text-[55px]">
+          <h2 className="mt-[24px] sm:mt-8 font-[var(--font-be-vietnam)] text-[32px] font-medium leading-[1.08] tracking-[-1.5px] sm:text-[55px]">
             ready to scale
             <br />
             with{" "}
-            <span className="font-[var(--font-cormorant)] text-[1.12em] leading-[1.1] sm:leading-none font-extralight timesFontFamily italic text-[#ff5500]">
+            <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] leading-[1.1] sm:leading-none font-extralight timesFontFamily italic text-[#ff5500]">
               meta ads?
             </span>
           </h2>
@@ -466,7 +466,7 @@ export default function MetaAdsPage() {
       </div>
             
       <RevenueMethod
-        heading={<>How We Build <br className="block sm:hidden" /> High Performing <br className="hidden sm:block" />{" "}<span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>  <br className="block sm:hidden" /> Meta Campaigns</span></>}
+        heading={<>how we build <br className="block sm:hidden" /> high performing <br className="hidden sm:block" />{" "}<span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>  <br className="block sm:hidden" /> Meta Campaigns</span></>}
         cards={[
           { id: '01', title: 'Campaign Strategy', description: 'We define your objectives, audience, budget and campaign structure before launching.', bgImage: '/assets/method1.png' },
           { id: '02', title: 'Audience Targeting', description: 'We build targeted audiences using demographics, interests, behaviours and customer data.', bgImage: '/assets/method2.png' },

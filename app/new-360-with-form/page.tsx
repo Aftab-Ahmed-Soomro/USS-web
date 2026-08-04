@@ -277,7 +277,7 @@ Trusted by over 100 businesses across the UK, US and UAE
 function EmailOverview() {
   return (
     <section className="relative overflow-hidden bg-black">
-      <div className="relative mx-auto grid max-w-[1150px] px-4 min-[375px]:px-6 py-[50px] sm:py-16 lg:grid-cols-[minmax(0,680px)_minmax(320px,430px)] lg:justify-between lg:py-20">
+      <div className="relative mx-auto grid max-w-[1150px] px-6 py-[50px] sm:pt-10 sm:pb-0 lg:grid-cols-[minmax(0,680px)_minmax(320px,430px)] lg:justify-between">
         {/* Image mockup */}
         <FadeRight duration={0.8} delay={0.2} className="order-2 -mx-1 pt-10 sm:mx-0 lg:order-none lg:col-start-2 lg:row-start-1 lg:flex lg:items-start lg:pt-0">
           <div className="relative mx-auto aspect-[463/842] w-full max-w-[260px] min-[375px]:max-w-[300px] sm:max-w-[400px] overflow-hidden bg-white shadow-[0_24px_55px_rgba(0,0,0,0.35)]">
@@ -782,8 +782,8 @@ export default function New360WithForm() {
           </span>
         </h2>
       </motion.div>
-      <EmailOverview />
-      <EmailStrategy />
+        <EmailOverview />
+        <EmailStrategy />
       <EmailVisuals />
       <motion.div
         initial={{ opacity: 0, y: 50 }}

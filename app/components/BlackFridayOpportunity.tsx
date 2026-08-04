@@ -33,10 +33,10 @@ const imageConfigs = [
     fit: "contain"
   },
   {
-    src: "/assets/black-friday/5.jpg",
+    src: "/assets/IMG_2830.png",
     position: "50% 50%",
     mobilePosition: "50% 50%",
-    scale: 3,
+    scale: 1.2,
     mobileScale: 1,
     fit: "contain"
   },
@@ -119,7 +119,7 @@ export function BlackFridayOpportunity() {
             }
           `}</style>
           <div 
-            className="w-full flex gap-[2px] sm:gap-4 overflow-hidden relative h-[250px] sm:h-[400px] lg:h-[500px] arc-clip-path"
+            className="w-full flex gap-[2px] sm:gap-4 overflow-hidden relative h-[250px] sm:h-[400px] lg:h-[600px] arc-clip-path"
           >
              {imageConfigs.map((config, i) => (
                <div key={i} className="flex-1 relative h-full bg-gray-100 overflow-hidden">

@@ -16,6 +16,7 @@ import { Team } from "../components/Team";
 import { RevenueMethod } from "../components/RevenueMethod";
 import { GoodCompanyMap } from "../components/GoodCompanyMap";
 import { Footer } from "../components/Footer";
+import { span } from "framer-motion/client";
 
 const emailStats = [
   { value: "150+", label: "Brand Identities Created" },
@@ -273,12 +274,12 @@ function FinalCta() {
         </StaggerItem>
         <StaggerItem>
           <h2 className="mt-[24px] sm:mt-10 font-[var(--font-be-vietnam)] text-[32px] sm:text-[55px] font-medium leading-[1.08] tracking-[-1.5px]">
-            turn your database
+            good design
             <br />
-            into{" "}
+            speaks{" "}
             <span className="font-[var(--font-cormorant)] text-[42
-            px] sm:text-[62px] leading-[1.1] sm:leading-none font-extralight timesFontFamily italic text-[#ff5500]">
-              repeat revenue
+            px] sm:text-[72px] leading-[1.1] sm:leading-none font-extralight timesFontFamily italic text-[#ff5500]">
+              for itself
             </span>
           </h2>
         </StaggerItem>
@@ -376,7 +377,7 @@ const MarketingStrategy = () => {
       />
       <RevenueMethod
         tagline="OUR PROCESS"
-        heading={<>How we bring <br /><span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>your brand to life</span></>}
+        heading={<>how we bring <br /><span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>your brand to life</span></>}
         cards={[
           { id: '01', title: 'Discover', description: 'Understand your business, audience, competitors and long term goals to build a strong strategic foundation', bgImage: '/assets/method1.png' },
           { id: '02', title: 'Define', description: 'Define your positioning, messaging and creative direction before developing your visual identity', bgImage: '/assets/method2.png' },

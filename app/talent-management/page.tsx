@@ -31,7 +31,7 @@ function FinalCta() {
             turn your website into
             <br />
             a{" "}
-            <span className="font-[var(--font-cormorant)] text-[42px] leading-[1.1] sm:leading-none font-extralight timesFontFamily italic text-[#ff5500]">
+            <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] leading-[1.1] sm:leading-none font-extralight timesFontFamily italic text-[#ff5500]">
               growth asset
             </span>
           </h2>

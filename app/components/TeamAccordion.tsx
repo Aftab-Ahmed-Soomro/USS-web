@@ -76,10 +76,10 @@ export default function TeamAccordion({ heading, data = defaultTeamData }: TeamA
               {heading ? (
                 heading
               ) : (
-                <h2 className="text-[32px] sm:text-[36px] md:text-[64px] lg:text-[75px] leading-[1] tracking-[-1.5px] sm:tracking-[-3px] font-light lowercase" style={{ fontWeight: 300 }}>
+                <h2 className="text-[32px] sm:text-[56px] leading-[1] tracking-[-1.5px] sm:tracking-[-3px] font-light lowercase" style={{ fontWeight: 300 }}>
 
                   every website is built by<br />
-                  a team of <span className="relative inline-block z-10 whitespace-nowrap text-[#ff5500] timesFontFamily italic text-[42px] sm:text-[51px] md:text-[79px] lg:text-[90px]">
+                  a team of <span className="relative inline-block z-10 whitespace-nowrap text-[#ff5500] timesFontFamily italic text-[42px] sm:text-[72px]">
                     specialists
 
                   </span><br />

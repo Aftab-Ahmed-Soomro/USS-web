@@ -402,11 +402,11 @@ function FinalCta() {
             </p>
           </StaggerItem>
           <StaggerItem>
-            <h2 className="mt-6 min-[390px]:mt-8 sm:mt-10 font-[var(--font-be-vietnam)] text-[28px] min-[360px]:text-[32px] min-[390px]:text-[36px] sm:text-[55px] font-medium leading-[1.08] tracking-[-1.5px]">
+            <h2 className="mt-6 min-[390px]:mt-8 sm:mt-10 font-[var(--font-be-vietnam)] text-[32px]  sm:text-[55px] font-medium leading-[1.08] tracking-[-1.5px]">
               build a brand
               <br />
               {" "}
-              <span className="font-[var(--font-cormorant)] text-[1.12em] font-extralight timesFontFamily italic text-[#ff5500]">
+              <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-extralight timesFontFamily italic text-[#ff5500]">
                 people remember
               </span>
             </h2>

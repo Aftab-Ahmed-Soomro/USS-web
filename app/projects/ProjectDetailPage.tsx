@@ -64,6 +64,7 @@ function WorkIconView({ type }: { type: WorkIcon }) {
 
 export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
   const hasVideo = !!(project.videoSrc || project.videoSrcs);
+  const isFlowork = project.slug === "flowork" || project.productName?.toLowerCase() === "flowork";
 
   return (
     <main className="min-h-screen bg-white overflow-hidden">
@@ -71,7 +72,7 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
 
       {/* ── HERO SECTION ── */}
       <section className="bg-[#f7f7f5] px-4 min-[375px]:px-6 pb-[38px] pt-[42px] sm:pb-[44px] sm:pt-[55px] lg:pt-[64px]">
-        <div className="mx-auto grid max-w-[1150px] items-start justify-between gap-10 sm:gap-14 lg:grid-cols-[525px_566px] lg:gap-[74px]">
+        <div className="mx-auto grid max-w-[1150px] items-start justify-between gap-10 sm:gap-14 lg:grid-cols-[550px_566px] lg:gap-[64px]">
           {/* Left — back link, title, description */}
           <div className="lg:pt-[11px]">
             {/* Back link — slides in from left */}
@@ -100,7 +101,7 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
 
             {/* Page title — slides in from left */}
             <FadeLeft delay={0.3}>
-              <h1 className="mt-[16px] sm:mt-[28px] mb-4 sm:mb-6 max-w-[360px] mx-auto sm:mx-0 sm:max-w-[500px] font-[var(--font-be-vietnam)] text-[28px] min-[375px]:text-[32px] font-bold leading-[1.35] tracking-[-0.9px] text-[#141414] sm:text-[44px] text-center sm:text-start">
+              <h1 className={`mt-[16px] sm:mt-[28px] mb-4 sm:mb-6 max-w-[360px] lowercase mx-auto sm:mx-0 ${isFlowork ? "sm:max-w-[550px]" : "sm:max-w-[500px]"} font-[var(--font-be-vietnam)] text-[28px] min-[375px]:text-[32px] font-bold leading-[1.35] tracking-[-0.9px] text-[#141414] sm:text-[44px] text-center sm:text-start`}>
                 {project.title}
               </h1>
             </FadeLeft>
@@ -139,7 +140,7 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
           <div className="mx-auto max-w-[1180px]">
             {/* Heading — drops down */}
             <FadeDown delay={0.1}>
-              <h2 className="font-[var(--font-be-vietnam)] text-[26px] min-[375px]:text-[31px] font-bold lowercase leading-none tracking-[-1.5px] sm:text-[43px]">
+              <h2 className="font-[var(--font-be-vietnam)] text-[26px] min-[375px]:text-[31px] font-bold leading-none tracking-[-1.5px] sm:text-[43px]">
                 {project.videoTitle}
               </h2>
             </FadeDown>
@@ -332,7 +333,7 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
                 <h3 className="font-[var(--font-be-vietnam)] text-[16px] font-bold leading-none tracking-[2.34%] text-[#141414] sm:text-[20px]">
                   The Outcome
                 </h3>
-                <div className="mt-[17px] max-w-[700px] grid grid-cols-2 gap-[12px] min-[375px]:gap-[16px] sm:gap-[25px] sm:grid-cols-4">
+                <div className="mt-[17px] max-w-[760px] grid grid-cols-2 gap-[12px] min-[375px]:gap-[16px] sm:gap-[25px] sm:grid-cols-4">
                   {project.outcomes.map((outcome, idx) => (
                     <FadeUp key={outcome.text} delay={0.15 + idx * 0.1}>
                       <div className="flex h-[110px] sm:h-[160px] min-h-[104px] w-full max-w-[330px] flex-col items-center justify-start rounded-[7px] border border-[#dededb] px-2 sm:px-[10px] pb-2 sm:pb-[10px] pt-4 sm:pt-[12px] text-center text-[#ff5500]">

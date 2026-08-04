@@ -142,13 +142,15 @@ const bottomCards = [
     id: "02",
     title: "Colour Palette",
     description: "Develop a colour system that creates consistency across every touchpoint.",
-    image: "/assets/brandingImages/2.png"
+    image: "/assets/brandingImages/2.png",
+    aspectRatio: "aspect-[247/204]"
   },
   {
     id: "03",
     title: "Typography",
     description: "Select primary and secondary fonts that strengthen readability and reinforce your brand identity.",
     image: "/assets/brandingImages/3.png",
+    aspectRatio: "aspect-[247/204]",
     useBg: true,
     imageBg: "bg-white",
     scale: "scale-[1]",
@@ -158,12 +160,15 @@ const bottomCards = [
     id: "04",
     title: "Brand Guidelines",
     description: "Document the rules that keep your brand consistent across every platform and asset.",
-    image: "/assets/brandingImages/4.png"
+    image: "/assets/brandingImages/4.png",
+    aspectRatio: "aspect-[247/204]"
   },
   {
     id: "05",
     title: "Brand Assets",
     description: "Design supporting materials including social media templates, stationery, presentations and marketing collateral.",
-    image: "/assets/brandingImages/5.png"
+    image: "/assets/brandingImages/5.png",
+    aspectRatio: "aspect-[247/204]"
+
   }
 ];

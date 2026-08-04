@@ -308,7 +308,7 @@ export function BuildGrowthSection() {
                 Creative
               </h3>
               <p className="font-[var(--font-be-vietnam)] font-normal text-[13px] leading-none text-white xl:text-black mt-1 max-xl:drop-shadow-md max-xl:[text-shadow:_0_2px_14px_rgba(0,0,0,0.95),_0_0_20px_rgba(0,0,0,0.9)]">
-                Brands People remember
+                Brands people remember
               </p>
               <div
                 onClick={() => setActiveTab("performance")}

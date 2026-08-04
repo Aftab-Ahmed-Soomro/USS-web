@@ -113,7 +113,7 @@ function FinalCta() {
             turn your website into
             <br />
             a{" "}
-            <span className="font-[var(--font-cormorant)] text-[42px] leading-[1.1] sm:leading-none font-extralight timesFontFamily italic text-[#ff5500]">
+            <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] leading-[1.1] sm:leading-none font-extralight timesFontFamily italic text-[#ff5500]">
               growth asset
             </span>
           </h2>
@@ -236,7 +236,7 @@ export default function WebsitePage() {
         <IndustriesServed />
       </FadeUp>
       <RevenueMethod
-        heading={<>our website development <br className="hidden sm:block" /><span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>process</span></>}
+        heading={<>our website development <br className="hidden sm:block" /><span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[0] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>process</span></>}
         cards={[
           { id: '01', title: 'Discovery & Strategy', description: 'Understand your business, audience and objectives while defining the website structure, user journeys and conversion strategy.', bgImage: '/assets/method1.png' },
           { id: '02', title: 'Design & Prototype', description: 'Create wireframes and UX designs that bring your brand to life before development begins.', bgImage: '/assets/method2.png' },

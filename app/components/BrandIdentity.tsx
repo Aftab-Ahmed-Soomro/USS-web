@@ -85,7 +85,7 @@ export function BrandIdentity() {
               </StaggerItem>
               <StaggerItem>
                 <div className="relative w-full aspect-[434/293] rounded-[17.15px] overflow-hidden group">
-                  <img src="/assets/brandIdentity/6.png" alt="Brand Identity" loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <img src="/assets/brandIdentity/venom.png" alt="Brand Identity" loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 </div>
               </StaggerItem>
               <StaggerItem>

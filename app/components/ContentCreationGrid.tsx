@@ -55,7 +55,7 @@ export function ContentCreationGrid() {
           <div className="grid grid-cols-2 gap-2 sm:gap-[20px] lg:gap-[29px]">
             <FadeUp delay={0.2}>
               <div className="relative w-full aspect-[355/400] rounded-[8px] sm:rounded-[16px] overflow-hidden bg-[#111]">
-                <Image src="/assets/contentImages/8.png" alt="Gallery image 8" fill className="object-cover object-[center_42%] sm:object-center hover:scale-105 transition-transform duration-700" sizes="(max-width: 768px) 100vw, 33vw" />
+                <Image src="/assets/cocoa.png" alt="Gallery image 8" fill className="object-cover object-[center_42%] sm:object-center hover:scale-105 transition-transform duration-700" sizes="(max-width: 768px) 100vw, 33vw" />
               </div>
             </FadeUp>
             <FadeUp delay={0.3}>
@@ -70,7 +70,7 @@ export function ContentCreationGrid() {
         <div className="flex flex-col gap-2 sm:gap-[20px] lg:gap-[29px]">
           <FadeUp delay={0.15}>
             <div className="relative w-full aspect-[355/253] rounded-[8px] sm:rounded-[16px] overflow-hidden bg-[#111]">
-              <Image src="/assets/contentImages/7.png" alt="Gallery image 7" fill className="object-cover object-center hover:scale-105 transition-transform duration-700" sizes="(max-width: 768px) 100vw, 33vw" />
+              <Image src="/assets/level.jpg" alt="Gallery image 7" fill className="object-cover object-center hover:scale-105 transition-transform duration-700" sizes="(max-width: 768px) 100vw, 33vw" />
             </div>
           </FadeUp>
           <FadeUp delay={0.35}>

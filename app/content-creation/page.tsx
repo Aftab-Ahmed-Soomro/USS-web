@@ -188,7 +188,7 @@ function FinalCta() {
             create content
             <br />
             that actually{" "}
-            <span className="font-[var(--font-cormorant)] text-[42px] leading-[1.1] sm:leading-none font-extralight timesFontFamily italic text-[#ff5500]">
+            <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] leading-[1.1] sm:leading-none font-extralight timesFontFamily italic text-[#ff5500]">
               performs
             </span>
           </h2>
@@ -269,16 +269,16 @@ const relatedProjects = [
     image: "/assets/projectsPagePics/cinamood.jpg",
     copy: "We supported the launch of Cinnamood in the UAE with photo and video content that showcased the brand and generated excitement across social media.",
     tags: ["Content Creation", "Food & Beverage", "Launch Campaign"],
-    year: "2024",
+    year: "2026",
     imageClassName: "object-cover object-[50%_55%]",
   },
   {
     slug: "yula-lounge",
     name: "Yula Lounge",
     image: "/assets/yula2.jpg",
-    copy: "We created lifestyle photography and video content that showcased Yula's new identity, helping establish a premium social presence following the venue's transformation.",
+    copy: "We created lifestyle photography & video content that showcased Yula's new identity, helping establish a premium social presence following venue's transformation.",
     tags: ["Content Creation", "Hospitality", "Brand Launch"],
-    year: "2024",
+    year: "2026",
     imageClassName: "object-cover object-[50%_65%]",
   },
 ];

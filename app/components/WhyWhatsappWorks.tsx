@@ -63,11 +63,10 @@ export function WhyWhatsappWorks() {
                   onMouseEnter={() => setActive(num)}
                   onClick={() => setActive(num)}
                   onFocus={() => setActive(num)}
-                  className={`group relative cursor-pointer overflow-hidden transition-all duration-230 ease-in-out outline-none ${
-                    active === num
+                  className={`group relative cursor-pointer overflow-hidden transition-all duration-230 ease-in-out outline-none ${active === num
                       ? "flex-[4] sm:flex-[2]"
                       : "flex-1"
-                  }`}
+                    }`}
                 >
                   <div className="absolute inset-0 z-0 h-full w-full overflow-hidden border-r border-black last:border-none">
                     <div

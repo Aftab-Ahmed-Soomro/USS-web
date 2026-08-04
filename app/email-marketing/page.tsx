@@ -323,7 +323,7 @@ function FinalCta() {
             turn your database
             <br />
             into{" "}
-            <span className="font-[var(--font-cormorant)] text-[38px] sm:text-[62px] leading-[1.1] sm:leading-none font-extralight timesFontFamily italic text-[#ff5500]">
+            <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] leading-[1.1] sm:leading-none font-extralight timesFontFamily italic text-[#ff5500]">
               repeat revenue
             </span>
           </h2>

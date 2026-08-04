@@ -9,7 +9,8 @@ const cards = [
     videos: [
       "https://unitedstrategicsolutions.com/assets/360_home/GALA BEHIND THE SCENE EDIT.webm",
       "https://unitedstrategicsolutions.com/assets/360_home/Agency 8 Event.webm",
-      "https://unitedstrategicsolutions.com/assets/360_home/USS-x-WWT-Gala.webm"
+      // "https://unitedstrategicsolutions.com/assets/360_home/USS-x-WWT-Gala.webm"
+      "https://unitedstrategicsolutions.com/assets/360_home/3.webm"
     ],
     alt: "LEFT",
   },
@@ -25,7 +26,7 @@ const cards = [
     videos: [
       "https://unitedstrategicsolutions.com/assets/360_home/Cinnamood BTS shoot.webm",
       "https://unitedstrategicsolutions.com/assets/360_home/Idea 8 - BTS v2.webm",
-      "https://unitedstrategicsolutions.com/assets/360_home/Dubai hills office v2_prob3.webm"
+      "https://unitedstrategicsolutions.com/assets/360_home/DIRECTION 3.webm"
     ],
     alt: "RIGHT",
   }
@@ -37,7 +38,7 @@ function SequentialVideoPlayer({ videos }: { videos: string[] }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setCurrentIndex((prev) => (prev + 1) % videos.length);
-    }, 20000); // 20 seconds
+    }, 17000); // 17 seconds
 
     return () => clearTimeout(timer);
   }, [currentIndex, videos.length]);
@@ -81,7 +82,7 @@ export function UssDifferentSection() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="w-full px-4 sm:px-0 text-center font-[var(--font-be-vietnam)] text-[28px] sm:text-[56px] font-normal leading-[1.2] sm:leading-[18.33px] tracking-[-0.02em] pb-5 sm:pb-16 mr-3"
         >
-          what&apos;s make{" "}
+          what makes{" "}
           <span className="text-[38px] sm:text-[72px] font-normal timesFontFamily italic tracking-[-0.02em] text-[#ff5500]">
             uss different
           </span>

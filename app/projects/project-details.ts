@@ -332,7 +332,7 @@ export const projectDetails = [
     overviewSubtitle: "Sneak peak into Picksperience launch",
     galleryImages: [
       {
-        src: "https://unitedstrategicsolutions.com/assets/picksperience/1.png",
+        src: "/assets/pick1.0.png",
         alt: "Picksperience product sampling activation venue",
         position: "18% 50%",
       },
@@ -342,7 +342,7 @@ export const projectDetails = [
         position: "38% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/picksperience/3.png",
+        src: "/assets/pick3.0.png",
         alt: "Picksperience audience engagement launch content",
         position: "58% 50%",
       },
@@ -880,7 +880,7 @@ export const projectDetails = [
     description:
       "Reclaim is a US travel service designed to simplify the airport experience by allowing passengers to skip check-in entirely. By collecting luggage directly from a customer's home, hotel, or Airbnb and checking it in with the airline, reclaim offers a more seamless and convenient way to travel.",
     heroImage: {
-      src: "https://unitedstrategicsolutions.com/assets/reclaimMainImage.png",
+      src: "/assets/reclaima.png",
       alt: "Travelers with luggage inside an airport terminal",
       position: "50% 50%",
     },
@@ -892,7 +892,7 @@ export const projectDetails = [
         position: "16% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/reclaim2.jpg",
+        src: "/assets/Book your trip (5).png",
         alt: "Reclaim branded luggage service concept",
         position: "38% 50%",
       },
@@ -1311,7 +1311,7 @@ export const projectDetails = [
       },
     ],
     focusAreas: ["Brand Transformation", "Website Creation", "Social Media Management"],
-    videoTitle: "immersive 3D technology ",
+    videoTitle: "immersive 3D technology",
     videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     videoPreview: {
       src: "https://unitedstrategicsolutions.com/assets/blurred.png",
@@ -1411,6 +1411,7 @@ export const projectDetails = [
       position: "50% 50%",
     },
     videoSrc: "https://unitedstrategicsolutions.com/assets/afro/Horizontal.mov",
+    socialGridImage: "/assets/afroz.png",
     metadata: {
       title: "Afro Maya E-Commerce Fashion | USS Projects",
       description:
@@ -1522,8 +1523,13 @@ export const projectDetails = [
     overviewSubtitle: "M&N NAIL SPA CONTENT CREATION",
     galleryImages: [
       {
-        src: "https://unitedstrategicsolutions.com/assets/m&n/1.jpg",
+        src: "/assets/m7m.jpg",
         alt: "M&N Nail Spa beauty treatment",
+        position: "50% 50%",
+      },
+      {
+        src: "https://unitedstrategicsolutions.com/assets/m&n/4.jpg",
+        alt: "M&N Nail Spa premium client experience",
         position: "50% 50%",
       },
       {
@@ -1534,11 +1540,6 @@ export const projectDetails = [
       {
         src: "https://unitedstrategicsolutions.com/assets/m&n/3.jpg",
         alt: "M&N Nail Spa wellness service",
-        position: "50% 50%",
-      },
-      {
-        src: "https://unitedstrategicsolutions.com/assets/m&n/4.jpg",
-        alt: "M&N Nail Spa premium client experience",
         position: "50% 50%",
       },
     ],
@@ -1965,7 +1966,7 @@ galleryImages: [
     description:
       "St George's is a real estate agency specialising in premium residential properties across Dubai. USS partnered with the team to produce professional photo and video content that showcased listings, strengthened the brand's visual identity and provided high quality marketing assets across digital channels.",
     heroImage: {
-      src: "https://unitedstrategicsolutions.com/assets/palmJumerah.jpg",
+      src: "/assets/puma.png",
       alt: "St George's passport and globe",
       position: "50% 50%",
     },

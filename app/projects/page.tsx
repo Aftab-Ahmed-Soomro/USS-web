@@ -17,8 +17,8 @@ const categories = [
     bottomTag: "Customer Growth",
     projects: [
       { title: "CINNAMOOD", description: "Franchise Expanding To Dubai", image: "/assets/projectsPagePics/cinamood.jpg", tags: ["UAE Expansion"], href: "/projects/cinamood" },
-      { title: "Coshe", description: "Wellness Juices", image: "/assets/projectsPagePics/Coshe.jpg", tags: ["Brand Launch"], href: "/projects/coshe-juices" },
-      { title: "Oak Restaurant", description: "Building awareness for a new dining experience.", image: "/assets/projectsPagePics/oak.png", tags: ["Content Creation"], href: "/projects/oak" }
+      { title: "Coshe", description: "Membership Growth Strategy", image: "/assets/projectsPagePics/Coshe.jpg", tags: ["Brand Launch"], href: "/projects/coshe-juices" },
+      { title: "Oak Restaurant", description: "Creative Content Production", image: "/assets/projectsPagePics/oak.png", tags: ["Content Creation"], href: "/projects/oak" }
     ]
   },
   {
@@ -26,7 +26,7 @@ const categories = [
     topTag: "Customer Experience",
     bottomTag: "Bookings & Loyalty",
     projects: [
-      { title: "SupperClub", description: "Scaling Supperclub Membership", image: "/assets/projectsPagePics/supper.png", tags: ["Membership Growth"], href: "/projects/supperclub" },
+      { title: "SupperClub", description: "360 Marketing for 5* Venues", image: "/assets/projectsPagePics/supper.png", tags: ["Membership Growth"], href: "/projects/supperclub" },
       { title: "Yula", description: "Transforming Yalseh into Yula", image: "/assets/projectsPagePics/yula.jpg", tags: ["Rebrand"], href: "/projects/yula-beach-lounge" }
     ]
   },
@@ -35,9 +35,9 @@ const categories = [
     topTag: "Business Growth",
     bottomTag: "Lead Generation",
     projects: [
-      { title: "Flowork", description: "Office Opening in Dubai Hills", image: "/assets/projectsPagePics/flowork.png", tags: ["Business Launch"], href: "/projects/flowork" },
+      { title: "Flowork", description: "Office Opening in Dubai Hills", image: "https://unitedstrategicsolutions.com/assets/flowork/flowork.jpg", tags: ["Business Launch"], href: "/projects/flowork" },
       { title: "Residency Advanced", description: "Paid Search Lead Generation", image: "/assets/projectsPagePics/residency.png", tags: ["Google Ads"], href: "/projects/residency-advanced" },
-      { title: "Reclaim", description: "Launching Reclaim in the US", image: "/assets/reclaimer.png", tags: ["US Expansion"], href: "/projects/reclaim-us" }
+      { title: "Reclaim", description: "Launching Reclaim in the US", image: "/assets/Reclaim grid (12).png", tags: ["US Expansion"], href: "/projects/reclaim-us" }
     ]
   },
   {
@@ -54,15 +54,15 @@ const categories = [
     topTag: "Brand Experiences",
     bottomTag: "Event Launches",
     projects: [
-      { title: "Women Who Thrive", description: "Networking Event Membership", image: "/assets/projectsPagePics/women.jpg", tags: ["Membership Growth"], href: "/projects/women-who-thrive" },
+      { title: "Women Who Thrive", description: "Scaling Networking Events", image: "/assets/projectsPagePics/women.jpg", tags: ["Membership Growth"], href: "/projects/women-who-thrive" },
       { title: "Adidas UAE", description: "Product Event For New Launch", image: "/assets/projectsPagePics/adidas.jpg", tags: ["Product Launch"], href: "/projects/adidas-middle-east" },
-      { title: "Blank DXB", description: "New Warehouse Events", image: "/assets/projectsPagePics/blank.png", tags: ["Business Launch"], href: "/projects/blank-dxb" },
+      { title: "Blank DXB", description: "360 Marketing Driving Enquiries", image: "/assets/projectsPagePics/blank.png", tags: ["Business Launch"], href: "/projects/blank-dxb" },
       { title: "Fete Events", description: "Premium Event Planning", image: "/assets/Fete.png", tags: ["Scaling Business"], href: "/projects/fete-events" }
       ,
       {
         title: "Picksperience",
-        description: "A new way to experience Dubai.",
-        image: "/assets/picksper.png",
+        description: "Global Sampling Events",
+        image: "/assets/pikachu.jpeg",
         tags: ["Brand Launch"],
         href: "/projects/picksperience" 
       }
@@ -81,7 +81,7 @@ const categories = [
     topTag: "Customer Growth",
     bottomTag: "Brand Awareness",
     projects: [
-      { title: "M&N Nail Spa", description: "Beauty Treatment Salon in Dubai", image: "/assets/projectsPagePics/m&n.png", tags: ["Scaling Business"], href: "/projects/mn-nail-spa" }
+      { title: "M&N Nail Spa", description: "Beauty Salon In Dubai", image: "/assets/projectsPagePics/m&n.png", tags: ["Scaling Business"], href: "/projects/mn-nail-spa" }
     ]
   },
   {
@@ -98,9 +98,9 @@ const categories = [
     topTag: "Property Growth",
     bottomTag: "Leads & Sales",
     projects: [
-      { title: "Agency 8", description: "Real Estate Agency in Dubai", image: "/assets/projectsPagePics/agency.png", tags: ["Lead Generation"], href: "/projects/agency-8" },
+      { title: "Agency 8", description: "Email Marketing Lead Generation", image: "/assets/projectsPagePics/agency.png", tags: ["Lead Generation"], href: "/projects/agency-8" },
       { title: "Fabri Elite", description: "Luxury Agency in UAE", image: "/assets/projectsPagePics/fabri.jpg", tags: ["Agency Opening"], href: "/projects/fabri-elite" },
-      { title: "St. George Estate", description: "Real Estate Agency in Dubai", image: "/assets/projectsPagePics/st.png", tags: ["Content Creation"], href: "/projects/st-georges" }
+      { title: "St. George Estate", description: "Content That Makes An Impact", image: "/assets/projectsPagePics/st.png", tags: ["Content Creation"], href: "/projects/st-georges" }
     ]
   }
 ];
@@ -306,11 +306,11 @@ export default function ProjectsPage() {
                         </div>
 
                         {/* Title & description — slides up on hover */}
-                        <div className="absolute bottom-3 left-3 right-3 sm:bottom-5 sm:left-5 sm:right-5 pointer-events-none translate-y-1 group-hover:translate-y-0 transition-transform duration-400">
+                        <div className="absolute bottom-3 left-3 right-3 sm:bottom-5 sm:left-5 sm:right-0 pointer-events-none translate-y-1 group-hover:translate-y-0 transition-transform duration-400">
                           <h3 className="text-white text-[15px] sm:text-[22px] font-medium font-[var(--font-be-vietnam)] tracking-[-0.44px] leading-tight">
                             {project.title}
                           </h3>
-                          <p className="text-white/50 text-[11px] sm:text-[16px] font-[var(--font-inter)] font-light line-clamp-2 leading-[1.4] tracking-[-0.44px] mt-1 sm:mt-0">
+                          <p className="text-white/50 text-[11px] sm:text-[16px] font-[var(--font-inter)] font-light line-clamp-2 leading-[1.4] whitespace-nowrap tracking-[-0.44px] mt-1 sm:mt-0">
                             {project.description}
                           </p>
                         </div>

@@ -28,7 +28,7 @@ export default function DedicatedPartner() {
           </div>
 
           {/* Right: Paragraph & Button */}
-          <div className="lg:col-span-4 flex flex-col items-start mt-0 sm:mt-12 lg:mt-70 ml-0 lg:-ml-26 lg:mt-0">
+          <div className="lg:col-span-4 flex flex-col items-start mt-0 sm:mt-8 lg:mt-5 ml-0 lg:-ml-26">
             <p className="font-normal text-[13px] sm:text-[15px] leading-[24.38px] align-middle text-[#a3a3a3] mb-8 max-w-[500px]">
               Your website is where every customer journey begins. It's the place your marketing, advertising and social media lead back to, making it one of the most important assets your business will ever invest in.
             </p>
