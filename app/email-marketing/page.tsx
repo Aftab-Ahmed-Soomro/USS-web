@@ -319,11 +319,11 @@ function FinalCta() {
           </p>
         </StaggerItem>
         <StaggerItem>
-          <h2 className="mt-[24px] sm:mt-10 font-[var(--font-be-vietnam)] text-[32px] sm:text-[55px] font-medium leading-[1.08] tracking-[-1.5px]">
+          <h2 className="mt-[24px] sm:mt-10 font-[var(--font-be-vietnam)] text-[32px] sm:text-[48px] font-medium leading-[1.08] tracking-[-1.5px]">
             turn your database
             <br />
             into{" "}
-            <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] leading-[1.1] sm:leading-none font-extralight timesFontFamily italic text-[#ff5500]">
+            <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[64px] leading-[1.1] sm:leading-none font-extralight timesFontFamily italic text-[#ff5500]">
               repeat revenue
             </span>
           </h2>

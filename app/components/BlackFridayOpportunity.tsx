@@ -33,7 +33,7 @@ const imageConfigs = [
     fit: "contain"
   },
   {
-    src: "/assets/IMG_2830.png",
+    src: "/assets/IMG_2830.PNG",
     position: "50% 50%",
     mobilePosition: "50% 50%",
     scale: 1.2,

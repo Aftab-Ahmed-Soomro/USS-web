@@ -35,9 +35,9 @@ const categories = [
     topTag: "Business Growth",
     bottomTag: "Lead Generation",
     projects: [
-      { title: "Flowork", description: "Office Opening in Dubai Hills", image: "https://unitedstrategicsolutions.com/assets/flowork/flowork.jpg", tags: ["Business Launch"], href: "/projects/flowork" },
+      { title: "Flowork", description: "Office Opening in Dubai Hills", image: "/assets/projectsPagePics/flowork.png", tags: ["Business Launch"], href: "/projects/flowork" },
       { title: "Residency Advanced", description: "Paid Search Lead Generation", image: "/assets/projectsPagePics/residency.png", tags: ["Google Ads"], href: "/projects/residency-advanced" },
-      { title: "Reclaim", description: "Launching Reclaim in the US", image: "/assets/Reclaim grid (12).png", tags: ["US Expansion"], href: "/projects/reclaim-us" }
+      { title: "Reclaim", description: "Launching Reclaim in the US", image: "/assets/Untitled design - 2.png", tags: ["US Expansion"], href: "/projects/reclaim-us" }
     ]
   },
   {
@@ -64,7 +64,7 @@ const categories = [
         description: "Global Sampling Events",
         image: "/assets/pikachu.jpeg",
         tags: ["Brand Launch"],
-        href: "/projects/picksperience" 
+        href: "/projects/picksperience"
       }
     ]
   },
@@ -135,12 +135,12 @@ function ProjectsCta() {
 
         {/* Eyebrow pill — drops down */}
         {/* <FadeDown delay={0.1}> */}
-          <div className="flex items-center justify-center gap-2 mb-6 sm:mb-8">
-            <div className="h-1.5 w-1.5 rounded-full bg-[#ff5500]"></div>
-            <p className="text-[10px] font-bold uppercase tracking-[3px] text-white">
-              DIGITAL TRANSFORMATION
-            </p>
-          </div>
+        <div className="flex items-center justify-center gap-2 mb-6 sm:mb-8">
+          <div className="h-1.5 w-1.5 rounded-full bg-[#ff5500]"></div>
+          <p className="text-[10px] font-bold uppercase tracking-[3px] text-white">
+            DIGITAL TRANSFORMATION
+          </p>
+        </div>
         {/* </FadeDown> */}
 
         {/* Main heading — rises up */}
@@ -215,7 +215,7 @@ export default function ProjectsPage() {
           {/* Subheading — slides in from right */}
           <FadeRight delay={0.3}>
             <p className="mt-[16px] max-w-[800px] mx-auto sm:mt-[30px] font-[var(--font-be-vietnam)] text-[12px] font-normal leading-[24px] text-[#F5F5F5] sm:text-[16.5px]">
-              Explore our work across the UK, US and Middle East 
+              Explore our work across the UK, US and Middle East
             </p>
           </FadeRight>
 
@@ -246,7 +246,7 @@ export default function ProjectsPage() {
                 <div className="self-end bg-white/5 backdrop-blur-md border border-white/10 text-white/80 text-[8px] min-[375px]:text-[9px] sm:text-[10px] font-medium px-2 min-[375px]:px-3 py-1 sm:py-1.5 rounded-full font-[var(--font-inter)] tracking-[-0.2px] w-fit">
                   {category.topTag}
                 </div>
-                
+
                 <div className="flex flex-col items-start text-left w-full">
                   <h2 className="text-white text-[18px] min-[375px]:text-[20px] sm:text-[32px] font-normal font-[var(--font-be-vietnam)] leading-[1.1] tracking-[-0.5px] break-words">
                     {category.name}
@@ -278,9 +278,8 @@ export default function ProjectsPage() {
                           alt={project.title}
                           fill
                           sizes="(min-width: 640px) 320px, 260px"
-                          className={`object-cover transition-transform duration-700 group-hover:scale-105 ${
-                            (project as any).imageClass || ""
-                          }`}
+                          className={`object-cover transition-transform duration-700 group-hover:scale-105 ${(project as any).imageClass || ""
+                            }`}
                         />
                         {/* Gradient overlay */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-black/10 transition-opacity duration-500 group-hover:opacity-90" />
@@ -321,7 +320,7 @@ export default function ProjectsPage() {
 
                 {/* Arrow indicator for 3+ projects on mobile */}
                 {category.projects.length >= 3 && (
-                  <button 
+                  <button
                     onClick={(e) => {
                       e.preventDefault();
                       const container = e.currentTarget.previousElementSibling;
@@ -332,7 +331,7 @@ export default function ProjectsPage() {
                     className="absolute right-0 top-0 bottom-4 w-16 sm:hidden bg-gradient-to-l from-[#000000] via-black/80 to-transparent flex items-center justify-end pr-2 z-10 cursor-pointer pointer-events-auto"
                   >
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="opacity-80 animate-pulse hover:opacity-100 transition-opacity">
-                      <path d="M9 18l6-6-6-6"/>
+                      <path d="M9 18l6-6-6-6" />
                     </svg>
                   </button>
                 )}

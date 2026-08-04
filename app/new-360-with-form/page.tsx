@@ -877,7 +877,7 @@ export default function New360WithForm() {
         </h2>
       </motion.div>
       <ContentCreationServices />
-      <EmailMarketingQuote first={"your social media is your"} second={"digital window"} third={"shop front"} />
+      <EmailMarketingQuote first={""} second={"65% "} third={"of people are visual learners."} />
       <div className="mb-20">
         <ContentCreationGrid />
       </div>

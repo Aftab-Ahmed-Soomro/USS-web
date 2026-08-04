@@ -96,11 +96,11 @@ function FinalCta() {
     <section className="bg-[#f5f4f1] px-6 py-[88px] text-center text-black sm:px-10 lg:px-[48px]">
       <Stagger staggerDelay={0.15}>
         <StaggerItem>
-          <h2 className="mx-auto max-w-[800px] font-[var(--font-be-vietnam)] text-[32px] sm:text-[56px] font-medium lowercase leading-[1.08] tracking-[-1.44px]">
+          <h2 className="mx-auto max-w-[800px] font-[var(--font-be-vietnam)] text-[32px] sm:text-[48px] font-medium lowercase leading-[1.08] tracking-[-1.44px]">
             build a strategy that
             <br />
             actually{" "}
-            <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal tracking-[-1.44px] timesFontFamily italic">
+            <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[64px] font-normal tracking-[-1.44px] timesFontFamily italic">
               works
             </span>
           </h2>

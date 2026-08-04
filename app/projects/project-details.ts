@@ -695,7 +695,7 @@ export const projectDetails = [
     description:
       "Flowork is a modern workspace offering private offices, meeting rooms and podcast studios. USS partnered with Flowork to launch its Dubai Hills and Business Bay locations, building awareness and generating demand selling out 50% of office space ahead of opening.",
     heroImage: {
-      src: "https://unitedstrategicsolutions.com/assets/flowork/flowork.jpg",
+      src: "/assets/projectsPagePics/flowork.png",
       alt: "Flowork lounge with warm shelving and tan seating",
       position: "50% 48%",
     },
