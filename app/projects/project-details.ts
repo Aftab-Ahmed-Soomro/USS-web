@@ -949,19 +949,23 @@ export const projectDetails = [
       },
     ],
     focusAreas: ["Social Media", "360 Marketing", "Paid Media"],
-    videoTitle: "reclaim is expanding across the US",
+    videoTitle: "the future of travel is hand-free",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
       src: "https://unitedstrategicsolutions.com/assets/blurred.png",
       alt: "Blurred video preview of the Reclaim US launch campaign",
       position: "50% 50%",
     },
+    videoSrcs: [
+      "https://unitedstrategicsolutions.com/assets/reclaim/Video 1.mp4",
+      "https://unitedstrategicsolutions.com/assets/reclaim/Video 2.mp4",
+      "https://unitedstrategicsolutions.com/assets/reclaim/Video 3.mp4",
+    ],
     metadata: {
       title: "Reclaim US Launch | USS Projects",
       description:
         "A USS project overview for launching Reclaim in the US travel market through marketing strategy, paid media, email marketing, and content creation.",
     },
-    hideVideoSection: true,
     socialGridImage: "https://unitedstrategicsolutions.com/assets/socialGridPreviews/reclaim.png",
   },
   {

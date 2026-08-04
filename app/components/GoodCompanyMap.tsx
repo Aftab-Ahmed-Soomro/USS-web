@@ -9,26 +9,42 @@ export function GoodCompanyMap() {
     {
       src: "/assets/mapLogos/1.png",
       alt: "Precision Talk",
-      className: "top-[66%] left-[80%]",
-      imgClass: "w-[85px] sm:w-[120px] md:w-[140px] lg:w-[155px]",
+      // Mobile settings (screen < 640px)
+      mobilePos: "top-[74%] left-[80%]",
+      mobileSize: "w-[45px]",
+      // Desktop settings (screen >= 640px)
+      desktopPos: "sm:top-[66%] sm:left-[80%]",
+      desktopSize: "sm:w-[120px] md:w-[140px] lg:w-[155px]",
     },
     {
       src: "/assets/mapLogos/2.png",
       alt: "Golden Falcon",
-      className: "top-[56%] left-[78%]",
-      imgClass: "w-[60px] sm:w-[80px] md:w-[95px] lg:w-[110px]",
+      // Mobile settings
+      mobilePos: "top-[56%] left-[74%]",
+      mobileSize: "w-[35px]",
+      // Desktop settings
+      desktopPos: "sm:top-[56%] sm:left-[78%]",
+      desktopSize: "sm:w-[80px] md:w-[95px] lg:w-[110px]",
     },
     {
       src: "/assets/mapLogos/3.png",
       alt: "Hiba by Amthakara",
-      className: "top-[58%] left-[34%]",
-      imgClass: "w-[75px] sm:w-[105px] md:w-[125px] lg:w-[140px]",
+      // Mobile settings
+      mobilePos: "top-[58%] left-[32%]",
+      mobileSize: "w-[40px]",
+      // Desktop settings
+      desktopPos: "sm:top-[58%] sm:left-[34%]",
+      desktopSize: "sm:w-[105px] md:w-[125px] lg:w-[140px]",
     },
     {
       src: "/assets/mapLogos/4.png",
       alt: "Beyond Performance",
-      className: "top-[25%] left-[58%]",
-      imgClass: "w-[85px] sm:w-[120px] md:w-[140px] lg:w-[155px]",
+      // Mobile settings
+      mobilePos: "top-[25%] left-[58%]",
+      mobileSize: "w-[45px]",
+      // Desktop settings
+      desktopPos: "sm:top-[25%]] sm:left-[58%]",
+      desktopSize: "sm:w-[120px] md:w-[140px] lg:w-[155px]",
     },
   ];
 
@@ -84,14 +100,14 @@ export function GoodCompanyMap() {
             <FadeUp
               key={index}
               delay={0.4 + index * 0.1}
-              className={`absolute ${logo.className} z-20`}
+              className={`absolute ${logo.mobilePos} ${logo.desktopPos} z-20`}
             >
               <Image
                 src={logo.src}
                 alt={logo.alt}
                 width={160}
                 height={160}
-                className={`${logo.imgClass} h-auto object-contain transition-transform duration-300 pointer-events-auto`}
+                className={`${logo.mobileSize} ${logo.desktopSize} h-auto object-contain transition-transform duration-300 pointer-events-auto`}
               />
             </FadeUp>
           ))}
