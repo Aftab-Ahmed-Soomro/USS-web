@@ -37,7 +37,7 @@ const relatedProjects = [
     name: "SupperClub",
     slug: "supperclub",
     year: "2026",
-    copy: "Built a membership focused email strategy promoting exclusive offers from 5* star hotels, restaurants and spas across the GCC and worldwide.",
+    copy: "Built a membership focused email strategy promoting exclusive offers from 5 star hotels, restaurants and spas across the GCC and worldwide.",
     image: "/assets/supp.jpg",
     tags: ["Email Marketing", "Membership Growth", "Customer Retention"],
     imageClassName: "object-cover object-[50%_20%]",

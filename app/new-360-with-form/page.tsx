@@ -155,7 +155,7 @@ const brandingLeftData = [
     year: "Featured Work",
     category: "Company Profile",
     title: "Company Profiles",
-    description: "a professionally designed overview of your business, helping you introduce your company, services and expertise with confidence.",
+    description: "Professionally designed company profiles that introduce your business, communicate your expertise and build credibility with potential clients.",
     image: "/assets/branding/company.png",
   },
   {
@@ -163,7 +163,7 @@ const brandingLeftData = [
     year: "Featured Work",
     category: "Marketing Collateral",
     title: "Brochures",
-    description: "Beautifully Designed Brochures That Present Your Products, Services Or Brand In A Clear And Visually Engaging Way.",
+    description: "Premium brochures that showcase your products, services and brand through clear, engaging visual communication.",
     image: "/assets/branding/brochures.png",
   },
   {
@@ -171,8 +171,8 @@ const brandingLeftData = [
     year: "Featured Work",
     category: "Client Success",
     title: "Case Studies",
-    description: "Real Examples Of Your Work, Highlighting Projects, Outcomes And The Value You've Delivered For Your Clients.",
-    image: "/assets/branding/case.png",
+    description: "Professional case studies that demonstrate your work, showcase measurable outcomes and build trust through real client success stories.",
+    image: "/assets/Case Studies - 1.png",
   }
 ];
 
@@ -182,8 +182,8 @@ const brandingRightData = [
     year: "Featured Work",
     category: "Sales Presentation",
     title: "Sales Decks",
-    description: "Clear, Engaging Presentations That Help You Communicate Ideas, Showcase Your Offering And Support Every Sales Conversation.",
-    image: "/assets/History Picture.png",
+    description: "Sales presentations designed to communicate your brand value, support conversations and improve client engagement.",
+    image: "/assets/Sales Decks - 1.png",
     imageClass: "object-cover object-[130%_100%]"
   },
   {
@@ -191,16 +191,16 @@ const brandingRightData = [
     year: "Featured Work",
     category: "Business Pitch",
     title: "Pitch Decks",
-    description: "Professional Presentations Designed To Communicate Your Vision, Explain Your Business And Support Investor Or Client Meetings.",
-    image: "/assets/branding/pitch.png",
+    description: "Strategic pitch presentations designed to communicate your vision, support investment opportunities and win new business.",
+    image: "/assets/Pitch Decks - 1.png",
   },
   {
     id: 6,
     year: "Featured Work",
     category: "Investment Materials",
     title: "Investor Decks",
-    description: "Present Your Business, Vision And Growth Plans With A Professionally Designed Investment Presentation.",
-    image: "/assets/branding/investor.png",
+    description: "Investor presentations that clearly communicate your business model, growth strategy and long term vision with confidence.",
+    image: "/assets/Investor Decks - 1.png",
   }
 ];
 
@@ -970,8 +970,8 @@ export default function New360WithForm() {
           </h2>
         }
         description={
-          <p className="font-normal text-[13px] leading-[24px] lg:text-[18px] lg:leading-[28px] text-white/90 max-w-[600px] mt-2">
-            Explore how we've helped businesses communicate professionally through sales decks, company profiles and branded presentations.
+          <p className="font-normal lowercase text-[13px] leading-[24px] lg:text-[18px] lg:leading-[28px] text-white/90 max-w-[600px] mt-2">
+            Professionally designed business documents that strengthen your brand, communicate your value and support every client conversation.
           </p>
         }
         leftData={brandingLeftData}

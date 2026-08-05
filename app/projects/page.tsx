@@ -26,7 +26,7 @@ const categories = [
     topTag: "Customer Experience",
     bottomTag: "Bookings & Loyalty",
     projects: [
-      { title: "SupperClub", description: "360 Marketing for 5* Venues", image: "/assets/projectsPagePics/supper.png", tags: ["Membership Growth"], href: "/projects/supperclub" },
+      { title: "SupperClub", description: "360 Marketing for 5 Star Venues", image: "/assets/projectsPagePics/supper.png", tags: ["Membership Growth"], href: "/projects/supperclub" },
       { title: "Yula", description: "Transforming Yalseh into Yula", image: "/assets/projectsPagePics/yula.jpg", tags: ["Rebrand"], href: "/projects/yula-beach-lounge" }
     ]
   },

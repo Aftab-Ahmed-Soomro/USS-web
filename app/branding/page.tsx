@@ -19,9 +19,9 @@ import { Footer } from "../components/Footer";
 import { span } from "framer-motion/client";
 
 const emailStats = [
-  { value: "150+", label: "Brand Identities Created" },
-  { value: "500+", label: "Brand Assets Designed" },
-  { value: "100+", label: "Brands Worldwide" },
+  { value: "36+", label: "Logos Designed" },
+  { value: "210+", label: "Brand Assets Created" },
+  { value: "15+", label: "Brand Guidelines Produced" },
   { value: "10+", label: "Years Experience" },
 ];
 
@@ -153,7 +153,7 @@ const brandingLeftData = [
     category: "Client Success",
     title: "Case Studies",
     description: "Professional case studies that demonstrate your work, showcase measurable outcomes and build trust through real client success stories.",
-    image: "/assets/branding/case.png",
+    image: "/assets/Case Studies - 1.png",
   }
 ];
 
@@ -164,7 +164,7 @@ const brandingRightData = [
     category: "Sales Presentation",
     title: "Sales Decks",
     description: "Sales presentations designed to communicate your brand value, support conversations and improve client engagement.",
-    image: "/assets/History Picture.png",
+    image: "/assets/Sales Decks - 1.png",
     imageClass: "object-cover object-[130%_100%]"
   },
   {
@@ -173,7 +173,7 @@ const brandingRightData = [
     category: "Business Pitch",
     title: "Pitch Decks",
     description: "Strategic pitch presentations designed to communicate your vision, support investment opportunities and win new business.",
-    image: "/assets/branding/pitch.png",
+    image: "/assets/Pitch Decks - 1.png",
   },
   {
     id: 6,
@@ -181,7 +181,7 @@ const brandingRightData = [
     category: "Investment Materials",
     title: "Investor Decks",
     description: "Investor presentations that clearly communicate your business model, growth strategy and long term vision with confidence.",
-    image: "/assets/branding/investor.png",
+    image: "/assets/Investor Decks - 1.png",
   }
 ];
 
@@ -322,7 +322,7 @@ const MarketingStrategy = () => {
           </h2>
         }
         description={
-          <p className="font-normal text-[13px] leading-[24px] lg:text-[18px] lg:leading-[28px] text-white/90 max-w-[600px] mt-2">
+          <p className="font-normal text-[13px] leading-[24px] lg:text-[18px] lowercase lg:leading-[28px] text-white/90 max-w-[600px] mt-2">
             Professionally designed business documents that strengthen your brand, communicate your value and support every client conversation.
           </p>
         }

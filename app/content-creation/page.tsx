@@ -413,7 +413,7 @@ export default function ContentCreationPage() {
               isn't working
             </h2>
           }
-          subheading="Creating content is easy. Creating content that supports your marketing strategy is where most brands fall short."
+          subheading="Creating content is easy, creating content that supports your marketing strategy is where most brands fall short."
           leftTitle="Most Brands"
           rightTitle="The USS Difference"
           leftPoints={googleAdsBrandPoints}

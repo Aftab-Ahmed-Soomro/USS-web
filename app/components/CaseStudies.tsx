@@ -15,13 +15,13 @@ const leftColumnData = [
     link: "/projects/disturbed-innovations"
   },
   {
-    id: 2,
+    id: 5,
     year: "2026",
     category: "Restaurant Group",
-    title: "Coshe Juices",
-    description: "qsr and restaurant identity formed with a reservation-and-ordering menu system built for repeat guests.",
-    image: "/assets/leftColumnImages/2.png",
-    link: "/projects/coshe-juices"
+    title: "Afro Maya",
+    description: " A fashion website designed to highlight new collections and build brand presence.",
+    image: "/assets/Afro Maya - 1.png",
+    link: "/projects/afro-maya"
   },
   {
     id: 3,
@@ -41,17 +41,17 @@ const rightColumnData = [
     category: "Real Estate",
     title: "Agency 8",
     description: "A luxury real estate website designed for users to explore exclusive developments across rental, sales and off plan.",
-    image: "/assets/rightColumnImages/1.png",
+    image: "/assets/Agency 8 - 1.png",
     link: "/projects/agency-8"
   },
   {
     id: 5,
     year: "2026",
     category: "Restaurant Group",
-    title: "Afro Maya",
-    description: " A fashion website designed to highlight new collections and build brand presence.",
-    image: "/assets/rightColumnImages/2.png",
-    link: "/projects/afro-maya"
+    title: "Coshe Juices",
+    description: "qsr and restaurant identity formed with a reservation-and-ordering menu system built for repeat guests.",
+    image: "/assets/Coshe - 1.jpg",
+    link: "/projects/coshe-juices"
   },
   {
     id: 6,
@@ -59,7 +59,7 @@ const rightColumnData = [
     category: "Wellness Business",
     title: "Bushra Therapy",
     description: "A specialist healthcare website designed to build trust, improve accessibility and simplify the patient journey",
-    image: "/assets/WebsiteWithoutCTA.png",
+    image: "/assets/Bushra - 1.png",
     link: "https://bushratherapy.com/",
     imageClass: "object-[58%_0%]"
   }
@@ -92,7 +92,7 @@ const Card = ({ year, category, title, description, image, link, imageClass, ima
       </h3>
 
       {/* Description */}
-      <p className="font-normal text-[12px] sm:text-[16px] leading-[22px] text-white/90 max-w-[450px]">
+      <p className="font-normal text-[12px] sm:text-[16px] leading-[22px] lowercase text-white/90 max-w-[450px]">
         {description}
       </p>
     </div>
@@ -161,7 +161,7 @@ export default function CaseStudies({
       {description !== undefined ? (
         description
       ) : (
-        <p className="font-normal text-[13px] leading-[24px] lg:text-[18px] lg:leading-[28px] text-white/90 whitespace-normal lg:whitespace-nowrap max-w-[600px]">
+        <p className="font-normal text-[13px] leading-[24px] lg:text-[18px] lg:leading-[28px] text-white/90 lowercase whitespace-normal lg:whitespace-nowrap max-w-[600px]">
           Explore how we've helped brands transform their digital presence.
         </p>
       )}

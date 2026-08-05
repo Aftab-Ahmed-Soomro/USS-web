@@ -176,7 +176,7 @@ export function BuildGrowthSection() {
               <h3 className="font-[var(--font-be-vietnam)] font-semibold text-[32px] leading-none text-white capitalize">
                 Performance
               </h3>
-              <p className="font-[var(--font-be-vietnam)] font-normal text-[13px] leading-none text-white mt-1">
+              <p className="font-[var(--font-be-vietnam)] font-normal text-[13px] sm:text-[16px] leading-none text-white mt-1">
                 Growth through data
               </p>
               <div
