@@ -22,7 +22,7 @@ const offices = [
 
 const quickLinks = [
   { name: "About Us", href: "/about" },
-  { name: "Our Services", href: "/" },
+  { name: "Our Services", href: "/new-360-with-form" },
   { name: "Our Work", href: "/projects" },
   { name: "Contact Us", href: "/contact" },
   { name: "Book a Consultation", href: "/contact" }

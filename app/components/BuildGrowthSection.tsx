@@ -58,8 +58,8 @@ export function BuildGrowthSection() {
 
         {/* DESCRIPTION */}
         <p className="font-[var(--font-be-vietnam)] font-light text-[13px] sm:text-[16.8px] leading-[1.6] sm:leading-[26.88px] text-[#F4F2EE8F] mt-6 sm:mt-8 max-w-[550px] mx-auto">
-          Whether you're focused on growth, brand or both, explore
-          <br className="hidden sm:block" /> the two areas below to see how we can support your business.
+          Creative builds brands, performance drives growth and 
+          <br className="hidden sm:block" /> strategy brings both together to create marketing that delivers long term results.
         </p>
       </motion.div>
 

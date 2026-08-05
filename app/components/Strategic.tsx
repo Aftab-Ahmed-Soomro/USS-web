@@ -58,7 +58,7 @@ export function Strategic() {
           <ScaleIn delay={0.1} startScale={0.92}>
             <h2 className="mt-[26px] sm:mt-[35px] text-[32px] font-medium leading-[0.6] sm:leading-[1.05] tracking-[-0.8px] sm:text-[56px]">
               a strategic process
-              <span className="mt-[10px] sm:mt-[25px] block font-[var(--font-cormorant)] text-[40px] font-normal timesFontFamily italic leading-[0.9] tracking-[-0.8px] text-[#ff5500] sm:text-[56px]">
+              <span className="mt-[10px] sm:mt-[25px] block font-[var(--font-cormorant)] text-[40px] font-normal timesFontFamily italic sm:leading-[0.15] leading-[0.9] tracking-[-0.8px] text-[#ff5500] sm:text-[56px]">
                 built to perform
               </span>
             </h2>
@@ -66,7 +66,7 @@ export function Strategic() {
 
           {/* Supporting copy */}
           <FadeUp delay={0.2}>
-            <p className="mx-auto mt-[20px] sm:mt-[32px] max-w-[580px] text-[13px] sm:text-[24px] font-normal leading-[-1%] px-2 sm:px-0">
+            <p className="mx-auto mt-[20px] sm:mt-[40px] max-w-[580px] text-[13px] sm:text-[24px] font-normal leading-[-1%] px-2 sm:px-0">
               Every project starts with understanding your business before we plan, create and deliver.
             </p>
           </FadeUp>

@@ -52,7 +52,12 @@ const systemItems = [
   },
   {
     number: "02",
-    title: "Campaign Planning",
+    title: (
+      <>
+        Campaign <br />
+        Planning
+      </>
+    ),
     copy: "Strategic campaigns aligned with launches, promotions and key business moments.",
   },
   {
@@ -62,7 +67,12 @@ const systemItems = [
   },
   {
     number: "04",
-    title: "Reporting & Optimisation",
+    title: (
+      <>
+        Reporting and <br />
+        Optimisation
+      </>
+    ),
     copy: "Continuous reporting and optimisation to improve campaign performance.",
   },
 ];
@@ -224,7 +234,7 @@ function EmailOverview() {
                   <h3 className="mt-[10px] sm:mt-[14px] max-w-[350px] text-[18px] font-semibold leading-[1.3] tracking-[-0.6px] sm:text-[24px] sm:leading-8">
                     {item.title}
                   </h3>
-                  <p className="mt-[8px] sm:mt-[12px] max-w-[95%] sm:max-w-[280px] text-[14px] font-normal leading-[1.6] text-white/90 sm:text-[16px] sm:leading-7">
+                  <p className="mt-[8px] sm:mt-[16px] max-w-[95%] sm:max-w-[280px] text-[14px] font-normal leading-[1.6] text-white/90 sm:text-[16px] sm:leading-7">
                     {item.copy}
                   </p>
                 </article>

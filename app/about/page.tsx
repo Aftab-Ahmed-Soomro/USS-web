@@ -14,7 +14,7 @@ const stats = [
   { value: "75M+", label: "AED In Client Revenue" },
   { value: "645k+", label: "Leads Generated for Clients" },
   { value: "50+", label: "Start Ups Turned Profitable" },
-  { value: "100+", label: "Brands Worldwide" },
+  { value: "100+", label: "Global Brands" },
 ];
 
 export default function AboutPage() {

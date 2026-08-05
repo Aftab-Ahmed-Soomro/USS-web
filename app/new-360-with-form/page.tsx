@@ -120,22 +120,32 @@ const systemItems = [
   {
     number: "01",
     title: "Automated Customer Journeys",
-    copy: "Email flows that welcome customers and encourage repeat purchases.",
+    copy: "Automated email flows that welcome, retarget and retain customers.",
   },
   {
     number: "02",
-    title: "Campaign Planning",
-    copy: "Strategic campaigns built around launches and promotions.",
+    title: (
+      <>
+        Campaign <br />
+        Planning
+      </>
+    ),
+    copy: "Strategic campaigns aligned with launches, promotions and key business moments.",
   },
   {
     number: "03",
     title: "Segmentation and Personalisation",
-    copy: "Sending the right message to the right audience.",
+    copy: "Relevant content delivered to the right audience at the right time.",
   },
   {
     number: "04",
-    title: "Reporting and Optimisation",
-    copy: "Tracking results to improve performance over time.",
+    title: (
+      <>
+        Reporting and <br />
+        Optimisation
+      </>
+    ),
+    copy: "Continuous reporting and optimisation to improve campaign performance.",
   },
 ];
 
@@ -237,7 +247,7 @@ function Hero() {
             <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold  leading-[30%] sm:leading-[95%] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white text-center sm:text-start">
               we don’t just {" "}
               <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white tracking-[-1px] sm:tracking-[-2.8px]">
-                market.
+                market,
               </span>
             </h1>
             <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold  leading-[50%] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white text-center sm:text-start">
@@ -252,7 +262,7 @@ function Hero() {
               Our 360 marketing approach brings strategy, creative and performance together, creating one connected system that works towards the same goal.
             </p>
             <p className="mt-[40px] max-w-[600px] font-[var(--font-inter)] text-[13px]  text-white/90 sm:text-[18px] text-center sm:text-start">
-Trusted by over 100 businesses across the UK, US and UAE
+Trusted by over 100 businesses across the US, UAE & UK
             </p>
           </StaggerItem>
           <StaggerItem>
@@ -327,7 +337,7 @@ function EmailOverview() {
                   <h3 className="mt-[10px] sm:mt-[14px] max-w-[350px] text-[18px] font-semibold leading-[1.3] tracking-[-0.6px] sm:text-[24px] sm:leading-8">
                     {item.title}
                   </h3>
-                  <p className="mt-[8px] sm:mt-[12px] max-w-[95%] sm:max-w-[280px] text-[14px] font-normal leading-[1.6] text-white/90 sm:text-[16px] sm:leading-7">
+                  <p className="mt-[8px] sm:mt-[16px] max-w-[95%] sm:max-w-[280px] text-[14px] font-normal leading-[1.6] text-white/90 sm:text-[16px] sm:leading-7">
                     {item.copy}
                   </p>
                 </article>
@@ -465,7 +475,7 @@ function SocialServices() {
           <StaggerItem>
             <h2 className="mt-[16px] min-[390px]:mt-[20px] sm:mt-[26px] mb-8 min-[390px]:mb-10 sm:mb-[60px] font-[var(--font-be-vietnam)] text-[32px] sm:text-[50px] font-medium lowercase leading-none tracking-[-1.4px]">
               our social media{" "}
-              <span className="font-[var(--font-cormorant)] text-[42px] font-extralight timesFontFamily italic tracking-[-0.04em]">
+              <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[70px] font-extralight timesFontFamily italic tracking-[-0.04em]">
                 services
               </span>
             </h2>
@@ -560,9 +570,9 @@ export default function New360WithForm() {
       </motion.div>
       <TeamAccordion
         heading={
-          <h2 className="text-[32px] sm:text-[36px] md:text-[64px] lg:text-[75px] leading-[1] tracking-[-1px] lg:tracking-[-3px] font-light lowercase" style={{ fontWeight: 300 }}>
+          <h2 className="text-[32px] sm:text-[60px] leading-[1] tracking-[-1px] lg:tracking-[-3px] font-light lowercase" style={{ fontWeight: 300 }}>
 
-                  from discovery to <span className="relative inline-block z-10 whitespace-nowrap text-[#ff5500] timesFontFamily italic text-[42px] sm:text-[51px] md:text-[79px] lg:text-[90px]">
+                  from discovery to <span className="relative inline-block z-10 whitespace-nowrap text-[#ff5500] timesFontFamily italic text-[42px] sm:text-[74px]">
                     scale.
 
                     
@@ -611,26 +621,26 @@ export default function New360WithForm() {
           {
             number: "01",
             icon: "/assets/GoogleAds/icon1.png",
-            title: "Reach Your Ideal Audience",
-            description: "Target customers based on interests, behaviours, location and intent.",
+            title: "Capture Active Demand",
+            description: "Show your business to people actively searching for your products or services.",
           },
           {
             number: "02",
             icon: "/assets/GoogleAds/icon2.png",
-            title: "Generate Qualified Leads",
-            description: "Drive enquiries from people actively interested in your product or service.",
+            title: "Measurable Results",
+            description: "Track enquiries, conversions and campaign performance.",
           },
           {
             number: "03",
             icon: "/assets/GoogleAds/icon3.png",
-            title: "Increase Sales",
-            description: "Convert website visitors into paying customers with conversion-focused campaigns.",
+            title: "Flexible Budget",
+            description: "Scale campaigns around your business and budget.",
           },
           {
             number: "04",
             icon: "/assets/GoogleAds/icon4.png",
-            title: "Retarget Warm Audiences",
-            description: "Stay visible to people who have already visited your website or engaged with your brand.",
+            title: "Fast Visibility",
+            description: "Appear in search results as soon as campaigns go live.",
           },
         ]}
       />
@@ -682,26 +692,26 @@ export default function New360WithForm() {
           {
             number: "01",
             icon: "/assets/GoogleAds/icon1.png",
-            title: "Reach Your Ideal Audience",
-            description: "Target customers based on interests, behaviours, location and intent.",
+            title: "Build Brand Awareness",
+            description: "Introduce your business to new audiences before they start searching.",
           },
           {
             number: "02",
             icon: "/assets/GoogleAds/icon2.png",
-            title: "Generate Qualified Leads",
-            description: "Drive enquiries from people actively interested in your product or service.",
+            title: "Precision Targeting",
+            description: "Target audiences by interests, behaviours, demographics and location.",
           },
           {
             number: "03",
             icon: "/assets/GoogleAds/icon3.png",
-            title: "Increase Sales",
-            description: "Convert website visitors into paying customers with conversion-focused campaigns.",
+            title: "Creative That Converts",
+            description: "Creative designed to capture attention and encourage action.",
           },
           {
             number: "04",
             icon: "/assets/GoogleAds/icon4.png",
-            title: "Retarget Warm Audiences",
-            description: "Stay visible to people who have already visited your website or engaged with your brand.",
+            title: "Stay Top of Mind",
+            description: "Reconnect with people who have already engaged with your business.",
           },
         ]}
       />
@@ -815,7 +825,9 @@ export default function New360WithForm() {
       </motion.div>
       <WhyWhatsappWorks />
       <WhatsAppChannels />
-      <ConversationFlow />
+      <div className="-mt-20 sm:-mt-30">
+        <ConversationFlow />
+      </div>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -877,7 +889,9 @@ export default function New360WithForm() {
         </h2>
       </motion.div>
       <ContentCreationServices />
-      <EmailMarketingQuote first={""} second={"65% "} third={"of people are visual learners."} />
+      <div className="-my-10 sm:-my-20">
+        <EmailMarketingQuote first={""} second={"65% "} third={"of people are visual learners."} />
+      </div>
       <div className="mb-20">
         <ContentCreationGrid />
       </div>

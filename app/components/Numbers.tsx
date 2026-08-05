@@ -135,7 +135,7 @@ function renderLabel(label: string) {
   if (label === "Brands Worldwide") {
     return (
       <>
-        Brands<br className="sm:hidden" /> Worldwide
+        Global<br className="sm:hidden" /> Brands
       </>
     );
   }
