@@ -173,7 +173,7 @@ const brandingRightData = [
     category: "Business Pitch",
     title: "Pitch Decks",
     description: "Strategic pitch presentations designed to communicate your vision, support investment opportunities and win new business.",
-    image: "/assets/Pitch Decks - 1.png",
+    image: "/assets/Pitch Decks - 2.png",
   },
   {
     id: 6,
@@ -322,7 +322,7 @@ const MarketingStrategy = () => {
           </h2>
         }
         description={
-          <p className="font-normal text-[13px] leading-[24px] lg:text-[18px] lowercase lg:leading-[28px] text-white/90 max-w-[600px] mt-2">
+          <p className="font-normal text-[13px] leading-[24px] lg:text-[18px] lg:leading-[28px] text-white/90 max-w-[600px] mt-2">
             Professionally designed business documents that strengthen your brand, communicate your value and support every client conversation.
           </p>
         }

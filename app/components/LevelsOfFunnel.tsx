@@ -38,10 +38,10 @@ export function LevelsOfFunnel() {
     <section className="relative w-full bg-black py-[30px] sm:pt-32 px-4 min-[375px]:px-6 overflow-hidden">
       <div className="max-w-[1150px] mx-auto relative z-10">
         <Stagger staggerDelay={0.15}>
-          <div className="flex flex-col lg:grid lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+          <div className="flex flex-col lg:grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
 
-            {/* Title Column (Order 1 on mobile, Col 1-5 on desktop) */}
-            <div className="order-1 lg:order-1 lg:col-span-5 flex flex-col justify-center items-center lg:items-start w-full text-center lg:text-left">
+            {/* Title Column (Order 1 on mobile, Col 1-4 on desktop) */}
+            <div className="order-1 lg:order-1 lg:col-span-4 flex flex-col justify-center items-center lg:items-start w-full text-center lg:text-left">
               <StaggerItem>
                 <h2 className="m-0 p-0 mb-4 sm:mb-8 text-white flex flex-row items-center justify-center lg:flex-col lg:items-start gap-x-2 sm:gap-x-3 text-center lg:text-left w-full whitespace-nowrap lg:whitespace-normal">
                   <span
@@ -157,8 +157,8 @@ export function LevelsOfFunnel() {
               )}
             </div>
 
-            {/* Descriptions & Mobile Interactive Links Column (Order 3 on mobile, Col 6-8 on desktop) */}
-            <div className="order-3 lg:order-2 lg:col-span-3 flex flex-col justify-center relative sm:mt-16 lg:mt-0 lg:pl-4 z-10 w-full">
+            {/* Descriptions & Mobile Interactive Links Column (Order 3 on mobile, Col 5-8 on desktop) */}
+            <div className="order-3 lg:order-2 lg:col-span-4 flex flex-col justify-center relative sm:mt-16 lg:mt-0 z-10 w-full">
 
               {/* Mobile-only Paragraph & Label */}
               <div className="block lg:hidden mb-6">
@@ -217,27 +217,34 @@ export function LevelsOfFunnel() {
                 </div>
               </FadeUp> */}
 
-              {/* Desktop View: Stacked Descriptions with Titles */}
-              <div className="hidden lg:flex flex-col gap-[50px]">
+              {/* Desktop View: Styled Cards with Standout Badges & Highlights */}
+              <div className="hidden lg:flex flex-col gap-5">
                 {levelsData.map((lvl) => (
                   <StaggerItem key={lvl.id}>
-                    <div className="flex flex-col gap-1.5">
-                      <div className="flex flex-row items-center justify-start gap-4">
-                        <h3 className="text-white font-medium text-[15px] tracking-tight">
-                          {lvl.title}
-                        </h3>
-                        <svg width="30" height="14" viewBox="0 0 30 14" fill="none" stroke="currentColor" strokeWidth="2" className="text-white shrink-0">
+                    <div className="group relative bg-[#0c0c0c]/90 border border-white/10 hover:border-[#FF5500]/60 rounded-2xl p-5 xl:p-6 transition-all duration-300 hover:bg-[#111111] hover:shadow-[0_0_30px_rgba(255,85,0,0.12)]">
+                      {/* Top Row: Stage Number, Title & Animated Arrow */}
+                      <div className="flex items-center justify-between gap-3 mb-2.5">
+                        <div className="flex items-center gap-3">
+                          <span className="text-[11px] font-mono font-semibold text-[#FF5500] bg-[#FF5500]/10 border border-[#FF5500]/30 px-2.5 py-0.5 rounded-full tracking-wider">
+                            {lvl.number}
+                          </span>
+                          <h3 className="text-white font-semibold text-[18px] xl:text-[20px] tracking-tight group-hover:text-white transition-colors">
+                            {lvl.title}
+                          </h3>
+                        </div>
+                        <svg
+                          width="28"
+                          height="14"
+                          viewBox="0 0 30 14"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          className="text-[#FF5500] shrink-0 group-hover:-translate-x-1.5 transition-transform duration-300"
+                        >
                           <path d="M8 1L1 7M1 7L8 13M1 7H30" />
                         </svg>
                       </div>
-                      <p
-                        className="text-neutral-300 text-left"
-                        style={{
-                          fontWeight: 400,
-                          fontSize: '12px',
-                          lineHeight: '1.4'
-                        }}
-                      >
+                      <p className="text-neutral-300 group-hover:text-neutral-200 text-[13px] xl:text-[14px] leading-[1.55] font-light text-left pl-1">
                         {lvl.desc}
                       </p>
                     </div>

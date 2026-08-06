@@ -411,26 +411,26 @@ export default function GoogleAdsPage() {
           {
             number: "01",
             icon: "/assets/GoogleAds/icon1.png",
-            title: "Build Brand Awareness",
-            description: "Introduce your business to new audiences before they start searching.",
+            title: "Capture Active Demand",
+            description: "Show your business to people actively searching for your products or services.",
           },
           {
             number: "02",
             icon: "/assets/GoogleAds/icon2.png",
-            title: "Precision Targeting",
-            description: "Target audiences by interests, behaviours, demographics and location.",
+            title: "Measurable Results",
+            description: "Track enquiries, conversions and campaign performance.",
           },
           {
             number: "03",
             icon: "/assets/GoogleAds/icon3.png",
-            title: "Creative That Converts",
-            description: "Creative designed to capture attention and encourage action.",
+            title: "Flexible Budget",
+            description: "Scale campaigns around your business and budget.",
           },
           {
             number: "04",
             icon: "/assets/GoogleAds/icon4.png",
-            title: "Stay Top of Mind",
-            description: "Reconnect with people who have already engaged with your business.",
+            title: "Fast Visibility",
+            description: "Appear in search results as soon as campaigns go live.",
           },
         ]}
       />

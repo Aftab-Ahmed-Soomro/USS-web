@@ -192,7 +192,7 @@ const brandingRightData = [
     category: "Business Pitch",
     title: "Pitch Decks",
     description: "Strategic pitch presentations designed to communicate your vision, support investment opportunities and win new business.",
-    image: "/assets/Pitch Decks - 1.png",
+    image: "/assets/Pitch Decks - 2.png",
   },
   {
     id: 6,
@@ -559,7 +559,7 @@ export default function New360WithForm() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-50px" }}
-        className="relative z-10 w-full flex flex-col justify-center items-center pt-0 bg-black gap-6 sm:gap-8 mb-10 sm:mb-15"
+        className="relative z-10 w-full flex flex-col justify-center items-center sm:-mt-10 pt-0 bg-black gap-6 sm:gap-8 mb-10 sm:mb-5"
       >
         <h2 id="marketing-strategy" className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
           marketing{" "}
@@ -602,7 +602,7 @@ export default function New360WithForm() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-50px" }}
-        className="relative z-10 w-full flex flex-col justify-center items-center pt-16 sm:pt-24 bg-black gap-6 sm:gap-8 mb-20">
+        className="relative z-10 w-full flex flex-col justify-center items-center pt-16 sm:pt-24 bg-black gap-6 sm:gap-8 mb-10">
         <h2 id="meta-ads" className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
           meta{" "}
           <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
@@ -621,30 +621,32 @@ export default function New360WithForm() {
           {
             number: "01",
             icon: "/assets/GoogleAds/icon1.png",
-            title: "Capture Active Demand",
-            description: "Show your business to people actively searching for your products or services.",
+            title: "Build Brand Awareness",
+            description: "Introduce your business to new audiences before they start searching.",
           },
           {
             number: "02",
             icon: "/assets/GoogleAds/icon2.png",
-            title: "Measurable Results",
-            description: "Track enquiries, conversions and campaign performance.",
+            title: "Precision Targeting",
+            description: "Target audiences by interests, behaviours, demographics and location.",
           },
           {
             number: "03",
             icon: "/assets/GoogleAds/icon3.png",
-            title: "Flexible Budget",
-            description: "Scale campaigns around your business and budget.",
+            title: "Creative That Converts",
+            description: "Creative designed to capture attention and encourage action.",
           },
           {
             number: "04",
             icon: "/assets/GoogleAds/icon4.png",
-            title: "Fast Visibility",
-            description: "Appear in search results as soon as campaigns go live.",
+            title: "Stay Top of Mind",
+            description: "Reconnect with people who have already engaged with your business.",
           },
         ]}
       />
-      <TargetRightPeople />
+      <div className="sm:-mb-20">
+        <TargetRightPeople />
+      </div>
       <RevenueMethod
         heading={<>how we build high performing <br className="hidden sm:block" />{" "}<span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>meta campaigns</span></>}
         cards={[
@@ -673,11 +675,11 @@ export default function New360WithForm() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-50px" }}
-        className="relative z-10 w-full flex flex-col justify-center items-center pt-16 sm:pt-24 bg-black gap-6 sm:gap-8 mb-20">
+        className="relative z-10 w-full flex flex-col justify-center items-center pt-16 sm:pt-24 bg-black gap-6 sm:gap-8 mb-10">
         <h2 id="paid-search" className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
-          paid{" "}
+          Google{" "}
           <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
-            search
+            Ads
           </span>
         </h2>
       </motion.div>
@@ -692,26 +694,26 @@ export default function New360WithForm() {
           {
             number: "01",
             icon: "/assets/GoogleAds/icon1.png",
-            title: "Build Brand Awareness",
-            description: "Introduce your business to new audiences before they start searching.",
+            title: "Capture Active Demand",
+            description: "Show your business to people actively searching for your products or services.",
           },
           {
             number: "02",
             icon: "/assets/GoogleAds/icon2.png",
-            title: "Precision Targeting",
-            description: "Target audiences by interests, behaviours, demographics and location.",
+            title: "Measurable Results",
+            description: "Track enquiries, conversions and campaign performance.",
           },
           {
             number: "03",
             icon: "/assets/GoogleAds/icon3.png",
-            title: "Creative That Converts",
-            description: "Creative designed to capture attention and encourage action.",
+            title: "Flexible Budget",
+            description: "Scale campaigns around your business and budget.",
           },
           {
             number: "04",
             icon: "/assets/GoogleAds/icon4.png",
-            title: "Stay Top of Mind",
-            description: "Reconnect with people who have already engaged with your business.",
+            title: "Fast Visibility",
+            description: "Appear in search results as soon as campaigns go live.",
           },
         ]}
       />
@@ -800,7 +802,7 @@ export default function New360WithForm() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-50px" }}
-        className="relative z-10 w-full flex flex-col justify-center items-center bg-black gap-6 mt-10 sm:gap-8">
+        className="relative z-10 w-full flex flex-col justify-center items-center bg-white gap-6 pb-6 sm:gap-8">
         <a
           href="#services-grid"
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'performance' }))}
@@ -860,7 +862,9 @@ export default function New360WithForm() {
       <EmailMarketingQuote first={"your social media is your"} second={"digital window"} third={"shop front"} />
       <OurOrganicSocialMediaApproach />
       <SocialServices />
-      <SocialMediaRevenueMethod />
+      <div className="sm:-mt-20">
+        <SocialMediaRevenueMethod />
+      </div>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -970,7 +974,7 @@ export default function New360WithForm() {
           </h2>
         }
         description={
-          <p className="font-normal lowercase text-[13px] leading-[24px] lg:text-[18px] lg:leading-[28px] text-white/90 max-w-[600px] mt-2">
+          <p className="font-normal text-[13px] leading-[24px] lg:text-[18px] lg:leading-[28px] text-white/90 max-w-[600px] mt-2">
             Professionally designed business documents that strengthen your brand, communicate your value and support every client conversation.
           </p>
         }

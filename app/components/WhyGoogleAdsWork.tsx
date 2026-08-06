@@ -59,9 +59,9 @@ export function WhyGoogleAdsWork({
           </FadeLeft>
 
           {/* Right - Content */}
-            <div className="flex-1 w-full flex flex-col justify-center items-center px-6 py-[40px] sm:py-[60px] lg:py-0">
+            <div className="flex-1 w-full flex flex-col justify-center items-center px-6 py-[40px] sm:py-[40px]">
             {/* Heading */}
-            <div className="w-full flex justify-center">
+            <div className="w-full sm:-mt-10 flex justify-center">
               <FadeRight delay={0.1}>
               <h2
                 className="text-white mb-[24px] sm:mb-[40px] text-center lg:text-left pr-1 font-[var(--font-be-vietnam)] font-medium text-[22px] min-[360px]:text-[26px] min-[400px]:text-[30px] sm:text-[clamp(36px,5vw,56px)] leading-[1.1] tracking-[-1px] sm:tracking-[-3px] flex items-center justify-center lg:justify-start gap-1 sm:gap-2.5 flex-nowrap whitespace-nowrap"

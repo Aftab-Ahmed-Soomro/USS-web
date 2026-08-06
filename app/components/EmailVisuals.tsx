@@ -87,7 +87,7 @@ const emailVisuals = [
 
 export function EmailVisuals() {
   return (
-    <section className="relative z-10 bg-[#F5F5F5] py-[50px] sm:py-[72px] text-black lg:py-[92px]">
+    <section className="relative z-10 bg-[#fff] py-[50px] sm:py-[72px] text-black lg:py-[92px]">
       <div className="flex w-full flex-col gap-[32px] sm:gap-[44px]">
         <Stagger staggerDelay={0.15} className="mx-auto w-full px-4 min-[375px]:px-6 max-w-[1150px] grid gap-[16px] sm:gap-8 lg:grid-cols-[360px_minmax(0,580px)] lg:items-start lg:justify-between">
           <StaggerItem>
