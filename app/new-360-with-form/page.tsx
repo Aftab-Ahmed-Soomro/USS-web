@@ -269,7 +269,7 @@ Trusted by over 100 businesses across the US, UAE & UK
             <div className="flex justify-center sm:justify-start">
               
               <Link
-              className="mt-[24px] sm:mt-[36px] inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
+              className="mt-[24px] sm:mt-[36px] inline-flex h-[36px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
               href="/contact"
             >
               Book a Consultation
@@ -551,7 +551,9 @@ export default function New360WithForm() {
       <Header />
       <Hero />
       <Brands />
-      <PowerOf360 />
+      <div className="-mt-10 sm:-mt-0">
+        <PowerOf360 />
+      </div>
       <UssDifferentSection />
       <BuildGrowthSection />
       <motion.div
@@ -559,7 +561,7 @@ export default function New360WithForm() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-50px" }}
-        className="relative z-10 w-full flex flex-col justify-center items-center sm:-mt-10 pt-0 bg-black gap-6 sm:gap-8 mb-10 sm:mb-5"
+        className="relative z-10 w-full flex flex-col justify-center items-center -mt-10 pt-2 sm:pt-0 bg-black gap-6 sm:gap-8 mb-0 sm:mb-5"
       >
         <h2 id="marketing-strategy" className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
           marketing{" "}
@@ -592,7 +594,7 @@ export default function New360WithForm() {
         <a
           href="#services-grid"
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'performance' }))}
-          className="inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
+          className="inline-flex h-[36px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
         >
           EXPLORE MORE SERVICES &gt;
         </a>
@@ -665,7 +667,7 @@ export default function New360WithForm() {
         <a
           href="#services-grid"
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'performance' }))}
-          className="inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
+          className="inline-flex h-[36px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
         >
           EXPLORE MORE SERVICES &gt;
         </a>
@@ -776,7 +778,7 @@ export default function New360WithForm() {
         <a
           href="#services-grid"
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'performance' }))}
-          className="inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
+          className="inline-flex h-[36px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
         >
           EXPLORE MORE SERVICES &gt;
         </a>
@@ -806,7 +808,7 @@ export default function New360WithForm() {
         <a
           href="#services-grid"
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'performance' }))}
-          className="inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
+          className="inline-flex h-[36px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
         >
           EXPLORE MORE SERVICES &gt;
         </a>
@@ -839,7 +841,7 @@ export default function New360WithForm() {
         <a
           href="#services-grid"
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'performance' }))}
-          className="inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
+          className="inline-flex h-[36px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
         >
           EXPLORE MORE SERVICES &gt;
         </a>
@@ -878,7 +880,7 @@ export default function New360WithForm() {
         <a
           href="#services-grid"
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'creative' }))}
-          className="inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
+          className="inline-flex h-[36px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
         >
           EXPLORE MORE SERVICES &gt;
         </a>
@@ -912,7 +914,7 @@ export default function New360WithForm() {
         <a
           href="#services-grid"
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'creative' }))}
-          className="inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
+          className="inline-flex h-[36px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
         >
           EXPLORE MORE SERVICES &gt;
         </a>
@@ -943,7 +945,7 @@ export default function New360WithForm() {
         <a
           href="#services-grid"
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'creative' }))}
-          className="inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
+          className="inline-flex h-[36px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
         >
           EXPLORE MORE SERVICES &gt;
         </a>
@@ -1014,7 +1016,7 @@ export default function New360WithForm() {
         <a
           href="#services-grid"
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'creative' }))}
-          className="inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
+          className="inline-flex h-[36px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
         >
           EXPLORE MORE SERVICES &gt;
         </a>

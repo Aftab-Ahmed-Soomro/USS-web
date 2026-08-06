@@ -10,7 +10,8 @@ const cards = [
       "https://unitedstrategicsolutions.com/assets/360_home/GALA BEHIND THE SCENE EDIT.webm",
       "https://unitedstrategicsolutions.com/assets/360_home/Agency 8 Event.webm",
       // "https://unitedstrategicsolutions.com/assets/360_home/USS-x-WWT-Gala.webm"
-      "https://unitedstrategicsolutions.com/assets/360_home/3.webm"
+      "https://unitedstrategicsolutions.com/assets/360_home/3.webm",
+      "https://unitedstrategicsolutions.com/assets/360_home/Interior Design Process for Vision Tower.mp4",
     ],
     alt: "LEFT",
   },
@@ -18,7 +19,8 @@ const cards = [
     videos: [
       "https://unitedstrategicsolutions.com/assets/360_home/Hot seat 1 updated w_captions.webm",
       "https://unitedstrategicsolutions.com/assets/360_home/Whats-new.webm",
-      "https://unitedstrategicsolutions.com/assets/360_home/USS-narrator-updated.webm"
+      "https://unitedstrategicsolutions.com/assets/360_home/Shortened version.mp4",
+      "https://unitedstrategicsolutions.com/assets/360_home/USS-narrator-updated.webm",
     ],
     alt: "MIDDLE",
   },

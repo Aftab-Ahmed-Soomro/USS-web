@@ -140,7 +140,7 @@ export function PowerOf360() {
   return (
     <section
       id="power-of-360"
-      className="relative w-full overflow-hidden max-md:!min-h-0 bg-black"
+      className="relative w-full overflow-hidden max-md:!min-h-0 bg-black sm:min-h-[700px] md:min-h-[800px] lg:min-h-[900px] xl:min-h-[1000px] 2xl:min-h-[1200px]"
     >
       {/* Background image (Active Item) */}
       <AnimatePresence initial={false}>
@@ -179,7 +179,7 @@ export function PowerOf360() {
               className="flex flex-col gap-6"
             >
               <h2
-                className="max-md:!text-[40px] max-md:!leading-[48px] max-md:!tracking-tight"
+                className="max-md:!text-[36px] max-md:!leading-[48px] max-md:!tracking-tight"
                 style={{
                   fontFamily: "var(--font-be-vietnam), Arial, sans-serif",
                   fontWeight: 500,
@@ -193,7 +193,7 @@ export function PowerOf360() {
               >
                 {activeItem.titlePrefix}
                 <span
-                  className="max-md:!text-[56px] max-md:!leading-[60px]"
+                  className="max-md:!text-[42px] max-md:!leading-[60px]"
                   style={{
                     fontFamily: "'Times New Roman', Times, serif",
                     fontWeight: 400,
@@ -210,7 +210,7 @@ export function PowerOf360() {
               </h2>
 
               <p
-                className="max-md:!text-[15px] max-md:!leading-[24px] min-h-[140px] sm:min-h-[120px]"
+                className="max-md:!text-[13px] max-md:!leading-[24px] min-h-[140px] sm:min-h-[120px]"
                 style={{
                   fontFamily: "var(--font-be-vietnam), Arial, sans-serif",
                   fontWeight: 400,

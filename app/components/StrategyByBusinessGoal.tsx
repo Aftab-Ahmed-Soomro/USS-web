@@ -60,7 +60,7 @@ export function StrategyByBusinessGoal() {
   const [activeId, setActiveId] = useState<number | null>(null);
 
   return (
-    <section className="relative w-full bg-black py-[60px] sm:py-24 px-4 sm:px-6 overflow-hidden">
+    <section className="relative w-full bg-black py-[30px] sm:py-24 px-4 sm:px-6 overflow-hidden">
       <div className="max-w-[1150px] mx-auto relative z-10">
         
         {/* Header Section */}
@@ -71,7 +71,7 @@ export function StrategyByBusinessGoal() {
                 style={{
                   fontWeight: 500,
                   fontSize: 'clamp(32px, 4vw, 56px)',
-                  lineHeight: 'clamp(50px, 5vw, 70px)',
+                  lineHeight: 'clamp(30px, 5vw, 70px)',
                   letterSpacing: '-3px',
                   textTransform: 'lowercase'
                 }}

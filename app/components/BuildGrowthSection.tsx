@@ -27,20 +27,20 @@ export function BuildGrowthSection() {
   return (
     <section id="build-growth" className="bg-black text-white pt-[60px] pb-0 sm:pb-10 sm:pt-[100px] flex flex-col items-center overflow-hidden">
       <motion.div
-        className="text-center px-4 max-w-[1150px] mx-auto w-full"
+        className="text-center max-w-[1150px] mx-auto w-full"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
       >
         {/* HOW WE BUILD GROWTH */}
-        <p className="font-[var(--font-be-vietnam)] font-medium text-[10px] sm:text-[12px] leading-none tracking-[2.64px] uppercase text-[#F4F2EE8F] mb-4 sm:mb-8">
+        <p className="font-[var(--font-be-vietnam)] font-medium text-[10px] sm:text-[12px] leading-none tracking-[2.64px] uppercase text-[#F4F2EE8F] mb-4 sm:mb-8 px-6">
           How we build growth
         </p>
 
         {/* HEADINGS */}
         <h2 className="flex flex-col items-center gap-1 sm:gap-2">
-          <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4">
+          <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 px-4">
             <span className="timesFontFamily italic font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[64.51px] tracking-[-1.15px] lowercase text-[#FF5500]">
               performance
             </span>
@@ -57,7 +57,7 @@ export function BuildGrowthSection() {
         </h2>
 
         {/* DESCRIPTION */}
-        <p className="font-[var(--font-be-vietnam)] font-light text-[13px] sm:text-[16.8px] leading-[1.6] sm:leading-[26.88px] text-[#F4F2EE8F] mt-6 sm:mt-8 max-w-[550px] mx-auto">
+        <p className="font-[var(--font-be-vietnam)] font-light text-[13px] sm:text-[16.8px] leading-[1.6] sm:leading-[26.88px] text-[#F4F2EE8F] mt-6 sm:mt-8 max-w-[550px] mx-auto px-6">
           Creative builds brands, performance drives growth and 
           <br className="hidden sm:block" /> strategy brings both together to create marketing that delivers long term results.
         </p>
