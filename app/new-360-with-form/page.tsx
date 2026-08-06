@@ -305,7 +305,7 @@ function EmailOverview() {
         {/* Text content */}
         <Stagger staggerDelay={0.1} className="order-1 text-white lg:col-start-1 lg:row-start-1 lg:max-w-[680px]">
           <StaggerItem>
-            <p className="mb-[20px] text-[11px] font-normal leading-[19.6px] tracking-[0%] text-white sm:text-[14px]">
+            <p className="mb-[20px] hidden sm:block text-[11px] font-normal leading-[19.6px] tracking-[0%] text-white sm:text-[14px]">
               Our Email System for Retention and Growth
             </p>
           </StaggerItem>
@@ -444,7 +444,7 @@ function EmailStrategy() {
       title={
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
-            <h2 className="lowercase text-center text-white font-[var(--font-be-vietnam)] font-medium text-[36px] sm:text-[56px] leading-[1.2] sm:leading-[80px] tracking-[-1.5px] sm:tracking-[-3px]">
+            <h2 className="lowercase text-center text-white font-[var(--font-be-vietnam)] font-medium text-[36px] sm:text-[56px] leading-[0.9] sm:leading-[80px] tracking-[-1.5px] sm:tracking-[-3px]">
               every brand has its <br className="hidden sm:block" />
               own{" "}
               <span
@@ -646,11 +646,11 @@ export default function New360WithForm() {
           },
         ]}
       />
-      <div className="sm:-mb-20">
+      <div className="-mb-10 sm:-mb-20">
         <TargetRightPeople />
       </div>
       <RevenueMethod
-        heading={<>how we build high performing <br className="hidden sm:block" />{" "}<span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>meta campaigns</span></>}
+        heading={<>how we build high performing <br className="hidden sm:block" />{" "}<span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[0.9] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>meta campaigns</span></>}
         cards={[
           { id: '01', title: 'Campaign Strategy', description: 'Every campaign starts with a clear objective. We define your goals, audience, budget and messaging before any ad goes live.', bgImage: '/assets/method1.png' },
           { id: '02', title: 'Audience Targeting', description: 'We identify and engage the most relevant demographics through data-driven targeting strategies, ensuring your ads reach the right people.', bgImage: '/assets/method2.png' },
@@ -796,7 +796,9 @@ export default function New360WithForm() {
           </span>
         </h2>
       </motion.div>
-        <EmailOverview />
+        <div className="-mt-8">
+          <EmailOverview />
+        </div>
         <EmailStrategy />
       <EmailVisuals />
       <motion.div

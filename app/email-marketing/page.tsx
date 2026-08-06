@@ -199,7 +199,7 @@ function EmailOverview() {
         {/* Text content */}
         <Stagger staggerDelay={0.1} className="order-1 text-white lg:col-start-1 lg:row-start-1 lg:max-w-[680px]">
           <StaggerItem>
-            <p className="mb-[20px] uppercase text-[11px] font-normal leading-[19.6px] tracking-[0%] text-white sm:text-[14px]">
+            <p className="mb-[20px] hidden sm:block uppercase text-[11px] font-normal leading-[19.6px] tracking-[0%] text-white sm:text-[14px]">
               Our Email System for Retention & Growth
             </p>
           </StaggerItem>
@@ -301,7 +301,7 @@ function EmailStrategy() {
       title={
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
-            <h2 className="lowercase text-center text-white font-[var(--font-be-vietnam)] font-medium text-[36px] sm:text-[56px] leading-[1.2] sm:leading-[80px] tracking-[-1.5px] sm:tracking-[-3px]">
+            <h2 className="lowercase text-center text-white font-[var(--font-be-vietnam)] font-medium text-[36px] sm:text-[56px] leading-[0.9] sm:leading-[80px] tracking-[-1.5px] sm:tracking-[-3px]">
               every brand has its <br className="hidden sm:block" />
               own{" "}
               <span
