@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const leftColumnData = [
   {
@@ -65,38 +65,69 @@ const rightColumnData = [
   }
 ];
 
-const Card = ({ year, category, title, description, image, link, imageClass, imageAspectRatio }: any) => (
-  <Link
-    href={link || "#"}
-    target={link?.startsWith("http") ? "_blank" : undefined}
-    rel={link?.startsWith("http") ? "noopener noreferrer" : undefined}
-    className="flex flex-col gap-6 w-full group cursor-pointer block"
+const Card = ({ year, category, title, description, image, link, imageClass, imageAspectRatio, index = 0 }: any) => (
+  <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.15 }}
+    transition={{ duration: 0.6, delay: (index % 3) * 0.12, ease: [0.25, 1, 0.5, 1] }}
   >
-    {/* Image Placeholder */}
-    <div className={`w-full ${imageAspectRatio || "aspect-[617/480]"} bg-[#111111] rounded-[20px] overflow-hidden transition-transform duration-500 group-hover:scale-[1.02] relative`}>
-      {image && <img src={image} alt={title} loading="lazy" decoding="async" className={`absolute inset-0 w-full h-full object-cover ${imageClass || "object-center"}`} />}
-    </div>
+    <Link
+      href={link || "#"}
+      target={link?.startsWith("http") ? "_blank" : undefined}
+      rel={link?.startsWith("http") ? "noopener noreferrer" : undefined}
+      className="flex flex-col gap-6 w-full group cursor-pointer block"
+    >
+      {/* Image Container with Hover Zoom & Subtle Border Accent */}
+      <div
+        className={`w-full ${
+          imageAspectRatio || "aspect-[617/480]"
+        } bg-[#111111] rounded-[24px] overflow-hidden relative border border-white/10 group-hover:border-[#ff5500]/50 transition-colors duration-500 shadow-2xl`}
+      >
+        {image && (
+          <img
+            src={image}
+            alt={title}
+            loading="lazy"
+            decoding="async"
+            className={`absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.07] ${
+              imageClass || "object-center"
+            }`}
+          />
+        )}
 
-    {/* Content */}
-    <div className="flex flex-col gap-3">
-      {/* Meta */}
-      <div className="flex items-center gap-2 text-[#a3a3a3] text-[12px] font-light">
-        <span>{year}</span>
-        <span>•</span>
-        <span>{category}</span>
+        {/* Subtle Dark Inset Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-40 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none" />
+
+        {/* Hover Arrow Badge */}
+        <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/15 flex items-center justify-center text-white text-sm opacity-0 group-hover:opacity-100 group-hover:scale-110 group-hover:border-[#ff5500]/60 transition-all duration-300 shadow-lg">
+          <span className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300 group-hover:text-[#ff5500]">
+            ↗
+          </span>
+        </div>
       </div>
 
-      {/* Title */}
-      <h3 className="font-medium text-[24px] leading-[30px] tracking-[-1px] lg:text-[32px] lg:leading-[37.14px] lg:tracking-[-1.34px] text-white transition-colors group-hover:text-[#ff5500]">
-        {title}
-      </h3>
+      {/* Content */}
+      <div className="flex flex-col gap-3">
+        {/* Meta */}
+        <div className="flex items-center gap-2 text-[#a3a3a3] text-[12px] font-light uppercase tracking-wider">
+          <span className="text-[#ff5500] font-medium">{year}</span>
+          <span className="text-white/20">•</span>
+          <span>{category}</span>
+        </div>
 
-      {/* Description */}
-      <p className="font-normal text-[12px] sm:text-[16px] leading-[22px] lowercase text-white/90 max-w-[450px]">
-        {description}
-      </p>
-    </div>
-  </Link>
+        {/* Title */}
+        <h3 className="font-medium text-[24px] leading-[30px] tracking-[-1px] lg:text-[32px] lg:leading-[37.14px] lg:tracking-[-1.34px] text-white transition-colors duration-300 group-hover:text-[#ff5500]">
+          {title}
+        </h3>
+
+        {/* Description */}
+        <p className="font-normal text-[12px] sm:text-[16px] leading-[22px] lowercase text-white/80 group-hover:text-white transition-colors duration-300 max-w-[450px]">
+          {description}
+        </p>
+      </div>
+    </Link>
+  </motion.div>
 );
 
 export interface CaseStudyData {
@@ -133,8 +164,14 @@ export default function CaseStudies({
   }
 
   const HeaderContent = () => (
-    <>
-      <span className="font-bold text-[12px] leading-[18px] lg:text-[14px] lg:leading-[20px] tracking-[0.05em] uppercase text-white">
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="flex flex-col gap-4"
+    >
+      <span className="font-bold text-[12px] leading-[18px] lg:text-[14px] lg:leading-[20px] tracking-[0.05em] uppercase text-[#ff5500]">
         RECENT PROJECTS
       </span>
 
@@ -152,9 +189,6 @@ export default function CaseStudies({
           <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[42px] leading-[40px] sm:text-[48px] sm:leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
             experiences{' '}
           </span>
-          {/* <span className="font-medium text-[32px] leading-[40px] sm:text-[40px] sm:leading-[48px] tracking-[-2px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-3.2px]">
-            websites
-          </span> */}
         </h2>
       )}
 
@@ -165,7 +199,7 @@ export default function CaseStudies({
           Explore how we've helped brands transform their digital presence.
         </p>
       )}
-    </>
+    </motion.div>
   );
 
   return (
@@ -174,12 +208,12 @@ export default function CaseStudies({
 
         {/* Mobile View */}
         <div className="flex flex-col lg:hidden w-full">
-          <div className="flex flex-col gap-4 mb-12">
+          <div className="mb-12">
             <HeaderContent />
           </div>
           <div className="flex flex-col gap-12">
-            {mobileOrder.map(item => (
-              <Card key={item.id} {...item} imageAspectRatio={imageAspectRatio} />
+            {mobileOrder.map((item, idx) => (
+              <Card key={item.id} {...item} index={idx} imageAspectRatio={imageAspectRatio} />
             ))}
           </div>
         </div>
@@ -188,22 +222,22 @@ export default function CaseStudies({
         <div className="hidden lg:flex flex-row gap-16 w-full">
           {/* Left Column */}
           <div className="flex-1 flex flex-col gap-[120px]">
-            {leftData.map(item => (
-              <Card key={item.id} {...item} imageAspectRatio={imageAspectRatio} />
+            {leftData.map((item, idx) => (
+              <Card key={item.id} {...item} index={idx} imageAspectRatio={imageAspectRatio} />
             ))}
           </div>
 
           {/* Right Column */}
           <div className="flex-1 flex flex-col">
             {/* Header Area */}
-            <div className="flex flex-col gap-4 mb-16">
+            <div className="mb-16">
               <HeaderContent />
             </div>
 
             {/* Right Column Cards */}
             <div className="flex flex-col gap-[120px]">
-              {rightData.map(item => (
-                <Card key={item.id} {...item} imageAspectRatio={imageAspectRatio} />
+              {rightData.map((item, idx) => (
+                <Card key={item.id} {...item} index={idx} imageAspectRatio={imageAspectRatio} />
               ))}
             </div>
           </div>

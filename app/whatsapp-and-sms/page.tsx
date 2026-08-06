@@ -318,7 +318,13 @@ const whatsappSmsTargetItems = [
     number: "02",
     icon: "Users",
     title: "Existing Customers",
-    description: "Keep current customers informed and engaged",
+    description: (
+      <>
+        Keep current customers <br className="hidden sm:block" />
+        informed and <br className="hidden sm:block" />
+        engaged
+      </>
+    ),
   },
   {
     number: "03",

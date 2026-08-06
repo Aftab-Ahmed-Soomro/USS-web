@@ -22,7 +22,7 @@ export interface TargetItem {
   number: string;
   icon?: LucideIcon | string;
   title: string;
-  description?: string;
+  description?: React.ReactNode;
   points?: string[];
 }
 
@@ -366,7 +366,7 @@ export default function TargetRightPeople({
                         ))}
                       </ul>
                     ) : (
-                      <p className="mt-2 text-white/80 font-normal text-[13px] leading-[1.4]">
+                      <p className="mt-2 text-white/80 font-normal max-w-[160px] text-[13px] leading-[1.4]">
                         {item.description}
                       </p>
                     )}
