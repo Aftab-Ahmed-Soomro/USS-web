@@ -40,7 +40,7 @@ export default function SocialMediaRevenueMethod() {
     <div className="w-full bg-black text-white py-[48px] min-[390px]:py-[58px] sm:py-20 min-h-screen flex flex-col justify-center font-sans px-4 min-[375px]:px-5 min-[480px]:px-6 sm:px-6">
       <Stagger staggerDelay={0.15}>
         {/* Heading — constrained width */}
-        <div className="max-w-[1150px] w-full mx-auto">
+        <div className="max-w-[1150px] 2xl:max-w-[1440px] w-full mx-auto">
           <StaggerItem>
             <p className="font-[var(--font-inter)] text-[10px] font-bold uppercase tracking-[4px] text-[#ff5500] mb-4">
               OUR PROCESS
@@ -62,7 +62,7 @@ export default function SocialMediaRevenueMethod() {
         </div>
 
         {/* Cards — constrained to 1150px like heading */}
-        <div className="max-w-[1150px] w-full mx-auto">
+        <div className="max-w-[1150px] 2xl:max-w-[1440px] w-full mx-auto">
           {/* Desktop: flex accordion */}
           <StaggerItem>
             <div className="hidden md:flex gap-6">
@@ -136,9 +136,8 @@ export default function SocialMediaRevenueMethod() {
                         {card.title}
                       </h3>
                       <div
-                        className={`grid transition-all duration-500 ease-in-out ${
-                          isMobileActive ? 'grid-rows-[1fr] opacity-100 mt-2 sm:mt-3' : 'grid-rows-[0fr] opacity-0 mt-0'
-                        }`}
+                        className={`grid transition-all duration-500 ease-in-out ${isMobileActive ? 'grid-rows-[1fr] opacity-100 mt-2 sm:mt-3' : 'grid-rows-[0fr] opacity-0 mt-0'
+                          }`}
                       >
                         <div className="overflow-hidden">
                           <p className="text-[14px] sm:text-[15.5px] font-normal leading-[1.4] sm:leading-[18.86px] tracking-[0%] text-white/90">

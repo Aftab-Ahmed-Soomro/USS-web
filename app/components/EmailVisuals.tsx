@@ -89,13 +89,13 @@ export function EmailVisuals() {
   return (
     <section className="relative z-10 bg-[#fff] py-[50px] sm:py-[72px] text-black lg:py-[92px]">
       <div className="flex w-full flex-col gap-[32px] sm:gap-[44px]">
-        <Stagger staggerDelay={0.15} className="mx-auto w-full px-4 min-[375px]:px-6 max-w-[1150px] grid gap-[16px] sm:gap-8 lg:grid-cols-[360px_minmax(0,580px)] lg:items-start lg:justify-between">
+        <Stagger staggerDelay={0.15} className="mx-auto w-full px-4 min-[375px]:px-6 max-w-[1150px] 2xl:max-w-[1440px] grid gap-[16px] sm:gap-8 lg:grid-cols-[360px_minmax(0,580px)] lg:items-start lg:justify-between">
           <StaggerItem>
             <h2 className="max-w-[400px] font-[var(--font-be-vietnam)] text-[32px] sm:text-[37px] text-black font-medium leading-[1.02] tracking-[-3%] lg:text-[56px]">
-                email design{" "}
-                <span className="sm:block font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal timesFontFamily leading-[1.1] sm:leading-none tracking-[-3%] italic">
-                  visuals
-                </span>
+              email design{" "}
+              <span className="sm:block font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal timesFontFamily leading-[1.1] sm:leading-none tracking-[-3%] italic">
+                visuals
+              </span>
             </h2>
           </StaggerItem>
 
@@ -109,18 +109,18 @@ export function EmailVisuals() {
         <div className="w-full overflow-hidden mt-[24px] sm:mt-8 lg:mt-16">
           <div className="email-visuals-track flex items-center gap-2 sm:gap-[46px]">
             {[...emailVisuals, ...emailVisuals, ...emailVisuals].map((visual, index) => (
-                <div
-                  className="relative h-[380px] w-[160px] min-[375px]:h-[460px] min-[375px]:w-[190px] shrink-0 overflow-hidden bg-[#f5f5f5] shadow-[0_16px_38px_rgba(0,0,0,0.08)] sm:h-[520px] sm:w-[210px] lg:h-[750px] lg:w-[250px]"
-                  key={index}
-                >
-                  <Image
-                    src={visual.src}
-                    alt={visual.alt}
-                    fill
-                    sizes="(min-width: 1024px) 250px, (min-width: 640px) 210px, 190px"
-                    className="object-cover object-top hover:scale-105 transition-transform duration-700 ease-out"
-                  />
-                </div>
+              <div
+                className="relative h-[380px] w-[160px] min-[375px]:h-[460px] min-[375px]:w-[190px] shrink-0 overflow-hidden bg-[#f5f5f5] shadow-[0_16px_38px_rgba(0,0,0,0.08)] sm:h-[520px] sm:w-[210px] lg:h-[750px] lg:w-[250px]"
+                key={index}
+              >
+                <Image
+                  src={visual.src}
+                  alt={visual.alt}
+                  fill
+                  sizes="(min-width: 1024px) 250px, (min-width: 640px) 210px, 190px"
+                  className="object-cover object-top hover:scale-105 transition-transform duration-700 ease-out"
+                />
+              </div>
             ))}
           </div>
         </div>

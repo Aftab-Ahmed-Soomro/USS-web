@@ -44,7 +44,7 @@ export function Strategic() {
 
   return (
     <section className="bg-[#F8F8F7] pb-[40px] pt-[40px] sm:pt-[70px] text-black">
-      <div className="mx-auto max-w-[1150px] px-4 sm:px-6">
+      <div className="mx-auto max-w-[1150px] 2xl:max-w-[1440px] px-4 sm:px-6">
 
         {/* Section label — drops in from above */}
         <div className="text-center">
@@ -80,9 +80,8 @@ export function Strategic() {
           {process.map((step, index) => (
             <StaggerItem key={step.number} y={50}>
               <article
-                className={`relative px-2 min-[375px]:px-6 md:px-8 md:min-h-[355px] ${
-                  index > 0 ? "md:border-l md:border-black/10 md:pl-12 lg:pl-14" : ""
-                }`}
+                className={`relative px-2 min-[375px]:px-6 md:px-8 md:min-h-[355px] ${index > 0 ? "md:border-l md:border-black/10 md:pl-12 lg:pl-14" : ""
+                  }`}
               >
                 <div className="flex items-center justify-between gap-6 sm:gap-10">
                   <span className="font-[var(--font-cormorant)] text-[120px] sm:text-[180px] font-normal leading-[0.72] timesFontFamily tracking-[0%]">

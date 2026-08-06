@@ -83,7 +83,7 @@ function ServiceGroup({
 export function Services() {
   return (
     <section className="w-full bg-white px-6 py-16 text-[#111111] sm:px-10 lg:px-16">
-      <div className="mx-auto flex max-w-[1150px] flex-col items-center gap-3 text-center">
+      <div className="mx-auto flex max-w-[1150px] 2xl:max-w-[1440px] flex-col items-center gap-3 text-center">
         <span className="text-[9px] sm:text-[11px] font-medium uppercase text-[#f4651f]">
           Our Solutions
         </span>

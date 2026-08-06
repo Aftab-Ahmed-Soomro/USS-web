@@ -148,7 +148,7 @@ export function Testimonials() {
 
   return (
     <section className="relative z-10 bg-[#0a0a0a] py-[58px] text-white lg:py-[80px]">
-      <div className="mx-auto flex w-full max-w-[1150px] flex-col items-center px-6">
+      <div className="mx-auto flex w-full max-w-[1150px] 2xl:max-w-[1440px] flex-col items-center px-6">
 
         {/* Eyebrow pill — drops down */}
         <FadeDown delay={0.1}>
@@ -186,57 +186,58 @@ export function Testimonials() {
             {testimonials.map((testimonial, idx) => {
               const isActive = activeIndex === idx;
               return (
-              <div
-                key={idx}
-                onClick={() => setActiveIndex(isActive ? null : idx)}
-                className="relative w-[calc(33.333%-8px)] sm:w-[calc(33.333333%-16px)] lg:w-[calc(33.333333%-16px)] shrink-0 aspect-[176/370] sm:aspect-auto sm:h-[480px] snap-start overflow-hidden group/card bg-[#111] cursor-pointer"
-              >
-                {/* Mobile image (cropped for 3-per-row) — hidden on sm+ */}
-                <div className="block sm:hidden absolute inset-0">
-                  <Image
-                    src={testimonial.mobileImage}
-                    alt={testimonial.company}
-                    fill
-                    sizes="33vw"
-                    className={`object-cover object-top transition-transform duration-700 group-hover/card:scale-105 ${isActive ? 'scale-105' : ''}`}
-                  />
-                </div>
-                {/* Desktop image — hidden on mobile */}
-                <div className="hidden sm:block absolute inset-0">
-                  <Image
-                    src={testimonial.image}
-                    alt={testimonial.company}
-                    fill
-                    sizes="(max-width: 1024px) 50vw, 33vw"
-                    className={`object-cover object-center transition-transform duration-700 group-hover/card:scale-105 ${isActive ? 'scale-105' : ''}`}
-                  />
-                </div>
-                <div className={`absolute inset-0 bg-gradient-to-t flex flex-col justify-end p-2 sm:p-8 transition-colors duration-500 ${isActive ? 'from-black/90 via-black/50 to-transparent' : 'from-black/80 via-black/30 to-transparent group-hover/card:from-black/90 group-hover/card:via-black/50'}`}>
-                  <h3 className="text-white text-[9px] min-[375px]:text-[10px] sm:text-2xl font-bold font-[var(--font-be-vietnam)] leading-tight">
-                    {testimonial.company}
-                  </h3>
-                  {/* Mobile: author name & title on separate lines; Desktop: single line */}
-                  <p className="hidden sm:block text-[#fff] text-xs mt-1 uppercase tracking-wider font-[var(--font-be-vietnam)] font-medium">
-                    {testimonial.author}
-                  </p>
-                  <div className="block sm:hidden mt-1">
-                    <p className="text-[#fff] text-[7px] min-[375px]:text-[8px] uppercase tracking-wider font-[var(--font-be-vietnam)] font-medium leading-tight">
-                      {testimonial.author.split(" - ")[0]}
-                    </p>
-                    <p className="text-[#fff] text-[6px] min-[375px]:text-[7px] uppercase tracking-wider font-[var(--font-be-vietnam)] font-medium leading-tight mt-1">
-                      {testimonial.author.split(" - ")[1] ?? ""}
-                    </p>
+                <div
+                  key={idx}
+                  onClick={() => setActiveIndex(isActive ? null : idx)}
+                  className="relative w-[calc(33.333%-8px)] sm:w-[calc(33.333333%-16px)] lg:w-[calc(33.333333%-16px)] shrink-0 aspect-[176/370] sm:aspect-auto sm:h-[480px] snap-start overflow-hidden group/card bg-[#111] cursor-pointer"
+                >
+                  {/* Mobile image (cropped for 3-per-row) — hidden on sm+ */}
+                  <div className="block sm:hidden absolute inset-0">
+                    <Image
+                      src={testimonial.mobileImage}
+                      alt={testimonial.company}
+                      fill
+                      sizes="33vw"
+                      className={`object-cover object-top transition-transform duration-700 group-hover/card:scale-105 ${isActive ? 'scale-105' : ''}`}
+                    />
                   </div>
-                  <div className={`grid transition-all duration-500 ease-in-out ${isActive ? 'grid-rows-[1fr]' : 'grid-rows-[0fr] group-hover/card:grid-rows-[1fr]'}`}>
-                    <div className={`overflow-hidden transition-all duration-500 ${isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 group-hover/card:opacity-100 group-hover/card:translate-y-0'}`}>
-                      <p className="text-white/97 text-[7px] min-[375px]:text-[8px] sm:text-sm pt-2 sm:pt-4 leading-[1.4] sm:leading-[1.6] font-[var(--font-be-vietnam)]">
-                        &ldquo;{testimonial.quote}&rdquo;
+                  {/* Desktop image — hidden on mobile */}
+                  <div className="hidden sm:block absolute inset-0">
+                    <Image
+                      src={testimonial.image}
+                      alt={testimonial.company}
+                      fill
+                      sizes="(max-width: 1024px) 50vw, 33vw"
+                      className={`object-cover object-center transition-transform duration-700 group-hover/card:scale-105 ${isActive ? 'scale-105' : ''}`}
+                    />
+                  </div>
+                  <div className={`absolute inset-0 bg-gradient-to-t flex flex-col justify-end p-2 sm:p-8 transition-colors duration-500 ${isActive ? 'from-black/90 via-black/50 to-transparent' : 'from-black/80 via-black/30 to-transparent group-hover/card:from-black/90 group-hover/card:via-black/50'}`}>
+                    <h3 className="text-white text-[9px] min-[375px]:text-[10px] sm:text-2xl font-bold font-[var(--font-be-vietnam)] leading-tight">
+                      {testimonial.company}
+                    </h3>
+                    {/* Mobile: author name & title on separate lines; Desktop: single line */}
+                    <p className="hidden sm:block text-[#fff] text-xs mt-1 uppercase tracking-wider font-[var(--font-be-vietnam)] font-medium">
+                      {testimonial.author}
+                    </p>
+                    <div className="block sm:hidden mt-1">
+                      <p className="text-[#fff] text-[7px] min-[375px]:text-[8px] uppercase tracking-wider font-[var(--font-be-vietnam)] font-medium leading-tight">
+                        {testimonial.author.split(" - ")[0]}
                       </p>
+                      <p className="text-[#fff] text-[6px] min-[375px]:text-[7px] uppercase tracking-wider font-[var(--font-be-vietnam)] font-medium leading-tight mt-1">
+                        {testimonial.author.split(" - ")[1] ?? ""}
+                      </p>
+                    </div>
+                    <div className={`grid transition-all duration-500 ease-in-out ${isActive ? 'grid-rows-[1fr]' : 'grid-rows-[0fr] group-hover/card:grid-rows-[1fr]'}`}>
+                      <div className={`overflow-hidden transition-all duration-500 ${isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 group-hover/card:opacity-100 group-hover/card:translate-y-0'}`}>
+                        <p className="text-white/97 text-[7px] min-[375px]:text-[8px] sm:text-sm pt-2 sm:pt-4 leading-[1.4] sm:leading-[1.6] font-[var(--font-be-vietnam)]">
+                          &ldquo;{testimonial.quote}&rdquo;
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            )})}
+              )
+            })}
           </div>
 
           {/* Right Arrow — slides in from right */}

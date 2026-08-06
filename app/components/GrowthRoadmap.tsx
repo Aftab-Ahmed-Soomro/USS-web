@@ -9,13 +9,13 @@ const MONTHS = [
 
 // Visual positioning matching the design
 const TIMELINE_BARS = [
-  { label: "Discovery",     left: "0%",  width: "17%", startMonth: 1, endMonth: 2,   color: '#FF5500' },
-  { label: "Research",      left: "8%",  width: "22%", startMonth: 1, endMonth: 3,   color: '#FF5500' },
-  { label: "Strategy",      left: "22%", width: "23%", startMonth: 2, endMonth: 4,   color: '#FF5500' },
-  { label: "Planning",      left: "38%", width: "22%", startMonth: 3, endMonth: 5,   color: '#FF5500' },
-  { label: "Execution",     left: "55%", width: "20%", startMonth: 4, endMonth: 6,   color: '#FF5500' },
-  { label: "Optimisation",  left: "70%", width: "20%", startMonth: 5, endMonth: 7,   color: '#FF5500' },
-  { label: "Scale",         left: "84%", width: "16%", startMonth: 6, endMonth: 7,   color: '#FF5500' },
+  { label: "Discovery", left: "0%", width: "17%", startMonth: 1, endMonth: 2, color: '#FF5500' },
+  { label: "Research", left: "8%", width: "22%", startMonth: 1, endMonth: 3, color: '#FF5500' },
+  { label: "Strategy", left: "22%", width: "23%", startMonth: 2, endMonth: 4, color: '#FF5500' },
+  { label: "Planning", left: "38%", width: "22%", startMonth: 3, endMonth: 5, color: '#FF5500' },
+  { label: "Execution", left: "55%", width: "20%", startMonth: 4, endMonth: 6, color: '#FF5500' },
+  { label: "Optimisation", left: "70%", width: "20%", startMonth: 5, endMonth: 7, color: '#FF5500' },
+  { label: "Scale", left: "84%", width: "16%", startMonth: 6, endMonth: 7, color: '#FF5500' },
 ];
 
 // Short month labels for mobile cards
@@ -32,7 +32,7 @@ export function GrowthRoadmap() {
         }}
       />
 
-      <div className="max-w-[1150px] mx-auto relative z-10">
+      <div className="max-w-[1150px] 2xl:max-w-[1440px] mx-auto relative z-10">
         <Stagger staggerDelay={0.15}>
           {/* Header Section */}
           <div className="flex flex-col lg:flex-row justify-between gap-8 lg:items-center mb-16 sm:mb-24">

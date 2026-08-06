@@ -12,7 +12,7 @@ const offices = [
   },
   {
     city: "Atlanta",
-    lines: ["Office 1175", "Peachtree Street NE", "30361","Atlanta",  "United States"],
+    lines: ["Office 1175", "Peachtree Street NE", "30361", "Atlanta", "United States"],
   },
   {
     city: "London",
@@ -75,7 +75,7 @@ export function Footer({ showGlobal = true }: { showGlobal?: boolean }) {
 
   return (
     <footer className="bg-[#000] text-white pt-10 sm:pt-20 pb-10 px-4 sm:px-6 font-sans">
-      <div className="max-w-[1150px] mx-auto">
+      <div className="max-w-[1150px] 2xl:max-w-[1440px] mx-auto">
         {/* Top Section: Offices */}
         {showGlobal && (
           <>
@@ -169,7 +169,7 @@ export function Footer({ showGlobal = true }: { showGlobal?: boolean }) {
               </button>
 
               <div className={`overflow-hidden transition-all duration-300 ${isServicesOpen ? "max-h-[1000px] opacity-100 mt-3 sm:mt-6" : "max-h-0 opacity-0 mt-0 sm:max-h-none sm:opacity-100 sm:mt-6"}`}>
-                
+
                 {/* Mobile View: 2 side-by-side columns */}
                 <div className="sm:hidden border-l-2 border-[#FF5500]/40 pl-3 grid grid-cols-2 gap-3">
                   {/* Column 1: 360 Marketing + Performance Marketing */}

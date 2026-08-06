@@ -61,8 +61,8 @@ export function StrategyByBusinessGoal() {
 
   return (
     <section className="relative w-full bg-black py-[30px] sm:py-24 px-4 sm:px-6 overflow-hidden">
-      <div className="max-w-[1150px] mx-auto relative z-10">
-        
+      <div className="max-w-[1150px] 2xl:max-w-[1440px] mx-auto relative z-10">
+
         {/* Header Section */}
         <FadeUp delay={0.1}>
           <div className="mb-6 sm:mb-12 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
@@ -104,35 +104,35 @@ export function StrategyByBusinessGoal() {
               const isActive = activeId === goal.id;
               return (
                 <StaggerItem key={goal.id} className="w-full">
-                  <div 
+                  <div
                     className="group relative overflow-hidden bg-[#111] cursor-pointer w-full"
                     style={{ aspectRatio: '318.66 / 383.96' }}
                     onClick={() => setActiveId(isActive ? null : goal.id)}
                   >
                     {/* Background Image */}
-                    <Image 
+                    <Image
                       src={goal.image}
                       alt={goal.title}
                       fill
                       sizes="(max-width: 1024px) 50vw, 25vw"
                       className={`object-cover transition-transform duration-700 lg:group-hover:scale-105 ${isActive ? 'scale-105' : ''}`}
                     />
-                    
+
                     {/* Gradient Overlay */}
                     <div className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-opacity duration-300 lg:group-hover:opacity-100 ${isActive ? 'opacity-100' : 'opacity-80'}`} />
 
                     {/* Content Container */}
                     <div className="absolute bottom-0 left-0 w-full p-4 sm:p-6 flex flex-col justify-end h-full pointer-events-none">
                       <div className={`mt-auto transform transition-transform duration-300 lg:group-hover:-translate-y-2 ${isActive ? '-translate-y-2' : ''}`}>
-                        <h3 
+                        <h3
                           className="text-white font-bold text-[15px] sm:text-[21px] leading-[120%]"
                         >
                           {goal.title}
                         </h3>
-                        
+
                         <div className={`grid transition-all duration-300 ease-in-out mt-1.5 sm:mt-2 lg:group-hover:grid-rows-[1fr] lg:group-hover:opacity-100 ${isActive ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
                           <div className="overflow-hidden">
-                            <p 
+                            <p
                               className="text-[#FFFFFFB3] font-normal text-[12px] sm:text-[14px] leading-[140%] sm:leading-[150%]"
                             >
                               {goal.description}

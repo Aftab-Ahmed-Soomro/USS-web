@@ -93,23 +93,23 @@ function Hero() {
         }
       `}</style>
       {/* Top Left Gradient */}
-      <div 
+      <div
         className="pointer-events-none absolute -left-[20%] -top-[20%] h-[80vw] max-h-[800px] min-h-[300px] sm:min-h-[500px] w-[80vw] max-w-[800px] min-w-[300px] sm:min-w-[500px] rounded-full opacity-40 blur-[60px] sm:blur-[100px] animate-glow-tl"
         style={{ background: 'radial-gradient(circle, #FF5500 0%, rgba(255,85,0,0) 70%)' }}
       />
 
       {/* Bottom Right Gradient */}
-      <div 
+      <div
         className="pointer-events-none absolute -bottom-[20%] -right-[20%] h-[80vw] max-h-[800px] min-h-[300px] sm:min-h-[500px] w-[80vw] max-w-[800px] min-w-[300px] sm:min-w-[500px] rounded-full opacity-40 blur-[60px] sm:blur-[100px] animate-glow-br"
         style={{ background: 'radial-gradient(circle, #FF5500 0%, rgba(255,85,0,0) 70%)' }}
       />
-      <div className="mx-auto grid max-w-[1150px] gap-8 sm:gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
+      <div className="mx-auto grid max-w-[1150px] 2xl:max-w-[1440px] gap-8 sm:gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
-                      <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white text-center sm:text-start">
-                        PAID SOCIAL
-                      </p>
-                    </StaggerItem>
+            <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white text-center sm:text-start">
+              PAID SOCIAL
+            </p>
+          </StaggerItem>
           <StaggerItem>
             <h1 className="mt-[16px] min-[375px]:mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[100%] tracking-[-1.5px] sm:tracking-[-3px] sm:text-[58px] text-white text-center sm:text-start">
               Turn reach into revenue with{" "}
@@ -182,7 +182,7 @@ function Hero() {
           </StaggerItem> */}
           <StaggerItem>
             <div className="flex justify-center sm:block">
-            <Link
+              <Link
                 className="mt-[24px] sm:mt-[36px] inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
                 href="/contact"
               >
@@ -207,31 +207,31 @@ function Numbers() {
 function RelatedProjects() {
   return (
     <section className="bg-[#080808] px-4 min-[375px]:px-6 py-[40px] sm:py-[56px] text-white">
-      <div className="mx-auto max-w-[1150px]">
+      <div className="mx-auto max-w-[1150px] 2xl:max-w-[1440px]">
         {/* Header */}
         <div className="flex items-center justify-between gap-6">
           <Stagger staggerDelay={0.12}>
             <StaggerItem>
-                          <p className="font-[var(--font-be-vietnam)] text-[9px] sm:text-[12px] font-normal uppercase tracking-[3px] text-[#ff5500]">
-                            RECENT PROJECTS
-                          </p>
-                        </StaggerItem>
+              <p className="font-[var(--font-be-vietnam)] text-[9px] sm:text-[12px] font-normal uppercase tracking-[3px] text-[#ff5500]">
+                RECENT PROJECTS
+              </p>
+            </StaggerItem>
             <StaggerItem>
-                          <h2 className="mt-[16px] sm:mt-[24px] max-w-[650px] font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[38px] font-medium lowercase leading-[0.9] tracking-[-1.4px] sm:text-[56px]">
-                            see how we turn 
-                            <br />
-                            {" "}
-                            <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] font-normal timesFontFamily italic leading-[1.1] sm:leading-none">
-                              social into growth
-                            </span>
-                          </h2>
-                                      </StaggerItem>
-                          
+              <h2 className="mt-[16px] sm:mt-[24px] max-w-[650px] font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[38px] font-medium lowercase leading-[0.9] tracking-[-1.4px] sm:text-[56px]">
+                see how we turn
+                <br />
+                {" "}
+                <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] font-normal timesFontFamily italic leading-[1.1] sm:leading-none">
+                  social into growth
+                </span>
+              </h2>
+            </StaggerItem>
+
             <StaggerItem>
-                          <p className="mt-[14px] max-w-[600px] sm:mt-[18px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.5] text-white/90 sm:text-white">
-                            Explore how we've helped brands build awareness, generate qualified leads and grow through Meta Ads.
-                          </p>
-                        </StaggerItem>
+              <p className="mt-[14px] max-w-[600px] sm:mt-[18px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.5] text-white/90 sm:text-white">
+                Explore how we've helped brands build awareness, generate qualified leads and grow through Meta Ads.
+              </p>
+            </StaggerItem>
           </Stagger>
 
           <FadeRight delay={0.3}>
@@ -312,10 +312,10 @@ function RelatedProjects() {
 function FinalCta() {
   return (
     <section className="bg-black px-4 min-[375px]:px-6 pt-[50px] sm:pt-[70px] text-white pb-30">
-      <Stagger staggerDelay={0.12} className="mx-auto max-w-[1150px] text-center">
+      <Stagger staggerDelay={0.12} className="mx-auto max-w-[1150px] 2xl:max-w-[1440px] text-center">
         <StaggerItem>
           <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
-             LET&apos;S SCALE
+            LET&apos;S SCALE
           </p>
         </StaggerItem>
         <StaggerItem>
@@ -405,28 +405,28 @@ export default function MetaAdsPage() {
       <Numbers />
       <Brands />
       <WhyEmailFails
-              tagline="THE OPPORTUNITY"
-              hideBadge={false}
-              heading={
-                <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[32px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
-                  why most{" "}
-                  <span
-                    className="font-normal italic text-[42px] sm:text-[72px]"
-                    style={{ fontFamily: "'Times New Roman', Times, serif" }}
-                  >
-                    meta ads
-                  </span>{" "}
-                  fails
-                </h2>
-              }
-              subheading="Most brands don't have a Meta Ads problem, they have a strategy problem."
-              leftTitle="Most Brands"
-              rightTitle="The USS Difference"
-              leftPoints={googleAdsBrandPoints}
-              rightPoints={googleAdsUssPoints}
-              centerLogo="/assets/meta__logo.jpg"
-      logoClassName="w-[60px] lg:w-[120px]"
-            />
+        tagline="THE OPPORTUNITY"
+        hideBadge={false}
+        heading={
+          <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[32px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
+            why most{" "}
+            <span
+              className="font-normal italic text-[42px] sm:text-[72px]"
+              style={{ fontFamily: "'Times New Roman', Times, serif" }}
+            >
+              meta ads
+            </span>{" "}
+            fails
+          </h2>
+        }
+        subheading="Most brands don't have a Meta Ads problem, they have a strategy problem."
+        leftTitle="Most Brands"
+        rightTitle="The USS Difference"
+        leftPoints={googleAdsBrandPoints}
+        rightPoints={googleAdsUssPoints}
+        centerLogo="/assets/meta__logo.jpg"
+        logoClassName="w-[60px] lg:w-[120px]"
+      />
       <WhyGoogleAdsWork
         imageSrc="/assets/metaSide.png"
         imageAlt="Meta Ads strategy expert"
@@ -464,7 +464,7 @@ export default function MetaAdsPage() {
       <div className="sm:-mb-0 -mb-10">
         <TargetRightPeople />
       </div>
-            
+
       <RevenueMethod
         heading={<>how we build <br className="block sm:hidden" /> high performing <br className="hidden sm:block" />{" "}<span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>  <br className="block sm:hidden" /> meta campaigns</span></>}
         cards={[
@@ -483,9 +483,9 @@ export default function MetaAdsPage() {
       <GoodCompanyMap />
       <FinalCta />
       <div className="mt-[-120px]">
-      
-            <Footer />
-            </div>
+
+        <Footer />
+      </div>
     </main>
   );
 }

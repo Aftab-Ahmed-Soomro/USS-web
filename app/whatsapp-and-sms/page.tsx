@@ -29,9 +29,9 @@ const emailStats = [
 function Hero() {
   return (
     <section className="bg-[#f7f7f5] px-4 min-[375px]:px-6 py-[40px] sm:py-[76px] text-black lg:py-[82px]">
-      <div className="mx-auto grid max-w-[1150px] gap-[40px] sm:gap-10 lg:grid-cols-[minmax(0,700px)_430px] lg:items-center lg:justify-between">
+      <div className="mx-auto grid max-w-[1150px] 2xl:max-w-[1440px] gap-[40px] sm:gap-10 lg:grid-cols-[minmax(0,700px)_430px] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.15}>
-          
+
           <StaggerItem>
             <p className="mt-0 sm:mt-[32px] max-w-[600px] font-[var(--font-inter)] text-[10px] sm:text-[14px] font-bold leading-[1.7] tracking-[2.4px] text-[#FF5500] mb-[24px] sm:mb-8 uppercase text-center sm:text-start">
               WhatsApp & SMS Marketing
@@ -50,15 +50,15 @@ function Hero() {
               Reach customers instantly through direct, personalised messaging that drives engagement, enquiries and repeat purchases.
             </p>
           </StaggerItem>
-          
+
           <StaggerItem>
             <div className="flex items-center justify-center sm:justify-start">
-            <Link
-              className="mt-[24px] sm:mt-[25px] inline-flex h-[46px] sm:h-[38px] min-w-[176px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
-              href="/contact"
-            >
-              Book a Consultation
-            </Link>
+              <Link
+                className="mt-[24px] sm:mt-[25px] inline-flex h-[46px] sm:h-[38px] min-w-[176px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
+                href="/contact"
+              >
+                Book a Consultation
+              </Link>
             </div>
           </StaggerItem>
         </Stagger>
@@ -74,10 +74,10 @@ function Hero() {
 function FinalCta() {
   return (
     <section className="bg-black px-4 min-[375px]:px-6 pt-[50px] sm:pt-[70px] text-white pb-30">
-      <Stagger staggerDelay={0.12} className="mx-auto max-w-[1150px] text-center">
+      <Stagger staggerDelay={0.12} className="mx-auto max-w-[1150px] 2xl:max-w-[1440px] text-center">
         <StaggerItem>
           <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
-             LET&apos;S CONNECT
+            LET&apos;S CONNECT
           </p>
         </StaggerItem>
         <StaggerItem>
@@ -129,7 +129,7 @@ const relatedProjects = [
 function RelatedProjects() {
   return (
     <section className="bg-[#080808] px-4 min-[375px]:px-6 py-[40px] sm:py-[56px] text-white">
-      <div className="mx-auto max-w-[1150px]">
+      <div className="mx-auto max-w-[1150px] 2xl:max-w-[1440px]">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
           <Stagger staggerDelay={0.12}>
@@ -360,34 +360,34 @@ export default function WhatsappAndSmsPage() {
       <Numbers stats={emailStats} />
       <Brands />
       <FadeUp delay={0.2}>
-              <WhyEmailFails
-                tagline="THE OPPORTUNITY"
-                hideBadge={false}
-                heading={
-                  <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[32px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
-                    why most{" "}
-                    <span
-                      className="font-normal italic text-[42px] sm:text-[72px]"
-                      style={{ fontFamily: "'Times New Roman', Times, serif" }}
-                    >
-                      WhatsApp & SMS <span className="lowercase">Marketing</span>
-                    </span>{" "}
-                    fails
-                  </h2>
-                }
-                subheading="Most brands don't have a WhatsApp & SMS marketing problem.They have a strategy problem."
-                leftTitle="Most Brands"
-                rightTitle="The USS Difference"
-                leftPoints={googleAdsBrandPoints}
-                rightPoints={googleAdsUssPoints}
-                centerLogo="/assets/wa-sms.png"
-                logoClassName="w-[180px] lg:w-[265px] mt-4"
-              />
-            </FadeUp>
-                <WhyWhatsappWorks />
-                <WhatsAppChannels />
-                <ConversationFlow />
-                <TargetRightPeople items={whatsappSmsTargetItems} />
+        <WhyEmailFails
+          tagline="THE OPPORTUNITY"
+          hideBadge={false}
+          heading={
+            <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[32px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
+              why most{" "}
+              <span
+                className="font-normal italic text-[42px] sm:text-[72px]"
+                style={{ fontFamily: "'Times New Roman', Times, serif" }}
+              >
+                WhatsApp & SMS <span className="lowercase">Marketing</span>
+              </span>{" "}
+              fails
+            </h2>
+          }
+          subheading="Most brands don't have a WhatsApp & SMS marketing problem.They have a strategy problem."
+          leftTitle="Most Brands"
+          rightTitle="The USS Difference"
+          leftPoints={googleAdsBrandPoints}
+          rightPoints={googleAdsUssPoints}
+          centerLogo="/assets/wa-sms.png"
+          logoClassName="w-[180px] lg:w-[265px] mt-4"
+        />
+      </FadeUp>
+      <WhyWhatsappWorks />
+      <WhatsAppChannels />
+      <ConversationFlow />
+      <TargetRightPeople items={whatsappSmsTargetItems} />
       <RevenueMethod
         heading={
           <>
@@ -407,10 +407,10 @@ export default function WhatsappAndSmsPage() {
       <Team />
       <GoodCompanyMap />
       <FinalCta />
-            <div className="mt-[-120px]">
-            
-                  <Footer />
-                  </div>
+      <div className="mt-[-120px]">
+
+        <Footer />
+      </div>
     </main>
   );
 }

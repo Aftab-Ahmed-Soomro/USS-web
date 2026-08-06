@@ -82,9 +82,8 @@ const Card = ({ year, category, title, description, image, link, imageClass, ima
     >
       {/* Image Container with Hover Zoom & Subtle Border Accent */}
       <div
-        className={`w-full ${
-          imageAspectRatio || "aspect-[617/480]"
-        } bg-[#111111] rounded-[24px] overflow-hidden relative border border-white/10 group-hover:border-[#ff5500]/50 transition-colors duration-500 shadow-2xl`}
+        className={`w-full ${imageAspectRatio || "aspect-[617/480]"
+          } bg-[#111111] rounded-[24px] overflow-hidden relative border border-white/10 group-hover:border-[#ff5500]/50 transition-colors duration-500 shadow-2xl`}
       >
         {image && (
           <img
@@ -92,9 +91,8 @@ const Card = ({ year, category, title, description, image, link, imageClass, ima
             alt={title}
             loading="lazy"
             decoding="async"
-            className={`absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.07] ${
-              imageClass || "object-center"
-            }`}
+            className={`absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.07] ${imageClass || "object-center"
+              }`}
           />
         )}
 
@@ -182,9 +180,9 @@ export default function CaseStudies({
       ) : (
         <h2 className="text-white">
           <span className="font-medium text-[32px] leading-[40px] sm:text-[40px] sm:leading-[48px] tracking-[-2px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-3.2px]">
-            see how we create  
+            see how we create
           </span>
-            <br className="block sm:hidden" />
+          <br className="block sm:hidden" />
           <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[42px] leading-[40px] sm:text-[48px] sm:leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
             {" "}digital {" "}
           </span>
@@ -206,7 +204,7 @@ export default function CaseStudies({
 
   return (
     <section className="bg-black py-16 lg:py-24 px-6 w-full flex justify-center">
-      <div className="w-full max-w-[1150px]">
+      <div className="w-full max-w-[1150px] 2xl:max-w-[1440px]">
 
         {/* Mobile View */}
         <div className="flex flex-col lg:hidden w-full">

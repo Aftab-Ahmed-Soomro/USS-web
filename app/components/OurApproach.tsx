@@ -25,7 +25,7 @@ export function OurApproach() {
   return (
     <section className="px-4 py-6 sm:px-6 lg:px-8">
       <div
-        className="mx-auto max-w-[1150px] rounded-[20px] bg-[#111111]/95 px-8 py-10 sm:px-10 sm:py-12 lg:px-14"
+        className="mx-auto max-w-[1150px] 2xl:max-w-[1440px] rounded-[20px] bg-[#111111]/95 px-8 py-10 sm:px-10 sm:py-12 lg:px-14"
         style={{ boxShadow: "0 0 0 1px rgba(255,255,255,0.06)" }}
       >
         {/* Label */}
@@ -46,13 +46,12 @@ export function OurApproach() {
           {steps.map((step, i) => (
             <div
               key={step.number}
-              className={`flex flex-col pb-8 pt-6 sm:pb-10 sm:pt-8 ${
-                i === 0
+              className={`flex flex-col pb-8 pt-6 sm:pb-10 sm:pt-8 ${i === 0
                   ? "sm:pr-10 lg:pr-14"
                   : i === 1
-                  ? "sm:border-white/10 sm:px-10 lg:px-14"
-                  : "sm:pl-10 lg:pl-14"
-              } ${i > 0 ? "border-t border-white/10 sm:border-t-0" : ""}`}
+                    ? "sm:border-white/10 sm:px-10 lg:px-14"
+                    : "sm:pl-10 lg:pl-14"
+                } ${i > 0 ? "border-t border-white/10 sm:border-t-0" : ""}`}
             >
               {/* Top rule */}
               <div className="mb-6 h-px w-full bg-white/15" />

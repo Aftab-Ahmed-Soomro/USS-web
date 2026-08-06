@@ -193,7 +193,7 @@ export default function TargetRightPeople({
         }}
       />
 
-      <div className="relative mx-auto max-w-[1150px]">
+      <div className="relative mx-auto max-w-[1150px] 2xl:max-w-[1440px]">
         {/* Heading */}
         {title ? (
           title

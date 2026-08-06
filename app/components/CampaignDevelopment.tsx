@@ -17,9 +17,8 @@ const campaignSteps = [
 function ToggleIcon({ active = false }: { active?: boolean }) {
   return (
     <span
-      className={`grid size-10 shrink-0 place-items-center rounded-full border border-[#1a1a1a] text-[20px] leading-none ${
-        active ? "bg-[#1a1a1a] text-[#efefef]" : "bg-transparent text-[#1a1a1a]"
-      }`}
+      className={`grid size-10 shrink-0 place-items-center rounded-full border border-[#1a1a1a] text-[20px] leading-none ${active ? "bg-[#1a1a1a] text-[#efefef]" : "bg-transparent text-[#1a1a1a]"
+        }`}
     >
       {active ? <span className="rotate-45">+</span> : "+"}
     </span>
@@ -32,8 +31,8 @@ export function CampaignDevelopment() {
 
   return (
     <section className="relative z-10 bg-white px-6 pb-0 pt-[82px] text-[#1a1a1a]  lg:pt-[100px]">
-      <div className="mx-auto max-w-[1150px]">
-        <h2 className="max-w-[1150px] text-[39px] font-medium leading-[1.08] tracking-[-2px] sm:text-[50px] lg:text-[56px] lg:leading-[76px] lg:tracking-[-3.16px]">
+      <div className="mx-auto max-w-[1150px] 2xl:max-w-[1440px]">
+        <h2 className="max-w-[1150px] 2xl:max-w-[1440px] text-[39px] font-medium leading-[1.08] tracking-[-2px] sm:text-[50px] lg:text-[56px] lg:leading-[76px] lg:tracking-[-3.16px]">
           end to end campaign{" "}
           <span className="font-serif text-[1.08em] font-extralight timesFontFamily italic tracking-[-1.4px]">
             development

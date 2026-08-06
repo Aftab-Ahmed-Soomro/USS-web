@@ -27,7 +27,7 @@ export function BuildGrowthSection() {
   return (
     <section id="build-growth" className="bg-black text-white pt-[60px] pb-0 sm:pb-10 sm:pt-[100px] flex flex-col items-center overflow-hidden">
       <motion.div
-        className="text-center max-w-[1150px] mx-auto w-full"
+        className="text-center max-w-[1150px] 2xl:max-w-[1440px] mx-auto w-full"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
@@ -58,14 +58,14 @@ export function BuildGrowthSection() {
 
         {/* DESCRIPTION */}
         <p className="font-[var(--font-be-vietnam)] font-light text-[13px] sm:text-[16.8px] leading-[1.6] sm:leading-[26.88px] text-[#F4F2EE8F] mt-6 sm:mt-8 max-w-[550px] mx-auto px-6">
-          Creative builds brands, performance drives growth and 
+          Creative builds brands, performance drives growth and
           <br className="hidden sm:block" /> strategy brings both together to create marketing that delivers long term results.
         </p>
       </motion.div>
 
       {/* IMAGE */}
       <motion.div
-        className="relative w-full max-w-[1150px] aspect-[1000/600] mt-10 sm:mt-0 px-4"
+        className="relative w-full max-w-[1150px] 2xl:max-w-[1440px] aspect-[1000/600] mt-10 sm:mt-0 px-4"
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, amount: 0.2 }}

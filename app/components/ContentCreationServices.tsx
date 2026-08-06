@@ -81,7 +81,7 @@ function ServiceCard({ num, title, heightClass, icon, image }: any) {
 export function ContentCreationServices() {
   return (
     <section className="bg-black text-white pb-[60px] sm:pb-[100px] px-4 min-[375px]:px-6 overflow-hidden">
-      <div className="max-w-[1150px] mx-auto">
+      <div className="max-w-[1150px] 2xl:max-w-[1440px] mx-auto">
         {/* Header */}
         <div className="mb-[30px] sm:mb-[100px]">
           <FadeUp delay={0.1}>
@@ -123,7 +123,7 @@ export function ContentCreationServices() {
 
             <FadeUp delay={0.3}>
               <p className="font-[var(--font-inter)] font-light text-[14px] sm:text-[18px] leading-[1.6] sm:leading-[29.25px] text-white/90 align-middle mb-[24px] sm:mb-[30px] max-w-[400px]">
-                 Great content starts long before the camera rolls. We define the creative direction, create mood boards and plan every detail before shoot day.
+                Great content starts long before the camera rolls. We define the creative direction, create mood boards and plan every detail before shoot day.
               </p>
             </FadeUp>
 
@@ -262,7 +262,7 @@ export function ContentCreationServices() {
 
             <FadeUp delay={0.3}>
               <p className="font-[var(--font-inter)] font-light text-[14px] sm:text-[18px] leading-[1.6] sm:leading-[29.25px] text-white/90 align-middle mb-[24px] sm:mb-[30px] max-w-[400px]">
-                 This is where ideas come to life. From directing talent to capturing every shot, we produce high quality content designed for campaigns, social media and brand storytelling.
+                This is where ideas come to life. From directing talent to capturing every shot, we produce high quality content designed for campaigns, social media and brand storytelling.
               </p>
             </FadeUp>
 

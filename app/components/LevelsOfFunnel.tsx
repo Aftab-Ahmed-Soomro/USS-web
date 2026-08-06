@@ -36,7 +36,7 @@ export function LevelsOfFunnel() {
 
   return (
     <section className="relative w-full bg-black py-[10px] sm:pt-32 px-4 min-[375px]:px-6 overflow-hidden">
-      <div className="max-w-[1150px] mx-auto relative z-10">
+      <div className="max-w-[1150px] 2xl:max-w-[1440px] mx-auto relative z-10">
         <Stagger staggerDelay={0.15}>
           <div className="flex flex-col lg:grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
 
@@ -113,15 +113,15 @@ export function LevelsOfFunnel() {
 
               {/* Mobile Impressions Popup */}
               {showPopup && (
-                <div 
+                <div
                   className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm lg:hidden p-4"
                   onClick={() => setShowPopup(false)}
                 >
-                  <div 
+                  <div
                     className="border border-white/10 rounded-[12px] p-6 bg-[#0a0a0a] w-[200px] shadow-2xl relative"
                     onClick={(e) => e.stopPropagation()}
                   >
-                    <button 
+                    <button
                       onClick={() => setShowPopup(false)}
                       className="absolute top-2 right-3 text-white/50 hover:text-white"
                     >
@@ -263,32 +263,28 @@ export function LevelsOfFunnel() {
                     return (
                       <div
                         key={lvl.id}
-                        className={`rounded-xl border transition-all duration-300 overflow-hidden ${
-                          isActive
+                        className={`rounded-xl border transition-all duration-300 overflow-hidden ${isActive
                             ? "bg-[#111111] border-[#FF5500]/60 shadow-[0_0_20px_rgba(255,85,0,0.15)]"
                             : "bg-[#0a0a0a]/60 border-white/10 hover:border-white/20"
-                        }`}
+                          }`}
                       >
                         <button
                           onClick={() => setActiveMobileLevel(isActive ? ("" as any) : lvl.id)}
                           className="w-full px-4 py-3.5 flex items-center justify-between text-left cursor-pointer focus:outline-none"
                         >
                           <div className="flex items-center gap-3">
-                            <span className={`text-[11px] font-mono uppercase tracking-[1px] ${
-                              isActive ? "text-[#FF5500]" : "text-white/40"
-                            }`}>
+                            <span className={`text-[11px] font-mono uppercase tracking-[1px] ${isActive ? "text-[#FF5500]" : "text-white/40"
+                              }`}>
                               {lvl.number}
                             </span>
-                            <span className={`text-[14px] font-medium tracking-tight ${
-                              isActive ? "text-white" : "text-white/80"
-                            }`}>
+                            <span className={`text-[14px] font-medium tracking-tight ${isActive ? "text-white" : "text-white/80"
+                              }`}>
                               {lvl.title}
                             </span>
                           </div>
                           <svg
-                            className={`size-4 shrink-0 transition-transform duration-300 ${
-                              isActive ? "text-[#FF5500] rotate-90" : "text-white/40"
-                            }`}
+                            className={`size-4 shrink-0 transition-transform duration-300 ${isActive ? "text-[#FF5500] rotate-90" : "text-white/40"
+                              }`}
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"

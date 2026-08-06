@@ -36,11 +36,10 @@ export function TalentHero() {
           {slides.map((src, index) => (
             <div
               key={index}
-              className={`w-full h-full flex-shrink-0 bg-cover ${
-                src.includes('3.png') 
-                  ? 'bg-[80%_20%]' 
+              className={`w-full h-full flex-shrink-0 bg-cover ${src.includes('3.png')
+                  ? 'bg-[80%_20%]'
                   : 'bg-[75%_20%] md:bg-[center_20%]'
-              }`}
+                }`}
               style={{
                 backgroundImage: `url('${src}')`
               }}
@@ -49,7 +48,7 @@ export function TalentHero() {
         </div>
 
         {/* Content Overlaid on Top of Background Slider */}
-        <div className="relative z-10 mx-auto w-full max-w-[1150px]">
+        <div className="relative z-10 mx-auto w-full max-w-[1150px] 2xl:max-w-[1440px]">
           <Stagger staggerDelay={0.15}>
             <StaggerItem>
               <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[72px] font-bold capitalize leading-[1.1] tracking-[-3px] text-white">
@@ -89,9 +88,8 @@ export function TalentHero() {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                currentSlide === index ? "bg-white scale-125" : "bg-white/50 hover:bg-white/75"
-              }`}
+              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${currentSlide === index ? "bg-white scale-125" : "bg-white/50 hover:bg-white/75"
+                }`}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
@@ -100,9 +98,9 @@ export function TalentHero() {
 
       {/* ── MOBILE VIEW (md:hidden) — Text Above, Clean Image Slider Below ── */}
       <section className="flex md:hidden flex-col relative bg-black text-white px-6 pb-[60px] pt-[50px] overflow-hidden">
-        
+
         {/* Mobile Top Text Section */}
-        <div className="relative z-10 mx-auto w-full max-w-[1150px] mb-8">
+        <div className="relative z-10 mx-auto w-full max-w-[1150px] 2xl:max-w-[1440px] mb-8">
           <Stagger staggerDelay={0.15}>
             <StaggerItem>
               <h1 className="font-[var(--font-be-vietnam)] text-[38px] min-[375px]:text-[44px] font-bold capitalize leading-[1.08] tracking-[-1px] text-white text-center sm:text-start">
@@ -134,7 +132,7 @@ export function TalentHero() {
         </div>
 
         {/* Mobile Image Slider (Below Text, Clean images scrolling with NO text overlay) */}
-        <div className="relative mx-auto w-full max-w-[1150px] h-[300px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0a0a0a]">
+        <div className="relative mx-auto w-full max-w-[1150px] 2xl:max-w-[1440px] h-[300px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0a0a0a]">
           {/* Text Overlaid on Left of Mobile Image Carousel */}
           <div className="absolute top-[45%] -translate-y-1/2 left-6 z-10 max-w-[60%] pointer-events-none">
             <h2 className="font-bold text-[22px] leading-[1.35] text-white tracking-[-0.5px] drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
@@ -171,9 +169,8 @@ export function TalentHero() {
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`h-1.5 rounded-full transition-all duration-300 ${
-                  currentSlide === index ? "w-6 bg-[#FF5500]" : "w-1.5 bg-white/40"
-                }`}
+                className={`h-1.5 rounded-full transition-all duration-300 ${currentSlide === index ? "w-6 bg-[#FF5500]" : "w-1.5 bg-white/40"
+                  }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}

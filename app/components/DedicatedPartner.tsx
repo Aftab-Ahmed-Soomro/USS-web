@@ -116,45 +116,45 @@ export default function DedicatedPartner() {
   return (
     <section className="relative overflow-hidden bg-[#000] text-white pt-4 pb-4 sm:pt-0 py-0 lg:pb-24 px-6 w-full flex flex-col items-center">
       {/* Subtle background ambient glow */}
-      <div 
+      <div
         className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[800px] rounded-full opacity-15 blur-[140px]"
         style={{ background: 'radial-gradient(circle, #ff5500 0%, rgba(0,0,0,0) 70%)' }}
       />
 
-      <div className="relative z-10 w-full max-w-[1150px]">
-        
+      <div className="relative z-10 w-full max-w-[1150px] 2xl:max-w-[1440px]">
+
         {/* Top Content Grid */}
-        <motion.div 
+        <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={containerVariants}
           className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 mb-2 sm:mb-14"
         >
-          
+
           {/* Left: Heading */}
           <div className="lg:col-span-8">
-            <motion.h2 
+            <motion.h2
               variants={itemVariants}
               className="whitespace-normal lg:whitespace-nowrap font-normal text-[28px] leading-[36px] sm:text-[36px] sm:leading-[44px] tracking-[-1px] lg:text-[50px] lg:leading-[65px] lg:tracking-[-1.52px] align-middle"
             >
-              your website is the <br className="hidden md:block" /> 
-              foundation of your <br className="hidden md:block" /> 
+              your website is the <br className="hidden md:block" />
+              foundation of your <br className="hidden md:block" />
               digital presence.
             </motion.h2>
           </div>
 
           {/* Right: Paragraph & Button */}
           <div className="lg:col-span-4 flex flex-col items-start mt-0 sm:mt-8 lg:mt-5 ml-0 lg:-ml-26">
-            <motion.p 
+            <motion.p
               variants={itemVariants}
               className="font-normal text-[13px] sm:text-[15px] leading-[24.38px] align-middle text-[#a3a3a3] mb-6 max-w-[500px]"
             >
               Your website is where every customer journey begins. It&apos;s the place your marketing, advertising and social media lead back to, making it one of the most important assets your business will ever invest in.
             </motion.p>
-            
+
             <motion.div variants={itemVariants}>
-              <Link 
+              <Link
                 href="/contact"
                 className="relative inline-flex items-center justify-center rounded-full border px-8 py-2 sm:py-3.5 transition-all duration-300 border-[#ff5500] bg-[#ff5500] text-white hover:shadow-[0_0_25px_rgba(255,85,0,0.4)] group overflow-hidden"
               >
@@ -170,7 +170,7 @@ export default function DedicatedPartner() {
         </motion.div>
 
         {/* Animated Line Divider */}
-        <motion.div 
+        <motion.div
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true, amount: 0.5 }}
@@ -179,7 +179,7 @@ export default function DedicatedPartner() {
         />
 
         {/* Bottom: Stats */}
-        <motion.div 
+        <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
@@ -187,7 +187,7 @@ export default function DedicatedPartner() {
           className="flex justify-between gap-2 sm:gap-12 md:gap-0 w-full mt-2 sm:mt-20"
         >
           {stats.map((stat, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               variants={statItemVariants}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}

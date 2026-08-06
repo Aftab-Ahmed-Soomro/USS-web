@@ -76,7 +76,7 @@ function StepImage({ src, alt }: { src: string; alt: string }) {
 export function Approach() {
   return (
     <section className="relative z-10 border-t border-[#060606]/10 bg-white px-6 py-[46px] text-[#060606]  lg:py-[50px]">
-      <div className="mx-auto flex max-w-[1150px] flex-col items-start">
+      <div className="mx-auto flex max-w-[1150px] 2xl:max-w-[1440px] flex-col items-start">
         <div className="w-full border-b border-[#060606]/10 pb-[26px]">
           <p className="font-[var(--font-be-vietnam)] text-[9px] font-bold uppercase leading-none tracking-[2.4px] text-[#ff5500]">
             Our Approach
@@ -93,9 +93,8 @@ export function Approach() {
         <div className="flex w-full flex-col items-start pt-[34px]">
           {approachSteps.map((step, index) => (
             <article
-              className={`grid w-full gap-8 py-10 md:grid-cols-2 md:items-center md:gap-12 lg:grid-cols-[minmax(0,420px)_minmax(0,420px)] lg:gap-[96px] lg:py-0 ${
-                index === 0 ? "pt-0 lg:min-h-[455px]" : "border-t border-transparent lg:min-h-[455px]"
-              }`}
+              className={`grid w-full gap-8 py-10 md:grid-cols-2 md:items-center md:gap-12 lg:grid-cols-[minmax(0,420px)_minmax(0,420px)] lg:gap-[96px] lg:py-0 ${index === 0 ? "pt-0 lg:min-h-[455px]" : "border-t border-transparent lg:min-h-[455px]"
+                }`}
               key={step.number}
             >
               {step.imageFirst ? (

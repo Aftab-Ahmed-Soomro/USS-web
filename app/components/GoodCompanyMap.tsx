@@ -50,7 +50,7 @@ export function GoodCompanyMap() {
 
   return (
     <section className="relative z-10 border-t border-t-black w-full bg-white py-[50px] sm:py-16 md:py-24 px-4 min-[375px]:px-6 overflow-hidden">
-      <div className="w-full max-w-[1150px] mx-auto flex flex-col items-center ">
+      <div className="w-full max-w-[1150px] 2xl:max-w-[1440px] mx-auto flex flex-col items-center ">
 
         {/* Main heading — fades up */}
         <FadeUp delay={0.1}>
@@ -84,15 +84,15 @@ export function GoodCompanyMap() {
 
           {/* Foreground logos — slides in from right, slightly after */}
           {/* <FadeRight delay={0.45}> */}
-            <Image
-              src="/assets/map.webp"
-              alt="Companies we work with"
-              width={1000}
-              height={500}
-              className="absolute max-w-[1000px] top-0 left-[6%] sm:left-20 w-[90%] sm:w-full h-auto mx-auto object-contain"
-              style={{ padding: "inherit" }}
-              sizes="(max-width: 640px) 90vw, 1000px"
-            />
+          <Image
+            src="/assets/map.webp"
+            alt="Companies we work with"
+            width={1000}
+            height={500}
+            className="absolute max-w-[1000px] top-0 left-[6%] sm:left-20 w-[90%] sm:w-full h-auto mx-auto object-contain"
+            style={{ padding: "inherit" }}
+            sizes="(max-width: 640px) 90vw, 1000px"
+          />
           {/* </FadeRight> */}
 
           {/* Additional 4 logos placed at vacant map locations */}

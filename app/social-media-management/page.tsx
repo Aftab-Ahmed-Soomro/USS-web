@@ -137,13 +137,13 @@ const socialServicesData = [
 function Hero() {
   return (
     <section className="bg-[#f7f7f5] px-4 min-[375px]:px-5 min-[480px]:px-6 sm:px-6 py-[48px] min-[390px]:py-[58px] text-black sm:py-[76px] lg:py-[82px]">
-      <div className="mx-auto grid max-w-[1150px] gap-8 min-[390px]:gap-10 sm:gap-10 lg:grid-cols-[minmax(0,700px)_430px] lg:items-center lg:justify-between">
+      <div className="mx-auto grid max-w-[1150px] 2xl:max-w-[1440px] gap-8 min-[390px]:gap-10 sm:gap-10 lg:grid-cols-[minmax(0,700px)_430px] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.15}>
           <StaggerItem>
-                                <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white text-center sm:text-start">
-                                  ORGANIC SOCIAL
-                                </p>
-                              </StaggerItem>
+            <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white text-center sm:text-start">
+              ORGANIC SOCIAL
+            </p>
+          </StaggerItem>
           <StaggerItem>
             <h1 className="max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[1.03] tracking-[-1.5px] min-[390px]:tracking-[-2px] min-[480px]:tracking-[-3.2px] sm:tracking-[-3.2px] sm:text-[70px] text-center sm:text-start">
               social media that builds{" "}
@@ -170,7 +170,7 @@ function Hero() {
                 href="/contact"
               >
                 Book a Consultation
-            </Link>
+              </Link>
             </div>
           </StaggerItem>
         </Stagger>
@@ -191,7 +191,7 @@ function SocialServices() {
   return (
     <section className="bg-[#080808] px-4 min-[375px]:px-5 min-[480px]:px-6 sm:px-6 py-[48px] min-[390px]:py-[58px] sm:py-[70px] text-white lg:py-[100px]">
       <Stagger staggerDelay={0.15}>
-        <div className="mx-auto max-w-[1150px]">
+        <div className="mx-auto max-w-[1150px] 2xl:max-w-[1440px]">
           {/* Header */}
           <StaggerItem>
             <p className="font-[var(--font-inter)] text-[13px] font-bold uppercase tracking-[4px] text-[#ff5500]">
@@ -286,43 +286,43 @@ function RelatedProjects() {
   return (
     <section className="bg-[#080808] px-4 min-[375px]:px-6 py-[40px] sm:py-[56px] text-white">
       <Stagger staggerDelay={0.15}>
-        <div className="mx-auto max-w-[1150px]">
+        <div className="mx-auto max-w-[1150px] 2xl:max-w-[1440px]">
           {/* Header */}
           <div className="flex items-center justify-between gap-6">
-                    <Stagger staggerDelay={0.12}>
-                      <StaggerItem>
-                                    <p className="font-[var(--font-be-vietnam)] text-[9px] sm:text-[12px] font-normal uppercase tracking-[3px] text-[#ff5500]">
-                                      RECENT PROJECTS
-                                    </p>
-                                  </StaggerItem>
-                      <StaggerItem>
-                                    <h2 className="mt-[16px] sm:mt-[24px] max-w-[650px] font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[38px] font-medium lowercase leading-[0.9] tracking-[-1.4px] sm:text-[56px]">
-                                      see how we build
-                                      <br />
-                                      {" "}
-                                      <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] font-normal timesFontFamily italic leading-[1.1] sm:leading-none">
-                                        brands
-                                      </span>
-                                    </h2>
-                                                </StaggerItem>
-                                    
-                      <StaggerItem>
-                                    <p className="mt-[14px] max-w-[600px] sm:mt-[18px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.5] text-white/90 sm:text-white">
-                                      Explore how we've helped brands grow their audience, strengthen their online presence and build engaged communities through organic social media.
-                                    </p>
-                                  </StaggerItem>
-                    </Stagger>
-          
-                    <FadeRight delay={0.3}>
-                      <Link
-                        href="/projects"
-                        className="hidden sm:inline-flex shrink-0 items-center gap-2 rounded-full border border-white px-5 py-3 font-[var(--font-inter)] text-[12px] text-white sm:text-[15px]"
-                      >
-                        View all projects
-                        <img src="/assets/rightArrowMed.png" className="w-4 h-4" alt="" loading="lazy" decoding="async" />
-                      </Link>
-                    </FadeRight>
-                  </div>
+            <Stagger staggerDelay={0.12}>
+              <StaggerItem>
+                <p className="font-[var(--font-be-vietnam)] text-[9px] sm:text-[12px] font-normal uppercase tracking-[3px] text-[#ff5500]">
+                  RECENT PROJECTS
+                </p>
+              </StaggerItem>
+              <StaggerItem>
+                <h2 className="mt-[16px] sm:mt-[24px] max-w-[650px] font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[38px] font-medium lowercase leading-[0.9] tracking-[-1.4px] sm:text-[56px]">
+                  see how we build
+                  <br />
+                  {" "}
+                  <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] font-normal timesFontFamily italic leading-[1.1] sm:leading-none">
+                    brands
+                  </span>
+                </h2>
+              </StaggerItem>
+
+              <StaggerItem>
+                <p className="mt-[14px] max-w-[600px] sm:mt-[18px] font-[var(--font-inter)] text-[14px] sm:text-[18px] leading-[1.5] text-white/90 sm:text-white">
+                  Explore how we've helped brands grow their audience, strengthen their online presence and build engaged communities through organic social media.
+                </p>
+              </StaggerItem>
+            </Stagger>
+
+            <FadeRight delay={0.3}>
+              <Link
+                href="/projects"
+                className="hidden sm:inline-flex shrink-0 items-center gap-2 rounded-full border border-white px-5 py-3 font-[var(--font-inter)] text-[12px] text-white sm:text-[15px]"
+              >
+                View all projects
+                <img src="/assets/rightArrowMed.png" className="w-4 h-4" alt="" loading="lazy" decoding="async" />
+              </Link>
+            </FadeRight>
+          </div>
 
           {/* Cards */}
           <div className="mt-[24px] sm:mt-[40px] grid gap-[16px] sm:gap-[24px] md:grid-cols-2">
@@ -395,7 +395,7 @@ function FinalCta() {
   return (
     <section className="bg-black px-4 min-[375px]:px-5 min-[480px]:px-6 sm:px-6 pt-[60px] min-[390px]:pt-[80px] sm:pt-[100px] text-white pb-[100px] sm:pb-20">
       <Stagger staggerDelay={0.15}>
-        <div className="mx-auto max-w-[1150px] text-center">
+        <div className="mx-auto max-w-[1150px] 2xl:max-w-[1440px] text-center">
           <StaggerItem>
             <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
               LET&apos;S SCALE
@@ -452,7 +452,7 @@ export default function SocialMediaManagementPage() {
           </h2>
         }
         centerLogo="/assets/organic__icon.png"
-      logoClassName="w-[80px] lg:w-[125px]"
+        logoClassName="w-[80px] lg:w-[125px]"
         subheading="Many brands are active on social media, but without a clear strategy, consistent content and a defined brand identity"
         leftTitle="Most Brands"
         rightTitle="The USS Difference"
@@ -514,7 +514,7 @@ export default function SocialMediaManagementPage() {
       <FinalCta />
       <div className="mt-[-120px]">
 
-      <Footer />
+        <Footer />
       </div>
     </main>
   );

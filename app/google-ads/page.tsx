@@ -103,7 +103,7 @@ const workWays = [
 function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#ff5500] px-4 min-[375px]:px-6 pb-[40px] pt-[40px] min-[375px]:pb-[58px] min-[375px]:pt-[56px] text-white sm:pb-[72px] sm:pt-[78px]">
-      <div className="mx-auto grid max-w-[1150px] gap-8 sm:gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between text-center sm:text-start">
+      <div className="mx-auto grid max-w-[1150px] 2xl:max-w-[1440px] gap-8 sm:gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between text-center sm:text-start">
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
             <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white">
@@ -128,12 +128,12 @@ function Hero() {
           </StaggerItem>
           <StaggerItem>
             <div className="flex items-center justify-center sm:justify-start">
-            <Link
-              className="mt-[24px] sm:mt-[30px] inline-flex h-[48px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-white px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-black transition uppercase hover:bg-[#ff6b1f]"
-              href="/contact"
-            >
-              Book a Consultation
-            </Link>
+              <Link
+                className="mt-[24px] sm:mt-[30px] inline-flex h-[48px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-white px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-black transition uppercase hover:bg-[#ff6b1f]"
+                href="/contact"
+              >
+                Book a Consultation
+              </Link>
             </div>
           </StaggerItem>
         </Stagger>
@@ -185,7 +185,7 @@ function GrowthIcon() {
 function CaseStudies() {
   return (
     <section className="bg-black px-4 min-[375px]:px-6 py-[40px] sm:py-[78px] text-white lg:py-[86px]">
-      <div className="mx-auto max-w-[1150px]">
+      <div className="mx-auto max-w-[1150px] 2xl:max-w-[1440px]">
         <div className="flex flex-col gap-[20px] md:gap-7 md:flex-row md:items-end md:justify-between">
           <Stagger staggerDelay={0.12}>
             <StaggerItem>
@@ -195,7 +195,7 @@ function CaseStudies() {
             </StaggerItem>
             <StaggerItem>
               <h2 className="mt-[16px] sm:mt-[24px] max-w-[650px] font-[var(--font-be-vietnam)] text-[32px] min-[375px]:text-[38px] font-medium lowercase leading-[0.9] tracking-[-1.4px] sm:text-[56px]">
-                See how search 
+                See how search
                 {/* <br /> */}
                 {" "}
                 <span className="font-[var(--font-cormorant)] text-[1.12em] sm:text-[72px] font-normal timesFontFamily italic leading-[1.1] sm:leading-none">
@@ -265,7 +265,7 @@ function CaseStudies() {
               </Link>
             </FadeUp>
           ))}
-          
+
           {/* Mobile-only view all link, shown below cards on small screens */}
           <Link
             href="/projects"
@@ -283,10 +283,10 @@ function CaseStudies() {
 function FinalCta() {
   return (
     <section className="bg-black px-4 min-[375px]:px-6 pt-[50px] sm:pt-[70px] text-white pb-30">
-      <Stagger staggerDelay={0.12} className="mx-auto max-w-[1150px] text-center">
+      <Stagger staggerDelay={0.12} className="mx-auto max-w-[1150px] 2xl:max-w-[1440px] text-center">
         <StaggerItem>
           <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
-             LET&apos;S SCALE
+            LET&apos;S SCALE
           </p>
         </StaggerItem>
         <StaggerItem>
@@ -375,29 +375,29 @@ export default function GoogleAdsPage() {
       <Hero />
       <Numbers />
       <Brands />
-      
+
       <WhyEmailFails
-      tagline="THE OPPORTUNITY"
-      hideBadge={false}
-      heading={
-        <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[32px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
-          why most{" "}
-          <span
-            className="font-normal italic text-[42px] sm:text-[72px]"
-            style={{ fontFamily: "'Times New Roman', Times, serif" }}
-          >
-            google ads
-          </span>{" "}
-          fails
-        </h2>
-      }
-      subheading="Most brands don't have a Google Ads problem, they have a strategy problem."
-      leftTitle="Most Brands"
-      rightTitle="The USS Difference"
-      leftPoints={googleAdsBrandPoints}
-      rightPoints={googleAdsUssPoints}
-      centerLogo="/assets/Google__logo.webp"
-      logoClassName="w-[60px] lg:w-[115px]"
+        tagline="THE OPPORTUNITY"
+        hideBadge={false}
+        heading={
+          <h2 className="mx-auto max-w-[900px] text-center font-[var(--font-inter)] text-[32px] font-medium leading-[1] tracking-[-1.5px] sm:text-[56px]">
+            why most{" "}
+            <span
+              className="font-normal italic text-[42px] sm:text-[72px]"
+              style={{ fontFamily: "'Times New Roman', Times, serif" }}
+            >
+              google ads
+            </span>{" "}
+            fails
+          </h2>
+        }
+        subheading="Most brands don't have a Google Ads problem, they have a strategy problem."
+        leftTitle="Most Brands"
+        rightTitle="The USS Difference"
+        leftPoints={googleAdsBrandPoints}
+        rightPoints={googleAdsUssPoints}
+        centerLogo="/assets/Google__logo.webp"
+        logoClassName="w-[60px] lg:w-[115px]"
       />
       <div className="mt-[0px] sm:mt-[-60px]">
         <WhyGoogleAdsWork
@@ -407,38 +407,38 @@ export default function GoogleAdsPage() {
           logoClassName="h-[1em] sm:h-[1.25em] w-auto object-contain inline-block self-center mt-1 sm:mt-1.5"
           headingItalic="ads"
           headingSuffix="work"
-        items={[
-          {
-            number: "01",
-            icon: "/assets/GoogleAds/icon1.png",
-            title: "Capture Active Demand",
-            description: "Show your business to people actively searching for your products or services.",
-          },
-          {
-            number: "02",
-            icon: "/assets/GoogleAds/icon2.png",
-            title: "Measurable Results",
-            description: "Track enquiries, conversions and campaign performance.",
-          },
-          {
-            number: "03",
-            icon: "/assets/GoogleAds/icon3.png",
-            title: "Flexible Budget",
-            description: "Scale campaigns around your business and budget.",
-          },
-          {
-            number: "04",
-            icon: "/assets/GoogleAds/icon4.png",
-            title: "Fast Visibility",
-            description: "Appear in search results as soon as campaigns go live.",
-          },
-        ]}
-      />
+          items={[
+            {
+              number: "01",
+              icon: "/assets/GoogleAds/icon1.png",
+              title: "Capture Active Demand",
+              description: "Show your business to people actively searching for your products or services.",
+            },
+            {
+              number: "02",
+              icon: "/assets/GoogleAds/icon2.png",
+              title: "Measurable Results",
+              description: "Track enquiries, conversions and campaign performance.",
+            },
+            {
+              number: "03",
+              icon: "/assets/GoogleAds/icon3.png",
+              title: "Flexible Budget",
+              description: "Scale campaigns around your business and budget.",
+            },
+            {
+              number: "04",
+              icon: "/assets/GoogleAds/icon4.png",
+              title: "Fast Visibility",
+              description: "Appear in search results as soon as campaigns go live.",
+            },
+          ]}
+        />
       </div>
       <PlatformsWeWorkWith
         heading={
           <h2
-            className="text-white mx-auto max-w-[1150px] mb-10 tracking-[-1.5px] text-center sm:text-left"
+            className="text-white mx-auto max-w-[1150px] 2xl:max-w-[1440px] mb-10 tracking-[-1.5px] text-center sm:text-left"
             style={{
               fontWeight: 500,
               fontSize: "clamp(32px, 5vw, 56px)",
@@ -492,7 +492,7 @@ export default function GoogleAdsPage() {
       <FinalCta />
       <div className="mt-[-120px]">
 
-      <Footer />
+        <Footer />
       </div>
     </main>
   );

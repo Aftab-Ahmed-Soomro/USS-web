@@ -240,7 +240,7 @@ function Hero() {
         style={{ background: 'radial-gradient(circle, #FF5500 0%, rgba(255,85,0,0) 70%)' }}
       />
 
-      <div className="relative z-10 mx-auto grid max-w-[1150px] gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between text-center sm:text-start">
+      <div className="relative z-10 mx-auto grid max-w-[1150px] 2xl:max-w-[1440px] gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between text-center sm:text-start">
         <Stagger staggerDelay={0.15}>
 
           <StaggerItem>
@@ -262,18 +262,18 @@ function Hero() {
               Our 360 marketing approach brings strategy, creative and performance together, creating one connected system that works towards the same goal.
             </p>
             <p className="mt-[40px] max-w-[600px] font-[var(--font-inter)] text-[13px]  text-white/90 sm:text-[18px] text-center sm:text-start">
-Trusted by over 100 businesses across the US, UAE & UK
+              Trusted by over 100 businesses across the US, UAE & UK
             </p>
           </StaggerItem>
           <StaggerItem>
             <div className="flex justify-center sm:justify-start">
-              
+
               <Link
-              className="mt-[24px] sm:mt-[36px] inline-flex h-[36px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
-              href="/contact"
-            >
-              Book a Consultation
-            </Link>
+                className="mt-[24px] sm:mt-[36px] inline-flex h-[36px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
+                href="/contact"
+              >
+                Book a Consultation
+              </Link>
             </div>
           </StaggerItem>
         </Stagger>
@@ -287,7 +287,7 @@ Trusted by over 100 businesses across the US, UAE & UK
 function EmailOverview() {
   return (
     <section className="relative overflow-hidden bg-black">
-      <div className="relative mx-auto grid max-w-[1150px] px-6 py-[50px] sm:pt-10 sm:pb-0 lg:grid-cols-[minmax(0,680px)_minmax(320px,430px)] lg:justify-between">
+      <div className="relative mx-auto grid max-w-[1150px] 2xl:max-w-[1440px] px-6 py-[50px] sm:pt-10 sm:pb-0 lg:grid-cols-[minmax(0,680px)_minmax(320px,430px)] lg:justify-between">
         {/* Image mockup */}
         <FadeRight duration={0.8} delay={0.2} className="order-2 -mx-1 pt-10 sm:mx-0 lg:order-none lg:col-start-2 lg:row-start-1 lg:flex lg:items-start lg:pt-0">
           <div className="relative mx-auto aspect-[463/842] w-full max-w-[260px] min-[375px]:max-w-[300px] sm:max-w-[400px] overflow-hidden bg-white shadow-[0_24px_55px_rgba(0,0,0,0.35)]">
@@ -311,12 +311,12 @@ function EmailOverview() {
           </StaggerItem>
 
           <StaggerItem>
-              <span
-                className="text-[36px] font-normal lowercase italic tracking-[-1.5px] text-[#ff5500] sm:text-[72px] sm:leading-[70px]"
-                style={{ fontFamily: "'Times New Roman', Times, serif" }}
-              >
-                Our Approach
-              </span>
+            <span
+              className="text-[36px] font-normal lowercase italic tracking-[-1.5px] text-[#ff5500] sm:text-[72px] sm:leading-[70px]"
+              style={{ fontFamily: "'Times New Roman', Times, serif" }}
+            >
+              Our Approach
+            </span>
           </StaggerItem>
 
           <div className="mt-[5px] sm:mt-[52px] grid grid-cols-1 sm:grid-cols-2">
@@ -537,16 +537,16 @@ function ServiceCard({ num, title, heightClass, icon, image }: any) {
 function ContentCreationServices() {
   return (
     <section className="bg-black text-white pb-[60px] sm:pb-[100px] px-4 min-[375px]:px-6 overflow-hidden">
-      <div className="max-w-[1150px] mx-auto">
+      <div className="max-w-[1150px] 2xl:max-w-[1440px] mx-auto">
         {/* Header */}
         <div className="mb-[30px] sm:mb-[30px]">
-            {/* <h4 className="font-[var(--font-inter)] text-[#ff5500] font-bold text-[14px] leading-[16px] tracking-[2.64px] uppercase mb-6">
+          {/* <h4 className="font-[var(--font-inter)] text-[#ff5500] font-bold text-[14px] leading-[16px] tracking-[2.64px] uppercase mb-6">
               OUR SERVICES
             </h4> */}
           <FadeUp delay={0.2}>
-              <span className="font-[var(--font-cormorant)] font-normal italic text-[42px] sm:text-[72px] lowercase text-[#ff5500] leading-[1.1] sm:leading-[50.4px] tracking-[-1.2px] timesFontFamily">
+            <span className="font-[var(--font-cormorant)] font-normal italic text-[42px] sm:text-[72px] lowercase text-[#ff5500] leading-[1.1] sm:leading-[50.4px] tracking-[-1.2px] timesFontFamily">
               our services
-              </span>
+            </span>
           </FadeUp>
         </div>
 
@@ -574,7 +574,7 @@ function ContentCreationServices() {
 
             <FadeUp delay={0.3}>
               <p className="font-[var(--font-inter)] font-light text-[14px] sm:text-[18px] leading-[1.6] sm:leading-[29.25px] text-white/90 align-middle mb-[24px] sm:mb-[30px] max-w-[400px]">
-                 Great content starts long before the camera rolls. We define the creative direction, create mood boards and plan every detail before shoot day.
+                Great content starts long before the camera rolls. We define the creative direction, create mood boards and plan every detail before shoot day.
               </p>
             </FadeUp>
 
@@ -713,7 +713,7 @@ function ContentCreationServices() {
 
             <FadeUp delay={0.3}>
               <p className="font-[var(--font-inter)] font-light text-[14px] sm:text-[18px] leading-[1.6] sm:leading-[29.25px] text-white/90 align-middle mb-[24px] sm:mb-[30px] max-w-[400px]">
-                 This is where ideas come to life. From directing talent to capturing every shot, we produce high quality content designed for campaigns, social media and brand storytelling.
+                This is where ideas come to life. From directing talent to capturing every shot, we produce high quality content designed for campaigns, social media and brand storytelling.
               </p>
             </FadeUp>
 
@@ -756,7 +756,7 @@ function SocialServices() {
   return (
     <section className="bg-[#080808] px-4 min-[375px]:px-5 min-[480px]:px-6 sm:px-6 py-[48px] min-[390px]:py-[58px] sm:py-[70px] text-white lg:py-[100px]">
       <Stagger staggerDelay={0.15}>
-        <div className="mx-auto max-w-[1150px]">
+        <div className="mx-auto max-w-[1150px] 2xl:max-w-[1440px]">
           {/* Header */}
           <StaggerItem>
             <p className="font-[var(--font-inter)] text-[13px] font-bold uppercase tracking-[4px] text-[#ff5500]">
@@ -865,12 +865,12 @@ export default function New360WithForm() {
         heading={
           <h2 className="text-[32px] sm:text-[60px] leading-[1] tracking-[-1px] lg:tracking-[-3px] font-light lowercase" style={{ fontWeight: 300 }}>
 
-                  from discovery to <span className="relative inline-block z-10 whitespace-nowrap text-[#ff5500] timesFontFamily italic text-[42px] sm:text-[74px]">
-                    scale.
+            from discovery to <span className="relative inline-block z-10 whitespace-nowrap text-[#ff5500] timesFontFamily italic text-[42px] sm:text-[74px]">
+              scale.
 
-                    
-                  </span>
-                </h2>
+
+            </span>
+          </h2>
         }
         data={strategyAccordionData}
       />
@@ -1013,7 +1013,7 @@ export default function New360WithForm() {
       <PlatformsWeWorkWith
         heading={
           <h2
-            className="text-white mx-auto max-w-[1150px] mb-10 tracking-[-1.5px] text-center sm:text-left"
+            className="text-white mx-auto max-w-[1150px] 2xl:max-w-[1440px] mb-10 tracking-[-1.5px] text-center sm:text-left"
             style={{
               fontWeight: 500,
               fontSize: "clamp(32px, 5vw, 56px)",
@@ -1087,10 +1087,10 @@ export default function New360WithForm() {
           </span>
         </h2>
       </motion.div>
-        <div className="-mt-8 sm:-mt-0">
-          <EmailOverview />
-        </div>
-        <EmailStrategy />
+      <div className="-mt-8 sm:-mt-0">
+        <EmailOverview />
+      </div>
+      <EmailStrategy />
       <EmailVisuals />
       <div className="relative z-10 w-full flex flex-col justify-center items-center bg-white gap-6 pb-8 sm:gap-8">
         <motion.div
@@ -1122,8 +1122,8 @@ export default function New360WithForm() {
           </span> */}
         </h2>
       </motion.div>
-        <WhyWhatsappWorks />
-        <WhatsAppChannels />
+      <WhyWhatsappWorks />
+      <WhatsAppChannels />
       <div className="-mt-15 sm:-mt-30">
         <ConversationFlow />
       </div>
@@ -1155,7 +1155,7 @@ export default function New360WithForm() {
           </span>
         </h2>
       </motion.div>
-        <PlatformsWeWorkWith />
+      <PlatformsWeWorkWith />
       <div className="-mb-8 sm:-mb-10 -mt-10 sm:-mt-20">
         <EmailMarketingQuote first={"your social media is your"} second={"digital window"} third={"shop front"} />
       </div>
@@ -1261,29 +1261,29 @@ export default function New360WithForm() {
       </motion.div>
       <div className="-mt-10">
         <CaseStudies
-        heading={
-          <h2 className="text-white">
-            <span className="font-medium text-[32px] leading-[40px] sm:text-[40px] sm:leading-[48px] tracking-[-2px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-3.2px]">
-              see how we create
-            </span>
-            <br className="block sm:hidden" />
-            <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[42px] leading-[40px] sm:text-[48px] sm:leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
-              {" "}business{" "}
-            </span>
-            <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[42px] leading-[40px] sm:text-[48px] sm:leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
-              documents
-            </span>
-          </h2>
-        }
-        description={
-          <p className="font-normal text-[13px] leading-[24px] lg:text-[18px] lg:leading-[28px] text-white/90 max-w-[600px] mt-2">
-            Professionally designed business documents that strengthen your brand, communicate your value and support every client conversation.
-          </p>
-        }
-        leftData={brandingLeftData}
-        rightData={brandingRightData}
-        imageAspectRatio="aspect-[617/344]"
-      />
+          heading={
+            <h2 className="text-white">
+              <span className="font-medium text-[32px] leading-[40px] sm:text-[40px] sm:leading-[48px] tracking-[-2px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-3.2px]">
+                see how we create
+              </span>
+              <br className="block sm:hidden" />
+              <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[42px] leading-[40px] sm:text-[48px] sm:leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
+                {" "}business{" "}
+              </span>
+              <span style={{ fontFamily: '"Times New Roman", Times, serif' }} className="font-normal italic text-[42px] leading-[40px] sm:text-[48px] sm:leading-[48px] tracking-[-2px] lg:text-[72px] lg:leading-[70px] lg:tracking-[-3.2px]">
+                documents
+              </span>
+            </h2>
+          }
+          description={
+            <p className="font-normal text-[13px] leading-[24px] lg:text-[18px] lg:leading-[28px] text-white/90 max-w-[600px] mt-2">
+              Professionally designed business documents that strengthen your brand, communicate your value and support every client conversation.
+            </p>
+          }
+          leftData={brandingLeftData}
+          rightData={brandingRightData}
+          imageAspectRatio="aspect-[617/344]"
+        />
       </div>
       <div className="-mb-25">
         <BrandingServices />

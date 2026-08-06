@@ -72,7 +72,7 @@ export function RevenueMethod({ heading = DEFAULT_HEADING, tagline = DEFAULT_TAG
 
   return (
     <div className="w-full bg-black text-white py-[50px] sm:py-20 px-6 min-h-screen flex flex-col justify-center items-center font-sans">
-      <Stagger staggerDelay={0.15} className="max-w-[1150px] w-full">
+      <Stagger staggerDelay={0.15} className="max-w-[1150px] 2xl:max-w-[1440px] w-full">
 
         <StaggerItem>
           <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-[#ff5500] text-center sm:text-start mb-4">
@@ -121,9 +121,8 @@ export function RevenueMethod({ heading = DEFAULT_HEADING, tagline = DEFAULT_TAG
 
                       {/* Description - Expands smoothly on Hover or Tap */}
                       <div
-                        className={`grid transition-all duration-500 ease-in-out sm:group-hover:grid-rows-[1fr] sm:group-hover:opacity-100 ${
-                          isActive ? 'grid-rows-[1fr] opacity-100 mt-2 sm:mt-3' : 'grid-rows-[0fr] opacity-0 mt-0 sm:group-hover:mt-2 sm:group-hover:sm:mt-3'
-                        }`}
+                        className={`grid transition-all duration-500 ease-in-out sm:group-hover:grid-rows-[1fr] sm:group-hover:opacity-100 ${isActive ? 'grid-rows-[1fr] opacity-100 mt-2 sm:mt-3' : 'grid-rows-[0fr] opacity-0 mt-0 sm:group-hover:mt-2 sm:group-hover:sm:mt-3'
+                          }`}
                       >
                         <div className="overflow-hidden">
                           <p

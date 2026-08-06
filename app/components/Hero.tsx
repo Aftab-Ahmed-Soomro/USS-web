@@ -4,7 +4,7 @@ import { ConsultationForm } from "./ConsultationForm";
 
 export function Hero() {
   return (
-    <main className="relative z-10 mx-auto grid max-w-[1150px] flex-1 items-center gap-12 px-6 pb-[68px] pt-[58px]  md:grid-cols-[minmax(0,1fr)_431px] md:gap-14  lg:pb-[74px] lg:pt-[79px] xl:grid-cols-[575px_431px] xl:gap-[132px]">
+    <main className="relative z-10 mx-auto grid max-w-[1150px] 2xl:max-w-[1440px] flex-1 items-center gap-12 px-6 pb-[68px] pt-[58px]  md:grid-cols-[minmax(0,1fr)_431px] md:gap-14  lg:pb-[74px] lg:pt-[79px] xl:grid-cols-[575px_431px] xl:gap-[132px]">
       <section className="max-w-[560px] text-white">
         <p className="mb-[40px] text-[14px] font-normal uppercase leading-none tracking-[5px] text-white">
           EMAIL MARKETING
@@ -22,8 +22,8 @@ export function Hero() {
           We build email systems that increase retention, repeat purchases and customer lifetime value.
         </p>
         <Link href="/contact">
-        
-        <Button className="mt-[34px] h-[43px] px-[33px] text-[12px] uppercase">Book a Consultation</Button>
+
+          <Button className="mt-[34px] h-[43px] px-[33px] text-[12px] uppercase">Book a Consultation</Button>
         </Link>
       </section>
 
