@@ -48,7 +48,7 @@ export default function SocialMediaRevenueMethod() {
           </StaggerItem>
 
           <StaggerItem>
-            <h2 className="text-white text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-8 min-[390px]:mb-10 sm:mb-16">
+            <h2 className="text-white text-[32px] font-medium leading-[0.9] tracking-[-3%] sm:text-[56px] sm:leading-[70px] mb-8 min-[390px]:mb-10 sm:mb-16">
               how we build{" "}
               <br className="block sm:hidden" />
               <span

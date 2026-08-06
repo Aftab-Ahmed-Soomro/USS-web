@@ -100,7 +100,7 @@ export function ContentCreationServices() {
         </div>
 
         {/* Block 1: Pre Production */}
-        <div className="flex flex-col lg:flex-row justify-between gap-[60px] lg:gap-[100px] mb-[120px]">
+        <div className="flex flex-col lg:flex-row justify-between gap-[60px] lg:gap-[100px] mb-10 sm:mb-[120px]">
           {/* Left Text */}
           <div className="lg:w-[45%] flex flex-col">
             {/* <FadeUp delay={0.1}>

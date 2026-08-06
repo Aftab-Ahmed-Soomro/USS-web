@@ -853,7 +853,7 @@ export default function New360WithForm() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-50px" }}
-        className="relative z-10 w-full flex flex-col justify-center items-center pt-16 sm:pt-24 bg-black gap-6 sm:gap-8">
+        className="relative z-10 w-full flex flex-col justify-center items-center pt-16 sm:pt-24 bg-black gap-6 sm:gap-8 -mb-10">
 
         <h2 id="social-media" className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
           social{" "}
@@ -862,15 +862,15 @@ export default function New360WithForm() {
           </span>
         </h2>
       </motion.div>
-      <PlatformsWeWorkWith />
-      <div className="sm:-mb-10">
+        <PlatformsWeWorkWith />
+      <div className="-mb-8 sm:-mb-10">
         <EmailMarketingQuote first={"your social media is your"} second={"digital window"} third={"shop front"} />
       </div>
-      <div className="sm:-mt-10">
+      <div className="-mt-8 sm:-mt-10">
         <OurOrganicSocialMediaApproach />
       </div>
       <SocialServices />
-      <div className="sm:-mt-20">
+      <div className="-mt-16 sm:-mt-20">
         <SocialMediaRevenueMethod />
       </div>
       <motion.div

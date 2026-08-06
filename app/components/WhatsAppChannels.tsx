@@ -98,7 +98,7 @@ export default function WhatsAppChannels() {
         <div className="flex flex-col items-center text-center max-w-[900px] mx-auto">
           <FadeUp delay={0.1}>
             <h2 className="text-white text-center">
-              <span className="font-medium text-[32px] sm:text-[56px] leading-[1.15] sm:leading-[63px] tracking-[-1px] sm:tracking-[-1.5px]">
+              <span className="font-medium text-[32px] sm:text-[56px] leading-[0.9] sm:leading-[63px] tracking-[-1px] sm:tracking-[-1.5px]">
                 the power of{" "}
                 <br className="block sm:hidden" />
                 {/* <span className="hidden sm:inline"> </span> */}
@@ -145,7 +145,7 @@ export default function WhatsAppChannels() {
         </div>
 
         {/* Content Section */}
-        <div className="mt-16 sm:mt-24 grid grid-cols-1 lg:grid-cols-[1.2fr_auto_1.3fr] gap-8 lg:gap-12 items-center">
+        <div className="mt-10 sm:mt-24 grid grid-cols-1 lg:grid-cols-[1.2fr_auto_1.3fr] gap-8 lg:gap-12 items-center">
 
           {/* Left Cards */}
           <div className="flex flex-col gap-6 w-full max-w-[450px] mx-auto lg:ml-auto lg:mr-0">
