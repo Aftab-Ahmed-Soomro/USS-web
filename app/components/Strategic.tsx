@@ -66,7 +66,7 @@ export function Strategic() {
 
           {/* Supporting copy */}
           <FadeUp delay={0.2}>
-            <p className="mx-auto mt-[20px] sm:mt-[40px] max-w-[580px] text-[13px] sm:text-[24px] font-normal leading-[-1%] px-2 sm:px-0">
+            <p className="mx-auto mt-[20px] sm:mt-[40px] max-w-[500px] text-[15px] sm:text-[18px] font-normal leading-[-1%] px-2 sm:px-0">
               Every project starts with understanding your business before we plan, create and deliver.
             </p>
           </FadeUp>
@@ -80,16 +80,16 @@ export function Strategic() {
           {process.map((step, index) => (
             <StaggerItem key={step.number} y={50}>
               <article
-                className={`relative px-2 min-[375px]:px-6 md:min-h-[355px] ${
-                  index > 0 ? "md:border-l md:border-black/10" : ""
+                className={`relative px-2 min-[375px]:px-6 md:px-8 md:min-h-[355px] ${
+                  index > 0 ? "md:border-l md:border-black/10 md:pl-12 lg:pl-14" : ""
                 }`}
               >
-                <div className="flex items-center justify-between gap-6">
+                <div className="flex items-center justify-between gap-6 sm:gap-10">
                   <span className="font-[var(--font-cormorant)] text-[120px] sm:text-[180px] font-normal leading-[0.72] timesFontFamily tracking-[0%]">
                     {step.number}
                   </span>
                   {step.icon && (
-                    <span className="grid border mr-2 sm:mr-10 border-black size-[40px] sm:size-[50px] shrink-0 place-items-center rounded-full text-[22px] font-normal text-[#ff5500] shadow-[0_18px_32px_rgba(0,0,0,0.08)]">
+                    <span className="grid border mr-0 sm:-mr-2 border-black size-[40px] sm:size-[50px] shrink-0 place-items-center rounded-full text-[22px] font-normal text-[#ff5500] shadow-[0_18px_32px_rgba(0,0,0,0.08)]">
                       <Image className="size-[24px] sm:size-[30px]" src={step.icon} alt="" width={30} height={30} />
                     </span>
                   )}
@@ -98,7 +98,7 @@ export function Strategic() {
                 <h3 className="mt-[20px] sm:mt-[33px] text-[20px] min-[375px]:text-[24px] sm:text-[34.6px] font-bold leading-none tracking-[-0.85px]">
                   {step.title}
                 </h3>
-                <p className="mt-[16px] sm:mt-[30px] max-w-[400px] text-[14px] min-[375px]:text-[16px] sm:text-[17px] font-normal leading-[28px] min-[375px]:leading-[36px] text-black/70">
+                <p className="mt-[16px] sm:mt-[30px] max-w-[400px] text-[15px] sm:text-[17px] font-normal leading-[26px] text-black/70">
                   {step.copy}
                 </p>
               </article>

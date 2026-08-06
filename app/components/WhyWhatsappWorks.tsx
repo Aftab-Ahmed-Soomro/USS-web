@@ -145,7 +145,7 @@ export function WhyWhatsappWorks() {
                         <div
                           className="absolute inset-0 z-10 pointer-events-none"
                           style={{
-                            background: isActive
+                            backgroundImage: isActive
                               ? "linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.06) 45%, rgba(255,255,255,0.12) 50%, rgba(255,255,255,0.06) 55%, transparent 60%)"
                               : "none",
                             backgroundSize: "200% 100%",

@@ -134,7 +134,7 @@ function RelatedProjects() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
           <Stagger staggerDelay={0.12}>
             <StaggerItem>
-              <p className="font-[var(--font-be-vietnam)] text-[12px] font-normal uppercase tracking-[4px] text-[#ff5500] mb-[16px]">
+              <p className="font-[var(--font-be-vietnam)] text-[12px] font-normal uppercase tracking-[3px] text-[#ff5500] mb-[16px]">
                 RECENT PROJECTS
               </p>
               <h2 className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[56px] font-medium lowercase leading-none tracking-[-0.96px]">

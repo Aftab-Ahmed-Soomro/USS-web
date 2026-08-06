@@ -174,7 +174,7 @@ export default function TargetRightPeople({
   const positions = getPositions(displayItems.length);
 
   return (
-    <section className="relative w-full overflow-hidden bg-black py-[60px] sm:pt-40 sm:pb-30 px-4 sm:px-6">
+    <section className="relative w-full overflow-hidden bg-black py-[60px] sm:pt-20 sm:pb-30 px-4 sm:px-6">
       <style>{`
         .no-scrollbar::-webkit-scrollbar {
           display: none;
@@ -322,7 +322,7 @@ export default function TargetRightPeople({
                       style={{
                         width: "1px",
                         height: `${pos.lineHeight}px`,
-                        background:
+                        backgroundImage:
                           "linear-gradient(180deg, rgba(255,85,0,0.8), rgba(255,85,0,0.2))",
                       }}
                     />
@@ -337,7 +337,7 @@ export default function TargetRightPeople({
                       className="mt-3 flex h-14 w-14 items-center justify-center rounded-[14px] border"
                       style={{
                         borderColor: "rgba(255,85,0,0.4)",
-                        background:
+                        backgroundImage:
                           "linear-gradient(180deg, rgba(255,85,0,0.1), rgba(255,85,0,0.02))",
                         boxShadow:
                           "0 0 20px rgba(255,85,0,0.2), inset 0 0 10px rgba(255,85,0,0.1)",

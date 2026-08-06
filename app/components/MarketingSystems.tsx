@@ -219,7 +219,7 @@ export function MarketingSystems() {
           </p>
         </FadeRight>
         <FadeUp delay={0.3}>
-          <p className="text-white text-[10px] md:text-[14px] font-normal tracking-[1%]">
+          <p className="text-white text-[15px] sm:text-[17px] font-normal leading-[26px] tracking-[1%]">
             Working together to create measurable business growth.
           </p>
         </FadeUp>

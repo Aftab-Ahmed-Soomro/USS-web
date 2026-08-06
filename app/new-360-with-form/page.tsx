@@ -825,8 +825,8 @@ export default function New360WithForm() {
           </span> */}
         </h2>
       </motion.div>
-      <WhyWhatsappWorks />
-      <WhatsAppChannels />
+        <WhyWhatsappWorks />
+        <WhatsAppChannels />
       <div className="-mt-20 sm:-mt-30">
         <ConversationFlow />
       </div>
@@ -835,7 +835,7 @@ export default function New360WithForm() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-50px" }}
-        className="relative z-10 w-full flex flex-col justify-center items-center bg-black gap-6 sm:gap-8">
+        className="relative z-10 w-full flex flex-col justify-center items-center bg-black gap-6 sm:gap-8 sm:-mt-25">
         <a
           href="#services-grid"
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'performance' }))}
@@ -859,8 +859,12 @@ export default function New360WithForm() {
         </h2>
       </motion.div>
       <PlatformsWeWorkWith />
-      <EmailMarketingQuote first={"your social media is your"} second={"digital window"} third={"shop front"} />
-      <OurOrganicSocialMediaApproach />
+      <div className="sm:-mb-10">
+        <EmailMarketingQuote first={"your social media is your"} second={"digital window"} third={"shop front"} />
+      </div>
+      <div className="sm:-mt-10">
+        <OurOrganicSocialMediaApproach />
+      </div>
       <SocialServices />
       <div className="sm:-mt-20">
         <SocialMediaRevenueMethod />
@@ -958,7 +962,8 @@ export default function New360WithForm() {
           </span>
         </h2>
       </motion.div>
-      <CaseStudies
+      <div className="sm:-mt-10">
+        <CaseStudies
         heading={
           <h2 className="text-white">
             <span className="font-medium text-[32px] leading-[40px] sm:text-[40px] sm:leading-[48px] tracking-[-2px] lg:text-[56px] lg:leading-[70px] lg:tracking-[-3.2px]">
@@ -982,6 +987,7 @@ export default function New360WithForm() {
         rightData={brandingRightData}
         imageAspectRatio="aspect-[617/344]"
       />
+      </div>
       <BrandingServices />
       <SixStepSystem
         heading={

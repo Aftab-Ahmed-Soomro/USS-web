@@ -158,7 +158,7 @@ export function GrowthRoadmap() {
                               style={{
                                 left: bar.left,
                                 width: bar.width,
-                                background: '#FF5500',
+                                backgroundColor: '#FF5500',
                                 boxShadow: '0px 0px 15px rgba(255, 85, 0, 0.5)'
                               }}
                             />

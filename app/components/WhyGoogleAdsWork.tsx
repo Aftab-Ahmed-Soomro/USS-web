@@ -109,7 +109,7 @@ export function WhyGoogleAdsWork({
                     <div 
                       className="absolute inset-0 opacity-100 group-hover:opacity-0 transition-opacity duration-500 pointer-events-none"
                       style={{
-                        background: "radial-gradient(100% 100% at 100% 0%, rgba(255, 85, 0, 0.15) 0%, rgba(255, 255, 255, 0.02) 100%)",
+                        backgroundImage: "radial-gradient(100% 100% at 100% 0%, rgba(255, 85, 0, 0.15) 0%, rgba(255, 255, 255, 0.02) 100%)",
                       }}
                     />
                     
@@ -117,7 +117,7 @@ export function WhyGoogleAdsWork({
                     <div 
                       className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                       style={{
-                        background: "radial-gradient(120% 120% at 80% 20%, rgba(255, 85, 0, 0.3) 0%, rgba(255, 85, 0, 0.05) 50%, transparent 100%)",
+                        backgroundImage: "radial-gradient(120% 120% at 80% 20%, rgba(255, 85, 0, 0.3) 0%, rgba(255, 85, 0, 0.05) 50%, transparent 100%)",
                       }}
                     />
                     
