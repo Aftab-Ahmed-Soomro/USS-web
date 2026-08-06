@@ -878,7 +878,7 @@ export default function New360WithForm() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-50px" }}
-        className="relative z-10 w-full flex flex-col justify-center items-center bg-black gap-6 sm:gap-8">
+        className="relative z-10 w-full flex flex-col justify-center items-center bg-black gap-6 sm:gap-8 -mt-8">
         <a
           href="#services-grid"
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'creative' }))}
@@ -912,7 +912,7 @@ export default function New360WithForm() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-50px" }}
-        className="relative z-10 w-full flex flex-col justify-center items-center bg-black gap-6 sm:gap-8">
+        className="relative z-10 w-full flex flex-col justify-center items-center bg-black gap-6 sm:gap-8 -mt-20 sm:-mt-10">
         <a
           href="#services-grid"
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'creative' }))}
@@ -927,8 +927,8 @@ export default function New360WithForm() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-50px" }}
-        className="relative z-10 w-full flex flex-col justify-center items-center pt-16 sm:pt-24 pb-20 bg-black gap-6 sm:gap-8">
-        <h2 id="web-design-development" className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
+        className="relative z-10 w-full flex flex-col justify-center items-center pt-16 sm:pt-24 sm:pb-10 bg-black gap-6 sm:gap-8 px-6">
+        <h2 id="web-design-development" className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px] text-center sm:text-start">
           web design{" "}
           <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
             & development
@@ -943,7 +943,7 @@ export default function New360WithForm() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-50px" }}
-        className="relative z-10 w-full flex flex-col justify-center items-center bg-black gap-6 sm:gap-8">
+        className="relative z-10 w-full flex flex-col justify-center items-center bg-black gap-6 sm:gap-8 -mt-10">
         <a
           href="#services-grid"
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'creative' }))}
@@ -966,7 +966,7 @@ export default function New360WithForm() {
           </span>
         </h2>
       </motion.div>
-      <div className="sm:-mt-10">
+      <div className="-mt-10">
         <CaseStudies
         heading={
           <h2 className="text-white">

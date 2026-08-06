@@ -83,14 +83,14 @@ export function ContentCreationServices() {
     <section className="bg-black text-white pb-[60px] sm:pb-[100px] px-4 min-[375px]:px-6 overflow-hidden">
       <div className="max-w-[1150px] mx-auto">
         {/* Header */}
-        <div className="mb-[60px] sm:mb-[100px]">
+        <div className="mb-[30px] sm:mb-[100px]">
           <FadeUp delay={0.1}>
             <h4 className="font-[var(--font-inter)] text-[#ff5500] font-bold text-[14px] leading-[16px] tracking-[2.64px] uppercase mb-6">
               OUR SERVICES
             </h4>
           </FadeUp>
           <FadeUp delay={0.2}>
-            <h2 className="font-[var(--font-be-vietnam)] text-white font-medium text-[32px] sm:text-[56px] leading-[1.1] sm:leading-[50.4px] tracking-[-1.2px]">
+            <h2 className="font-[var(--font-be-vietnam)] text-white font-medium text-[32px] sm:text-[56px] leading-[1.1] sm:leading-[50.4px] tracking-[-1.2px] hidden sm:block">
               our content creation{" "}
               <span className="font-[var(--font-cormorant)] font-normal italic text-[42px] sm:text-[72px] leading-[1.1] sm:leading-[50.4px] tracking-[-1.2px] timesFontFamily">
                 services
