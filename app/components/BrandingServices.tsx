@@ -54,13 +54,13 @@ export function BrandingServices() {
           </h4>
           <h2 className="text-white lowercase flex items-center flex-wrap gap-x-2 sm:gap-x-3">
             <span className="font-medium text-[32px] sm:text-[56px] leading-[1.2] sm:leading-[74px] tracking-[-0.5px] sm:tracking-[-1.92px]">
-              what's included
+              Your Brand 
             </span>
             <span
               style={{ fontFamily: '"Times New Roman", Times, serif' }}
               className="font-normal italic text-[42px] sm:text-[72px] leading-[1.2] sm:leading-[74px] tracking-[-0.5px] sm:tracking-[-1.92px]"
             >
-              in branding
+              Foundations
             </span>
           </h2>
         </div>
@@ -70,7 +70,7 @@ export function BrandingServices() {
           {/* Left Block: Title */}
           <div className="flex-1">
             <h1 className="text-white font-light text-[52px] sm:text-[90px] leading-[1] tracking-[-1.73px]">
-              Branding
+              Brand Identity
             </h1>
           </div>
 

@@ -140,7 +140,8 @@ export function PowerOf360() {
   return (
     <section
       id="power-of-360"
-      className="relative w-full overflow-hidden max-md:!min-h-0 bg-black sm:min-h-[700px] md:min-h-[800px] lg:min-h-[900px] xl:min-h-[1000px] 2xl:min-h-[1200px]"
+      className="relative w-full overflow-hidden bg-black max-md:!min-h-0 min-h-[800px] md:min-h-[1000px] lg:min-h-[110vh] xl:min-h-[110vh] 2xl:min-h-[110vh]"
+      style={{ minHeight: "clamp(800px, 110vh, 1400px)" }}
     >
       {/* Background image (Active Item) */}
       <AnimatePresence initial={false}>
@@ -156,7 +157,7 @@ export function PowerOf360() {
             src={activeItem.bgImage}
             alt={activeItem.alt}
             fill
-            className="object-cover object-center"
+            className="object-cover object-top"
             priority
           />
         </motion.div>
@@ -166,7 +167,7 @@ export function PowerOf360() {
       <div className="hidden md:block absolute inset-0 bg-black/55 z-0" />
 
       {/* Content — max-w-[1150px] container so left side aligns cleanly on large screens */}
-      <div className="relative z-10 mx-auto max-w-[1150px] w-full flex items-center px-6 pt-6 pb-10 sm:py-80 max-md:flex-col max-md:items-start max-md:justify-center max-md:gap-4">
+      <div className="relative z-10 mx-auto max-w-[1150px] w-full min-h-[inherit] flex items-center px-6 pt-6 pb-10 sm:py-24 lg:py-32 xl:py-40 max-md:flex-col max-md:items-start max-md:justify-center max-md:gap-4">
         {/* ── LEFT: text block — stays on left ── */}
         <div className="flex max-w-[450px] flex-col gap-6 flex-shrink-0 max-md:max-w-full max-md:w-full">
           <AnimatePresence mode="wait">

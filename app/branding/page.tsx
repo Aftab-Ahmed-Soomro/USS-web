@@ -361,7 +361,7 @@ const MarketingStrategy = () => {
       <BrandIdentity />
       <SixStepSystem
         heading={
-          <h2 className="text-white font-medium tracking-[-1px] sm:tracking-[-2px] text-[36px] sm:text-[56px] leading-[1.1] lowercase sm:leading-[69.36px]">
+          <h2 className="text-white font-medium tracking-[-1px] sm:tracking-[-2px] text-[36px] sm:text-[56px] leading-[1.1] lowercase sm:leading-[60px]">
             Before the logo comes <br className="hidden sm:block" />
             <span className="inline-flex items-center gap-x-2 sm:gap-x-3 mt-1 sm:mt-0">
               <span>the</span>

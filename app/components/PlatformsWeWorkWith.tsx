@@ -50,7 +50,7 @@ export default function PlatformsWeWorkWith({
   const [activePlatform, setActivePlatform] = useState<string | null>(null);
 
   return (
-    <section className="bg-[#0A0A0A] py-[50px] sm:py-20 px-4 sm:px-6 relative">
+    <section className="bg-[#000] py-[50px] sm:py-20 px-4 sm:px-6 relative">
       <Stagger staggerDelay={0.15}>
         <StaggerItem>
           {heading ? (

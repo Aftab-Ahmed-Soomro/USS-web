@@ -35,7 +35,7 @@ export function LevelsOfFunnel() {
   ];
 
   return (
-    <section className="relative w-full bg-black py-[30px] sm:pt-32 px-4 min-[375px]:px-6 overflow-hidden">
+    <section className="relative w-full bg-black py-[10px] sm:pt-32 px-4 min-[375px]:px-6 overflow-hidden">
       <div className="max-w-[1150px] mx-auto relative z-10">
         <Stagger staggerDelay={0.15}>
           <div className="flex flex-col lg:grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
@@ -43,7 +43,7 @@ export function LevelsOfFunnel() {
             {/* Title Column (Order 1 on mobile, Col 1-4 on desktop) */}
             <div className="order-1 lg:order-1 lg:col-span-4 flex flex-col justify-center items-center lg:items-start w-full text-center lg:text-left">
               <StaggerItem>
-                <h2 className="m-0 p-0 mb-4 sm:mb-8 text-white flex flex-row items-center justify-center lg:flex-col lg:items-start gap-x-2 sm:gap-x-3 text-center lg:text-left w-full whitespace-nowrap lg:whitespace-normal">
+                <h2 className="m-0 p-0 -mb-5 sm:mb-8 text-white flex flex-row items-center justify-center lg:flex-col lg:items-start gap-x-2 sm:gap-x-3 text-center lg:text-left w-full whitespace-nowrap lg:whitespace-normal">
                   <span
                     style={{
                       fontWeight: 500,

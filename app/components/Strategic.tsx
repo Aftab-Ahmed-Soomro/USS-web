@@ -49,14 +49,14 @@ export function Strategic() {
         {/* Section label — drops in from above */}
         <div className="text-center">
           <FadeDown>
-            <p className="font-[var(--font-be-vietnam)] text-[10px] sm:text-[11px] font-bold uppercase leading-none tracking-[3px] text-[#ff5500]">
+            <p className="font-[var(--font-be-vietnam)] text-[10px] sm:text-[12px] font-bold uppercase leading-none tracking-[1px] text-[#ff5500]">
               OUR APPROACH
             </p>
           </FadeDown>
 
           {/* Headline — scales in for more punch than a plain fade */}
           <ScaleIn delay={0.1} startScale={0.92}>
-            <h2 className="mt-[26px] sm:mt-[35px] text-[32px] font-medium leading-[0.6] sm:leading-[1.05] tracking-[-0.8px] sm:text-[56px]">
+            <h2 className="mt-[26px] sm:mt-[20px] text-[32px] font-medium leading-[0.6] sm:leading-[1.05] tracking-[-0.8px] sm:text-[56px]">
               a strategic process
               <span className="mt-[10px] sm:mt-[25px] block font-[var(--font-cormorant)] text-[40px] font-normal timesFontFamily italic sm:leading-[0.15] leading-[0.9] tracking-[-0.8px] text-[#ff5500] sm:text-[56px]">
                 built to perform

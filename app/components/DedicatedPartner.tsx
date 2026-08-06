@@ -114,7 +114,7 @@ function Counter({ value }: { value: string }) {
 
 export default function DedicatedPartner() {
   return (
-    <section className="relative overflow-hidden bg-[#000] text-white pt-4 pb-12 sm:pt-0 py-0 lg:pb-24 px-6 w-full flex flex-col items-center">
+    <section className="relative overflow-hidden bg-[#000] text-white pt-4 pb-4 sm:pt-0 py-0 lg:pb-24 px-6 w-full flex flex-col items-center">
       {/* Subtle background ambient glow */}
       <div 
         className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[800px] rounded-full opacity-15 blur-[140px]"
@@ -129,7 +129,7 @@ export default function DedicatedPartner() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={containerVariants}
-          className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 mb-14"
+          className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 mb-2 sm:mb-14"
         >
           
           {/* Left: Heading */}
@@ -156,14 +156,14 @@ export default function DedicatedPartner() {
             <motion.div variants={itemVariants}>
               <Link 
                 href="/contact"
-                className="relative inline-flex items-center justify-center rounded-full border border-white/20 px-8 py-3.5 transition-all duration-300 hover:border-[#ff5500] hover:bg-[#ff5500] hover:text-white hover:shadow-[0_0_25px_rgba(255,85,0,0.4)] group overflow-hidden"
+                className="relative inline-flex items-center justify-center rounded-full border px-8 py-2 sm:py-3.5 transition-all duration-300 border-[#ff5500] bg-[#ff5500] text-white hover:shadow-[0_0_25px_rgba(255,85,0,0.4)] group overflow-hidden"
               >
                 <span className="uppercase text-[12px] sm:text-[13px] font-bold leading-[20px] align-middle transition-transform duration-300 group-hover:translate-x-[-2px]">
                   Book a Consultation
                 </span>
-                <span className="ml-2.5 inline-block opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
+                {/* <span className="ml-2.5 text-white inline-block opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
                   &rarr;
-                </span>
+                </span> */}
               </Link>
             </motion.div>
           </div>
@@ -184,7 +184,7 @@ export default function DedicatedPartner() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={statsContainerVariants}
-          className="flex justify-between gap-2 sm:gap-12 md:gap-0 w-full mt-16 sm:mt-20"
+          className="flex justify-between gap-2 sm:gap-12 md:gap-0 w-full mt-2 sm:mt-20"
         >
           {stats.map((stat, index) => (
             <motion.div 

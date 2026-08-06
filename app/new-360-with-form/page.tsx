@@ -30,12 +30,12 @@ import ConversationFlow from "../components/ConversationFlow";
 import EmailMarketingQuote from "../components/EmailMarketingQuote";
 import OurOrganicSocialMediaApproach from "../components/OurOrganicSocialMediaApproach";
 import SocialMediaRevenueMethod from "../components/SocialMediaRevenueMethod";
-import { ContentCreationServices } from "../components/ContentCreationServices";
 import { ContentCreationGrid } from "../components/ContentCreationGrid";
 import DedicatedPartner from "../components/DedicatedPartner";
 import CaseStudies from "../components/CaseStudies";
 import { BrandingServices } from "../components/BrandingServices";
 import { SixStepSystem } from "../components/SixStepSystem";
+import FadeUp from "../components/FadeUp";
 
 const strategyAccordionData = [
   {
@@ -303,26 +303,23 @@ function EmailOverview() {
         </FadeRight>
 
         {/* Text content */}
-        <Stagger staggerDelay={0.1} className="order-1 text-white lg:col-start-1 lg:row-start-1 lg:max-w-[680px]">
+        <Stagger staggerDelay={0.1} className="order-1 text-white lg:col-start-1 lg:row-start-1 lg:max-w-[680px] -mt-6">
           <StaggerItem>
-            <p className="mb-[20px] hidden sm:block text-[11px] font-normal leading-[19.6px] tracking-[0%] text-white sm:text-[14px]">
+            <p className="mb-[20px] hidden text-[11px] font-normal leading-[19.6px] tracking-[0%] text-white sm:text-[14px]">
               Our Email System for Retention and Growth
             </p>
           </StaggerItem>
 
           <StaggerItem>
-            <h2 className="text-[30px] lowercase min-[375px]:text-[32px] font-medium leading-[1.1] tracking-[-1.5px] sm:text-[56px] sm:leading-[70px]">
-              Our Approach to <br />
               <span
-                className="text-[36px] font-normal italic tracking-[-1.5px] text-[#ff5500] sm:text-[72px] sm:leading-[70px]"
+                className="text-[36px] font-normal lowercase italic tracking-[-1.5px] text-[#ff5500] sm:text-[72px] sm:leading-[70px]"
                 style={{ fontFamily: "'Times New Roman', Times, serif" }}
               >
-                Email Marketing
+                Our Approach
               </span>
-            </h2>
           </StaggerItem>
 
-          <div className="mt-[40px] sm:mt-[52px] grid grid-cols-1 sm:grid-cols-2">
+          <div className="mt-[5px] sm:mt-[52px] grid grid-cols-1 sm:grid-cols-2">
             {systemItems.map((item, i) => (
               <StaggerItem key={item.number}>
                 <article
@@ -444,11 +441,11 @@ function EmailStrategy() {
       title={
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
-            <h2 className="lowercase text-center text-white font-[var(--font-be-vietnam)] font-medium text-[36px] sm:text-[56px] leading-[0.9] sm:leading-[80px] tracking-[-1.5px] sm:tracking-[-3px]">
+            <h2 className="lowercase text-center text-white font-[var(--font-be-vietnam)] font-medium text-[36px] sm:text-[56px] leading-[0.9] sm:leading-[50px] tracking-[-1.5px] sm:tracking-[-3px]">
               every brand has its <br className="hidden sm:block" />
               own{" "}
               <span
-                className="italic text-[#ff5500] font-normal text-[44px] sm:text-[72px] leading-[1.2] sm:leading-[80px] tracking-[-1.5px] sm:tracking-[-3px]"
+                className="italic text-[#ff5500] font-normal text-[42px] sm:text-[72px] leading-[1.2] sm:leading-[80px] tracking-[-1.5px] sm:tracking-[-3px]"
                 style={{ fontFamily: "'Times New Roman', Times, serif" }}
               >
                 email strategy
@@ -458,6 +455,300 @@ function EmailStrategy() {
         </Stagger>
       }
     />
+  );
+}
+
+const ICONS = {
+  strategy: (
+    <img src="/assets/pre1.png" alt="" loading="lazy" decoding="async" />
+  ),
+  planning: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <rect x="3" y="3" width="7" height="7"></rect>
+      <rect x="14" y="3" width="7" height="7"></rect>
+      <rect x="14" y="14" width="7" height="7"></rect>
+      <rect x="3" y="14" width="7" height="7"></rect>
+    </svg>
+  ),
+  script: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <path d="M4 7V4h16v3M12 4v16M8 20h8"></path>
+    </svg>
+  ),
+  storyboard: (
+    <img src="/assets/pre4.png" alt="" loading="lazy" decoding="async" />
+  ),
+  motion: (
+    <img src="/assets/post6.png" alt="" loading="lazy" decoding="async" />
+  ),
+  editing: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <circle cx="6" cy="6" r="3"></circle>
+      <circle cx="6" cy="18" r="3"></circle>
+      <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
+      <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
+      <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
+    </svg>
+  ),
+  delivery: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <line x1="22" y1="2" x2="11" y2="13"></line>
+      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+    </svg>
+  ),
+  color: (
+    <img src="/assets/post7.png" alt="" loading="lazy" decoding="async" />
+  ),
+};
+
+function ServiceCard({ num, title, heightClass, icon, image }: any) {
+  return (
+    <div
+      className={`relative w-full ${heightClass} rounded-[24px] border border-white/[0.04] overflow-hidden p-[24px] flex flex-col justify-between group transition-transform duration-500 hover:-translate-y-1`}
+      style={!image ? {
+        background: 'radial-gradient(circle at 30% 30%, rgba(255,85,0,0.18) 0%, rgba(15,8,5,1) 40%, rgba(5,5,5,1) 100%)'
+      } : {}}
+    >
+      {image && (
+        <Image src={image} alt={title} fill className="object-cover" sizes="(max-width: 768px) 50vw, 33vw" />
+      )}
+      {/* Soft overlay gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/40 pointer-events-none" />
+
+      <div className="relative z-10 flex justify-between items-start">
+        <span className="font-[var(--font-inter)] text-[10px] text-white/50 tracking-[2px]">
+          / {num}
+        </span>
+        <div className="text-white/70 w-[20px] object-contain h-[20px]">{icon}</div>
+      </div>
+
+      <div className="relative z-10">
+        <div className="font-[var(--font-be-vietnam)] text-[48px] sm:text-[64px] font-light leading-[1] tracking-[-2px] text-white mb-2">
+          {num}
+        </div>
+        <div className="font-[var(--font-inter)] text-[10px] font-medium tracking-[3px] text-white/60 uppercase">
+          {title}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ContentCreationServices() {
+  return (
+    <section className="bg-black text-white pb-[60px] sm:pb-[100px] px-4 min-[375px]:px-6 overflow-hidden">
+      <div className="max-w-[1150px] mx-auto">
+        {/* Header */}
+        <div className="mb-[30px] sm:mb-[30px]">
+            {/* <h4 className="font-[var(--font-inter)] text-[#ff5500] font-bold text-[14px] leading-[16px] tracking-[2.64px] uppercase mb-6">
+              OUR SERVICES
+            </h4> */}
+          <FadeUp delay={0.2}>
+              <span className="font-[var(--font-cormorant)] font-normal italic text-[42px] sm:text-[72px] lowercase text-[#ff5500] leading-[1.1] sm:leading-[50.4px] tracking-[-1.2px] timesFontFamily">
+              our services
+              </span>
+          </FadeUp>
+        </div>
+
+        {/* Block 1: Pre Production */}
+        <div className="flex flex-col lg:flex-row justify-between gap-[60px] lg:gap-[100px] mb-10 sm:mb-[120px]">
+          {/* Left Text */}
+          <div className="lg:w-[45%] flex flex-col">
+            {/* <FadeUp delay={0.1}>
+              <div className="flex items-center gap-4 mb-[30px] sm:mb-[40px]">
+                <span className="font-[var(--font-inter)] text-[#ff5500] font-medium text-[16px] leading-[16.5px] tracking-[4.4px] align-middle">
+                  01
+                </span>
+                <div className="w-[40px] h-[1px] bg-[#ff5500]/50" />
+                <span className="font-[var(--font-inter)] text-[#a0a0a0] font-light text-[11px] leading-[16.5px] tracking-[4.4px] uppercase align-middle">
+                  CHAPTER ONE
+                </span>
+              </div>
+            </FadeUp> */}
+
+            <FadeUp delay={0.2}>
+              <h3 className="font-[var(--font-be-vietnam)] font-light text-[38px] sm:text-[80px] leading-[1.1] sm:leading-[80px] tracking-[-2.4px] align-middle mb-[24px] sm:mb-[30px]">
+                Pre<br />Production
+              </h3>
+            </FadeUp>
+
+            <FadeUp delay={0.3}>
+              <p className="font-[var(--font-inter)] font-light text-[14px] sm:text-[18px] leading-[1.6] sm:leading-[29.25px] text-white/90 align-middle mb-[24px] sm:mb-[30px] max-w-[400px]">
+                 Great content starts long before the camera rolls. We define the creative direction, create mood boards and plan every detail before shoot day.
+              </p>
+            </FadeUp>
+
+            <FadeUp delay={0.4}>
+              <p className="font-[var(--font-inter)] font-normal text-[11px] leading-[16.5px] tracking-[1.65px] align-middle text-white/60 uppercase mb-[30px] sm:mb-[40px]">
+                FROM CONCEPT TO SHOOT DAY
+              </p>
+            </FadeUp>
+
+            {/* Pills */}
+            <div className="flex flex-wrap gap-[10px]">
+              {[
+                "Creative Strategy",
+                "Content Planning",
+                "Script Writing",
+                "Storyboarding",
+                "Shot Lists",
+                "Mood Boards",
+                "Location Scouting",
+                "Talent Coordination",
+              ].map((tag, i) => (
+                <FadeUp key={tag} delay={0.4 + i * 0.05}>
+                  <div className="flex items-center justify-center gap-2 px-[14px] py-[8px] sm:py-[10px] rounded-full border border-white/10 bg-[#0a0a0a]/50">
+                    <div className="w-[4px] h-[4px] rounded-full bg-[#ff5500] shrink-0" />
+                    <span className="font-[var(--font-inter)] font-light text-[11px] sm:text-[12px] leading-[1.4] sm:leading-[18px] tracking-[0.3px] text-white/80 align-middle text-center">
+                      {tag}
+                    </span>
+                  </div>
+                </FadeUp>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Grid */}
+          <div className="lg:w-[50%] flex flex-col">
+            {/* <FadeUp delay={0.2}>
+              <div className="flex justify-between items-center mb-[20px] sm:mb-[30px]">
+                <span className="font-[var(--font-inter)] font-light text-[10px] leading-[15px] tracking-[3px] align-middle text-white/60 uppercase">
+                  COMPOSITION / 01
+                </span>
+              </div>
+            </FadeUp> */}
+
+            <div className="flex gap-[12px] sm:gap-[16px]">
+              {/* Col 1 */}
+              <div className="flex flex-col gap-[12px] sm:gap-[16px] w-1/2">
+                <FadeUp delay={0.3}>
+                  <ServiceCard num="01" title="STRATEGY" heightClass="h-[200px] sm:h-[340px]" icon={ICONS.strategy} image="/assets/pre and post/1.webp" />
+                </FadeUp>
+                <FadeUp delay={0.4}>
+                  <ServiceCard num="03" title="SCRIPT" heightClass="h-[140px] sm:h-[220px]" icon={ICONS.script} image="/assets/pre and post/3.webp" />
+                </FadeUp>
+              </div>
+              {/* Col 2 */}
+              <div className="flex flex-col gap-[12px] sm:gap-[16px] w-1/2 mt-[30px] sm:mt-[40px]">
+                <FadeUp delay={0.5}>
+                  <ServiceCard num="02" title="PLANNING" heightClass="h-[140px] sm:h-[220px]" icon={ICONS.planning} image="/assets/pre and post/2.webp" />
+                </FadeUp>
+                <FadeUp delay={0.6}>
+                  <ServiceCard num="04" title="STORYBOARD" heightClass="h-[200px] sm:h-[340px]" icon={ICONS.storyboard} image="/assets/pre and post/4.webp" />
+                </FadeUp>
+              </div>
+            </div>
+
+            <FadeUp delay={0.7}>
+              <div className="text-right mt-[16px] sm:mt-[24px]">
+                <span className="font-[var(--font-inter)] font-light text-[10px] leading-[15px] tracking-[3px] text-white/40 uppercase">
+                  4 STAGES
+                </span>
+              </div>
+            </FadeUp>
+          </div>
+        </div>
+
+        {/* Block 2: Post Production */}
+        <div className="flex flex-col-reverse lg:flex-row justify-between gap-[60px] lg:gap-[100px]">
+          {/* Left Grid */}
+          <div className="lg:w-[50%] flex flex-col">
+            {/* <FadeUp delay={0.2}>
+              <div className="flex justify-between items-center mb-[20px] sm:mb-[30px]">
+                <span className="font-[var(--font-inter)] font-light text-[10px] leading-[15px] tracking-[3px] align-middle text-white/60 uppercase">
+                  COMPOSITION / 02
+                </span>
+              </div>
+            </FadeUp> */}
+
+            <div className="flex gap-[12px] sm:gap-[16px]">
+              {/* Col 1 */}
+              <div className="flex flex-col gap-[12px] sm:gap-[16px] w-1/2">
+                <FadeUp delay={0.3}>
+                  <ServiceCard num="05" title="MOTION" heightClass="h-[140px] sm:h-[220px]" icon={ICONS.motion} image="/assets/pre and post/5.webp" />
+                </FadeUp>
+                <FadeUp delay={0.4}>
+                  <ServiceCard num="07" title="DELIVERY" heightClass="h-[200px] sm:h-[340px]" icon={ICONS.delivery} image="/assets/pre and post/7.webp" />
+                </FadeUp>
+              </div>
+              {/* Col 2 */}
+              <div className="flex flex-col gap-[12px] sm:gap-[16px] w-1/2 mt-[30px] sm:mt-[40px]">
+                <FadeUp delay={0.5}>
+                  <ServiceCard num="06" title="EDITING" heightClass="h-[200px] sm:h-[340px]" icon={ICONS.editing} image="/assets/pre and post/6.webp" />
+                </FadeUp>
+                <FadeUp delay={0.6}>
+                  <ServiceCard num="08" title="COLOR" heightClass="h-[140px] sm:h-[220px]" icon={ICONS.color} image="/assets/pre and post/8.webp" />
+                </FadeUp>
+              </div>
+            </div>
+
+            <FadeUp delay={0.7}>
+              <div className="text-right mt-[16px] sm:mt-[24px]">
+                <span className="font-[var(--font-inter)] font-light text-[10px] leading-[15px] tracking-[3px] text-white/40 uppercase">
+                  4 STAGES
+                </span>
+              </div>
+            </FadeUp>
+          </div>
+
+          {/* Right Text */}
+          <div className="lg:w-[45%] flex flex-col">
+            {/* <FadeUp delay={0.1}>
+              <div className="flex items-center gap-4 mb-[30px] sm:mb-[40px]">
+                <span className="font-[var(--font-inter)] text-[#ff5500] font-medium text-[16px] leading-[16.5px] tracking-[4.4px] align-middle">
+                  02
+                </span>
+                <div className="w-[40px] h-[1px] bg-[#ff5500]/50" />
+                <span className="font-[var(--font-inter)] text-[#a0a0a0] font-light text-[11px] leading-[16.5px] tracking-[4.4px] uppercase align-middle">
+                  CHAPTER TWO
+                </span>
+              </div>
+            </FadeUp> */}
+
+            <FadeUp delay={0.2}>
+              <h3 className="font-[var(--font-be-vietnam)] font-light text-[38px] sm:text-[80px] leading-[1.1] sm:leading-[80px] tracking-[-2.4px] align-middle mb-[24px] sm:mb-[30px]">
+                Post<br />Production
+              </h3>
+            </FadeUp>
+
+            <FadeUp delay={0.3}>
+              <p className="font-[var(--font-inter)] font-light text-[14px] sm:text-[18px] leading-[1.6] sm:leading-[29.25px] text-white/90 align-middle mb-[24px] sm:mb-[30px] max-w-[400px]">
+                 This is where ideas come to life. From directing talent to capturing every shot, we produce high quality content designed for campaigns, social media and brand storytelling.
+              </p>
+            </FadeUp>
+
+            <FadeUp delay={0.4}>
+              <p className="font-[var(--font-inter)] font-normal text-[11px] leading-[16.5px] tracking-[1.65px] align-middle text-white/60 uppercase mb-[30px] sm:mb-[40px]">
+                FROM SHOOT DAY TO FINAL FOOTAGE
+              </p>
+            </FadeUp>
+
+            {/* Pills */}
+            <div className="flex flex-wrap gap-[10px]">
+              {[
+                "Photography",
+                "Videography",
+                "Creative Direction",
+                "Drone Footage",
+                "Product Shoots",
+                "Lifestyle Shoots",
+                "Brand Films",
+                "On-Location Production",
+              ].map((tag, i) => (
+                <FadeUp key={tag} delay={0.4 + i * 0.05}>
+                  <div className="flex items-center justify-center gap-2 px-[14px] py-[8px] sm:py-[10px] rounded-full border border-white/10 bg-[#0a0a0a]/50">
+                    <div className="w-[4px] h-[4px] rounded-full bg-[#ff5500] shrink-0" />
+                    <span className="font-[var(--font-inter)] font-light text-[11px] sm:text-[12px] leading-[1.4] sm:leading-[18px] tracking-[0.3px] text-white/80 align-middle text-center">
+                      {tag}
+                    </span>
+                  </div>
+                </FadeUp>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -604,7 +895,7 @@ export default function New360WithForm() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-50px" }}
-        className="relative z-10 w-full flex flex-col justify-center items-center pt-16 sm:pt-24 bg-black gap-6 sm:gap-8 mb-10">
+        className="relative z-10 w-full flex flex-col justify-center items-center pt-16 sm:pt-24 bg-black gap-6 sm:gap-8 mb-5">
         <h2 id="meta-ads" className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
           meta{" "}
           <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
@@ -796,25 +1087,27 @@ export default function New360WithForm() {
           </span>
         </h2>
       </motion.div>
-        <div className="-mt-8">
+        <div className="-mt-8 sm:-mt-0">
           <EmailOverview />
         </div>
         <EmailStrategy />
       <EmailVisuals />
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: true, margin: "-50px" }}
-        className="relative z-10 w-full flex flex-col justify-center items-center bg-white gap-6 pb-6 sm:gap-8">
-        <a
-          href="#services-grid"
-          onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'performance' }))}
-          className="inline-flex h-[36px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
+      <div className="relative z-10 w-full flex flex-col justify-center items-center bg-white gap-6 pb-8 sm:gap-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
         >
-          EXPLORE MORE SERVICES &gt;
-        </a>
-      </motion.div>
+          <a
+            href="#services-grid"
+            onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'performance' }))}
+            className="inline-flex h-[36px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
+          >
+            EXPLORE MORE SERVICES &gt;
+          </a>
+        </motion.div>
+      </div>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -831,7 +1124,7 @@ export default function New360WithForm() {
       </motion.div>
         <WhyWhatsappWorks />
         <WhatsAppChannels />
-      <div className="-mt-20 sm:-mt-30">
+      <div className="-mt-15 sm:-mt-30">
         <ConversationFlow />
       </div>
       <motion.div
@@ -853,7 +1146,7 @@ export default function New360WithForm() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-50px" }}
-        className="relative z-10 w-full flex flex-col justify-center items-center pt-16 sm:pt-24 bg-black gap-6 sm:gap-8 -mb-10">
+        className="relative z-10 w-full flex flex-col justify-center items-center pt-16 sm:pt-24 bg-black gap-6 sm:gap-8 -mb-15">
 
         <h2 id="social-media" className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
           social{" "}
@@ -863,7 +1156,7 @@ export default function New360WithForm() {
         </h2>
       </motion.div>
         <PlatformsWeWorkWith />
-      <div className="-mb-8 sm:-mb-10">
+      <div className="-mb-8 sm:-mb-10 -mt-10 sm:-mt-20">
         <EmailMarketingQuote first={"your social media is your"} second={"digital window"} third={"shop front"} />
       </div>
       <div className="-mt-8 sm:-mt-10">
@@ -892,7 +1185,7 @@ export default function New360WithForm() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-50px" }}
-        className="relative z-10 w-full flex flex-col justify-center items-center pt-16 sm:pt-24 pb-8 bg-black gap-6 sm:gap-8">
+        className="relative z-10 w-full flex flex-col justify-center items-center pt-16 sm:pt-24 bg-black gap-6 sm:gap-8">
         <h2 id="content-creation" className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
           content{" "}
           <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
@@ -912,7 +1205,7 @@ export default function New360WithForm() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-50px" }}
-        className="relative z-10 w-full flex flex-col justify-center items-center bg-black gap-6 sm:gap-8 -mt-20 sm:-mt-10">
+        className="relative z-10 w-full flex flex-col justify-center items-center bg-black gap-6 sm:gap-8 -mt-15 sm:-mt-10">
         <a
           href="#services-grid"
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'creative' }))}
@@ -927,10 +1220,10 @@ export default function New360WithForm() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-50px" }}
-        className="relative z-10 w-full flex flex-col justify-center items-center pt-16 sm:pt-24 sm:pb-10 bg-black gap-6 sm:gap-8 px-6">
-        <h2 id="web-design-development" className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px] text-center sm:text-start">
+        className="relative z-10 w-full flex flex-col justify-center items-center pt-12 sm:pt-24 sm:pb-10 bg-black gap-6 sm:gap-8 px-6">
+        <h2 id="web-design-development" className="font-[var(--font-be-vietnam)] text-[28px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px] text-center sm:text-start">
           web design{" "}
-          <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
+          <span className="font-[var(--font-cormorant)] text-[37px] sm:text-[72px] font-normal italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
             & development
           </span>
         </h2>
@@ -992,10 +1285,12 @@ export default function New360WithForm() {
         imageAspectRatio="aspect-[617/344]"
       />
       </div>
-      <BrandingServices />
+      <div className="-mb-25">
+        <BrandingServices />
+      </div>
       <SixStepSystem
         heading={
-          <h2 className="text-white lowercase font-medium tracking-[-1px] sm:tracking-[-2px] text-[36px] sm:text-[56px] leading-[1.1] sm:leading-[69.36px]">
+          <h2 className="text-white lowercase font-medium tracking-[-1px] sm:tracking-[-2px] text-[36px] sm:text-[56px] leading-[1.1] sm:leading-[60px]">
             Before the logo comes <br className="hidden sm:block" />
             <span className="inline-flex items-center gap-x-2 sm:gap-x-3 mt-1 sm:mt-0">
               <span>the</span>

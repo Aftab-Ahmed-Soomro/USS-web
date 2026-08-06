@@ -91,7 +91,7 @@ export default function WhatsAppChannels() {
   const currentData = tabData[activeTab];
 
   return (
-    <section className="relative w-full overflow-hidden bg-black py-[80px] lg:py-[80px] px-4 sm:px-6">
+    <section className="relative w-full overflow-hidden bg-black pb-[40px] pt-[60px] lg:py-[80px] px-4 sm:px-6">
       <div className="mx-auto max-w-[1200px]">
 
         {/* Header Section */}

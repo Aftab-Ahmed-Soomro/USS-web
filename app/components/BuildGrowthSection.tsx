@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 
 const performanceCards = [
   { id: "01", title: "Marketing Strategy", desc: "Turning business goals into clear marketing plans.", link: "Explore Strategy", href: "#marketing-strategy" },
-  { id: "02", title: "Meta Ads", desc: "Campaigns designed to reach and convert the right audience.", link: "Explore Paid Social", href: "#meta-ads" },
-  { id: "03", title: "Google Ads", desc: "Capturing demand when customers are ready to purchase.", link: "Explore Paid Search", href: "#paid-search" },
+  { id: "02", title: "Meta Ads", desc: "Campaigns designed to reach and convert the right audience.", link: "Explore Meta Ads", href: "#meta-ads" },
+  { id: "03", title: "Google Ads", desc: "Capturing demand when customers are ready to purchase.", link: "Explore Google Ads", href: "#paid-search" },
   { id: "04", title: "Email Marketing", desc: "Driving repeat purchases through personalised communication.", link: "Explore Email Marketing", href: "#email-marketing" },
   { id: "05", title: "WhatsApp & SMS", desc: "Direct communication that keeps your audience connected.", link: "Explore WhatsApp & SMS", href: "#whatsapp-sms" },
 ];
