@@ -40,6 +40,7 @@ const relatedProjects = [
     copy: "Transforming Yalseh into Yula, a modern Dubai beach club. We grew their organic social following to 20k+ in 24 months.",
     image: "/assets/yula2.jpg",
     tags: ["Social Growth", "F&B Industry"],
+    imageClassName: "object-cover object-[50%_42%]",
   },
 ];
 
@@ -338,7 +339,7 @@ function RelatedProjects() {
                       alt={`${project.name} marketing strategy project`}
                       fill
                       sizes="(min-width: 768px) 45vw, calc(100vw - 48px)"
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      className={`${project.imageClassName || "object-cover"} transition-transform duration-700 group-hover:scale-105`}
                     />
                   </div>
 

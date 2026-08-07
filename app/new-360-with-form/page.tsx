@@ -309,10 +309,10 @@ function Hero() {
 function EmailOverview() {
   return (
     <section className="relative overflow-hidden bg-black">
-      <div className="relative mx-auto grid max-w-[1150px]  px-6 py-[50px] sm:pt-10 sm:pb-0 lg:grid-cols-[minmax(0,680px)_minmax(320px,430px)] lg:justify-between">
+      <div className="relative mx-auto grid max-w-[1150px]  px-4 min-[375px]:px-6 py-[50px] sm:py-16 lg:grid-cols-[minmax(0,680px)_minmax(320px,430px)] lg:justify-between lg:py-20">
         {/* Image mockup */}
-        <FadeRight duration={0.8} delay={0.2} className="order-2 -mx-1 pt-10 sm:mx-0 lg:order-none lg:col-start-2 lg:row-start-1 lg:flex lg:items-start lg:pt-0">
-          <div className="relative mx-auto aspect-[463/842] w-full max-w-[260px] min-[375px]:max-w-[300px] sm:max-w-[400px] overflow-hidden bg-white shadow-[0_24px_55px_rgba(0,0,0,0.35)]">
+        <FadeRight duration={0.8} delay={0.2} className="order-2 -mx-1 pt-10 sm:mx-0 lg:order-none lg:col-start-2 lg:row-start-1 lg:flex lg:items-start lg:justify-end lg:pt-0">
+          <div className="relative mx-auto lg:ml-auto lg:mr-0 aspect-[463/842] w-full max-w-[260px] min-[375px]:max-w-[300px] sm:max-w-[400px] overflow-hidden bg-white shadow-[0_24px_55px_rgba(0,0,0,0.35)] translate-x-2 sm:translate-x-4 lg:translate-x-6">
             <Image
               src="/assets/email-market.png"
               alt="Email marketing campaign designs"
@@ -325,23 +325,26 @@ function EmailOverview() {
         </FadeRight>
 
         {/* Text content */}
-        <Stagger staggerDelay={0.1} className="order-1 text-white lg:col-start-1 lg:row-start-1 lg:max-w-[680px] -mt-6">
+        <Stagger staggerDelay={0.1} className="order-1 text-white lg:col-start-1 lg:row-start-1 lg:max-w-[680px]">
           <StaggerItem>
-            <p className="mb-[20px] hidden text-[11px] font-normal leading-[19.6px] tracking-[0%] text-white sm:text-[14px]">
-              Our Email System for Retention and Growth
+            <p className="mb-[20px] hidden uppercase text-[11px] font-normal leading-[19.6px] tracking-[0%] text-white sm:text-[14px]">
+              Our Email System for Retention & Growth
             </p>
           </StaggerItem>
 
-          <StaggerItem className="text-center sm:text-left">
-            <span
-              className="block text-[36px] font-normal lowercase italic tracking-[-1.5px] text-[#ff5500] sm:text-[72px] sm:leading-[70px]"
-              style={{ fontFamily: "'Times New Roman', Times, serif" }}
-            >
-              Our Approach
-            </span>
+          <StaggerItem>
+            <h2 className="text-[30px] lowercase min-[375px]:text-[32px] font-medium leading-[1.1] tracking-[-1.5px] sm:text-[56px] sm:leading-[70px]">
+              Our Approach to <br />
+              <span
+                className="text-[36px] font-normal italic tracking-[-1.5px] text-[#ff5500] sm:text-[72px] sm:leading-[70px]"
+                style={{ fontFamily: "'Times New Roman', Times, serif" }}
+              >
+                Email Marketing
+              </span>
+            </h2>
           </StaggerItem>
 
-          <div className="mt-[5px] sm:mt-[52px] grid grid-cols-1 sm:grid-cols-2">
+          <div className="mt-[40px] sm:mt-[52px] grid grid-cols-1 sm:grid-cols-2">
             {systemItems.map((item, i) => (
               <StaggerItem key={item.number}>
                 <article
@@ -356,7 +359,7 @@ function EmailOverview() {
                   <h3 className="mt-[10px] sm:mt-[14px] max-w-[350px] text-[18px] font-semibold leading-[1.3] tracking-[-0.6px] sm:text-[24px] sm:leading-8">
                     {item.title}
                   </h3>
-                  <p className="mt-[8px] sm:mt-[16px] max-w-[95%] sm:max-w-[280px] text-[14px] font-normal leading-[1.6] text-white/90 sm:text-[16px] sm:leading-7">
+                  <p className="mt-[8px] sm:mt-[16px] max-w-[95%] sm:max-w-[300px] text-[14px] font-normal leading-[1.6] text-white/90 sm:text-[16px] sm:leading-7">
                     {item.copy}
                   </p>
                 </article>
@@ -1219,7 +1222,7 @@ export default function New360WithForm() {
         </h2>
       </motion.div>
       <ContentCreationServices />
-      <div className="-my-10 sm:-my-20">
+      <div className="-my-10">
         <EmailMarketingQuote first={""} second={"65% "} third={"of people are visual learners."} />
       </div>
       <div className="mb-20">

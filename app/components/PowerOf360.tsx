@@ -140,8 +140,8 @@ export function PowerOf360() {
   return (
     <section
       id="power-of-360"
-      className="relative w-full overflow-hidden bg-black max-md:!min-h-0 min-h-[800px] md:min-h-[1000px] lg:min-h-[110vh] xl:min-h-[110vh] 2xl:min-h-[110vh]"
-      style={{ minHeight: "clamp(800px, 110vh, 1400px)" }}
+      className="relative w-full overflow-hidden bg-black min-h-[650px] sm:min-h-[750px] md:min-h-[850px] lg:min-h-[900px] flex items-center"
+      style={{ minHeight: "clamp(650px, 100vh, 1200px)" }}
     >
       {/* Background image (Active Item) */}
       <AnimatePresence initial={false}>
@@ -166,10 +166,10 @@ export function PowerOf360() {
       {/* Dark overlay */}
       <div className="hidden md:block absolute inset-0 bg-black/55 z-0" />
 
-      {/* Content — max-w-[1150px]  container so left side aligns cleanly on large screens */}
-      <div className="relative z-10 mx-auto max-w-[1150px]  w-full min-h-[inherit] flex items-center px-6 pt-6 pb-10 sm:py-24 lg:py-32 xl:py-40 max-md:flex-col max-md:items-start max-md:justify-center max-md:gap-4">
-        {/* ── LEFT: text block — stays on left ── */}
-        <div className="flex max-w-[450px] flex-col gap-6 flex-shrink-0 max-md:max-w-full max-md:w-full">
+      {/* Content — balanced flex layout inside max-w-[1150px] container */}
+      <div className="relative z-10 mx-auto max-w-[1150px] w-full flex flex-col md:flex-row items-center justify-between gap-6 lg:gap-10 px-4 min-[375px]:px-6 py-12 md:py-20 lg:py-24">
+        {/* ── LEFT: text block ── */}
+        <div className="flex w-full md:max-w-[440px] lg:max-w-[470px] xl:max-w-[490px] flex-col gap-6 flex-shrink-0">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeItem.id}
@@ -177,51 +177,22 @@ export function PowerOf360() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.35, ease: "easeOut" }}
-              className="flex flex-col gap-6"
+              className="flex flex-col gap-5 sm:gap-6"
             >
               <h2
-                className="max-md:!text-[36px] max-md:!leading-[48px] max-md:!tracking-tight"
-                style={{
-                  fontFamily: "var(--font-be-vietnam), Arial, sans-serif",
-                  fontWeight: 500,
-                  fontSize: "56px",
-                  lineHeight: "81.6px",
-                  letterSpacing: "-1.6px",
-                  textTransform: "lowercase",
-                  color: "#ffffff",
-                  margin: 0,
-                }}
+                className="whitespace-nowrap text-[32px] min-[375px]:text-[36px] sm:text-[44px] lg:text-[50px] xl:text-[54px] leading-tight tracking-[-1.6px] lowercase text-white font-[var(--font-be-vietnam)] font-medium m-0"
               >
                 {activeItem.titlePrefix}
                 <span
-                  className="max-md:!text-[42px] max-md:!leading-[60px]"
-                  style={{
-                    fontFamily: "'Times New Roman', Times, serif",
-                    fontWeight: 400,
-                    fontStyle: "italic",
-                    fontSize: "72px",
-                    lineHeight: "81.6px",
-                    letterSpacing: "-1.6px",
-                    textTransform: "lowercase",
-                    color: "#FF5500",
-                  }}
+                  className="text-[38px] min-[375px]:text-[42px] sm:text-[52px] lg:text-[60px] xl:text-[66px] leading-tight tracking-[-1.6px] lowercase text-[#FF5500] font-normal italic timesFontFamily ml-1"
+                  style={{ fontFamily: "'Times New Roman', Times, serif" }}
                 >
                   {activeItem.titleHighlight}
                 </span>
               </h2>
 
               <p
-                className="max-md:!text-[13px] max-md:!leading-[24px] min-h-[140px] sm:min-h-[120px]"
-                style={{
-                  fontFamily: "var(--font-be-vietnam), Arial, sans-serif",
-                  fontWeight: 400,
-                  fontSize: "17px",
-                  lineHeight: "28px",
-                  letterSpacing: "0%",
-                  color: "rgba(255,255,255,0.85)",
-                  margin: 0,
-                  minHeight: "120px",
-                }}
+                className="text-[14px] leading-[24px] sm:text-[15px] sm:leading-[26px] lg:text-[16px] lg:leading-[27px] text-white/85 font-[var(--font-be-vietnam)] font-normal m-0 max-w-full lg:max-w-[470px] min-h-[90px] sm:min-h-[105px]"
               >
                 {activeItem.description}
               </p>
@@ -233,38 +204,12 @@ export function PowerOf360() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
             viewport={{ once: true }}
-            style={{ width: "fit-content" }}
+            className="w-fit"
           >
             <Link
               href="/contact"
               id="power-of-360-contact-us"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "8px",
-                width: "fit-content",
-                padding: "10px 20px",
-                border: "1px solid rgba(255,255,255,0.5)",
-                borderRadius: "9999px",
-                fontFamily: "var(--font-be-vietnam), Arial, sans-serif",
-                fontWeight: 500,
-                fontSize: "14px",
-                lineHeight: "19.5px",
-                letterSpacing: "0px",
-                textTransform: "capitalize",
-                color: "#ffffff",
-                textDecoration: "none",
-                transition: "background 0.2s, border-color 0.2s",
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.background =
-                  "rgba(255,255,255,0.12)";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.background =
-                  "transparent";
-              }}
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-white/50 font-[var(--font-be-vietnam)] font-medium text-[13px] sm:text-[14px] text-white transition hover:bg-white/10"
             >
               Book a Consultation
               <svg
@@ -288,22 +233,14 @@ export function PowerOf360() {
         </div>
 
         {/* ── RIGHT: thumbnails + controls ── */}
-        <div
-          className="max-md:!static max-md:!transform-none max-md:!w-full max-md:!mt-4 md:absolute md:top-1/2 md:-translate-y-1/2 px-6 md:px-0 md:left-[500px] lg:left-[560px] xl:left-[580px]"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "24px",
-          }}
-        >
+        <div className="flex w-full md:w-auto flex-col gap-6 flex-shrink-0">
           {/* Cards row */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
             viewport={{ once: true }}
-            className="max-md:-mx-6 max-md:w-[calc(100%+3rem)] max-md:px-6 max-md:overflow-x-auto max-md:snap-x max-md:snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] max-md:py-4"
-            style={{ display: "flex", alignItems: "flex-end", gap: "16px" }}
+            className="flex items-center gap-3 max-md:-mx-4 max-md:px-4 max-md:w-[calc(100%+2rem)] max-md:overflow-x-auto max-md:snap-x max-md:snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] max-md:py-2"
           >
             <AnimatePresence mode="popLayout" initial={false}>
               {thumbnails.map((card) => (
@@ -318,7 +255,7 @@ export function PowerOf360() {
                   animate={{ opacity: 1, scale: 1, x: 0 }}
                   exit={{ opacity: 0, scale: 0.9, x: -50 }}
                   transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                  className="max-md:!w-[220px] max-md:!h-[320px] max-md:snap-start relative w-[260px] h-[380px] rounded-[16px] overflow-hidden flex-shrink-0 cursor-pointer border border-white/10 hover:border-white/40 transition-colors duration-300 p-0 group"
+                  className="relative w-[180px] h-[270px] min-[375px]:w-[190px] min-[375px]:h-[280px] sm:w-[185px] sm:h-[280px] lg:w-[190px] lg:h-[290px] xl:w-[195px] xl:h-[300px] rounded-[16px] overflow-hidden flex-shrink-0 cursor-pointer border border-white/10 hover:border-white/40 transition-colors duration-300 p-0 group max-md:snap-start"
                   aria-label={card.label}
                 >
                   <Image
@@ -326,71 +263,23 @@ export function PowerOf360() {
                     alt={card.alt}
                     fill
                     className="object-cover object-[center_15%] transition-transform duration-500 group-hover:scale-110"
-                    sizes="(max-width: 768px) 240px, 260px"
+                    sizes="(max-width: 768px) 200px, 215px"
                   />
 
                   {/* Dark gradient overlay for thumbnail */}
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
 
                   {/* Top number badge */}
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: "14px",
-                      left: "14px",
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "6px",
-                      color: "rgba(255,255,255,0.9)",
-                    }}
-                  >
-                    <span
-                      style={{
-                        width: "20px",
-                        height: "1px",
-                        background: "rgba(255,255,255,0.8)",
-                        display: "inline-block",
-                      }}
-                    />
-                    <span
-                      style={{
-                        fontFamily: "var(--font-be-vietnam), Arial, sans-serif",
-                        fontWeight: 500,
-                        fontSize: "10px",
-                        lineHeight: "15px",
-                        letterSpacing: "2.4px",
-                        textTransform: "uppercase",
-                      }}
-                    >
+                  <div className="absolute top-3.5 left-3.5 flex items-center gap-1.5 text-white/90">
+                    <span className="w-5 h-[1px] bg-white/80 inline-block" />
+                    <span className="font-[var(--font-be-vietnam)] font-medium text-[10px] tracking-[2.4px] uppercase">
                       {card.id}
                     </span>
                   </div>
 
                   {/* Bottom label */}
-                  <div
-                    style={{
-                      position: "absolute",
-                      bottom: 0,
-                      left: 0,
-                      right: 0,
-                      padding: "40px 16px 16px",
-                      background:
-                        "linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%)",
-                    }}
-                  >
-                    <span
-                      className="max-md:!text-[16px] max-md:!leading-[20px]"
-                      style={{
-                        fontFamily: "var(--font-be-vietnam), Arial, sans-serif",
-                        fontWeight: 600,
-                        fontSize: "20px",
-                        lineHeight: "23px",
-                        letterSpacing: "-0.2px",
-                        color: "#ffffff",
-                        display: "block",
-                        textAlign: "center",
-                      }}
-                    >
+                  <div className="absolute bottom-0 inset-x-0 p-4 pt-10 bg-gradient-to-t from-black/85 to-transparent">
+                    <span className="font-[var(--font-be-vietnam)] font-semibold text-[16px] sm:text-[18px] lg:text-[20px] text-white block text-center leading-tight">
                       {card.label}
                     </span>
                   </div>
@@ -405,28 +294,14 @@ export function PowerOf360() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
             viewport={{ once: true }}
-            className="max-md:w-full max-md:mt-2"
-            style={{ display: "flex", alignItems: "center", gap: "16px" }}
+            className="flex items-center gap-4 w-full"
           >
             {/* Prev arrow */}
             <button
               id="power-of-360-prev"
               onClick={prev}
               aria-label="Previous card"
-              className="hover:bg-white/10"
-              style={{
-                width: "36px",
-                height: "36px",
-                borderRadius: "9999px",
-                border: "1px solid rgba(255,255,255,0.4)",
-                background: "transparent",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                cursor: "pointer",
-                transition: "all 0.2s",
-                flexShrink: 0,
-              }}
+              className="w-9 h-9 rounded-full border border-white/40 bg-transparent flex items-center justify-center cursor-pointer transition hover:bg-white/10 shrink-0"
             >
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <path
@@ -444,20 +319,7 @@ export function PowerOf360() {
               id="power-of-360-next"
               onClick={next}
               aria-label="Next card"
-              className="hover:bg-white/10"
-              style={{
-                width: "36px",
-                height: "36px",
-                borderRadius: "9999px",
-                border: "1px solid rgba(255,255,255,0.4)",
-                background: "transparent",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                cursor: "pointer",
-                transition: "all 0.2s",
-                flexShrink: 0,
-              }}
+              className="w-9 h-9 rounded-full border border-white/40 bg-transparent flex items-center justify-center cursor-pointer transition hover:bg-white/10 shrink-0"
             >
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <path
@@ -471,40 +333,16 @@ export function PowerOf360() {
             </button>
 
             {/* Progress number */}
-            <span
-              style={{
-                fontFamily: "var(--font-be-vietnam), Arial, sans-serif",
-                fontWeight: 400,
-                fontSize: "13px",
-                color: "rgba(255,255,255,0.6)",
-                flexShrink: 0,
-              }}
-            >
+            <span className="font-[var(--font-be-vietnam)] text-[13px] text-white/60 shrink-0">
               {activeItem.id}
             </span>
 
             {/* Progress bar */}
-            <div
-              className="max-md:!max-w-none"
-              style={{
-                flex: 1,
-                height: "1px",
-                background: "rgba(255,255,255,0.2)",
-                borderRadius: "9999px",
-                position: "relative",
-                maxWidth: "200px",
-              }}
-            >
+            <div className="flex-1 h-[1px] bg-white/20 rounded-full relative max-w-[200px]">
               <div
+                className="absolute left-0 top-0 h-[1px] bg-[#FF5500] rounded-full transition-[width] duration-300 ease-out"
                 style={{
-                  position: "absolute",
-                  left: 0,
-                  top: 0,
-                  height: "1px",
                   width: `${(parseInt(activeItem.id) / cards.length) * 100}%`,
-                  background: "#FF5500",
-                  borderRadius: "9999px",
-                  transition: "width 0.35s ease",
                 }}
               />
             </div>

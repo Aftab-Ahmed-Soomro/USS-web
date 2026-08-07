@@ -279,7 +279,7 @@ const relatedProjects = [
     copy: "We created lifestyle photography & video content that showcased Yula's new identity, helping establish a premium social presence following venue's transformation.",
     tags: ["Content Creation", "Hospitality", "Brand Launch"],
     year: "2026",
-    imageClassName: "object-cover object-[50%_65%]",
+    imageClassName: "object-cover object-[50%_42%]",
   },
 ];
 
