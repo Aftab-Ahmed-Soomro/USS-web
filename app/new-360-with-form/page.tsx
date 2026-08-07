@@ -1180,10 +1180,11 @@ export default function New360WithForm() {
         </h2>
       </motion.div>
       <PlatformsWeWorkWith />
-      <div className="-mb-8 sm:-mb-10 -mt-10 sm:-mt-20">
-        <EmailMarketingQuote first={"your social media is your"} second={"digital window"} third={"shop front"} />
-      </div>
-      <div className="-mt-8 sm:-mt-10">
+      
+        <div className="my-4">
+          <EmailMarketingQuote first={"your social media is your"} second={"digital window"} third={"shop front"} />
+        </div>
+      <div className="">
         <OurOrganicSocialMediaApproach />
       </div>
       <SocialServices />
@@ -1343,7 +1344,9 @@ export default function New360WithForm() {
         </a>
       </motion.div>
 
-      <Testimonials />
+      <div className="mt-8">
+        <Testimonials />
+      </div>
       <GoodCompanyMap />
       <Team />
       <Footer />

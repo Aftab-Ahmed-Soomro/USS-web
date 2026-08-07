@@ -82,7 +82,7 @@ export function RevenueMethod({ heading = DEFAULT_HEADING, tagline = DEFAULT_TAG
 
         {/* Heading */}
         <StaggerItem>
-          <h2 className=" text-white text-[28px] min-[375px]:text-[32px] font-medium leading-[1.15] tracking-[-3%] sm:text-[56px] sm:leading-[60px] mb-[40px] sm:mb-16">
+          <h2 className=" text-white text-[28px] min-[375px]:text-[32px] font-medium leading-[0.8] tracking-[-3%] sm:text-[56px] sm:leading-[60px] mb-[40px] sm:mb-16">
             {heading}
           </h2>
         </StaggerItem>

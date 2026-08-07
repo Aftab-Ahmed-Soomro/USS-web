@@ -203,10 +203,10 @@ export default function ProjectsPage() {
 
           {/* Main heading — rises up */}
           <FadeUp delay={0.2}>
-            <h1 className="mt-[12px] sm:mt-[20px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[1] tracking-[-0.9px] text-white sm:text-[56px] sm:tracking-[-0.9px]">
+            <h1 className="mt-[12px] sm:mt-[20px] font-[var(--font-be-vietnam)] text-[26px] font-bold lowercase leading-[1] tracking-[-0.9px] text-white sm:text-[56px] sm:tracking-[-0.9px]">
               projects that make
-              <br className="block sm:hidden" /> an{" "}
-              <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-extralight timesFontFamily italic tracking-[-0.9px] text-[#ff5500]">
+               an{" "}
+              <span className="font-[var(--font-cormorant)] text-[36px] sm:text-[72px] font-extralight timesFontFamily italic tracking-[-0.9px] text-[#ff5500]">
                 impact
               </span>
             </h1>
