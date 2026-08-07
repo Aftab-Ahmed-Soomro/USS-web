@@ -44,7 +44,7 @@ export function Strategic() {
 
   return (
     <section className="bg-[#F8F8F7] pb-[40px] pt-[40px] sm:pt-[70px] text-black">
-      <div className="mx-auto max-w-[1150px] 2xl:max-w-[1440px] px-4 sm:px-6">
+      <div className="mx-auto max-w-[1150px]  px-4 sm:px-6">
 
         {/* Section label — drops in from above */}
         <div className="text-center">

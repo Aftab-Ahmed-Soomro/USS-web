@@ -50,7 +50,7 @@ export function GoodCompanyMap() {
 
   return (
     <section className="relative z-10 border-t border-t-black w-full bg-white py-[50px] sm:py-16 md:py-24 px-4 min-[375px]:px-6 overflow-hidden">
-      <div className="w-full max-w-[1150px] 2xl:max-w-[1440px] mx-auto flex flex-col items-center ">
+      <div className="w-full max-w-[1150px]  mx-auto flex flex-col items-center ">
 
         {/* Main heading — fades up */}
         <FadeUp delay={0.1}>

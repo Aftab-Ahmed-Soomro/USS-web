@@ -36,7 +36,7 @@ export function LevelsOfFunnel() {
 
   return (
     <section className="relative w-full bg-black py-[10px] sm:pt-32 px-4 min-[375px]:px-6 overflow-hidden">
-      <div className="max-w-[1150px] 2xl:max-w-[1440px] mx-auto relative z-10">
+      <div className="max-w-[1150px]  mx-auto relative z-10">
         <Stagger staggerDelay={0.15}>
           <div className="flex flex-col lg:grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
 
@@ -264,8 +264,8 @@ export function LevelsOfFunnel() {
                       <div
                         key={lvl.id}
                         className={`rounded-xl border transition-all duration-300 overflow-hidden ${isActive
-                            ? "bg-[#111111] border-[#FF5500]/60 shadow-[0_0_20px_rgba(255,85,0,0.15)]"
-                            : "bg-[#0a0a0a]/60 border-white/10 hover:border-white/20"
+                          ? "bg-[#111111] border-[#FF5500]/60 shadow-[0_0_20px_rgba(255,85,0,0.15)]"
+                          : "bg-[#0a0a0a]/60 border-white/10 hover:border-white/20"
                           }`}
                       >
                         <button

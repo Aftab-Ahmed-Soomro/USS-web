@@ -137,7 +137,7 @@ export function UssDifferentSection() {
         style={{ width: "100%", transformOrigin: "left center" }}
       />
 
-      <div className="mx-auto flex max-w-[1150px] 2xl:max-w-[1440px] px-4 flex-col items-center relative z-10 w-full -mt-5 sm:-mt-0">
+      <div className="mx-auto flex max-w-[1150px]  px-4 flex-col items-center relative z-10 w-full -mt-5 sm:-mt-0">
 
         {/* Animated Heading */}
         <div ref={headingRef} className="w-full text-center pb-5 sm:pb-16">
@@ -182,15 +182,14 @@ export function UssDifferentSection() {
         {/* Desktop Layout */}
         <div className="hidden lg:flex w-full flex-row justify-center items-center gap-6 lg:gap-8 mt-4 sm:mt-8">
           {cards.map((card, index) => {
-            const isMiddle = index === 1;
             return (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 80, scale: 0.9, rotateX: 15 }}
-                whileInView={{ opacity: 1, y: 0, scale: isMiddle ? 1.04 : 1, rotateX: 0 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }}
                 whileHover={{
                   y: -14,
-                  scale: isMiddle ? 1.07 : 1.04,
+                  scale: 1.04,
                   rotateY: index === 0 ? 2 : index === 2 ? -2 : 0,
                 }}
                 viewport={{ once: true, margin: "-50px" }}
@@ -209,24 +208,10 @@ export function UssDifferentSection() {
                   whileHover={{ opacity: 1 }}
                   transition={{ duration: 0.3 }}
                   style={{
-                    boxShadow: isMiddle
-                      ? "0 0 40px rgba(255,85,0,0.5), inset 0 0 30px rgba(255,85,0,0.1)"
-                      : "0 0 30px rgba(255,85,0,0.35), inset 0 0 20px rgba(255,85,0,0.08)",
+                    boxShadow: "0 0 30px rgba(255,85,0,0.35), inset 0 0 20px rgba(255,85,0,0.08)",
                     border: "1px solid rgba(255,85,0,0.3)",
                   }}
                 />
-
-                {/* Static subtle glow for middle card */}
-                {isMiddle && (
-                  <motion.div
-                    className="absolute -inset-1 rounded-2xl pointer-events-none z-0"
-                    animate={{ opacity: [0.4, 0.8, 0.4] }}
-                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                    style={{
-                      boxShadow: "0 0 50px rgba(255,85,0,0.3)",
-                    }}
-                  />
-                )}
 
                 {/* Corner accent dots */}
                 <motion.div

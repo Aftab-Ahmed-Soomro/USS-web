@@ -7,7 +7,7 @@ import FadeUp from "./FadeUp";
 export function SadiaPsychologyProfile() {
   return (
     <section className="bg-white py-10 sm:py-20 text-black overflow-hidden font-[var(--font-inter)]">
-      <div className="w-full max-w-[1150px] 2xl:max-w-[1440px] px-6 mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start gap-12">
+      <div className="w-full max-w-[1150px]  px-6 mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start gap-12">
 
         {/* Mobile Title */}
         <div className="flex flex-col w-full lg:hidden text-left mb-[-16px]">

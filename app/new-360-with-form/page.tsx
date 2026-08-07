@@ -262,7 +262,7 @@ function Hero() {
         style={{ background: 'radial-gradient(circle, #FF5500 0%, rgba(255,85,0,0) 70%)' }}
       />
 
-      <div className="relative z-10 mx-auto grid max-w-[1150px] 2xl:max-w-[1440px] gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between text-center sm:text-start">
+      <div className="relative z-10 mx-auto grid max-w-[1150px]  gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between text-center sm:text-start">
         <Stagger staggerDelay={0.15}>
 
           <StaggerItem>
@@ -309,7 +309,7 @@ function Hero() {
 function EmailOverview() {
   return (
     <section className="relative overflow-hidden bg-black">
-      <div className="relative mx-auto grid max-w-[1150px] 2xl:max-w-[1440px] px-6 py-[50px] sm:pt-10 sm:pb-0 lg:grid-cols-[minmax(0,680px)_minmax(320px,430px)] lg:justify-between">
+      <div className="relative mx-auto grid max-w-[1150px]  px-6 py-[50px] sm:pt-10 sm:pb-0 lg:grid-cols-[minmax(0,680px)_minmax(320px,430px)] lg:justify-between">
         {/* Image mockup */}
         <FadeRight duration={0.8} delay={0.2} className="order-2 -mx-1 pt-10 sm:mx-0 lg:order-none lg:col-start-2 lg:row-start-1 lg:flex lg:items-start lg:pt-0">
           <div className="relative mx-auto aspect-[463/842] w-full max-w-[260px] min-[375px]:max-w-[300px] sm:max-w-[400px] overflow-hidden bg-white shadow-[0_24px_55px_rgba(0,0,0,0.35)]">
@@ -559,7 +559,7 @@ function ServiceCard({ num, title, heightClass, icon, image }: any) {
 function ContentCreationServices() {
   return (
     <section className="bg-black text-white pb-[60px] sm:pb-[100px] px-4 min-[375px]:px-6 overflow-hidden">
-      <div className="max-w-[1150px] 2xl:max-w-[1440px] mx-auto">
+      <div className="max-w-[1150px]  mx-auto">
         {/* Header */}
         <div className="mb-[30px] sm:mb-[30px]">
           {/* <h4 className="font-[var(--font-inter)] text-[#ff5500] font-bold text-[14px] leading-[16px] tracking-[2.64px] uppercase mb-6">
@@ -778,7 +778,7 @@ function SocialServices() {
   return (
     <section className="bg-[#080808] px-4 min-[375px]:px-5 min-[480px]:px-6 sm:px-6 py-[48px] min-[390px]:py-[58px] sm:py-[70px] text-white lg:py-[100px]">
       <Stagger staggerDelay={0.15}>
-        <div className="mx-auto max-w-[1150px] 2xl:max-w-[1440px]">
+        <div className="mx-auto max-w-[1150px] ">
           {/* Header */}
           <StaggerItem>
             <p className="font-[var(--font-inter)] text-[13px] font-bold uppercase tracking-[4px] text-[#ff5500]">
@@ -1034,46 +1034,46 @@ export default function New360WithForm() {
       />
       <div className="-mb-10 sm:-mb-0">
         <PlatformsWeWorkWith
-        heading={
-          <h2
-            className="text-white mx-auto max-w-[1150px] 2xl:max-w-[1440px] mb-10 tracking-[-1.5px] text-center sm:text-left"
-            style={{
-              fontWeight: 500,
-              fontSize: "clamp(32px, 5vw, 56px)",
-              lineHeight: "100%",
-              fontFamily: "var(--font-be-vietnam, var(--font-inter))",
-            }}
-          >
-            platforms we work with
-          </h2>
-        }
-        platforms={[
-          {
-            name: "Search Campaigns",
-            description:
-              "Reach, engage and convert customers across Facebook and Instagram through high-performing paid campaigns.",
-            imageSrc: "/assets/1.png",
-          },
-          {
-            name: "Performance Max",
-            description:
-              "Maximise conversions across all Google channels using AI-driven campaigns.",
-            imageSrc: "/assets/googlePlatforms/2.png",
-          },
-          {
-            name: "YouTube Campaigns",
-            description:
-              "Engage audiences with compelling video ads across YouTube and the web.",
-            imageSrc: "/assets/googlePlatforms/3.png",
-          },
-          {
-            name: "Display Ads",
-            description:
-              "Build brand awareness and retarget visitors with visually striking image ads.",
-            imageSrc: "/assets/googlePlatforms/4.png",
-          },
-        ]}
-      />
+          heading={
+            <h2
+              className="text-white mx-auto max-w-[1150px]  mb-10 tracking-[-1.5px] text-center sm:text-left"
+              style={{
+                fontWeight: 500,
+                fontSize: "clamp(32px, 5vw, 56px)",
+                lineHeight: "100%",
+                fontFamily: "var(--font-be-vietnam, var(--font-inter))",
+              }}
+            >
+              platforms we work with
+            </h2>
+          }
+          platforms={[
+            {
+              name: "Search Campaigns",
+              description:
+                "Reach, engage and convert customers across Facebook and Instagram through high-performing paid campaigns.",
+              imageSrc: "/assets/1.png",
+            },
+            {
+              name: "Performance Max",
+              description:
+                "Maximise conversions across all Google channels using AI-driven campaigns.",
+              imageSrc: "/assets/googlePlatforms/2.png",
+            },
+            {
+              name: "YouTube Campaigns",
+              description:
+                "Engage audiences with compelling video ads across YouTube and the web.",
+              imageSrc: "/assets/googlePlatforms/3.png",
+            },
+            {
+              name: "Display Ads",
+              description:
+                "Build brand awareness and retarget visitors with visually striking image ads.",
+              imageSrc: "/assets/googlePlatforms/4.png",
+            },
+          ]}
+        />
       </div>
       <RevenueMethod
         heading={<>how we capture demand <br className="hidden sm:block" /> and turn it into{" "}<span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>revenue</span></>}

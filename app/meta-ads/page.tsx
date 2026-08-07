@@ -103,7 +103,7 @@ function Hero() {
         className="pointer-events-none absolute -bottom-[20%] -right-[20%] h-[80vw] max-h-[800px] min-h-[300px] sm:min-h-[500px] w-[80vw] max-w-[800px] min-w-[300px] sm:min-w-[500px] rounded-full opacity-40 blur-[60px] sm:blur-[100px] animate-glow-br"
         style={{ background: 'radial-gradient(circle, #FF5500 0%, rgba(255,85,0,0) 70%)' }}
       />
-      <div className="mx-auto grid max-w-[1150px] 2xl:max-w-[1440px] gap-8 sm:gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
+      <div className="mx-auto grid max-w-[1150px]  gap-8 sm:gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
             <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white text-center sm:text-start">
@@ -207,7 +207,7 @@ function Numbers() {
 function RelatedProjects() {
   return (
     <section className="bg-[#080808] px-4 min-[375px]:px-6 py-[40px] sm:py-[56px] text-white">
-      <div className="mx-auto max-w-[1150px] 2xl:max-w-[1440px]">
+      <div className="mx-auto max-w-[1150px] ">
         {/* Header */}
         <div className="flex items-center justify-between gap-6">
           <Stagger staggerDelay={0.12}>
@@ -312,7 +312,7 @@ function RelatedProjects() {
 function FinalCta() {
   return (
     <section className="bg-black px-4 min-[375px]:px-6 pt-[50px] sm:pt-[70px] text-white pb-30">
-      <Stagger staggerDelay={0.12} className="mx-auto max-w-[1150px] 2xl:max-w-[1440px] text-center">
+      <Stagger staggerDelay={0.12} className="mx-auto max-w-[1150px]  text-center">
         <StaggerItem>
           <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
             LET&apos;S SCALE

@@ -57,14 +57,14 @@ export default function PlatformsWeWorkWith({
             heading
           ) : (
             <h2
-              className="text-white mx-auto max-w-[1150px] 2xl:max-w-[1440px] mb-[32px] sm:mb-10 font-medium text-[29px] sm:text-[40px] leading-none tracking-normal text-center sm:text-left"
+              className="text-white mx-auto max-w-[1150px]  mb-[32px] sm:mb-10 font-medium text-[29px] sm:text-[40px] leading-none tracking-normal text-center sm:text-left"
             >
               platforms we work with
             </h2>
           )}
         </StaggerItem>
 
-        <div className="relative max-w-[1150px] 2xl:max-w-[1440px] mx-auto">
+        <div className="relative max-w-[1150px]  mx-auto">
           <div className="w-full grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 pb-4 sm:pb-0">
             {platforms.map((platform, index) => {
               const isActive = activePlatform === platform.name;

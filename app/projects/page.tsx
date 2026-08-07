@@ -192,7 +192,7 @@ export default function ProjectsPage() {
 
       {/* Hero section */}
       <section className="bg-black px-4 min-[375px]:px-6 pb-[40px] min-[375px]:pb-[60px] pt-[44px] sm:pt-[112px] text-center text-white sm:pb-[90px]">
-        <div className="mx-auto max-w-[1150px] 2xl:max-w-[1440px]">
+        <div className="mx-auto max-w-[1150px] ">
 
           {/* Eyebrow — drops down */}
           <FadeDown delay={0.1}>

@@ -137,7 +137,7 @@ const socialServicesData = [
 function Hero() {
   return (
     <section className="bg-[#f7f7f5] px-4 min-[375px]:px-5 min-[480px]:px-6 sm:px-6 py-[48px] min-[390px]:py-[58px] text-black sm:py-[76px] lg:py-[82px]">
-      <div className="mx-auto grid max-w-[1150px] 2xl:max-w-[1440px] gap-8 min-[390px]:gap-10 sm:gap-10 lg:grid-cols-[minmax(0,700px)_430px] lg:items-center lg:justify-between">
+      <div className="mx-auto grid max-w-[1150px]  gap-8 min-[390px]:gap-10 sm:gap-10 lg:grid-cols-[minmax(0,700px)_430px] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.15}>
           <StaggerItem>
             <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white text-center sm:text-start">
@@ -191,7 +191,7 @@ function SocialServices() {
   return (
     <section className="bg-[#080808] px-4 min-[375px]:px-5 min-[480px]:px-6 sm:px-6 py-[48px] min-[390px]:py-[58px] sm:py-[70px] text-white lg:py-[100px]">
       <Stagger staggerDelay={0.15}>
-        <div className="mx-auto max-w-[1150px] 2xl:max-w-[1440px]">
+        <div className="mx-auto max-w-[1150px] ">
           {/* Header */}
           <StaggerItem>
             <p className="font-[var(--font-inter)] text-[13px] font-bold uppercase tracking-[4px] text-[#ff5500]">
@@ -286,7 +286,7 @@ function RelatedProjects() {
   return (
     <section className="bg-[#080808] px-4 min-[375px]:px-6 py-[40px] sm:py-[56px] text-white">
       <Stagger staggerDelay={0.15}>
-        <div className="mx-auto max-w-[1150px] 2xl:max-w-[1440px]">
+        <div className="mx-auto max-w-[1150px] ">
           {/* Header */}
           <div className="flex items-center justify-between gap-6">
             <Stagger staggerDelay={0.12}>
@@ -395,7 +395,7 @@ function FinalCta() {
   return (
     <section className="bg-black px-4 min-[375px]:px-5 min-[480px]:px-6 sm:px-6 pt-[60px] min-[390px]:pt-[80px] sm:pt-[100px] text-white pb-[100px] sm:pb-20">
       <Stagger staggerDelay={0.15}>
-        <div className="mx-auto max-w-[1150px] 2xl:max-w-[1440px] text-center">
+        <div className="mx-auto max-w-[1150px]  text-center">
           <StaggerItem>
             <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
               LET&apos;S SCALE

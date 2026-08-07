@@ -121,7 +121,7 @@ export default function DedicatedPartner() {
         style={{ background: 'radial-gradient(circle, #ff5500 0%, rgba(0,0,0,0) 70%)' }}
       />
 
-      <div className="relative z-10 w-full max-w-[1150px] 2xl:max-w-[1440px]">
+      <div className="relative z-10 w-full max-w-[1150px] ">
 
         {/* Top Content Grid */}
         <motion.div
@@ -156,7 +156,7 @@ export default function DedicatedPartner() {
             <motion.div variants={itemVariants}>
               <Link
                 href="/contact"
-                                className="relative inline-flex items-center justify-center rounded-full border border-white/20 px-8 py-3.5 transition-all duration-300 hover:border-[#ff5500] hover:bg-[#ff5500] hover:text-white hover:shadow-[0_0_25px_rgba(255,85,0,0.4)] group overflow-hidden"
+                className="relative inline-flex items-center justify-center rounded-full border border-white/20 px-8 py-3.5 transition-all duration-300 hover:border-[#ff5500] hover:bg-[#ff5500] hover:text-white hover:shadow-[0_0_25px_rgba(255,85,0,0.4)] group overflow-hidden"
 
               >
                 <span className="uppercase text-[12px] sm:text-[13px] font-bold leading-[20px] align-middle transition-transform duration-300 group-hover:translate-x-[-2px]">

@@ -54,7 +54,7 @@ function Hero() {
         style={{ background: 'radial-gradient(circle, #FF5500 0%, rgba(255,85,0,0) 70%)' }}
       />
 
-      <div className="relative z-10 mx-auto grid max-w-[1150px] 2xl:max-w-[1440px] gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
+      <div className="relative z-10 mx-auto grid max-w-[1150px]  gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.15}>
           <StaggerItem>
             <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white text-center sm:text-start">
@@ -102,7 +102,7 @@ function Hero() {
 function FinalCta() {
   return (
     <section className="bg-black px-4 min-[375px]:px-6 pt-[50px] sm:pt-[70px] text-white pb-30">
-      <Stagger staggerDelay={0.12} className="mx-auto max-w-[1150px] 2xl:max-w-[1440px] text-center">
+      <Stagger staggerDelay={0.12} className="mx-auto max-w-[1150px]  text-center">
         <StaggerItem>
           <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
             Get Started

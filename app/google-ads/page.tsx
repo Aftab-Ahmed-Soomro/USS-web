@@ -103,7 +103,7 @@ const workWays = [
 function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#ff5500] px-4 min-[375px]:px-6 pb-[40px] pt-[40px] min-[375px]:pb-[58px] min-[375px]:pt-[56px] text-white sm:pb-[72px] sm:pt-[78px]">
-      <div className="mx-auto grid max-w-[1150px] 2xl:max-w-[1440px] gap-8 sm:gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between text-center sm:text-start">
+      <div className="mx-auto grid max-w-[1150px]  gap-8 sm:gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between text-center sm:text-start">
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
             <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white">
@@ -185,7 +185,7 @@ function GrowthIcon() {
 function CaseStudies() {
   return (
     <section className="bg-black px-4 min-[375px]:px-6 py-[40px] sm:py-[78px] text-white lg:py-[86px]">
-      <div className="mx-auto max-w-[1150px] 2xl:max-w-[1440px]">
+      <div className="mx-auto max-w-[1150px] ">
         <div className="flex flex-col gap-[20px] md:gap-7 md:flex-row md:items-end md:justify-between">
           <Stagger staggerDelay={0.12}>
             <StaggerItem>
@@ -283,7 +283,7 @@ function CaseStudies() {
 function FinalCta() {
   return (
     <section className="bg-black px-4 min-[375px]:px-6 pt-[50px] sm:pt-[70px] text-white pb-30">
-      <Stagger staggerDelay={0.12} className="mx-auto max-w-[1150px] 2xl:max-w-[1440px] text-center">
+      <Stagger staggerDelay={0.12} className="mx-auto max-w-[1150px]  text-center">
         <StaggerItem>
           <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
             LET&apos;S SCALE
@@ -437,46 +437,46 @@ export default function GoogleAdsPage() {
       </div>
       <div className="-mb-10 sm:-mb-0">
         <PlatformsWeWorkWith
-        heading={
-          <h2
-            className="text-white mx-auto max-w-[1150px] 2xl:max-w-[1440px] mb-10 tracking-[-1.5px] text-center sm:text-left"
-            style={{
-              fontWeight: 500,
-              fontSize: "clamp(32px, 5vw, 56px)",
-              lineHeight: "100%",
-              fontFamily: "var(--font-be-vietnam, var(--font-inter))",
-            }}
-          >
-            Campaigns Built Around Your Goals
-          </h2>
-        }
-        platforms={[
-          {
-            name: "Search Campaigns",
-            description:
-              "Appear in Google Search results when customers are actively looking for your products or services",
-            imageSrc: "/assets/1.png",
-          },
-          {
-            name: "Performance Max",
-            description:
-              "Reach customers across Google's entire network using AI powered campaigns designed to maximise performance",
-            imageSrc: "/assets/googlePlatforms/2.png",
-          },
-          {
-            name: "YouTube Campaigns",
-            description:
-              "Build awareness through engaging video campaigns that reach audiences while they watch the content they love",
-            imageSrc: "/assets/googlePlatforms/3.png",
-          },
-          {
-            name: "Display Ads",
-            description:
-              "Keep your brand visible across millions of websites and apps with visually engaging display advertising.",
-            imageSrc: "/assets/googlePlatforms/4.png",
-          },
-        ]}
-      />
+          heading={
+            <h2
+              className="text-white mx-auto max-w-[1150px]  mb-10 tracking-[-1.5px] text-center sm:text-left"
+              style={{
+                fontWeight: 500,
+                fontSize: "clamp(32px, 5vw, 56px)",
+                lineHeight: "100%",
+                fontFamily: "var(--font-be-vietnam, var(--font-inter))",
+              }}
+            >
+              Campaigns Built Around Your Goals
+            </h2>
+          }
+          platforms={[
+            {
+              name: "Search Campaigns",
+              description:
+                "Appear in Google Search results when customers are actively looking for your products or services",
+              imageSrc: "/assets/1.png",
+            },
+            {
+              name: "Performance Max",
+              description:
+                "Reach customers across Google's entire network using AI powered campaigns designed to maximise performance",
+              imageSrc: "/assets/googlePlatforms/2.png",
+            },
+            {
+              name: "YouTube Campaigns",
+              description:
+                "Build awareness through engaging video campaigns that reach audiences while they watch the content they love",
+              imageSrc: "/assets/googlePlatforms/3.png",
+            },
+            {
+              name: "Display Ads",
+              description:
+                "Keep your brand visible across millions of websites and apps with visually engaging display advertising.",
+              imageSrc: "/assets/googlePlatforms/4.png",
+            },
+          ]}
+        />
       </div>
       <RevenueMethod
         heading={<>how we capture demand <br className="hidden sm:block" /> and turn it into{" "}<span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>revenue</span></>}

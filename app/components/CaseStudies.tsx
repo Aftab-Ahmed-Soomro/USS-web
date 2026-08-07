@@ -204,7 +204,7 @@ export default function CaseStudies({
 
   return (
     <section className="bg-black py-16 lg:py-24 px-6 w-full flex justify-center">
-      <div className="w-full max-w-[1150px] 2xl:max-w-[1440px]">
+      <div className="w-full max-w-[1150px] ">
 
         {/* Mobile View */}
         <div className="flex flex-col lg:hidden w-full">

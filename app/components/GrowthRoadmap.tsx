@@ -32,7 +32,7 @@ export function GrowthRoadmap() {
         }}
       />
 
-      <div className="max-w-[1150px] 2xl:max-w-[1440px] mx-auto relative z-10">
+      <div className="max-w-[1150px]  mx-auto relative z-10">
         <Stagger staggerDelay={0.15}>
           {/* Header Section */}
           <div className="flex flex-col lg:flex-row justify-between gap-8 lg:items-center mb-16 sm:mb-24">

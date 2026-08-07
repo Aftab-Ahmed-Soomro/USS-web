@@ -31,7 +31,7 @@ const relatedProjects = [
 
 function Hero() {
     return (
-        <main className="relative z-10 mx-auto grid max-w-[1150px] 2xl:max-w-[1440px] flex-1 items-center gap-12 px-6 pb-[68px] pt-[58px]  md:grid-cols-[minmax(0,1fr)_431px] md:gap-14  lg:pb-[74px] lg:pt-[79px] xl:grid-cols-[575px_431px] xl:gap-[132px] bg-white">
+        <main className="relative z-10 mx-auto grid max-w-[1150px]  flex-1 items-center gap-12 px-6 pb-[68px] pt-[58px]  md:grid-cols-[minmax(0,1fr)_431px] md:gap-14  lg:pb-[74px] lg:pt-[79px] xl:grid-cols-[575px_431px] xl:gap-[132px] bg-white">
             <section className="max-w-[560px] text-black">
 
                 <h1 className="max-w-[560px] text-[43px] font-bold leading-[1.03] tracking-[-1.7px] sm:text-[54px] lg:text-[58px] text-black">
@@ -69,7 +69,7 @@ function Hero() {
 function RelatedProjects() {
     return (
         <section className="bg-[#080808] px-6 py-[56px] text-white">
-            <div className="mx-auto max-w-[1150px] 2xl:max-w-[1440px]">
+            <div className="mx-auto max-w-[1150px] ">
                 {/* Header */}
                 <div className="flex items-center justify-between gap-6">
                     <h2 className="font-[var(--font-be-vietnam)] text-[28px] sm:text-[32px] md:text-[38px] font-medium lowercase leading-none tracking-[-0.7px]">

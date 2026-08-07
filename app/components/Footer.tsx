@@ -75,7 +75,7 @@ export function Footer({ showGlobal = true }: { showGlobal?: boolean }) {
 
   return (
     <footer className="bg-[#000] text-white pt-10 sm:pt-20 pb-10 px-4 sm:px-6 font-sans">
-      <div className="max-w-[1150px] 2xl:max-w-[1440px] mx-auto">
+      <div className="max-w-[1150px]  mx-auto">
         {/* Top Section: Offices */}
         {showGlobal && (
           <>

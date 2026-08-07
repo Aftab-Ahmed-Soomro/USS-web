@@ -89,7 +89,7 @@ export function EmailVisuals() {
   return (
     <section className="relative z-10 bg-[#fff] py-[50px] sm:py-[72px] text-black lg:py-[92px]">
       <div className="flex w-full flex-col gap-[32px] sm:gap-[44px]">
-        <Stagger staggerDelay={0.15} className="mx-auto w-full px-4 min-[375px]:px-6 max-w-[1150px] 2xl:max-w-[1440px] grid gap-[16px] sm:gap-8 lg:grid-cols-[360px_minmax(0,580px)] lg:items-start lg:justify-between">
+        <Stagger staggerDelay={0.15} className="mx-auto w-full px-4 min-[375px]:px-6 max-w-[1150px]  grid gap-[16px] sm:gap-8 lg:grid-cols-[360px_minmax(0,580px)] lg:items-start lg:justify-between">
           <StaggerItem>
             <h2 className="max-w-[400px] font-[var(--font-be-vietnam)] text-[32px] sm:text-[37px] text-black font-medium leading-[1.02] tracking-[-3%] lg:text-[56px]">
               email design{" "}

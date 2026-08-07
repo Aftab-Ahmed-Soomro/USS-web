@@ -54,7 +54,7 @@ export function WhyWhatsappWorks() {
 
   return (
     <section className="w-full text-white">
-      <div className="mx-auto max-w-[1150px] 2xl:max-w-[1440px] px-4 min-[375px]:px-6">
+      <div className="mx-auto max-w-[1150px]  px-4 min-[375px]:px-6">
         <Stagger staggerDelay={0.15}>
           <StaggerItem>
             <h2 className="text-center mb-[30px] sm:mb-[50px]">

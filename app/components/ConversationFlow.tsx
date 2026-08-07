@@ -52,7 +52,7 @@ const smsSteps = [
 export default function ConversationFlow() {
   return (
     <section className="w-full bg-black py-16 sm:py-20 lg:py-32 px-6 overflow-hidden">
-      <div className="mx-auto max-w-[1150px] 2xl:max-w-[1440px]">
+      <div className="mx-auto max-w-[1150px] ">
 
         {/* Header with Icons (Row layout on both Mobile & Desktop) */}
         <div className="flex flex-row items-center justify-between w-full mb-12 sm:mb-16 md:mb-24 gap-2 sm:gap-6">

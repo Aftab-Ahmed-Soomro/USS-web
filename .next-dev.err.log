@@ -64,11 +64,11 @@ https://react.dev/link/hydration-mismatch
 -                                         bis_skin_checked="1"
                                         >
                                           <div
-                                            className="relative mx-auto min-h-[293px] max-w-[1150px] 2xl:max-w-[1440px] px-6 pt-[50px]"
+                                            className="relative mx-auto min-h-[293px] max-w-[1150px]  px-6 pt-[50px]"
 -                                           bis_skin_checked="1"
                                           >
                                         <div
-                                          className="relative mx-auto max-w-[1150px] 2xl:max-w-[1440px] px-6 py-[40px]  lg:min-h-[225px]"
+                                          className="relative mx-auto max-w-[1150px]  px-6 py-[40px]  lg:min-h-[225px]"
 -                                         bis_skin_checked="1"
                                         >
                                           <p>
@@ -86,7 +86,7 @@ https://react.dev/link/hydration-mismatch
 -                                         bis_skin_checked="1"
                                         >
                                         <div
-                                          className="relative mx-auto grid max-w-[1150px] 2xl:max-w-[1440px] gap-12 md:grid-cols-[424px_m..."
+                                          className="relative mx-auto grid max-w-[1150px]  gap-12 md:grid-cols-[424px_m..."
 -                                         bis_skin_checked="1"
                                         >
                                           <div
@@ -99,7 +99,7 @@ https://react.dev/link/hydration-mismatch
                                           >
                                       <section className="bg-[#08080...">
                                         <div
-                                          className="mx-auto max-w-[1150px] 2xl:max-w-[1440px]"
+                                          className="mx-auto max-w-[1150px] "
 -                                         bis_skin_checked="1"
                                         >
                                           <h2>
@@ -115,7 +115,7 @@ https://react.dev/link/hydration-mismatch
                                             ...
                                       <section className="bg-[#f7f7f...">
                                         <div
-                                          className="mx-auto max-w-[1150px] 2xl:max-w-[1440px]"
+                                          className="mx-auto max-w-[1150px] "
 -                                         bis_skin_checked="1"
                                         >
                                           <div
@@ -175,7 +175,7 @@ https://react.dev/link/hydration-mismatch
                                     <Footer>
                                       <footer className={"relative..."}>
                                         <div
-                                          className="mx-auto flex max-w-[1150px] 2xl:max-w-[1440px] flex-col gap-[82px]"
+                                          className="mx-auto flex max-w-[1150px]  flex-col gap-[82px]"
 -                                         bis_skin_checked="1"
                                         >
                                           <div
@@ -266,7 +266,7 @@ https://react.dev/link/hydration-mismatch
 -                                         bis_skin_checked="1"
                                         >
                                         <div
-                                          className="mx-auto grid max-w-[1150px] 2xl:max-w-[1440px] gap-10 lg:grid-cols-[minmax(0,560px)_..."
+                                          className="mx-auto grid max-w-[1150px]  gap-10 lg:grid-cols-[minmax(0,560px)_..."
 -                                         bis_skin_checked="1"
                                         >
                                           <div
@@ -299,7 +299,7 @@ https://react.dev/link/hydration-mismatch
 -                                         bis_skin_checked="1"
                                         >
                                         <div
-                                          className="relative mx-auto max-w-[1150px] 2xl:max-w-[1440px]"
+                                          className="relative mx-auto max-w-[1150px] "
 -                                         bis_skin_checked="1"
                                         >
                                           <div
@@ -357,7 +357,7 @@ https://react.dev/link/hydration-mismatch
 -                                         bis_skin_checked="1"
                                         >
                                         <div
-                                          className="relative mx-auto grid max-w-[1150px] 2xl:max-w-[1440px] px-6 lg:grid-cols-[minmax(0,..."
+                                          className="relative mx-auto grid max-w-[1150px]  px-6 lg:grid-cols-[minmax(0,..."
 -                                         bis_skin_checked="1"
                                         >
                                           <div
@@ -390,7 +390,7 @@ https://react.dev/link/hydration-mismatch
                                       <section className="relative z...">
                                         <h2>
                                         <div
-                                          className="mx-auto mt-[26px] grid max-w-[1150px] 2xl:max-w-[1440px] grid-cols-1 gap-[20px] sm:g..."
+                                          className="mx-auto mt-[26px] grid max-w-[1150px]  grid-cols-1 gap-[20px] sm:g..."
 -                                         bis_skin_checked="1"
                                         >
                                         <div
@@ -399,13 +399,13 @@ https://react.dev/link/hydration-mismatch
                                         >
                                           <h2>
                                           <div
-                                            className="mx-auto mt-[39px] flex max-w-[1150px] 2xl:max-w-[1440px] flex-wrap items-center ju..."
+                                            className="mx-auto mt-[39px] flex max-w-[1150px]  flex-wrap items-center ju..."
 -                                           bis_skin_checked="1"
                                           >
                                     <Services>
                                       <section id="services" className={"relative..."}>
                                         <div
-                                          className="mx-auto grid max-w-[1150px] 2xl:max-w-[1440px] gap-12 lg:grid-cols-[minmax(0,520px)_..."
+                                          className="mx-auto grid max-w-[1150px]  gap-12 lg:grid-cols-[minmax(0,520px)_..."
 -                                         bis_skin_checked="1"
                                         >
                                           <div
@@ -423,7 +423,7 @@ https://react.dev/link/hydration-mismatch
                                     <EmailVisuals>
                                       <section className="relative z...">
                                         <div
-                                          className="mx-auto flex w-full max-w-[1150px] 2xl:max-w-[1440px] flex-col gap-[44px]"
+                                          className="mx-auto flex w-full max-w-[1150px]  flex-col gap-[44px]"
 -                                         bis_skin_checked="1"
                                         >
                                           <div
@@ -457,7 +457,7 @@ https://react.dev/link/hydration-mismatch
                                     <WorkWithUs>
                                       <section className="bg-[#f5f5f...">
                                         <div
-                                          className="mx-auto grid max-w-[1150px] 2xl:max-w-[1440px] gap-12 lg:grid-cols-[330px_minmax(0,1..."
+                                          className="mx-auto grid max-w-[1150px]  gap-12 lg:grid-cols-[330px_minmax(0,1..."
 -                                         bis_skin_checked="1"
                                         >
                                           <div
@@ -471,7 +471,7 @@ https://react.dev/link/hydration-mismatch
                                     <Team>
                                       <section className="relative z...">
                                         <div
-                                          className="mx-auto flex max-w-[1150px] 2xl:max-w-[1440px] flex-col items-center gap-8 py-[82px]"
+                                          className="mx-auto flex max-w-[1150px]  flex-col items-center gap-8 py-[82px]"
 -                                         bis_skin_checked="1"
                                         >
                                           <h2>
@@ -502,7 +502,7 @@ https://react.dev/link/hydration-mismatch
                                     <Testimonials>
                                       <section className="relative z...">
                                         <div
-                                          className="mx-auto flex w-full max-w-[1150px] 2xl:max-w-[1440px] flex-col items-center"
+                                          className="mx-auto flex w-full max-w-[1150px]  flex-col items-center"
 -                                         bis_skin_checked="1"
                                         >
                                           <div
@@ -575,7 +575,7 @@ https://react.dev/link/hydration-mismatch
                                     <FinalCta>
                                       <section className="bg-black p...">
                                         <div
-                                          className="mx-auto max-w-[1150px] 2xl:max-w-[1440px] text-center"
+                                          className="mx-auto max-w-[1150px]  text-center"
 -                                         bis_skin_checked="1"
                                         >
                                           <p>
@@ -587,7 +587,7 @@ https://react.dev/link/hydration-mismatch
                                     <Footer>
                                       <footer className={"relative..."}>
                                         <div
-                                          className="mx-auto flex max-w-[1150px] 2xl:max-w-[1440px] flex-col gap-[82px]"
+                                          className="mx-auto flex max-w-[1150px]  flex-col gap-[82px]"
 -                                         bis_skin_checked="1"
                                         >
                                           <div
@@ -672,12 +672,12 @@ https://react.dev/link/hydration-mismatch
                                           ...
                                     <section className="bg-black p...">
                                       <div
-                                        className="mx-auto max-w-[1150px] 2xl:max-w-[1440px]"
+                                        className="mx-auto max-w-[1150px] "
 -                                       bis_skin_checked="1"
                                       >
                                     <section className="bg-[#f7f7f...">
                                       <div
-                                        className="mx-auto max-w-[1150px] 2xl:max-w-[1440px]"
+                                        className="mx-auto max-w-[1150px] "
 -                                       bis_skin_checked="1"
                                       >
                                         <div
@@ -852,7 +852,7 @@ https://react.dev/link/hydration-mismatch
                                     <Footer>
                                       <footer className={"relative..."}>
                                         <div
-                                          className="mx-auto flex max-w-[1150px] 2xl:max-w-[1440px] flex-col gap-[82px]"
+                                          className="mx-auto flex max-w-[1150px]  flex-col gap-[82px]"
 -                                         bis_skin_checked="1"
                                         >
                                           <div
@@ -937,12 +937,12 @@ https://react.dev/link/hydration-mismatch
                                           ...
                                     <section className="bg-black p...">
                                       <div
-                                        className="mx-auto max-w-[1150px] 2xl:max-w-[1440px]"
+                                        className="mx-auto max-w-[1150px] "
 -                                       bis_skin_checked="1"
                                       >
                                     <section className="bg-[#f7f7f...">
                                       <div
-                                        className="mx-auto max-w-[1150px] 2xl:max-w-[1440px]"
+                                        className="mx-auto max-w-[1150px] "
 -                                       bis_skin_checked="1"
                                       >
                                         <div
@@ -1117,7 +1117,7 @@ https://react.dev/link/hydration-mismatch
                                     <Footer>
                                       <footer className={"relative..."}>
                                         <div
-                                          className="mx-auto flex max-w-[1150px] 2xl:max-w-[1440px] flex-col gap-[82px]"
+                                          className="mx-auto flex max-w-[1150px]  flex-col gap-[82px]"
 -                                         bis_skin_checked="1"
                                         >
                                           <div

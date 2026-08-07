@@ -76,7 +76,7 @@ function StepImage({ src, alt }: { src: string; alt: string }) {
 export function Approach() {
   return (
     <section className="relative z-10 border-t border-[#060606]/10 bg-white px-6 py-[46px] text-[#060606]  lg:py-[50px]">
-      <div className="mx-auto flex max-w-[1150px] 2xl:max-w-[1440px] flex-col items-start">
+      <div className="mx-auto flex max-w-[1150px]  flex-col items-start">
         <div className="w-full border-b border-[#060606]/10 pb-[26px]">
           <p className="font-[var(--font-be-vietnam)] text-[9px] font-bold uppercase leading-none tracking-[2.4px] text-[#ff5500]">
             Our Approach
