@@ -66,7 +66,7 @@ export function Strategic() {
 
           {/* Supporting copy */}
           <FadeUp delay={0.2}>
-            <p className="mx-auto mt-[20px] sm:mt-[40px] max-w-[500px] text-[15px] sm:text-[18px] font-normal leading-[-1%] px-2 sm:px-0">
+            <p className="mx-auto mt-[20px] sm:mt-[40px] sm:max-w-[500px] max-w-[360px] text-[13px] sm:text-[18px] font-normal leading-[-1%] px-2 sm:px-0">
               Every project starts with understanding your business before we plan, create and deliver.
             </p>
           </FadeUp>
@@ -97,7 +97,7 @@ export function Strategic() {
                 <h3 className="mt-[20px] sm:mt-[33px] text-[20px] min-[375px]:text-[24px] sm:text-[34.6px] font-bold leading-none tracking-[-0.85px]">
                   {step.title}
                 </h3>
-                <p className="mt-[16px] sm:mt-[30px] max-w-[400px] text-[15px] sm:text-[17px] font-normal leading-[26px] text-black/70">
+                <p className="mt-[16px] sm:mt-[30px] max-w-[400px] text-[13px] sm:text-[17px] font-normal leading-[14px] sm:leading-[26px] text-black/70">
                   {step.copy}
                 </p>
               </article>
@@ -160,7 +160,7 @@ export function Strategic() {
               <h3 className="text-[18px] font-bold leading-none tracking-[-0.5px]">
                 {process[activeStep].title}
               </h3>
-              <p className="mt-2.5 text-[13px] leading-[22px] text-black/70">
+              <p className="mt-2.5 text-[13px] sm:leading-[22px] leading-[20px] text-black/70">
                 {process[activeStep].copy}
               </p>
             </motion.div>

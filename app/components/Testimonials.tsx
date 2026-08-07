@@ -147,7 +147,7 @@ export function Testimonials() {
   }, []);
 
   return (
-    <section className="relative z-10 bg-[#0a0a0a] py-[58px] text-white lg:py-[80px]">
+    <section className="relative z-10 bg-[#0a0a0a] py-[30px] text-white lg:py-[80px]">
       <div className="mx-auto flex w-full max-w-[1150px] 2xl:max-w-[1440px] flex-col items-center px-6">
 
         {/* Eyebrow pill — drops down */}

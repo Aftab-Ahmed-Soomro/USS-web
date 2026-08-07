@@ -245,7 +245,7 @@ export function SixStepSystem({ heading, data = defaultSteps, cardStyle = false 
                             ))}
                           </div>
                         )}
-                        <p className="font-light text-[#EAEAEA] mb-4 text-[13.5px] leading-[1.6]">
+                        <p className="font-light text-[#EAEAEA] mb-4 sm:text-[13px] leading-[1.6]">
                           {step.description}
                         </p>
                         {step.details && step.details.length > 0 && (
@@ -259,7 +259,7 @@ export function SixStepSystem({ heading, data = defaultSteps, cardStyle = false 
                                   </h4>
                                 </div>
                                 {detail.desc && (
-                                  <p className="font-normal text-[#A0A0A0] text-[12px] leading-[1.45] mt-1 pl-3.5">
+                                  <p className="font-normal text-[#A0A0A0] text-[13px] leading-[1.45] mt-1 pl-3.5">
                                     {detail.desc}
                                   </p>
                                 )}
@@ -282,7 +282,7 @@ export function SixStepSystem({ heading, data = defaultSteps, cardStyle = false 
                             ))}
                           </div>
                         )}
-                        <p className="font-normal text-[#EAEAEA] mb-4 sm:mb-10 text-[14px] leading-[22.75px]">
+                        <p className="font-normal text-[#EAEAEA] mb-4 sm:mb-10 text-[13px] leading-[19px]">
                           {step.description}
                         </p>
                         {step.details && step.details.length > 0 && (
@@ -293,7 +293,7 @@ export function SixStepSystem({ heading, data = defaultSteps, cardStyle = false 
                                   {detail.title}
                                 </h4>
                                 {detail.desc && (
-                                  <p className="font-normal text-[#A0A0A0] text-[12px] leading-[18px]">
+                                  <p className="font-normal text-[#A0A0A0] text-[13px] leading-[18px]">
                                     {detail.desc}
                                   </p>
                                 )}
@@ -323,7 +323,7 @@ export function SixStepSystem({ heading, data = defaultSteps, cardStyle = false 
                 <h3 className="text-white font-semibold text-[22px] sm:text-[24px] leading-[1.3] mb-3">
                   {activeStep?.title}
                 </h3>
-                <p className="font-light text-[#D4D4D4] text-[14px] sm:text-[15px] leading-[1.65] mb-6">
+                <p className="font-light text-[#D4D4D4] text-[13px] sm:text-[15px] leading-[1.65] mb-6">
                   {activeStep?.description}
                 </p>
                 {activeStep?.pills && activeStep.pills.length > 0 && (
@@ -352,7 +352,7 @@ export function SixStepSystem({ heading, data = defaultSteps, cardStyle = false 
                           </h4>
                         </div>
                         {detail.desc && (
-                          <p className="font-normal text-[#A0A0A0] text-[12.5px] leading-[1.5] mt-1.5 pl-4">
+                          <p className="font-normal text-[#A0A0A0] text-[13px] leading-[1.5] mt-1.5 pl-4">
                             {detail.desc}
                           </p>
                         )}
@@ -388,7 +388,7 @@ export function SixStepSystem({ heading, data = defaultSteps, cardStyle = false 
                           {detail.title}
                         </h4>
                         {detail.desc && (
-                          <p className="font-normal text-[#A0A0A0] text-[12px] leading-[18px]">
+                          <p className="font-normal text-[#A0A0A0] text-[13px] leading-[18px]">
                             {detail.desc}
                           </p>
                         )}

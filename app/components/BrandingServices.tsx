@@ -100,7 +100,7 @@ export function BrandingServices() {
         <Stagger staggerDelay={0.12} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 w-full pt-10 sm:pt-14 pb-12 sm:pb-20">
           {bottomCards.map((card, index) => (
             <StaggerItem key={card.id}>
-              <div className={`flex flex-col group ${index < 3 ? "mb-8 sm:mb-12 lg:mb-16" : ""}`}>
+              <div className={`flex flex-col group ${index < 5 ? "mb-8" : ""} ${index < 4 ? "md:mb-12" : "md:mb-0"} ${index < 3 ? "lg:mb-16" : "lg:mb-0"}`}>
                 <div className="w-full aspect-[16/10] rounded-none overflow-hidden bg-[#111]">
                   <img
                     src={card.image}

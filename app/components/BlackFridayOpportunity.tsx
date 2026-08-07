@@ -35,16 +35,17 @@ const imageConfigs = [
   {
     src: "/assets/IMG_2830.PNG",
     position: "50% 50%",
-    mobilePosition: "50% 50%",
+    mobilePosition: "50% 40%",
     scale: 1.2,
-    mobileScale: 1,
+    mobileScale: 0.9,
     fit: "contain"
   },
   {
     src: "/assets/black-friday/6.jpg",
     position: "40% 20%",
-    mobilePosition: "center",
-    scale: 1.4
+    mobilePosition: "65% 20%",
+    scale: 1.4,
+    mobileScale: 1.0
   },
 ];
 

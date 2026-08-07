@@ -59,34 +59,56 @@ const strategyAccordionData = [
     description: "As your business grows, so does the strategy. We introduce new channels, optimise budgets and expand activity to support long-term, sustainable growth.",
   }
 ];
-const rightSidePlaceholder = {
-  pills: ["Concept", "Positioning", "Audience Fit"],
-  description: "We start by identifying the right product for your niche, audience size and Q4 timing — then build the commercial architecture around it.",
-  details: [
-    {
-      title: "Product Concept & Validation",
-      desc: "The right product for your niche, audience size and Black Friday timing."
-    },
-    {
-      title: "Brand & Creative Direction",
-      desc: "Product looks and feels authentic to your personal brand."
-    },
-    {
-      title: "Launch-ready Assets",
-      desc: "Imagery, copy and sales assets ready ahead of go-live."
-    },
-    {
-      title: "Pricing & Margin Structure",
-      desc: "A commercial model that maximises revenue and stays compelling."
-    }
-  ]
-};
 
 const touchpointStepsData = [
-  { id: "01", title: "Business Discovery", ...rightSidePlaceholder },
-  { id: "02", title: "Audience Research", ...rightSidePlaceholder },
-  { id: "03", title: "Competitor Analysis", ...rightSidePlaceholder },
-  { id: "04", title: "Brand Direction", ...rightSidePlaceholder }
+  {
+    id: "01",
+    title: "Business Discovery",
+    pills: ["Discovery", "Strategy", "Workshop"],
+    description: "Before any creative work begins, we take the time to understand your business, your goals and where you want the brand to go.",
+    details: [
+      { title: "Business Goals", desc: "" },
+      { title: "Audience", desc: "" },
+      { title: "Competitors", desc: "" },
+      { title: "Brand Vision", desc: "" }
+    ]
+  },
+  {
+    id: "02",
+    title: "Audience Research",
+    pills: ["Research", "Audience", "Insights"],
+    description: "Understanding who you're speaking to helps shape every decision, from your messaging to your visual identity.",
+    details: [
+      { title: "Customer Personas", desc: "" },
+      { title: "User Behaviour", desc: "" },
+      { title: "Buying Journey", desc: "" },
+      { title: "Customer Insights", desc: "" }
+    ]
+  },
+  {
+    id: "03",
+    title: "Competitor Analysis",
+    pills: ["Market", "Positioning", "Research"],
+    description: "We review your market to understand what's working, what's missing and where your brand can stand apart.",
+    details: [
+      { title: "Competitor Review", desc: "" },
+      { title: "Market Position", desc: "" },
+      { title: "Industry Trends", desc: "" },
+      { title: "Opportunities", desc: "" }
+    ]
+  },
+  {
+    id: "04",
+    title: "Brand Direction",
+    pills: ["Identity", "Creative", "Strategy"],
+    description: "Using everything we've learned, we define the creative direction that will guide your brand across every touchpoint.",
+    details: [
+      { title: "Creative Direction", desc: "" },
+      { title: "Visual Identity", desc: "" },
+      { title: "Brand Personality", desc: "" },
+      { title: "Design Guidelines", desc: "" }
+    ]
+  }
 ];
 
 const socialServicesData = [
@@ -310,9 +332,9 @@ function EmailOverview() {
             </p>
           </StaggerItem>
 
-          <StaggerItem>
+          <StaggerItem className="text-center sm:text-left">
             <span
-              className="text-[36px] font-normal lowercase italic tracking-[-1.5px] text-[#ff5500] sm:text-[72px] sm:leading-[70px]"
+              className="block text-[36px] font-normal lowercase italic tracking-[-1.5px] text-[#ff5500] sm:text-[72px] sm:leading-[70px]"
               style={{ fontFamily: "'Times New Roman', Times, serif" }}
             >
               Our Approach

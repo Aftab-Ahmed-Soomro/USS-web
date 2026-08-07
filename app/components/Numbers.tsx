@@ -224,7 +224,7 @@ export function Numbers({
                         <p className="text-[15px] min-[375px]:text-[18px] font-bold leading-none tracking-[-1px] sm:text-[36px] lg:text-[46px]">
                           <AnimatedStat value={stat.value} />
                         </p>
-                        <p className="mt-[3px] sm:mt-[8px] text-[7.5px] min-[375px]:text-[8.5px] sm:text-[12px] lg:text-[13px] font-light leading-[1.15] sm:leading-[1.3] text-white/80 sm:text-white whitespace-normal break-words max-w-[68px] min-[375px]:max-w-[82px] sm:max-w-none">
+                        <p className="mt-[3px] sm:mt-[8px] text-[7.5px] min-[375px]:text-[8.5px] sm:text-[12px] lg:text-[13px] font-light leading-[1.15] sm:leading-[1.3] text-white/90 whitespace-normal break-words max-w-[68px] min-[375px]:max-w-[82px] sm:max-w-none">
                           {renderLabel(stat.label)}
                         </p>
                       </div>
@@ -245,7 +245,7 @@ export function Numbers({
                       <p className="text-[16px] min-[375px]:text-[20px] font-bold leading-none tracking-[-1px] sm:text-[50px]">
                         <AnimatedStat value={stat.value} />
                       </p>
-                      <p className="mt-[4px] sm:mt-[8px] text-[7px] min-[375px]:text-[8px] sm:text-[14px] font-light leading-tight sm:leading-none text-white/70 sm:text-white whitespace-normal break-words max-w-[80px] sm:max-w-none tracking-tight sm:tracking-normal">
+                      <p className="mt-[4px] sm:mt-[8px] text-[7px] min-[375px]:text-[8px] sm:text-[14px] font-light leading-tight sm:leading-none text-white/90 whitespace-normal break-words max-w-[80px] sm:max-w-none tracking-tight sm:tracking-normal">
                         {renderLabel(stat.label)}
                       </p>
                     </div>
