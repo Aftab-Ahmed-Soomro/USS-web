@@ -215,7 +215,7 @@ export default function ProjectsPage() {
           {/* Subheading — slides in from right */}
           <FadeRight delay={0.3}>
             <p className="mt-[16px] max-w-[800px] mx-auto sm:mt-[30px] font-[var(--font-be-vietnam)] text-[12px] font-normal leading-[24px] text-[#F5F5F5] sm:text-[16.5px]">
-              Explore our work across the UK, US and Middle East
+              Explore our work across the US, UAE and UK
             </p>
           </FadeRight>
 

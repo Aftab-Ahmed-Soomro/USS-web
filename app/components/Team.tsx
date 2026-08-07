@@ -46,15 +46,15 @@ export function Team() {
 
   return (
     <section className="relative z-10 bg-[#0a0a0a]  text-white overflow-hidden">
-      <div className="mx-auto flex max-w-[1150px]  px-4 min-[375px]:px-6 flex-col items-center gap-[16px] sm:gap-8 pt-[0px] sm:pt-[82px]">
-        <h2 className="w-full px-0 font-[var(--font-be-vietnam)] text-[32px] sm:text-[56px] font-medium leading-[1.12] tracking-[-3px] sm:leading-[68px]">
-          USS{" "}
-          <span className="font-serif text-[42px] sm:text-[72px] font-extralight timesFontFamily italic tracking-[-3px]">
-            team
+      <div className="mx-auto flex max-w-[1150px]  px-4 min-[375px]:px-6 flex-col items-center gap-[8px] sm:gap-4 pt-[20px] sm:pt-[82px]">
+        <h2 className="w-full px-0 font-[var(--font-be-vietnam)] text-[28px] sm:text-[56px] font-medium leading-[1.12] lowercase tracking-[-3px] sm:leading-[68px]">
+          USS{"  "}
+          <span className="font-serif text-[38px] sm:text-[72px] font-extralight timesFontFamily italic tracking-[-3px]">
+            {" "}team
           </span>
         </h2>
 
-        <div className="relative w-full mt-[16px] sm:mt-6">
+        <div className="relative w-full">
           {/* Accordion Container */}
           <div className="flex w-full h-[380px] sm:h-[500px] lg:h-[600px] flex-row gap-0 overflow-hidden">
             {teamMembers.map((member, idx) => (

@@ -35,7 +35,7 @@ export function LevelsOfFunnel() {
   ];
 
   return (
-    <section className="relative w-full bg-black py-[10px] sm:pt-32 px-4 min-[375px]:px-6 overflow-hidden">
+    <section className="relative w-full bg-black py-[10px] sm:pt-15 sm:pb-15 px-4 min-[375px]:px-6 overflow-hidden">
       <div className="max-w-[1150px]  mx-auto relative z-10">
         <Stagger staggerDelay={0.15}>
           <div className="flex flex-col lg:grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">

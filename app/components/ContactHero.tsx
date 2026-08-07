@@ -24,7 +24,7 @@ export default function ContactHero() {
     {
       icon: MapPin,
       label: "Locations",
-      value: "United States · United Kingdom · U.A.E",
+      value: "US | UAE | UK ",
       href: undefined,
     },
   ];

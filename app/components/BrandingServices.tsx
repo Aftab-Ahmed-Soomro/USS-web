@@ -45,10 +45,10 @@ const bottomCards = [
 
 export function BrandingServices() {
   return (
-    <section className="bg-black pt-10 sm:pt-16 lg:pt-24 px-4 sm:px-6 w-full flex flex-col items-center">
+    <section className="bg-black pt-4 px-4 sm:px-6 w-full flex flex-col items-center">
       <div className="w-full max-w-[1150px] ">
         {/* Top Header */}
-        <div className="flex flex-col gap-3 sm:gap-4 border-b border-[#333333] pt-4 sm:pt-8 pb-4 sm:pb-12">
+        <div className="flex flex-col gap-3 sm:gap-4 border-b border-[#333333] pt-4 sm:pt-8 pb-4 sm:pb-8">
           <h4 className="text-[#FF5500] uppercase text-[12px] leading-[1] tracking-[2.08px] font-semibold">
             Our Services
           </h4>
@@ -66,10 +66,10 @@ export function BrandingServices() {
         </div>
 
         {/* Middle Hero Section */}
-        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between w-full border-b border-[#333333] pt-3 sm:pt-10 pb-8 sm:pb-12 gap-8 lg:gap-12">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between w-full border-b border-[#333333] pt-3 sm:pt-8 pb-8 gap-8 lg:gap-12">
           {/* Left Block: Title */}
           <div className="flex-1">
-            <h1 className="text-white font-light text-[32px] sm:text-[90px] leading-[1] tracking-[-1.73px]">
+            <h1 className="text-white font-light text-[32px] sm:text-[60px] leading-[1] tracking-[-1.73px]">
               Brand Identity
             </h1>
           </div>

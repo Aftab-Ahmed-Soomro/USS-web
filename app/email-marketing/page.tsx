@@ -73,7 +73,7 @@ const systemItems = [
         Optimisation
       </>
     ),
-    copy: "Continuous reporting and optimisation to improve campaign performance.",
+    copy: "Continuous reporting and optimisation to improve performance.",
   },
 ];
 
@@ -183,8 +183,8 @@ function EmailOverview() {
     <section className="relative overflow-hidden bg-black">
       <div className="relative mx-auto grid max-w-[1150px]  px-4 min-[375px]:px-6 py-[50px] sm:py-16 lg:grid-cols-[minmax(0,680px)_minmax(320px,430px)] lg:justify-between lg:py-20">
         {/* Image mockup */}
-        <FadeRight duration={0.8} delay={0.2} className="order-2 -mx-1 pt-10 sm:mx-0 lg:order-none lg:col-start-2 lg:row-start-1 lg:flex lg:items-start lg:pt-0">
-          <div className="relative mx-auto aspect-[463/842] w-full max-w-[260px] min-[375px]:max-w-[300px] sm:max-w-[400px] overflow-hidden bg-white shadow-[0_24px_55px_rgba(0,0,0,0.35)]">
+        <FadeRight duration={0.8} delay={0.2} className="order-2 -mx-1 pt-10 sm:mx-0 lg:order-none lg:col-start-2 lg:row-start-1 lg:flex lg:items-start lg:justify-end lg:pt-0">
+          <div className="relative mx-auto lg:ml-auto lg:mr-0 aspect-[463/842] w-full max-w-[260px] min-[375px]:max-w-[300px] sm:max-w-[400px] overflow-hidden bg-white shadow-[0_24px_55px_rgba(0,0,0,0.35)] translate-x-2 sm:translate-x-4 lg:translate-x-6">
             <Image
               src="/assets/email-market.png"
               alt="Email marketing campaign designs"
@@ -231,7 +231,7 @@ function EmailOverview() {
                   <h3 className="mt-[10px] sm:mt-[14px] max-w-[350px] text-[18px] font-semibold leading-[1.3] tracking-[-0.6px] sm:text-[24px] sm:leading-8">
                     {item.title}
                   </h3>
-                  <p className="mt-[8px] sm:mt-[16px] max-w-[95%] sm:max-w-[280px] text-[14px] font-normal leading-[1.6] text-white/90 sm:text-[16px] sm:leading-7">
+                  <p className="mt-[8px] sm:mt-[16px] max-w-[95%] sm:max-w-[300px] text-[14px] font-normal leading-[1.6] text-white/90 sm:text-[16px] sm:leading-7">
                     {item.copy}
                   </p>
                 </article>

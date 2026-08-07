@@ -289,7 +289,7 @@ export function PowerOf360() {
 
         {/* ── RIGHT: thumbnails + controls ── */}
         <div
-          className="max-md:!static max-md:!transform-none max-md:!w-full max-md:!mt-4 md:absolute md:top-1/2 md:-translate-y-1/2 px-6 md:left-[480px] lg:left-[500px]"
+          className="max-md:!static max-md:!transform-none max-md:!w-full max-md:!mt-4 md:absolute md:top-1/2 md:-translate-y-1/2 px-6 md:px-0 md:left-[500px] lg:left-[560px] xl:left-[580px]"
           style={{
             display: "flex",
             flexDirection: "column",

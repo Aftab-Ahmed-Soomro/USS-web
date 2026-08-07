@@ -183,7 +183,7 @@ export function Strategic() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center border-t border-black/[0.06] px-4 min-[375px]:px-8 py-5 min-[375px]:py-7 md:border-l md:border-t-0 md:px-[4px] lg:px-[24px]">
+            <div className="flex items-center border-t border-black/[0.06] px-16 py-5 min-[375px]:py-7 md:border-l md:border-t-0 md:px-[4px] lg:px-[24px]">
               <Link
                 href="/contact"
                 className="inline-flex h-10 min-[375px]:h-11 w-full max-w-[300px] items-center justify-center rounded-full bg-[#ff5500] px-3 min-[375px]:px-4 sm:px-6 text-[10px] sm:text-[11px] md:text-[12px] font-semibold uppercase tracking-[1.5px] sm:tracking-[2px] text-white whitespace-nowrap transition hover:bg-[#ff6b1f]"

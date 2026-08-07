@@ -167,7 +167,7 @@ const systemItems = [
         Optimisation
       </>
     ),
-    copy: "Continuous reporting and optimisation to improve campaign performance.",
+    copy: "Continuous reporting and optimisation to improve performance.",
   },
 ];
 
