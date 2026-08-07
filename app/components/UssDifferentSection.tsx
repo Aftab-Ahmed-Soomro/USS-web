@@ -33,63 +33,37 @@ const cards = [
   }
 ];
 
-function SequentialVideoPlayer({ videos, isActive }: { videos: string[]; isActive?: boolean }) {
+function SequentialVideoPlayer({ videos }: { videos: string[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsTransitioning(true);
-      setTimeout(() => {
-        setCurrentIndex((prev) => (prev + 1) % videos.length);
-        setIsTransitioning(false);
-      }, 400);
-    }, 15000);
+      setCurrentIndex((prev) => (prev + 1) % videos.length);
+    }, 20000);
 
     return () => clearTimeout(timer);
   }, [currentIndex, videos.length]);
 
   return (
     <div className="relative w-full h-full overflow-hidden">
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="sync">
         <motion.video
           key={videos[currentIndex]}
           src={videos[currentIndex]}
           autoPlay
           muted
+          loop
           playsInline
-          onEnded={() => {
-            setIsTransitioning(true);
-            setTimeout(() => {
-              setCurrentIndex((prev) => (prev + 1) % videos.length);
-              setIsTransitioning(false);
-            }, 400);
-          }}
-          initial={{ opacity: 0, scale: 1.08 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.95 }}
-          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0, position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
           className="w-full h-full object-cover rounded-xl"
         />
       </AnimatePresence>
 
       {/* Cinematic bottom gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-xl pointer-events-none" />
-
-      {/* Video progress dots */}
-      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
-        {videos.map((_, i) => (
-          <motion.div
-            key={i}
-            animate={{
-              width: i === currentIndex ? 16 : 4,
-              backgroundColor: i === currentIndex ? "#ff5500" : "rgba(255,255,255,0.4)",
-            }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="h-[3px] rounded-full"
-          />
-        ))}
-      </div>
     </div>
   );
 }

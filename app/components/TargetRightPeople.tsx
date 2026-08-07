@@ -174,7 +174,7 @@ export default function TargetRightPeople({
   const positions = getPositions(displayItems.length);
 
   return (
-    <section className="relative w-full overflow-hidden bg-black py-[60px] sm:pt-20 sm:pb-30 px-6">
+    <section className="relative w-full overflow-hidden bg-black py-[20px] sm:pt-20 sm:pb-30 px-6">
       <style>{`
         .no-scrollbar::-webkit-scrollbar {
           display: none;
@@ -200,10 +200,10 @@ export default function TargetRightPeople({
         ) : (
           <Stagger staggerDelay={0.12}>
             <StaggerItem>
-              <h2 className="lowercase text-center text-white font-[var(--font-be-vietnam)] font-medium text-[36px] sm:text-[56px] leading-[1.2] sm:leading-[80px] tracking-[-1.5px] sm:tracking-[-3px]">
+              <h2 className="lowercase text-center text-white font-[var(--font-be-vietnam)] font-medium text-[32px] sm:text-[56px] leading-[1.2] sm:leading-[80px] tracking-[-1.5px] sm:tracking-[-3px]">
                 target the{" "}
                 <span
-                  className="italic font-normal text-[44px] sm:text-[72px] leading-[1.2] sm:leading-[80px] tracking-[-1.5px] sm:tracking-[-3px] text-[#ff5500]"
+                  className="italic font-normal text-[42px] sm:text-[72px] leading-[1.2] sm:leading-[80px] tracking-[-1.5px] sm:tracking-[-3px] text-[#ff5500]"
                   style={{
                     fontFamily: '"Times New Roman", Times, serif',
                   }}

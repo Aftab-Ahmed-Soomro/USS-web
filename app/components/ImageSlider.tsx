@@ -4,11 +4,12 @@ import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 const IMAGES = [
-  "/assets/about-slider-images/1.jpeg",
-  "/assets/about-slider-images/5.jpeg",
-  "/assets/about-slider-images/4.png",
-  "/assets/about-slider-images/2.jpeg",
-  "/assets/about-slider-images/3.jpeg",
+  { src: "/assets/about-slider-images/1.jpeg", objectPos: "object-center" },
+  { src: "/assets/about-slider-images/5.jpeg", objectPos: "object-center" },
+  { src: "/assets/about-slider-images/4.png", objectPos: "max-lg:object-bottom lg:object-center" },
+  { src: "/assets/about-slider-images/2.jpeg",
+  objectPos: "object-center" },
+  { src: "/assets/about-slider-images/3.jpeg", objectPos: "object-center" },
 ];
 
 const AUTOPLAY_INTERVAL = 4000;
@@ -47,17 +48,17 @@ export default function ImageSlider() {
   return (
     <div className="relative w-full mx-auto aspect-[700/750] h-[380px] min-[375px]:h-[450px] sm:h-[746px] max-w-[558px] lg:max-w-[540px] group">
       {/* Crossfade stack */}
-      {IMAGES.map((src, index) => (
+      {IMAGES.map((img, index) => (
         <div
-          key={src}
+          key={img.src}
           className="absolute inset-0 transition-opacity duration-700 ease-in-out"
           style={{ opacity: index === activeIndex ? 1 : 0 }}
         >
           <Image
-            src={src}
+            src={img.src}
             alt={`USS team collaborating ${index + 1}`}
             fill
-            className="object-cover object-center"
+            className={`object-cover ${img.objectPos}`}
             priority={index === 0}
             // sizes="(min-width: 1024px) 39vw, 100vw"
           />

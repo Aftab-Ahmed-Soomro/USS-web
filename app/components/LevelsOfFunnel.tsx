@@ -299,7 +299,7 @@ export function LevelsOfFunnel() {
                         {/* Collapsible Text Content */}
                         {isActive && (
                           <div className="px-4 pb-4 pt-1 border-t border-white/5 animate-fadeIn">
-                            <p className="text-neutral-300 text-[13px] leading-[1.5]">
+                            <p className="text-neutral-300 text-[12px] leading-[1.5]">
                               {lvl.desc}
                             </p>
                           </div>

@@ -126,7 +126,7 @@ const systemItems = [
     number: "02",
     title: (
       <>
-        Campaign <br />
+        Campaign <br className="hidden sm:block" />
         Planning
       </>
     ),
@@ -141,7 +141,7 @@ const systemItems = [
     number: "04",
     title: (
       <>
-        Reporting and <br />
+        Reporting and <br className="hidden sm:block" />
         Optimisation
       </>
     ),
@@ -441,7 +441,7 @@ function EmailStrategy() {
       title={
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
-            <h2 className="lowercase text-center text-white font-[var(--font-be-vietnam)] font-medium text-[36px] sm:text-[56px] leading-[0.9] sm:leading-[50px] tracking-[-1.5px] sm:tracking-[-3px]">
+            <h2 className="lowercase text-center text-white font-[var(--font-be-vietnam)] font-medium text-[32px] sm:text-[56px] leading-[0.9] sm:leading-[50px] tracking-[-1.5px] sm:tracking-[-3px]">
               every brand has its <br className="hidden sm:block" />
               own{" "}
               <span
@@ -1010,7 +1010,8 @@ export default function New360WithForm() {
           },
         ]}
       />
-      <PlatformsWeWorkWith
+      <div className="-mb-10 sm:-mb-0">
+        <PlatformsWeWorkWith
         heading={
           <h2
             className="text-white mx-auto max-w-[1150px] 2xl:max-w-[1440px] mb-10 tracking-[-1.5px] text-center sm:text-left"
@@ -1051,6 +1052,7 @@ export default function New360WithForm() {
           },
         ]}
       />
+      </div>
       <RevenueMethod
         heading={<>how we capture demand <br className="hidden sm:block" /> and turn it into{" "}<span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>revenue</span></>}
         cards={[
@@ -1146,7 +1148,7 @@ export default function New360WithForm() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-50px" }}
-        className="relative z-10 w-full flex flex-col justify-center items-center pt-16 sm:pt-24 bg-black gap-6 sm:gap-8 -mb-15">
+        className="relative z-10 w-full flex flex-col justify-center items-center pt-16 sm:pt-24 bg-black gap-6 sm:gap-8 -mb-10">
 
         <h2 id="social-media" className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
           social{" "}
@@ -1205,7 +1207,7 @@ export default function New360WithForm() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-50px" }}
-        className="relative z-10 w-full flex flex-col justify-center items-center bg-black gap-6 sm:gap-8 -mt-15 sm:-mt-10">
+        className="relative z-10 w-full flex flex-col justify-center items-center bg-black gap-6 sm:gap-8 -mt-20 sm:-mt-10">
         <a
           href="#services-grid"
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'creative' }))}
@@ -1223,7 +1225,7 @@ export default function New360WithForm() {
         className="relative z-10 w-full flex flex-col justify-center items-center pt-12 sm:pt-24 sm:pb-10 bg-black gap-6 sm:gap-8 px-6">
         <h2 id="web-design-development" className="font-[var(--font-be-vietnam)] text-[28px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px] text-center sm:text-start">
           web design{" "}
-          <span className="font-[var(--font-cormorant)] text-[37px] sm:text-[72px] font-normal italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
+          <span className="font-[var(--font-cormorant)] text-[37px] sm:text-[72px] font-normal text-[#ff5500] italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
             & development
           </span>
         </h2>

@@ -54,7 +54,7 @@ const systemItems = [
     number: "02",
     title: (
       <>
-        Campaign <br />
+        Campaign <br className="hidden sm:block" />
         Planning
       </>
     ),
@@ -69,7 +69,7 @@ const systemItems = [
     number: "04",
     title: (
       <>
-        Reporting and <br />
+        Reporting and <br className="hidden sm:block" />
         Optimisation
       </>
     ),
@@ -298,7 +298,7 @@ function EmailStrategy() {
       title={
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
-            <h2 className="lowercase text-center text-white font-[var(--font-be-vietnam)] font-medium text-[36px] sm:text-[56px] leading-[0.9] sm:leading-[50px] tracking-[-1.5px] sm:tracking-[-3px]">
+            <h2 className="lowercase text-center text-white font-[var(--font-be-vietnam)] font-medium text-[32px] sm:text-[56px] leading-[0.9] sm:leading-[50px] tracking-[-1.5px] sm:tracking-[-3px]">
               every brand has its <br className="hidden sm:block" />
               own{" "}
               <span

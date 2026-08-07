@@ -70,7 +70,7 @@ export default function AboutPage() {
             <div className="flex flex-col w-full">
 
               {/* Bio + Map row */}
-              <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 lg:gap-14 mb-6">
+              <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 lg:gap-14 sm:mb-6 -mb-6 sm:-mb-0">
 
                 {/* Bio text — rises up */}
                 <FadeUp delay={0.3}>
@@ -136,7 +136,9 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <Numbers stats={stats} />
+        <div className="-mt-16 sm:-mt-0">
+          <Numbers stats={stats} />
+        </div>
         <UssDifferentSection />
         <Team />
       </main>

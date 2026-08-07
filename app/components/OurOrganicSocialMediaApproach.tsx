@@ -9,12 +9,12 @@ const socialVisuals = Array.from({ length: 13 }, (_, i) => ({
 
 export default function OurOrganicSocialMediaApproach() {
   return (
-    <section className="bg-white py-[48px] min-[390px]:py-[58px] sm:py-20">
+    <section className="bg-white py-[34px] sm:py-20">
       <Stagger staggerDelay={0.15}>
-        <div className="max-w-6xl mx-auto text-center mb-8 min-[390px]:mb-10 sm:mb-12 px-4 sm:px-0">
+        <div className="max-w-6xl mx-auto text-center mb-8 sm:mb-12 px-4 sm:px-0">
           <StaggerItem>
             <p
-              className="uppercase mb-4 font-medium text-[14px] leading-[16px] tracking-[-1.2px] text-[#ff5500]"
+              className="uppercase mb-2 font-medium text-[14px] leading-[16px] tracking-[-1.2px] text-[#ff5500]"
             >
               Our Work
             </p>

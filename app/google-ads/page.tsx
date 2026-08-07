@@ -435,7 +435,8 @@ export default function GoogleAdsPage() {
           ]}
         />
       </div>
-      <PlatformsWeWorkWith
+      <div className="-mb-10 sm:-mb-0">
+        <PlatformsWeWorkWith
         heading={
           <h2
             className="text-white mx-auto max-w-[1150px] 2xl:max-w-[1440px] mb-10 tracking-[-1.5px] text-center sm:text-left"
@@ -476,6 +477,7 @@ export default function GoogleAdsPage() {
           },
         ]}
       />
+      </div>
       <RevenueMethod
         heading={<>how we capture demand <br className="hidden sm:block" /> and turn it into{" "}<span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>revenue</span></>}
         cards={[
