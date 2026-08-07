@@ -6,43 +6,52 @@ import { motion, useInView, useAnimation, AnimatePresence } from "framer-motion"
 const cards = [
   {
     videos: [
-      "https://unitedstrategicsolutions.com/assets/360_home/GALA BEHIND THE SCENE EDIT.webm",
-      "https://unitedstrategicsolutions.com/assets/360_home/Agency 8 Event.webm",
+      "https://unitedstrategicsolutions.com/assets/360_home/GALA BEHIND THE SCENE EDIT.webm", // done
+      "https://unitedstrategicsolutions.com/assets/360_home/Agency 8 Event.webm", // done
       // "https://unitedstrategicsolutions.com/assets/360_home/USS-x-WWT-Gala.webm"
-      "https://unitedstrategicsolutions.com/assets/360_home/3.webm",
-      "https://unitedstrategicsolutions.com/assets/360_home/Interior Design Process for Vision Tower.mp4",
+      "https://unitedstrategicsolutions.com/assets/360_home/3.webm", // done
+      "https://unitedstrategicsolutions.com/assets/360_home/Interior Design Process for Vision Tower.mp4", // done
     ],
     alt: "LEFT",
   },
   {
     videos: [
-      "https://unitedstrategicsolutions.com/assets/360_home/Hot seat 1 updated w_captions.webm",
-      "https://unitedstrategicsolutions.com/assets/360_home/Whats-new.webm",
-      "https://unitedstrategicsolutions.com/assets/360_home/Shortened version.mp4",
-      "https://unitedstrategicsolutions.com/assets/360_home/USS-narrator-updated.webm",
+      "https://unitedstrategicsolutions.com/assets/360_home/Hot seat 1 updated w_captions.webm", // done
+      "https://unitedstrategicsolutions.com/assets/360_home/Whats-new.webm", // done
+      "https://unitedstrategicsolutions.com/assets/360_home/Shortened version.mp4", // done
+      "https://unitedstrategicsolutions.com/assets/360_home/USS-narrator-updated.webm", // done
     ],
     alt: "MIDDLE",
   },
   {
     videos: [
-      "https://unitedstrategicsolutions.com/assets/360_home/Cinnamood BTS shoot.webm",
-      "https://unitedstrategicsolutions.com/assets/360_home/Idea 8 - BTS v2.webm",
-      "https://unitedstrategicsolutions.com/assets/360_home/DIRECTION 3.webm"
+      "https://unitedstrategicsolutions.com/assets/360_home/Cinnamood BTS shoot.webm", // done
+      "https://unitedstrategicsolutions.com/assets/360_home/Idea 8 - BTS v2.webm", // done
+      "https://unitedstrategicsolutions.com/assets/360_home/DIRECTION 3.webm" // done
     ],
     alt: "RIGHT",
   }
 ];
 
+const customDurations: Record<string, number> = {
+  "https://unitedstrategicsolutions.com/assets/360_home/Whats-new.webm": 9000,
+  "https://unitedstrategicsolutions.com/assets/360_home/Idea 8 - BTS v2.webm": 12000,
+  "https://unitedstrategicsolutions.com/assets/360_home/DIRECTION 3.webm": 13000,
+};
+
 function SequentialVideoPlayer({ videos }: { videos: string[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
+    const currentVideo = videos[currentIndex];
+    const duration = customDurations[currentVideo] ?? 19000;
+
     const timer = setTimeout(() => {
       setCurrentIndex((prev) => (prev + 1) % videos.length);
-    }, 20000);
+    }, duration);
 
     return () => clearTimeout(timer);
-  }, [currentIndex, videos.length]);
+  }, [currentIndex, videos]);
 
   return (
     <div className="relative w-full h-full overflow-hidden">

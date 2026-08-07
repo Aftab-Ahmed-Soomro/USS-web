@@ -4,7 +4,7 @@ import ScaleIn from "./Scalein";
 
 export default function EmailMarketingQuote({first, second, third}: {first: string, second: string, third: string}) {
   return (
-    <section className="bg-black w-full py-[10px] sm:py-20 px-4 min-[375px]:px-6 flex flex-col items-center justify-center text-center overflow-hidden">
+    <section className="bg-black w-full px-4 min-[375px]:px-6 flex flex-col items-center justify-center text-center overflow-hidden">
       <Stagger staggerDelay={0.15} className="flex flex-col items-center justify-center text-center w-full">
         <StaggerItem className="flex gap-1">
           <img src="/assets/bigComma.png" alt="" loading="lazy" decoding="async" />
