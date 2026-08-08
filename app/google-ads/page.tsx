@@ -447,7 +447,7 @@ export default function GoogleAdsPage() {
                 fontFamily: "var(--font-be-vietnam, var(--font-inter))",
               }}
             >
-              Campaigns Built Around Your Goals
+              campaigns built around <br className="block sm:hidden" /> your goals
             </h2>
           }
           platforms={[

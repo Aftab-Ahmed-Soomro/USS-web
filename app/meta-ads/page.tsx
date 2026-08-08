@@ -111,7 +111,7 @@ function Hero() {
             </p>
           </StaggerItem>
           <StaggerItem>
-            <h1 className="mt-[16px] min-[375px]:mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[100%] tracking-[-1.5px] sm:tracking-[-3px] sm:text-[58px] text-white text-center sm:text-start">
+            <h1 className="max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[1.03] tracking-[-1.5px] min-[390px]:tracking-[-2px] min-[480px]:tracking-[-3.2px] sm:tracking-[-3.2px] sm:text-[70px] text-center sm:text-start">
               Turn reach into revenue with{" "}
               <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-normal timesFontFamily italic text-[#FF5500] tracking-[-1.5px] sm:tracking-[-2.8px]">
                 Meta Ads

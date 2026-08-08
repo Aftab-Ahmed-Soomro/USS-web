@@ -141,12 +141,12 @@ function Hero() {
       <div className="mx-auto grid max-w-[1150px]  gap-8 min-[390px]:gap-10 sm:gap-10 lg:grid-cols-[minmax(0,700px)_430px] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.15}>
           <StaggerItem>
-            <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white text-center sm:text-start">
+            <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-[#ff5500] text-center sm:text-start">
               ORGANIC SOCIAL
             </p>
           </StaggerItem>
           <StaggerItem>
-            <h1 className="max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[1.03] tracking-[-1.5px] min-[390px]:tracking-[-2px] min-[480px]:tracking-[-3.2px] sm:tracking-[-3.2px] sm:text-[70px] text-center sm:text-start">
+            <h1 className="mt-4 max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[1.03] tracking-[-1.5px] min-[390px]:tracking-[-2px] min-[480px]:tracking-[-3.2px] sm:tracking-[-3.2px] sm:text-[70px] text-center sm:text-start">
               social media that builds{" "}
               {/* <br /> */}
               <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[80px] font-normal timesFontFamily italic tracking-[-1.5px] min-[390px]:tracking-[-2px] min-[480px]:tracking-[-3.2px] sm:tracking-[-3.2px]">

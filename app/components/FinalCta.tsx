@@ -9,7 +9,7 @@ import StaggerItem from "./Staggeritem";
 
 export function FinalCta() {
   return (
-    <section className="relative z-10 bg-black sm:bg-transparent px-4 sm:px-6 pt-[50px] pb-[20px] sm:pt-[80px] sm:pb-[80px] text-white overflow-hidden">
+    <section className="relative z-10 bg-black sm:bg-transparent px-4 sm:px-6 pt-[10px] pb-[6px] sm:pt-[80px] sm:pb-[80px] text-white overflow-hidden">
       {/* Background Glows */}
       <div className="hidden sm:block pointer-events-none absolute left-[-15%] top-[-10%] h-[600px] w-[600px] rounded-full bg-[#ff5500] opacity-20 blur-[100px]" />
       <div className="hidden sm:block pointer-events-none absolute right-[-15%] bottom-[-10%] h-[600px] w-[600px] rounded-full bg-[#ff5500] opacity-20 blur-[100px]" />

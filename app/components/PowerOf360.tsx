@@ -140,8 +140,7 @@ export function PowerOf360() {
   return (
     <section
       id="power-of-360"
-      className="relative w-full overflow-hidden bg-black min-h-[650px] sm:min-h-[750px] md:min-h-[850px] lg:min-h-[900px] flex items-center"
-      style={{ minHeight: "clamp(650px, 100vh, 1200px)" }}
+      className="relative w-full overflow-hidden bg-black flex items-center md:min-h-[850px] lg:min-h-[900px] md:[min-height:clamp(750px,100vh,1200px)]"
     >
       {/* Background image (Active Item) */}
       <AnimatePresence initial={false}>
@@ -167,9 +166,9 @@ export function PowerOf360() {
       <div className="hidden md:block absolute inset-0 bg-black/55 z-0" />
 
       {/* Content — balanced flex layout inside max-w-[1150px] container */}
-      <div className="relative z-10 mx-auto max-w-[1150px] w-full flex flex-col md:flex-row items-center justify-between gap-6 lg:gap-10 px-4 min-[375px]:px-6 py-12 md:py-20 lg:py-24">
+      <div className="relative z-10 mx-auto max-w-[1150px] w-full flex flex-col md:flex-row items-center justify-between gap-6 lg:gap-10 px-4 min-[375px]:px-6 py-10 sm:py-14 md:py-20 lg:py-24">
         {/* ── LEFT: text block ── */}
-        <div className="flex w-full md:max-w-[440px] lg:max-w-[470px] xl:max-w-[490px] flex-col gap-6 flex-shrink-0">
+        <div className="flex w-full md:max-w-[440px] lg:max-w-[470px] xl:max-w-[490px] flex-col gap-5 sm:gap-6 flex-shrink-0">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeItem.id}
@@ -177,7 +176,7 @@ export function PowerOf360() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.35, ease: "easeOut" }}
-              className="flex flex-col gap-5 sm:gap-6"
+              className="flex flex-col gap-4 sm:gap-6"
             >
               <h2
                 className="whitespace-nowrap text-[32px] min-[375px]:text-[36px] sm:text-[44px] lg:text-[50px] xl:text-[54px] leading-tight tracking-[-1.6px] lowercase text-white font-[var(--font-be-vietnam)] font-medium m-0"
@@ -192,7 +191,7 @@ export function PowerOf360() {
               </h2>
 
               <p
-                className="text-[14px] leading-[24px] sm:text-[15px] sm:leading-[26px] lg:text-[16px] lg:leading-[27px] text-white/85 font-[var(--font-be-vietnam)] font-normal m-0 max-w-full lg:max-w-[470px] min-h-[90px] sm:min-h-[105px]"
+                className="text-[14px] leading-[22px] sm:text-[15px] sm:leading-[26px] lg:text-[16px] lg:leading-[27px] text-white/85 font-[var(--font-be-vietnam)] font-normal m-0 max-w-full lg:max-w-[470px] min-h-0 sm:min-h-[105px]"
               >
                 {activeItem.description}
               </p>
@@ -233,7 +232,7 @@ export function PowerOf360() {
         </div>
 
         {/* ── RIGHT: thumbnails + controls ── */}
-        <div className="flex w-full md:w-auto flex-col gap-6 flex-shrink-0">
+        <div className="flex w-full md:w-auto flex-col gap-5 sm:gap-6 flex-shrink-0">
           {/* Cards row */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -255,7 +254,7 @@ export function PowerOf360() {
                   animate={{ opacity: 1, scale: 1, x: 0 }}
                   exit={{ opacity: 0, scale: 0.9, x: -50 }}
                   transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                  className="relative w-[180px] h-[270px] min-[375px]:w-[190px] min-[375px]:h-[280px] sm:w-[185px] sm:h-[280px] lg:w-[190px] lg:h-[290px] xl:w-[195px] xl:h-[300px] rounded-[16px] overflow-hidden flex-shrink-0 cursor-pointer border border-white/10 hover:border-white/40 transition-colors duration-300 p-0 group max-md:snap-start"
+                  className="relative w-[160px] h-[230px] min-[375px]:w-[175px] min-[375px]:h-[250px] sm:w-[185px] sm:h-[280px] lg:w-[190px] lg:h-[290px] xl:w-[195px] xl:h-[300px] rounded-[16px] overflow-hidden flex-shrink-0 cursor-pointer border border-white/10 hover:border-white/40 transition-colors duration-300 p-0 group max-md:snap-start"
                   aria-label={card.label}
                 >
                   <Image

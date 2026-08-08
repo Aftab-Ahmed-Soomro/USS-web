@@ -233,7 +233,7 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
 
         {/* Heading — drops down */}
         <FadeDown delay={0.1}>
-          <h1 className="wag-heading pt-5">
+          <h1 className="wag-heading sm:pt-5">
             we are <em>global</em>
           </h1>
         </FadeDown>
