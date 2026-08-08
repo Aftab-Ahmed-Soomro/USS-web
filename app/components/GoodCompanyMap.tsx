@@ -54,9 +54,9 @@ export function GoodCompanyMap() {
 
         {/* Main heading — fades up */}
         <FadeUp delay={0.1}>
-          <h2 className="text-center text-[32px] sm:text-[36px] md:text-5xl lg:text-[56px] text-black tracking-[-6%] mb-[8px] sm:mb-3 leading-[1.1] sm:leading-normal">
+          <h2 className="text-center text-[30px] sm:text-[36px] md:text-5xl lg:text-[56px] text-black tracking-[-6%] mb-[8px] sm:mb-3 leading-[1.1] sm:leading-normal">
             <span className="font-medium">you&apos;re in</span>{" "}
-            <span className="text-[#FF5722] italic timesFontFamily px-1 text-[42px] sm:text-4xl md:text-6xl lg:text-[72px]">good</span>{" "}
+            <span className="text-[#FF5722] italic timesFontFamily px-1 text-[40px] sm:text-4xl md:text-6xl lg:text-[72px]">good</span>{" "}
             <span className="font-medium tracking-[-6%]">company</span>
           </h2>
         </FadeUp>

@@ -162,7 +162,7 @@ export function Testimonials() {
 
         {/* Section heading — rises up after eyebrow */}
         <FadeUp delay={0.2}>
-          <h2 className="mt-[25px] w-full text-center font-[var(--font-be-vietnam)] text-[21px] font-medium leading-tight tracking-[0%] sm:text-[48px] mb-12">
+          <h2 className="mt-[25px] w-full text-center font-[var(--font-be-vietnam)] text-[26px] font-medium leading-tight tracking-[0%] sm:text-[48px] mb-12">
             what clients say about us
           </h2>
         </FadeUp>

@@ -43,7 +43,8 @@ const rightColumnData = [
     title: "Agency 8",
     description: "A luxury real estate website designed for users to explore exclusive developments across rental, sales and off plan.",
     image: "/assets/Agency 8 - 1.png",
-    link: "/projects/agency-8"
+    link: "/projects/agency-8",
+    imageClass: "object-[center_40%]"
   },
   {
     id: 5,
@@ -53,7 +54,7 @@ const rightColumnData = [
     description: "qsr and restaurant identity formed with a reservation-and-ordering menu system built for repeat guests.",
     image: "/assets/Coshe - 1.jpg",
     link: "/projects/coshe-juices",
-    imageClass: "object-[center_40%]"
+    imageClass: "object-[center_36%]"
   },
   {
     id: 6,
@@ -63,7 +64,7 @@ const rightColumnData = [
     description: "A specialist healthcare website designed to build trust, improve accessibility and simplify the patient journey",
     image: "/assets/Bushra - 1.png",
     link: "https://bushratherapy.com/",
-    imageClass: "object-[58%_13%]"
+    imageClass: "object-[58%_10%]"
   }
 ];
 
@@ -82,7 +83,7 @@ const Card = ({ year, category, title, description, image, link, imageClass, ima
     >
       {/* Image Container with Hover Zoom & Subtle Border Accent */}
       <div
-        className={`w-full ${imageAspectRatio || "aspect-[617/480]"
+        className={`w-full ${imageAspectRatio || "aspect-[16/10]"
           } bg-[#111111] rounded-[24px] overflow-hidden relative border border-white/10 group-hover:border-[#ff5500]/50 transition-colors duration-500 shadow-2xl`}
       >
         {image && (
@@ -154,7 +155,7 @@ export default function CaseStudies({
   description,
   leftData = leftColumnData,
   rightData = rightColumnData,
-  imageAspectRatio = "aspect-[617/480]"
+  imageAspectRatio = "aspect-[16/10]"
 }: CaseStudiesProps) {
   const mobileOrder = [];
   const maxLen = Math.max(leftData.length, rightData.length);
@@ -219,16 +220,16 @@ export default function CaseStudies({
         </div>
 
         {/* Desktop View */}
-        <div className="hidden lg:flex flex-row gap-16 w-full">
+        <div className="hidden lg:grid lg:grid-cols-2 gap-12 xl:gap-16 w-full items-start">
           {/* Left Column */}
-          <div className="flex-1 flex flex-col gap-[120px]">
+          <div className="flex flex-col gap-[120px]">
             {leftData.map((item, idx) => (
               <Card key={item.id} {...item} index={idx} imageAspectRatio={imageAspectRatio} />
             ))}
           </div>
 
           {/* Right Column */}
-          <div className="flex-1 flex flex-col">
+          <div className="flex flex-col">
             {/* Header Area */}
             <div className="mb-16">
               <HeaderContent />

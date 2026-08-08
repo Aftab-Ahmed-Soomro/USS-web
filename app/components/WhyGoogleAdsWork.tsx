@@ -32,10 +32,10 @@ export function WhyGoogleAdsWork({
   logoClassName,
 }: WhyAdsWorkProps) {
   return (
-    <section className="bg-[#000] mx-auto overflow-hidden w-full">
+    <section className="bg-[#000] mx-auto overflow-hidden w-full py-4 lg:py-6">
       <div className="mx-auto w-full">
         {/* Body: image left, text right */}
-        <div className="flex flex-col lg:flex-row items-stretch lg:items-center mt-0 lg:mt-[-20px] relative w-full">
+        <div className="flex flex-col lg:flex-row items-stretch lg:items-center relative w-full">
           {/* Left — image */}
           <FadeLeft delay={0.2}>
             <div className="relative w-[90%] sm:w-[80%] md:w-[70%] lg:w-[560px] shrink-0">
@@ -43,7 +43,7 @@ export function WhyGoogleAdsWork({
                 className="relative w-full lg:w-[600px] overflow-hidden"
                 style={{
                   aspectRatio: "580 / 680",
-                  borderRadius: "0px 1550px 1550px 0px",
+                  borderRadius: "0px 340px 340px 0px",
                 }}
               >
                 <Image

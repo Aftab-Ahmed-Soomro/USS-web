@@ -66,7 +66,7 @@ export default function TeamAccordion({ heading, data = defaultTeamData }: TeamA
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(0);
 
   return (
-    <section className="bg-black text-white pt-6 pb-16 lg:pb-24 px-6  w-full flex flex-col items-center overflow-hidden">
+    <section className="bg-black text-white pt-6 pb-10 lg:pb-24 px-6  w-full flex flex-col items-center overflow-hidden">
       <div className="w-full max-w-[1150px] ">
         <Stagger staggerDelay={0.15}>
 
