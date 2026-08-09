@@ -59,12 +59,12 @@ const rightColumnData = [
   {
     id: 6,
     year: "2025",
-    category: "Therapy",
-    title: "Bushra Therapy",
-    description: "A specialist healthcare website designed to build trust, improve accessibility and simplify the patient journey",
-    image: "/assets/Bushra - 1.png",
-    link: "https://bushratherapy.com/",
-    imageClass: "object-[58%_10%]"
+    category: "Psychologist",
+    title: "Sadia Psychology",
+    description: "A psychologist website designed to build trust, support wellbeing and make accessing therapy feel simple.",
+    image: "/assets/saadiTown.png",
+    link: "/projects/sadia-psychology",
+    imageClass: "object-[58%_13%]"
   }
 ];
 

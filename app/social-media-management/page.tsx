@@ -503,7 +503,7 @@ export default function SocialMediaManagementPage() {
         ]}
       />
       <div className="mt-[-20px] sm:mt-[-150px] mb-4">
-        <EmailMarketingQuote first={"your social media is your"} second={"digital window"} third={"shop front"} />
+        <EmailMarketingQuote first={"your social media is your"} second={"digital window"} third={"shop front"} maxWidthClass="max-w-[650px]" />
       </div>
       <OurOrganicSocialMediaApproach />
       <SocialMediaRevenueMethod />

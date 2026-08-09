@@ -928,6 +928,13 @@ export default function New360WithForm() {
           </span>
         </h2>
       </motion.div>
+      {/* <div className="-my-4">
+        <EmailMarketingQuote
+          first="Over"
+          second="60%"
+          third="of people discover new products and brands through Meta platforms."
+        />
+      </div> */}
       <WhyGoogleAdsWork
         imageSrc="/assets/metaSide.png"
         imageAlt="Meta Ads strategy expert"
@@ -1001,6 +1008,13 @@ export default function New360WithForm() {
           </span>
         </h2>
       </motion.div>
+      {/* <div className="-my-4">
+        <EmailMarketingQuote
+          first="Google is the first choice search engine for over"
+          second="90%"
+          third="of users."
+        />
+      </div> */}
       <WhyGoogleAdsWork
         imageSrc="/assets/googleside.jpg"
         imageAlt="Team working on Google Ads strategy"
@@ -1185,7 +1199,7 @@ export default function New360WithForm() {
       <PlatformsWeWorkWith />
       
         <div className="my-4">
-          <EmailMarketingQuote first={"your social media is your"} second={"digital window"} third={"shop front"} />
+          <EmailMarketingQuote maxWidthClass="max-w-[650px]" first={"your social media is your"} second={"digital window"} third={"shop front"} />
         </div>
       <div className="">
         <OurOrganicSocialMediaApproach />
@@ -1223,7 +1237,7 @@ export default function New360WithForm() {
       </motion.div>
       <ContentCreationServices />
       <div className="-my-4">
-        <EmailMarketingQuote first={""} second={"65% "} third={"of people are visual learners."} />
+        <EmailMarketingQuote first={""} second={"65% "} third={"of consumers are visual learners."} />
       </div>
       <div className="mb-20">
         <ContentCreationGrid />

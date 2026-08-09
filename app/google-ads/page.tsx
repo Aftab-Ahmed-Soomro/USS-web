@@ -16,6 +16,7 @@ import StaggerItem from "../components/Staggeritem";
 import FadeRight from "../components/FadeRight";
 import FadeUp from "../components/FadeUp";
 import { RevenueMethod } from "../components/RevenueMethod";
+import EmailMarketingQuote from "../components/EmailMarketingQuote";
 
 const relatedProjects = [
   {
@@ -375,6 +376,11 @@ export default function GoogleAdsPage() {
       <Hero />
       <Numbers />
       <Brands />
+      <EmailMarketingQuote
+        first="Google is the first choice search engine for over"
+        second="90%"
+        third="of users."
+      />
 
       <WhyEmailFails
         tagline="THE OPPORTUNITY"

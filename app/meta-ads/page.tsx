@@ -17,6 +17,7 @@ import FadeLeft from "../components/FadeLeft";
 import FadeRight from "../components/FadeRight";
 import FadeUp from "../components/FadeUp";
 import { RevenueMethod } from "../components/RevenueMethod";
+import EmailMarketingQuote from "../components/EmailMarketingQuote";
 
 const failPoints = [
   "Creative that fails to capture attention",
@@ -36,7 +37,7 @@ const relatedProjects = [
   {
     slug: "reclaim-us",
     name: "Reclaim",
-    image: "/assets/Reclaim grid (95).png",
+    image: "/assets/Untitled (418 x 180 px) (1).png",
     copy: "We scaled awareness and customer acquisition across the US using Meta Ads, delivering highly targeted campaigns that generated bookings while maximising return on ad spend.",
     tags: ["Meta Ads", "US Expansion", "Customer Acquisition"],
     year: "2026",
@@ -45,7 +46,7 @@ const relatedProjects = [
   {
     slug: "supperclub",
     name: "SupperClub",
-    image: "/assets/club.jpg",
+    image: "/assets/Untitled (418 x 180 px) (2).png",
     copy: "Using Meta Ads to grow SupperClub memberships, promoting exclusive experiences from 5 star hotel, restaurant and spa partners through highly targeted conversion campaigns.",
     tags: ["Membership Growth", "Meta Ads", "Hospitality"],
     year: "2026",
@@ -405,6 +406,11 @@ export default function MetaAdsPage() {
       <Hero />
       <Numbers />
       <Brands />
+      <EmailMarketingQuote
+        first="Over"
+        second="60%"
+        third="of people discover new products and brands through Meta platforms."
+      />
       <WhyEmailFails
         tagline="THE OPPORTUNITY"
         hideBadge={false}

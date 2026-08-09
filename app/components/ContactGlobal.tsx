@@ -8,20 +8,6 @@ import FadeRight from "./FadeRight";
 const regions = [
   
   {
-    name: "London",
-    description: (
-      <>
-        Office 4<br /> 
-        Green Dragon House<br />
-        CR0 1FS<br />
-        {/* London<br /> */}
-        United Kingdom
-      </>
-    ),
-    image: "/assets/London.png",
-    alt: "United Kingdom skyline at night",
-  },
-  {
     name: "Atlanta",
     description: (
       <>
@@ -47,6 +33,20 @@ const regions = [
     ),
     image: "/assets/Dubai.png",
     alt: "UAE skyline at dusk",
+  },
+  {
+    name: "London",
+    description: (
+      <>
+        Office 4<br /> 
+        Green Dragon House<br />
+        CR0 1FS<br />
+        {/* London<br /> */}
+        United Kingdom
+      </>
+    ),
+    image: "/assets/London.png",
+    alt: "United Kingdom skyline at night",
   },
 ];
 
@@ -248,23 +248,21 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
         {/* Cards grid — each card uses a different direction, left→up→right */}
         <div className="wag-grid">
 
-          {/* Card 3 (UAE) — slides in from right */}
-          <FadeRight delay={0.3}>
+          {/* Card 1 (US) — slides in from left */}
+          <FadeLeft delay={0.3}>
             <div className="wag-card">
               <div className="wag-image-wrapper">
-                <img src={displayRegions[2].image} alt={displayRegions[2].alt} loading="lazy" decoding="async" />
+                <img src={displayRegions[0].image} alt={displayRegions[0].alt} loading="lazy" decoding="async" />
               </div>
               <div className="wag-card-body">
-                <h2 className="wag-card-title">{displayRegions[2].name}</h2>
-                <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[2].description}</p> <br />
+                <h2 className="wag-card-title">{displayRegions[0].name}</h2>
+                <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[0].description}</p> <br />
                 {/* <div className="wag-card-desc-color mt-4">
-                  {regions[2].address}
+                  {regions[0].address}
                 </div> */}
               </div>
             </div>
-          </FadeRight>
-
-
+          </FadeLeft>
 
           {/* Card 2 (UK) — rises up from below, center anchor */}
           <FadeUp delay={0.4}>
@@ -282,21 +280,21 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
             </div>
           </FadeUp>
 
-          {/* Card 1 (US) — slides in from left */}
-          <FadeLeft delay={0.3}>
+          {/* Card 3 (UAE) — slides in from right */}
+          <FadeRight delay={0.3}>
             <div className="wag-card">
               <div className="wag-image-wrapper">
-                <img src={displayRegions[0].image} alt={displayRegions[0].alt} loading="lazy" decoding="async" />
+                <img src={displayRegions[2].image} alt={displayRegions[2].alt} loading="lazy" decoding="async" />
               </div>
               <div className="wag-card-body">
-                <h2 className="wag-card-title">{displayRegions[0].name}</h2>
-                <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[0].description}</p> <br />
+                <h2 className="wag-card-title">{displayRegions[2].name}</h2>
+                <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[2].description}</p> <br />
                 {/* <div className="wag-card-desc-color mt-4">
-                  {regions[0].address}
+                  {regions[2].address}
                 </div> */}
               </div>
             </div>
-          </FadeLeft>
+          </FadeRight>
 
         </div>
 

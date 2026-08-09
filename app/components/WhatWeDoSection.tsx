@@ -41,11 +41,11 @@ export function WhatWeDoSection() {
               fill
               className="object-cover object-[30%_center]"
             />
-            <div className="absolute top-4 sm:top-6 left-4 sm:left-6 max-w-[220px]">
+            <div className="absolute top-4 sm:top-6 left-4 sm:left-6 max-w-[250px]">
               <p 
                 className="font-medium text-white font-[var(--font-inter)] capitalize text-[14px] sm:text-[16px] leading-[1.4] sm:leading-[21.12px]"
               >
-                Brand Partnerships
+                Personal Brand Development
               </p>
             </div>
             <div className="absolute bottom-4 left-4">
@@ -67,11 +67,11 @@ export function WhatWeDoSection() {
               fill
               className="object-cover"
             />
-            <div className="absolute top-4 sm:top-6 left-4 sm:left-6 max-w-[270px]">
+            <div className="absolute top-4 sm:top-6 left-4 sm:left-6 max-w-[300px]">
               <p 
                 className="font-medium text-white font-[var(--font-inter)] capitalize text-[14px] sm:text-[16px] leading-[1.4] sm:leading-[21.12px]"
               >
-                Connect creators with brands that genuinely fit their audience and campaign objectives.
+                Build and strengthen each creator’s personal brand through positioning, content, digital presence and audience growth.
               </p>
             </div>
             <div className="absolute bottom-4 right-4">
@@ -93,11 +93,11 @@ export function WhatWeDoSection() {
               fill
               className="object-cover object-[40%_center]"
             />
-            <div className="absolute top-4 sm:top-6 left-4 sm:left-6 max-w-[220px]">
+            <div className="absolute top-4 sm:top-6 left-4 sm:left-6 max-w-[250px]">
               <p 
                 className="font-medium text-white font-[var(--font-inter)] capitalize text-[14px] sm:text-[16px] leading-[1.4] sm:leading-[21.12px]"
               >
-                Commercial Growth
+                Campaign & Launch Support
               </p>
             </div>
             <div className="absolute bottom-4 left-4">
@@ -119,12 +119,11 @@ export function WhatWeDoSection() {
               fill
               className="object-cover"
             />
-            <div className="absolute top-4 sm:top-6 left-4 sm:left-6 max-w-[270px]">
+            <div className="absolute top-4 sm:top-6 left-4 sm:left-6 max-w-[300px]">
               <p 
                 className="font-medium text-white font-[var(--font-inter)] capitalize text-[14px] sm:text-[16px] leading-[1.4] sm:leading-[21.12px]"
               >
-                Turn creator influence into measurable revenue through strategic campaign execution.
-
+                Plan and deliver creator campaigns, product launches and collaborations from initial idea through to launch. - And remember its not capital letter for each word only first word
               </p>
             </div>
             <div className="absolute bottom-4 right-4">

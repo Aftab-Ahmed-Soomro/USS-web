@@ -100,12 +100,12 @@ function Hero() {
           </StaggerItem>
           <StaggerItem>
             <h1 className="mt-[35px] sm:mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[0.5] sm:leading-[100%] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white text-center sm:text-start">
-              content that does
+              Content that brings
               <br className="sm:hidden" /> {/* Adding hidden br if needed? No, I will not add new br */}
               <br />
-              more than{" "}
+              your{" "}
               <span className="font-[var(--font-cormorant)] text-[42px] leading-[0.7] sm:leading-none sm:text-[72px] lowercase font-normal timesFontFamily italic text-white tracking-[-1px] sm:tracking-[-2.8px]">
-                looks good
+                brand to life
               </span>
             </h1>
           </StaggerItem>

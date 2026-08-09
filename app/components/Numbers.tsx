@@ -25,14 +25,14 @@ type NumbersProps = {
 // ─── Default data ─────────────────────────────────────────────────────────────
 
 const defaultStats: NumberStat[] = [
-  { value: "75M+", label: "AED In Client Revenue" },
+  { value: "$25M", label: "In Client Revenue" },
   { value: "645k+", label: "Leads Generated for Clients" },
   { value: "50+", label: "Start Ups Turned Profitable" },
   { value: "100+", label: "Brands Worldwide" },
 ];
 
 // ─── parseValue ───────────────────────────────────────────────────────────────
-// Splits "75M+", "500k", "100+", "5x", "0.2%" into
+// Splits "$25M", "500k", "100+", "5x", "0.2%" into
 // { prefix, number, suffix, decimals }
 // so we can count only the numeric part, preserving decimal precision.
 

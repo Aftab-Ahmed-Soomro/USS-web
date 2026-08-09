@@ -9,10 +9,12 @@ export default function EmailMarketingQuote({
   first,
   second,
   third,
+  maxWidthClass = "max-w-[750px]",
 }: {
   first: string;
   second: string;
   third: string;
+  maxWidthClass?: string;
 }) {
   return (
     <section className="bg-black w-full px-4 min-[375px]:px-6 flex flex-col items-center justify-center text-center overflow-hidden">
@@ -37,7 +39,7 @@ export default function EmailMarketingQuote({
         </StaggerItem>
 
         <StaggerItem>
-          <h2 className="text-white max-w-[650px] mt-[24px] sm:mt-8 font-medium text-[22px] sm:text-[40px] leading-[1.3] sm:leading-[60px] tracking-[-1px] sm:tracking-[-2.44px]">
+          <h2 className={`text-white ${maxWidthClass} mt-[24px] sm:mt-8 font-medium text-[22px] sm:text-[40px] leading-[1.3] sm:leading-[60px] tracking-[-1px] sm:tracking-[-2.44px]`}>
             {first}{" "}
             <span
               className="text-[#FF5500] font-normal italic text-[27px] sm:text-[48px] leading-none tracking-[-1px] sm:tracking-[-2.44px]"
@@ -76,4 +78,4 @@ export default function EmailMarketingQuote({
       </Stagger>
     </section>
   );
-}
+}
