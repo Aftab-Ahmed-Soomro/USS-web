@@ -59,7 +59,7 @@ const rightColumnData = [
   {
     id: 6,
     year: "2025",
-    category: "Psychologist",
+    category: "Therapy",
     title: "Sadia Psychology",
     description: "A psychologist website designed to build trust, support wellbeing and make accessing therapy feel simple.",
     image: "/assets/saadiTown.png",

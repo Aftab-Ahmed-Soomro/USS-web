@@ -409,7 +409,13 @@ export default function MetaAdsPage() {
       <EmailMarketingQuote
         first="Over"
         second="60%"
-        third="of people discover new products and brands through Meta platforms."
+        third={
+          <>
+            of people discover new products and brands through{" "}
+            <br className="sm:hidden" />
+            Meta platforms.
+          </>
+        }
       />
       <WhyEmailFails
         tagline="THE OPPORTUNITY"

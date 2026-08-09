@@ -52,7 +52,7 @@ export function WhatWeDoSection() {
               <span 
                 className="inline-block bg-white text-black rounded-full font-[var(--font-inter)] capitalize text-[10px] sm:text-[7px] leading-[1.2] sm:leading-[11.96px] px-3 py-1 sm:px-[14px] sm:py-[4px]"
               >
-                Partnerships
+                Brand Development
               </span>
             </div>
             </div>
@@ -69,7 +69,7 @@ export function WhatWeDoSection() {
             />
             <div className="absolute top-4 sm:top-6 left-4 sm:left-6 max-w-[300px]">
               <p 
-                className="font-medium text-white font-[var(--font-inter)] capitalize text-[14px] sm:text-[16px] leading-[1.4] sm:leading-[21.12px]"
+                className="font-medium text-white font-[var(--font-inter)] text-[14px] sm:text-[16px] leading-[1.4] sm:leading-[21.12px]"
               >
                 Build and strengthen each creator’s personal brand through positioning, content, digital presence and audience growth.
               </p>
@@ -78,7 +78,7 @@ export function WhatWeDoSection() {
               <span 
                 className="inline-block bg-transparent border border-white text-white rounded-full font-[var(--font-inter)] capitalize text-[10px] sm:text-[7px] leading-[1.2] sm:leading-[11.96px] px-3 py-1 sm:px-[14px] sm:py-[4px]"
               >
-                Partnerships
+                Brand Development
               </span>
             </div>
             </div>
@@ -104,7 +104,7 @@ export function WhatWeDoSection() {
               <span 
                 className="inline-block bg-white text-black rounded-full font-[var(--font-inter)] capitalize text-[10px] sm:text-[7px] leading-[1.2] sm:leading-[11.96px] px-3 py-1 sm:px-[14px] sm:py-[4px]"
               >
-                Revenue Growth
+                Campaign Support
               </span>
             </div>
             </div>
@@ -121,7 +121,7 @@ export function WhatWeDoSection() {
             />
             <div className="absolute top-4 sm:top-6 left-4 sm:left-6 max-w-[300px]">
               <p 
-                className="font-medium text-white font-[var(--font-inter)] capitalize text-[14px] sm:text-[16px] leading-[1.4] sm:leading-[21.12px]"
+                className="font-medium text-white font-[var(--font-inter)] text-[14px] sm:text-[16px] leading-[1.4] sm:leading-[21.12px]"
               >
                 Plan and deliver creator campaigns, product launches and collaborations from initial idea through to launch. - And remember its not capital letter for each word only first word
               </p>
@@ -130,7 +130,7 @@ export function WhatWeDoSection() {
               <span 
                 className="inline-block bg-transparent border border-white text-white rounded-full font-[var(--font-inter)] capitalize text-[10px] sm:text-[7px] leading-[1.2] sm:leading-[11.96px] px-3 py-1 sm:px-[14px] sm:py-[4px]"
               >
-                 Revenue Growth
+                 Campaign Support
               </span>
             </div>
             </div>

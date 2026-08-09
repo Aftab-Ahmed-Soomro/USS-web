@@ -11,9 +11,9 @@ export default function EmailMarketingQuote({
   third,
   maxWidthClass = "max-w-[750px]",
 }: {
-  first: string;
-  second: string;
-  third: string;
+  first: React.ReactNode;
+  second: React.ReactNode;
+  third: React.ReactNode;
   maxWidthClass?: string;
 }) {
   return (

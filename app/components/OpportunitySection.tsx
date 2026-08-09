@@ -48,9 +48,9 @@ export function OpportunitySection() {
                 $10.8B
               </h3>
               <p
-                className="font-normal text-white/80 font-[var(--font-inter)] capitalize text-[13px] sm:text-[16px] leading-[1.6] sm:leading-[21.12px]"
+                className="font-normal text-white/80 font-[var(--font-inter)]  text-[13px] sm:text-[16px] leading-[1.6] sm:leading-[21.12px]"
               >
-                US online sales on black friday 2025
+                US online sales on Black Friday 2025
               </p>
             </div>
           </div>
@@ -74,9 +74,9 @@ export function OpportunitySection() {
                 4-6x
               </h3>
               <p
-                className="font-normal text-white/80 font-[var(--font-inter)] capitalize text-[13px] sm:text-[16px] leading-[1.6] sm:leading-[21.12px]"
+                className="font-normal text-white/80 font-[var(--font-inter)] text-[13px] sm:text-[16px] leading-[1.6] sm:leading-[21.12px]"
               >
-                average uplift in affiliate conversion rates during black friday week
+                Average uplift in affiliate conversion rates during Black Friday week
               </p>
             </div>
           </div>
@@ -100,9 +100,9 @@ export function OpportunitySection() {
                 62%
               </h3>
               <p
-                className="font-normal text-white/80 font-[var(--font-inter)] capitalize text-[13px] sm:text-[16px] leading-[1.6] sm:leading-[21.12px]"
+                className="font-normal text-white/80 font-[var(--font-inter)] text-[13px] sm:text-[16px] leading-[1.6] sm:leading-[21.12px]"
               >
-                of shoppers research purchases before buying
+                Of shoppers research purchases before buying
               </p>
             </div>
           </div>
