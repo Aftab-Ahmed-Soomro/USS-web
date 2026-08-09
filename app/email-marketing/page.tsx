@@ -149,7 +149,7 @@ function Hero() {
               turn your email database {" "}
               <br className="hidden sm:block" />
               into a{" "}
-              <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white leading-[1.1] sm:leading-[103.04px] tracking-[-1px] sm:tracking-[-2.8px]">
+              <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white tracking-[-1px] sm:tracking-[-2.8px]">
                 revenue engine
               </span>
             </h1>
@@ -462,12 +462,13 @@ export default function EmailMarketingPage() {
       <Header />
       <Hero />
       <Numbers stats={emailStats} />
+      <Brands />
       <EmailMarketingQuote first={"email marketing should contribute to"} second={"35%"} third={"of your business revenue with the right strategy and execution"} />
       <WhyEmailFails tagline="THE OPPORTUNITY" />
       <div className="-mt-10 sm:-mt-40">
         <EmailOverview />
       </div>
-      <Brands />
+      
       <EmailStrategy />
       <EmailVisuals />
       <RevenueMethod

@@ -74,7 +74,7 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          padding: 50px 0px;
+          padding: 40px 0px;
           box-sizing: border-box;
           font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
         }
@@ -233,7 +233,7 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
 
         {/* Heading — drops down */}
         <FadeDown delay={0.1}>
-          <h1 className="wag-heading sm:pt-5">
+          <h1 className="wag-heading">
             we are <em>global</em>
           </h1>
         </FadeDown>

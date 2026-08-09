@@ -39,7 +39,7 @@ const cards = [
       "A strong brand is built through consistency. At USS, we make sure every touchpoint reflects the same identity, helping your business build trust and lasting brand value.",
     image: "/assets/power/brand.png",
     bgImage: "/assets/power/brandLarge.jpeg",
-    bgClass: "object-[center_25%]",
+    bgClass: "object-[center_38%]",
     alt: "One Brand card",
   },
   {

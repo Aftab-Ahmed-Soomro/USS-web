@@ -207,16 +207,16 @@ export function Numbers({
         {/* Stats grid */}
         <div className="mt-[32px] sm:mt-[58px] border-y border-white/12 sm:border-y-0 sm:border-t bg-black/20 sm:bg-transparent py-[16px] sm:py-0 sm:pt-[43px]">
           {stats.length === 5 ? (
-            <div className="grid grid-cols-4 sm:grid-cols-5 divide-x divide-white/12 sm:divide-x-0 gap-0 sm:gap-6 lg:gap-[40px]">
+            <div className="grid grid-cols-4 sm:grid-cols-5 lg:flex lg:justify-between lg:w-full lg:gap-0 divide-x divide-white/12 sm:divide-x-0 gap-0 sm:gap-6">
               {stats.map((stat, index) => {
                 const isHiddenOnMobile = stat.value === "5x" || stat.label.toLowerCase().includes("roas");
                 return (
                   <FadeUp
                     key={stat.label}
                     delay={0.3 + index * 0.12}
-                    className={isHiddenOnMobile ? "hidden sm:block" : "block"}
+                    className={`${isHiddenOnMobile ? "hidden sm:block" : "block"} ${index === stats.length - 1 ? "lg:flex lg:justify-end" : ""}`}
                   >
-                    <div className="flex items-start gap-[3px] min-[375px]:gap-[5px] sm:gap-[12px] px-[3px] sm:px-0 h-full overflow-hidden">
+                    <div className="flex items-start gap-[3px] min-[375px]:gap-[5px] sm:gap-[12px] px-[3px] sm:px-0 h-full pb-1">
                       <div className="scale-[0.5] min-[375px]:scale-[0.55] sm:scale-100 origin-left -ml-1 sm:ml-0 shrink-0">
                         <Spark />
                       </div>
@@ -234,10 +234,14 @@ export function Numbers({
               })}
             </div>
           ) : (
-            <div className="grid grid-cols-4 sm:grid-cols-2 lg:grid-cols-4 divide-x divide-white/12 sm:divide-x-0 gap-0 sm:gap-8 lg:gap-[54px]">
+            <div className="grid grid-cols-4 sm:grid-cols-2 lg:flex lg:justify-between lg:w-full lg:gap-0 divide-x divide-white/12 sm:divide-x-0 gap-0 sm:gap-8">
               {stats.map((stat, index) => (
-                <FadeUp key={stat.label} delay={0.3 + index * 0.12}>
-                  <div className="flex items-start gap-[4px] min-[375px]:gap-[6px] sm:gap-[16px] px-[6px] sm:px-0 h-full overflow-hidden">
+                <FadeUp
+                  key={stat.label}
+                  delay={0.3 + index * 0.12}
+                  className={index === stats.length - 1 ? "lg:flex lg:justify-end" : ""}
+                >
+                  <div className="flex items-start gap-[4px] min-[375px]:gap-[6px] sm:gap-[16px] px-[6px] sm:px-0 h-full pb-1">
                     <div className="scale-[0.5] sm:scale-100 origin-left -ml-2 sm:ml-0 shrink-0">
                       <Spark />
                     </div>
@@ -245,7 +249,7 @@ export function Numbers({
                       <p className="text-[16px] min-[375px]:text-[20px] font-bold leading-none tracking-[-1px] sm:text-[50px]">
                         <AnimatedStat value={stat.value} />
                       </p>
-                      <p className="mt-[4px] sm:mt-[8px] text-[7px] min-[375px]:text-[8px] sm:text-[14px] font-light leading-tight sm:leading-none text-white/90 whitespace-normal break-words max-w-[80px] sm:max-w-none tracking-tight sm:tracking-normal">
+                      <p className="mt-[4px] sm:mt-[8px] text-[7px] min-[375px]:text-[8px] sm:text-[14px] font-light leading-tight sm:leading-[1.3] text-white/90 whitespace-normal break-words max-w-[80px] sm:max-w-none tracking-tight sm:tracking-normal">
                         {renderLabel(stat.label)}
                       </p>
                     </div>

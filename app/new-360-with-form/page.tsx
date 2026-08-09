@@ -1222,7 +1222,7 @@ export default function New360WithForm() {
         </h2>
       </motion.div>
       <ContentCreationServices />
-      <div className="-my-10">
+      <div className="-my-4">
         <EmailMarketingQuote first={""} second={"65% "} third={"of people are visual learners."} />
       </div>
       <div className="mb-20">

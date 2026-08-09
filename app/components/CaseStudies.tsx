@@ -8,16 +8,16 @@ const leftColumnData = [
   {
     id: 1,
     year: "2026",
-    category: "Marketing Agency",
+    category: "Immersive Holographics",
     title: "Disturbed Innovations Group",
     description: "A technology website showcasing immersive experiences and digital innovation.",
     image: "/assets/leftColumnImages/1.png",
     link: "/projects/disturbed-innovations"
   },
   {
-    id: 5,
+    id: 2,
     year: "2026",
-    category: "Restaurant Group",
+    category: "Fashion Brand",
     title: "Afro Maya",
     description: " A fashion website designed to highlight new collections and build brand presence.",
     image: "/assets/Afro Maya - 1.png",
@@ -27,7 +27,7 @@ const leftColumnData = [
   {
     id: 3,
     year: "2025",
-    category: "Professional Services",
+    category: "Event Space",
     title: "Venue 29",
     description: "A bold event venue website designed to showcase experiences, increase enquiries and support bookings",
     image: "/assets/leftColumnImages/3.jpg",
@@ -49,7 +49,7 @@ const rightColumnData = [
   {
     id: 5,
     year: "2026",
-    category: "Restaurant Group",
+    category: "Wellness Juices",
     title: "Coshe Juices",
     description: "qsr and restaurant identity formed with a reservation-and-ordering menu system built for repeat guests.",
     image: "/assets/Coshe - 1.jpg",
@@ -59,7 +59,7 @@ const rightColumnData = [
   {
     id: 6,
     year: "2025",
-    category: "Wellness Business",
+    category: "Therapy",
     title: "Bushra Therapy",
     description: "A specialist healthcare website designed to build trust, improve accessibility and simplify the patient journey",
     image: "/assets/Bushra - 1.png",
