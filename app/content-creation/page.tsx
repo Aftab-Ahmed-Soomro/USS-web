@@ -17,6 +17,7 @@ import FadeUp from "../components/FadeUp";
 import { RevenueMethod } from "../components/RevenueMethod";
 import { ContentCreationGrid } from "../components/ContentCreationGrid";
 import { ContentCreationServices } from "../components/ContentCreationServices";
+import { LazyVideo } from "../components/common/LazyVideo";
 
 const stats = [
   { value: "18.4K+", label: "Creative Assets Produced" },
@@ -155,17 +156,16 @@ function VideoSection() {
         </Stagger>
         <FadeUp delay={0.3}>
           <div className="relative mx-auto mt-[24px] sm:mt-[38px] aspect-[16/12] sm:aspect-[1040/515] w-full overflow-hidden rounded-[8px] sm:rounded-[4px] shadow-[0_0_42px_rgba(255,255,255,0)]">
-            <video
+            <LazyVideo
+              src="/assets/USS Main Website Showreel.webm"
               autoPlay
               loop
               muted
               playsInline
+              preload="none"
               className="absolute inset-0 w-full h-full object-cover object-center"
-              preload="auto"
-            >
-              <source src="https://unitedstrategicsolutions.com/assets/USS Main Website Showreel.webm" type="video/webm" />
-            </video>
-            <div className="absolute inset-0 bg-black/14" />
+            />
+            <div className="absolute inset-0 bg-black/14 pointer-events-none" />
             <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_20px_10px_rgba(0,0,0,0.92)] min-[480px]:shadow-[inset_0_0_40px_20px_rgba(0,0,0,0.92)] sm:shadow-[inset_0_0_92px_58px_rgba(0,0,0,0.92)]" />
           </div>
         </FadeUp>

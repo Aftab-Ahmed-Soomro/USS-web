@@ -6,43 +6,45 @@ import { motion, useInView, useAnimation, AnimatePresence } from "framer-motion"
 const cards = [
   {
     videos: [
-      "https://unitedstrategicsolutions.com/assets/360_home/GALA BEHIND THE SCENE EDIT.webm", // done
-      "https://unitedstrategicsolutions.com/assets/360_home/Agency 8 Event.webm", // done
-      // "https://unitedstrategicsolutions.com/assets/360_home/USS-x-WWT-Gala.webm"
-      "https://unitedstrategicsolutions.com/assets/360_home/3.webm", // done
-      "https://unitedstrategicsolutions.com/assets/360_home/Interior Design Process for Vision Tower.mp4", // done
+      "/assets/360_home/GALA BEHIND THE SCENE EDIT.webm", // done
+      "/assets/360_home/Agency 8 Event.webm", // done
+      // "/assets/360_home/USS-x-WWT-Gala.webm"
+      "/assets/360_home/3.webm", // done
+      "/assets/360_home/Interior Design Process for Vision Tower.mp4", // done
     ],
     alt: "LEFT",
   },
   {
     videos: [
-      "https://unitedstrategicsolutions.com/assets/360_home/Hot seat 1 updated w_captions.webm", // done
-      "https://unitedstrategicsolutions.com/assets/360_home/Whats-new.webm", // done
-      "https://unitedstrategicsolutions.com/assets/360_home/Shortened version.mp4", // done
-      "https://unitedstrategicsolutions.com/assets/360_home/USS-narrator-updated.webm", // done
+      "/assets/360_home/Hot seat 1 updated w_captions.webm", // done
+      "/assets/360_home/Whats-new.webm", // done
+      "/assets/360_home/Shortened version.mp4", // done
+      "/assets/360_home/USS-narrator-updated.webm", // done
     ],
     alt: "MIDDLE",
   },
   {
     videos: [
-      "https://unitedstrategicsolutions.com/assets/360_home/Cinnamood BTS shoot.webm", // done
-      "https://unitedstrategicsolutions.com/assets/360_home/Idea 8 - BTS v2.webm", // done
-      "https://unitedstrategicsolutions.com/assets/360_home/DIRECTION 3.webm" // done
+      "/assets/360_home/Cinnamood BTS shoot.webm", // done
+      "/assets/360_home/Idea 8 - BTS v2.webm", // done
+      "/assets/360_home/DIRECTION 3.webm" // done
     ],
     alt: "RIGHT",
   }
 ];
 
 const customDurations: Record<string, number> = {
-  "https://unitedstrategicsolutions.com/assets/360_home/Whats-new.webm": 9000,
-  "https://unitedstrategicsolutions.com/assets/360_home/Idea 8 - BTS v2.webm": 12000,
-  "https://unitedstrategicsolutions.com/assets/360_home/DIRECTION 3.webm": 13000,
+  "/assets/360_home/Whats-new.webm": 9000,
+  "/assets/360_home/Idea 8 - BTS v2.webm": 12000,
+  "/assets/360_home/DIRECTION 3.webm": 13000,
 };
 
-function SequentialVideoPlayer({ videos }: { videos: string[] }) {
+function SequentialVideoPlayer({ videos, isInView }: { videos: string[]; isInView: boolean }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
+    if (!isInView) return;
+
     const currentVideo = videos[currentIndex];
     const duration = customDurations[currentVideo] ?? 19000;
 
@@ -51,25 +53,30 @@ function SequentialVideoPlayer({ videos }: { videos: string[] }) {
     }, duration);
 
     return () => clearTimeout(timer);
-  }, [currentIndex, videos]);
+  }, [currentIndex, videos, isInView]);
 
   return (
-    <div className="relative w-full h-full overflow-hidden">
-      <AnimatePresence mode="sync">
-        <motion.video
-          key={videos[currentIndex]}
-          src={videos[currentIndex]}
-          autoPlay
-          muted
-          loop
-          playsInline
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0, position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
-          transition={{ duration: 0.6, ease: "easeInOut" }}
-          className="w-full h-full object-cover rounded-xl"
-        />
-      </AnimatePresence>
+    <div className="relative w-full h-full overflow-hidden bg-[#0d0d0d]">
+      {isInView ? (
+        <AnimatePresence mode="sync">
+          <motion.video
+            key={videos[currentIndex]}
+            src={videos[currentIndex]}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="none"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+            transition={{ duration: 0.6, ease: "easeInOut" }}
+            className="w-full h-full object-cover rounded-xl"
+          />
+        </AnimatePresence>
+      ) : (
+        <div className="w-full h-full bg-[#111111] rounded-xl" />
+      )}
 
       {/* Cinematic bottom gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-xl pointer-events-none" />
@@ -102,6 +109,16 @@ export function UssDifferentSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const headingRef = useRef<HTMLDivElement>(null);
   const isHeadingInView = useInView(headingRef, { once: true, margin: "-80px" });
+  const isSectionInView = useInView(sectionRef, { margin: "250px 0px 250px 0px" });
+
+  const [isDesktop, setIsDesktop] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    const checkDesktop = () => setIsDesktop(window.innerWidth >= 1024);
+    checkDesktop();
+    window.addEventListener("resize", checkDesktop);
+    return () => window.removeEventListener("resize", checkDesktop);
+  }, []);
 
   const particles = [
     { delay: 0, x: "10%", y: "20%", size: 3 },
@@ -188,10 +205,10 @@ export function UssDifferentSection() {
           />
         </div>
 
-        {/* Desktop Layout */}
-        <div className="hidden lg:flex w-full flex-row justify-center items-center gap-6 lg:gap-8 mt-4 sm:mt-8">
-          {cards.map((card, index) => {
-            return (
+        {/* Render only single active layout based on screen width to avoid duplicate video requests */}
+        {isDesktop === true && (
+          <div className="flex w-full flex-row justify-center items-center gap-6 lg:gap-8 mt-4 sm:mt-8">
+            {cards.map((card, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 80, scale: 0.9, rotateX: 15 }}
@@ -210,7 +227,6 @@ export function UssDifferentSection() {
                 style={{ perspective: 1000 }}
                 className="relative w-full max-w-[405px] aspect-[405/700] group cursor-pointer rounded-2xl overflow-hidden"
               >
-                {/* Glow border on hover */}
                 <motion.div
                   className="absolute inset-0 rounded-2xl pointer-events-none z-20"
                   initial={{ opacity: 0 }}
@@ -222,7 +238,6 @@ export function UssDifferentSection() {
                   }}
                 />
 
-                {/* Corner accent dots */}
                 <motion.div
                   className="absolute top-3 left-3 w-2 h-2 rounded-full bg-[#ff5500] z-30"
                   animate={{ opacity: [1, 0.3, 1], scale: [1, 1.3, 1] }}
@@ -235,53 +250,53 @@ export function UssDifferentSection() {
                 />
 
                 <div className="w-full h-full transition-transform duration-700 group-hover:scale-[1.03]">
-                  <SequentialVideoPlayer videos={card.videos} />
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
-
-        {/* Mobile Layout */}
-        <div className="lg:hidden w-full mt-0 px-1 min-[375px]:px-1.5">
-          <div className="grid grid-cols-3 gap-1 min-[375px]:gap-1.5 w-full mx-auto">
-            {cards.map((card, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30, scale: 0.92 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true, margin: "-20px" }}
-                transition={{
-                  duration: 0.55,
-                  delay: index * 0.12,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                className="relative w-full aspect-[405/700] group rounded-md min-[375px]:rounded-lg overflow-hidden shadow-lg"
-              >
-                {/* Glow border */}
-                <motion.div
-                  className="absolute inset-0 rounded-md min-[375px]:rounded-lg pointer-events-none z-20"
-                  animate={{
-                    boxShadow: [
-                      "0 0 0px rgba(255,85,0,0)",
-                      "0 0 12px rgba(255,85,0,0.3)",
-                      "0 0 0px rgba(255,85,0,0)",
-                    ],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    delay: index * 1,
-                    ease: "easeInOut",
-                  }}
-                />
-                <div className="w-full h-full">
-                  <SequentialVideoPlayer videos={card.videos} />
+                  <SequentialVideoPlayer videos={card.videos} isInView={isSectionInView} />
                 </div>
               </motion.div>
             ))}
           </div>
-        </div>
+        )}
+
+        {(isDesktop === false || isDesktop === null) && (
+          <div className="w-full mt-0 px-1 min-[375px]:px-1.5">
+            <div className="grid grid-cols-3 gap-1 min-[375px]:gap-1.5 w-full mx-auto">
+              {cards.map((card, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30, scale: 0.92 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true, margin: "-20px" }}
+                  transition={{
+                    duration: 0.55,
+                    delay: index * 0.12,
+                    ease: [0.16, 1, 0.3, 1],
+                  }}
+                  className="relative w-full aspect-[405/700] group rounded-md min-[375px]:rounded-lg overflow-hidden shadow-lg"
+                >
+                  <motion.div
+                    className="absolute inset-0 rounded-md min-[375px]:rounded-lg pointer-events-none z-20"
+                    animate={{
+                      boxShadow: [
+                        "0 0 0px rgba(255,85,0,0)",
+                        "0 0 12px rgba(255,85,0,0.3)",
+                        "0 0 0px rgba(255,85,0,0)",
+                      ],
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      delay: index * 1,
+                      ease: "easeInOut",
+                    }}
+                  />
+                  <div className="w-full h-full">
+                    <SequentialVideoPlayer videos={card.videos} isInView={isSectionInView} />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        )}
 
       </div>
 

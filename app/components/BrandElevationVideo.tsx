@@ -1,38 +1,28 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
+import { LazyVideo } from "./common/LazyVideo";
 
 export default function BrandElevationVideo() {
-  const videoRef = useRef<HTMLVideoElement>(null);
   const [isMuted, setIsMuted] = useState(true);
 
   const toggleMute = () => {
-    const newMuted = !isMuted;
-    setIsMuted(newMuted);
-    if (videoRef.current) {
-      videoRef.current.muted = newMuted;
-    }
+    setIsMuted((prev) => !prev);
   };
 
   return (
-    <section className="relative w-full h-auto aspect-video sm:h-[100svh] sm:min-h-[720px] md:h-[120svh] overflow-hidden ">
-  <video
-    ref={videoRef}
-    src="https://unitedstrategicsolutions.com/assets/USS AD_FINAL.mp4"
-    autoPlay
-    loop
-    muted={isMuted}
-    playsInline
-    preload="metadata"
-    width={1920}
-    height={1080}
-    className="absolute inset-0 w-full h-full object-cover object-center"
-    aria-label="USS brand video"
-  />
-
-      {/* Dark Overlay */}
-      {/* <div className="absolute inset-0 bg-black/40" /> */}
+    <section className="relative w-full h-auto aspect-video sm:h-[100svh] sm:min-h-[720px] md:h-[120svh] overflow-hidden bg-black">
+      <LazyVideo
+        src="/assets/USS AD_FINAL.mp4"
+        autoPlay
+        loop
+        muted={isMuted}
+        playsInline
+        preload="none"
+        className="absolute inset-0 w-full h-full object-cover object-center"
+        aria-label="USS brand video"
+      />
 
       {/* Mute / Unmute Button */}
       <button

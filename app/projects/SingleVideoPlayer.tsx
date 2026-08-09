@@ -1,8 +1,9 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { Volume2, VolumeX } from "lucide-react";
+import { LazyVideo } from "../components/common/LazyVideo";
 
 interface SingleVideoPlayerProps {
   src?: string;
@@ -14,28 +15,22 @@ interface SingleVideoPlayerProps {
 
 export function SingleVideoPlayer({ src, previewSrc, previewAlt, previewPosition, productName }: SingleVideoPlayerProps) {
   const [isMuted, setIsMuted] = useState(true);
-  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   const toggleMute = () => {
-    const newMuted = !isMuted;
-    setIsMuted(newMuted);
-    if (videoRef.current) {
-      videoRef.current.muted = newMuted;
-    }
+    setIsMuted((prev) => !prev);
   };
 
   return (
     <div className="relative mx-auto mt-[48px] aspect-[1014/540] max-w-[1014px] overflow-hidden rounded-[10px] bg-[#181818] shadow-[0_0_65px_rgba(255,255,255,0.23)] group">
       {src ? (
         <>
-          <video
-            ref={videoRef}
+          <LazyVideo
             src={src}
             autoPlay
             loop
             muted={isMuted}
             playsInline
-            preload="metadata"
+            preload="none"
             className="absolute inset-0 h-full w-full object-cover"
             aria-label={`${productName} campaign video`}
           />

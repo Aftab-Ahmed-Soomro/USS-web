@@ -10,6 +10,7 @@ import type { OutcomeIcon, ProjectDetail, WorkIcon } from "./project-details";
 import { TripleVideoPlayer } from "./TripleVideoPlayer";
 import { DoubleVideoPlayer } from "./DoubleVideoPlayer";
 import { SingleVideoPlayer } from "./SingleVideoPlayer";
+import { LazyVideo } from "../components/common/LazyVideo";
 
 const outcomeIconAssets: Record<OutcomeIcon, string> = {
   megaphone: "/assets/outcome1.png",
@@ -216,12 +217,13 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
                         }
                       >
                         {isVideo ? (
-                          <video
+                          <LazyVideo
                             src={image.src}
                             autoPlay
                             muted
                             loop
                             playsInline
+                            preload="none"
                             className="absolute inset-0 h-full w-full object-cover"
                             style={{ objectPosition: image.position ?? "center" }}
                           />

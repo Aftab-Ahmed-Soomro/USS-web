@@ -3,7 +3,7 @@ import Stagger from "./Stagger";
 import StaggerItem from "./Staggeritem";
 
 const socialVisuals = Array.from({ length: 13 }, (_, i) => ({
-  src: `https://unitedstrategicsolutions.com/assets/socialGrids/${i + 1}.png`,
+  src: `/assets/socialGrids/${i + 1}.png`,
   alt: `Organic Social Grid ${i + 1}`,
 }));
 
@@ -43,18 +43,18 @@ export default function OurOrganicSocialMediaApproach() {
         <div className="w-full overflow-hidden mt-8 lg:mt-16">
           <div className="social-visuals-track flex items-center gap-4 sm:gap-[46px]">
             {[...socialVisuals, ...socialVisuals, ...socialVisuals].map((visual, index) => (
-                <div
-                  className="relative h-[356px] w-[200px] min-[360px]:h-[392px] min-[360px]:w-[220px] min-[390px]:h-[460px] min-[390px]:w-[258px] shrink-0 overflow-hidden bg-[#111] shadow-[0_16px_38px_rgba(0,0,0,0.08)] sm:h-[520px] sm:w-[292px] lg:h-[719px] lg:w-[404px]"
-                  key={index}
-                >
-                  <Image
-                    src={visual.src}
-                    alt={visual.alt}
-                    fill
-                    sizes="(min-width: 1024px) 404px, (min-width: 640px) 292px, (min-width: 390px) 258px, 200px"
-                    className="object-cover object-top hover:scale-105 transition-transform duration-700 ease-out"
-                  />
-                </div>
+              <div
+                className="relative h-[356px] w-[200px] min-[360px]:h-[392px] min-[360px]:w-[220px] min-[390px]:h-[460px] min-[390px]:w-[258px] shrink-0 overflow-hidden bg-[#111] shadow-[0_16px_38px_rgba(0,0,0,0.08)] sm:h-[520px] sm:w-[292px] lg:h-[719px] lg:w-[404px]"
+                key={index}
+              >
+                <Image
+                  src={visual.src}
+                  alt={visual.alt}
+                  fill
+                  sizes="(min-width: 1024px) 404px, (min-width: 640px) 292px, (min-width: 390px) 258px, 200px"
+                  className="object-cover object-top hover:scale-105 transition-transform duration-700 ease-out"
+                />
+              </div>
             ))}
           </div>
         </div>

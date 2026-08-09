@@ -51,29 +51,29 @@ export const projectDetails = [
     description:
       "Agency 8 is a real estate agency focused on helping buyers and investors discover premium property opportunities. USS partnered with Agency 8 to build a custom website and implement email and WhatsApp marketing systems that made it easier to capture, manage and convert enquiries.",
     heroImage: {
-      src: "https://unitedstrategicsolutions.com/assets/agency/agency.png",
+      src: "/assets/agency/agency.png",
       alt: "Agency 8 luxury apartment interior overlooking the sea",
       position: "50% 50%",
     },
     overviewSubtitle: "Sneak peak into Agency 8",
     galleryImages: [
       {
-        src: "https://unitedstrategicsolutions.com/assets/agency/1.png",
+        src: "/assets/agency/1.png",
         alt: "Agency 8 luxury waterfront property terrace",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/agency/2.png",
+        src: "/assets/agency/2.png",
         alt: "Agency 8 Dubai penthouse terrace with skyline view",
         position: "50% 48%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/agency/3.png",
+        src: "/assets/agency/3.png",
         alt: "Agency 8 premium apartment dining and living room",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/agency/4.png",
+        src: "/assets/agency/4.png",
         alt: "Agency 8 modern beachfront residence exterior",
         position: "50% 52%",
       },
@@ -123,11 +123,11 @@ export const projectDetails = [
     videoTitle: "explore real estate in dubai",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
-      src: "https://unitedstrategicsolutions.com/assets/blurred.png",
+      src: "/assets/blurred.png",
       alt: "Blurred video preview of the Agency 8 real estate campaign",
       position: "50% 44%",
     },
-    videoSrc: "https://unitedstrategicsolutions.com/assets/agency/Elite Residences Penthouse 8101.mp4",
+    videoSrc: "/assets/agency/Elite Residences Penthouse 8101.mp4",
     metadata: {
       title: "Agency 8 Email & WhatsApp Strategy | USS Projects",
       description:
@@ -142,29 +142,29 @@ export const projectDetails = [
     description:
       "Sadia Psychology is a content creator and educator with a global audience of more than 800K+ Instagram & YouTube followers. USS partnered with Sadia to develop, launch and market her 2024 planner, turning her content into a physical product that resonated with her audience and sold out during the Black Friday campaign.",
     heroImage: {
-      src: "https://unitedstrategicsolutions.com/assets/sadia/Sadia.png",
+      src: "/assets/sadia/Sadia.png",
       alt: "Sadia Psychology holding her planner",
       position: "20% 20%",
     },
     overviewSubtitle: "Sneak peak into Black Friday launch",
     galleryImages: [
       {
-        src: "https://unitedstrategicsolutions.com/assets/sadia/1.png",
+        src: "/assets/sadia/1.png",
         alt: "Sadia Psychology product launch studio portrait",
         position: "22% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/sadia/2.png",
+        src: "/assets/sadia/2.png",
         alt: "Sadia Psychology seated portrait for campaign content",
         position: "50% 43%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/sadia/3.png",
+        src: "/assets/sadia/3.png",
         alt: "Sadia Psychology planner product close up",
         position: "74% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/sadia/4.png",
+        src: "/assets/sadia/4.png",
         alt: "Sadia Psychology Black Friday launch portrait",
         position: "50% 35%",
       },
@@ -214,7 +214,7 @@ export const projectDetails = [
     videoTitle: "Black Friday product launch",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
-      src: "https://unitedstrategicsolutions.com/assets/blurred.png",
+      src: "/assets/blurred.png",
       alt: "Blurred video preview of the Sadia Psychology Black Friday launch",
       position: "50% 44%",
     },
@@ -232,29 +232,29 @@ export const projectDetails = [
     description:
       "Women Who Thrive is a Dubai based networking community bringing women together through business, connection and personal growth. USS were responsible for helping grow its membership, strengthen its presence and build an engaged community through organic marketing.",
     heroImage: {
-      src: "https://unitedstrategicsolutions.com/assets/women/Women.jpg",
+      src: "/assets/women/Women.jpg",
       alt: "Women Who Thrive event portrait with three women",
       position: "50% 45%",
     },
     overviewSubtitle: "Sneak peak into Women Who Thrive networking",
     galleryImages: [
       {
-        src: "https://unitedstrategicsolutions.com/assets/women/1.jpg",
+        src: "/assets/women/1.jpg",
         alt: "Women Who Thrive campaign attendee moment",
         position: "18% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/women/2.jpg",
+        src: "/assets/women/2.jpg",
         alt: "Women Who Thrive event branding and activation",
         position: "38% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/women/3.jpg",
+        src: "/assets/women/3.jpg",
         alt: "Women Who Thrive networking event guests",
         position: "56% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/women/4.jpg",
+        src: "/assets/women/4.jpg",
         alt: "Women Who Thrive community event audience",
         position: "78% 50%",
       },
@@ -304,14 +304,14 @@ export const projectDetails = [
     videoTitle: "building a strong, community driven brand.",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
-      src: "https://unitedstrategicsolutions.com/assets/blurred.png",
+      src: "/assets/blurred.png",
       alt: "Blurred video preview of the Women Who Thrive community campaign",
       position: "50% 44%",
     },
     videoSrcs: [
-      "https://unitedstrategicsolutions.com/assets/womenwho/WWT Event recap.mov",
-      "https://unitedstrategicsolutions.com/assets/womenwho/WWC.m4v",
-      "https://unitedstrategicsolutions.com/assets/womenwho/Gala Recap Chatz.mov",
+      "/assets/womenwho/WWT Event recap.mov",
+      "/assets/womenwho/WWC.m4v",
+      "/assets/womenwho/Gala Recap Chatz.mov",
     ],
     metadata: {
       title: "Women Who Thrive Membership Growth | USS Projects",
@@ -326,7 +326,7 @@ export const projectDetails = [
     description:
       "Picksperience is a startup focused on product sampling, helping brands deliver samples directly to targeted audiences, from office workers and students to gym members and beyond. The goal is to drive real engagement, build brand loyalty, and influence future purchasing decisions. USS partnered with Picksperience to support their growth and build awareness for the platform.",
     heroImage: {
-      src: "https://unitedstrategicsolutions.com/assets/picksperience/Pickspereince.png",
+      src: "/assets/picksperience/Pickspereince.png",
       alt: "Picksperience launch venue and sampling activation space",
       position: "50% 43%",
     },
@@ -338,7 +338,7 @@ export const projectDetails = [
         position: "18% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/picksperience/2.jpg",
+        src: "/assets/picksperience/2.jpg",
         alt: "Picksperience sampling campaign setup",
         position: "38% 50%",
       },
@@ -348,7 +348,7 @@ export const projectDetails = [
         position: "58% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/picksperience/4.jpg",
+        src: "/assets/picksperience/4.jpg",
         alt: "Picksperience brand sampling platform launch",
         position: "78% 50%",
       },
@@ -398,11 +398,11 @@ export const projectDetails = [
     videoTitle: "uae market launch",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
-      src: "https://unitedstrategicsolutions.com/assets/blurred.png",
+      src: "/assets/blurred.png",
       alt: "Blurred video preview of the Picksperience launch campaign",
       position: "50% 44%",
     },
-    videoSrc: "https://unitedstrategicsolutions.com/assets/picksperience/pick-1.mp4",
+    videoSrc: "/assets/picksperience/pick-1.mp4",
     metadata: {
       title: "Picksperience Sampling Agency Launch | USS Projects",
       description:
@@ -416,29 +416,29 @@ export const projectDetails = [
     description:
       "SupperClub is a premium dining and lifestyle membership offering access to exclusive benefits across 700+ venues, including top restaurants and 5 star hotels. USS partnered with SupperClub to support their growth and increase membership through a full-scale marketing approach.",
     heroImage: {
-      src: "https://unitedstrategicsolutions.com/assets/supperclub/Supperclub.png",
+      src: "/assets/supperclub/Supperclub.png",
       alt: "SupperClub poolside dining and cocktail experience",
       position: "50% 53%",
     },
     overviewSubtitle: "Sneak peak into SupperClub project",
     galleryImages: [
       {
-        src: "https://unitedstrategicsolutions.com/assets/supperclub/1.png",
+        src: "/assets/supperclub/1.png",
         alt: "SupperClub dining experience with cocktail by the pool",
         position: "20% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/supperclub/2.png",
+        src: "/assets/supperclub/2.png",
         alt: "SupperClub premium restaurant dish and table setting",
         position: "42% 58%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/supperclub/3.png",
+        src: "/assets/supperclub/3.png",
         alt: "SupperClub lifestyle membership poolside moment",
         position: "58% 30%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/supperclub/4.png",
+        src: "/assets/supperclub/4.png",
         alt: "SupperClub hospitality campaign food and drink detail",
         position: "72% 56%",
       },
@@ -488,14 +488,14 @@ export const projectDetails = [
     videoTitle: "supperclub golden partners",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
-      src: "https://unitedstrategicsolutions.com/assets/blurred.png",
+      src: "/assets/blurred.png",
       alt: "Blurred video preview of the SupperClub membership campaign",
       position: "50% 53%",
     },
     videoSrcs: [
-      "https://unitedstrategicsolutions.com/assets/supperclub/sup-1.mp4",
-      "https://unitedstrategicsolutions.com/assets/supperclub/sup-2.MOV",
-      "https://unitedstrategicsolutions.com/assets/supperclub/supper-3.mp4",
+      "/assets/supperclub/sup-1.mp4",
+      "/assets/supperclub/sup-2.MOV",
+      "/assets/supperclub/supper-3.mp4",
     ],
     metadata: {
       title: "SupperClub Membership Growth | USS Projects",
@@ -510,29 +510,29 @@ export const projectDetails = [
     description:
       "Cinnamood is a German bakery franchise famous for its signature cinnamon rolls. As the brand expanded into the UAE, we worked alongside their team to bring Cinnamood to a new audience while staying true to what made the brand so recognisable.",
     heroImage: {
-      src: "https://unitedstrategicsolutions.com/assets/cinamood/cinamood.jpg",
+      src: "/assets/cinamood/cinamood.jpg",
       alt: "Cinnamood cinnamon roll with chocolate topping",
       position: "50% 48%",
     },
     overviewSubtitle: "Sneak peak into Cinnamood launch",
     galleryImages: [
       {
-        src: "https://unitedstrategicsolutions.com/assets/cinamood/1.jpg",
+        src: "/assets/cinamood/1.jpg",
         alt: "Close up of a Cinnamood cinnamon roll",
         position: "34% 62%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/cinamood/2.jpg",
+        src: "/assets/cinamood/2.jpg",
         alt: "Cinnamood drink held on an escalator",
         position: "49% 34%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/cinamood/3.jpg",
+        src: "/assets/cinamood/3.jpg",
         alt: "Cinnamood pastries on a studio backdrop",
         position: "64% 48%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/cinamood/4.png",
+        src: "/assets/cinamood/4.png",
         alt: "Cinnamood launch content in Mall of Emirates",
         position: "50% 45%",
       },
@@ -582,16 +582,16 @@ export const projectDetails = [
     videoTitle: "mall of emirates launch",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
-      src: "https://unitedstrategicsolutions.com/assets/blurred.png",
+      src: "/assets/blurred.png",
       alt: "Blurred video preview of the Cinnamood Mall of Emirates launch",
       position: "50% 44%",
     },
     videoSrcs: [
-      "https://unitedstrategicsolutions.com/assets/cinamood/cinamood-1.mov",
-      "https://unitedstrategicsolutions.com/assets/cinamood/cinamood-2.mov",
-      "https://unitedstrategicsolutions.com/assets/cinamood/cinamood-3.mov",
+      "/assets/cinamood/cinamood-1.mov",
+      "/assets/cinamood/cinamood-2.mov",
+      "/assets/cinamood/cinamood-3.mov",
     ],
-    socialGridImage: "https://unitedstrategicsolutions.com/assets/socialGridPreviews/cinamood.png",
+    socialGridImage: "/assets/socialGridPreviews/cinamood.png",
     metadata: {
       title: "Cinnamood UAE Launch | USS Projects",
       description:
@@ -605,29 +605,29 @@ export const projectDetails = [
     description:
       "Yula Lounge is a Dubai based beach club and restaurant, rebranded from its original identity as Yalseh Lounge. USS led this transition, helping transform the brand from a traditional Arabic style beach lounge into a more modern, elevated concept creating strong content, supporting social media management and email marketing.",
     heroImage: {
-      src: "https://unitedstrategicsolutions.com/assets/yula/yula.jpg",
+      src: "/assets/yula/yula.jpg",
       alt: "Yula Lounge beach club terrace with Dubai skyline",
       position: "50% 44%",
     },
     overviewSubtitle: "Sneak peak into rebrand project",
     galleryImages: [
       {
-        src: "https://unitedstrategicsolutions.com/assets/yula/1.jpg",
+        src: "/assets/yula/1.jpg",
         alt: "Yula Lounge dessert with chocolate sauce",
         position: "50% 37%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/yula/2.jpg",
+        src: "/assets/yula/2.jpg",
         alt: "Yula Lounge terrace and skyline at night",
         position: "50% 48%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/yula/3.jpg",
+        src: "/assets/yula/3.jpg",
         alt: "Yula Lounge terrace with city lights",
         position: "48% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/yula/4.jpg",
+        src: "/assets/yula/4.jpg",
         alt: "Yula Lounge brunch plate and dessert",
         position: "50% 38%",
       },
@@ -677,12 +677,12 @@ export const projectDetails = [
     videoTitle: "beach lounge in Dubai",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
-      src: "https://unitedstrategicsolutions.com/assets/blurred.png",
+      src: "/assets/blurred.png",
       alt: "Blurred video preview of the Yula Lounge rebrand campaign",
       position: "50% 42%",
     },
-    videoSrc: "https://unitedstrategicsolutions.com/assets/yula/yula.mov",
-    socialGridImage: "https://unitedstrategicsolutions.com/assets/socialGridPreviews/yula.png",
+    videoSrc: "/assets/yula/yula.mov",
+    socialGridImage: "/assets/socialGridPreviews/yula.png",
     metadata: {
       title: "Yula Beach Lounge Rebrand | USS Projects",
       description:
@@ -703,22 +703,22 @@ export const projectDetails = [
     overviewSubtitle: "Sneak peak into Flowork opening",
     galleryImages: [
       {
-        src: "https://unitedstrategicsolutions.com/assets/flowork/1.jpg",
+        src: "/assets/flowork/1.jpg",
         alt: "Flowork workspace corridor and office interior",
         position: "20% 52%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/flowork/2.jpg",
+        src: "/assets/flowork/2.jpg",
         alt: "Flowork reception lounge and brand wall",
         position: "45% 48%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/flowork/3.jpg",
+        src: "/assets/flowork/3.jpg",
         alt: "Flowork working lounge with contemporary seating",
         position: "62% 48%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/flowork/4.jpg",
+        src: "/assets/flowork/4.jpg",
         alt: "Flowork private office lounge detail",
         position: "78% 50%",
       },
@@ -768,16 +768,16 @@ export const projectDetails = [
     videoTitle: "from strategy to launch",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
-      src: "https://unitedstrategicsolutions.com/assets/blurred.png",
+      src: "/assets/blurred.png",
       alt: "Blurred video preview of the Flowork launch campaign",
       position: "50% 48%",
     },
     videoSrcs: [
-      "https://unitedstrategicsolutions.com/assets/flowork/flow-1.m4v",
-      "https://unitedstrategicsolutions.com/assets/flowork/flow-2.mp4",
-      "https://unitedstrategicsolutions.com/assets/flowork/flow-3.mp4",
+      "/assets/flowork/flow-1.m4v",
+      "/assets/flowork/flow-2.mp4",
+      "/assets/flowork/flow-3.mp4",
     ],
-    socialGridImage: "https://unitedstrategicsolutions.com/assets/socialGridPreviews/flowork.png",
+    socialGridImage: "/assets/socialGridPreviews/flowork.png",
     metadata: {
       title: "Flowork Dubai Launch | USS Projects",
       description:
@@ -791,29 +791,29 @@ export const projectDetails = [
     description:
       "Blank DXB transformed an industrial warehouse into a flexible venue for corporate events, private hire and creative experiences. USS worked alongside the team from day one, build the business and create a launch strategy that generated awareness and bookings.",
     heroImage: {
-      src: "https://unitedstrategicsolutions.com/assets/blank/blank.jpg",
+      src: "/assets/blank/blank.jpg",
       alt: "Blank DXB warehouse venue space",
       position: "50% 50%",
     },
     overviewSubtitle: "Sneak peak into Blank DXB launch",
     galleryImages: [
       {
-        src: "https://unitedstrategicsolutions.com/assets/blank/1.png",
+        src: "/assets/blank/1.png",
         alt: "Blank DXB event venue with dramatic lighting",
         position: "18% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/blank/2.jpg",
+        src: "/assets/blank/2.jpg",
         alt: "Blank DXB corporate event setup concept",
         position: "40% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/blank/3.jpg",
+        src: "/assets/blank/3.jpg",
         alt: "Blank DXB warehouse event launch atmosphere",
         position: "62% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/blank/4.jpg",
+        src: "/assets/blank/4.jpg",
         alt: "Blank DXB empty warehouse venue space",
         position: "82% 50%",
       },
@@ -863,7 +863,7 @@ export const projectDetails = [
     videoTitle: "bringing a new concept to life",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
-      src: "https://unitedstrategicsolutions.com/assets/blurred.png",
+      src: "/assets/blurred.png",
       alt: "Blurred video preview of the Blank DXB launch campaign",
       position: "50% 50%",
     },
@@ -888,7 +888,7 @@ export const projectDetails = [
     overviewSubtitle: "Sneak peak into reclaim launch in US",
     galleryImages: [
       {
-        src: "https://unitedstrategicsolutions.com/assets/reclaim1.png",
+        src: "/assets/reclaim1.png",
         alt: "Reclaim travel luggage in airport terminal",
         position: "16% 50%",
       },
@@ -898,12 +898,12 @@ export const projectDetails = [
         position: "38% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/reclaim3.png",
+        src: "/assets/reclaim3.png",
         alt: "Traveler with luggage before boarding",
         position: "58% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/reclaim4.png",
+        src: "/assets/reclaim4.png",
         alt: "US travel destination skyline and airport route",
         position: "82% 50%",
       },
@@ -953,21 +953,21 @@ export const projectDetails = [
     videoTitle: "the future of travel is hand-free",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
-      src: "https://unitedstrategicsolutions.com/assets/blurred.png",
+      src: "/assets/blurred.png",
       alt: "Blurred video preview of the Reclaim US launch campaign",
       position: "50% 50%",
     },
     videoSrcs: [
-      "https://unitedstrategicsolutions.com/assets/reclaim/Video 1.mp4",
-      "https://unitedstrategicsolutions.com/assets/reclaim/Video 2.mp4",
-      "https://unitedstrategicsolutions.com/assets/reclaim/Video 3.mp4",
+      "/assets/reclaim/Video 1.mp4",
+      "/assets/reclaim/Video 2.mp4",
+      "/assets/reclaim/Video 3.mp4",
     ],
     metadata: {
       title: "Reclaim US Launch | USS Projects",
       description:
         "A USS project overview for launching Reclaim in the US travel market through marketing strategy, paid media, email marketing, and content creation.",
     },
-    socialGridImage: "https://unitedstrategicsolutions.com/assets/socialGridPreviews/reclaim.png",
+    socialGridImage: "/assets/socialGridPreviews/reclaim.png",
   },
   {
     slug: "adidas-middle-east",
@@ -976,29 +976,29 @@ export const projectDetails = [
     description:
       "Adidas Middle East partnered with USS to deliver the launch of a new product through a high impact event experience. From event planning and on the day delivery to content creation, we helped bring the launch to life while producing assets that continued driving engagement long after the event.",
     heroImage: {
-      src: "https://unitedstrategicsolutions.com/assets/adidas/Adidas.jpg",
+      src: "/assets/adidas/Adidas.jpg",
       alt: "Adidas Middle East launch event crowd",
       position: "50% 40%",
     },
     overviewSubtitle: "Sneak peak into Adidas event",
     galleryImages: [
       {
-        src: "https://unitedstrategicsolutions.com/assets/adidas/1.jpg",
+        src: "/assets/adidas/1.jpg",
         alt: "Adidas campaign talent in red track jacket",
         position: "50% 47%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/adidas/2.jpg",
+        src: "/assets/adidas/2.jpg",
         alt: "Adidas Originals event product moment",
         position: "38% 48%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/adidas/3.jpg",
+        src: "/assets/adidas/3.jpg",
         alt: "Adidas Middle East launch DJ and event crowd",
         position: "52% 38%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/adidas/4.jpg",
+        src: "/assets/adidas/4.jpg",
         alt: "Adidas Middle East launch guests",
         position: "72% 42%",
       },
@@ -1048,11 +1048,11 @@ export const projectDetails = [
     videoTitle: "adidas middle east launch event",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
-      src: "https://unitedstrategicsolutions.com/assets/blurred.png",
+      src: "/assets/blurred.png",
       alt: "Blurred video preview of the Adidas Middle East product launch",
       position: "50% 40%",
     },
-    videoSrc: "https://unitedstrategicsolutions.com/assets/adidas/adidas.mp4",
+    videoSrc: "/assets/adidas/adidas.mp4",
     metadata: {
       title: "Adidas Middle East Product Launch | USS Projects",
       description:
@@ -1066,29 +1066,29 @@ export const projectDetails = [
     description:
       "Fête Events is a luxury event management company delivering bespoke weddings, corporate events, private celebrations and brand activations globally. USS partnered with the team to strengthen its digital presence through strategy, paid media, social media management and email marketing, helping the brand reach more of the right audience.",
     heroImage: {
-      src: "https://unitedstrategicsolutions.com/assets/fete/Fete.png",
+      src: "/assets/fete/Fete.png",
       alt: "Fete Events passport and globe",
       position: "50% 50%",
     },
     overviewSubtitle: "SNEAK PEAK INTO FETE LUXURY EVENTS",
     galleryImages: [
       {
-        src: "https://unitedstrategicsolutions.com/assets/fete/1.png",
+        src: "/assets/fete/1.png",
         alt: "Fete Events globe and map",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/fete/2.png",
+        src: "/assets/fete/2.png",
         alt: "Fete Events passports",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/fete/3.jpg",
+        src: "/assets/fete/3.jpg",
         alt: "Fete Events small globe with flags",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/fete/4.jpg",
+        src: "/assets/fete/4.jpg",
         alt: "Fete Events packing suitcase",
         position: "50% 50%",
       },
@@ -1138,7 +1138,7 @@ export const projectDetails = [
     videoTitle: "mall of emirates launch",
     videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     videoPreview: {
-      src: "https://unitedstrategicsolutions.com/assets/blurred.png",
+      src: "/assets/blurred.png",
       alt: "Blurred video preview of the Fete Events campaign",
       position: "50% 50%",
     },
@@ -1148,7 +1148,7 @@ export const projectDetails = [
         "A USS project overview for Fête Events, delivering bespoke, extraordinary corporate events through comprehensive marketing strategy and digital presence.",
     },
     hideVideoSection: true,
-    socialGridImage: "https://unitedstrategicsolutions.com/assets/socialGridPreviews/fete.png",
+    socialGridImage: "/assets/socialGridPreviews/fete.png",
   },
   {
     slug: "precision-talk",
@@ -1157,29 +1157,29 @@ export const projectDetails = [
     description:
       "Precision Talk is an AI voice agent solution designed to help businesses capture more opportunities by handling customer calls instantly, 24/7. Built for businesses that rely on inbound and outbound enquiries and bookings, Precision Talk eliminates missed calls, improves response times, and delivers a consistent customer experience at scale. USS partnered with Precision Talk to launch the brand, establish its market position and drive awareness.",
     heroImage: {
-      src: "https://unitedstrategicsolutions.com/assets/precision/precision.png",
+      src: "/assets/precision/precision.png",
       alt: "Precision Talk AI voice agent dashboard",
       position: "20% 20%",
     },
     overviewSubtitle: "BUILDING THE FUTURE OF CUSTOMER COMMUNICATION",
     galleryImages: [
       {
-        src: "https://unitedstrategicsolutions.com/assets/precision/1.png",
+        src: "/assets/precision/1.png",
         alt: "Precision Talk customer support AI",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/precision/2.png",
+        src: "/assets/precision/2.png",
         alt: "Precision Talk dashboard interface",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/precision/3.png",
+        src: "/assets/precision/3.png",
         alt: "Precision Talk missed call recovery",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/precision/4.png",
+        src: "/assets/precision/4.png",
         alt: "Precision Talk automated booking system",
         position: "50% 50%",
       },
@@ -1229,7 +1229,7 @@ export const projectDetails = [
     videoTitle: "mall of emirates launch",
     videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     videoPreview: {
-      src: "https://unitedstrategicsolutions.com/assets/blurred.png",
+      src: "/assets/blurred.png",
       alt: "Blurred video preview of the Precision Talk campaign",
       position: "50% 50%",
     },
@@ -1247,29 +1247,29 @@ export const projectDetails = [
     description:
       "Disturbed Innovations Group (DIG) creates immersive brand experiences, technology activations and large scale events globally. As the business evolved from Disturbed Media Group into DIG, USS led the rebrand with a new website, fresh social presence, sales materials and a stronger brand presence across every touchpoint.",
     heroImage: {
-      src: "https://unitedstrategicsolutions.com/assets/disturbed-innovations/disturbed.png",
+      src: "/assets/disturbed-innovations/disturbed.png",
       alt: "Disturbed Innovations Group event production and brand experience",
       position: "50% 50%",
     },
     overviewSubtitle: "DIG DIGITAL TRANSFORMATION",
     galleryImages: [
       {
-        src: "https://unitedstrategicsolutions.com/assets/disturbed-innovations/1.png",
+        src: "/assets/disturbed-innovations/1.png",
         alt: "Disturbed Innovations immersive brand experience",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/disturbed-innovations/2.jpg",
+        src: "/assets/disturbed-innovations/2.jpg",
         alt: "Disturbed Innovations technology activation",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/disturbed-innovations/3.jpg",
+        src: "/assets/disturbed-innovations/3.jpg",
         alt: "Disturbed Innovations event production",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/disturbed-innovations/4.jpg",
+        src: "/assets/disturbed-innovations/4.jpg",
         alt: "Disturbed Innovations large scale event",
         position: "50% 50%",
       },
@@ -1319,12 +1319,12 @@ export const projectDetails = [
     videoTitle: "immersive 3D technology",
     videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     videoPreview: {
-      src: "https://unitedstrategicsolutions.com/assets/blurred.png",
+      src: "/assets/blurred.png",
       alt: "Blurred video preview of the Disturbed Innovations campaign",
       position: "50% 50%",
     },
-    videoSrc: "https://unitedstrategicsolutions.com/assets/disturbed-innovations/dig.mp4",
-    socialGridImage: "https://unitedstrategicsolutions.com/assets/socialGridPreviews/disturbed.png",
+    videoSrc: "/assets/disturbed-innovations/dig.mp4",
+    socialGridImage: "/assets/socialGridPreviews/disturbed.png",
     metadata: {
       title: "Disturbed Innovations Group Rebrand | USS Projects",
       description:
@@ -1339,29 +1339,29 @@ export const projectDetails = [
     description:
       "Afro Maya is a fashion and lifestyle brand creating pieces inspired by culture and individuality. USS partnered with the brand to build a stronger digital presence through a new website, content creation, social media management  and email marketing, helping more people discover and shop the brand online.",
     heroImage: {
-      src: "https://unitedstrategicsolutions.com/assets/afro/afro.jpg",
+      src: "/assets/afro/afro.jpg",
       alt: "Afro Maya fashion and lifestyle e-commerce brand",
       position: "50% 50%",
     },
     overviewSubtitle: "SNEAK PEAK INTO AFRO MAYA FASHION WORLD",
     galleryImages: [
       {
-        src: "https://unitedstrategicsolutions.com/assets/afro/1.jpg",
+        src: "/assets/afro/1.jpg",
         alt: "Afro Maya contemporary fashion piece",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/afro/2.jpg",
+        src: "/assets/afro/2.jpg",
         alt: "Afro Maya lifestyle apparel",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/afro/3.jpg",
+        src: "/assets/afro/3.jpg",
         alt: "Afro Maya e-commerce collection",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/afro/4.jpg",
+        src: "/assets/afro/4.jpg",
         alt: "Afro Maya fashion brand shoot",
         position: "50% 50%",
       },
@@ -1411,11 +1411,11 @@ export const projectDetails = [
     videoTitle: "afro maya fashion world",
     videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     videoPreview: {
-      src: "https://unitedstrategicsolutions.com/assets/blurred.png",
+      src: "/assets/blurred.png",
       alt: "Blurred video preview of the Afro Maya campaign",
       position: "50% 50%",
     },
-    videoSrc: "https://unitedstrategicsolutions.com/assets/afro/Horizontal.mov",
+    videoSrc: "/assets/afro/Horizontal.mov",
     socialGridImage: "/assets/afroz.png",
     metadata: {
       title: "Afro Maya E-Commerce Fashion | USS Projects",
@@ -1430,29 +1430,29 @@ export const projectDetails = [
     description:
       "Coshe Juices is a wellness brand offering fresh juices, cleanses and membership-based wellness plans. We partnered with Coshe to strengthen their digital presence, helping grow memberships through a combination of website design, content, social media and email marketing.",
     heroImage: {
-      src: "https://unitedstrategicsolutions.com/assets/coshe/coshe.jpg",
+      src: "/assets/coshe/coshe.jpg",
       alt: "Coshe Juices wellness brand lifestyle",
       position: "50% 50%",
     },
     overviewSubtitle: "COSHE JUICES TAKING OVER WELLNESS INDUSTRY",
     galleryImages: [
       {
-        src: "https://unitedstrategicsolutions.com/assets/coshe/1.jpg",
+        src: "/assets/coshe/1.jpg",
         alt: "Coshe Juices healthy lifestyle product",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/coshe/2.png",
+        src: "/assets/coshe/2.png",
         alt: "Coshe Juices membership growth campaign",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/coshe/3.jpg",
+        src: "/assets/coshe/3.jpg",
         alt: "Coshe Juices wellness juice cleanse",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/coshe/4.png",
+        src: "/assets/coshe/4.png",
         alt: "Coshe Juices digital ecosystem",
         position: "50% 50%",
       },
@@ -1502,7 +1502,7 @@ export const projectDetails = [
     videoTitle: "mall of emirates launch",
     videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     videoPreview: {
-      src: "https://unitedstrategicsolutions.com/assets/blurred.png",
+      src: "/assets/blurred.png",
       alt: "Blurred video preview of the Coshe Juices campaign",
       position: "50% 50%",
     },
@@ -1521,7 +1521,7 @@ export const projectDetails = [
     description:
       "M&N Nail Spa is a luxury salon in Dubai offering nail, beauty and wellness treatments in a modern, premium setting. USS partnered with M&N Nail Spa to grow brand awareness, attract new customers and strengthen its presence through paid media, content creation, social media management and marketing strategy.",
     heroImage: {
-      src: "https://unitedstrategicsolutions.com/assets/m&n/m&n.jpg",
+      src: "/assets/m&n/m&n.jpg",
       alt: "M&N Nail Spa luxury salon experience",
       position: "65% 65%",
     },
@@ -1533,17 +1533,17 @@ export const projectDetails = [
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/m&n/4.jpg",
+        src: "/assets/m&n/4.jpg",
         alt: "M&N Nail Spa premium client experience",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/m&n/2.jpg",
+        src: "/assets/m&n/2.jpg",
         alt: "M&N Nail Spa luxury interior",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/m&n/3.jpg",
+        src: "/assets/m&n/3.jpg",
         alt: "M&N Nail Spa wellness service",
         position: "50% 50%",
       },
@@ -1593,7 +1593,7 @@ export const projectDetails = [
     videoTitle: "mall of emirates launch",
     videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     videoPreview: {
-      src: "https://unitedstrategicsolutions.com/assets/blurred.png",
+      src: "/assets/blurred.png",
       alt: "Blurred video preview of the M&N Nail Spa campaign",
       position: "50% 50%",
     },
@@ -1611,29 +1611,29 @@ export const projectDetails = [
     description:
       "Tish Wonders is a food and wellness creator sharing healthy recipes and lifestyle content with a global audience. USS partnered with Tish to launch her healthy cooking e-book, supporting the campaign with a dedicated website, email marketing and a Black Friday launch strategy that turned audience engagement into sales.",
     heroImage: {
-      src: "https://unitedstrategicsolutions.com/assets/tish/tish.png",
+      src: "/assets/tish/tish.png",
       alt: "Tish Wonders healthy cooking e-book launch",
       position: "50% 50%",
     },
     overviewSubtitle: "LAUNCHING E-BOOK DURING BLACK FRIDAY",
     galleryImages: [
       {
-        src: "https://unitedstrategicsolutions.com/assets/tish/1.jpg",
+        src: "/assets/tish/1.jpg",
         alt: "Tish Wonders recipe content",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/tish/2.jpg",
+        src: "/assets/tish/2.jpg",
         alt: "Tish Wonders wellness lifestyle",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/tish/3.png",
+        src: "/assets/tish/3.png",
         alt: "Tish Wonders e-book product",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/tish/4.png",
+        src: "/assets/tish/4.png",
         alt: "Tish Wonders campaign creative",
         position: "50% 50%",
       },
@@ -1683,7 +1683,7 @@ export const projectDetails = [
     videoTitle: "mall of emirates launch",
     videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     videoPreview: {
-      src: "https://unitedstrategicsolutions.com/assets/blurred.png",
+      src: "/assets/blurred.png",
       alt: "Blurred video preview of the Tish Wonders campaign",
       position: "50% 50%",
     },
@@ -1701,29 +1701,29 @@ export const projectDetails = [
     description:
       "Residency Advanced helps individuals and families secure second residency and citizenship through investment programmes. USS partnered with Residency Advanced to grow lead generation through Google Ads, connecting the brand with people actively searching for their services.",
     heroImage: {
-      src: "https://unitedstrategicsolutions.com/assets/residency-advanced/Residency.jpg",
+      src: "/assets/residency-advanced/Residency.jpg",
       alt: "Residency Advanced second citizenship and residency",
       position: "50% 50%",
     },
     overviewSubtitle: "GLOBAL CITIZENSHIP",
     galleryImages: [
       {
-        src: "https://unitedstrategicsolutions.com/assets/residency-advanced/1.jpg",
+        src: "/assets/residency-advanced/1.jpg",
         alt: "Residency Advanced global mobility passport",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/residency-advanced/2.jpg",
+        src: "/assets/residency-advanced/2.jpg",
         alt: "Residency Advanced citizenship programs",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/residency-advanced/3.jpg",
+        src: "/assets/residency-advanced/3.jpg",
         alt: "Residency Advanced global investment",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/residency-advanced/4.jpg",
+        src: "/assets/residency-advanced/4.jpg",
         alt: "Residency Advanced alternative residencies",
         position: "50% 50%",
       },
@@ -1773,7 +1773,7 @@ export const projectDetails = [
     videoTitle: "mall of emirates launch",
     videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     videoPreview: {
-      src: "https://unitedstrategicsolutions.com/assets/blurred.png",
+      src: "/assets/blurred.png",
       alt: "Blurred video preview of the Residency Advanced campaign",
       position: "50% 50%",
     },
@@ -1791,7 +1791,7 @@ export const projectDetails = [
     description:
       "Oak Restaurant us a contemporary dining destination in Dubai, bringing together modern Asian cuisine, premium interiors and a vibrant atmosphere. USS partnered with Oak to create high quality photo and video content that captured the food, the venue and the overall dining experience.",
     heroImage: {
-      src: "https://unitedstrategicsolutions.com/assets/oakrestaurant/Hero.jpg",
+      src: "/assets/oakrestaurant/Hero.jpg",
       alt: "Residency Advanced second citizenship and residency",
       position: "50% 50%",
     },
@@ -1799,17 +1799,17 @@ export const projectDetails = [
     galleryLayout: "centerVideo",
 galleryImages: [
   {
-    src: "https://unitedstrategicsolutions.com/assets/Sushi.jpeg",
+    src: "/assets/Sushi.jpeg",
     alt: "Oak Restaurant interior ambience",
     position: "50% 50%",
   },
   {
-    src: "https://unitedstrategicsolutions.com/assets/oak/oakVideo.mov",
+    src: "/assets/oak/oakVideo.mov",
     alt: "Oak Restaurant video showcase",
     position: "50% 50%",
   },
   {
-    src: "https://unitedstrategicsolutions.com/assets/Susha.jpeg",
+    src: "/assets/Susha.jpeg",
     alt: "Oak Restaurant dish presentation",
     position: "50% 50%",
   },
@@ -1859,7 +1859,7 @@ galleryImages: [
     videoTitle: "mall of emirates launch",
     videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     videoPreview: {
-      src: "https://unitedstrategicsolutions.com/assets/blurred.png",
+      src: "/assets/blurred.png",
       alt: "Blurred video preview of the Residency Advanced campaign",
       position: "50% 50%",
     },
@@ -1877,14 +1877,14 @@ galleryImages: [
     description:
       "Fabir Elite is a real estate entrepreneur who successfully transitioned from content creator to agency owner. USS partnered with her to produce high quality content that introduced her new agency, strengthened her personal brand and positioned her as a trusted voice within the Dubai property market.",
     heroImage: {
-      src: "https://unitedstrategicsolutions.com/assets/fabri/fabri.jpg",
+      src: "/assets/fabri/fabri.jpg",
       alt: "Fabri Elite personal brand hero image",
       position: "50% 40%",
     },
     overviewSubtitle: "FABRI ELITE AGENCY",
     galleryImages: [
       {
-        src: "https://unitedstrategicsolutions.com/assets/fabri/1.jpg",
+        src: "/assets/fabri/1.jpg",
         alt: "Fabri Elite ribbon cutting",
         position: "50% 50%",
       },
@@ -1894,12 +1894,12 @@ galleryImages: [
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/fabri/3.jpg",
+        src: "/assets/fabri/3.jpg",
         alt: "Fabri Elite meeting",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/fabri/4.jpg",
+        src: "/assets/fabri/4.jpg",
         alt: "Fabri Elite man presenting",
         position: "50% 50%",
       },
@@ -1949,14 +1949,14 @@ galleryImages: [
     videoTitle: "fabri elite agency",
     videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     videoPreview: {
-      src: "https://unitedstrategicsolutions.com/assets/blurred.png",
+      src: "/assets/blurred.png",
       alt: "Blurred video preview of the Fabri Elite campaign",
       position: "50% 50%",
     },
     videoSrcs: [
-      "https://unitedstrategicsolutions.com/assets/fabri/FAB OFFICE-4K.mov",
-      "https://unitedstrategicsolutions.com/assets/fabri/FAB DECA-4K.MOV",
-      "https://unitedstrategicsolutions.com/assets/fabri/FAB 2ND VIEWING.mov",
+      "/assets/fabri/FAB OFFICE-4K.mov",
+      "/assets/fabri/FAB DECA-4K.MOV",
+      "/assets/fabri/FAB 2ND VIEWING.mov",
     ],
     metadata: {
       title: "Fabri Elite Personal Brand | USS Projects",
@@ -1978,22 +1978,22 @@ galleryImages: [
     overviewSubtitle: "SNEAK PEAK INTO ST. GEORGES",
     galleryImages: [
       {
-        src: "https://unitedstrategicsolutions.com/assets/st/1.png",
+        src: "/assets/st/1.png",
         alt: "St George's globe",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/st/2.png",
+        src: "/assets/st/2.png",
         alt: "St George's passports",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/st/3.jpg",
+        src: "/assets/st/3.jpg",
         alt: "St George's flags",
         position: "50% 50%",
       },
       {
-        src: "https://unitedstrategicsolutions.com/assets/st/4.jpg",
+        src: "/assets/st/4.jpg",
         alt: "St George's airport",
         position: "50% 50%",
       },
@@ -2043,11 +2043,11 @@ galleryImages: [
     videoTitle: "content strategy",
     videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     videoPreview: {
-      src: "https://unitedstrategicsolutions.com/assets/blurred.png",
+      src: "/assets/blurred.png",
       alt: "Blurred video preview of the St George's campaign",
       position: "50% 50%",
     },
-    videoSrc: "https://unitedstrategicsolutions.com/assets/st_george/Garden landscape no branding.mov",
+    videoSrc: "/assets/st_george/Garden landscape no branding.mov",
     metadata: {
       title: "Property Content for St George's | USS Projects",
       description:

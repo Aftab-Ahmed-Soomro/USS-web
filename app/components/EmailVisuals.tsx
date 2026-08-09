@@ -4,82 +4,82 @@ import StaggerItem from "./Staggeritem";
 
 const emailVisuals = [
   {
-    src: "https://unitedstrategicsolutions.com/assets/emailGrids/1.png",
+    src: "/assets/emailGrids/1.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://unitedstrategicsolutions.com/assets/emailGrids/2.png",
+    src: "/assets/emailGrids/2.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://unitedstrategicsolutions.com/assets/emailGrids/3.png",
+    src: "/assets/emailGrids/3.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://unitedstrategicsolutions.com/assets/emailGrids/4.png",
+    src: "/assets/emailGrids/4.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://unitedstrategicsolutions.com/assets/emailGrids/5.png",
+    src: "/assets/emailGrids/5.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://unitedstrategicsolutions.com/assets/emailGrids/6.png",
+    src: "/assets/emailGrids/6.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://unitedstrategicsolutions.com/assets/emailGrids/7.png",
+    src: "/assets/emailGrids/7.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://unitedstrategicsolutions.com/assets/emailGrids/8.png",
+    src: "/assets/emailGrids/8.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://unitedstrategicsolutions.com/assets/emailGrids/9.png",
+    src: "/assets/emailGrids/9.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://unitedstrategicsolutions.com/assets/emailGrids/10.png",
+    src: "/assets/emailGrids/10.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://unitedstrategicsolutions.com/assets/emailGrids/11.png",
+    src: "/assets/emailGrids/11.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://unitedstrategicsolutions.com/assets/emailGrids/12.png",
+    src: "/assets/emailGrids/12.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://unitedstrategicsolutions.com/assets/emailGrids/13.png",
+    src: "/assets/emailGrids/13.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://unitedstrategicsolutions.com/assets/emailGrids/14.png",
+    src: "/assets/emailGrids/14.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://unitedstrategicsolutions.com/assets/emailGrids/15.png",
+    src: "/assets/emailGrids/15.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://unitedstrategicsolutions.com/assets/emailGrids/16.png",
+    src: "/assets/emailGrids/16.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },

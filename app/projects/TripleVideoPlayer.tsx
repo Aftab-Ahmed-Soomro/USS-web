@@ -1,7 +1,8 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
+import { LazyVideo } from "../components/common/LazyVideo";
 
 interface TripleVideoPlayerProps {
   srcs: string[];
@@ -10,31 +11,23 @@ interface TripleVideoPlayerProps {
 
 export function TripleVideoPlayer({ srcs, productName }: TripleVideoPlayerProps) {
   const [isMuted, setIsMuted] = useState(true);
-  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   const toggleMute = () => {
-    const newMuted = !isMuted;
-    setIsMuted(newMuted);
-    videoRefs.current.forEach((video) => {
-      if (video) video.muted = newMuted;
-    });
+    setIsMuted((prev) => !prev);
   };
 
   return (
     <div className="relative mx-auto mt-[24px] sm:mt-[48px] aspect-[1014/540] max-w-[1014px] overflow-hidden rounded-[10px] bg-[#181818] shadow-[0_0_65px_rgba(255,255,255,0.23)] group">
       <div className="flex h-full gap-[2px] sm:gap-[3px]">
         {srcs.map((src, i) => (
-          <video
+          <LazyVideo
             key={src}
-            ref={(el) => {
-              videoRefs.current[i] = el;
-            }}
             src={src}
             autoPlay
             loop
             muted={isMuted}
             playsInline
-            preload="metadata"
+            preload="none"
             aria-label={`${productName} campaign video ${i + 1}`}
             className="h-full flex-1 object-cover"
           />
