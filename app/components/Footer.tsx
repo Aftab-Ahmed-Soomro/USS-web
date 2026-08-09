@@ -40,7 +40,7 @@ const servicesCol2 = [
   { name: "Marketing Strategy", href: "/marketing-strategy" },
   { name: "Social Media Marketing", href: "/social-media-management" },
   { name: "Content Creation", href: "/content-creation" },
-  { name: "Web Development", href: "/website" },
+  { name: "Web Development", href: "/website-development" },
   { name: "Branding & Graphics", href: "/branding" },
 ];
 
@@ -61,8 +61,8 @@ const servicesData = {
     items: [
       { label: "Social Media Marketing", href: "/social-media-management" },
       { label: "Content Creation", href: "/content-creation" },
-      { label: "Website UX Design", href: "/website" },
-      { label: "Website Development", href: "/website" },
+      { label: "Website UX Design", href: "/website-design" },
+      { label: "Website Development", href: "/website-development" },
       { label: "Branding & Graphics", href: "/branding" },
     ],
   },
