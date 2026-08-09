@@ -81,7 +81,6 @@ export function BuildGrowthSection() {
             maskImage: "radial-gradient(ellipse 70% 70% at 50% 50%, black 60%, transparent 100%)",
           }}
           sizes="(max-width: 1024px) 100vw, 1000px"
-          priority
         />
 
         {/* Clickable Overlay for Left Circle (Performance) */}

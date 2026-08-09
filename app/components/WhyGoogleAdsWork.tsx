@@ -52,7 +52,6 @@ export function WhyGoogleAdsWork({
                   fill
                   sizes="(min-width: 1024px) 580px, 100vw"
                   className="object-cover"
-                  priority
                 />
               </div>
             </div>

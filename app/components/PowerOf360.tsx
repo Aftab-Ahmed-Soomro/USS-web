@@ -161,7 +161,6 @@ export function PowerOf360() {
             alt={activeItem.alt}
             fill
             className={`object-cover ${activeItem.bgClass || "object-top"}`}
-            priority
           />
         </motion.div>
       </AnimatePresence>

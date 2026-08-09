@@ -1,41 +1,45 @@
 "use client";
 
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { Header } from "../components/Header";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ConsultationForm } from "../components/ConsultationForm";
 import { Brands } from "../components/Brands";
-import { Testimonials } from "../components/Testimonials";
-import { GoodCompanyMap } from "../components/GoodCompanyMap";
-import { Team } from "../components/Team";
-import { Footer } from "../components/Footer";
 import Stagger from "../components/Stagger";
 import StaggerItem from "../components/Staggeritem";
-import { PowerOf360 } from "../components/PowerOf360";
-import { UssDifferentSection } from "../components/UssDifferentSection";
-import { BuildGrowthSection } from "../components/BuildGrowthSection";
-import TeamAccordion from "../components/TeamAccordion";
-import { LevelsOfFunnel } from "../components/LevelsOfFunnel";
-import { StrategyByBusinessGoal } from "../components/StrategyByBusinessGoal";
-import { WhyGoogleAdsWork } from "../components/WhyGoogleAdsWork";
-import TargetRightPeople, { TargetItem } from "../components/TargetRightPeople";
-import { RevenueMethod } from "../components/RevenueMethod";
-import PlatformsWeWorkWith from "../components/PlatformsWeWorkWith";
 import FadeRight from "../components/FadeRight";
-import { EmailVisuals } from "../components/EmailVisuals";
-import { WhyWhatsappWorks } from "../components/WhyWhatsappWorks";
-import WhatsAppChannels from "../components/WhatsAppChannels";
-import ConversationFlow from "../components/ConversationFlow";
-import EmailMarketingQuote from "../components/EmailMarketingQuote";
-import OurOrganicSocialMediaApproach from "../components/OurOrganicSocialMediaApproach";
-import SocialMediaRevenueMethod from "../components/SocialMediaRevenueMethod";
-import { ContentCreationGrid } from "../components/ContentCreationGrid";
-import DedicatedPartner from "../components/DedicatedPartner";
-import CaseStudies from "../components/CaseStudies";
-import { BrandingServices } from "../components/BrandingServices";
-import { SixStepSystem } from "../components/SixStepSystem";
 import FadeUp from "../components/FadeUp";
+import type { TargetItem } from "../components/TargetRightPeople";
+
+// Dynamic imports for below-the-fold components to reduce initial JS bundle size and improve load speed
+const Testimonials = dynamic(() => import("../components/Testimonials").then((mod) => mod.Testimonials));
+const GoodCompanyMap = dynamic(() => import("../components/GoodCompanyMap").then((mod) => mod.GoodCompanyMap));
+const Team = dynamic(() => import("../components/Team").then((mod) => mod.Team));
+const Footer = dynamic(() => import("../components/Footer").then((mod) => mod.Footer));
+const PowerOf360 = dynamic(() => import("../components/PowerOf360").then((mod) => mod.PowerOf360));
+const UssDifferentSection = dynamic(() => import("../components/UssDifferentSection").then((mod) => mod.UssDifferentSection));
+const BuildGrowthSection = dynamic(() => import("../components/BuildGrowthSection").then((mod) => mod.BuildGrowthSection));
+const TeamAccordion = dynamic(() => import("../components/TeamAccordion"));
+const LevelsOfFunnel = dynamic(() => import("../components/LevelsOfFunnel").then((mod) => mod.LevelsOfFunnel));
+const StrategyByBusinessGoal = dynamic(() => import("../components/StrategyByBusinessGoal").then((mod) => mod.StrategyByBusinessGoal));
+const WhyGoogleAdsWork = dynamic(() => import("../components/WhyGoogleAdsWork").then((mod) => mod.WhyGoogleAdsWork));
+const TargetRightPeople = dynamic(() => import("../components/TargetRightPeople"));
+const RevenueMethod = dynamic(() => import("../components/RevenueMethod").then((mod) => mod.RevenueMethod));
+const PlatformsWeWorkWith = dynamic(() => import("../components/PlatformsWeWorkWith"));
+const EmailVisuals = dynamic(() => import("../components/EmailVisuals").then((mod) => mod.EmailVisuals));
+const WhyWhatsappWorks = dynamic(() => import("../components/WhyWhatsappWorks").then((mod) => mod.WhyWhatsappWorks));
+const WhatsAppChannels = dynamic(() => import("../components/WhatsAppChannels"));
+const ConversationFlow = dynamic(() => import("../components/ConversationFlow"));
+const EmailMarketingQuote = dynamic(() => import("../components/EmailMarketingQuote"));
+const OurOrganicSocialMediaApproach = dynamic(() => import("../components/OurOrganicSocialMediaApproach"));
+const SocialMediaRevenueMethod = dynamic(() => import("../components/SocialMediaRevenueMethod"));
+const ContentCreationGrid = dynamic(() => import("../components/ContentCreationGrid").then((mod) => mod.ContentCreationGrid));
+const DedicatedPartner = dynamic(() => import("../components/DedicatedPartner"));
+const CaseStudies = dynamic(() => import("../components/CaseStudies"));
+const BrandingServices = dynamic(() => import("../components/BrandingServices").then((mod) => mod.BrandingServices));
+const SixStepSystem = dynamic(() => import("../components/SixStepSystem").then((mod) => mod.SixStepSystem));
 
 const strategyAccordionData = [
   {
@@ -317,7 +321,6 @@ function EmailOverview() {
               src="/assets/email-market.png"
               alt="Email marketing campaign designs"
               fill
-              priority
               sizes="(min-width: 1024px) 400px, calc(100vw - 48px)"
               className="object-cover object-top"
             />

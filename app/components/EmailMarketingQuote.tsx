@@ -25,7 +25,6 @@ export default function EmailMarketingQuote({
             alt="Quote"
             width={19}
             height={39}
-            priority
             className="w-[19px] h-[39px] object-contain"
           />
           <Image
@@ -33,7 +32,6 @@ export default function EmailMarketingQuote({
             alt="Quote"
             width={19}
             height={39}
-            priority
             className="w-[19px] h-[39px] object-contain"
           />
         </StaggerItem>
@@ -63,7 +61,6 @@ export default function EmailMarketingQuote({
             alt="Quote"
             width={19}
             height={39}
-            priority
             className="w-[19px] h-[39px] object-contain"
           />
           <Image
@@ -71,7 +68,6 @@ export default function EmailMarketingQuote({
             alt="Quote"
             width={19}
             height={39}
-            priority
             className="w-[19px] h-[39px] object-contain"
           />
         </StaggerItem>
