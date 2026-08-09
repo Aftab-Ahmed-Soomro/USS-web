@@ -17,7 +17,7 @@ export function GoodCompanyMap() {
       desktopSize: "sm:w-[120px] md:w-[140px] lg:w-[155px]",
     },
     {
-      src: "/assets/mapLogos/2.png",
+      src: "/assets/mapLogos/2.webp",
       alt: "Golden Falcon",
       // Mobile settings
       mobilePos: "top-[56%] left-[74%]",
@@ -27,7 +27,7 @@ export function GoodCompanyMap() {
       desktopSize: "sm:w-[80px] md:w-[95px] lg:w-[110px]",
     },
     {
-      src: "/assets/mapLogos/3.png",
+      src: "/assets/mapLogos/3.webp",
       alt: "Hiba by Amthakara",
       // Mobile settings
       mobilePos: "top-[58%] left-[32%]",
@@ -37,7 +37,7 @@ export function GoodCompanyMap() {
       desktopSize: "sm:w-[105px] md:w-[125px] lg:w-[140px]",
     },
     {
-      src: "/assets/mapLogos/4.png",
+      src: "/assets/mapLogos/4.webp",
       alt: "Beyond Performance",
       // Mobile settings
       mobilePos: "top-[25%] left-[58%]",

@@ -37,7 +37,7 @@ const relatedProjects = [
   {
     slug: "reclaim-us",
     name: "Reclaim",
-    image: "/assets/Untitled (418 x 180 px) (1).png",
+    image: "/assets/Untitled (418 x 180 px) (1).webp",
     copy: "We scaled awareness and customer acquisition across the US using Meta Ads, delivering highly targeted campaigns that generated bookings while maximising return on ad spend.",
     tags: ["Meta Ads", "US Expansion", "Customer Acquisition"],
     year: "2026",
@@ -46,7 +46,7 @@ const relatedProjects = [
   {
     slug: "supperclub",
     name: "SupperClub",
-    image: "/assets/Untitled (418 x 180 px) (2).png",
+    image: "/assets/Untitled (418 x 180 px) (2).webp",
     copy: "Using Meta Ads to grow SupperClub memberships, promoting exclusive experiences from 5 star hotel, restaurant and spa partners through highly targeted conversion campaigns.",
     tags: ["Membership Growth", "Meta Ads", "Hospitality"],
     year: "2026",
@@ -441,7 +441,7 @@ export default function MetaAdsPage() {
         logoClassName="w-[60px] lg:w-[120px]"
       />
       <WhyGoogleAdsWork
-        imageSrc="/assets/metaSide.png"
+        imageSrc="/assets/metaSide.webp"
         imageAlt="Meta Ads strategy expert"
         logoSrc="/assets/meta_logo_2.png"
         // headingPrefix="Meta"
@@ -481,10 +481,10 @@ export default function MetaAdsPage() {
       <RevenueMethod
         heading={<>how we build <br className="block sm:hidden" /> high performing <br className="hidden sm:block" />{" "}<span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>  <br className="block sm:hidden" /> meta campaigns</span></>}
         cards={[
-          { id: '01', title: 'Campaign Strategy', description: 'We define your objectives, audience, budget and campaign structure before launching.', bgImage: '/assets/method1.png' },
-          { id: '02', title: 'Audience Targeting', description: 'We build targeted audiences using demographics, interests, behaviours and customer data.', bgImage: '/assets/method2.png' },
-          { id: '03', title: 'Creative & Ad Content', description: 'We create engaging ad creatives and messaging designed to capture attention and drive action.', bgImage: '/assets/method3.png' },
-          { id: '04', title: 'Optimisation & Scaling', description: 'We continuously test, refine and scale campaigns using real performance data.', bgImage: '/assets/method4.png' },
+          { id: '01', title: 'Campaign Strategy', description: 'We define your objectives, audience, budget and campaign structure before launching.', bgImage: '/assets/method1.webp' },
+          { id: '02', title: 'Audience Targeting', description: 'We build targeted audiences using demographics, interests, behaviours and customer data.', bgImage: '/assets/method2.webp' },
+          { id: '03', title: 'Creative & Ad Content', description: 'We create engaging ad creatives and messaging designed to capture attention and drive action.', bgImage: '/assets/method3.webp' },
+          { id: '04', title: 'Optimisation & Scaling', description: 'We continuously test, refine and scale campaigns using real performance data.', bgImage: '/assets/method4.webp' },
         ]}
       />
       {/* <div className="sm:-mt-0 -mt-45"> */}

@@ -135,7 +135,7 @@ export function UssDifferentSection() {
       ref={sectionRef}
       className="relative z-10 bg-[#000] text-white overflow-hidden py-[30px] sm:py-[100px]"
       style={{
-        backgroundImage: "url('/assets/bgMain.png')",
+        backgroundImage: "url('/assets/bgMain.webp')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

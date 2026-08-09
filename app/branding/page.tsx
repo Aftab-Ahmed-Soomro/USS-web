@@ -137,7 +137,7 @@ const brandingLeftData = [
     category: "Company Profile",
     title: "Company Profiles",
     description: "Professionally designed company profiles that introduce your business, communicate your expertise and build credibility with potential clients.",
-    image: "/assets/branding/company.png",
+    image: "/assets/branding/company.webp",
   },
   {
     id: 2,
@@ -145,7 +145,7 @@ const brandingLeftData = [
     category: "Marketing Collateral",
     title: "Brochures",
     description: "Premium brochures that showcase your products, services and brand through clear, engaging visual communication.",
-    image: "/assets/branding/brochures.png",
+    image: "/assets/branding/brochures.webp",
   },
   {
     id: 3,
@@ -153,7 +153,7 @@ const brandingLeftData = [
     category: "Client Success",
     title: "Case Studies",
     description: "Professional case studies that demonstrate your work, showcase measurable outcomes and build trust through real client success stories.",
-    image: "/assets/Case Studies - 1.png",
+    image: "/assets/Case Studies - 1.webp",
   }
 ];
 
@@ -164,7 +164,7 @@ const brandingRightData = [
     category: "Sales Presentation",
     title: "Sales Decks",
     description: "Sales presentations designed to communicate your brand value, support conversations and improve client engagement.",
-    image: "/assets/Sales Decks - 1.png",
+    image: "/assets/Sales Decks - 1.webp",
     imageClass: "object-cover object-[130%_100%]"
   },
   {
@@ -173,7 +173,7 @@ const brandingRightData = [
     category: "Business Pitch",
     title: "Pitch Decks",
     description: "Strategic pitch presentations designed to communicate your vision, support investment opportunities and win new business.",
-    image: "/assets/Pitch Decks - 2.png",
+    image: "/assets/Pitch Decks - 2.webp",
   },
   {
     id: 6,
@@ -181,7 +181,7 @@ const brandingRightData = [
     category: "Investment Materials",
     title: "Investor Decks",
     description: "Investor presentations that clearly communicate your business model, growth strategy and long term vision with confidence.",
-    image: "/assets/Investor Decks - 1.png",
+    image: "/assets/Investor Decks - 1.webp",
   }
 ];
 
@@ -379,10 +379,10 @@ const MarketingStrategy = () => {
         tagline="OUR PROCESS"
         heading={<>how we bring <br /><span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>your brand to life</span></>}
         cards={[
-          { id: '01', title: 'Discover', description: 'Understand your business, audience, competitors and long term goals to build a strong strategic foundation', bgImage: '/assets/method1.png' },
-          { id: '02', title: 'Define', description: 'Define your positioning, messaging and creative direction before developing your visual identity', bgImage: '/assets/method2.png' },
-          { id: '03', title: 'Design', description: 'Design a distinctive visual identity, logo system and supporting brand assets that reflect your business', bgImage: '/assets/method3.png' },
-          { id: '04', title: 'Deliver', description: 'Deliver complete brand guidelines, launch-ready assets and everything needed for a consistent rollout.', bgImage: '/assets/method4.png' },
+          { id: '01', title: 'Discover', description: 'Understand your business, audience, competitors and long term goals to build a strong strategic foundation', bgImage: '/assets/method1.webp' },
+          { id: '02', title: 'Define', description: 'Define your positioning, messaging and creative direction before developing your visual identity', bgImage: '/assets/method2.webp' },
+          { id: '03', title: 'Design', description: 'Design a distinctive visual identity, logo system and supporting brand assets that reflect your business', bgImage: '/assets/method3.webp' },
+          { id: '04', title: 'Deliver', description: 'Deliver complete brand guidelines, launch-ready assets and everything needed for a consistent rollout.', bgImage: '/assets/method4.webp' },
         ]}
       />
       <Testimonials />

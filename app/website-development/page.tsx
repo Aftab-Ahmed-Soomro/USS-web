@@ -222,7 +222,7 @@ export default function WebsitePage() {
         rightTitle="The USS Difference"
         leftPoints={googleAdsBrandPoints}
         rightPoints={googleAdsUssPoints}
-        centerLogo="/assets/lastThing.png"
+        centerLogo="/assets/lastThing.webp"
         logoClassName="w-[90px] lg:w-[150px]"
       />
       <FadeUp>
@@ -238,10 +238,10 @@ export default function WebsitePage() {
       <RevenueMethod
         heading={<>our website development <br className="hidden sm:block" /><span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[0] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>process</span></>}
         cards={[
-          { id: '01', title: 'Discovery & Strategy', description: 'Understand your business, audience and objectives while defining the website structure, user journeys and conversion strategy.', bgImage: '/assets/method1.png' },
-          { id: '02', title: 'Design & Prototype', description: 'Create wireframes and UX designs that bring your brand to life before development begins.', bgImage: '/assets/method2.png' },
-          { id: '03', title: 'Development', description: 'Build a fast, responsive website with clean code and a user first experience.', bgImage: '/assets/method3.png' },
-          { id: '04', title: 'Launch & Optimisation', description: 'Launch, test and continuously optimise your website to improve performance, user experience and conversions.', bgImage: '/assets/method4.png' },
+          { id: '01', title: 'Discovery & Strategy', description: 'Understand your business, audience and objectives while defining the website structure, user journeys and conversion strategy.', bgImage: '/assets/method1.webp' },
+          { id: '02', title: 'Design & Prototype', description: 'Create wireframes and UX designs that bring your brand to life before development begins.', bgImage: '/assets/method2.webp' },
+          { id: '03', title: 'Development', description: 'Build a fast, responsive website with clean code and a user first experience.', bgImage: '/assets/method3.webp' },
+          { id: '04', title: 'Launch & Optimisation', description: 'Launch, test and continuously optimise your website to improve performance, user experience and conversions.', bgImage: '/assets/method4.webp' },
         ]}
       />
       <Testimonials />

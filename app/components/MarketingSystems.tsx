@@ -115,7 +115,7 @@ export function MarketingSystems() {
             {/* Circle frame with fallback gradient — always renders as a circle even if the image fails to load */}
             <div className="absolute inset-0 rounded-full overflow-hidden bg-gradient-to-br from-[#2a1206] via-[#170900] to-[#0a0400] border border-[#ff5500]/25 shadow-[0_0_60px_rgba(255,85,0,0.15)]">
               <Image
-                src="/assets/marketingGrowths/growthCircle.png"
+                src="/assets/marketingGrowths/growthCircle.webp"
                 alt="Growth Planet"
                 fill
                 className="object-cover"

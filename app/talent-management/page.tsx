@@ -70,8 +70,8 @@ export default function MarketingStrategyPage() {
         images={[
           "/assets/tishOverview/1.jpg",
           "/assets/tishOverview/2.jpg",
-          "/assets/tishOverview/3.png",
-          "/assets/tishOverview/4.png"
+          "/assets/tishOverview/3.webp",
+          "/assets/tishOverview/4.webp"
         ]}
         bgColor={"black"}
         textColor={"white"}
@@ -80,10 +80,10 @@ export default function MarketingStrategyPage() {
       {/* <ProjectOverview
         subheading="inside the launch."
         images={[
-          "/assets/sadiaOverview/1.png",
-          "/assets/sadiaOverview/2.png",
-          "/assets/sadiaOverview/3.png",
-          "/assets/sadiaOverview/4.png"
+          "/assets/sadiaOverview/1.webp",
+          "/assets/sadiaOverview/2.webp",
+          "/assets/sadiaOverview/3.webp",
+          "/assets/sadiaOverview/4.webp"
         ]}
         bgColor={"white"}
         textColor={"black"}

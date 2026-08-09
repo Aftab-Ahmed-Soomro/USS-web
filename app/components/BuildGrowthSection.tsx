@@ -72,7 +72,7 @@ export function BuildGrowthSection() {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <Image
-          src="/assets/ChatGPT-Generated.png"
+          src="/assets/ChatGPT-Generated.webp"
           alt="Performance and Creative overlap"
           fill
           className="object-contain mix-blend-screen brightness-95 contrast-110 pr-6"
@@ -160,7 +160,7 @@ export function BuildGrowthSection() {
           <div className="hidden sm:block xl:absolute xl:-left-24 2xl:-left-44 xl:top-0 relative w-full max-w-[450px] sm:max-w-[750px] aspect-square flex flex-col items-start justify-center xl:justify-start xl:pt-16 shrink-0 z-0 mx-auto xl:mx-0">
             <div className="absolute inset-0 z-0 pointer-events-none -left-[10%] xl:-left-[15%] 2xl:-left-[45%] scale-[1.35]">
               <Image
-                src="/assets/performanceCircle2.png"
+                src="/assets/performanceCircle2.webp"
                 alt="Performance Circle"
                 fill
                 className="object-contain mix-blend-screen object-center"

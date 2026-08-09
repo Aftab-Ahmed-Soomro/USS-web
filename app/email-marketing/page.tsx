@@ -30,7 +30,7 @@ const relatedProjects = [
     slug: "agency-8",
     year: "2026",
     copy: "Email strategy for a luxury real estate agency, keeping buyers engaged through personalised property updates, off-plan launches and automated customer journeys.",
-    image: "/assets/agent.png",
+    image: "/assets/agent.webp",
     tags: ["Email Marketing", "Real Estate", "Customer Journeys"],
   },
   {
@@ -186,7 +186,7 @@ function EmailOverview() {
         <FadeRight duration={0.8} delay={0.2} className="order-2 -mx-1 pt-10 sm:mx-0 lg:order-none lg:col-start-2 lg:row-start-1 lg:flex lg:items-start lg:justify-end lg:pt-0">
           <div className="relative mx-auto lg:ml-auto lg:mr-0 aspect-[463/842] w-full max-w-[260px] min-[375px]:max-w-[300px] sm:max-w-[400px] overflow-hidden bg-white shadow-[0_24px_55px_rgba(0,0,0,0.35)] translate-x-2 sm:translate-x-4 lg:translate-x-6">
             <Image
-              src="/assets/email-market.png"
+              src="/assets/email-market.webp"
               alt="Email marketing campaign designs"
               fill
               priority
@@ -474,10 +474,10 @@ export default function EmailMarketingPage() {
       <RevenueMethod
         heading={<>how we build <br className="block sm:hidden" /> high performing <br className="block" />{" "}<span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>email campaigns</span></>}
         cards={[
-          { id: '01', title: 'Email Strategy', description: 'Every successful campaign starts with a clear strategy aligned to your business goals.', bgImage: '/assets/method1.png' },
-          { id: '02', title: 'Email Automation & Flows', description: 'Build automated email journeys that engage customers at every stage of their lifecycle.', bgImage: '/assets/method2.png' },
-          { id: '03', title: 'Email Design & Content', description: 'Engaging email design and compelling content that encourages opens, clicks and conversions.', bgImage: '/assets/method3.png' },
-          { id: '04', title: 'Customer Segmentation', description: 'Delivering the right message to the right audience at the right stage of their journey.', bgImage: '/assets/method4.png' },
+          { id: '01', title: 'Email Strategy', description: 'Every successful campaign starts with a clear strategy aligned to your business goals.', bgImage: '/assets/method1.webp' },
+          { id: '02', title: 'Email Automation & Flows', description: 'Build automated email journeys that engage customers at every stage of their lifecycle.', bgImage: '/assets/method2.webp' },
+          { id: '03', title: 'Email Design & Content', description: 'Engaging email design and compelling content that encourages opens, clicks and conversions.', bgImage: '/assets/method3.webp' },
+          { id: '04', title: 'Customer Segmentation', description: 'Delivering the right message to the right audience at the right stage of their journey.', bgImage: '/assets/method4.webp' },
         ]}
       />
       <RelatedProjects />

@@ -9,19 +9,19 @@ const CARDS_DATA = [
     id: "01",
     title: "Brand Strategy",
     description: "Define your audience, content pillars and platform strategy before creating content",
-    bgImage: "/assets/method1.png",
+    bgImage: "/assets/method1.webp",
   },
   {
     id: "02",
     title: "Content Creation",
     description: "Produce platform specific content that strengthens your brand and keeps your audience engaged",
-    bgImage: "/assets/method2.png",
+    bgImage: "/assets/method2.webp",
   },
   {
     id: "03",
     title: "Performance & Optimisation",
     description: "Measure performance, refine your strategy and continuously improve your social presence.",
-    bgImage: "/assets/method3.png",
+    bgImage: "/assets/method3.webp",
   },
 ];
 

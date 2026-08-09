@@ -109,7 +109,7 @@ const relatedProjects = [
   {
     slug: "agency-8",
     name: "Agency 8",
-    image: "/assets/allProjects/agency8.png",
+    image: "/assets/allProjects/agency8.webp",
     copy: "We used WhatsApp and SMS campaigns to connect Agency 8 with buyers, follow up on enquiries and keep clients updated throughout their property journey.",
     tags: ["WhatsApp Marketing", "SMS Campaigns", "Lead Generation "],
     year: "2026",
@@ -231,25 +231,25 @@ const CARDS_DATA = [
     id: '01',
     title: 'Audience Segmentation',
     description: 'Create targeted customer groups based on behaviour, purchase history, location and engagement to deliver more relevant messaging',
-    bgImage: '/assets/method1.png', // Replace with your image src
+    bgImage: '/assets/method1.webp', // Replace with your image src
   },
   {
     id: '02',
     title: 'Campaign Strategy',
     description: 'Plan each campaign around clear objectives, customer journeys and the right communication channels to maximise results',
-    bgImage: '/assets/method2.png', // Replace with your image src
+    bgImage: '/assets/method2.webp', // Replace with your image src
   },
   {
     id: '03',
     title: 'Messaging & Automation',
     description: 'Create personalised messages and automated workflows that engage customers at every stage of their journey',
-    bgImage: '/assets/method3.png', // Replace with your image src
+    bgImage: '/assets/method3.webp', // Replace with your image src
   },
   {
     id: '04',
     title: 'Reporting & Optimisation',
     description: 'Track performance, refine campaigns and continuously optimise messaging to improve engagement and conversions.',
-    bgImage: '/assets/method4.png', // Replace with your image src
+    bgImage: '/assets/method4.webp', // Replace with your image src
   },
 ];
 
@@ -380,7 +380,7 @@ export default function WhatsappAndSmsPage() {
           rightTitle="The USS Difference"
           leftPoints={googleAdsBrandPoints}
           rightPoints={googleAdsUssPoints}
-          centerLogo="/assets/wa-sms.png"
+          centerLogo="/assets/wa-sms.webp"
           logoClassName="w-[180px] lg:w-[265px] mt-4"
         />
       </FadeUp>

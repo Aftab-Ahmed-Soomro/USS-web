@@ -13,8 +13,8 @@ const cards = [
     titleHighlight: "360",
     description:
       "Growth rarely comes from a single campaign. It comes from connecting every part of your marketing behind one clear direction. With strategy, creative and performance working together, your brand stays consistent and your marketing becomes more effective.",
-    image: "/assets/power/direction.png",
-    bgImage: "/assets/power/directionLarge.png",
+    image: "/assets/power/direction.webp",
+    bgImage: "/assets/power/directionLarge.webp",
     bgClass: "object-top",
     alt: "One Direction card",
   },
@@ -25,8 +25,8 @@ const cards = [
     titleHighlight: "team",
     description:
       "At USS, we become an extension of your team. By taking the time to understand your business, we make better decisions, communicate more effectively and keep every project moving in the right direction.",
-    image: "/assets/power/team.png",
-    bgImage: "/assets/power/teamLarge.png",
+    image: "/assets/power/team.webp",
+    bgImage: "/assets/power/teamLarge.webp",
     bgClass: "object-top",
     alt: "One Team card",
   },
@@ -37,8 +37,8 @@ const cards = [
     titleHighlight: "brand",
     description:
       "A strong brand is built through consistency. At USS, we make sure every touchpoint reflects the same identity, helping your business build trust and lasting brand value.",
-    image: "/assets/power/brand.png",
-    bgImage: "/assets/power/brandLarge.jpeg",
+    image: "/assets/power/brand.webp",
+    bgImage: "/assets/power/brandLarge.webp",
     bgClass: "object-[center_38%]",
     alt: "One Brand card",
   },
@@ -49,8 +49,8 @@ const cards = [
     titleHighlight: "goal",
     description:
       "Every decision should support a bigger objective. At USS, we keep your long term business goals at the centre of every strategy, campaign and recommendation, ensuring every digital touchpoint moves your business forward.",
-    image: "/assets/power/goal.png",
-    bgImage: "/assets/power/goalLarge.png",
+    image: "/assets/power/goal.webp",
+    bgImage: "/assets/power/goalLarge.webp",
     bgClass: "object-[center_25%]",
     alt: "One Goal card",
   },

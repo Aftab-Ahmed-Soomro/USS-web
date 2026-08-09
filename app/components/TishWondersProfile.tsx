@@ -27,7 +27,7 @@ export function TishWondersProfile() {
               <FadeUp delay={0.1} className="w-full h-[54%]">
                 <div className="relative w-full h-full rounded-[12px] sm:rounded-[20px] overflow-hidden bg-[#111]">
                   <Image
-                    src="/assets/tishin.png"
+                    src="/assets/tishin.webp"
                     alt="Tish Wonders 1"
                     fill
                     className="object-cover object-center hover:scale-105 transition-transform duration-700"
@@ -66,7 +66,7 @@ export function TishWondersProfile() {
               <FadeUp delay={0.15} className="w-full h-[36%]">
                 <div className="relative w-full h-full rounded-[12px] sm:rounded-[20px] overflow-hidden bg-[#111]">
                   <Image
-                    src="/assets/tishOverview/3.png"
+                    src="/assets/tishOverview/3.webp"
                     alt="Tish Wonders 4"
                     fill
                     className="object-cover object-center hover:scale-105 transition-transform duration-700"

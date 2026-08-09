@@ -18,7 +18,7 @@ const projects = [
   },
   {
     name: "Picksperience",
-    image: "/assets/picksper.png",
+    image: "/assets/picksper.webp",
     alt: "Picksperience campaign",
   }
 ];

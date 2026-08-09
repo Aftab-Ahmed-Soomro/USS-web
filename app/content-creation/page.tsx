@@ -266,7 +266,7 @@ const relatedProjects = [
   {
     slug: "cinamood",
     name: "Cinnamood",
-    image: "/assets/projectsPagePics/cinamood.jpg",
+    image: "/assets/projectsPagePics/cinamood.webp",
     copy: "We supported the launch of Cinnamood in the UAE with photo and video content that showcased the brand and generated excitement across social media.",
     tags: ["Content Creation", "Food & Beverage", "Launch Campaign"],
     year: "2026",
@@ -275,7 +275,7 @@ const relatedProjects = [
   {
     slug: "yula-lounge",
     name: "Yula Lounge",
-    image: "/assets/yula2.jpg",
+    image: "/assets/yula2.webp",
     copy: "We created lifestyle photography & video content that showcased Yula's new identity, helping establish a premium social presence following venue's transformation.",
     tags: ["Content Creation", "Hospitality", "Brand Launch"],
     year: "2026",
@@ -434,10 +434,10 @@ export default function ContentCreationPage() {
       <RevenueMethod
         heading={<>see how we build{" "}<span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>brands</span></>}
         cards={[
-          { id: '01', title: 'Discovery & Planning', description: 'Understand your brand, audience, objectives and creative direction before production begins.', bgImage: '/assets/method1.png' },
-          { id: '02', title: 'Creative Planning', description: 'Develop concepts, storyboards, shot lists and production schedules ready for filming.', bgImage: '/assets/method2.png' },
-          { id: '03', title: 'Production', description: 'Capture high quality photography and videography with professional direction and execution.', bgImage: '/assets/method3.png' },
-          { id: '04', title: 'Post-Production', description: 'Edit, refine and optimise every asset for delivery across digital, social and paid media.', bgImage: '/assets/method4.png' },
+          { id: '01', title: 'Discovery & Planning', description: 'Understand your brand, audience, objectives and creative direction before production begins.', bgImage: '/assets/method1.webp' },
+          { id: '02', title: 'Creative Planning', description: 'Develop concepts, storyboards, shot lists and production schedules ready for filming.', bgImage: '/assets/method2.webp' },
+          { id: '03', title: 'Production', description: 'Capture high quality photography and videography with professional direction and execution.', bgImage: '/assets/method3.webp' },
+          { id: '04', title: 'Post-Production', description: 'Edit, refine and optimise every asset for delivery across digital, social and paid media.', bgImage: '/assets/method4.webp' },
         ]}
       />
       <RelatedProjects />

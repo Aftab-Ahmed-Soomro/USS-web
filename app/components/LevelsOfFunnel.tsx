@@ -102,7 +102,7 @@ export function LevelsOfFunnel() {
               <FadeUp delay={0.2}>
                 <div className="cursor-pointer" onClick={() => setShowPopup(true)}>
                   <Image
-                    src="/assets/funnel.png"
+                    src="/assets/funnel.webp"
                     alt="Marketing Funnel"
                     width={500}
                     height={500}

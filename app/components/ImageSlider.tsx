@@ -4,12 +4,12 @@ import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 const IMAGES = [
-  { src: "/assets/about-slider-images/1.jpeg", objectPos: "object-center" },
-  { src: "/assets/about-slider-images/5.jpeg", objectPos: "object-center" },
-  { src: "/assets/about-slider-images/4.png", objectPos: "max-lg:object-bottom lg:object-center" },
-  { src: "/assets/about-slider-images/2.jpeg",
+  { src: "/assets/about-slider-images/1.webp", objectPos: "object-center" },
+  { src: "/assets/about-slider-images/5.webp", objectPos: "object-center" },
+  { src: "/assets/about-slider-images/4.webp", objectPos: "max-lg:object-bottom lg:object-center" },
+  { src: "/assets/about-slider-images/2.webp",
   objectPos: "object-center" },
-  { src: "/assets/about-slider-images/3.jpeg", objectPos: "object-center" },
+  { src: "/assets/about-slider-images/3.webp", objectPos: "object-center" },
 ];
 
 const AUTOPLAY_INTERVAL = 4000;

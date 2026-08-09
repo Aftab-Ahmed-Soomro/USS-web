@@ -7,11 +7,11 @@ import Stagger from "./Stagger";
 import StaggerItem from "./Staggeritem";
 
 const slides = [
-  "/assets/talent-bgImage.png",
-  "/assets/webBanner/2.png",
-  "/assets/webBanner/3.png",
-  "/assets/webBanner/4.png",
-  "/assets/webBanner/5.png",
+  "/assets/talent-bgImage.webp",
+  "/assets/webBanner/2.webp",
+  "/assets/webBanner/3.webp",
+  "/assets/webBanner/4.webp",
+  "/assets/webBanner/5.webp",
 ];
 
 export function TalentHero() {

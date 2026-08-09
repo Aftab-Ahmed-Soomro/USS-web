@@ -18,7 +18,7 @@ const regions = [
         United States
       </>
     ),
-    image: "/assets/Atlanta.png",
+    image: "/assets/Atlanta.webp",
     alt: "United States skyline at sunset",
   },
   {
@@ -31,7 +31,7 @@ const regions = [
         United Arab Emirates
       </>
     ),
-    image: "/assets/Dubai.png",
+    image: "/assets/Dubai.webp",
     alt: "UAE skyline at dusk",
   },
   {
@@ -45,7 +45,7 @@ const regions = [
         United Kingdom
       </>
     ),
-    image: "/assets/London.png",
+    image: "/assets/London.webp",
     alt: "United Kingdom skyline at night",
   },
 ];

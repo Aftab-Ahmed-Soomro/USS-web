@@ -32,7 +32,7 @@ const relatedProjects = [
     name: "Flowork",
     year: "2026",
     copy: "USS helped Flowork sell 50% of the available office space before opening by generating high intent enquiries through targeted Google Ads.",
-    image: "/assets/flow.jpg",
+    image: "/assets/flow.webp",
     tags: ["Google Ads", "Office Space", "Lead Generation"],
   },
 ];
@@ -407,9 +407,9 @@ export default function GoogleAdsPage() {
       />
       <div className="mt-[0px] sm:mt-[-60px]">
         <WhyGoogleAdsWork
-          imageSrc="/assets/googleside.jpg"
+          imageSrc="/assets/googleside.webp"
           imageAlt="Team working on Google Ads strategy"
-          logoSrc="/assets/google_logo_2.png"
+          logoSrc="/assets/google_logo_2.webp"
           logoClassName="h-[1em] sm:h-[1.25em] w-auto object-contain inline-block self-center mt-1 sm:mt-1.5"
           headingItalic="ads"
           headingSuffix="work"
@@ -461,25 +461,25 @@ export default function GoogleAdsPage() {
               name: "Search Campaigns",
               description:
                 "Appear in Google Search results when customers are actively looking for your products or services",
-              imageSrc: "/assets/1.png",
+              imageSrc: "/assets/1.webp",
             },
             {
               name: "Performance Max",
               description:
                 "Reach customers across Google's entire network using AI powered campaigns designed to maximise performance",
-              imageSrc: "/assets/googlePlatforms/2.png",
+              imageSrc: "/assets/googlePlatforms/2.webp",
             },
             {
               name: "YouTube Campaigns",
               description:
                 "Build awareness through engaging video campaigns that reach audiences while they watch the content they love",
-              imageSrc: "/assets/googlePlatforms/3.png",
+              imageSrc: "/assets/googlePlatforms/3.webp",
             },
             {
               name: "Display Ads",
               description:
                 "Keep your brand visible across millions of websites and apps with visually engaging display advertising.",
-              imageSrc: "/assets/googlePlatforms/4.png",
+              imageSrc: "/assets/googlePlatforms/4.webp",
             },
           ]}
         />
@@ -487,10 +487,10 @@ export default function GoogleAdsPage() {
       <RevenueMethod
         heading={<>how we capture demand <br className="hidden sm:block" /> and turn it into{" "}<span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>revenue</span></>}
         cards={[
-          { id: '01', title: 'Research & Keyword Strategy', description: 'We identify the keywords your customers are actively searching for and build campaigns around the opportunities most likely to perform.', bgImage: '/assets/method1.png' },
-          { id: '02', title: 'Campaign Planning', description: 'We structure campaigns around your objectives, creating tailored targeting, ad messaging and bidding strategies for stronger performance.', bgImage: '/assets/method2.png' },
-          { id: '03', title: 'Forecasting & Investment', description: 'Before launching, we forecast the budget required to achieve your KPIs, expected leads and estimated campaign performance.', bgImage: '/assets/method3.png' },
-          { id: '04', title: 'Launch & Optimisation', description: 'Once campaigns are live, we continuously monitor performance, refining targeting, budgets and ads to maximise results over time.', bgImage: '/assets/method4.png' },
+          { id: '01', title: 'Research & Keyword Strategy', description: 'We identify the keywords your customers are actively searching for and build campaigns around the opportunities most likely to perform.', bgImage: '/assets/method1.webp' },
+          { id: '02', title: 'Campaign Planning', description: 'We structure campaigns around your objectives, creating tailored targeting, ad messaging and bidding strategies for stronger performance.', bgImage: '/assets/method2.webp' },
+          { id: '03', title: 'Forecasting & Investment', description: 'Before launching, we forecast the budget required to achieve your KPIs, expected leads and estimated campaign performance.', bgImage: '/assets/method3.webp' },
+          { id: '04', title: 'Launch & Optimisation', description: 'Once campaigns are live, we continuously monitor performance, refining targeting, budgets and ads to maximise results over time.', bgImage: '/assets/method4.webp' },
         ]}
       />
       <CaseStudies />

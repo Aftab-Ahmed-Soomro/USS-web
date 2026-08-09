@@ -42,7 +42,7 @@ const tabData = {
         align: "left" as const,
       },
     ],
-    image: "/assets/whatsApp/mobile.png",
+    image: "/assets/whatsApp/mobile.webp",
   },
   sms: {
     leftCards: [
@@ -81,7 +81,7 @@ const tabData = {
         align: "left" as const,
       },
     ],
-    image: "/assets/whatsApp/sms.png",
+    image: "/assets/whatsApp/sms.webp",
   },
 };
 

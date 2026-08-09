@@ -11,7 +11,7 @@ const leftColumnData = [
     category: "Immersive Holographics",
     title: "Disturbed Innovations Group",
     description: "A technology website showcasing immersive experiences and digital innovation.",
-    image: "/assets/leftColumnImages/1.png",
+    image: "/assets/leftColumnImages/1.webp",
     link: "/projects/disturbed-innovations"
   },
   {
@@ -20,7 +20,7 @@ const leftColumnData = [
     category: "Fashion Brand",
     title: "Afro Maya",
     description: " A fashion website designed to highlight new collections and build brand presence.",
-    image: "/assets/Afro Maya - 1.png",
+    image: "/assets/Afro Maya - 1.webp",
     link: "/projects/afro-maya",
     imageClass: "object-[center_15%]"
   },
@@ -30,7 +30,7 @@ const leftColumnData = [
     category: "Event Space",
     title: "Venue 29",
     description: "A bold event venue website designed to showcase experiences, increase enquiries and support bookings",
-    image: "/assets/leftColumnImages/3.jpg",
+    image: "/assets/leftColumnImages/3.webp",
     link: "https://venue-29.com/"
   }
 ];
@@ -42,7 +42,7 @@ const rightColumnData = [
     category: "Real Estate",
     title: "Agency 8",
     description: "A luxury real estate website designed for users to explore exclusive developments across rental, sales and off plan.",
-    image: "/assets/Agency 8 - 1.png",
+    image: "/assets/Agency 8 - 1.webp",
     link: "/projects/agency-8",
     imageClass: "object-[center_40%]"
   },
@@ -52,7 +52,7 @@ const rightColumnData = [
     category: "Wellness Juices",
     title: "Coshe Juices",
     description: "qsr and restaurant identity formed with a reservation-and-ordering menu system built for repeat guests.",
-    image: "/assets/Coshe - 1.jpg",
+    image: "/assets/Coshe - 1.webp",
     link: "/projects/coshe-juices",
     imageClass: "object-[center_36%]"
   },
@@ -62,7 +62,7 @@ const rightColumnData = [
     category: "Therapy",
     title: "Sadia Psychology",
     description: "A psychologist website designed to build trust, support wellbeing and make accessing therapy feel simple.",
-    image: "/assets/saadiTown.png",
+    image: "/assets/saadiTown.webp",
     link: "/projects/sadia-psychology",
     imageClass: "object-[58%_13%]"
   }

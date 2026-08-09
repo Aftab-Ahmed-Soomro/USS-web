@@ -26,7 +26,7 @@ export function SadiaPsychologyProfile() {
               <FadeUp delay={0.1} className="w-full h-[54%]">
                 <div className="relative w-full h-full rounded-[12px] sm:rounded-[20px] overflow-hidden bg-[#f0f0f0]">
                   <Image
-                    src="/assets/sadiq.png"
+                    src="/assets/sadiq.webp"
                     alt="Sadia Psychology 1"
                     fill
                     className="object-cover object-center hover:scale-105 transition-transform duration-700"
@@ -38,7 +38,7 @@ export function SadiaPsychologyProfile() {
                 <FadeUp delay={0.2} className="w-full h-full">
                   <div className="relative w-full h-full rounded-[12px] sm:rounded-[20px] overflow-hidden bg-[#f0f0f0]">
                     <Image
-                      src="/assets/sadiaOverview/1.png"
+                      src="/assets/sadiaOverview/1.webp"
                       alt="Sadia Psychology 2"
                       fill
                       className="object-cover object-center hover:scale-105 transition-transform duration-700"
@@ -49,7 +49,7 @@ export function SadiaPsychologyProfile() {
                 <FadeUp delay={0.3} className="w-full h-full">
                   <div className="relative w-full h-full rounded-[12px] sm:rounded-[20px] overflow-hidden bg-[#f0f0f0]">
                     <Image
-                      src="/assets/sadiaOverview/2.png"
+                      src="/assets/sadiaOverview/2.webp"
                       alt="Sadia Psychology 3"
                       fill
                       className="object-cover object-center hover:scale-105 transition-transform duration-700"
@@ -65,7 +65,7 @@ export function SadiaPsychologyProfile() {
               <FadeUp delay={0.15} className="w-full h-[36%]">
                 <div className="relative w-full h-full rounded-[12px] sm:rounded-[20px] overflow-hidden bg-[#f0f0f0]">
                   <Image
-                    src="/assets/sadiaOverview/3.png"
+                    src="/assets/sadiaOverview/3.webp"
                     alt="Sadia Psychology 4"
                     fill
                     className="object-cover object-center hover:scale-105 transition-transform duration-700"

@@ -26,7 +26,7 @@ export function PaidAds() {
           {/* Large hero image */}
           <div className="relative w-full overflow-hidden rounded-[6px] aspect-[4/3]">
             <Image
-              src="/assets/Paid Ads/hero.png"
+              src="/assets/Paid Ads/hero.webp"
               alt="Paid ads creative talent"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
@@ -39,7 +39,7 @@ export function PaidAds() {
           <div className="grid grid-cols-2 gap-3">
             <div className="relative w-full overflow-hidden rounded-[6px] aspect-[4/3]">
               <Image
-                src="/assets/Paid Ads/sub1.png"
+                src="/assets/Paid Ads/sub1.webp"
                 alt="Paid ads influencer example"
                 fill
                 sizes="(min-width: 1024px) 25vw, 50vw"
@@ -48,7 +48,7 @@ export function PaidAds() {
             </div>
             <div className="relative w-full overflow-hidden rounded-[6px] aspect-[4/3]">
               <Image
-                src="/assets/Paid Ads/sub2.png"
+                src="/assets/Paid Ads/sub2.webp"
                 alt="Paid ads content example"
                 fill
                 sizes="(min-width: 1024px) 25vw, 50vw"

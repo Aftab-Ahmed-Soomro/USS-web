@@ -81,9 +81,9 @@ export function Footer({ showGlobal = true }: { showGlobal?: boolean }) {
           <>
             <WeAreGlobal
               images={{
-                Dubai: "/assets/Dubai.png",
-                London: "/assets/London.png",
-                Atlanta: "/assets/Atlanta.png"
+                Dubai: "/assets/Dubai.webp",
+                London: "/assets/London.webp",
+                Atlanta: "/assets/Atlanta.webp"
               }}
             />
             {/* Divider */}

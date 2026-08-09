@@ -137,7 +137,7 @@ export function PerformanceMarketing() {
           {/* Large hero image */}
           <div className="relative w-full overflow-hidden rounded-[6px] aspect-[4/3] min-h-[530px]">
             <Image
-              src="/assets/Performance Marketing/hero.jpg"
+              src="/assets/Performance Marketing/hero.webp"
               alt="Marketing analyst working at desktop"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
@@ -150,7 +150,7 @@ export function PerformanceMarketing() {
           <div className="grid grid-cols-2 gap-3">
             <div className="relative w-full overflow-hidden rounded-[6px] aspect-[4/3] min-h-[260px]">
               <Image
-                src="/assets/Performance Marketing/sub1.jpg"
+                src="/assets/Performance Marketing/sub1.webp"
                 alt="Performance marketing analytics dashboard"
                 fill
                 sizes="(min-width: 1024px) 25vw, 50vw"
@@ -159,7 +159,7 @@ export function PerformanceMarketing() {
             </div>
             <div className="relative w-full overflow-hidden rounded-[6px] aspect-[4/3] min-h-[260px]">
               <Image
-                src="/assets/Performance Marketing/sub2.jpg"
+                src="/assets/Performance Marketing/sub2.webp"
                 alt="Marketing strategy reports and planning"
                 fill
                 sizes="(min-width: 1024px) 25vw, 50vw"

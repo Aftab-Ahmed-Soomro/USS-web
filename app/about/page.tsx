@@ -57,7 +57,7 @@ export default function AboutPage() {
               <div className="relative w-full max-w-[318px] mx-auto md:mx-0">
                 <div className="relative aspect-[3/4] min-w-[200px] min-[375px]:min-w-[318px] sm:min-w-[318px] w-full min-h-[300px] sm:min-h-[397.5px] overflow-hidden">
                   <Image
-                    src="/assets/founder.jpg"
+                    src="/assets/founder.webp"
                     alt="Emmanuel Cole Williams, Founder and CEO of USS"
                     fill
                     className="object-contain object-[center_20%]"
@@ -123,7 +123,7 @@ export default function AboutPage() {
                 <div className="-mt-4 flex items-center w-full gap-4">
                   <div className="h-[1px] bg-white/20 flex-grow" />
                   <Image
-                    src="/assets/Signature.png"
+                    src="/assets/Signature.webp"
                     alt="Signature"
                     width={360}
                     height={120}

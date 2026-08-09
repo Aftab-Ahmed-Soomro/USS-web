@@ -16,9 +16,9 @@ const categories = [
     topTag: "Brand Launches",
     bottomTag: "Customer Growth",
     projects: [
-      { title: "CINNAMOOD", description: "Franchise Expanding To Dubai", image: "/assets/projectsPagePics/cinamood.jpg", tags: ["UAE Expansion"], href: "/projects/cinamood" },
-      { title: "Coshe", description: "Membership Growth Strategy", image: "/assets/projectsPagePics/Coshe.jpg", tags: ["Brand Launch"], href: "/projects/coshe-juices" },
-      { title: "Oak Restaurant", description: "Creative Content Production", image: "/assets/projectsPagePics/oak.png", tags: ["Content Creation"], href: "/projects/oak" }
+      { title: "CINNAMOOD", description: "Franchise Expanding To Dubai", image: "/assets/projectsPagePics/cinamood.webp", tags: ["UAE Expansion"], href: "/projects/cinamood" },
+      { title: "Coshe", description: "Membership Growth Strategy", image: "/assets/projectsPagePics/Coshe.webp", tags: ["Brand Launch"], href: "/projects/coshe-juices" },
+      { title: "Oak Restaurant", description: "Creative Content Production", image: "/assets/projectsPagePics/oak.webp", tags: ["Content Creation"], href: "/projects/oak" }
     ]
   },
   {
@@ -26,8 +26,8 @@ const categories = [
     topTag: "Customer Experience",
     bottomTag: "Bookings & Loyalty",
     projects: [
-      { title: "SupperClub", description: "360 Marketing for 5 Star Venues", image: "/assets/projectsPagePics/supper.png", tags: ["Membership Growth"], href: "/projects/supperclub" },
-      { title: "Yula", description: "Transforming Yalseh into Yula", image: "/assets/projectsPagePics/yula.jpg", tags: ["Rebrand"], href: "/projects/yula-beach-lounge" }
+      { title: "SupperClub", description: "360 Marketing for 5 Star Venues", image: "/assets/projectsPagePics/supper.webp", tags: ["Membership Growth"], href: "/projects/supperclub" },
+      { title: "Yula", description: "Transforming Yalseh into Yula", image: "/assets/projectsPagePics/yula.webp", tags: ["Rebrand"], href: "/projects/yula-beach-lounge" }
     ]
   },
   {
@@ -35,9 +35,9 @@ const categories = [
     topTag: "Business Growth",
     bottomTag: "Lead Generation",
     projects: [
-      { title: "Flowork", description: "Office Opening in Dubai Hills", image: "/assets/projectsPagePics/flowork.png", tags: ["Business Launch"], href: "/projects/flowork" },
-      { title: "Residency Advanced", description: "Paid Search Lead Generation", image: "/assets/projectsPagePics/residency.png", tags: ["Google Ads"], href: "/projects/residency-advanced" },
-      { title: "Reclaim", description: "Launching Reclaim in the US", image: "/assets/Untitled design - 2.png", tags: ["US Expansion"], href: "/projects/reclaim-us" }
+      { title: "Flowork", description: "Office Opening in Dubai Hills", image: "/assets/projectsPagePics/flowork.webp", tags: ["Business Launch"], href: "/projects/flowork" },
+      { title: "Residency Advanced", description: "Paid Search Lead Generation", image: "/assets/projectsPagePics/residency.webp", tags: ["Google Ads"], href: "/projects/residency-advanced" },
+      { title: "Reclaim", description: "Launching Reclaim in the US", image: "/assets/Untitled design - 2.webp", tags: ["US Expansion"], href: "/projects/reclaim-us" }
     ]
   },
   {
@@ -45,8 +45,8 @@ const categories = [
     topTag: "Market Expansion",
     bottomTag: "Business Growth",
     projects: [
-      { title: "PrecisionTalk", description: "AI Voice Agent Expanding in UAE", image: "/assets/projectsPagePics/precision.png", tags: ["Brand Launch"], href: "/projects/precision-talk" },
-      { title: "Disturbed Innovations Group", description: "3D Immersive Experiences", image: "/assets/projectsPagePics/disturbed.jpg", tags: ["Rebrand"], href: "/projects/disturbed-innovations" }
+      { title: "PrecisionTalk", description: "AI Voice Agent Expanding in UAE", image: "/assets/projectsPagePics/precision.webp", tags: ["Brand Launch"], href: "/projects/precision-talk" },
+      { title: "Disturbed Innovations Group", description: "3D Immersive Experiences", image: "/assets/projectsPagePics/disturbed.webp", tags: ["Rebrand"], href: "/projects/disturbed-innovations" }
     ]
   },
   {
@@ -54,15 +54,15 @@ const categories = [
     topTag: "Brand Experiences",
     bottomTag: "Event Launches",
     projects: [
-      { title: "Women Who Thrive", description: "Scaling Networking Events", image: "/assets/projectsPagePics/women.jpg", tags: ["Membership Growth"], href: "/projects/women-who-thrive" },
-      { title: "Adidas UAE", description: "Product Event For New Launch", image: "/assets/projectsPagePics/adidas.jpg", tags: ["Product Launch"], href: "/projects/adidas-middle-east" },
-      { title: "Blank DXB", description: "360 Marketing Driving Enquiries", image: "/assets/projectsPagePics/blank.png", tags: ["Business Launch"], href: "/projects/blank-dxb" },
-      { title: "Fete Events", description: "Premium Event Planning", image: "/assets/Fete.png", tags: ["Scaling Business"], href: "/projects/fete-events" }
+      { title: "Women Who Thrive", description: "Scaling Networking Events", image: "/assets/projectsPagePics/women.webp", tags: ["Membership Growth"], href: "/projects/women-who-thrive" },
+      { title: "Adidas UAE", description: "Product Event For New Launch", image: "/assets/projectsPagePics/adidas.webp", tags: ["Product Launch"], href: "/projects/adidas-middle-east" },
+      { title: "Blank DXB", description: "360 Marketing Driving Enquiries", image: "/assets/projectsPagePics/blank.webp", tags: ["Business Launch"], href: "/projects/blank-dxb" },
+      { title: "Fete Events", description: "Premium Event Planning", image: "/assets/Fete.webp", tags: ["Scaling Business"], href: "/projects/fete-events" }
       ,
       {
         title: "Picksperience",
         description: "Global Sampling Events",
-        image: "/assets/pikachu.jpeg",
+        image: "/assets/pikachu.webp",
         tags: ["Brand Launch"],
         href: "/projects/picksperience"
       }
@@ -73,7 +73,7 @@ const categories = [
     topTag: "Online Growth",
     bottomTag: "Revenue Growth",
     projects: [
-      { title: "Afro Maya", description: "Fashion E-Commerce Brand", image: "/assets/projectsPagePics/afro.jpg", tags: ["E-Commerce Growth"], href: "/projects/afro-maya" }
+      { title: "Afro Maya", description: "Fashion E-Commerce Brand", image: "/assets/projectsPagePics/afro.webp", tags: ["E-Commerce Growth"], href: "/projects/afro-maya" }
     ]
   },
   {
@@ -81,7 +81,7 @@ const categories = [
     topTag: "Customer Growth",
     bottomTag: "Brand Awareness",
     projects: [
-      { title: "M&N Nail Spa", description: "Beauty Salon In Dubai", image: "/assets/projectsPagePics/m&n.png", tags: ["Scaling Business"], href: "/projects/mn-nail-spa" }
+      { title: "M&N Nail Spa", description: "Beauty Salon In Dubai", image: "/assets/projectsPagePics/m&n.webp", tags: ["Scaling Business"], href: "/projects/mn-nail-spa" }
     ]
   },
   {
@@ -89,8 +89,8 @@ const categories = [
     topTag: "Personal Branding",
     bottomTag: "Audience Growth",
     projects: [
-      { title: "Sadia Psychology", description: "Black Friday Planner Project", image: "/assets/projectsPagePics/sadia.png", tags: ["Black Friday Project"], href: "/projects/sadia-psychology", imageClass: "object-[center_top]" },
-      { title: "Tish Wonders", description: "New E-Book Launch", image: "/assets/projectsPagePics/tesh.png", tags: ["Product Launch"], href: "/projects/tish-wonders" }
+      { title: "Sadia Psychology", description: "Black Friday Planner Project", image: "/assets/projectsPagePics/sadia.webp", tags: ["Black Friday Project"], href: "/projects/sadia-psychology", imageClass: "object-[center_top]" },
+      { title: "Tish Wonders", description: "New E-Book Launch", image: "/assets/projectsPagePics/tesh.webp", tags: ["Product Launch"], href: "/projects/tish-wonders" }
     ]
   },
   {
@@ -98,9 +98,9 @@ const categories = [
     topTag: "Property Growth",
     bottomTag: "Leads & Sales",
     projects: [
-      { title: "Agency 8", description: "Email Marketing Lead Generation", image: "/assets/projectsPagePics/agency.png", tags: ["Lead Generation"], href: "/projects/agency-8" },
-      { title: "Fabri Elite", description: "Luxury Agency in UAE", image: "/assets/projectsPagePics/fabri.jpg", tags: ["Agency Opening"], href: "/projects/fabri-elite" },
-      { title: "St. George Estate", description: "Content That Makes An Impact", image: "/assets/projectsPagePics/st.png", tags: ["Content Creation"], href: "/projects/st-georges" }
+      { title: "Agency 8", description: "Email Marketing Lead Generation", image: "/assets/projectsPagePics/agency.webp", tags: ["Lead Generation"], href: "/projects/agency-8" },
+      { title: "Fabri Elite", description: "Luxury Agency in UAE", image: "/assets/projectsPagePics/fabri.webp", tags: ["Agency Opening"], href: "/projects/fabri-elite" },
+      { title: "St. George Estate", description: "Content That Makes An Impact", image: "/assets/projectsPagePics/st.webp", tags: ["Content Creation"], href: "/projects/st-georges" }
     ]
   }
 ];

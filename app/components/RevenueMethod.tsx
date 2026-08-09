@@ -22,25 +22,25 @@ const DEFAULT_CARDS: RevenueMethodCard[] = [
     id: '01',
     title: 'Ideation & Strategy',
     description: 'We identify the right product, positioning and commercial strategy before preparing the launch.',
-    bgImage: '/assets/method1.png',
+    bgImage: '/assets/method1.webp',
   },
   {
     id: '02',
     title: 'Production',
     description: 'We create every asset needed for launch, from content and creative to websites and sales materials.',
-    bgImage: '/assets/method2.png',
+    bgImage: '/assets/method2.webp',
   },
   {
     id: '03',
     title: 'Marketing Strategy & Execution',
     description: 'We build demand through launch planning, paid media, content integration and conversion-focused campaigns.',
-    bgImage: '/assets/method3.png',
+    bgImage: '/assets/method3.webp',
   },
   {
     id: '04',
     title: 'Campaign Launch & Scale',
     description: 'Once live, we monitor performance, optimise campaigns and scale what delivers the strongest results.',
-    bgImage: '/assets/method4.png',
+    bgImage: '/assets/method4.webp',
   },
 ];
 

@@ -93,7 +93,7 @@ export function WhyWhatsappWorks() {
                   >
                     <div className="absolute inset-0 z-0 h-full w-full overflow-hidden">
                       <img
-                        src={`/assets/whatsapp-and-sms/${FIRST_IMAGE}.png`}
+                        src={`/assets/whatsapp-and-sms/${FIRST_IMAGE}.webp`}
                         alt="Why WhatsApp and SMS Work — Primary"
                         style={{
                           width: "100%",
@@ -128,7 +128,7 @@ export function WhyWhatsappWorks() {
                       >
                         <div className="absolute inset-0 z-0 h-full w-full overflow-hidden">
                           <img
-                            src={`/assets/whatsapp-and-sms/${num}.png`}
+                            src={`/assets/whatsapp-and-sms/${num}.webp`}
                             alt={`Why WhatsApp and SMS Work ${num}`}
                             style={{
                               width: "100%",
@@ -176,7 +176,7 @@ export function WhyWhatsappWorks() {
                   >
                     <div className="absolute inset-0 z-0 h-full w-full overflow-hidden">
                       <Image
-                        src={`/assets/whatsapp-and-sms/${num}.png`}
+                        src={`/assets/whatsapp-and-sms/${num}.webp`}
                         alt={`Why WhatsApp and SMS Work ${num}`}
                         fill
                         className="object-cover object-center"

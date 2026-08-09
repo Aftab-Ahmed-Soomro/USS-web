@@ -36,7 +36,7 @@ export function WhatWeDoSection() {
           <StaggerItem className="w-full">
             <div className="relative overflow-hidden w-full max-w-[420px] h-[282px] mx-auto lg:mx-0 lg:ml-auto rounded-[16px]">
             <Image 
-              src="/assets/boxPics/1.png"
+              src="/assets/boxPics/1.webp"
               alt="What we do 1"
               fill
               className="object-cover object-[30%_center]"
@@ -62,7 +62,7 @@ export function WhatWeDoSection() {
           <StaggerItem className="w-full">
             <div className="relative overflow-hidden w-full max-w-[420px] h-[282px] mx-auto lg:mx-0 lg:ml-auto rounded-[16px]">
             <Image 
-              src="/assets/boxPics/2.png"
+              src="/assets/boxPics/2.webp"
               alt="What we do 2"
               fill
               className="object-cover"
@@ -88,7 +88,7 @@ export function WhatWeDoSection() {
           <StaggerItem className="w-full">
             <div className="relative overflow-hidden w-full max-w-[420px] h-[282px] mx-auto lg:mx-0 lg:ml-auto rounded-[16px]">
             <Image 
-              src="/assets/boxPics/3.png"
+              src="/assets/boxPics/3.webp"
               alt="What we do 3"
               fill
               className="object-cover object-[40%_center]"
@@ -114,7 +114,7 @@ export function WhatWeDoSection() {
           <StaggerItem className="w-full">
             <div className="relative overflow-hidden w-full max-w-[420px] h-[282px] mx-auto lg:mx-0 lg:ml-auto rounded-[16px]">
             <Image 
-              src="/assets/boxPics/4.png"
+              src="/assets/boxPics/4.webp"
               alt="What we do 4"
               fill
               className="object-cover"

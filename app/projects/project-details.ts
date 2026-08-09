@@ -123,7 +123,7 @@ export const projectDetails = [
     videoTitle: "explore real estate in dubai",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
-      src: "/assets/blurred.png",
+      src: "/assets/blurred.webp",
       alt: "Blurred video preview of the Agency 8 real estate campaign",
       position: "50% 44%",
     },
@@ -214,7 +214,7 @@ export const projectDetails = [
     videoTitle: "Black Friday product launch",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
-      src: "/assets/blurred.png",
+      src: "/assets/blurred.webp",
       alt: "Blurred video preview of the Sadia Psychology Black Friday launch",
       position: "50% 44%",
     },
@@ -304,7 +304,7 @@ export const projectDetails = [
     videoTitle: "building a strong, community driven brand.",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
-      src: "/assets/blurred.png",
+      src: "/assets/blurred.webp",
       alt: "Blurred video preview of the Women Who Thrive community campaign",
       position: "50% 44%",
     },
@@ -333,7 +333,7 @@ export const projectDetails = [
     overviewSubtitle: "Sneak peak into Picksperience launch",
     galleryImages: [
       {
-        src: "/assets/pick1.0.png",
+        src: "/assets/pick1.0.webp",
         alt: "Picksperience product sampling activation venue",
         position: "18% 50%",
       },
@@ -343,7 +343,7 @@ export const projectDetails = [
         position: "38% 50%",
       },
       {
-        src: "/assets/pick3.0.png",
+        src: "/assets/pick3.0.webp",
         alt: "Picksperience audience engagement launch content",
         position: "58% 50%",
       },
@@ -398,7 +398,7 @@ export const projectDetails = [
     videoTitle: "uae market launch",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
-      src: "/assets/blurred.png",
+      src: "/assets/blurred.webp",
       alt: "Blurred video preview of the Picksperience launch campaign",
       position: "50% 44%",
     },
@@ -488,7 +488,7 @@ export const projectDetails = [
     videoTitle: "supperclub golden partners",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
-      src: "/assets/blurred.png",
+      src: "/assets/blurred.webp",
       alt: "Blurred video preview of the SupperClub membership campaign",
       position: "50% 53%",
     },
@@ -582,7 +582,7 @@ export const projectDetails = [
     videoTitle: "mall of emirates launch",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
-      src: "/assets/blurred.png",
+      src: "/assets/blurred.webp",
       alt: "Blurred video preview of the Cinnamood Mall of Emirates launch",
       position: "50% 44%",
     },
@@ -591,7 +591,7 @@ export const projectDetails = [
       "/assets/cinamood/cinamood-2.mov",
       "/assets/cinamood/cinamood-3.mov",
     ],
-    socialGridImage: "/assets/socialGridPreviews/cinamood.png",
+    socialGridImage: "/assets/socialGridPreviews/cinamood.webp",
     metadata: {
       title: "Cinnamood UAE Launch | USS Projects",
       description:
@@ -677,12 +677,12 @@ export const projectDetails = [
     videoTitle: "beach lounge in Dubai",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
-      src: "/assets/blurred.png",
+      src: "/assets/blurred.webp",
       alt: "Blurred video preview of the Yula Lounge rebrand campaign",
       position: "50% 42%",
     },
     videoSrc: "/assets/yula/yula.mov",
-    socialGridImage: "/assets/socialGridPreviews/yula.png",
+    socialGridImage: "/assets/socialGridPreviews/yula.webp",
     metadata: {
       title: "Yula Beach Lounge Rebrand | USS Projects",
       description:
@@ -696,7 +696,7 @@ export const projectDetails = [
     description:
       "Flowork is a modern workspace offering private offices, meeting rooms and podcast studios. USS partnered with Flowork to launch its Dubai Hills and Business Bay locations, building awareness and generating demand selling out 50% of office space ahead of opening.",
     heroImage: {
-      src: "/assets/projectsPagePics/flowork.png",
+      src: "/assets/projectsPagePics/flowork.webp",
       alt: "Flowork lounge with warm shelving and tan seating",
       position: "50% 48%",
     },
@@ -768,7 +768,7 @@ export const projectDetails = [
     videoTitle: "from strategy to launch",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
-      src: "/assets/blurred.png",
+      src: "/assets/blurred.webp",
       alt: "Blurred video preview of the Flowork launch campaign",
       position: "50% 48%",
     },
@@ -777,7 +777,7 @@ export const projectDetails = [
       "/assets/flowork/flow-2.mp4",
       "/assets/flowork/flow-3.mp4",
     ],
-    socialGridImage: "/assets/socialGridPreviews/flowork.png",
+    socialGridImage: "/assets/socialGridPreviews/flowork.webp",
     metadata: {
       title: "Flowork Dubai Launch | USS Projects",
       description:
@@ -863,7 +863,7 @@ export const projectDetails = [
     videoTitle: "bringing a new concept to life",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
-      src: "/assets/blurred.png",
+      src: "/assets/blurred.webp",
       alt: "Blurred video preview of the Blank DXB launch campaign",
       position: "50% 50%",
     },
@@ -881,29 +881,29 @@ export const projectDetails = [
     description:
       "Reclaim is a US travel service designed to simplify the airport experience by allowing passengers to skip check-in entirely. By collecting luggage directly from a customer's home, hotel, or Airbnb and checking it in with the airline, reclaim offers a more seamless and convenient way to travel.",
     heroImage: {
-      src: "/assets/reclaima.png",
+      src: "/assets/reclaima.webp",
       alt: "Travelers with luggage inside an airport terminal",
       position: "50% 50%",
     },
     overviewSubtitle: "Sneak peak into reclaim launch in US",
     galleryImages: [
       {
-        src: "/assets/reclaim1.png",
+        src: "/assets/reclaim1.webp",
         alt: "Reclaim travel luggage in airport terminal",
         position: "16% 50%",
       },
       {
-        src: "/assets/Book your trip (5).png",
+        src: "/assets/Book your trip (5).webp",
         alt: "Reclaim branded luggage service concept",
         position: "38% 50%",
       },
       {
-        src: "/assets/reclaim3.png",
+        src: "/assets/reclaim3.webp",
         alt: "Traveler with luggage before boarding",
         position: "58% 50%",
       },
       {
-        src: "/assets/reclaim4.png",
+        src: "/assets/reclaim4.webp",
         alt: "US travel destination skyline and airport route",
         position: "82% 50%",
       },
@@ -953,7 +953,7 @@ export const projectDetails = [
     videoTitle: "the future of travel is hand-free",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
-      src: "/assets/blurred.png",
+      src: "/assets/blurred.webp",
       alt: "Blurred video preview of the Reclaim US launch campaign",
       position: "50% 50%",
     },
@@ -967,7 +967,7 @@ export const projectDetails = [
       description:
         "A USS project overview for launching Reclaim in the US travel market through marketing strategy, paid media, email marketing, and content creation.",
     },
-    socialGridImage: "/assets/socialGridPreviews/reclaim.png",
+    socialGridImage: "/assets/socialGridPreviews/reclaim.webp",
   },
   {
     slug: "adidas-middle-east",
@@ -1048,7 +1048,7 @@ export const projectDetails = [
     videoTitle: "adidas middle east launch event",
     videoSubtitle: "See how we brought this campaign to life.",
     videoPreview: {
-      src: "/assets/blurred.png",
+      src: "/assets/blurred.webp",
       alt: "Blurred video preview of the Adidas Middle East product launch",
       position: "50% 40%",
     },
@@ -1138,7 +1138,7 @@ export const projectDetails = [
     videoTitle: "mall of emirates launch",
     videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     videoPreview: {
-      src: "/assets/blurred.png",
+      src: "/assets/blurred.webp",
       alt: "Blurred video preview of the Fete Events campaign",
       position: "50% 50%",
     },
@@ -1148,7 +1148,7 @@ export const projectDetails = [
         "A USS project overview for Fête Events, delivering bespoke, extraordinary corporate events through comprehensive marketing strategy and digital presence.",
     },
     hideVideoSection: true,
-    socialGridImage: "/assets/socialGridPreviews/fete.png",
+    socialGridImage: "/assets/socialGridPreviews/fete.webp",
   },
   {
     slug: "precision-talk",
@@ -1229,7 +1229,7 @@ export const projectDetails = [
     videoTitle: "mall of emirates launch",
     videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     videoPreview: {
-      src: "/assets/blurred.png",
+      src: "/assets/blurred.webp",
       alt: "Blurred video preview of the Precision Talk campaign",
       position: "50% 50%",
     },
@@ -1319,12 +1319,12 @@ export const projectDetails = [
     videoTitle: "immersive 3D technology",
     videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     videoPreview: {
-      src: "/assets/blurred.png",
+      src: "/assets/blurred.webp",
       alt: "Blurred video preview of the Disturbed Innovations campaign",
       position: "50% 50%",
     },
     videoSrc: "/assets/disturbed-innovations/dig.mp4",
-    socialGridImage: "/assets/socialGridPreviews/disturbed.png",
+    socialGridImage: "/assets/socialGridPreviews/disturbed.webp",
     metadata: {
       title: "Disturbed Innovations Group Rebrand | USS Projects",
       description:
@@ -1411,12 +1411,12 @@ export const projectDetails = [
     videoTitle: "afro maya fashion world",
     videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     videoPreview: {
-      src: "/assets/blurred.png",
+      src: "/assets/blurred.webp",
       alt: "Blurred video preview of the Afro Maya campaign",
       position: "50% 50%",
     },
     videoSrc: "/assets/afro/Horizontal.mov",
-    socialGridImage: "/assets/afroz.png",
+    socialGridImage: "/assets/afroz.webp",
     metadata: {
       title: "Afro Maya E-Commerce Fashion | USS Projects",
       description:
@@ -1502,7 +1502,7 @@ export const projectDetails = [
     videoTitle: "mall of emirates launch",
     videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     videoPreview: {
-      src: "/assets/blurred.png",
+      src: "/assets/blurred.webp",
       alt: "Blurred video preview of the Coshe Juices campaign",
       position: "50% 50%",
     },
@@ -1528,7 +1528,7 @@ export const projectDetails = [
     overviewSubtitle: "M&N NAIL SPA CONTENT CREATION",
     galleryImages: [
       {
-        src: "/assets/m7m.jpg",
+        src: "/assets/m7m.webp",
         alt: "M&N Nail Spa beauty treatment",
         position: "50% 50%",
       },
@@ -1593,7 +1593,7 @@ export const projectDetails = [
     videoTitle: "mall of emirates launch",
     videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     videoPreview: {
-      src: "/assets/blurred.png",
+      src: "/assets/blurred.webp",
       alt: "Blurred video preview of the M&N Nail Spa campaign",
       position: "50% 50%",
     },
@@ -1683,7 +1683,7 @@ export const projectDetails = [
     videoTitle: "mall of emirates launch",
     videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     videoPreview: {
-      src: "/assets/blurred.png",
+      src: "/assets/blurred.webp",
       alt: "Blurred video preview of the Tish Wonders campaign",
       position: "50% 50%",
     },
@@ -1773,7 +1773,7 @@ export const projectDetails = [
     videoTitle: "mall of emirates launch",
     videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     videoPreview: {
-      src: "/assets/blurred.png",
+      src: "/assets/blurred.webp",
       alt: "Blurred video preview of the Residency Advanced campaign",
       position: "50% 50%",
     },
@@ -1859,7 +1859,7 @@ galleryImages: [
     videoTitle: "mall of emirates launch",
     videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     videoPreview: {
-      src: "/assets/blurred.png",
+      src: "/assets/blurred.webp",
       alt: "Blurred video preview of the Residency Advanced campaign",
       position: "50% 50%",
     },
@@ -1889,7 +1889,7 @@ galleryImages: [
         position: "50% 50%",
       },
       {
-        src: "/assets/fabra.jpg",
+        src: "/assets/fabra.webp",
         alt: "Fabri Elite presenting",
         position: "50% 50%",
       },
@@ -1949,7 +1949,7 @@ galleryImages: [
     videoTitle: "fabri elite agency",
     videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     videoPreview: {
-      src: "/assets/blurred.png",
+      src: "/assets/blurred.webp",
       alt: "Blurred video preview of the Fabri Elite campaign",
       position: "50% 50%",
     },
@@ -1971,7 +1971,7 @@ galleryImages: [
     description:
       "St George's is a real estate agency specialising in premium residential properties across Dubai. USS partnered with the team to produce professional photo and video content that showcased listings, strengthened the brand's visual identity and provided high quality marketing assets across digital channels.",
     heroImage: {
-      src: "/assets/puma.png",
+      src: "/assets/puma.webp",
       alt: "St George's passport and globe",
       position: "50% 50%",
     },
@@ -2043,7 +2043,7 @@ galleryImages: [
     videoTitle: "content strategy",
     videoSubtitle: "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     videoPreview: {
-      src: "/assets/blurred.png",
+      src: "/assets/blurred.webp",
       alt: "Blurred video preview of the St George's campaign",
       position: "50% 50%",
     },

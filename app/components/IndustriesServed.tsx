@@ -12,37 +12,37 @@ interface SlideData {
 const defaultSlides: SlideData[] = [
   // {
   //   id: 1,
-  //   imageSrc: "/assets/web-carousel/1.png", // User will put the actual sources here
+  //   imageSrc: "/assets/web-carousel/1.webp", // User will put the actual sources here
   //   centerText: "We design Brand Identity for Art & Culture",
   //   bottomText: "Restaurants, cafés, F&B groups. Menu-led design, ordering, reservation flows."
   // },
   {
     id: 1,
-    imageSrc: "/assets/websites/Wellness.png",
+    imageSrc: "/assets/websites/Wellness.webp",
     centerText: "We create websites for Wellness Brands",
     bottomText: ""
   },
   {
     id: 2,
-    imageSrc: "/assets/websites/Technology.png",
+    imageSrc: "/assets/websites/Technology.webp",
     centerText: "We create websites for Technology Brands",
     bottomText: ""
   },
   {
     id: 3,
-    imageSrc: "/assets/websites/Real Estate.png",
+    imageSrc: "/assets/websites/Real Estate.webp",
     centerText: "We create websites for Real Estate Brands",
     bottomText: ""
   },
   {
     id: 4,
-    imageSrc: "/assets/websites/Fashion.png",
+    imageSrc: "/assets/websites/Fashion.webp",
     centerText: "We create websites for Fashion Brands",
     bottomText: ""
   },
   {
     id: 5,
-    imageSrc: "/assets/websites/Events.png",
+    imageSrc: "/assets/websites/Events.webp",
     centerText: "We create websites for Events Brands",
     bottomText: ""
   }

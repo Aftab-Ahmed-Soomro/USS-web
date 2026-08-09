@@ -182,7 +182,7 @@ const brandingLeftData = [
     category: "Company Profile",
     title: "Company Profiles",
     description: "Professionally designed company profiles that introduce your business, communicate your expertise and build credibility with potential clients.",
-    image: "/assets/branding/company.png",
+    image: "/assets/branding/company.webp",
   },
   {
     id: 2,
@@ -190,7 +190,7 @@ const brandingLeftData = [
     category: "Marketing Collateral",
     title: "Brochures",
     description: "Premium brochures that showcase your products, services and brand through clear, engaging visual communication.",
-    image: "/assets/branding/brochures.png",
+    image: "/assets/branding/brochures.webp",
   },
   {
     id: 3,
@@ -198,7 +198,7 @@ const brandingLeftData = [
     category: "Client Success",
     title: "Case Studies",
     description: "Professional case studies that demonstrate your work, showcase measurable outcomes and build trust through real client success stories.",
-    image: "/assets/Case Studies - 1.png",
+    image: "/assets/Case Studies - 1.webp",
   }
 ];
 
@@ -209,7 +209,7 @@ const brandingRightData = [
     category: "Sales Presentation",
     title: "Sales Decks",
     description: "Sales presentations designed to communicate your brand value, support conversations and improve client engagement.",
-    image: "/assets/Sales Decks - 1.png",
+    image: "/assets/Sales Decks - 1.webp",
     imageClass: "object-cover object-[130%_100%]"
   },
   {
@@ -218,7 +218,7 @@ const brandingRightData = [
     category: "Business Pitch",
     title: "Pitch Decks",
     description: "Strategic pitch presentations designed to communicate your vision, support investment opportunities and win new business.",
-    image: "/assets/Pitch Decks - 2.png",
+    image: "/assets/Pitch Decks - 2.webp",
   },
   {
     id: 6,
@@ -226,7 +226,7 @@ const brandingRightData = [
     category: "Investment Materials",
     title: "Investor Decks",
     description: "Investor presentations that clearly communicate your business model, growth strategy and long term vision with confidence.",
-    image: "/assets/Investor Decks - 1.png",
+    image: "/assets/Investor Decks - 1.webp",
   }
 ];
 
@@ -318,7 +318,7 @@ function EmailOverview() {
         <FadeRight duration={0.8} delay={0.2} className="order-2 -mx-1 pt-10 sm:mx-0 lg:order-none lg:col-start-2 lg:row-start-1 lg:flex lg:items-start lg:justify-end lg:pt-0">
           <div className="relative mx-auto lg:ml-auto lg:mr-0 aspect-[463/842] w-full max-w-[260px] min-[375px]:max-w-[300px] sm:max-w-[400px] overflow-hidden bg-white shadow-[0_24px_55px_rgba(0,0,0,0.35)] translate-x-2 sm:translate-x-4 lg:translate-x-6">
             <Image
-              src="/assets/email-market.png"
+              src="/assets/email-market.webp"
               alt="Email marketing campaign designs"
               fill
               sizes="(min-width: 1024px) 400px, calc(100vw - 48px)"
@@ -939,7 +939,7 @@ export default function New360WithForm() {
         />
       </div> */}
       <WhyGoogleAdsWork
-        imageSrc="/assets/metaSide.png"
+        imageSrc="/assets/metaSide.webp"
         imageAlt="Meta Ads strategy expert"
         logoSrc="/assets/meta_logo_2.png"
         // headingPrefix="Meta"
@@ -978,10 +978,10 @@ export default function New360WithForm() {
       <RevenueMethod
         heading={<>how we build high performing <br className="hidden sm:block" />{" "}<span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[0.9] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>meta campaigns</span></>}
         cards={[
-          { id: '01', title: 'Campaign Strategy', description: 'Every campaign starts with a clear objective. We define your goals, audience, budget and messaging before any ad goes live.', bgImage: '/assets/method1.png' },
-          { id: '02', title: 'Audience Targeting', description: 'We identify and engage the most relevant demographics through data-driven targeting strategies, ensuring your ads reach the right people.', bgImage: '/assets/method2.png' },
-          { id: '03', title: 'Creative & Ad Content', description: 'Our team crafts compelling visuals and persuasive copy that capture attention and drive meaningful engagement from your audience.', bgImage: '/assets/method3.png' },
-          { id: '04', title: 'Optimisation & Scaling', description: 'We continuously monitor performance metrics to refine campaigns, maximizing return on ad spend and scaling what works best.', bgImage: '/assets/method4.png' },
+          { id: '01', title: 'Campaign Strategy', description: 'Every campaign starts with a clear objective. We define your goals, audience, budget and messaging before any ad goes live.', bgImage: '/assets/method1.webp' },
+          { id: '02', title: 'Audience Targeting', description: 'We identify and engage the most relevant demographics through data-driven targeting strategies, ensuring your ads reach the right people.', bgImage: '/assets/method2.webp' },
+          { id: '03', title: 'Creative & Ad Content', description: 'Our team crafts compelling visuals and persuasive copy that capture attention and drive meaningful engagement from your audience.', bgImage: '/assets/method3.webp' },
+          { id: '04', title: 'Optimisation & Scaling', description: 'We continuously monitor performance metrics to refine campaigns, maximizing return on ad spend and scaling what works best.', bgImage: '/assets/method4.webp' },
         ]}
       />
       <motion.div
@@ -1019,9 +1019,9 @@ export default function New360WithForm() {
         />
       </div> */}
       <WhyGoogleAdsWork
-        imageSrc="/assets/googleside.jpg"
+        imageSrc="/assets/googleside.webp"
         imageAlt="Team working on Google Ads strategy"
-        logoSrc="/assets/google_logo_2.png"
+        logoSrc="/assets/google_logo_2.webp"
         logoClassName="h-[1em] sm:h-[1.25em] w-auto object-contain inline-block self-center mt-1 sm:mt-1.5"
         headingItalic="ads"
         headingSuffix="work"
@@ -1072,25 +1072,25 @@ export default function New360WithForm() {
               name: "Search Campaigns",
               description:
                 "Reach, engage and convert customers across Facebook and Instagram through high-performing paid campaigns.",
-              imageSrc: "/assets/1.png",
+              imageSrc: "/assets/1.webp",
             },
             {
               name: "Performance Max",
               description:
                 "Maximise conversions across all Google channels using AI-driven campaigns.",
-              imageSrc: "/assets/googlePlatforms/2.png",
+              imageSrc: "/assets/googlePlatforms/2.webp",
             },
             {
               name: "YouTube Campaigns",
               description:
                 "Engage audiences with compelling video ads across YouTube and the web.",
-              imageSrc: "/assets/googlePlatforms/3.png",
+              imageSrc: "/assets/googlePlatforms/3.webp",
             },
             {
               name: "Display Ads",
               description:
                 "Build brand awareness and retarget visitors with visually striking image ads.",
-              imageSrc: "/assets/googlePlatforms/4.png",
+              imageSrc: "/assets/googlePlatforms/4.webp",
             },
           ]}
         />
@@ -1098,10 +1098,10 @@ export default function New360WithForm() {
       <RevenueMethod
         heading={<>how we capture demand <br className="hidden sm:block" /> and turn it into{" "}<span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[70px] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>revenue</span></>}
         cards={[
-          { id: '01', title: 'Keyword Strategy', description: 'We identify the keywords your customers are actively searching for and build campaigns around high-intent search terms.', bgImage: '/assets/method1.png' },
-          { id: '02', title: 'Campaign Structure', description: 'We build meticulously organized campaigns designed to maximize relevance, improve Quality Score, and give precise control over your budget.', bgImage: '/assets/method2.png' },
-          { id: '03', title: 'Ad Copy & Creative', description: 'Our team crafts compelling ad copy and engaging creatives that capture attention, drive higher click-through rates, and increase conversions.', bgImage: '/assets/method3.png' },
-          { id: '04', title: 'Optimisation & Growth', description: 'We continuously monitor and refine your campaigns based on data-driven insights, ensuring scalable growth and maximum return on ad spend.', bgImage: '/assets/method4.png' },
+          { id: '01', title: 'Keyword Strategy', description: 'We identify the keywords your customers are actively searching for and build campaigns around high-intent search terms.', bgImage: '/assets/method1.webp' },
+          { id: '02', title: 'Campaign Structure', description: 'We build meticulously organized campaigns designed to maximize relevance, improve Quality Score, and give precise control over your budget.', bgImage: '/assets/method2.webp' },
+          { id: '03', title: 'Ad Copy & Creative', description: 'Our team crafts compelling ad copy and engaging creatives that capture attention, drive higher click-through rates, and increase conversions.', bgImage: '/assets/method3.webp' },
+          { id: '04', title: 'Optimisation & Growth', description: 'We continuously monitor and refine your campaigns based on data-driven insights, ensuring scalable growth and maximum return on ad spend.', bgImage: '/assets/method4.webp' },
         ]}
       />
       <motion.div

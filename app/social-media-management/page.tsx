@@ -30,7 +30,7 @@ const relatedProjects = [
     slug: "women-who-thrive",
     year: "2026",
     copy: "Using organic social we increased Women Who Thrive membership to 10k after 6months using only Organic Social and to 22k in 18 months. ",
-    image: "/assets/womenThrive.jpg",
+    image: "/assets/womenThrive.webp",
     tags: ["Social Growth", "Increase Membership", "Women Network Organization"],
   },
   {
@@ -38,7 +38,7 @@ const relatedProjects = [
     slug: "yula-beach-lounge",
     year: "2026",
     copy: "Transforming Yalseh into Yula, a modern Dubai beach club. We grew their organic social following to 20k+ in 24 months.",
-    image: "/assets/yula2.jpg",
+    image: "/assets/yula2.webp",
     tags: ["Social Growth", "F&B Industry"],
     imageClassName: "object-cover object-[50%_42%]",
   },
@@ -452,7 +452,7 @@ export default function SocialMediaManagementPage() {
             isn&apos;t working
           </h2>
         }
-        centerLogo="/assets/organic__icon.png"
+        centerLogo="/assets/organic__icon.webp"
         logoClassName="w-[80px] lg:w-[125px]"
         subheading="Many brands are active on social media, but without a clear strategy, consistent content and a defined brand identity"
         leftTitle="Most Brands"

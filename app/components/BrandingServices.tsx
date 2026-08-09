@@ -9,37 +9,37 @@ const bottomCards = [
     id: "01",
     title: "Typography",
     description: "Choose fonts that reflect your business and keep your content clear and easy to read.",
-    image: "/assets/typography.png",
+    image: "/assets/typography.webp",
   },
   {
     id: "02",
     title: "Colour Palette",
     description: "Develop a colour palette that gives your business a consistent look across every touchpoint.",
-    image: "/assets/colour-palette.png",
+    image: "/assets/colour-palette.webp",
   },
   {
     id: "03",
     title: "Logo Design",
     description: "Create a distinctive logo that represents your business and leaves a lasting impression.",
-    image: "/assets/logo-design.png",
+    image: "/assets/logo-design.webp",
   },
   {
     id: "04",
     title: "Brand Guidelines",
     description: "Set clear rules to keep your business consistent across every platform and asset.",
-    image: "/assets/branding gudieliens.png",
+    image: "/assets/branding gudieliens.webp",
   },
   {
     id: "05",
     title: "App Icon",
     description: "Design a clear and recognisable app icon that represents your business across mobile devices and app stores.",
-    image: "/assets/App - 1.png",
+    image: "/assets/App - 1.webp",
   },
   {
     id: "06",
     title: "Brand Assets",
     description: "Create branded social templates, stationery, presentations and marketing materials for your business.",
-    image: "/assets/brandingImages/5.png",
+    image: "/assets/brandingImages/5.webp",
   },
 ];
 
