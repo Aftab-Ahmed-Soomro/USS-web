@@ -17,6 +17,7 @@ import {
   Sparkles,
   Phone,
 } from "lucide-react";
+import { motion } from "framer-motion";
 import Stagger from "./Stagger";
 import StaggerItem from "./Staggeritem";
 
@@ -131,7 +132,11 @@ export function ConsultationForm({ className = "" }: { className?: string }) {
         </StaggerItem>
 
         {isSubmitted ? (
-          <StaggerItem>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: 10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+          >
             <div className="my-8 flex flex-col items-center justify-center text-center p-8 bg-[#111111] rounded-xl border border-white/15">
               <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-white text-black">
                 <CheckCircle2 className="h-8 w-8" />
@@ -155,7 +160,7 @@ export function ConsultationForm({ className = "" }: { className?: string }) {
                 Book Another Slot
               </button>
             </div>
-          </StaggerItem>
+          </motion.div>
         ) : (
           /* Landscape 2-Column Grid: Left Calendar, Right Questions */
           <form onSubmit={handleSubmit} className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-6 items-start">
@@ -468,8 +473,12 @@ export function LightConsultationForm({ className = "" }: { className?: string }
         </StaggerItem>
 
         {isSubmitted ? (
-          <StaggerItem>
-            <div className="my-8 flex flex-col items-center justify-center text-center p-8 bg-gray-50 rounded-xl border border-gray-200">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: 10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+          >
+            <div className="my-8 flex flex-col items-center justify-center text-center p-8 bg-gray-50 rounded-xl border border-gray-100">
               <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-black text-white">
                 <CheckCircle2 className="h-8 w-8" />
               </div>
@@ -477,10 +486,13 @@ export function LightConsultationForm({ className = "" }: { className?: string }
                 Consultation Reserved!
               </h3>
               <p className="mt-2 max-w-[420px] font-[var(--font-inter)] text-[14px] leading-relaxed text-gray-600">
-                Thank you, <span className="font-semibold text-gray-900">{formData.name || "there"}</span>! We have scheduled your consultation for{" "}
+                Thank you, <span className="font-semibold text-black">{formData.name || "there"}</span>! We have scheduled your consultation for{" "}
                 <span className="text-[#ff5500] font-semibold">
                   {monthNames[month]} {selectedDay}, {year} at {selectedTime}
                 </span>.
+              </p>
+              <p className="mt-2 text-[13px] text-gray-500">
+                A calendar invite and meeting details have been sent to <span className="text-gray-900">{formData.email || "your email"}</span>.
               </p>
               <button
                 onClick={resetForm}
@@ -489,7 +501,7 @@ export function LightConsultationForm({ className = "" }: { className?: string }
                 Book Another Slot
               </button>
             </div>
-          </StaggerItem>
+          </motion.div>
         ) : (
           <form onSubmit={handleSubmit} className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
             {/* Left Column: Calendar & Time Selector */}
