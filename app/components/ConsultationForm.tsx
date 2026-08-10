@@ -17,7 +17,6 @@ import {
   Sparkles,
   Phone,
 } from "lucide-react";
-import { PopupModal } from "react-calendly";
 import Stagger from "./Stagger";
 import StaggerItem from "./Staggeritem";
 
@@ -66,7 +65,6 @@ export function ConsultationForm({ className = "" }: { className?: string }) {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
 
   const year = currentDate.getFullYear();
   const month = currentDate.getMonth();
@@ -100,7 +98,6 @@ export function ConsultationForm({ className = "" }: { className?: string }) {
         }),
       });
 
-      setIsCalendlyOpen(true);
       setIsSubmitted(true);
     } catch (err) {
       console.error("Booking error:", err);
@@ -386,19 +383,6 @@ export function ConsultationForm({ className = "" }: { className?: string }) {
           </form>
         )}
       </Stagger>
-      {typeof window !== "undefined" && isCalendlyOpen && (
-        <PopupModal
-          url="https://calendly.com/unitedstrategicsolutions/30min"
-          onModalClose={() => setIsCalendlyOpen(false)}
-          open={isCalendlyOpen}
-          rootElement={typeof document !== "undefined" ? document.body : (null as any)}
-          prefill={{
-            email: formData.email,
-            name: formData.name,
-            guests: formData.guestEmail ? [formData.guestEmail] : [],
-          }}
-        />
-      )}
     </section>
   );
 }
@@ -728,19 +712,6 @@ export function LightConsultationForm({ className = "" }: { className?: string }
           </form>
         )}
       </Stagger>
-      {typeof window !== "undefined" && isCalendlyOpen && (
-        <PopupModal
-          url="https://calendly.com/unitedstrategicsolutions/30min"
-          onModalClose={() => setIsCalendlyOpen(false)}
-          open={isCalendlyOpen}
-          rootElement={typeof document !== "undefined" ? document.body : (null as any)}
-          prefill={{
-            email: formData.email,
-            name: formData.name,
-            guests: formData.guestEmail ? [formData.guestEmail] : [],
-          }}
-        />
-      )}
     </section>
   );
 }
