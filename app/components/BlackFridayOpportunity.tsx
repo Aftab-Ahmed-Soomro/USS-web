@@ -10,42 +10,55 @@ const imageConfigs = [
   {
     src: "/assets/black-friday/1.jpg",
     position: "10% 0%",
-    scale: 1.2
+    laptopPosition: "20% 15%",
+    scale: 1.2,
+    laptopScale: 1.1,
   },
   {
     src: "/assets/black-friday/2.jpg",
     position: "center 0%",
+    laptopPosition: "center 5%",
     mobilePosition: "center",
-    scale: 1.4
+    scale: 1.4,
+    laptopScale: 1.25,
   },
   {
     src: "/assets/black-friday/3.jpg",
     position: "60% 0%",
+    laptopPosition: "60% 5%",
     mobilePosition: "center",
-    scale: 1.35
+    scale: 1.35,
+    laptopScale: 1.2,
   },
   {
     src: "/assets/black-friday/4.jpg",
     position: "40% 50%",
+    laptopPosition: "50% 70%",
     mobilePosition: "50% 20%",
     scale: 1.35,
+    laptopScale: 2.2,
     mobileScale: 0.85,
-    fit: "contain"
+    fit: "contain",
   },
   {
     src: "/assets/IMG_2830.PNG",
     position: "50% 50%",
+    laptopPosition: "50% 40%",
     mobilePosition: "50% 40%",
     scale: 1.2,
+    laptopScale: 1.0,
     mobileScale: 0.9,
-    fit: "contain"
+    fit: "contain",
+    laptopFit: "cover",
   },
   {
     src: "/assets/black-friday/6.jpg",
     position: "40% 20%",
+    laptopPosition: "50% 15%",
     mobilePosition: "65% 20%",
     scale: 1.4,
-    mobileScale: 1.0
+    laptopScale: 1.1,
+    mobileScale: 1.0,
   },
 ];
 
@@ -93,7 +106,7 @@ export function BlackFridayOpportunity() {
           <p
             className="mt-4 sm:mt-6 font-normal text-[#1A1A1A] mx-auto max-w-[750px] font-[var(--font-inter)] text-[13px] sm:text-[18px] leading-[1.6] sm:leading-[29.25px] px-6"
           >
-            Black Friday is when audiences are actively searching, comparing and ready to buy. For YouTubers with engaged, loyal communities, it’s a key opportunity to turn trusted content into meaningful brand partnerships and revenue.
+            Black Friday is when audiences are actively searching, comparing and ready to buy. For YouTubers with engaged, loyal communities, it's a key opportunity to turn trusted content into meaningful brand partnerships and revenue.
           </p>
         </div>
       </FadeUp>
@@ -102,25 +115,46 @@ export function BlackFridayOpportunity() {
       {/* <FadeUp> */}
       <div className="w-full mb-12 sm:mb-20">
         <style>{`
+            /* Mobile (default) */
             .arc-clip-path {
               clip-path: polygon(0% 0%, 10% 3%, 20% 5%, 30% 6.5%, 40% 7.5%, 50% 8%, 60% 7.5%, 70% 6.5%, 80% 5%, 90% 3%, 100% 0%, 100% 100%, 90% 97%, 80% 95%, 70% 93.5%, 60% 92.5%, 50% 92%, 40% 92.5%, 30% 93.5%, 20% 95%, 10% 97%, 0% 100%);
             }
             .responsive-img {
               object-position: var(--mobile-pos) !important;
               transform: scale(var(--mobile-scale)) !important;
+              transform-origin: var(--mobile-pos) !important;
             }
+            /* Laptop & mid-desktop (640px - 1849px): gentler arc ~10% depth */
             @media (min-width: 640px) {
+              .arc-clip-path {
+                clip-path: polygon(0% 0%, 10% 3.6%, 20% 6.4%, 30% 8.4%, 40% 9.6%, 50% 10%, 60% 9.6%, 70% 8.4%, 80% 6.4%, 90% 3.6%, 100% 0%, 100% 100%, 90% 96.4%, 80% 93.6%, 70% 91.6%, 60% 90.4%, 50% 90%, 40% 90.4%, 30% 91.6%, 20% 93.6%, 10% 96.4%, 0% 100%);
+              }
+              .responsive-img {
+                object-position: var(--laptop-pos) !important;
+                transform: scale(var(--laptop-scale)) !important;
+                transform-origin: var(--laptop-pos) !important;
+              }
+              .responsive-img.laptop-cover {
+                object-fit: cover !important;
+              }
+            }
+            /* Large Desktop (>=1850px): original deep arc ~18% depth */
+            @media (min-width: 1850px) {
               .arc-clip-path {
                 clip-path: polygon(0% 0%, 10% 6.48%, 20% 11.52%, 30% 15.12%, 40% 17.28%, 50% 18%, 60% 17.28%, 70% 15.12%, 80% 11.52%, 90% 6.48%, 100% 0%, 100% 100%, 90% 93.52%, 80% 88.48%, 70% 84.88%, 60% 82.72%, 50% 82%, 40% 82.72%, 30% 84.88%, 20% 88.48%, 10% 93.52%, 0% 100%);
               }
               .responsive-img {
                 object-position: var(--pos) !important;
                 transform: scale(var(--scale)) !important;
+                transform-origin: var(--pos) !important;
+              }
+              .responsive-img.laptop-cover {
+                object-fit: var(--desktop-fit) !important;
               }
             }
           `}</style>
         <div
-          className="w-full flex gap-[2px] sm:gap-4 overflow-hidden relative h-[250px] sm:h-[400px] lg:h-[600px] arc-clip-path"
+          className="w-full flex gap-[2px] sm:gap-4 overflow-hidden relative h-[250px] sm:h-[420px] lg:h-[500px] 2xl:h-[600px] arc-clip-path"
         >
           {imageConfigs.map((config, i) => (
             <div key={i} className="flex-1 relative h-full bg-gray-100 overflow-hidden">
@@ -128,13 +162,16 @@ export function BlackFridayOpportunity() {
                 src={config.src}
                 alt={`Black Friday Creator ${i + 1}`}
                 fill
-                className={`responsive-img ${config.fit ? `max-sm:!object-cover object-${config.fit}` : "object-cover"}`}
+                className={`responsive-img ${config.laptopFit === 'cover' ? 'laptop-cover' : ''} ${config.fit ? `max-sm:!object-cover object-${config.fit}` : "object-cover"}`}
                 style={{
                   '--pos': config.position,
+                  '--laptop-pos': config.laptopPosition || config.position,
                   '--mobile-pos': config.mobilePosition || config.position,
                   '--scale': config.scale,
+                  '--laptop-scale': config.laptopScale || config.scale,
                   '--mobile-scale': config.mobileScale || config.scale,
-                  transformOrigin: config.position // Zoom from the focus point
+                  '--desktop-fit': config.fit || 'cover',
+                  transformOrigin: config.position // fallback, overridden by CSS
                 } as any}
               />
             </div>

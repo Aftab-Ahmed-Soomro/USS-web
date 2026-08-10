@@ -304,11 +304,11 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
               <div className="flex gap-x-4 min-[375px]:gap-x-6 pr-4 min-[375px]:pr-6 shrink-0">
                 <div className="wag-card w-[290px] min-[375px]:w-[320px] shrink-0">
                   <div className="wag-image-wrapper">
-                    <img src={displayRegions[2].image} alt={displayRegions[2].alt} loading="lazy" decoding="async" />
+                    <img src={displayRegions[0].image} alt={displayRegions[0].alt} loading="lazy" decoding="async" />
                   </div>
                   <div className="wag-card-body">
-                    <h2 className="wag-card-title">{displayRegions[2].name}</h2>
-                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[2].description}</p>
+                    <h2 className="wag-card-title">{displayRegions[0].name}</h2>
+                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[0].description}</p>
                     <br />
                   </div>
                 </div>
@@ -324,11 +324,11 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
                 </div>
                 <div className="wag-card w-[290px] min-[375px]:w-[320px] shrink-0">
                   <div className="wag-image-wrapper">
-                    <img src={displayRegions[0].image} alt={displayRegions[0].alt} />
+                    <img src={displayRegions[2].image} alt={displayRegions[2].alt} />
                   </div>
                   <div className="wag-card-body">
-                    <h2 className="wag-card-title">{displayRegions[0].name}</h2>
-                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[0].description}</p>
+                    <h2 className="wag-card-title">{displayRegions[2].name}</h2>
+                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[2].description}</p>
                     <br />
                   </div>
                 </div>
@@ -338,11 +338,11 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
               <div className="flex gap-x-4 min-[375px]:gap-x-6 pr-4 min-[375px]:pr-6 shrink-0">
                 <div className="wag-card w-[290px] min-[375px]:w-[320px] shrink-0">
                   <div className="wag-image-wrapper">
-                    <img src={displayRegions[2].image} alt={displayRegions[2].alt} loading="lazy" decoding="async" />
+                    <img src={displayRegions[0].image} alt={displayRegions[0].alt} loading="lazy" decoding="async" />
                   </div>
                   <div className="wag-card-body">
-                    <h2 className="wag-card-title">{displayRegions[2].name}</h2>
-                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[2].description}</p>
+                    <h2 className="wag-card-title">{displayRegions[0].name}</h2>
+                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[0].description}</p>
                     <br />
                   </div>
                 </div>
@@ -358,11 +358,11 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
                 </div>
                 <div className="wag-card w-[290px] min-[375px]:w-[320px] shrink-0">
                   <div className="wag-image-wrapper">
-                    <img src={displayRegions[0].image} alt={displayRegions[0].alt} />
+                    <img src={displayRegions[2].image} alt={displayRegions[2].alt} />
                   </div>
                   <div className="wag-card-body">
-                    <h2 className="wag-card-title">{displayRegions[0].name}</h2>
-                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[0].description}</p>
+                    <h2 className="wag-card-title">{displayRegions[2].name}</h2>
+                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[2].description}</p>
                     <br />
                   </div>
                 </div>
@@ -372,11 +372,11 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
               <div className="flex gap-x-4 min-[375px]:gap-x-6 pr-4 min-[375px]:pr-6 shrink-0">
                 <div className="wag-card w-[290px] min-[375px]:w-[320px] shrink-0">
                   <div className="wag-image-wrapper">
-                    <img src={displayRegions[2].image} alt={displayRegions[2].alt} loading="lazy" decoding="async" />
+                    <img src={displayRegions[0].image} alt={displayRegions[0].alt} loading="lazy" decoding="async" />
                   </div>
                   <div className="wag-card-body">
-                    <h2 className="wag-card-title">{displayRegions[2].name}</h2>
-                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[2].description}</p>
+                    <h2 className="wag-card-title">{displayRegions[0].name}</h2>
+                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[0].description}</p>
                     <br />
                   </div>
                 </div>
@@ -392,11 +392,11 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
                 </div>
                 <div className="wag-card w-[290px] min-[375px]:w-[320px] shrink-0">
                   <div className="wag-image-wrapper">
-                    <img src={displayRegions[0].image} alt={displayRegions[0].alt} />
+                    <img src={displayRegions[2].image} alt={displayRegions[2].alt} />
                   </div>
                   <div className="wag-card-body">
-                    <h2 className="wag-card-title">{displayRegions[0].name}</h2>
-                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[0].description}</p>
+                    <h2 className="wag-card-title">{displayRegions[2].name}</h2>
+                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[2].description}</p>
                     <br />
                   </div>
                 </div>

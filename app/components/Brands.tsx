@@ -77,7 +77,7 @@ export function Brands() {
 
       {/* ── Brand Cards — horizontal left-scrolling marquee ── */}
       <div className="mt-[26px] w-full mx-auto overflow-hidden">
-        <div className="brand-cards-track flex items-center gap-x-4 min-[375px]:gap-x-6 sm:gap-x-12">
+        <div className="brand-cards-track flex items-center gap-x-4 min-[375px]:gap-x-6 sm:gap-x-8">
           {/* Two sets for seamless loop */}
           {[...brandCards, ...brandCards].map((brand, index) => (
             <article
