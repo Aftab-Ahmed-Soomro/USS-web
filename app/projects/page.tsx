@@ -46,7 +46,7 @@ const categories = [
     bottomTag: "Business Growth",
     projects: [
       { title: "PrecisionTalk", description: "AI Voice Agent Expanding in UAE", image: "/assets/projectsPagePics/precision.webp", tags: ["Brand Launch"], href: "/projects/precision-talk" },
-      { title: "Disturbed Innovations Group", description: "3D Immersive Experiences", image: "/assets/projectsPagePics/disturbed.webp", tags: ["Rebrand"], href: "/projects/disturbed-innovations" }
+      { title: "Disturbed Innovations", description: "3D Immersive Experiences", image: "/assets/projectsPagePics/disturbed.webp", tags: ["Rebrand"], href: "/projects/disturbed-innovations" }
     ]
   },
   {
@@ -64,7 +64,8 @@ const categories = [
         description: "Global Sampling Events",
         image: "/assets/pikachu.webp",
         tags: ["Brand Launch"],
-        href: "/projects/picksperience"
+        href: "/projects/picksperience",
+        imageClass: "-rotate-90 scale-[1.25] -translate-x-[14%]"
       }
     ]
   },
@@ -73,7 +74,7 @@ const categories = [
     topTag: "Online Growth",
     bottomTag: "Revenue Growth",
     projects: [
-      { title: "Afro Maya", description: "Fashion E-Commerce Brand", image: "/assets/projectsPagePics/afro.webp", tags: ["E-Commerce Growth"], href: "/projects/afro-maya" }
+      { title: "Afro Maya", description: "Fashion E-Commerce Brand", image: "/assets/projectsPagePics/afro.webp", tags: ["E-Commerce Growth"], href: "/projects/afro-maya", imageClass: "-rotate-90 scale-[1.25] -translate-x-[11%] object-[70%_center]" }
     ]
   },
   {
@@ -306,7 +307,8 @@ export default function ProjectsPage() {
 
                         {/* Title & description — slides up on hover */}
                         <div className="absolute bottom-3 left-3 right-3 sm:bottom-5 sm:left-5 sm:right-0 pointer-events-none translate-y-1 group-hover:translate-y-0 transition-transform duration-400">
-                          <h3 className="text-white text-[15px] sm:text-[22px] font-medium font-[var(--font-be-vietnam)] tracking-[-0.44px] leading-tight">
+                          <h3 className="text-white text-[15px] sm:text-[22px] font-medium font-[var(--font-be-vietnam)] tracking-[-0.44px] leading-tight whitespace-nowrap
+                          ">
                             {project.title}
                           </h3>
                           <p className="text-white/50 text-[11px] sm:text-[16px] font-[var(--font-inter)] font-light line-clamp-2 leading-[1.4] whitespace-nowrap tracking-[-0.44px] mt-1 sm:mt-0">

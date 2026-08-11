@@ -241,7 +241,7 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
         {/* Subtitle — rises up after heading */}
         <FadeUp delay={0.2}>
           <p className="wag-subtitle text-white/95 !text-[11px] min-[375px]:!text-[13px] sm:!text-[14px] md:!text-[16px] !leading-relaxed sm:!leading-[29.25px]">
-            Working with businesses across the<br className="hidden sm:inline" /> United States, United Kingdom and United Arab Emirates.
+            Working with businesses across the<br className="hidden sm:inline" /> United States, United Arab Emirates and United Kingdom.
           </p>
         </FadeUp>
 
@@ -300,7 +300,7 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
 
         <div className="wag-carousel-container">
             <div className="wag-carousel-track">
-              {/* Set 1 */}
+              {/* Set 1 — Atlanta → London → Dubai */}
               <div className="flex gap-x-4 min-[375px]:gap-x-6 pr-4 min-[375px]:pr-6 shrink-0">
                 <div className="wag-card w-[290px] min-[375px]:w-[320px] shrink-0">
                   <div className="wag-image-wrapper">
@@ -314,27 +314,27 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
                 </div>
                 <div className="wag-card w-[290px] min-[375px]:w-[320px] shrink-0">
                   <div className="wag-image-wrapper">
-                    <img src={displayRegions[1].image} alt={displayRegions[1].alt} className="!object-[80%_0%]" />
+                    <img src={displayRegions[2].image} alt={displayRegions[2].alt} loading="lazy" decoding="async" />
                   </div>
                   <div className="wag-card-body">
-                    <h2 className="wag-card-title">{displayRegions[1].name}</h2>
-                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[1].description}</p>
+                    <h2 className="wag-card-title">{displayRegions[2].name}</h2>
+                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[2].description}</p>
                     <br />
                   </div>
                 </div>
                 <div className="wag-card w-[290px] min-[375px]:w-[320px] shrink-0">
                   <div className="wag-image-wrapper">
-                    <img src={displayRegions[2].image} alt={displayRegions[2].alt} />
+                    <img src={displayRegions[1].image} alt={displayRegions[1].alt} className="!object-[80%_0%]" />
                   </div>
                   <div className="wag-card-body">
-                    <h2 className="wag-card-title">{displayRegions[2].name}</h2>
-                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[2].description}</p>
+                    <h2 className="wag-card-title">{displayRegions[1].name}</h2>
+                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[1].description}</p>
                     <br />
                   </div>
                 </div>
               </div>
 
-              {/* Set 2 */}
+              {/* Set 2 — Atlanta → London → Dubai */}
               <div className="flex gap-x-4 min-[375px]:gap-x-6 pr-4 min-[375px]:pr-6 shrink-0">
                 <div className="wag-card w-[290px] min-[375px]:w-[320px] shrink-0">
                   <div className="wag-image-wrapper">
@@ -348,27 +348,27 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
                 </div>
                 <div className="wag-card w-[290px] min-[375px]:w-[320px] shrink-0">
                   <div className="wag-image-wrapper">
-                    <img src={displayRegions[1].image} alt={displayRegions[1].alt} className="!object-[80%_0%]" />
+                    <img src={displayRegions[2].image} alt={displayRegions[2].alt} loading="lazy" decoding="async" />
                   </div>
                   <div className="wag-card-body">
-                    <h2 className="wag-card-title">{displayRegions[1].name}</h2>
-                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[1].description}</p>
+                    <h2 className="wag-card-title">{displayRegions[2].name}</h2>
+                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[2].description}</p>
                     <br />
                   </div>
                 </div>
                 <div className="wag-card w-[290px] min-[375px]:w-[320px] shrink-0">
                   <div className="wag-image-wrapper">
-                    <img src={displayRegions[2].image} alt={displayRegions[2].alt} />
+                    <img src={displayRegions[1].image} alt={displayRegions[1].alt} className="!object-[80%_0%]" />
                   </div>
                   <div className="wag-card-body">
-                    <h2 className="wag-card-title">{displayRegions[2].name}</h2>
-                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[2].description}</p>
+                    <h2 className="wag-card-title">{displayRegions[1].name}</h2>
+                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[1].description}</p>
                     <br />
                   </div>
                 </div>
               </div>
 
-              {/* Set 3 */}
+              {/* Set 3 — Atlanta → London → Dubai */}
               <div className="flex gap-x-4 min-[375px]:gap-x-6 pr-4 min-[375px]:pr-6 shrink-0">
                 <div className="wag-card w-[290px] min-[375px]:w-[320px] shrink-0">
                   <div className="wag-image-wrapper">
@@ -382,21 +382,21 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
                 </div>
                 <div className="wag-card w-[290px] min-[375px]:w-[320px] shrink-0">
                   <div className="wag-image-wrapper">
-                    <img src={displayRegions[1].image} alt={displayRegions[1].alt} className="!object-[80%_0%]" />
+                    <img src={displayRegions[2].image} alt={displayRegions[2].alt} loading="lazy" decoding="async" />
                   </div>
                   <div className="wag-card-body">
-                    <h2 className="wag-card-title">{displayRegions[1].name}</h2>
-                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[1].description}</p>
+                    <h2 className="wag-card-title">{displayRegions[2].name}</h2>
+                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[2].description}</p>
                     <br />
                   </div>
                 </div>
                 <div className="wag-card w-[290px] min-[375px]:w-[320px] shrink-0">
                   <div className="wag-image-wrapper">
-                    <img src={displayRegions[2].image} alt={displayRegions[2].alt} />
+                    <img src={displayRegions[1].image} alt={displayRegions[1].alt} className="!object-[80%_0%]" />
                   </div>
                   <div className="wag-card-body">
-                    <h2 className="wag-card-title">{displayRegions[2].name}</h2>
-                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[2].description}</p>
+                    <h2 className="wag-card-title">{displayRegions[1].name}</h2>
+                    <p className="wag-card-desc max-w-[240px] text-white/95">{displayRegions[1].description}</p>
                     <br />
                   </div>
                 </div>
