@@ -168,8 +168,8 @@ export function PowerOf360() {
       {/* Dark overlay */}
       <div className="hidden md:block absolute inset-0 bg-black/55 z-0" />
 
-      {/* Content — balanced flex layout inside max-w-[1150px] container */}
-      <div className="relative z-10 mx-auto max-w-[1150px] w-full flex flex-col md:flex-row items-center justify-between gap-6 lg:gap-10 px-4 min-[375px]:px-6 py-10 sm:py-14 md:py-20 lg:py-24">
+      {/* Content — balanced flex layout inside max-w-[1200px] container */}
+      <div className="relative z-10 mx-auto max-w-[1200px] w-full flex flex-col md:flex-row items-center justify-between gap-6 lg:gap-10 px-4 min-[375px]:px-6 py-10 sm:py-14 md:py-20 lg:py-24">
         {/* ── LEFT: text block ── */}
         <div className="flex w-full md:max-w-[440px] lg:max-w-[470px] xl:max-w-[490px] flex-col gap-5 sm:gap-6 flex-shrink-0">
           <AnimatePresence mode="wait">

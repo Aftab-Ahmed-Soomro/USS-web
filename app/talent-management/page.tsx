@@ -20,7 +20,7 @@ import { TalentHero } from "../components/TalentHero";
 function FinalCta() {
   return (
     <section className="bg-black px-4 min-[375px]:px-6 pt-[50px] sm:pt-[70px] text-white pb-30">
-      <Stagger staggerDelay={0.12} className="mx-auto max-w-[1150px]  text-center">
+      <Stagger staggerDelay={0.12} className="mx-auto max-w-[1200px]  text-center">
         <StaggerItem>
           <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
             Get Started

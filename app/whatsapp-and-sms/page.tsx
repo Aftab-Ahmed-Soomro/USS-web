@@ -29,24 +29,24 @@ const emailStats = [
 function Hero() {
   return (
     <section className="bg-[#f7f7f5] px-4 min-[375px]:px-6 py-[40px] sm:py-[76px] text-black lg:py-[82px]">
-      <div className="mx-auto grid max-w-[1150px]  gap-[40px] sm:gap-10 lg:grid-cols-[minmax(0,700px)_430px] lg:items-center lg:justify-between">
+      <div className="relative z-10 mx-auto grid max-w-[1200px] px-6 gap-8 sm:gap-10 lg:grid-cols-[minmax(0,520px)_minmax(0,640px)] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.15}>
 
           <StaggerItem>
-            <p className="mt-0 sm:mt-[32px] max-w-[600px] font-[var(--font-inter)] text-[10px] sm:text-[14px] font-bold leading-[1.7] tracking-[2.4px] text-[#FF5500] mb-[24px] sm:mb-8 uppercase text-center sm:text-start">
+            <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-[#FF5500] text-center sm:text-start">
               WhatsApp & SMS Marketing
             </p>
-            <h1 className="max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold leading-[1.03] tracking-[-1px] sm:tracking-[-3.2px] sm:text-[70px] text-center sm:text-start">
+            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[120%] tracking-[-1px] sm:tracking-[-3px] sm:text-[50px] text-center sm:text-start">
               WhatsApp & SMS
               <br />
               that {" "}
-              <span className="font-[var(--font-cormorant)] text-[42px] leading-[1.2] sm:leading-[0.5px] sm:text-[88px] font-normal timesFontFamily italic lowercase tracking-[-1px] sm:tracking-[-3.2px]">
+              <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[64px] font-normal timesFontFamily italic lowercase tracking-[-1px] sm:tracking-[-2.8px]">
                 drive results
               </span>
             </h1>
           </StaggerItem>
           <StaggerItem>
-            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[24px] max-w-[680px] font-[var(--font-inter)] text-[13px] leading-[1.6] text-black/72 sm:text-[20px] sm:leading-[1.75] text-center sm:text-start">
+            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[550px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-black/72 sm:text-[16px] text-center sm:text-start">
               Reach customers instantly through direct, personalised messaging that drives engagement, enquiries and repeat purchases.
             </p>
           </StaggerItem>
@@ -54,7 +54,7 @@ function Hero() {
           <StaggerItem>
             <div className="flex items-center justify-center sm:justify-start">
               <Link
-                className="mt-[24px] sm:mt-[25px] inline-flex h-[46px] sm:h-[38px] min-w-[176px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
+                className="mt-[24px] sm:mt-[36px] inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
                 href="/contact"
               >
                 Book a Consultation
@@ -63,8 +63,8 @@ function Hero() {
           </StaggerItem>
         </Stagger>
 
-        <FadeRight delay={0.4}>
-          <LightConsultationForm />
+        <FadeRight delay={0.3} className="w-full flex justify-center lg:justify-end">
+          <LightConsultationForm className="w-full" />
         </FadeRight>
       </div>
     </section>
@@ -74,7 +74,7 @@ function Hero() {
 function FinalCta() {
   return (
     <section className="bg-black px-4 min-[375px]:px-6 pt-[50px] sm:pt-[70px] text-white pb-30">
-      <Stagger staggerDelay={0.12} className="mx-auto max-w-[1150px]  text-center">
+      <Stagger staggerDelay={0.12} className="mx-auto max-w-[1200px]  text-center">
         <StaggerItem>
           <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
             LET&apos;S CONNECT
@@ -129,7 +129,7 @@ const relatedProjects = [
 function RelatedProjects() {
   return (
     <section className="bg-[#080808] px-4 min-[375px]:px-6 py-[40px] sm:py-[56px] text-white">
-      <div className="mx-auto max-w-[1150px] ">
+      <div className="mx-auto max-w-[1200px] ">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
           <Stagger staggerDelay={0.12}>

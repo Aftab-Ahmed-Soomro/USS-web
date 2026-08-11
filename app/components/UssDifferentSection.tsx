@@ -163,7 +163,7 @@ export function UssDifferentSection() {
         style={{ width: "100%", transformOrigin: "left center" }}
       />
 
-      <div className="mx-auto flex max-w-[1150px]  px-4 flex-col items-center relative z-10 w-full -mt-5 sm:-mt-0">
+      <div className="mx-auto flex max-w-[1200px]  px-4 flex-col items-center relative z-10 w-full -mt-5 sm:-mt-0">
 
         {/* Animated Heading */}
         <div ref={headingRef} className="w-full text-center pb-5 sm:pb-16">

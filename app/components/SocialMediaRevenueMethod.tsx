@@ -40,7 +40,7 @@ export default function SocialMediaRevenueMethod() {
     <div className="w-full bg-black text-white py-[48px] min-[390px]:py-[58px] sm:py-20 min-h-screen flex flex-col justify-center font-sans px-4 min-[375px]:px-5 min-[480px]:px-6 sm:px-6">
       <Stagger staggerDelay={0.15}>
         {/* Heading — constrained width */}
-        <div className="max-w-[1150px]  w-full mx-auto">
+        <div className="max-w-[1200px]  w-full mx-auto">
           <StaggerItem>
             <p className="font-[var(--font-inter)] text-[10px] font-bold uppercase tracking-[4px] text-[#ff5500] mb-4">
               OUR PROCESS
@@ -62,7 +62,7 @@ export default function SocialMediaRevenueMethod() {
         </div>
 
         {/* Cards — constrained to 1150px like heading */}
-        <div className="max-w-[1150px]  w-full mx-auto">
+        <div className="max-w-[1200px]  w-full mx-auto">
           {/* Desktop: flex accordion */}
           <StaggerItem>
             <div className="hidden md:flex gap-6">

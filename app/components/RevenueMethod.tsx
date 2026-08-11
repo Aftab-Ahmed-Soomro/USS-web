@@ -72,7 +72,7 @@ export function RevenueMethod({ heading = DEFAULT_HEADING, tagline = DEFAULT_TAG
 
   return (
     <div className="w-full bg-black text-white pb-[30px] pt-[80px] sm:py-20 px-6 min-h-screen flex flex-col justify-center items-center font-sans">
-      <Stagger staggerDelay={0.15} className="max-w-[1150px]  w-full">
+      <Stagger staggerDelay={0.15} className="max-w-[1200px]  w-full">
 
         <StaggerItem>
           <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-[#ff5500] text-center sm:text-start mb-4">

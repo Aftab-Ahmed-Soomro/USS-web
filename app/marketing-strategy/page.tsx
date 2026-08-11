@@ -5,10 +5,11 @@ import { Header } from "../components/Header";
 import { Numbers } from "../components/Numbers";
 import { Team } from "../components/Team";
 import { Testimonials } from "../components/Testimonials";
-import { ConsultationForm } from "../components/ConsultationForm";
+import { LightConsultationForm } from "../components/ConsultationForm";
 import { GoodCompanyMap } from "../components/GoodCompanyMap";
 import Stagger from "../components/Stagger";
 import StaggerItem from "../components/Staggeritem";
+import FadeRight from "../components/FadeRight";
 import { WhyEmailFails } from "../components/WhyEmailFails";
 import { GrowthRoadmap } from "../components/GrowthRoadmap";
 import { LevelsOfFunnel } from "../components/LevelsOfFunnel";
@@ -52,7 +53,7 @@ function Hero() {
         style={{ background: 'radial-gradient(circle, #FF5500 0%, rgba(255,85,0,0) 70%)' }}
       />
 
-      <div className="relative z-10 mx-auto grid max-w-[1150px]  gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
+      <div className="relative z-10 mx-auto grid max-w-[1200px] px-6 gap-8 sm:gap-10 lg:grid-cols-[minmax(0,520px)_minmax(0,640px)] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.15}>
           <StaggerItem>
             <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white text-center sm:text-start">
@@ -60,16 +61,16 @@ function Hero() {
             </p>
           </StaggerItem>
           <StaggerItem>
-            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[120%] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white text-center sm:text-start">
+            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[120%] tracking-[-1px] sm:tracking-[-3px] sm:text-[50px] text-white text-center sm:text-start">
               Turn strategy into
               <br />{" "}
-              <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white  tracking-[-1px] sm:tracking-[-2.8px]">
+              <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[64px] lowercase font-normal timesFontFamily italic text-white  tracking-[-1px] sm:tracking-[-2.8px]">
                 business growth.
               </span>
             </h1>
           </StaggerItem>
           <StaggerItem>
-            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[550px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[18px] text-center sm:text-start">
+            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[550px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[16px] text-center sm:text-start">
               We build clear, data driven marketing strategies designed to scale your business, not just generate leads. By understanding your goals, audience and market, we create a roadmap that supports long term business growth.
             </p>
           </StaggerItem>
@@ -85,7 +86,9 @@ function Hero() {
           </StaggerItem>
         </Stagger>
 
-        <ConsultationForm />
+        <FadeRight delay={0.3} className="w-full flex justify-center lg:justify-end">
+          <LightConsultationForm className="w-full" />
+        </FadeRight>
       </div>
     </section>
   );

@@ -138,7 +138,7 @@ const socialServicesData = [
 function Hero() {
   return (
     <section className="bg-[#f7f7f5] px-4 min-[375px]:px-5 min-[480px]:px-6 sm:px-6 py-[48px] min-[390px]:py-[58px] text-black sm:py-[76px] lg:py-[82px]">
-      <div className="mx-auto grid max-w-[1150px]  gap-8 min-[390px]:gap-10 sm:gap-10 lg:grid-cols-[minmax(0,700px)_430px] lg:items-center lg:justify-between">
+      <div className="relative z-10 mx-auto grid max-w-[1200px] px-6 gap-8 sm:gap-10 lg:grid-cols-[minmax(0,520px)_minmax(0,640px)] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.15}>
           <StaggerItem>
             <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-[#ff5500] text-center sm:text-start">
@@ -146,28 +146,23 @@ function Hero() {
             </p>
           </StaggerItem>
           <StaggerItem>
-            <h1 className="mt-4 max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[1.03] tracking-[-1.5px] min-[390px]:tracking-[-2px] min-[480px]:tracking-[-3.2px] sm:tracking-[-3.2px] sm:text-[70px] text-center sm:text-start">
+            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[120%] tracking-[-1px] sm:tracking-[-3px] sm:text-[50px] text-center sm:text-start">
               social media that builds{" "}
-              {/* <br /> */}
-              <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[80px] font-normal timesFontFamily italic tracking-[-1.5px] min-[390px]:tracking-[-2px] min-[480px]:tracking-[-3.2px] sm:tracking-[-3.2px]">
+              <br className="sm:hidden block" />
+              <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[64px] font-normal timesFontFamily italic tracking-[-1px] sm:tracking-[-2.8px]">
                 communities and trust{" "}
               </span>
             </h1>
           </StaggerItem>
           <StaggerItem>
-            <p className="mt-[16px] min-[390px]:mt-[20px] min-[480px]:mt-[24px] sm:mt-[24px] max-w-[580px] font-[var(--font-inter)] text-[13px] min-[390px]:text-[13px] leading-[1.75] text-black/72 sm:text-[20px] text-center sm:text-start">
+            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[550px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-black/72 sm:text-[16px] text-center sm:text-start">
               Grow an engaged audience through consistent content, creative storytelling and meaningful conversations across Instagram, TikTok, LinkedIn and more.
             </p>
           </StaggerItem>
-          {/* <StaggerItem>
-            <p className="mt-[24px] min-[390px]:mt-[28px] min-[480px]:mt-[32px] sm:mt-[32px] max-w-[460px] font-[var(--font-inter)] text-[10px] min-[360px]:text-[11px] min-[430px]:text-[12px] sm:text-[12px] leading-[1.7] tracking-[1.5px] min-[360px]:tracking-[2px] min-[430px]:tracking-[2.64px] sm:tracking-[2.64px] text-[#06060680] uppercase text-center sm:text-start">
-              Trusted by brands across the world
-            </p>
-          </StaggerItem> */}
           <StaggerItem>
             <div className="flex justify-center sm:justify-start">
               <Link
-                className="mt-[20px] min-[390px]:mt-[25px] sm:mt-[25px] inline-flex h-[38px] min-w-[176px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
+                className="mt-[24px] sm:mt-[36px] inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
                 href="/contact"
               >
                 Book a Consultation
@@ -176,8 +171,8 @@ function Hero() {
           </StaggerItem>
         </Stagger>
 
-        <FadeRight delay={0.4}>
-          <LightConsultationForm />
+        <FadeRight delay={0.3} className="w-full flex justify-center lg:justify-end">
+          <LightConsultationForm className="w-full" />
         </FadeRight>
       </div>
     </section>
@@ -192,7 +187,7 @@ function SocialServices() {
   return (
     <section className="bg-[#080808] px-4 min-[375px]:px-5 min-[480px]:px-6 sm:px-6 py-[48px] min-[390px]:py-[58px] sm:py-[70px] text-white lg:py-[100px]">
       <Stagger staggerDelay={0.15}>
-        <div className="mx-auto max-w-[1150px] ">
+        <div className="mx-auto max-w-[1200px] ">
           {/* Header */}
           <StaggerItem>
             <p className="font-[var(--font-inter)] text-[13px] font-bold uppercase tracking-[4px] text-[#ff5500]">
@@ -287,7 +282,7 @@ function RelatedProjects() {
   return (
     <section className="bg-[#080808] px-4 min-[375px]:px-6 py-[40px] sm:py-[56px] text-white">
       <Stagger staggerDelay={0.15}>
-        <div className="mx-auto max-w-[1150px] ">
+        <div className="mx-auto max-w-[1200px] ">
           {/* Header */}
           <div className="flex items-center justify-between gap-6">
             <Stagger staggerDelay={0.12}>
@@ -396,7 +391,7 @@ function FinalCta() {
   return (
     <section className="bg-black px-4 min-[375px]:px-5 min-[480px]:px-6 sm:px-6 pt-[60px] min-[390px]:pt-[80px] sm:pt-[100px] text-white pb-[100px] sm:pb-20">
       <Stagger staggerDelay={0.15}>
-        <div className="mx-auto max-w-[1150px]  text-center">
+        <div className="mx-auto max-w-[1200px]  text-center">
           <StaggerItem>
             <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
               LET&apos;S SCALE

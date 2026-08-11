@@ -25,7 +25,7 @@ export function OurApproach() {
   return (
     <section className="px-4 py-6 sm:px-6 lg:px-8">
       <div
-        className="mx-auto max-w-[1150px]  rounded-[20px] bg-[#111111]/95 px-8 py-10 sm:px-10 sm:py-12 lg:px-14"
+        className="mx-auto max-w-[1200px]  rounded-[20px] bg-[#111111]/95 px-8 py-10 sm:px-10 sm:py-12 lg:px-14"
         style={{ boxShadow: "0 0 0 1px rgba(255,255,255,0.06)" }}
       >
         {/* Label */}

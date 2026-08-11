@@ -31,7 +31,7 @@ export default function AboutPage() {
 
           {/* Section heading — slides in from left */}
           <FadeLeft delay={0.1}>
-            <div className="mx-auto max-w-[1150px]  px-4 min-[375px]:px-6 mb-8 sm:mb-12 text-center sm:text-start">
+            <div className="mx-auto max-w-[1200px]  px-4 min-[375px]:px-6 mb-8 sm:mb-12 text-center sm:text-start">
               <p
                 className="text-[#fff] font-medium text-[32px] min-[375px]:text-[32px] sm:text-[56px] tracking-tight leading-none"
               >
@@ -50,7 +50,7 @@ export default function AboutPage() {
             </div>
           </FadeLeft>
 
-          <div className="mx-auto max-w-[1150px]  px-6 min-[375px]:px-6 grid grid-cols-1 md:grid-cols-[240px_1fr] lg:grid-cols-[280px_1fr] gap-10 sm:gap-30 lg:gap-40 items-start">
+          <div className="mx-auto max-w-[1200px]  px-6 min-[375px]:px-6 grid grid-cols-1 md:grid-cols-[240px_1fr] lg:grid-cols-[280px_1fr] gap-10 sm:gap-30 lg:gap-40 items-start">
 
             {/* LEFT — Portrait — slides in from left */}
             <FadeLeft delay={0.2}>

@@ -157,7 +157,7 @@ export function WhyEmailFails({
 } = {}) {
     return (
         <section className="bg-black px-4 py-[50px] sm:py-[80px] text-white sm:px-8 lg:px-14">
-            <div className="mx-auto max-w-[1150px] ">
+            <div className="mx-auto max-w-[1200px] ">
 
                 {/* Header Section */}
                 <Stagger staggerDelay={0.1}>

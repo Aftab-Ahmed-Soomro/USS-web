@@ -196,7 +196,7 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
         <StaggerItem>
           <div className={`mb-5 flex flex-col items-center justify-center text-center border-b pb-4 ${isDark ? "border-white/10" : "border-gray-100"}`}>
             <h2 className={`mt-1 font-[var(--font-be-vietnam)] text-[20px] sm:text-[24px] font-semibold tracking-[0.5px] ${headerText}`}>
-              Book Your Free Strategy Call
+              Book Your Free Consultation
             </h2>
           </div>
         </StaggerItem>
@@ -327,7 +327,7 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
                 </div>
               </div>
 
-              <div className={`mt-1 flex items-center justify-between rounded-lg px-3 py-1.5 text-[11px] sm:text-[12px] border ${isDark ? "bg-white/5 border-white/10" : "bg-gray-100 border-gray-200"}`}>
+              <div className={`mt-1 flex items-center justify-between rounded-lg px-3 py-1.5 mb-2 text-[11px] sm:text-[12px] border ${isDark ? "bg-white/5 border-white/10" : "bg-gray-100 border-gray-200"}`}>
                 <span className={`font-medium ${isDark ? "text-gray-400" : "text-gray-500"}`}>Selected Slot:</span>
                 <span className={`font-semibold ${headerText}`}>
                   {monthNames[month]} {selectedDay}, {selectedTime}
@@ -353,7 +353,7 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
                   placeholder="Enter your name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className={`w-full rounded-lg px-3.5 py-1.5 text-[12px] transition focus:outline-none ${inputBg}`}
+                  className={`w-full rounded-lg px-3.5 py-1.5 text-[12px] border border-gray-300 focus:border-[#000] placeholder:text-[14px] transition focus:outline-none ${inputBg}`}
                 />
               </div>
 
@@ -367,7 +367,7 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
                   placeholder="name@company.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className={`w-full rounded-lg px-3.5 py-1.5 text-[12px] transition focus:outline-none ${inputBg}`}
+                  className={`w-full rounded-lg px-3.5 py-1.5 text-[12px] border border-gray-300 focus:border-[#000] placeholder:text-[14px] transition focus:outline-none ${inputBg}`}
                 />
                 {!showGuestInput ? (
                   <button
@@ -401,7 +401,7 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
                   placeholder="Enter business or talent name"
                   value={formData.businessName}
                   onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
-                  className={`w-full rounded-lg px-3.5 py-1.5 text-[12px] transition focus:outline-none ${inputBg}`}
+                  className={`w-full rounded-lg px-3.5 py-1.5 text-[12px] border border-gray-300 focus:border-[#000] placeholder:text-[14px] transition focus:outline-none ${inputBg}`}
                 />
               </div>
 
@@ -414,21 +414,22 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
                   placeholder="https://yourwebsite.com"
                   value={formData.websiteUrl}
                   onChange={(e) => setFormData({ ...formData, websiteUrl: e.target.value })}
-                  className={`w-full rounded-lg px-3.5 py-1.5 text-[12px] transition focus:outline-none ${inputBg}`}
+                  className={`w-full rounded-lg px-3.5 py-1.5 text-[12px] border border-gray-300 focus:border-[#000] placeholder:text-[14px] transition focus:outline-none ${inputBg}`}
                 />
               </div>
 
               <div>
                 <label className={`mb-1 flex items-center gap-1.5 text-[12px] font-medium whitespace-nowrap ${labelText}`}>
-                  <Sparkles className="h-3.5 w-3.5 text-[#ff5500]" /> Services Interested In?
+                  <Sparkles className="h-3.5 w-3.5 text-[#ff5500]" /> What Services Are You <br className="sm:block hidden" /> Interested In?
                 </label>
                 <select
                   value={formData.service}
                   onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                  className={`w-full rounded-lg px-3.5 py-1.5 text-[12px] transition focus:outline-none cursor-pointer ${inputBg}`}
+                  className={`w-full rounded-lg px-3.5 py-1.5 text-[13.5px] font-normal border border-gray-300 focus:border-[#000] transition focus:outline-none cursor-pointer ${inputBg}`}
+                  style={{ fontSize: "13.5px" }}
                 >
                   {serviceOptions.map((opt) => (
-                    <option key={opt} value={opt} className={isDark ? "bg-[#18181b] text-white" : "bg-white text-gray-900"}>
+                    <option key={opt} value={opt} style={{ fontSize: "13.5px" }} className={isDark ? "bg-[#18181b] text-[13.5px] text-white" : "bg-white text-[13.5px] text-gray-900"}>
                       {opt}
                     </option>
                   ))}
@@ -437,7 +438,7 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
 
               <div>
                 <label className={`mb-1 flex items-center gap-1.5 text-[12px] font-medium ${labelText}`}>
-                  <MessageSquare className="h-3.5 w-3.5 text-[#ff5500]" /> Current Challenges? *
+                  <MessageSquare className="h-3.5 w-3.5 text-[#ff5500]" /> What are your current challenges within your business? *
                 </label>
                 <textarea
                   rows={2}
@@ -445,20 +446,20 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
                   placeholder="Describe your current business challenges..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className={`w-full rounded-lg px-3.5 py-1.5 text-[12px] transition focus:outline-none resize-none ${inputBg}`}
+                  className={`w-full rounded-lg px-3.5 py-1.5 text-[12px] border border-gray-300 focus:border-[#000] placeholder:text-[14px] transition focus:outline-none resize-none ${inputBg}`}
                 />
               </div>
             </div>
 
             {/* Submit Button */}
-            <div className="lg:col-span-12 flex justify-center w-full pt-1">
-              <button
-                type="submit"
-                disabled={isSubmitting}
+            <div className="lg:col-span-12 flex justify-center w-full -mt-2 mb-1">
+              <div
+                role="button"
+                onClick={handleSubmit as any}
                 className="inline-flex h-[46px] sm:h-[40px] min-w-[220px] cursor-pointer items-center justify-center rounded-full bg-[#ff5500] px-8 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f] whitespace-nowrap shadow-lg shadow-[#ff5500]/25 disabled:opacity-50"
               >
                 {isSubmitting ? "Processing..." : "Confirm & Book Consultation"}
-              </button>
+              </div>
             </div>
           </form>
         )}

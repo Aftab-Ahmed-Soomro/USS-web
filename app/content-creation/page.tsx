@@ -92,7 +92,7 @@ const process = [
 function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#ff5500] px-4 min-[375px]:px-6 pb-[40px] min-[375px]:pb-[58px] pt-[40px] min-[375px]:pt-[56px] text-white sm:pb-[72px] sm:pt-[78px]">
-      <div className="mx-auto grid max-w-[1150px]  gap-[40px] sm:gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between">
+      <div className="relative z-10 mx-auto grid max-w-[1200px] px-6 gap-8 sm:gap-10 lg:grid-cols-[minmax(0,520px)_minmax(0,640px)] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
             <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white text-center sm:text-start">
@@ -100,25 +100,24 @@ function Hero() {
             </p>
           </StaggerItem>
           <StaggerItem>
-            <h1 className="mt-[35px] sm:mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[0.5] sm:leading-[100%] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white text-center sm:text-start">
-              Content that brings
-              <br className="sm:hidden" /> {/* Adding hidden br if needed? No, I will not add new br */}
-              <br />
+            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[120%] tracking-[-1px] sm:tracking-[-3px] sm:text-[50px] text-white text-center sm:text-start">
+              Content that brings {" "}
+              <br className="block sm:hidden" />
               your{" "}
-              <span className="font-[var(--font-cormorant)] text-[42px] leading-[0.7] sm:leading-none sm:text-[72px] lowercase font-normal timesFontFamily italic text-white tracking-[-1px] sm:tracking-[-2.8px]">
+              <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[64px] lowercase font-normal timesFontFamily italic text-white tracking-[-1px] sm:tracking-[-2.8px]">
                 brand to life
               </span>
             </h1>
           </StaggerItem>
           <StaggerItem>
-            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[40px] max-w-[530px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[18px] text-center sm:text-start">
+            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[550px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[16px] text-center sm:text-start">
               We create high quality photo and video content designed to capture attention, strengthen your brand and support every stage of your marketing.
             </p>
           </StaggerItem>
           <StaggerItem>
             <div className="flex justify-center sm:justify-start">
               <Link
-                className="mt-[24px] sm:mt-[30px] inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-white px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-black transition uppercase hover:bg-[#ff6b1f]"
+                className="mt-[24px] sm:mt-[36px] inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-white px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-black transition uppercase hover:bg-[#ff6b1f]"
                 href="/contact"
               >
                 Book a Consultation
@@ -127,8 +126,8 @@ function Hero() {
           </StaggerItem>
         </Stagger>
 
-        <FadeRight delay={0.3}>
-          <LightConsultationForm />
+        <FadeRight delay={0.3} className="w-full flex justify-center lg:justify-end">
+          <LightConsultationForm className="w-full" />
         </FadeRight>
       </div>
     </section>
@@ -177,7 +176,7 @@ function VideoSection() {
 function FinalCta() {
   return (
     <section className="bg-black px-4 min-[375px]:px-6 pt-[50px] sm:pt-[70px] text-white pb-30">
-      <Stagger staggerDelay={0.12} className="mx-auto max-w-[1150px]  text-center">
+      <Stagger staggerDelay={0.12} className="mx-auto max-w-[1200px]  text-center">
         <StaggerItem>
           <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
             LET&apos;S CREATE
@@ -286,7 +285,7 @@ const relatedProjects = [
 function RelatedProjects() {
   return (
     <section className="bg-[#080808] px-4 min-[375px]:px-6 py-[40px] sm:py-[56px] text-white">
-      <div className="mx-auto max-w-[1150px] ">
+      <div className="mx-auto max-w-[1200px] ">
         {/* Header */}
         <div className="flex items-center justify-between gap-6">
           <Stagger staggerDelay={0.12}>

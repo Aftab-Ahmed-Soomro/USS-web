@@ -193,7 +193,7 @@ export default function ProjectsPage() {
 
       {/* Hero section */}
       <section className="bg-black px-4 min-[375px]:px-6 pb-[40px] min-[375px]:pb-[60px] pt-[44px] sm:pt-[112px] text-center text-white sm:pb-[90px]">
-        <div className="mx-auto max-w-[1150px] ">
+        <div className="mx-auto max-w-[1200px] ">
 
           {/* Eyebrow — drops down */}
           <FadeDown delay={0.1}>
@@ -206,7 +206,7 @@ export default function ProjectsPage() {
           <FadeUp delay={0.2}>
             <h1 className="mt-[12px] sm:mt-[20px] font-[var(--font-be-vietnam)] text-[26px] font-bold lowercase leading-[1] tracking-[-0.9px] text-white sm:text-[56px] sm:tracking-[-0.9px]">
               projects that make
-               an{" "}
+              an{" "}
               <span className="font-[var(--font-cormorant)] text-[36px] sm:text-[72px] font-extralight timesFontFamily italic tracking-[-0.9px] text-[#ff5500]">
                 impact
               </span>

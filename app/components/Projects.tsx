@@ -29,7 +29,7 @@ export function Projects() {
       id="projects"
       className="relative z-10 flex min-h-[1056px] flex-col items-center justify-center gap-12 bg-[#0a0a0a] px-6 py-[100px] text-white lg:px-12"
     >
-      <div className="flex w-full max-w-[1150px]  flex-col items-center gap-8">
+      <div className="flex w-full max-w-[1200px]  flex-col items-center gap-8">
         <h2 className="font-[var(--font-be-vietnam)] text-[38px] font-medium lowercase leading-[1.05] tracking-[-0.06em] sm:text-[48px] lg:text-[56px] lg:leading-[71px]">
           you&apos;re in good{" "}
           <span className="font-serif text-[1.08em] font-extralight timesFontFamily italic tracking-[-0.035em]">
@@ -42,7 +42,7 @@ export function Projects() {
         </p>
       </div>
 
-      <div className="grid w-full max-w-[1150px]  grid-cols-1 justify-items-center gap-6 md:grid-cols-3">
+      <div className="grid w-full max-w-[1200px]  grid-cols-1 justify-items-center gap-6 md:grid-cols-3">
         {projects.map((project) => (
           <article
             className="relative aspect-[390/625] w-full max-w-[390px] overflow-hidden bg-[#151515]"

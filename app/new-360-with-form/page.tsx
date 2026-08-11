@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import { Header } from "../components/Header";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ConsultationForm } from "../components/ConsultationForm";
+import { LightConsultationForm } from "../components/ConsultationForm";
 import { Brands } from "../components/Brands";
 import Stagger from "../components/Stagger";
 import StaggerItem from "../components/Staggeritem";
@@ -266,28 +266,28 @@ function Hero() {
         style={{ background: 'radial-gradient(circle, #FF5500 0%, rgba(255,85,0,0) 70%)' }}
       />
 
-      <div className="relative z-10 mx-auto grid max-w-[1150px]  gap-10 lg:grid-cols-[minmax(0,660px)_430px] lg:items-center lg:justify-between text-center sm:text-start">
+      <div className="relative z-10 mx-auto grid max-w-[1200px] px-6 gap-8 sm:gap-10 lg:grid-cols-[minmax(0,520px)_minmax(0,640px)] lg:items-center lg:justify-between text-center sm:text-start">
         <Stagger staggerDelay={0.15}>
 
           <StaggerItem>
-            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold  leading-[30%] sm:leading-[95%] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white text-center sm:text-start">
+            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold leading-[120%] tracking-[-1px] sm:tracking-[-3px] sm:text-[50px] text-white text-center sm:text-start">
               we don’t just {" "}
-              <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white tracking-[-1px] sm:tracking-[-2.8px]">
+              <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[64px] lowercase font-normal timesFontFamily italic text-white tracking-[-1px] sm:tracking-[-2.8px]">
                 market,
               </span>
             </h1>
-            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold  leading-[50%] tracking-[-1px] sm:tracking-[-3px] sm:text-[58px] text-white text-center sm:text-start">
+            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold leading-[50%] tracking-[-1px] sm:tracking-[-3px] sm:text-[50px] text-white text-center sm:text-start">
               we scale{" "}
-              <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] lowercase font-normal timesFontFamily italic text-white tracking-[-1px] sm:tracking-[-2.8px]">
+              <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[64px] lowercase font-normal timesFontFamily italic text-white tracking-[-1px] sm:tracking-[-2.8px]">
                 brands.
               </span>
             </h1>
           </StaggerItem>
           <StaggerItem>
-            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[600px] font-[var(--font-inter)] text-[13px] text-white/90 sm:text-[18px] text-center sm:text-start">
+            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[550px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[16px] text-center sm:text-start">
               Our 360 marketing approach brings strategy, creative and performance together, creating one connected system that works towards the same goal.
             </p>
-            <p className="mt-[40px] max-w-[600px] font-[var(--font-inter)] text-[13px]  text-white/90 sm:text-[18px] text-center sm:text-start">
+            <p className="mt-[24px] max-w-[550px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[16px] text-center sm:text-start">
               Trusted by over 100 businesses across the US, UAE & UK
             </p>
           </StaggerItem>
@@ -295,7 +295,7 @@ function Hero() {
             <div className="flex justify-center sm:justify-start">
 
               <Link
-                className="mt-[24px] sm:mt-[36px] inline-flex h-[36px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
+                className="mt-[24px] sm:mt-[36px] inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f]"
                 href="/contact"
               >
                 Book a Consultation
@@ -304,7 +304,9 @@ function Hero() {
           </StaggerItem>
         </Stagger>
 
-        <ConsultationForm />
+        <FadeRight delay={0.3} className="w-full flex justify-center lg:justify-end">
+          <LightConsultationForm className="w-full" />
+        </FadeRight>
       </div>
     </section>
   );
@@ -313,7 +315,7 @@ function Hero() {
 function EmailOverview() {
   return (
     <section className="relative overflow-hidden bg-black">
-      <div className="relative mx-auto grid max-w-[1150px]  px-4 min-[375px]:px-6 py-[50px] sm:py-16 lg:grid-cols-[minmax(0,680px)_minmax(320px,430px)] lg:justify-between lg:py-20">
+      <div className="relative mx-auto grid max-w-[1200px]  px-4 min-[375px]:px-6 py-[50px] sm:py-16 lg:grid-cols-[minmax(0,680px)_minmax(320px,430px)] lg:justify-between lg:py-20">
         {/* Image mockup */}
         <FadeRight duration={0.8} delay={0.2} className="order-2 -mx-1 pt-10 sm:mx-0 lg:order-none lg:col-start-2 lg:row-start-1 lg:flex lg:items-start lg:justify-end lg:pt-0">
           <div className="relative mx-auto lg:ml-auto lg:mr-0 aspect-[463/842] w-full max-w-[260px] min-[375px]:max-w-[300px] sm:max-w-[400px] overflow-hidden bg-white shadow-[0_24px_55px_rgba(0,0,0,0.35)] translate-x-2 sm:translate-x-4 lg:translate-x-6">
@@ -565,7 +567,7 @@ function ServiceCard({ num, title, heightClass, icon, image }: any) {
 function ContentCreationServices() {
   return (
     <section className="bg-black text-white pb-[60px] sm:pb-[100px] px-4 min-[375px]:px-6 overflow-hidden">
-      <div className="max-w-[1150px]  mx-auto">
+      <div className="max-w-[1200px]  mx-auto">
         {/* Header */}
         <div className="mb-[30px] sm:mb-[30px]">
           {/* <h4 className="font-[var(--font-inter)] text-[#ff5500] font-bold text-[14px] leading-[16px] tracking-[2.64px] uppercase mb-6">
@@ -784,7 +786,7 @@ function SocialServices() {
   return (
     <section className="bg-[#080808] px-4 min-[375px]:px-5 min-[480px]:px-6 sm:px-6 py-[48px] min-[390px]:py-[58px] sm:py-[70px] text-white lg:py-[100px]">
       <Stagger staggerDelay={0.15}>
-        <div className="mx-auto max-w-[1150px] ">
+        <div className="mx-auto max-w-[1200px] ">
           {/* Header */}
           <StaggerItem>
             <p className="font-[var(--font-inter)] text-[13px] font-bold uppercase tracking-[4px] text-[#ff5500]">
@@ -1056,7 +1058,7 @@ export default function New360WithForm() {
         <PlatformsWeWorkWith
           heading={
             <h2
-              className="text-white mx-auto max-w-[1150px]  mb-10 tracking-[-1.5px] text-center sm:text-left"
+              className="text-white mx-auto max-w-[1200px]  mb-10 tracking-[-1.5px] text-center sm:text-left"
               style={{
                 fontWeight: 500,
                 fontSize: "clamp(32px, 5vw, 56px)",
@@ -1200,10 +1202,10 @@ export default function New360WithForm() {
         </h2>
       </motion.div>
       <PlatformsWeWorkWith />
-      
-        <div className="my-4">
-          <EmailMarketingQuote maxWidthClass="max-w-[650px]" first={"your social media is your"} second={"digital window"} third={"shop front"} />
-        </div>
+
+      <div className="my-4">
+        <EmailMarketingQuote maxWidthClass="max-w-[650px]" first={"your social media is your"} second={"digital window"} third={"shop front"} />
+      </div>
       <div className="">
         <OurOrganicSocialMediaApproach />
       </div>

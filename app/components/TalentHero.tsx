@@ -48,7 +48,7 @@ export function TalentHero() {
         </div>
 
         {/* Content Overlaid on Top of Background Slider */}
-        <div className="relative z-10 mx-auto w-full max-w-[1150px] ">
+        <div className="relative z-10 mx-auto w-full max-w-[1200px] ">
           <Stagger staggerDelay={0.15}>
             <StaggerItem>
               <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[72px] font-bold capitalize leading-[1.1] tracking-[-3px] text-white">
@@ -100,7 +100,7 @@ export function TalentHero() {
       <section className="flex md:hidden flex-col relative bg-black text-white px-6 pb-[60px] pt-[50px] overflow-hidden">
 
         {/* Mobile Top Text Section */}
-        <div className="relative z-10 mx-auto w-full max-w-[1150px]  mb-8">
+        <div className="relative z-10 mx-auto w-full max-w-[1200px]  mb-8">
           <Stagger staggerDelay={0.15}>
             <StaggerItem>
               <h1 className="font-[var(--font-be-vietnam)] text-[38px] min-[375px]:text-[44px] font-bold capitalize leading-[1.08] tracking-[-1px] text-white text-center sm:text-start">
@@ -132,7 +132,7 @@ export function TalentHero() {
         </div>
 
         {/* Mobile Image Slider (Below Text, Clean images scrolling with NO text overlay) */}
-        <div className="relative mx-auto w-full max-w-[1150px]  h-[300px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0a0a0a]">
+        <div className="relative mx-auto w-full max-w-[1200px]  h-[300px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0a0a0a]">
           {/* Text Overlaid on Left of Mobile Image Carousel */}
           <div className="absolute top-[45%] -translate-y-1/2 left-6 z-10 max-w-[60%] pointer-events-none">
             <h2 className="font-bold text-[22px] leading-[1.35] text-white tracking-[-0.5px] drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">

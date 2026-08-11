@@ -67,7 +67,7 @@ export default function TeamAccordion({ heading, data = defaultTeamData }: TeamA
 
   return (
     <section className="bg-black text-white pt-6 pb-10 lg:pb-24 px-6  w-full flex flex-col items-center overflow-hidden">
-      <div className="w-full max-w-[1150px] ">
+      <div className="w-full max-w-[1200px] ">
         <Stagger staggerDelay={0.15}>
 
           {/* Heading Section */}

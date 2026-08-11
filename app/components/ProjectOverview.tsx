@@ -13,7 +13,7 @@ interface ProjectOverviewProps {
 export function ProjectOverview({ subheading, images, bgColor, textColor }: ProjectOverviewProps) {
   return (
     <section className={`bg-${bgColor} sm:py-20 py-10 text-white overflow-hidden font-[var(--font-inter)]`}>
-      <div className="w-full max-w-[1150px]  px-4 mx-auto flex flex-col items-center">
+      <div className="w-full max-w-[1200px]  px-4 mx-auto flex flex-col items-center">
 
         {/* Header */}
         <FadeUp>
