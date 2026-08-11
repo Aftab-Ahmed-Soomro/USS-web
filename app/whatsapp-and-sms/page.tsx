@@ -28,8 +28,8 @@ const emailStats = [
 
 function Hero() {
   return (
-    <section className="bg-[#f7f7f5] px-4 min-[375px]:px-6 py-[40px] sm:py-[76px] text-black lg:py-[82px]">
-      <div className="relative z-10 mx-auto grid max-w-[1200px] px-6 gap-8 sm:gap-10 lg:grid-cols-[minmax(0,520px)_minmax(0,640px)] lg:items-center lg:justify-between">
+    <section className="bg-[#f7f7f5] px-4 min-[375px]:px-6 py-[40px] sm:py-[76px] text-black lg:py-[82px] sm:px-6">
+      <div className="relative z-10 mx-auto grid max-w-[1200px] gap-8 sm:gap-10 lg:grid-cols-[minmax(0,520px)_minmax(0,640px)] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.15}>
 
           <StaggerItem>

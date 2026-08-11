@@ -88,10 +88,10 @@ export function BlackFridayOpportunity() {
   };
 
   return (
-    <section className="bg-white py-16 sm:py-24 text-black overflow-hidden flex flex-col items-center relative">
+    <section className="bg-white py-16 sm:py-24 text-black overflow-hidden flex flex-col items-center relative px-6">
       {/* Header Section */}
       <FadeUp>
-        <div className="max-w-[1200px]  text-center px-6 mx-auto mb-10 sm:mb-16">
+        <div className="max-w-[1200px]  text-center mx-auto mb-10 sm:mb-16">
           <h2
             className="font-medium lowercase tracking-[-1px] sm:tracking-[-3.2px] text-[#000000] sm:mb-2 font-[var(--font-be-vietnam)] text-[28px] sm:text-[56px] leading-[1.2] sm:leading-[65px]"
           >

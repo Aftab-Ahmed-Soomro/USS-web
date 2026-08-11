@@ -133,7 +133,7 @@ export function UssDifferentSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative z-10 bg-[#000] text-white overflow-hidden py-[30px] sm:py-[100px]"
+      className="relative z-10 bg-[#000] text-white overflow-hidden px-4 py-[30px] sm:py-[100px]"
       style={{
         backgroundImage: "url('/assets/bgMain.webp')",
         backgroundSize: 'cover',
@@ -163,7 +163,7 @@ export function UssDifferentSection() {
         style={{ width: "100%", transformOrigin: "left center" }}
       />
 
-      <div className="mx-auto flex max-w-[1200px]  px-4 flex-col items-center relative z-10 w-full -mt-5 sm:-mt-0">
+      <div className="mx-auto flex max-w-[1200px] flex-col items-center relative z-10 w-full -mt-5 sm:-mt-0">
 
         {/* Animated Heading */}
         <div ref={headingRef} className="w-full text-center pb-5 sm:pb-16">

@@ -173,7 +173,7 @@ export function Numbers({
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/45 to-black/20" />
       <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/35" />
 
-      <div className="relative mx-auto max-w-[1200px]  px-2 sm:px-6">
+      <div className="relative mx-auto max-w-[1200px] ">
         <div className="flex flex-col gap-6 sm:gap-8 md:flex-row md:items-start md:justify-between">
 
           {/* Eyebrow + Title */}

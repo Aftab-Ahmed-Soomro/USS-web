@@ -29,15 +29,17 @@ const defaultTimeSlots = [
 ];
 
 const serviceOptions = [
-  "Business Strategy",
-  "SEO Marketing",
-  "Social Media Marketing",
-  "PPC Marketing",
+  "Marketing Strategy",
+  "Google Ads",
+  "Meta Ads",
   "Email Marketing",
-  "Paid Social Marketing",
+  "WhatsApp & SMS",
+  "Social Media Marketing",
   "Content Creation",
-  "Branding",
-  "Website Design & Development",
+  "Website UX Design",
+  "Website Development",
+  "Branding & Graphics",
+  "Talent Management",
 ];
 
 const monthNames = [
@@ -65,7 +67,7 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
     guestEmail: "",
     businessName: "",
     websiteUrl: "",
-    service: "Paid Social Marketing",
+    service: "Marketing Strategy",
     message: "",
   });
   const [showGuestInput, setShowGuestInput] = useState(false);
@@ -166,7 +168,7 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
       guestEmail: "",
       businessName: "",
       websiteUrl: "",
-      service: "Paid Social Marketing",
+      service: "Marketing Strategy",
       message: "",
     });
   };
@@ -419,7 +421,7 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
               </div>
 
               <div>
-                <label className={`mb-1 flex items-center gap-1.5 text-[12px] font-medium whitespace-nowrap ${labelText}`}>
+                <label className={`mb-1 flex items-center gap-1.5 text-[12px] font-medium sm:whitespace-nowrap ${labelText}`}>
                   <Sparkles className="h-3.5 w-3.5 text-[#ff5500]" /> What Services Are You <br className="sm:block hidden" /> Interested In?
                 </label>
                 <select
@@ -452,11 +454,11 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
             </div>
 
             {/* Submit Button */}
-            <div className="lg:col-span-12 flex justify-center w-full -mt-2 mb-1">
+            <div className="lg:col-span-12 flex justify-center w-full -mt-2 mb-1 px-1 sm:px-0">
               <div
                 role="button"
                 onClick={handleSubmit as any}
-                className="inline-flex h-[46px] sm:h-[40px] min-w-[220px] cursor-pointer items-center justify-center rounded-full bg-[#ff5500] px-8 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f] whitespace-nowrap shadow-lg shadow-[#ff5500]/25 disabled:opacity-50"
+                className="inline-flex h-[46px] sm:h-[40px] w-full sm:w-auto min-w-0 sm:min-w-[220px] cursor-pointer items-center justify-center rounded-full bg-[#ff5500] px-5 sm:px-8 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-[#ff6b1f] whitespace-nowrap shadow-lg shadow-[#ff5500]/25 disabled:opacity-50"
               >
                 {isSubmitting ? "Processing..." : "Confirm & Book Consultation"}
               </div>

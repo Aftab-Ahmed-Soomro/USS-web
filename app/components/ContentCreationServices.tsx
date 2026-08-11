@@ -80,7 +80,7 @@ function ServiceCard({ num, title, heightClass, icon, image }: any) {
 
 export function ContentCreationServices() {
   return (
-    <section className="bg-black text-white pb-[60px] sm:pb-[100px] px-4 min-[375px]:px-6 overflow-hidden">
+    <section className="bg-black text-white pb-[60px] sm:pb-[100px] px-6 overflow-hidden">
       <div className="max-w-[1200px]  mx-auto">
         {/* Header */}
         <div className="mb-[30px] sm:mb-[100px]">

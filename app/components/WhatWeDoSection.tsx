@@ -5,8 +5,8 @@ import StaggerItem from "./Staggeritem";
 
 export function WhatWeDoSection() {
   return (
-    <section className="bg-black sm:py-20 text-white flex justify-center overflow-hidden">
-      <div className="w-full max-w-[1200px] px-6 mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start gap-10">
+    <section className="bg-black sm:py-20 text-white flex justify-center overflow-hidden px-6">
+      <div className="w-full max-w-[1200px] mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start gap-10">
 
         {/* Left Content */}
         <FadeLeft>

@@ -6,8 +6,8 @@ import FadeUp from "./FadeUp";
 
 export function TishWondersProfile() {
   return (
-    <section className="bg-black py-6 sm:py-20 text-white overflow-hidden font-[var(--font-inter)]">
-      <div className="w-full max-w-[1200px]  px-6 mx-auto flex flex-col lg:flex-row-reverse justify-between items-center lg:items-start gap-12 lg:gap-16">
+    <section className="bg-black py-6 sm:py-20 text-white overflow-hidden font-[var(--font-inter)] px-6">
+      <div className="w-full max-w-[1200px] mx-auto flex flex-col lg:flex-row-reverse justify-between items-center lg:items-start gap-12 lg:gap-16">
 
         {/* Mobile Title */}
         <div className="flex flex-col w-full lg:hidden text-left mb-[-16px]">

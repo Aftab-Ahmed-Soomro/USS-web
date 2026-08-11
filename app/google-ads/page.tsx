@@ -103,8 +103,8 @@ const workWays = [
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#ff5500] px-4 min-[375px]:px-6 pb-[40px] pt-[40px] min-[375px]:pb-[58px] min-[375px]:pt-[56px] text-white sm:pb-[72px] sm:pt-[78px]">
-      <div className="relative z-10 mx-auto grid max-w-[1200px] px-6 gap-8 sm:gap-10 lg:grid-cols-[minmax(0,520px)_minmax(0,640px)] lg:items-center lg:justify-between text-center sm:text-start">
+    <section className="relative overflow-hidden bg-[#ff5500] px-4 min-[375px]:px-6 pb-[40px] pt-[40px] min-[375px]:pb-[58px] min-[375px]:pt-[56px] text-white sm:pb-[72px] sm:pt-[78px] sm:px-6">
+      <div className="relative z-10 mx-auto grid max-w-[1200px] gap-8 sm:gap-10 lg:grid-cols-[minmax(0,520px)_minmax(0,640px)] lg:items-center lg:justify-between text-center sm:text-start">
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
             <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white">

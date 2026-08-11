@@ -55,8 +55,8 @@ export function Header() {
   }, []);
 
   return (
-    <div className="bg-black sticky top-0 z-50 w-full border-b border-white/5 transition-all duration-300">
-      <header className="relative z-10 mx-auto flex w-full max-w-[1200px]  flex-col px-6 py-5 md:py-4 md:min-h-[80px] md:flex-row md:items-center md:justify-between md:py-0">
+    <div className="bg-black sticky top-0 z-50 w-full border-b border-white/5 transition-all px-6 duration-300">
+      <header className="relative z-10 mx-auto flex w-full max-w-[1200px]  flex-col py-5 md:py-4 md:min-h-[80px] md:flex-row md:items-center md:justify-between md:py-0">
 
         {/* Top Bar for Mobile & Desktop */}
         <div className="flex w-full items-center justify-between md:w-auto md:flex-1 md:justify-start">

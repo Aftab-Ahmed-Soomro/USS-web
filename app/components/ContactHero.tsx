@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
-import { InlineWidget } from "react-calendly";
+import { LightConsultationForm } from "./ConsultationForm";
 
 // ─── Shared easing ────────────────────────────────────────────────────────────
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -30,7 +30,7 @@ export default function ContactHero() {
   ];
 
   return (
-    <section className="relative w-full bg-[#000] overflow-hidden py-8 sm:py-28">
+    <section className="relative w-full bg-[#000] overflow-hidden py-8 px-6 sm:py-28">
 
       {/* Ambient glow — top centre */}
       <div
@@ -64,11 +64,11 @@ export default function ContactHero() {
         </h1>
       </motion.div>
 
-      <div className="relative mx-auto max-w-[1440px] px-4 min-[375px]:px-6 lg:px-[7.3%]">
-        <div className="grid grid-cols-1 lg:grid-cols-[486fr_100fr_642fr] gap-y-12">
+      <div className="relative mx-auto max-w-[1200px]">
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,500px)_minmax(0,640px)] gap-10 lg:items-start lg:justify-between pt-12 sm:pt-20 lg:pt-24">
 
           {/* ── LEFT COLUMN ─────────────────────────────────────────── */}
-          <div className="flex flex-col order-1 lg:order-none pt-[100px] sm:pt-[160px] lg:pt-[200px]">
+          <div className="flex flex-col order-1 lg:order-none">
 
             {/* Badge pill — drops down */}
             <motion.div
@@ -168,25 +168,15 @@ export default function ContactHero() {
             </div>
           </div>
 
-          {/* GAP COLUMN */}
-          <div className="hidden lg:block" />
 
           {/* ── RIGHT COLUMN — Form slides in from right ─────────────── */}
           <motion.div
-            className="order-2 lg:order-none flex items-center justify-center lg:items-end lg:justify-end"
+            className="w-full flex justify-center lg:justify-end"
             initial={{ opacity: 0, x: 60, filter: "blur(16px)" }}
             animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.85, delay: 0.3, ease }}
           >
-            <div
-              className="w-full max-w-[460px] rounded-[12px] border border-white/[0.08] bg-gradient-to-br from-white/[0.06] to-white/[0.02] flex flex-col gap-[18px] backdrop-blur-sm overflow-hidden"
-              style={{ boxShadow: "0 32px 80px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.06)" }}
-            >
-              <InlineWidget
-                url="https://calendly.com/unitedstrategicsolutions/30min"
-                styles={{ minWidth: "100%", height: "580px", borderRadius: "16px" }}
-              />
-            </div>
+            <LightConsultationForm className="w-full" />
           </motion.div>
 
         </div>

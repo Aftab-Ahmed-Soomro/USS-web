@@ -178,8 +178,8 @@ export function SixStepSystem({ heading, data = defaultSteps, cardStyle = false 
   const activeStep = activeStepId ? data.find(s => s.id === activeStepId) || data[0] : data[0];
 
   return (
-    <section className="bg-black pt-20 pb-8 sm:py-20 text-white overflow-hidden font-[var(--font-inter)]">
-      <div className="w-full max-w-[1200px]  px-6 mx-auto">
+    <section className="bg-black px-6 pt-20 pb-8 sm:py-20 text-white overflow-hidden font-[var(--font-inter)]">
+      <div className="w-full max-w-[1200px] mx-auto">
 
         {/* Header */}
         <FadeUp>

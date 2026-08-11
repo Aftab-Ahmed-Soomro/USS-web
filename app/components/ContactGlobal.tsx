@@ -109,7 +109,7 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           gap: 20px;
-          max-width: 1150px;
+          max-width: 1200px;
           width: 100%;
         }
 

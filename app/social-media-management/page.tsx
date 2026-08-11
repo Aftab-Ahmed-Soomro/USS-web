@@ -137,8 +137,8 @@ const socialServicesData = [
 
 function Hero() {
   return (
-    <section className="bg-[#f7f7f5] px-4 min-[375px]:px-5 min-[480px]:px-6 sm:px-6 py-[48px] min-[390px]:py-[58px] text-black sm:py-[76px] lg:py-[82px]">
-      <div className="relative z-10 mx-auto grid max-w-[1200px] px-6 gap-8 sm:gap-10 lg:grid-cols-[minmax(0,520px)_minmax(0,640px)] lg:items-center lg:justify-between">
+    <section className="bg-[#f7f7f5] px-4 min-[375px]:px-5 min-[480px]:px-6 sm:px-6 py-[48px] min-[390px]:py-[58px] text-black sm:py-[76px] lg:py-[82px] sm:px-6">
+      <div className="relative z-10 mx-auto grid max-w-[1200px] gap-8 sm:gap-10 lg:grid-cols-[minmax(0,520px)_minmax(0,640px)] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.15}>
           <StaggerItem>
             <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-[#ff5500] text-center sm:text-start">
