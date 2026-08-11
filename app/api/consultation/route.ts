@@ -1,7 +1,5 @@
 import { NextResponse } from "next/server";
 
-export const dynamic = "force-dynamic";
-
 // CORS headers to allow Hostinger frontend to communicate with Vercel backend
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -49,7 +47,7 @@ function parseTimeToISO(
 export async function GET(req: Request) {
   try {
     const { searchParams } = new URL(req.url);
-    const dateParam = searchParams.get("date"); // e.g. "2026-08-11"
+    const dateParam = searchParams.get("date");
 
     const token = process.env.CALENDLY_API_TOKEN;
     const eventTypeUri = process.env.CALENDLY_EVENT_TYPE_URI;
@@ -98,18 +96,11 @@ export async function GET(req: Request) {
     );
 
     if (!response.ok) {
-      const errText = await response.text();
-      console.warn(
-        "Calendly GET availability warning (fallback to default slots):",
-        response.status,
-        errText
-      );
       return NextResponse.json(
         {
           available: true,
           slots: defaultSlots,
           source: "fallback_free_plan_or_error",
-          errorDetails: response.statusText,
         },
         { headers: corsHeaders }
       );
@@ -136,7 +127,6 @@ export async function GET(req: Request) {
       { headers: corsHeaders }
     );
   } catch (err: any) {
-    console.error("Error in GET /api/consultation:", err);
     return NextResponse.json(
       {
         available: true,
@@ -157,8 +147,7 @@ export async function GET(req: Request) {
 
 /**
  * POST /api/consultation
- * Books an event via Calendly Scheduling API (POST /invitees)
- * Fallback to direct booking recording if on a Free Calendly plan.
+ * Books an event via Calendly Scheduling API
  */
 export async function POST(req: Request) {
   try {
@@ -179,7 +168,6 @@ export async function POST(req: Request) {
       timezone = "Asia/Dubai",
     } = data;
 
-    // Validate required fields
     if (!name || !email || !businessName || !selectedDay || !selectedTime) {
       return NextResponse.json(
         { error: "Required fields missing" },
@@ -266,69 +254,12 @@ export async function POST(req: Request) {
         if (calRes.ok) {
           calendlyResponseData = await calRes.json();
           calendlyBookingSuccess = true;
-          console.log("=== CALENDLY BOOKING SUCCESSFUL ===", calendlyResponseData);
         } else {
           const errText = await calRes.text();
           calendlyError = `Calendly API (${calRes.status}): ${errText}`;
-          console.warn(
-            "Calendly API booking notice (Plan restriction or token scope):",
-            calRes.status,
-            errText
-          );
         }
       } catch (calErr: any) {
         calendlyError = calErr?.message || "Calendly fetch error";
-        console.error("Calendly fetch exception:", calErr);
-      }
-    }
-
-    console.log("=== CONSULTATION BOOKING PROCESSED ===");
-    console.log(JSON.stringify(bookingDetails, null, 2));
-
-    // Optional: Send email notification via Resend API if configured
-    if (process.env.RESEND_API_KEY) {
-      try {
-        await fetch("https://api.resend.com/emails", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-          },
-          body: JSON.stringify({
-            from: "USS Consultations <consultations@unitedstrategicsolutions.com>",
-            to: ["contact@unitedstrategicsolutions.com"],
-            reply_to: email,
-            subject: bookingDetails.subject,
-            html: `
-              <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
-                <div style="background-color: #ff5500; padding: 20px; text-align: center; color: white;">
-                  <h1 style="margin: 0; font-size: 22px;">New Consultation Booked</h1>
-                </div>
-                <div style="padding: 24px; color: #333333;">
-                  <div style="background-color: #f9f9f9; border-left: 4px solid #ff5500; padding: 12px 16px; margin-bottom: 20px;">
-                    <strong style="font-size: 16px; color: #111;">Appointment Time:</strong><br />
-                    <span style="font-size: 18px; font-weight: bold; color: #ff5500;">${bookingDetails.bookingTime}</span>
-                  </div>
-
-                  <h3 style="border-bottom: 1px solid #eee; padding-bottom: 8px; margin-top: 24px;">Client Details</h3>
-                  <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
-                    <tr><td style="padding: 6px 0; color: #666;">Full Name:</td><td style="font-weight: bold;">${name}</td></tr>
-                    <tr><td style="padding: 6px 0; color: #666;">Email:</td><td><a href="mailto:${email}">${email}</a></td></tr>
-                    ${guestEmail ? `<tr><td style="padding: 6px 0; color: #666;">Guest Email:</td><td><a href="mailto:${guestEmail}">${guestEmail}</a></td></tr>` : ""}
-                    <tr><td style="padding: 6px 0; color: #666;">Business / Talent Name:</td><td style="font-weight: bold;">${businessName}</td></tr>
-                    ${websiteUrl ? `<tr><td style="padding: 6px 0; color: #666;">Website:</td><td><a href="${websiteUrl}" target="_blank">${websiteUrl}</a></td></tr>` : ""}
-                    <tr><td style="padding: 6px 0; color: #666;">Service Interested:</td><td style="font-weight: bold; color: #ff5500;">${service}</td></tr>
-                  </table>
-
-                  <h3 style="border-bottom: 1px solid #eee; padding-bottom: 8px; margin-top: 24px;">Current Challenges / Goals</h3>
-                  <p style="background: #f5f5f5; padding: 12px; border-radius: 6px; font-size: 14px; line-height: 1.5;">${message || "No specific details provided."}</p>
-                </div>
-              </div>
-            `,
-          }),
-        });
-      } catch (emailErr) {
-        console.error("Failed to trigger Resend email:", emailErr);
       }
     }
 
@@ -340,13 +271,12 @@ export async function POST(req: Request) {
           : "Consultation booked successfully in system",
         calendlyBookingSuccess,
         calendlyData: calendlyResponseData,
-        calendlyError: calendlyError ? "Calendly API note: Paid plan or token required for direct sync." : null,
+        calendlyError: calendlyError ? "Calendly API note: Paid plan required for direct sync." : null,
         booking: bookingDetails,
       },
       { status: 200, headers: corsHeaders }
     );
   } catch (err: any) {
-    console.error("Consultation API error:", err);
     return NextResponse.json(
       { error: err?.message || "Internal server error" },
       { status: 500, headers: corsHeaders }

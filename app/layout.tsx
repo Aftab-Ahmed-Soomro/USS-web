@@ -8,6 +8,7 @@ const cormorant = Cormorant_Garamond({
   weight: ["500", "600", "700"],
   style: ["italic"],
   display: "swap",
+  fallback: ["serif"],
 });
 
 const beVietnam = Be_Vietnam_Pro({
@@ -15,6 +16,7 @@ const beVietnam = Be_Vietnam_Pro({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
   display: "swap",
+  fallback: ["sans-serif"],
 });
 
 const inter = Inter({
@@ -22,6 +24,7 @@ const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "700"],
   display: "swap",
+  fallback: ["sans-serif"],
 });
 
 export const metadata: Metadata = {
