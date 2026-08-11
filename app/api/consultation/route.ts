@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic";
+
 // CORS headers to allow Hostinger frontend to communicate with Vercel backend
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
