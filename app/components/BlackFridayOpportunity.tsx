@@ -91,7 +91,7 @@ export function BlackFridayOpportunity() {
     <section className="bg-white py-16 sm:py-24 text-black overflow-hidden flex flex-col items-center relative px-6">
       {/* Header Section */}
       <FadeUp>
-        <div className="max-w-[1200px]  text-center mx-auto mb-10 sm:mb-16">
+        <div className="max-w-[1200px] xl:max-w-[1300px]  text-center mx-auto mb-10 sm:mb-16">
           <h2
             className="font-medium lowercase tracking-[-1px] sm:tracking-[-3.2px] text-[#000000] sm:mb-2 font-[var(--font-be-vietnam)] text-[28px] sm:text-[56px] leading-[1.2] sm:leading-[65px]"
           >
@@ -181,7 +181,7 @@ export function BlackFridayOpportunity() {
       {/* </FadeUp> */}
 
       {/* Features Section */}
-      <div className="relative w-full max-w-[1200px]  mx-auto md:px-4">
+      <div className="relative w-full max-w-[1200px] xl:max-w-[1300px]  mx-auto md:px-4">
         {/* Mobile Navigation Arrows */}
         <div className="absolute top-1/2 -translate-y-1/2 left-2 z-10 md:hidden">
           <button

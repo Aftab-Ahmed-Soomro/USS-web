@@ -121,7 +121,7 @@ export default function DedicatedPartner() {
         style={{ background: 'radial-gradient(circle, #ff5500 0%, rgba(0,0,0,0) 70%)' }}
       />
 
-      <div className="relative z-10 w-full max-w-[1200px] ">
+      <div className="relative z-10 w-full max-w-[1200px] xl:max-w-[1300px] ">
 
         {/* Top Content Grid */}
         <motion.div

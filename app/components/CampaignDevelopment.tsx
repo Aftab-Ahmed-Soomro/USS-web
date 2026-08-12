@@ -31,8 +31,8 @@ export function CampaignDevelopment() {
 
   return (
     <section className="relative z-10 bg-white px-6 pb-0 pt-[82px] text-[#1a1a1a]  lg:pt-[100px]">
-      <div className="mx-auto max-w-[1200px] ">
-        <h2 className="max-w-[1200px]  text-[39px] font-medium leading-[1.08] tracking-[-2px] sm:text-[50px] lg:text-[56px] lg:leading-[76px] lg:tracking-[-3.16px]">
+      <div className="mx-auto max-w-[1200px] xl:max-w-[1300px] ">
+        <h2 className="max-w-[1200px] xl:max-w-[1300px]  text-[39px] font-medium leading-[1.08] tracking-[-2px] sm:text-[50px] lg:text-[56px] lg:leading-[76px] lg:tracking-[-3.16px]">
           end to end campaign{" "}
           <span className="font-serif text-[1.08em] font-extralight timesFontFamily italic tracking-[-1.4px]">
             development

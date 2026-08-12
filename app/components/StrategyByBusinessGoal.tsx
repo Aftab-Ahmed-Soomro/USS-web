@@ -61,7 +61,7 @@ export function StrategyByBusinessGoal() {
 
   return (
     <section className="relative w-full bg-black py-[30px] sm:py-24 px-4 sm:px-6 overflow-hidden">
-      <div className="max-w-[1200px]  mx-auto relative z-10">
+      <div className="max-w-[1200px] xl:max-w-[1300px]  mx-auto relative z-10">
 
         {/* Header Section */}
         <FadeUp delay={0.1}>

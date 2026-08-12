@@ -73,7 +73,7 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
 
       {/* ── HERO SECTION ── */}
       <section className="bg-[#f7f7f5] px-4 min-[375px]:px-6 pb-[38px] pt-[42px] sm:pb-[44px] sm:pt-[55px] lg:pt-[64px]">
-        <div className="mx-auto grid max-w-[1200px]  items-start justify-between gap-10 sm:gap-14 lg:grid-cols-[550px_566px] lg:gap-[64px]">
+        <div className="mx-auto grid max-w-[1200px] xl:max-w-[1300px]  items-start justify-between gap-10 sm:gap-14 lg:grid-cols-[550px_566px] lg:gap-[64px]">
           {/* Left — back link, title, description */}
           <div className="lg:pt-[11px]">
             {/* Back link — slides in from left */}
@@ -182,7 +182,7 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
       {/* ── OVERVIEW / PICTURES SECTION (no-video projects: before main info; with-video: after) ── */}
       {!hasVideo && !project.hideSocialGridPreview && (
         <section className="bg-black px-4 min-[375px]:px-5 pb-[40px] pt-[50px] sm:pt-[68px] text-white sm:px-8 sm:pb-[43px] lg:px-12">
-          <div className="mx-auto max-w-[1200px]  text-center">
+          <div className="mx-auto max-w-[1200px] xl:max-w-[1300px]  text-center">
             {/* Heading — drops down */}
             <FadeDown delay={0.1}>
               <h2 className="font-[var(--font-be-vietnam)] text-[26px] min-[375px]:text-[30px] font-bold lowercase leading-none tracking-[-1.6px] sm:text-[43px]">
@@ -273,7 +273,7 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
       {/* ── GOAL / WORK / OUTCOME SECTION ── */}
 
       <section className="bg-[#f7f7f5] px-6 pb-[40px] pt-[40px] sm:pb-[82px] sm:pt-[82px]">
-        <div className="mx-auto grid max-w-[1200px]  gap-12 sm:gap-14 lg:grid-cols-[840px_300px] lg:gap-[30px]">
+        <div className="mx-auto grid max-w-[1200px] xl:max-w-[1300px]  gap-12 sm:gap-14 lg:grid-cols-[840px_300px] lg:gap-[30px]">
           <div>
             {/* The Goal — slides in from left */}
             <FadeLeft delay={0.1}>
@@ -390,7 +390,7 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
       {/* ── OVERVIEW / PICTURES SECTION (with-video projects only — appears after main info) ── */}
       {hasVideo && !project.hideSocialGridPreview && (
         <section className="bg-black px-5 pb-[4px] pt-[68px] text-white sm:px-8 sm:pb-[43px] lg:px-12">
-          <div className="mx-auto max-w-[1200px]  text-center">
+          <div className="mx-auto max-w-[1200px] xl:max-w-[1300px]  text-center">
             {/* Heading — drops down */}
             <FadeDown delay={0.1}>
               <h2 className="font-[var(--font-be-vietnam)] text-[30px] font-bold lowercase leading-none tracking-[-1.6px] sm:text-[43px]">

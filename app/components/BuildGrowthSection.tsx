@@ -27,7 +27,7 @@ export function BuildGrowthSection() {
   return (
     <section id="build-growth" className="bg-black text-white pt-[60px] pb-0 sm:pb-10 sm:pt-[100px] flex flex-col items-center overflow-hidden">
       <motion.div
-        className="text-center max-w-[1200px]  mx-auto w-full"
+        className="text-center max-w-[1200px] xl:max-w-[1300px]  mx-auto w-full"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
@@ -65,7 +65,7 @@ export function BuildGrowthSection() {
 
       {/* IMAGE */}
       <motion.div
-        className="relative w-full max-w-[1200px]  aspect-[1000/600] mt-10 sm:mt-0 px-4"
+        className="relative w-full max-w-[1200px] xl:max-w-[1300px]  aspect-[1000/600] mt-10 sm:mt-0 px-4"
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, amount: 0.2 }}
@@ -147,7 +147,7 @@ export function BuildGrowthSection() {
       </motion.div>
 
       {/* TAB CONTENTS WITH BEHTREEN ANIMATION */}
-      <div className="relative w-full max-w-[1200px] mx-auto mt-8 sm:mt-24 px-4 pb-20 grid grid-cols-1 grid-rows-1">
+      <div className="relative w-full max-w-[1200px] xl:max-w-[1300px] mx-auto mt-8 sm:mt-24 px-4 pb-20 grid grid-cols-1 grid-rows-1">
 
         {/* PERFORMANCE TAB CONTENT */}
         <div

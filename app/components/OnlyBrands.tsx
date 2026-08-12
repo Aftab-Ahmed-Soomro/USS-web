@@ -33,7 +33,7 @@ export function OnlyBrands() {
         brands we work with
       </h2>
 
-      <div className="mx-auto mt-[26px] grid max-w-[1200px]  grid-cols-1 gap-[20px] sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto mt-[26px] grid max-w-[1200px] xl:max-w-[1300px]  grid-cols-1 gap-[20px] sm:grid-cols-2 lg:grid-cols-4">
         {brandCards.map((brand) => (
           <article
             className="group relative mx-auto aspect-[176/314] w-full max-w-[246px] overflow-hidden rounded-[22px] bg-[#151515]"

@@ -4,7 +4,7 @@ import FadeUp from "./FadeUp";
 
 export function ContentCreationGrid() {
   return (
-    <div className="w-full mx-auto max-w-[1200px] px-6 mt-[32px] sm:mt-[48px] flex flex-col gap-[16px] sm:gap-[20px] lg:gap-[29px]">
+    <div className="w-full mx-auto max-w-[1200px] xl:max-w-[1300px] px-6 mt-[32px] sm:mt-[48px] flex flex-col gap-[16px] sm:gap-[20px] lg:gap-[29px]">
       {/* Block 1 */}
       <div className="grid grid-cols-3 gap-2 sm:gap-[20px] lg:gap-[29px]">
         {/* Left Column (spans 2) */}

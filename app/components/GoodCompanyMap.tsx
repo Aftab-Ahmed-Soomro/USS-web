@@ -50,7 +50,7 @@ export function GoodCompanyMap() {
 
   return (
     <section className="relative z-10 border-t border-t-black w-full bg-white py-[50px] sm:py-16 md:py-24 px-4 min-[375px]:px-6 overflow-hidden">
-      <div className="w-full max-w-[1200px]  mx-auto flex flex-col items-center ">
+      <div className="w-full max-w-[1200px] xl:max-w-[1300px]  mx-auto flex flex-col items-center ">
 
         {/* Main heading — fades up */}
         <FadeUp delay={0.1}>
@@ -68,7 +68,7 @@ export function GoodCompanyMap() {
           </p>
         </FadeDown>
 
-        <div className="w-full relative max-w-[1200px] mx-auto  px-0 sm:px-2 pr-4 sm:pr-0 scale-[1.18] sm:scale-100 origin-center">
+        <div className="w-full relative max-w-[1200px] xl:max-w-[1300px] mx-auto  px-0 sm:px-2 pr-4 sm:pr-0 scale-[1.18] sm:scale-100 origin-center">
 
           {/* Background map lines — slides in from left */}
           <FadeLeft delay={0.3}>

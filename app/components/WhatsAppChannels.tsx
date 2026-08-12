@@ -92,7 +92,7 @@ export default function WhatsAppChannels() {
 
   return (
     <section className="relative w-full overflow-hidden bg-black pb-[40px] pt-[60px] lg:py-[80px] px-4 sm:px-6">
-      <div className="mx-auto max-w-[1200px]">
+      <div className="mx-auto max-w-[1200px] xl:max-w-[1300px]">
 
         {/* Header Section */}
         <div className="flex flex-col items-center text-center max-w-[900px] mx-auto">

@@ -29,7 +29,7 @@ const emailStats = [
 function Hero() {
   return (
     <section className="bg-[#f7f7f5] px-4 min-[375px]:px-6 py-[40px] sm:py-[76px] text-black lg:py-[82px] sm:px-6">
-      <div className="relative z-10 mx-auto grid max-w-[1200px] gap-8 sm:gap-10 lg:grid-cols-[minmax(0,520px)_minmax(0,640px)] lg:items-center lg:justify-between">
+      <div className="relative z-10 mx-auto grid max-w-[1200px] xl:max-w-[1300px] gap-8 sm:gap-10 lg:grid-cols-[minmax(0,520px)_minmax(0,640px)] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.15}>
 
           <StaggerItem>
@@ -74,7 +74,7 @@ function Hero() {
 function FinalCta() {
   return (
     <section className="bg-black px-4 min-[375px]:px-6 pt-[50px] sm:pt-[70px] text-white pb-30">
-      <Stagger staggerDelay={0.12} className="mx-auto max-w-[1200px]  text-center">
+      <Stagger staggerDelay={0.12} className="mx-auto max-w-[1200px] xl:max-w-[1300px]  text-center">
         <StaggerItem>
           <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
             LET&apos;S CONNECT
@@ -129,7 +129,7 @@ const relatedProjects = [
 function RelatedProjects() {
   return (
     <section className="bg-[#080808] px-4 min-[375px]:px-6 py-[40px] sm:py-[56px] text-white">
-      <div className="mx-auto max-w-[1200px] ">
+      <div className="mx-auto max-w-[1200px] xl:max-w-[1300px] ">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
           <Stagger staggerDelay={0.12}>

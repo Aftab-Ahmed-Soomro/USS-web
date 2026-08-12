@@ -148,7 +148,7 @@ export function Testimonials() {
 
   return (
     <section className="relative z-10 bg-[#0a0a0a] py-[30px] text-white px-6 lg:py-[80px]">
-      <div className="mx-auto flex w-full max-w-[1200px]  flex-col items-center ">
+      <div className="mx-auto flex w-full max-w-[1200px] xl:max-w-[1300px]  flex-col items-center ">
 
         {/* Eyebrow pill — drops down */}
         <FadeDown delay={0.1}>

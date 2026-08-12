@@ -179,7 +179,7 @@ export function SixStepSystem({ heading, data = defaultSteps, cardStyle = false 
 
   return (
     <section className="bg-black px-6 pt-20 pb-8 sm:py-20 text-white overflow-hidden font-[var(--font-inter)]">
-      <div className="w-full max-w-[1200px] mx-auto">
+      <div className="w-full max-w-[1200px] xl:max-w-[1300px] mx-auto">
 
         {/* Header */}
         <FadeUp>

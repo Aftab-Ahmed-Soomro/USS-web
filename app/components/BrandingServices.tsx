@@ -46,7 +46,7 @@ const bottomCards = [
 export function BrandingServices() {
   return (
     <section className="bg-black pt-4 px-4 sm:px-6 w-full flex flex-col items-center">
-      <div className="w-full max-w-[1200px] ">
+      <div className="w-full max-w-[1200px] xl:max-w-[1300px] ">
         {/* Top Header */}
         <div className="flex flex-col gap-3 sm:gap-4 border-b border-[#333333] pt-4 sm:pt-8 pb-4 sm:pb-8">
           <h4 className="text-[#FF5500] uppercase text-[12px] leading-[1] tracking-[2.08px] font-semibold">

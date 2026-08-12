@@ -81,7 +81,7 @@ function ServiceCard({ num, title, heightClass, icon, image }: any) {
 export function ContentCreationServices() {
   return (
     <section className="bg-black text-white pb-[60px] sm:pb-[100px] px-6 overflow-hidden">
-      <div className="max-w-[1200px]  mx-auto">
+      <div className="max-w-[1200px] xl:max-w-[1300px]  mx-auto">
         {/* Header */}
         <div className="mb-[30px] sm:mb-[100px]">
           <FadeUp delay={0.1}>

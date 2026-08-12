@@ -346,17 +346,17 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
                   {availableSlots.map((time) => {
                     const isSelected = selectedTime === time;
                     return (
-                      <button
+                      <div
                         key={time}
-                        type="button"
+                        role="button"
                         onClick={() => setSelectedTime(time)}
-                        className={`w-full rounded-md py-1.5 px-1 text-[9.5px] sm:text-[10px] tracking-tight whitespace-nowrap font-medium flex items-center justify-center text-center transition ${isSelected
+                        className={`w-full rounded-md py-1.5 px-1 text-[12px] sm:text-[13px] tracking-tight whitespace-nowrap font-medium flex items-center justify-center text-center transition cursor-pointer ${isSelected
                           ? "bg-[#ff5500] text-white font-semibold shadow-sm"
                           : slotInactive
                           }`}
                       >
                         {time}
-                      </button>
+                      </div>
                     );
                   })}
                 </div>
@@ -456,7 +456,7 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
               <div className="relative" ref={dropdownRef}>
                 <label className={`mb-1 flex items-center justify-between text-[12px] font-medium ${labelText}`}>
                   <span className="flex items-center gap-1.5">
-                    <Sparkles className="h-3.5 w-3.5 text-[#ff5500]" /> What Services Are You Interested In? *
+                    <Sparkles className="h-3.5 w-3.5 text-[#ff5500]" /> Services Needed *
                   </span>
                   {/* {selectedServices.length > 0 && (
                     <span className="text-[11px] font-normal text-[#ff5500]">
@@ -487,9 +487,8 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: -5, scale: 0.98 }}
                       transition={{ duration: 0.15 }}
-                      className={`absolute left-0 right-0 z-50 mt-1 rounded-xl border p-2 shadow-2xl backdrop-blur-md ${
-                        isDark ? "bg-[#18181b] border-white/15 text-white" : "bg-white border-gray-200 text-gray-900"
-                      }`}
+                      className={`absolute left-0 right-0 z-50 mt-1 rounded-xl border p-2 shadow-2xl backdrop-blur-md ${isDark ? "bg-[#18181b] border-white/15 text-white" : "bg-white border-gray-200 text-gray-900"
+                        }`}
                     >
                       {/* Header controls inside menu */}
                       <div className={`flex items-center justify-between px-2 py-1.5 mb-1 text-[14px] border-b ${isDark ? "border-white/10" : "border-gray-100"}`}>
@@ -522,24 +521,22 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
                                 e.preventDefault();
                                 toggleService(opt);
                               }}
-                              className={`flex items-center gap-2.5 rounded-lg px-2.5 py-1.5 cursor-pointer transition select-none ${
-                                isChecked
+                              className={`flex items-center gap-2.5 rounded-lg px-2.5 py-1.5 cursor-pointer transition select-none ${isChecked
                                   ? isDark
                                     ? "bg-[#ff5500]/20 text-white font-medium"
                                     : "bg-[#ff5500]/10 text-gray-900 font-medium"
                                   : isDark
-                                  ? "hover:bg-white/5 text-gray-300"
-                                  : "hover:bg-gray-100 text-gray-700"
-                              }`}
+                                    ? "hover:bg-white/5 text-gray-300"
+                                    : "hover:bg-gray-100 text-gray-700"
+                                }`}
                             >
                               <div
-                                className={`flex h-4 w-4 shrink-0 items-center justify-center rounded border transition ${
-                                  isChecked
+                                className={`flex h-4 w-4 shrink-0 items-center justify-center rounded border transition ${isChecked
                                     ? "border-[#ff5500] bg-[#ff5500] text-white"
                                     : isDark
-                                    ? "border-white/30 bg-white/5"
-                                    : "border-gray-300 bg-white"
-                                }`}
+                                      ? "border-white/30 bg-white/5"
+                                      : "border-gray-300 bg-white"
+                                  }`}
                               >
                                 {isChecked && <Check className="h-3 w-3 stroke-[3]" />}
                               </div>

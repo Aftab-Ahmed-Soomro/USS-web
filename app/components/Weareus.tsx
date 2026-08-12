@@ -5,7 +5,7 @@ import ImageSlider from "./ImageSlider";
 
 export default function WeAreUSS() {
   return (
-    <section className="relative w-full bg-[#080808] overflow-hidden py-4 sm:py-16 px-4 min-[375px]:px-6 lg:px-0 max-w-[1200px]  mx-auto">
+    <section className="relative w-full bg-[#080808] overflow-hidden py-4 sm:py-16 px-4 min-[375px]:px-6 lg:px-0 max-w-[1200px] xl:max-w-[1300px]  mx-auto">
       <div className="relative grid grid-cols-1 lg:grid-cols-[1fr_auto_1.5fr] items-center">
 
         {/* LEFT — Big heading — overlaps the image's left edge */}

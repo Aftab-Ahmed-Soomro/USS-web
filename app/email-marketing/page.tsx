@@ -137,7 +137,7 @@ function Hero() {
         style={{ background: 'radial-gradient(circle, #FF5500 0%, rgba(255,85,0,0) 70%)' }}
       />
 
-      <div className="relative z-10 mx-auto grid max-w-[1200px] gap-8 sm:gap-10 lg:grid-cols-[minmax(0,520px)_minmax(0,640px)] lg:items-center lg:justify-between">
+      <div className="relative z-10 mx-auto grid max-w-[1200px] xl:max-w-[1300px] gap-8 sm:gap-10 lg:grid-cols-[minmax(0,520px)_minmax(0,640px)] lg:items-center lg:justify-between">
         <Stagger staggerDelay={0.15}>
           <StaggerItem>
             <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white text-center sm:text-start">
@@ -182,7 +182,7 @@ function Hero() {
 function EmailOverview() {
   return (
     <section className="relative overflow-hidden bg-black">
-      <div className="relative mx-auto grid max-w-[1200px]  px-4 min-[375px]:px-6 py-[50px] sm:py-16 lg:grid-cols-[minmax(0,680px)_minmax(320px,430px)] lg:justify-between lg:py-20">
+      <div className="relative mx-auto grid max-w-[1200px] xl:max-w-[1300px]  px-4 min-[375px]:px-6 py-[50px] sm:py-16 lg:grid-cols-[minmax(0,680px)_minmax(320px,430px)] lg:justify-between lg:py-20">
         {/* Image mockup */}
         <FadeRight duration={0.8} delay={0.2} className="order-2 -mx-1 pt-10 sm:mx-0 lg:order-none lg:col-start-2 lg:row-start-1 lg:flex lg:items-start lg:justify-end lg:pt-0">
           <div className="relative mx-auto lg:ml-auto lg:mr-0 aspect-[463/842] w-full max-w-[260px] min-[375px]:max-w-[300px] sm:max-w-[400px] overflow-hidden bg-white shadow-[0_24px_55px_rgba(0,0,0,0.35)] translate-x-2 sm:translate-x-4 lg:translate-x-6">
@@ -320,7 +320,7 @@ function EmailStrategy() {
 function FinalCta() {
   return (
     <section className="bg-black px-4 min-[375px]:px-6 pt-[50px] sm:pt-[70px] text-white pb-30">
-      <Stagger staggerDelay={0.15} className="mx-auto max-w-[1200px]  text-center">
+      <Stagger staggerDelay={0.15} className="mx-auto max-w-[1200px] xl:max-w-[1300px]  text-center">
         <StaggerItem>
           <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
             LET&apos;S SCALE
@@ -354,7 +354,7 @@ function FinalCta() {
 function RelatedProjects() {
   return (
     <section className="bg-[#080808] px-4 min-[375px]:px-6 py-[40px] sm:py-[56px] text-white">
-      <div className="mx-auto max-w-[1200px] ">
+      <div className="mx-auto max-w-[1200px] xl:max-w-[1300px] ">
         {/* Header */}
         <div className="flex items-center justify-between gap-6">
           <Stagger staggerDelay={0.12}>

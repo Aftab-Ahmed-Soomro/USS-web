@@ -64,7 +64,7 @@ export default function ContactHero() {
         </h1>
       </motion.div>
 
-      <div className="relative mx-auto max-w-[1200px]">
+      <div className="relative mx-auto max-w-[1200px] xl:max-w-[1300px]">
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,500px)_minmax(0,640px)] gap-10 lg:items-start lg:justify-between pt-12 sm:pt-20 lg:pt-24">
 
           {/* ── LEFT COLUMN ─────────────────────────────────────────── */}

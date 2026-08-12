@@ -18,7 +18,7 @@ const deliverableItems = [
 export function PaidAds() {
   return (
     <section className="bg-[#0a0a0a] px-6 py-16 sm:py-20 lg:px-12 xl:px-20">
-      <div className="mx-auto max-w-[1200px] grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+      <div className="mx-auto max-w-[1200px] xl:max-w-[1300px] grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
         {/* ── LEFT: Image Grid ── */}
         <div className="flex flex-col gap-3">

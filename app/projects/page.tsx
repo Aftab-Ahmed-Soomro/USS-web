@@ -193,7 +193,7 @@ export default function ProjectsPage() {
 
       {/* Hero section */}
       <section className="bg-black px-4 min-[375px]:px-6 pb-[40px] min-[375px]:pb-[60px] pt-[44px] sm:pt-[112px] text-center text-white sm:pb-[90px]">
-        <div className="mx-auto max-w-[1200px] ">
+        <div className="mx-auto max-w-[1200px] xl:max-w-[1300px] ">
 
           {/* Eyebrow — drops down */}
           <FadeDown delay={0.1}>
@@ -225,7 +225,7 @@ export default function ProjectsPage() {
 
       {/* Categories scroll rows */}
       <section className="bg-black pb-[130px] pt-[20px] text-white">
-        <div className="flex flex-col gap-8 sm:gap-12 max-w-[1200px] mx-auto">
+        <div className="flex flex-col gap-8 sm:gap-12 max-w-[1200px] xl:max-w-[1300px] mx-auto">
           {categories.map((category, categoryIdx) => (
             <motion.div
               key={category.name}

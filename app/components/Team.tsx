@@ -46,7 +46,7 @@ export function Team() {
 
   return (
     <section className="relative z-10 bg-[#0a0a0a]  text-white overflow-hidden px-6">
-      <div className="mx-auto flex max-w-[1200px]  flex-col items-center gap-[8px] sm:gap-4 pt-[10px] sm:pt-[20px]">
+      <div className="mx-auto flex max-w-[1200px] xl:max-w-[1300px]  flex-col items-center gap-[8px] sm:gap-4 pt-[10px] sm:pt-[20px]">
         <h2 className="w-full px-0 font-[var(--font-be-vietnam)] text-[30px] sm:text-[56px] font-medium leading-[1.12] lowercase tracking-[-0.02em] sm:leading-[68px]">
           USS{"  "}
           <span className="font-serif text-[36px] sm:text-[72px] font-extralight timesFontFamily italic tracking-[-0.02em]">

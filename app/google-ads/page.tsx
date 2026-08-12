@@ -104,7 +104,7 @@ const workWays = [
 function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#ff5500] px-4 min-[375px]:px-6 pb-[40px] pt-[40px] min-[375px]:pb-[58px] min-[375px]:pt-[56px] text-white sm:pb-[72px] sm:pt-[78px] sm:px-6">
-      <div className="relative z-10 mx-auto grid max-w-[1200px] gap-8 sm:gap-10 lg:grid-cols-[minmax(0,520px)_minmax(0,640px)] lg:items-center lg:justify-between text-center sm:text-start">
+      <div className="relative z-10 mx-auto grid max-w-[1200px] xl:max-w-[1300px] gap-8 sm:gap-10 lg:grid-cols-[minmax(0,520px)_minmax(0,640px)] lg:items-center lg:justify-between text-center sm:text-start">
         <Stagger staggerDelay={0.12}>
           <StaggerItem>
             <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-white">
@@ -186,7 +186,7 @@ function GrowthIcon() {
 function CaseStudies() {
   return (
     <section className="bg-black px-4 min-[375px]:px-6 py-[40px] sm:py-[78px] text-white lg:py-[86px]">
-      <div className="mx-auto max-w-[1200px] ">
+      <div className="mx-auto max-w-[1200px] xl:max-w-[1300px] ">
         <div className="flex flex-col gap-[20px] md:gap-7 md:flex-row md:items-end md:justify-between">
           <Stagger staggerDelay={0.12}>
             <StaggerItem>
@@ -284,7 +284,7 @@ function CaseStudies() {
 function FinalCta() {
   return (
     <section className="bg-black px-4 min-[375px]:px-6 pt-[50px] sm:pt-[70px] text-white pb-30">
-      <Stagger staggerDelay={0.12} className="mx-auto max-w-[1200px]  text-center">
+      <Stagger staggerDelay={0.12} className="mx-auto max-w-[1200px] xl:max-w-[1300px]  text-center">
         <StaggerItem>
           <p className="font-[var(--font-be-vietnam)] text-[10px] font-medium uppercase tracking-[4px] text-[#ff5500]">
             LET&apos;S SCALE
@@ -445,7 +445,7 @@ export default function GoogleAdsPage() {
         <PlatformsWeWorkWith
           heading={
             <h2
-              className="text-white mx-auto max-w-[1200px]  mb-10 tracking-[-1.5px] text-center sm:text-left"
+              className="text-white mx-auto max-w-[1200px] xl:max-w-[1300px]  mb-10 tracking-[-1.5px] text-center sm:text-left"
               style={{
                 fontWeight: 500,
                 fontSize: "clamp(32px, 5vw, 56px)",
