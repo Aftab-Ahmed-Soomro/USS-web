@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   ChevronLeft,
   ChevronRight,
@@ -14,8 +14,10 @@ import {
   UserPlus,
   MessageSquare,
   Sparkles,
+  ChevronDown,
+  Check,
 } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Stagger from "./Stagger";
 import StaggerItem from "./Staggeritem";
 
@@ -61,13 +63,16 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
   const [availableSlots, setAvailableSlots] = useState<string[]>(defaultTimeSlots);
   const [isLoadingSlots, setIsLoadingSlots] = useState<boolean>(false);
 
+  const [selectedServices, setSelectedServices] = useState<string[]>(["Marketing Strategy"]);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     guestEmail: "",
     businessName: "",
     websiteUrl: "",
-    service: "Marketing Strategy",
     message: "",
   });
   const [showGuestInput, setShowGuestInput] = useState(false);
@@ -85,6 +90,25 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
 
   const handlePrevMonth = () => setCurrentDate(new Date(year, month - 1, 1));
   const handleNextMonth = () => setCurrentDate(new Date(year, month + 1, 1));
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsServicesOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const toggleService = (opt: string) => {
+    setSelectedServices((prev) =>
+      prev.includes(opt)
+        ? prev.filter((item) => item !== opt)
+        : [...prev, opt]
+    );
+  };
 
   // Fetch available slots when date changes
   useEffect(() => {
@@ -121,10 +145,16 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
     e.preventDefault();
     if (isSubmitting) return;
 
+    if (selectedServices.length === 0) {
+      setErrorMessage("Please select at least one service.");
+      return;
+    }
+
     setIsSubmitting(true);
     setErrorMessage(null);
 
     const userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone || "Asia/Dubai";
+    const servicePayload = selectedServices.join(", ");
 
     try {
       const baseUrl = process.env.NEXT_PUBLIC_API_URL || "https://uss-backend.vercel.app";
@@ -133,6 +163,8 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...formData,
+          service: servicePayload,
+          services: selectedServices,
           selectedDay,
           selectedTime,
           monthName: monthNames[month],
@@ -162,13 +194,14 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
     setIsSubmitted(false);
     setShowGuestInput(false);
     setErrorMessage(null);
+    setSelectedServices(["Marketing Strategy"]);
+    setIsServicesOpen(false);
     setFormData({
       name: "",
       email: "",
       guestEmail: "",
       businessName: "",
       websiteUrl: "",
-      service: "Marketing Strategy",
       message: "",
     });
   };
@@ -375,10 +408,10 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
                   <button
                     type="button"
                     onClick={() => setShowGuestInput(true)}
-                    className={`mt-2 w-full rounded-full py-1.5 px-4 text-[11px] font-medium transition flex items-center justify-center gap-1.5 cursor-pointer border ${isDark ? "border-white/20 bg-white/5 hover:bg-white/10 text-gray-300" : "border-gray-300 bg-white hover:bg-gray-50 text-gray-700"}`}
+                    className={`mt-2 w-full rounded-full py-1.5 px-4 font-medium transition flex items-center justify-center gap-1.5 cursor-pointer border ${isDark ? "border-white/20 bg-white/5 hover:bg-white/10 text-gray-300" : "border-gray-300 bg-white hover:bg-gray-50 text-gray-700"}`}
                   >
                     <UserPlus className="h-3.5 w-3.5 text-[#ff5500]" />
-                    <span>Add guests</span>
+                    <span className="text-[14px]">Add guests</span>
                   </button>
                 ) : (
                   <div className="mt-2 flex flex-col gap-1">
@@ -420,22 +453,104 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
                 />
               </div>
 
-              <div>
-                <label className={`mb-1 flex items-center gap-1.5 text-[12px] font-medium sm:whitespace-nowrap ${labelText}`}>
-                  <Sparkles className="h-3.5 w-3.5 text-[#ff5500]" /> What Services Are You <br className="sm:block hidden" /> Interested In?
+              <div className="relative" ref={dropdownRef}>
+                <label className={`mb-1 flex items-center justify-between text-[12px] font-medium ${labelText}`}>
+                  <span className="flex items-center gap-1.5">
+                    <Sparkles className="h-3.5 w-3.5 text-[#ff5500]" /> What Services Are You Interested In? *
+                  </span>
+                  {/* {selectedServices.length > 0 && (
+                    <span className="text-[11px] font-normal text-[#ff5500]">
+                      {selectedServices.length} selected
+                    </span>
+                  )} */}
                 </label>
-                <select
-                  value={formData.service}
-                  onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                  className={`w-full rounded-lg px-3.5 py-1.5 text-[13.5px] font-normal border border-gray-300 focus:border-[#000] transition focus:outline-none cursor-pointer ${inputBg}`}
-                  style={{ fontSize: "13.5px" }}
+
+                {/* Multi-select Dropdown Trigger Button */}
+                <button
+                  type="button"
+                  onClick={() => setIsServicesOpen(!isServicesOpen)}
+                  className={`w-full flex items-center justify-between rounded-lg px-3.5 py-2 text-[14px] border transition focus:outline-none cursor-pointer text-left ${inputBg}`}
                 >
-                  {serviceOptions.map((opt) => (
-                    <option key={opt} value={opt} style={{ fontSize: "13.5px" }} className={isDark ? "bg-[#18181b] text-[13.5px] text-white" : "bg-white text-[13.5px] text-gray-900"}>
-                      {opt}
-                    </option>
-                  ))}
-                </select>
+                  <span className="truncate pr-2 text-[14px]">
+                    {selectedServices.length === 0
+                      ? "Select services..."
+                      : selectedServices.join(", ")}
+                  </span>
+                  <ChevronDown className={`h-4 w-4 shrink-0 transition-transform duration-200 ${isDark ? "text-gray-400" : "text-gray-500"} ${isServicesOpen ? "rotate-180" : ""}`} />
+                </button>
+
+                {/* Dropdown Popover Menu with Checkboxes */}
+                <AnimatePresence>
+                  {isServicesOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -5, scale: 0.98 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: -5, scale: 0.98 }}
+                      transition={{ duration: 0.15 }}
+                      className={`absolute left-0 right-0 z-50 mt-1 rounded-xl border p-2 shadow-2xl backdrop-blur-md ${
+                        isDark ? "bg-[#18181b] border-white/15 text-white" : "bg-white border-gray-200 text-gray-900"
+                      }`}
+                    >
+                      {/* Header controls inside menu */}
+                      <div className={`flex items-center justify-between px-2 py-1.5 mb-1 text-[14px] border-b ${isDark ? "border-white/10" : "border-gray-100"}`}>
+                        <span className={isDark ? "text-gray-400" : "text-gray-500"}>
+                          Select all that apply
+                        </span>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            if (selectedServices.length === serviceOptions.length) {
+                              setSelectedServices([]);
+                            } else {
+                              setSelectedServices([...serviceOptions]);
+                            }
+                          }}
+                          className="text-[#ff5500] hover:underline font-semibold text-[14px]"
+                        >
+                          {selectedServices.length === serviceOptions.length ? "Deselect All" : "Select All"}
+                        </button>
+                      </div>
+
+                      {/* Checkbox Options List */}
+                      <div className="max-h-52 overflow-y-auto space-y-0.5 pr-1 text-[14px]">
+                        {serviceOptions.map((opt) => {
+                          const isChecked = selectedServices.includes(opt);
+                          return (
+                            <label
+                              key={opt}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                toggleService(opt);
+                              }}
+                              className={`flex items-center gap-2.5 rounded-lg px-2.5 py-1.5 cursor-pointer transition select-none ${
+                                isChecked
+                                  ? isDark
+                                    ? "bg-[#ff5500]/20 text-white font-medium"
+                                    : "bg-[#ff5500]/10 text-gray-900 font-medium"
+                                  : isDark
+                                  ? "hover:bg-white/5 text-gray-300"
+                                  : "hover:bg-gray-100 text-gray-700"
+                              }`}
+                            >
+                              <div
+                                className={`flex h-4 w-4 shrink-0 items-center justify-center rounded border transition ${
+                                  isChecked
+                                    ? "border-[#ff5500] bg-[#ff5500] text-white"
+                                    : isDark
+                                    ? "border-white/30 bg-white/5"
+                                    : "border-gray-300 bg-white"
+                                }`}
+                              >
+                                {isChecked && <Check className="h-3 w-3 stroke-[3]" />}
+                              </div>
+                              <span className="text-[14px] leading-tight">{opt}</span>
+                            </label>
+                          );
+                        })}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
 
               <div>

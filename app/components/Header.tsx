@@ -66,7 +66,7 @@ export function Header() {
 
           <div className="flex items-center gap-2 sm:gap-3 md:hidden">
             <Link
-              className="inline-flex h-[32px] sm:h-[38px] px-3 sm:px-5 items-center justify-center rounded-full bg-[#ff6b1f] font-[var(--font-be-vietnam)] text-[10px] min-[375px]:text-[11px] sm:text-[12px] tracking-[0.52px] font-bold text-white transition uppercase whitespace-nowrap hover:bg-white hover:text-black"
+              className="inline-flex h-[46px] sm:h-[38px] px-7 sm:px-5 items-center justify-center rounded-full bg-[#ff6b1f] font-[var(--font-be-vietnam)] text-[12px] sm:text-[12px] tracking-[0.52px] font-bold text-white transition uppercase whitespace-nowrap hover:bg-white hover:text-black"
               href="/contact"
             >
               <span className="min-[375px]:hidden">Consultation</span>
