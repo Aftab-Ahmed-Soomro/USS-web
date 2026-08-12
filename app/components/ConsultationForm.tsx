@@ -230,7 +230,7 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
         {/* Header */}
         <StaggerItem>
           <div className={`mb-5 flex flex-col items-center justify-center text-center border-b pb-4 ${isDark ? "border-white/10" : "border-gray-100"}`}>
-            <h2 className={`mt-1 font-[var(--font-be-vietnam)] text-[20px] sm:text-[24px] font-semibold tracking-[0.5px] ${headerText}`}>
+            <h2 className={`mt-1 font-[var(--font-be-vietnam)] text-[23px] sm:text-[30px] font-semibold tracking-[0.5px] ${headerText}`}>
               Book Your Free Consultation
             </h2>
           </div>
@@ -469,9 +469,9 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
                 <button
                   type="button"
                   onClick={() => setIsServicesOpen(!isServicesOpen)}
-                  className={`w-full flex items-center justify-between rounded-lg px-3.5 py-2 text-[14px] border transition focus:outline-none cursor-pointer text-left ${inputBg}`}
+                  className={`w-full flex items-center justify-between rounded-lg px-3.5 py-2 text-[13px] border transition focus:outline-none cursor-pointer text-left ${inputBg}`}
                 >
-                  <span className="truncate pr-2 text-[14px]">
+                  <span className="truncate pr-2 text-[13.7px]">
                     {selectedServices.length === 0
                       ? "Select services..."
                       : selectedServices.join(", ")}
@@ -491,7 +491,7 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
                         }`}
                     >
                       {/* Header controls inside menu */}
-                      <div className={`flex items-center justify-between px-2 py-1.5 mb-1 text-[14px] border-b ${isDark ? "border-white/10" : "border-gray-100"}`}>
+                      <div className={`flex items-center justify-between px-2 py-1.5 mb-1 text-[13px] border-b ${isDark ? "border-white/10" : "border-gray-100"}`}>
                         <span className={isDark ? "text-gray-400" : "text-gray-500"}>
                           Select all that apply
                         </span>
@@ -511,7 +511,7 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
                       </div>
 
                       {/* Checkbox Options List */}
-                      <div className="max-h-52 overflow-y-auto space-y-0.5 pr-1 text-[14px]">
+                      <div className="max-h-52 overflow-y-auto space-y-0.5 pr-1 text-[13px]">
                         {serviceOptions.map((opt) => {
                           const isChecked = selectedServices.includes(opt);
                           return (
@@ -540,7 +540,7 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
                               >
                                 {isChecked && <Check className="h-3 w-3 stroke-[3]" />}
                               </div>
-                              <span className="text-[14px] leading-tight">{opt}</span>
+                              <span className="text-[13px] leading-tight">{opt}</span>
                             </label>
                           );
                         })}
