@@ -230,7 +230,7 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
         {/* Header */}
         <StaggerItem>
           <div className={`mb-5 flex flex-col items-center justify-center text-center border-b pb-4 ${isDark ? "border-white/10" : "border-gray-100"}`}>
-            <h2 className={`mt-1 font-[var(--font-be-vietnam)] text-[23px] sm:text-[30px] font-semibold tracking-[0.5px] ${headerText}`}>
+            <h2 className={`mt-1 font-[var(--font-be-vietnam)] text-[26.5px] sm:text-[32px] font-semibold tracking-[-1.5px] ${headerText}`}>
               Book Your Free Consultation
             </h2>
           </div>
