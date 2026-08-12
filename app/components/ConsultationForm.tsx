@@ -335,7 +335,7 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
 
               {/* Time Slots */}
               <div className={`pt-3 border-t ${isDark ? "border-white/10" : "border-gray-200"}`}>
-                <div className={`mb-2 flex items-center justify-between font-[var(--font-inter)] text-[11px] sm:text-[12px] font-medium ${labelText}`}>
+                <div className={`mb-2 flex items-center justify-between font-[var(--font-inter)] text-[11px] sm:text-[13px] font-medium ${labelText}`}>
                   <div className="flex items-center gap-1.5">
                     <Clock className="h-3.5 w-3.5 text-[#ff5500]" />
                     <span>Select Time Slot</span>
@@ -362,7 +362,7 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
                 </div>
               </div>
 
-              <div className={`mt-1 flex items-center justify-between rounded-lg px-3 py-1.5 mb-2 text-[11px] sm:text-[12px] border ${isDark ? "bg-white/5 border-white/10" : "bg-gray-100 border-gray-200"}`}>
+              <div className={`mt-1 flex items-center justify-between rounded-lg px-3 py-1.5 mb-2 text-[11px] sm:text-[13px] border ${isDark ? "bg-white/5 border-white/10" : "bg-gray-100 border-gray-200"}`}>
                 <span className={`font-medium ${isDark ? "text-gray-400" : "text-gray-500"}`}>Selected Slot:</span>
                 <span className={`font-semibold ${headerText}`}>
                   {monthNames[month]} {selectedDay}, {selectedTime}
@@ -379,7 +379,7 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
               )}
 
               <div>
-                <label className={`mb-1 flex items-center gap-1.5 text-[12px] font-medium ${labelText}`}>
+                <label className={`mb-1 flex items-center gap-1.5 text-[13px] font-medium ${labelText}`}>
                   <User className="h-3.5 w-3.5 text-[#ff5500]" /> Name *
                 </label>
                 <input
@@ -388,12 +388,12 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
                   placeholder="Enter your name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className={`w-full rounded-lg px-3.5 py-1.5 text-[12px] border border-gray-300 focus:border-[#000] placeholder:text-[14px] transition focus:outline-none ${inputBg}`}
+                  className={`w-full rounded-lg px-3.5 py-1.5 text-[12px] border border-gray-300 focus:border-[#000] placeholder:text-[13px] transition focus:outline-none ${inputBg}`}
                 />
               </div>
 
               <div>
-                <label className={`mb-1 flex items-center gap-1.5 text-[12px] font-medium ${labelText}`}>
+                <label className={`mb-1 flex items-center gap-1.5 text-[13px] font-medium ${labelText}`}>
                   <Mail className="h-3.5 w-3.5 text-[#ff5500]" /> Email *
                 </label>
                 <input
@@ -402,7 +402,7 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
                   placeholder="name@company.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className={`w-full rounded-lg px-3.5 py-1.5 text-[12px] border border-gray-300 focus:border-[#000] placeholder:text-[14px] transition focus:outline-none ${inputBg}`}
+                  className={`w-full rounded-lg px-3.5 py-1.5 text-[12px] border border-gray-300 focus:border-[#000] placeholder:text-[13px] transition focus:outline-none ${inputBg}`}
                 />
                 {!showGuestInput ? (
                   <button
@@ -411,7 +411,7 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
                     className={`mt-2 w-full rounded-full py-1.5 px-4 font-medium transition flex items-center justify-center gap-1.5 cursor-pointer border ${isDark ? "border-white/20 bg-white/5 hover:bg-white/10 text-gray-300" : "border-gray-300 bg-white hover:bg-gray-50 text-gray-700"}`}
                   >
                     <UserPlus className="h-3.5 w-3.5 text-[#ff5500]" />
-                    <span className="text-[14px]">Add guests</span>
+                    <span className="text-[13px]">Add guests</span>
                   </button>
                 ) : (
                   <div className="mt-2 flex flex-col gap-1">
@@ -420,14 +420,14 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
                       placeholder="Guest email address"
                       value={formData.guestEmail}
                       onChange={(e) => setFormData({ ...formData, guestEmail: e.target.value })}
-                      className={`w-full rounded-lg px-3.5 py-1.5 text-[12px] transition focus:outline-none ${inputBg}`}
+                      className={`w-full rounded-lg px-3.5 py-1.5 text-[13px] transition focus:outline-none ${inputBg}`}
                     />
                   </div>
                 )}
               </div>
 
               <div>
-                <label className={`mb-1 flex items-center gap-1.5 text-[12px] font-medium ${labelText}`}>
+                <label className={`mb-1 flex items-center gap-1.5 text-[13px] font-medium ${labelText}`}>
                   <Building2 className="h-3.5 w-3.5 text-[#ff5500]" /> Business / Talent Name? *
                 </label>
                 <input
@@ -436,12 +436,12 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
                   placeholder="Enter business or talent name"
                   value={formData.businessName}
                   onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
-                  className={`w-full rounded-lg px-3.5 py-1.5 text-[12px] border border-gray-300 focus:border-[#000] placeholder:text-[14px] transition focus:outline-none ${inputBg}`}
+                  className={`w-full rounded-lg px-3.5 py-1.5 text-[12px] border border-gray-300 focus:border-[#000] placeholder:text-[13px] transition focus:outline-none ${inputBg}`}
                 />
               </div>
 
               <div>
-                <label className={`mb-1 flex items-center gap-1.5 text-[12px] font-medium ${labelText}`}>
+                <label className={`mb-1 flex items-center gap-1.5 text-[13px] font-medium ${labelText}`}>
                   <Globe className="h-3.5 w-3.5 text-[#ff5500]" /> Website URL (If Applicable)
                 </label>
                 <input
@@ -449,12 +449,12 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
                   placeholder="https://yourwebsite.com"
                   value={formData.websiteUrl}
                   onChange={(e) => setFormData({ ...formData, websiteUrl: e.target.value })}
-                  className={`w-full rounded-lg px-3.5 py-1.5 text-[12px] border border-gray-300 focus:border-[#000] placeholder:text-[14px] transition focus:outline-none ${inputBg}`}
+                  className={`w-full rounded-lg px-3.5 py-1.5 text-[12px] border border-gray-300 focus:border-[#000] placeholder:text-[13px] transition focus:outline-none ${inputBg}`}
                 />
               </div>
 
               <div className="relative" ref={dropdownRef}>
-                <label className={`mb-1 flex items-center justify-between text-[12px] font-medium ${labelText}`}>
+                <label className={`mb-1 flex items-center justify-between text-[13px] font-medium ${labelText}`}>
                   <span className="flex items-center gap-1.5">
                     <Sparkles className="h-3.5 w-3.5 text-[#ff5500]" /> Services Needed *
                   </span>
@@ -471,7 +471,7 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
                   onClick={() => setIsServicesOpen(!isServicesOpen)}
                   className={`w-full flex items-center justify-between rounded-lg px-3.5 py-2 text-[13px] border transition focus:outline-none cursor-pointer text-left ${inputBg}`}
                 >
-                  <span className="truncate pr-2 text-[13.7px]">
+                  <span className="truncate pr-2 text-[12.85px]">
                     {selectedServices.length === 0
                       ? "Select services..."
                       : selectedServices.join(", ")}
@@ -551,16 +551,16 @@ export function ConsultationFormCore({ theme = "light", className = "" }: Consul
               </div>
 
               <div>
-                <label className={`mb-1 flex items-center gap-1.5 text-[12px] font-medium ${labelText}`}>
-                  <MessageSquare className="h-3.5 w-3.5 text-[#ff5500]" /> What are your current challenges within your business? *
+                <label className={`mb-1 flex items-center gap-1.5 text-[13px] font-medium ${labelText}`}>
+                  <MessageSquare className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#ff5500]" /> What are your current challenges within your business? *
                 </label>
                 <textarea
                   rows={2}
                   required
-                  placeholder="Describe your current business challenges..."
+                  placeholder="Describe your current business challenges faced..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className={`w-full rounded-lg px-3.5 py-1.5 text-[12px] border border-gray-300 focus:border-[#000] placeholder:text-[14px] transition focus:outline-none resize-none ${inputBg}`}
+                  className={`w-full rounded-lg px-3.5 py-1.5 text-[12px] border border-gray-300 focus:border-[#000] placeholder:text-[13px] transition focus:outline-none resize-none ${inputBg}`}
                 />
               </div>
             </div>
