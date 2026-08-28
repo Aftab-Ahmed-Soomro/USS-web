@@ -19,7 +19,10 @@ export async function generateMetadata({
     return {};
   }
 
-  return project.metadata;
+  return {
+    title: project.metadata?.title ?? project.title,
+    description: project.metadata?.description ?? project.description,
+  };
 }
 
 export default async function ProjectPage({
