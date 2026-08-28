@@ -54,7 +54,7 @@ const rightColumnData = [
     description: "A wellness website built to simplify memberships, showcase products and support the brand's growth online",
     image: "/assets/Coshe.jpg.jpeg",
     link: "/projects/coshe-juices",
-    imageClass: "object-[center_36%]"
+    imageClass: "object-[center_100%]"
   },
   {
     id: 6,

@@ -47,7 +47,7 @@ function Hero() {
           </StaggerItem>
           <StaggerItem>
             <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[550px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-black/72 sm:text-[16px] text-center sm:text-start">
-              Reach customers instantly through direct, personalised messaging that drives engagement, enquiries and repeat purchases.
+              Reach customers instantly through direct, personalised messaging that drives engagement, enquiries <span className="whitespace-nowrap sm:whitespace-normal">and repeat purchases.</span>
             </p>
           </StaggerItem>
 

@@ -473,9 +473,7 @@ export const projectDetails: ProjectDetail[] = [
       "Wider Marketing Strategy",
       "Paid Media",
       "Social Media Marketing",
-      "Creative Content",
-      "Email",
-      "Social Content"],
+      "Creative Content"],
     "videoTitle": "Supperclub Golden Partners",
     "videoSubtitle": "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE",
     "videoPreview": {
@@ -567,8 +565,7 @@ export const projectDetails: ProjectDetail[] = [
       "Content Creation",
       "PR Marketing",
       "Marketing Strategy",
-      "Social Media",
-      "Market Entry"],
+      "Social Media"],
     "videoTitle": "Mall of Emirates Launch",
     "videoSubtitle": "See how we brought this campaign to life",
     "videoPreview": {
@@ -656,9 +653,12 @@ export const projectDetails: ProjectDetail[] = [
       }
     ],
     "focusAreas": [
+      "360 Marketing",
+      "Brand Transformation",
+      "Email Marketing",
+      "PR Marketing",
       "Social Media",
-      "Content",
-      "Email"
+      "Content Creation"
     ],
     "videoTitle": "Beach Lounge in Dubai",
     "videoSubtitle": "From Yalseh to Yula",
@@ -1193,7 +1193,7 @@ export const projectDetails: ProjectDetail[] = [
         "text": "Social Media Marketing"
       }
     ],
-    "approach": "We centred the marketing around a simple business problem, every unanswered call can mean a missed opportunity. The website, content and campaigns explained where AI voice agents fit into everyday business operations and how Precision Talks could handle calls around the clock.",
+    "approach": "We centred the marketing around a simple business problem, every unanswered call can mean a missed opportunity. The Website, Content and Campaigns explained where AI voice agents fit into everyday business operations and how Precision Talks could handle calls around the clock.",
     "outcomes": [
       {
         "icon": "megaphone",
@@ -1216,11 +1216,7 @@ export const projectDetails: ProjectDetail[] = [
       "New Market Entry",
       "Website Design & Development",
       "Content Creation",
-      "Paid Media",
-      "Brand",
-      "Website",
-      "Marketing",
-      "Content"],
+      "Paid Media"],
     "videoTitle": "Mall Of Emirates Launch",
     "videoSubtitle": "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     "videoPreview": {
@@ -1484,10 +1480,7 @@ export const projectDetails: ProjectDetail[] = [
       "Website Development",
       "Membership Strategy",
       "Paid Social",
-      "Email Marketing"
-    ,
-      "Website",
-      "Marketing Strategy"],
+      "Email Marketing"],
     "videoTitle": "Mall Of Emirates Launch",
     "videoSubtitle": "SEE HOW WE BROUGHT THIS CAMPAIGN TO LIFE.",
     "videoPreview": {

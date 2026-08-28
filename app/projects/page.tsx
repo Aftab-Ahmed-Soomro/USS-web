@@ -249,7 +249,7 @@ export default function ProjectsPage() {
                 </div>
 
                 <div className="flex flex-col items-start text-left w-full">
-                  <h2 className="text-white text-[18px] min-[375px]:text-[20px] sm:text-[32px] font-normal font-[var(--font-be-vietnam)] leading-[1.1] tracking-[-0.5px] break-words">
+                  <h2 className="text-white text-[16px] min-[375px]:text-[19px] sm:text-[32px] font-normal font-[var(--font-be-vietnam)] leading-[1.1] tracking-[-0.5px] [word-break:keep-all]">
                     {category.name}
                   </h2>
                   <div className="mt-2 sm:mt-4 bg-white/5 border border-white/10 rounded-full px-3 py-1.5 min-[375px]:px-4 min-[375px]:py-2 text-white/70 text-[8px] min-[375px]:text-[10px] font-medium font-[var(--font-inter)] tracking-[-0.2px] hover:bg-white/10 transition-colors cursor-pointer w-fit">

@@ -11,14 +11,15 @@ const imageConfigs = [
     src: "/assets/black-friday/1.jpg",
     position: "10% 0%",
     laptopPosition: "20% 15%",
-    scale: 1.2,
+    mobilePosition: "20% 25%",
+    scale: 1,
     laptopScale: 1.1,
   },
   {
     src: "/assets/black-friday/2.jpg",
     position: "center 0%",
     laptopPosition: "center 5%",
-    mobilePosition: "center",
+    mobilePosition: "center 25%",
     scale: 1.4,
     laptopScale: 1.25,
   },
@@ -26,8 +27,8 @@ const imageConfigs = [
     src: "/assets/black-friday/3.jpg",
     position: "60% 0%",
     laptopPosition: "60% 5%",
-    mobilePosition: "center",
-    scale: 1.35,
+    mobilePosition: "center 30%",
+    scale: 1.3,
     laptopScale: 1.2,
   },
   {
@@ -36,8 +37,8 @@ const imageConfigs = [
     laptopPosition: "50% 70%",
     mobilePosition: "50% 20%",
     scale: 1.35,
-    laptopScale: 2.2,
-    mobileScale: 0.85,
+    laptopScale: 2,
+    mobileScale: 1,
     fit: "contain",
   },
   {
@@ -47,7 +48,7 @@ const imageConfigs = [
     mobilePosition: "50% 40%",
     scale: 1.2,
     laptopScale: 1.0,
-    mobileScale: 0.9,
+    mobileScale: 1,
     fit: "contain",
     laptopFit: "cover",
   },
@@ -88,10 +89,10 @@ export function BlackFridayOpportunity() {
   };
 
   return (
-    <section className="bg-white py-16 sm:py-24 text-black overflow-hidden flex flex-col items-center relative px-6">
+    <section className="bg-white py-16 sm:py-24 text-black overflow-hidden flex flex-col items-center relative w-full">
       {/* Header Section */}
       <FadeUp>
-        <div className="max-w-[1200px] xl:max-w-[1300px]  text-center mx-auto mb-10 sm:mb-16">
+        <div className="max-w-[1200px] xl:max-w-[1300px] text-center mx-auto mb-10 sm:mb-16 px-4 sm:px-6">
           <h2
             className="font-medium lowercase tracking-[-1px] sm:tracking-[-3.2px] text-[#000000] sm:mb-2 font-[var(--font-be-vietnam)] text-[28px] sm:text-[56px] leading-[1.2] sm:leading-[65px]"
           >
@@ -104,7 +105,7 @@ export function BlackFridayOpportunity() {
             </span>
           </h2>
           <p
-            className="mt-4 sm:mt-6 font-normal text-[#1A1A1A] mx-auto max-w-[750px] font-[var(--font-inter)] text-[13px] sm:text-[18px] leading-[1.6] sm:leading-[29.25px] px-6"
+            className="mt-4 sm:mt-6 font-normal text-[#1A1A1A] mx-auto max-w-[750px] font-[var(--font-inter)] text-[13px] sm:text-[18px] leading-[1.6] sm:leading-[29.25px]"
           >
             Black Friday is when audiences are actively searching, comparing and ready to buy. For YouTubers with engaged, loyal communities, it's a key opportunity to turn trusted content into meaningful brand partnerships and revenue.
           </p>
@@ -154,7 +155,7 @@ export function BlackFridayOpportunity() {
             }
           `}</style>
         <div
-          className="w-full flex gap-[2px] sm:gap-4 overflow-hidden relative h-[250px] sm:h-[420px] lg:h-[500px] 2xl:h-[600px] arc-clip-path"
+          className="w-full flex gap-2 sm:gap-4 overflow-hidden relative h-[250px] sm:h-[420px] lg:h-[500px] 2xl:h-[600px] arc-clip-path"
         >
           {imageConfigs.map((config, i) => (
             <div key={i} className="flex-1 relative h-full bg-gray-100 overflow-hidden">
@@ -181,7 +182,7 @@ export function BlackFridayOpportunity() {
       {/* </FadeUp> */}
 
       {/* Features Section */}
-      <div className="relative w-full max-w-[1200px] xl:max-w-[1300px]  mx-auto md:px-4">
+      <div className="relative w-full max-w-[1200px] xl:max-w-[1300px] mx-auto px-4 sm:px-6">
         {/* Mobile Navigation Arrows */}
         <div className="absolute top-1/2 -translate-y-1/2 left-2 z-10 md:hidden">
           <button

@@ -235,14 +235,14 @@ function Hero() {
             <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold lowercase leading-[120%] tracking-[-1px] sm:tracking-[-3px] sm:text-[50px] text-white text-center sm:text-start">
               From strategy to every {' '}
 
-              <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[64px] lowercase font-normal timesFontFamily italic text-white tracking-[-1px] sm:tracking-[-2.8px]">
+              <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[64px] lowercase font-normal timesFontFamily italic text-white tracking-[-1px] sm:tracking-[-2.8px] whitespace-nowrap">
                 brand touchpoint
               </span>
             </h1>
           </StaggerItem>
           <StaggerItem>
-            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[550px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[16px] text-center sm:text-start">
-              A strong brand is more than a logo. We create brand identities, guidelines, business presentations and creative assets that build recognition, consistency and trust across every customer touchpoint.
+            <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[550px] sm:max-w-[600px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[16px] text-center sm:text-start">
+              A strong brand is more than a logo. We create brand identities, guidelines, business presentations and creative assets that build recognition, consistency and trust across <span className="whitespace-nowrap">every customer touchpoint.</span>
             </p>
           </StaggerItem>
           <StaggerItem>
