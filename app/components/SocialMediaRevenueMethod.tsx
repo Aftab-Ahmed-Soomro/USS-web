@@ -37,7 +37,7 @@ export default function SocialMediaRevenueMethod() {
   const isActive = (index: number) => hoveredIndex === index;
 
   return (
-    <div className="w-full bg-black text-white py-[48px] min-[390px]:py-[58px] sm:py-20 min-h-screen flex flex-col justify-center font-sans px-4 min-[375px]:px-5 min-[480px]:px-6 sm:px-6">
+    <div className="w-full bg-black text-white pt-[10px] pb-[10px] sm:py-20 min-h-screen flex flex-col justify-center font-sans px-4 min-[375px]:px-5 min-[480px]:px-6 sm:px-6">
       <Stagger staggerDelay={0.15}>
         {/* Heading — constrained width */}
         <div className="max-w-[1200px] xl:max-w-[1300px]  w-full mx-auto">

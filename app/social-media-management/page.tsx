@@ -185,7 +185,7 @@ function Metrics() {
 
 function SocialServices() {
   return (
-    <section className="bg-[#080808] px-4 min-[375px]:px-5 min-[480px]:px-6 sm:px-6 py-[48px] min-[390px]:py-[58px] sm:py-[70px] text-white lg:py-[100px]">
+    <section className="bg-[#080808] px-4 min-[375px]:px-5 min-[480px]:px-6 sm:px-6 py-[20px] min-[390px]:py-[58px] sm:py-[70px] text-white lg:py-[100px]">
       <Stagger staggerDelay={0.15}>
         <div className="mx-auto max-w-[1200px] xl:max-w-[1300px] ">
           {/* Header */}
@@ -389,7 +389,7 @@ function RelatedProjects() {
 
 function FinalCta() {
   return (
-    <section className="bg-black px-4 min-[375px]:px-5 min-[480px]:px-6 sm:px-6 pt-[60px] min-[390px]:pt-[80px] sm:pt-[100px] text-white pb-[100px] sm:pb-20">
+    <section className="bg-black px-4 min-[375px]:px-5 min-[480px]:px-6 sm:px-6 pt-[60px] min-[390px]:pt-[80px] sm:pt-[100px] text-white pb-[150px] sm:pb-20">
       <Stagger staggerDelay={0.15}>
         <div className="mx-auto max-w-[1200px] xl:max-w-[1300px]  text-center">
           <StaggerItem>
@@ -449,7 +449,13 @@ export default function SocialMediaManagementPage() {
         }
         centerLogo="/assets/organic__icon.webp"
         logoClassName="w-[80px] lg:w-[125px]"
-        subheading="Many brands are active on social media, but without a clear strategy, consistent content and a defined brand identity"
+        subheading={
+          <>
+            Many brands are active on social media, but without a clear strategy, consistent content and a defined{" "}
+            <br className="sm:hidden" />
+            brand identity
+          </>
+        }
         leftTitle="Most Brands"
         rightTitle="The USS Difference"
         leftPoints={[
@@ -501,7 +507,9 @@ export default function SocialMediaManagementPage() {
         <EmailMarketingQuote first={"your social media is your"} second={"digital window"} third={"shop front"} maxWidthClass="max-w-[650px]" />
       </div>
       <OurOrganicSocialMediaApproach />
-      <SocialMediaRevenueMethod />
+      <div className="pt-[10px]">
+        <SocialMediaRevenueMethod />
+      </div>
       <SocialServices />
       <RelatedProjects />
       <Testimonials />

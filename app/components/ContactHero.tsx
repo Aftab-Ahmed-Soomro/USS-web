@@ -30,7 +30,7 @@ export default function ContactHero() {
   ];
 
   return (
-    <section className="relative w-full bg-[#000] overflow-hidden py-8 px-6 sm:py-28">
+    <section className="relative w-full bg-[#000] overflow-hidden pb-10 pt-24 px-6 sm:py-28">
 
       {/* Ambient glow — top centre */}
       <div
@@ -68,7 +68,7 @@ export default function ContactHero() {
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,500px)_minmax(0,640px)] gap-10 lg:items-start lg:justify-between pt-12 sm:pt-20 lg:pt-24">
 
           {/* ── LEFT COLUMN ─────────────────────────────────────────── */}
-          <div className="flex flex-col order-1 lg:order-none">
+          <div className="flex flex-col">
 
             {/* Badge pill — drops down */}
             <motion.div

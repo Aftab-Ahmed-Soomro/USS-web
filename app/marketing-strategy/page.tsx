@@ -96,7 +96,7 @@ function Hero() {
 
 function FinalCta() {
   return (
-    <section className="bg-[#f5f4f1] px-6 py-[88px] text-center text-black sm:px-10 lg:px-[48px]">
+    <section className="bg-[#f5f4f1] px-6 py-[50px] sm:py-[88px] text-center text-black sm:px-10 lg:px-[48px]">
       <Stagger staggerDelay={0.15}>
         <StaggerItem>
           <h2 className="mx-auto max-w-[800px] font-[var(--font-be-vietnam)] text-[32px] sm:text-[48px] font-medium lowercase leading-[1.08] tracking-[-1.44px]">
@@ -110,7 +110,7 @@ function FinalCta() {
         </StaggerItem>
         <StaggerItem>
           <p className="mx-auto mt-[15px] max-w-[800px] font-[var(--font-inter)] text-[13px] sm:text-[18px] text-[#58554F] leading-[1.6] text-[-1.44px]">
-            If your marketing feels disconnected, it’s time for a clearer approach.
+            If your marketing feels disconnected, it’s time for a <span className="whitespace-nowrap sm:whitespace-normal">clearer approach.</span>
           </p>
         </StaggerItem>
         <StaggerItem>

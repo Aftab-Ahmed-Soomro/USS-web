@@ -209,6 +209,12 @@ export default function WeAreGlobal({ images }: WeAreGlobalProps = {}) {
           }
         }
 
+        @media (min-width: 1280px) {
+          .wag-grid {
+            max-width: 1300px;
+          }
+        }
+
         .wag-carousel-track {
           display: flex;
           gap: 0;

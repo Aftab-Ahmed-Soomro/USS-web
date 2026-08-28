@@ -31,7 +31,7 @@ const categories = [
     ]
   },
   {
-    name: "Professional services",
+    name: "Professional Services",
     topTag: "Business Growth",
     bottomTag: "Lead Generation",
     projects: [
@@ -41,7 +41,7 @@ const categories = [
     ]
   },
   {
-    name: "Technology and startups",
+    name: "Technology and Startups",
     topTag: "Market Expansion",
     bottomTag: "Business Growth",
     projects: [
@@ -131,7 +131,7 @@ const labelCardVariants = {
 
 function ProjectsCta() {
   return (
-    <section className="relative z-10 px-4 min-[375px]:px-6 pb-[4px] sm:pb-[80px] -mt-20 sm:mt-0 text-white overflow-hidden">
+    <section className="relative z-10 px-4 min-[375px]:px-6 pb-[4px] sm:pb-[40px] -mt-20 sm:mt-0 text-white overflow-hidden">
       <div className="relative mx-auto max-w-[800px] text-center">
 
         {/* Eyebrow pill — drops down */}

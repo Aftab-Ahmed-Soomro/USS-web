@@ -46,7 +46,7 @@ export default function WeAreUSS() {
                 At USS, we believe great marketing starts with understanding your business. For over 10 years, we've partnered with brands across the US, UAE and UK, creating strategies, campaigns and creatives built around your goals.
               </p>
               <p className="text-[13px] sm:text-[17px] leading-[28px] sm:leading-[32.5px] font-normal tracking-[-0.1px]">
-                No two businesses are the same, neither is our approach.
+                No two businesses are the same, <span className="whitespace-nowrap">neither is our approach.</span>
               </p>
             </div>
           </div>

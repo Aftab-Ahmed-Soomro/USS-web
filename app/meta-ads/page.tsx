@@ -122,7 +122,7 @@ function Hero() {
           </StaggerItem>
           <StaggerItem>
             <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[550px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[16px] text-center sm:text-start">
-              We help businesses reach, engage and convert the right audience through data led paid social campaigns across Meta and LinkedIn.
+              We help businesses reach, engage and convert the right audience through data led paid social campaigns across <span className="whitespace-nowrap sm:whitespace-normal">Meta and LinkedIn.</span>
             </p>
           </StaggerItem>
           <StaggerItem>
@@ -417,7 +417,7 @@ export default function MetaAdsPage() {
           },
         ]}
       />
-      <div className="sm:-mb-0 -mb-10">
+      <div className="">
         <TargetRightPeople />
       </div>
 

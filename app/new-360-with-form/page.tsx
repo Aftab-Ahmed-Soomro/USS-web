@@ -904,7 +904,9 @@ export default function New360WithForm() {
         }
         data={strategyAccordionData}
       />
-      <LevelsOfFunnel />
+      <div className="pb-10 sm:pb-0">
+        <LevelsOfFunnel />
+      </div>
       <StrategyByBusinessGoal />
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -1210,7 +1212,7 @@ export default function New360WithForm() {
         <OurOrganicSocialMediaApproach />
       </div>
       <SocialServices />
-      <div className="-mt-16 sm:-mt-20">
+      <div className="sm:-mt-20">
         <SocialMediaRevenueMethod />
       </div>
       <motion.div
@@ -1267,7 +1269,7 @@ export default function New360WithForm() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-50px" }}
-        className="relative z-10 w-full flex flex-col justify-center items-center pt-12 sm:pt-24 sm:pb-10 bg-black gap-6 sm:gap-8 px-6">
+        className="relative z-10 w-full flex flex-col justify-center items-center pt-16 sm:pt-24 sm:pb-10 bg-black gap-6 sm:gap-8 px-6">
         <h2 id="web-design-development" className="font-[var(--font-be-vietnam)] text-[28px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px] text-center sm:text-start leading-[1]">
           web design{" "}
           <span className="font-[var(--font-cormorant)] text-[37px] sm:text-[72px] font-normal text-[#ff5500] italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">
@@ -1283,7 +1285,7 @@ export default function New360WithForm() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-50px" }}
-        className="relative z-10 w-full flex flex-col justify-center items-center bg-black gap-6 sm:gap-8 -mt-10">
+        className="relative z-10 w-full flex flex-col justify-center items-center bg-black gap-6 sm:gap-8">
         <a
           href="#services-grid"
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'creative' }))}
@@ -1298,7 +1300,7 @@ export default function New360WithForm() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-50px" }}
-        className="relative z-10 w-full flex flex-col justify-center items-center pt-16 sm:pt-24 bg-black gap-6 sm:gap-8">
+        className="relative z-10 w-full flex flex-col justify-center items-center pt-14 sm:pt-24 bg-black gap-6 sm:gap-8">
         <h2 id="branding-graphics" className="font-[var(--font-be-vietnam)] text-[32px] sm:text-[58px] font-medium text-white lowercase tracking-[-1px] sm:tracking-[-2px]">
           branding &{" "}
           <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[72px] font-normal italic timesFontFamily tracking-[-1px] sm:tracking-[-2.8px]">

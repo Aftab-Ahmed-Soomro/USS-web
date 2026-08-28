@@ -351,7 +351,12 @@ const MarketingStrategy = () => {
               fails
             </h2>
           }
-          subheading="Most brands don't have a design problem, they have a consistency and identity problem."
+          subheading={
+            <>
+              Most brands don&apos;t have a design problem, <br />
+              they have a consistency and <span className="whitespace-nowrap">identity problem.</span>
+            </>
+          }
           leftTitle="Most Brands"
           rightTitle="The USS Difference"
           leftPoints={googleAdsBrandPoints}

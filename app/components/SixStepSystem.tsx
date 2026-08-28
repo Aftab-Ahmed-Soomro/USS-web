@@ -194,7 +194,7 @@ export function SixStepSystem({ heading, data = defaultSteps, cardStyle = false 
                   <span
                     className="text-[#FF5500] italic font-normal font-[var(--font-cormorant)] timesFontFamily text-[46px] sm:text-[72px] leading-[1.1] sm:leading-[69.36px] tracking-[-1.5px] sm:tracking-[-2px]"
                   >
-                    Q4 revenue.
+                    Q4 revenue
                   </span>
                 </span>
               </h2>
@@ -323,7 +323,7 @@ export function SixStepSystem({ heading, data = defaultSteps, cardStyle = false 
                 <h3 className="text-white font-semibold text-[22px] sm:text-[24px] leading-[1.3] mb-3">
                   {activeStep?.title}
                 </h3>
-                <p className="font-light text-[#D4D4D4] text-[13px] sm:text-[15px] leading-[1.65] mb-6">
+                <p className="font-light text-[#D4D4D4] text-[13px] sm:text-[18px] leading-[32px] mb-6">
                   {activeStep?.description}
                 </p>
                 {activeStep?.pills && activeStep.pills.length > 0 && (
@@ -352,7 +352,7 @@ export function SixStepSystem({ heading, data = defaultSteps, cardStyle = false 
                           </h4>
                         </div>
                         {detail.desc && (
-                          <p className="font-normal text-[#A0A0A0] text-[13px] leading-[1.5] mt-1.5 pl-4">
+                          <p className="font-normal text-[#A0A0A0] text-[18px] leading-[32px] mt-1.5 pl-4">
                             {detail.desc}
                           </p>
                         )}
@@ -370,25 +370,25 @@ export function SixStepSystem({ heading, data = defaultSteps, cardStyle = false 
                     {activeStep.pills.map((pill, idx) => (
                       <span
                         key={idx}
-                        className="bg-white text-black font-medium rounded-full px-3 py-1 sm:px-4 text-[11px] leading-[16.5px]"
+                        className="bg-white text-black font-medium rounded-full px-3 py-2 sm:px-4 text-[14px] leading-[16.5px]"
                       >
                         {pill}
                       </span>
                     ))}
                   </div>
                 )}
-                <p className="font-normal text-[#EAEAEA] mb-8 sm:mb-10 max-w-[480px] text-[14px] leading-[22.75px]">
+                <p className="font-normal text-[#EAEAEA] mb-8 sm:mb-10 max-w-[480px] text-[18px] leading-[32px]">
                   {activeStep?.description}
                 </p>
                 {activeStep?.details && activeStep.details.length > 0 && (
                   <div className="flex flex-col">
                     {activeStep.details.map((detail, idx) => (
                       <div key={idx} className="flex flex-col py-3 border-t border-[#333333] last:border-b">
-                        <h4 className={`font-semibold text-white text-[13px] leading-[19.5px] ${detail.desc ? 'mb-1' : ''}`}>
+                        <h4 className={`font-semibold text-white text-[15px] leading-[19.5px] ${detail.desc ? 'mb-1' : ''}`}>
                           {detail.title}
                         </h4>
                         {detail.desc && (
-                          <p className="font-normal text-[#A0A0A0] text-[13px] leading-[18px]">
+                          <p className="font-normal text-[#A0A0A0] text-[18px] leading-[32px]">
                             {detail.desc}
                           </p>
                         )}

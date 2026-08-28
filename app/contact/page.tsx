@@ -6,14 +6,16 @@ import { Header } from "../components/Header";
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-white overflow-hidden">
+    <main className="min-h-screen  overflow-hidden">
       <Header />
 
-      <ContactHero />
+        <ContactHero /> 
 
 
 
-      <WeAreGlobal />
+      <div className="pt-6">
+        <WeAreGlobal />
+      </div>
 
       <div className="bg-[#080808] hidden sm:block">
         <Brands />

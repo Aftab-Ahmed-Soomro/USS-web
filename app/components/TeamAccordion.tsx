@@ -131,11 +131,9 @@ export default function TeamAccordion({ heading, data = defaultTeamData }: TeamA
                           className={`grid transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${isHovered ? 'grid-rows-[1fr] opacity-100 mt-4 lg:mt-6' : 'grid-rows-[0fr] opacity-0 mt-0'}`}
                         >
                           <div className="overflow-hidden">
-                            <div className="max-w-[550px]">
+                            <div className="max-w-[550px] text-[13.5px] sm:text-[17px] leading-[20px] sm:leading-[26px]">
                               <p style={{
                                 fontWeight: 400,
-                                fontSize: 'clamp(13px, 5vw, 18px)',
-                                lineHeight: '26px'
                               }} className=" text-[#a3a3a3] mb-4">
                                 {item.description}
                               </p>

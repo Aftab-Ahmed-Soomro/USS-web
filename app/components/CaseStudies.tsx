@@ -62,7 +62,7 @@ const rightColumnData = [
     category: "Therapy",
     title: "Sadia Psychology",
     description: "A psychologist website designed to build trust, support wellbeing and make accessing therapy feel simple.",
-    image: "/assets/sadia imag.png",
+    image: "/assets/portrait_enhanced.jpg",
     link: "/projects/sadia-psychology",
     imageClass: "object-[58%_13%]"
   }
@@ -205,7 +205,7 @@ export default function CaseStudies({
 
   return (
     <section className="bg-black py-16 lg:py-24 px-6 w-full flex justify-center">
-      <div className="w-full max-w-[1200px] ">
+      <div className="w-full max-w-[1200px] xl:max-w-[1300px]">
 
         {/* Mobile View */}
         <div className="flex flex-col lg:hidden w-full">

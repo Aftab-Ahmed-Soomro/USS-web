@@ -174,7 +174,7 @@ export default function TargetRightPeople({
   const positions = getPositions(displayItems.length);
 
   return (
-    <section className="relative w-full overflow-hidden bg-black py-[20px] sm:pt-20 sm:pb-30 px-6">
+    <section className="relative w-full overflow-hidden bg-black pt-[20px] pb-[45px] sm:pt-20 sm:pb-30 px-6">
       <style>{`
         .no-scrollbar::-webkit-scrollbar {
           display: none;

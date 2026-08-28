@@ -66,7 +66,7 @@ export function Header() {
 
           <div className="flex items-center gap-2 sm:gap-3 md:hidden">
             <Link
-              className="inline-flex h-[46px] sm:h-[38px] px-7 sm:px-5 items-center justify-center rounded-full bg-[#ff6b1f] font-[var(--font-be-vietnam)] text-[12px] sm:text-[12px] tracking-[0.52px] font-bold text-white transition uppercase whitespace-nowrap hover:bg-white hover:text-black"
+              className="inline-flex h-[42px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-6 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
               href="/contact"
             >
               <span className="min-[375px]:hidden">Consultation</span>
@@ -375,7 +375,7 @@ export function Header() {
         {/* Desktop Right Action */}
         <div className="hidden md:flex md:w-auto md:flex-1 md:justify-end">
           <Link
-            className="inline-flex h-[34px] min-[375px]:h-[38px] min-w-[160px] min-[375px]:min-w-[178px] items-center justify-center rounded-full bg-[#ff6b1f] px-5 min-[375px]:px-7 font-[var(--font-be-vietnam)] text-[11px] min-[375px]:text-[12px] sm:text-[13px] tracking-[0.52px] font-bold text-white transition uppercase hover:bg-white hover:text-black"
+            className="inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
             href="/contact"
           >
             Book a Consultation

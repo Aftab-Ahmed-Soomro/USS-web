@@ -37,7 +37,7 @@ const imageConfigs = [
     laptopPosition: "50% 70%",
     mobilePosition: "50% 20%",
     scale: 1.35,
-    laptopScale: 2,
+    laptopScale: 1.8,
     mobileScale: 1,
     fit: "contain",
   },

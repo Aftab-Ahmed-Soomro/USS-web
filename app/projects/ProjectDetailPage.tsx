@@ -117,7 +117,7 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
 
           {/* Right — hero image — slides in from right */}
           <FadeRight delay={0.25}>
-            <div className="relative overflow-hidden w-full h-[300px] min-[375px]:h-[350px] sm:h-[400px] lg:h-[500px] lg:min-h-[400px] lg:min-w-[566px] rounded-[13px] bg-[#8f512f]">
+            <div className="relative overflow-hidden w-full h-[300px] min-[375px]:h-[350px] sm:h-[400px] lg:h-[510px] lg:min-h-[400px] lg:min-w-[566px] rounded-[13px] bg-[#8f512f]">
               <Image
                 src={project.heroImage.src}
                 alt={project.heroImage.alt}

@@ -28,9 +28,9 @@ function FinalCta() {
         </StaggerItem>
         <StaggerItem>
           <h2 className="mt-[24px] sm:mt-8 font-[var(--font-be-vietnam)] text-[32px] font-medium leading-[1.08] tracking-[-1.5px] sm:text-[48px]">
-            turn your website into
+            turn your website into a
             <br />
-            a{" "}
+            {" "}
             <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[64px] leading-[1.1] sm:leading-none font-extralight timesFontFamily italic text-[#ff5500]">
               growth asset
             </span>

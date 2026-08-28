@@ -146,7 +146,7 @@ export function WhyEmailFails({
 }: {
     tagline?: string;
     heading?: React.ReactNode;
-    subheading?: string;
+    subheading?: React.ReactNode;
     leftTitle?: string;
     rightTitle?: string;
     leftPoints?: Point[];

@@ -223,7 +223,7 @@ export const projectDetails: ProjectDetail[] = [
     "slug": "women-who-thrive",
     "productName": "Women Who Thrive",
     "title": "Increasing Memberships for Women Who Thrive",
-    "description": "Women Who Thrive is a Dubai based networking community bringing women together through business, connection and personal growth. We supported the community through Organic Marketing, growing Instagram from 6K to 22K and tripling membership within 15 months, without relying on Paid Advertising.",
+    "description": "Women Who Thrive is a Dubai based networking community bringing women together through business, connection and personal growth. We supported the community through Organic Marketing, growing Instagram from 6K to 22K and tripling membership within 15 months, without relying on\u00a0Paid\u00a0Advertising.",
     "heroImage": {
       "src": "/assets/women/Women.jpg",
       "alt": "Women Who Thrive event portrait with three women",
@@ -399,7 +399,7 @@ export const projectDetails: ProjectDetail[] = [
     "slug": "supperclub",
     "productName": "SupperClub",
     "title": "Scaling SupperClub Membership",
-    "description": "SupperClub is a dining and lifestyle membership offering exclusive benefits across 700+ venues, including leading restaurants and five star hotels. Our 360 marketing includes Meta Ads, Content and Email Marketing, with 40+ automated email flows created to support membership growth and engagement.",
+    "description": "SupperClub is a dining and lifestyle membership offering exclusive benefits across 700+ venues, including leading restaurants and five star hotels. Our 360 marketing includes Meta Ads, Content and Email Marketing, with 40+ automated Email flows created to support membership growth and engagement.",
     "heroImage": {
       "src": "/assets/supperclub/Supperclub.png",
       "alt": "SupperClub poolside dining and cocktail experience",
@@ -538,7 +538,7 @@ export const projectDetails: ProjectDetail[] = [
       },
       {
         "icon": "360",
-        "text": "Market entry strategy"
+        "text": "Market Entry Strategy"
       }
     ],
     "approach": "We took what already worked for Cinnamood and adapted it for Dubai. From the content and messaging to the wider launch activity, everything was planned to connect with the local audience and build awareness around the opening.",
