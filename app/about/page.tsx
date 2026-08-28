@@ -75,7 +75,7 @@ export default function AboutPage() {
                 {/* Bio text — rises up */}
                 <FadeUp delay={0.3}>
                   <p className="text-[13px] sm:text-[17px] leading-[23.8px] font-light text-[#F5F5F5] max-w-full sm:max-w-[350px] text-center sm:text-start">
-                    My name is Emmanuel, Founder & CEO of USS. I've built &  scaled multiple businesses, both my own companies & on behalf of our clients. Having worked with 50+ SME clients across a wide range of industries, I've seen what it takes to grow a business at every stage.
+                    My name is Emmanuel, Founder & CEO of USS. I've built &  scaled multiple businesses, both my own companies & on behalf of our clients. Having worked with 50+ SME clients across a wide range of industries, I've seen what it takes to grow a business <span className="whitespace-nowrap sm:whitespace-normal">at every stage.</span>
                   </p>
                 </FadeUp>
 
