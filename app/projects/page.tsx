@@ -118,11 +118,10 @@ const rowVariants = {
 };
 
 const labelCardVariants = {
-  hidden: { opacity: 0, x: -40, filter: "blur(12px)" },
+  hidden: { opacity: 0, x: -40 },
   visible: {
     opacity: 1,
     x: 0,
-    filter: "blur(0px)",
     transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] },
   },
 };
@@ -264,8 +263,8 @@ export default function ProjectsPage() {
                   {category.projects.map((project, idx) => (
                     <motion.div
                       key={`${category.name}-${idx}`}
-                      initial={{ opacity: 0, y: 50, scale: 0.96, filter: "blur(10px)" }}
-                      whileInView={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
+                      initial={{ opacity: 0, y: 50, scale: 0.96 }}
+                      whileInView={{ opacity: 1, y: 0, scale: 1 }}
                       viewport={{ once: true, amount: 0.1 }}
                       transition={{ duration: 0.6, delay: idx * 0.08, ease: [0.22, 1, 0.36, 1] }}
                       className="snap-start shrink-0"

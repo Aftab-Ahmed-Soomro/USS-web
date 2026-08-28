@@ -144,6 +144,10 @@ export function Brands() {
           width: max-content;
           animation: marquee-right 150s linear infinite;
           will-change: transform;
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
         }
 
         /* ── Logos: same direction, same speed ── */
@@ -151,11 +155,15 @@ export function Brands() {
           width: max-content;
           animation: marquee-right 80s linear infinite;
           will-change: transform;
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
         }
 
         @keyframes marquee-right {
-          0%   { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
+          0%   { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+          100% { -webkit-transform: translate3d(-50%, 0, 0); transform: translate3d(-50%, 0, 0); }
         }
 
         /* Respect reduced-motion preference */

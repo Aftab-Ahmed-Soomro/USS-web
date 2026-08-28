@@ -138,11 +138,17 @@ export function EmailVisuals() {
           width: max-content;
           animation: marquee-visuals 40s linear infinite;
           will-change: transform;
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          -webkit-perspective: 1000px;
+          perspective: 1000px;
         }
 
         @keyframes marquee-visuals {
-          0%   { transform: translateX(0); }
-          100% { transform: translateX(-33.333333%); }
+          0%   { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+          100% { -webkit-transform: translate3d(-33.333333%, 0, 0); transform: translate3d(-33.333333%, 0, 0); }
         }
 
         @media (prefers-reduced-motion: reduce) {

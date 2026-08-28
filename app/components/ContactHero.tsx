@@ -73,8 +73,8 @@ export default function ContactHero() {
             {/* Badge pill — drops down */}
             <motion.div
               className="inline-flex items-center gap-2 self-start rounded-full border border-white/10 bg-white/[0.03] px-5 py-[7px]"
-              initial={{ opacity: 0, y: -18, filter: "blur(6px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              initial={{ opacity: 0, y: -18 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.15, ease }}
             >
               <motion.span
@@ -91,8 +91,8 @@ export default function ContactHero() {
             <motion.h2
               className="mt-6 font-medium text-white leading-[1] whitespace-nowrap text-[36px] min-[375px]:text-[42px] sm:text-[56px] tracking-[-1.5px]"
               style={{ fontFamily: "Poppins, sans-serif" }}
-              initial={{ opacity: 0, x: -50, filter: "blur(12px)" }}
-              animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.75, delay: 0.25, ease }}
             >
               get in{" "}
@@ -110,8 +110,8 @@ export default function ContactHero() {
             {/* Paragraph — fades up */}
             <motion.p
               className="mt-6 max-w-[380px] text-[#9d9d9d] text-[13px] leading-[1.6]"
-              initial={{ opacity: 0, y: 24, filter: "blur(8px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.35, ease }}
             >
               <b>Ready to grow your business with USS? </b> Whether you're starting from scratch or looking to improve your marketing, we're here to help.
@@ -132,8 +132,8 @@ export default function ContactHero() {
                 return (
                   <motion.div
                     key={label}
-                    initial={{ opacity: 0, x: -40, filter: "blur(10px)" }}
-                    animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                    initial={{ opacity: 0, x: -40 }}
+                    animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.65, delay: 0.55 + index * 0.12, ease }}
                   >
                     <Wrapper
@@ -172,8 +172,8 @@ export default function ContactHero() {
           {/* ── RIGHT COLUMN — Form slides in from right ─────────────── */}
           <motion.div
             className="w-full flex justify-center lg:justify-end"
-            initial={{ opacity: 0, x: 60, filter: "blur(16px)" }}
-            animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+            initial={{ opacity: 0, x: 60 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.85, delay: 0.3, ease }}
           >
             <LightConsultationForm className="w-full" />
