@@ -6,37 +6,44 @@ import { motion, useInView, useAnimation, AnimatePresence } from "framer-motion"
 const cards = [
   {
     videos: [
-      "/assets/360_home/GALA BEHIND THE SCENE EDIT.webm", // done
-      "/assets/360_home/Agency 8 Event.webm", // done
-      // "/assets/360_home/USS-x-WWT-Gala.webm"
-      "/assets/360_home/3.webm", // done
-      "/assets/360_home/Interior Design Process for Vision Tower.mp4", // done
+      "https://res.cloudinary.com/wda6rtn3/video/upload/v1787352562/uss-website/360_home/GALA BEHIND THE SCENE EDIT.webm", // done
+      "https://res.cloudinary.com/wda6rtn3/video/upload/v1787352562/uss-website/360_home/Agency 8 Event.webm", // done
+      // "https://res.cloudinary.com/wda6rtn3/video/upload/v1787352562/uss-website/360_home/USS-x-WWT-Gala.webm"
+      "https://res.cloudinary.com/wda6rtn3/video/upload/v1787352562/uss-website/360_home/3.webm", // done
+      "https://res.cloudinary.com/wda6rtn3/video/upload/v1787352562/uss-website/360_home/Interior Design Process for Vision Tower.mp4", // done
     ],
     alt: "LEFT",
   },
   {
     videos: [
-      "/assets/360_home/Hot seat 1 updated w_captions.webm", // done
-      "/assets/360_home/Whats-new.webm", // done
-      "/assets/360_home/Shortened version.mp4", // done
-      "/assets/360_home/USS-narrator-updated.webm", // done
+      "https://res.cloudinary.com/wda6rtn3/video/upload/v1787352562/uss-website/360_home/Hot seat 1 updated w_captions.webm", // done
+      "https://res.cloudinary.com/wda6rtn3/video/upload/v1787352562/uss-website/360_home/Whats-new.webm", // done
+      "https://res.cloudinary.com/wda6rtn3/video/upload/v1787352562/uss-website/360_home/Shortened version.mp4", // done
+      "https://res.cloudinary.com/wda6rtn3/video/upload/v1787352562/uss-website/360_home/USS-narrator-updated.webm", // done
     ],
     alt: "MIDDLE",
   },
   {
     videos: [
-      "/assets/360_home/Cinnamood BTS shoot.webm", // done
-      "/assets/360_home/Idea 8 - BTS v2.webm", // done
-      "/assets/360_home/DIRECTION 3.webm" // done
+      "https://res.cloudinary.com/wda6rtn3/video/upload/v1787352562/uss-website/360_home/Cinnamood BTS shoot.webm", // done
+      "https://res.cloudinary.com/wda6rtn3/video/upload/v1787352562/uss-website/360_home/Idea 8 - BTS v2.webm", // done
+      "https://res.cloudinary.com/wda6rtn3/video/upload/v1787352562/uss-website/360_home/DIRECTION 3.webm" // done
     ],
     alt: "RIGHT",
   }
 ];
 
 const customDurations: Record<string, number> = {
-  "/assets/360_home/Whats-new.webm": 9000,
-  "/assets/360_home/Idea 8 - BTS v2.webm": 12000,
-  "/assets/360_home/DIRECTION 3.webm": 13000,
+  "https://res.cloudinary.com/wda6rtn3/video/upload/v1787352562/uss-website/360_home/Whats-new.webm": 9000,
+  "https://res.cloudinary.com/wda6rtn3/video/upload/v1787352562/uss-website/360_home/Idea 8 - BTS v2.webm": 12000,
+  "https://res.cloudinary.com/wda6rtn3/video/upload/v1787352562/uss-website/360_home/DIRECTION 3.webm": 13000,
+};
+
+const optimizeCloudinaryVideoUrl = (url: string, params = "f_auto,q_auto,w_720,c_limit") => {
+  if (url.includes("/video/upload/") && !url.includes("/video/upload/f_auto")) {
+    return url.replace("/video/upload/", `/video/upload/${params}/`);
+  }
+  return url;
 };
 
 function SequentialVideoPlayer({ videos, isInView }: { videos: string[]; isInView: boolean }) {
@@ -55,13 +62,15 @@ function SequentialVideoPlayer({ videos, isInView }: { videos: string[]; isInVie
     return () => clearTimeout(timer);
   }, [currentIndex, videos, isInView]);
 
+  const activeVideoUrl = optimizeCloudinaryVideoUrl(videos[currentIndex]);
+
   return (
     <div className="relative w-full h-full overflow-hidden bg-[#0d0d0d]">
       {isInView ? (
         <AnimatePresence mode="sync">
           <motion.video
-            key={videos[currentIndex]}
-            src={videos[currentIndex]}
+            key={activeVideoUrl}
+            src={activeVideoUrl}
             autoPlay
             muted
             loop

@@ -4,86 +4,93 @@ import StaggerItem from "./Staggeritem";
 
 const emailVisuals = [
   {
-    src: "/assets/emailGrids/1.png",
+    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/1.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "/assets/emailGrids/2.png",
+    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/2.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "/assets/emailGrids/3.png",
+    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/3.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "/assets/emailGrids/4.png",
+    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/4.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "/assets/emailGrids/5.png",
+    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/5.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "/assets/emailGrids/6.png",
+    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/6.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "/assets/emailGrids/7.png",
+    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/7.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "/assets/emailGrids/8.png",
+    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/8.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "/assets/emailGrids/9.png",
+    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/9.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "/assets/emailGrids/10.png",
+    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/10.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "/assets/emailGrids/11.png",
+    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/11.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "/assets/emailGrids/12.png",
+    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/12.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "/assets/emailGrids/13.png",
+    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/13.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "/assets/emailGrids/14.png",
+    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/14.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "/assets/emailGrids/15.png",
+    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/15.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "/assets/emailGrids/16.png",
+    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/16.png",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
 ];
+
+const optimizeCloudinaryUrl = (url: string, params = "f_auto,q_auto,w_500") => {
+  if (url.includes("/image/upload/") && !url.includes("/image/upload/f_auto")) {
+    return url.replace("/image/upload/", `/image/upload/${params}/`);
+  }
+  return url;
+};
 
 export function EmailVisuals() {
   return (
@@ -114,7 +121,7 @@ export function EmailVisuals() {
                 key={index}
               >
                 <Image
-                  src={visual.src}
+                  src={optimizeCloudinaryUrl(visual.src)}
                   alt={visual.alt}
                   fill
                   sizes="(min-width: 1024px) 250px, (min-width: 640px) 210px, 190px"

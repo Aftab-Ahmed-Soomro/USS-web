@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 // All 37 brand card images
 const ALL_BRAND_CARDS = Array.from(
   { length: 41 },
-  (_, i) => ({ image: `/assets/brands/brands/${i + 1}.webp` })
+  (_, i) => ({ image: `https://res.cloudinary.com/wda6rtn3/image/upload/f_auto,q_auto,w_400/v1787353020/uss-website/brands/${i + 1}.webp` })
 );
 
 // Initial set — only 10 cards rendered on first paint to avoid 74 simultaneous image requests
