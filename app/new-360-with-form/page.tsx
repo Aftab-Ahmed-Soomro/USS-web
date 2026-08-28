@@ -1220,7 +1220,7 @@ export default function New360WithForm() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-50px" }}
-        className="relative z-10 w-full flex flex-col justify-center items-center bg-black gap-6 sm:gap-8 -mt-14 sm:-mt-8">
+        className="relative z-10 w-full flex flex-col justify-center items-center bg-black gap-6 sm:gap-8 -mt-4 sm:-mt-8">
         <a
           href="#services-grid"
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'creative' }))}

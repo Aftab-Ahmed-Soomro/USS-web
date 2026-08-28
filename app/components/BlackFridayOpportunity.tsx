@@ -35,10 +35,10 @@ const imageConfigs = [
     src: "/assets/black-friday/4.jpg",
     position: "40% 50%",
     laptopPosition: "50% 70%",
-    mobilePosition: "50% 20%",
+    mobilePosition: "50% 100%",
     scale: 1.35,
     laptopScale: 1.8,
-    mobileScale: 1,
+    mobileScale: 0.95,
     fit: "contain",
   },
   {

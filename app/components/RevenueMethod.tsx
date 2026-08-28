@@ -75,7 +75,7 @@ export function RevenueMethod({ heading = DEFAULT_HEADING, tagline = DEFAULT_TAG
       <Stagger staggerDelay={0.15} className="max-w-[1200px] xl:max-w-[1300px]  w-full">
 
         <StaggerItem>
-          <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-[#ff5500] text-center sm:text-start mb-4">
+          <p className="font-[var(--font-be-vietnam)] text-[13px] font-normal sm:text-[14px] uppercase tracking-[0.5px] text-[#ff5500] text-start sm:text-start mb-4">
             {tagline}
           </p>
         </StaggerItem>
