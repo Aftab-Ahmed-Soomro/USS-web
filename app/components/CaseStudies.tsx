@@ -51,8 +51,8 @@ const rightColumnData = [
     year: "2026",
     category: "Wellness Juices",
     title: "Coshe Juices",
-    description: "qsr and restaurant identity formed with a reservation-and-ordering menu system built for repeat guests.",
-    image: "/assets/Coshe - 1.webp",
+    description: "A wellness website built to simplify memberships, showcase products and support the brand's growth online",
+    image: "/assets/Coshe.jpg.jpeg",
     link: "/projects/coshe-juices",
     imageClass: "object-[center_36%]"
   },
@@ -62,7 +62,7 @@ const rightColumnData = [
     category: "Therapy",
     title: "Sadia Psychology",
     description: "A psychologist website designed to build trust, support wellbeing and make accessing therapy feel simple.",
-    image: "/assets/saadiTown.webp",
+    image: "/assets/sadia imag.png",
     link: "/projects/sadia-psychology",
     imageClass: "object-[58%_13%]"
   }
@@ -205,7 +205,7 @@ export default function CaseStudies({
 
   return (
     <section className="bg-black py-16 lg:py-24 px-6 w-full flex justify-center">
-      <div className="w-full max-w-[1200px] xl:max-w-[1300px] ">
+      <div className="w-full max-w-[1200px] ">
 
         {/* Mobile View */}
         <div className="flex flex-col lg:hidden w-full">

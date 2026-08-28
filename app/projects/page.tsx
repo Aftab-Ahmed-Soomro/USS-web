@@ -16,7 +16,7 @@ const categories = [
     topTag: "Brand Launches",
     bottomTag: "Customer Growth",
     projects: [
-      { title: "CINNAMOOD", description: "Franchise Expanding To Dubai", image: "/assets/projectsPagePics/cinamood.webp", tags: ["UAE Expansion"], href: "/projects/cinamood" },
+      { title: "Cinnamood", description: "Franchise Expanding To Dubai", image: "/assets/projectsPagePics/cinamood.webp", tags: ["UAE Expansion"], href: "/projects/cinamood" },
       { title: "Coshe", description: "Membership Growth Strategy", image: "/assets/projectsPagePics/Coshe.webp", tags: ["Brand Launch"], href: "/projects/coshe-juices" },
       { title: "Oak Restaurant", description: "Creative Content Production", image: "/assets/projectsPagePics/oak.webp", tags: ["Content Creation"], href: "/projects/oak" }
     ]
