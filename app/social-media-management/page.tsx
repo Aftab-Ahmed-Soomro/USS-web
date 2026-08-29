@@ -162,7 +162,7 @@ function Hero() {
           <StaggerItem>
             <div className="flex justify-center sm:justify-start">
               <Link
-                className="mt-[24px] sm:mt-[36px] inline-flex h-[46px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
+                className="mt-[24px] sm:mt-[36px] inline-flex h-[38px] sm:h-[38px] min-w-[178px] items-center justify-center rounded-full bg-[#ff5500] px-7 font-[var(--font-be-vietnam)] text-[12px] sm:text-[13px] tracking-[0.52px] font-bold uppercase text-white transition hover:bg-[#ff6b1f]"
                 href="/contact"
               >
                 Book a Consultation

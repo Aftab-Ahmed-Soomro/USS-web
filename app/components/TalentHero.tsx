@@ -121,7 +121,7 @@ export function TalentHero() {
             <StaggerItem>
               <div className="mt-6 flex items-center justify-center sm:justify-start">
                 <Link
-                  className="inline-flex h-[46px] items-center justify-center rounded-full bg-[#FF5500] px-7 font-[var(--font-be-vietnam)] text-[12px] tracking-[0.6px] font-bold text-white transition-all uppercase hover:bg-[#ff6b1f] active:scale-95"
+                  className="inline-flex h-[38px] items-center justify-center rounded-full bg-[#FF5500] px-7 font-[var(--font-be-vietnam)] text-[12px] tracking-[0.6px] font-bold text-white transition-all uppercase hover:bg-[#ff6b1f] active:scale-95"
                   href="/contact"
                 >
                   Book a Consultation
