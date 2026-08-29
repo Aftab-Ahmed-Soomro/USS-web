@@ -3,7 +3,10 @@
 /**
  * ─── USS Remote Kill Switch Guard ───────────────────────────────────────────
  *
- * Client-side guard that fetches the kill-switch Gist on every page load.
+ * Client-side guard that fetches the kill-switch status via the GitHub API
+ * on every page load. Uses the API (not the raw CDN URL) to avoid GitHub's
+ * aggressive CDN caching which can serve stale content for ~5 minutes.
+ *
  * Compatible with Next.js `output: "export"` (static site).
  *
  * Control Gist:
@@ -19,9 +22,9 @@
 import { useEffect, useState } from "react";
 import { MaintenancePage } from "./MaintenancePage";
 
-// Always-latest URL (no commit hash) so edits to the Gist are instant
-const GIST_RAW_URL =
-  "https://gist.githubusercontent.com/Aftab-Ahmed-Soomro/2a16aa5eb3bc304e5394d005107744de/raw/kill-switch.json";
+// GitHub REST API — always returns fresh data, bypasses CDN cache
+const GIST_API_URL =
+  "https://api.github.com/gists/2a16aa5eb3bc304e5394d005107744de";
 
 type Status = "checking" | "active" | "deactivated";
 
@@ -31,21 +34,27 @@ export function KillSwitchGuard({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     let cancelled = false;
 
-    fetch(`${GIST_RAW_URL}?_=${Date.now()}`, {
+    fetch(GIST_API_URL, {
       cache: "no-store",
+      headers: {
+        // GitHub API v3 recommended header
+        Accept: "application/vnd.github+json",
+      },
     })
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json();
       })
-      .then((data) => {
-        if (!cancelled) {
-          setStatus(data?.status === "deactivated" ? "deactivated" : "active");
-        }
+      .then((gist) => {
+        if (cancelled) return;
+        // API response: gist.files["kill-switch.json"].content is a JSON string
+        const rawContent = gist?.files?.["kill-switch.json"]?.content ?? "{}";
+        const data = JSON.parse(rawContent);
+        setStatus(data?.status === "deactivated" ? "deactivated" : "active");
       })
       .catch((err) => {
         // Gist unreachable → fail-open (site stays live)
-        console.warn("[Kill Switch] Could not reach control Gist. Defaulting to active.", err);
+        console.warn("[Kill Switch] Could not reach GitHub API. Defaulting to active.", err);
         if (!cancelled) setStatus("active");
       });
 
