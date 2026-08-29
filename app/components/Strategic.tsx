@@ -72,7 +72,7 @@ export function Strategic() {
           </FadeUp>
         </div>
 
-        {/* Process steps — staggered sequential reveal instead of 3 identical FadeLefts */}
+        {/* Process steps — staggered sequential reveal */}
         <Stagger
           staggerDelay={0.18}
           className="mt-[60px] sm:mt-[93px] hidden md:grid md:grid-cols-3 md:gap-y-0"
@@ -80,24 +80,25 @@ export function Strategic() {
           {process.map((step, index) => (
             <StaggerItem key={step.number} y={50}>
               <article
-                className={`relative px-2 min-[375px]:px-6 md:px-8 md:min-h-[355px] ${index > 0 ? "md:border-l md:border-black/10 md:pl-12 lg:pl-14" : ""
-                  }`}
+                className={`relative px-4 sm:px-6 lg:px-8 md:min-h-[355px] ${
+                  index > 0 ? "md:border-l md:border-black/10" : ""
+                }`}
               >
-                <div className="flex items-center justify-between gap-6 sm:gap-10">
-                  <span className="font-[var(--font-cormorant)] text-[120px] sm:text-[180px] font-normal leading-[0.72] timesFontFamily tracking-[0%]">
+                <div className="flex items-center justify-between gap-4">
+                  <span className="font-[var(--font-cormorant)] text-[120px] sm:text-[150px] lg:text-[180px] font-normal leading-[0.72] timesFontFamily tracking-[0%] min-w-[120px] sm:min-w-[160px] inline-block">
                     {step.number}
                   </span>
                   {step.icon && (
-                    <span className="grid border mr-0 sm:-mr-2 border-black size-[40px] sm:size-[50px] shrink-0 place-items-center rounded-full text-[22px] font-normal text-[#ff5500] shadow-[0_18px_32px_rgba(0,0,0,0.08)]">
-                      <Image className="size-[24px] sm:size-[30px]" src={step.icon} alt="" width={30} height={30} />
+                    <span className="grid border border-black size-[40px] sm:size-[48px] lg:size-[50px] shrink-0 place-items-center rounded-full text-[#ff5500] shadow-[0_18px_32px_rgba(0,0,0,0.08)]">
+                      <Image className="size-[24px] sm:size-[28px] lg:size-[30px]" src={step.icon} alt="" width={30} height={30} />
                     </span>
                   )}
                 </div>
                 <div className="mt-[30px] sm:mt-[48px] h-px w-9 bg-[#ff5500]" />
-                <h3 className="mt-[20px] sm:mt-[33px] text-[20px] min-[375px]:text-[24px] sm:text-[34.6px] font-bold leading-none tracking-[-0.85px]">
+                <h3 className="mt-[20px] sm:mt-[33px] text-[20px] min-[375px]:text-[24px] sm:text-[30px] lg:text-[34.6px] font-bold leading-none tracking-[-0.85px]">
                   {step.title}
                 </h3>
-                <p className="mt-[16px] sm:mt-[30px] max-w-[400px] text-[13px] sm:text-[17px] font-normal leading-[14px] sm:leading-[26px] text-black/70">
+                <p className="mt-[16px] sm:mt-[30px] max-w-[400px] text-[13px] sm:text-[15px] lg:text-[17px] font-normal leading-[20px] sm:leading-[26px] text-black/70">
                   {step.copy}
                 </p>
               </article>

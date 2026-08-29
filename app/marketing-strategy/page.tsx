@@ -333,7 +333,9 @@ export default function MarketingStrategyPage() {
         }
         data={strategyAccordionData}
       />
-      <LevelsOfFunnel />
+      <div className="pt-10 pb-8 sm:pt-0 sm:pb-0">
+        <LevelsOfFunnel />
+      </div>
       <StrategyByBusinessGoal />
       <div className="-mt-[60px] sm:-mt-0 marketing-six-step-wrapper">
         <style>{`

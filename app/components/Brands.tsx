@@ -5,11 +5,34 @@ import FadeDown from "./FadeDown";
 import FadeUp from "./FadeUp";
 import { useEffect, useState } from "react";
 
-// All 37 brand card images
-const ALL_BRAND_CARDS = Array.from(
-  { length: 43 },
-  (_, i) => ({ image: `https://res.cloudinary.com/wda6rtn3/image/upload/f_auto,q_auto,w_400/v1787353020/uss-website/brands/${i + 1}.webp` })
-);
+const SPECIAL_BRAND_URLS: Record<number, string> = {
+  8: "https://res.cloudinary.com/wda6rtn3/image/upload/f_auto,q_auto,w_400/v1788023197/8.webp",
+  20: "https://res.cloudinary.com/wda6rtn3/image/upload/f_auto,q_auto,w_400/v1788023196/20.webp",
+  26: "https://res.cloudinary.com/wda6rtn3/image/upload/f_auto,q_auto,w_400/v1788023196/26.webp",
+  28: "https://res.cloudinary.com/wda6rtn3/image/upload/f_auto,q_auto,w_400/v1788023196/28.webp",
+  30: "https://res.cloudinary.com/wda6rtn3/image/upload/f_auto,q_auto,w_400/v1788023196/30.webp",
+  33: "https://res.cloudinary.com/wda6rtn3/image/upload/f_auto,q_auto,w_400/v1788023198/33.webp",
+  35: "https://res.cloudinary.com/wda6rtn3/image/upload/f_auto,q_auto,w_400/v1788023198/35.webp",
+  36: "https://res.cloudinary.com/wda6rtn3/image/upload/f_auto,q_auto,w_400/v1788023198/36.webp",
+  42: "https://res.cloudinary.com/wda6rtn3/image/upload/f_auto,q_auto,w_400/v1788023197/42.webp",
+  43: "https://res.cloudinary.com/wda6rtn3/image/upload/f_auto,q_auto,w_400/v1788023197/43.webp",
+};
+
+// Custom card order to spread out cards 42 and 43 towards the back
+const BRAND_CARD_ORDER = [
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+  11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+  21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+  31, 32, 33, 34, 35, 36, 42, 37, 38, 39,
+  40, 41, 43
+];
+
+// All 43 brand card images
+const ALL_BRAND_CARDS = BRAND_CARD_ORDER.map((num) => ({
+  image:
+    SPECIAL_BRAND_URLS[num] ||
+    `https://res.cloudinary.com/wda6rtn3/image/upload/f_auto,q_auto,w_400/v1787353020/uss-website/brands/${num}.webp`,
+}));
 
 // Initial set — only 10 cards rendered on first paint to avoid 74 simultaneous image requests
 const INITIAL_CARDS = ALL_BRAND_CARDS.slice(0, 10);

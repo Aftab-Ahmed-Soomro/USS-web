@@ -52,7 +52,7 @@ const rightColumnData = [
     category: "Wellness Juices",
     title: "Coshe Juices",
     description: "A wellness website built to simplify memberships, showcase products and support the brand's growth online",
-    image: "/assets/Coshe.jpg.jpeg",
+    image: "/assets/Coshe.jpg.webp",
     link: "/projects/coshe-juices",
     imageClass: "object-[center_100%]"
   },

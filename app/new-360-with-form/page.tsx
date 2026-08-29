@@ -1180,7 +1180,7 @@ export default function New360WithForm() {
       </motion.div>
       <WhyWhatsappWorks />
       <WhatsAppChannels />
-      <div className="-mt-15 sm:-mt-30">
+      <div className="-mt-5 sm:-mt-30">
         <ConversationFlow />
       </div>
       <motion.div
@@ -1220,7 +1220,7 @@ export default function New360WithForm() {
         <OurOrganicSocialMediaApproach />
       </div>
       <SocialServices />
-      <div className="sm:-mt-20">
+      <div className="sm:-mt-20 -mt-18">
         <SocialMediaRevenueMethod />
       </div>
       <motion.div

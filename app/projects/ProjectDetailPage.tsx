@@ -63,6 +63,155 @@ function WorkIconView({ type }: { type: WorkIcon }) {
   );
 }
 
+function ProjectOverviewSection({ project }: { project: ProjectDetail }) {
+  return (
+    <section className="bg-black px-4 min-[375px]:px-5 pb-[20px] sm:pb-[43px] pt-[50px] sm:pt-[68px] text-white sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-[1200px] xl:max-w-[1300px] text-center">
+        {/* Heading — drops down */}
+        <FadeDown delay={0.1}>
+          <h2 className="font-[var(--font-be-vietnam)] text-[26px] min-[375px]:text-[30px] font-bold lowercase leading-none tracking-[-1.6px] sm:text-[43px]">
+            project{" "}
+            <span className="font-[var(--font-cormorant)] text-[1.15em] font-extralight italic timesFontFamily tracking-[-0.04em]">
+              overview.
+            </span>
+          </h2>
+        </FadeDown>
+
+        {/* Subtitle — rises up */}
+        <FadeUp delay={0.2}>
+          <p className="mt-[14px] sm:mt-[17px] font-[var(--font-be-vietnam)] text-[11px] min-[375px]:text-[13px] font-light uppercase leading-none tracking-[-0.1px] sm:text-[17px]">
+            {project.overviewSubtitle}
+          </p>
+        </FadeUp>
+
+        {/* Mobile Carousel Loop — presents gallery items in a horizontal marquee row */}
+        <div className="mt-[20px] mb-[20px] w-full overflow-hidden block sm:hidden">
+          <div className="project-overview-track flex items-center gap-x-3 min-[375px]:gap-x-4">
+            {[...project.galleryImages, ...project.galleryImages, ...project.galleryImages, ...project.galleryImages].map((image, idx) => {
+              const isVideo = image.src.toLowerCase().endsWith(".mov") || image.src.toLowerCase().endsWith(".mp4");
+              return (
+                <div
+                  key={`${image.alt}-${idx}`}
+                  className="relative h-[220px] min-[375px]:h-[260px] w-[140px] shrink-0 overflow-hidden rounded-[14px] bg-[#171717]"
+                >
+                  {isVideo ? (
+                    <LazyVideo
+                      src={image.src}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload="none"
+                      className="absolute inset-0 h-full w-full object-cover"
+                      style={{ objectPosition: image.position ?? "center" }}
+                    />
+                  ) : (
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      sizes="230px"
+                      className="object-cover"
+                      style={{ objectPosition: image.position ?? "center" }}
+                    />
+                  )}
+                  {image.overlay ? (
+                    <div className="absolute inset-0 -z-0 bg-[#36023d]/45 mix-blend-multiply" />
+                  ) : null}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Desktop View */}
+        {project.galleryLayout === "centerVideo" ? (
+          <div className="mt-[15px] hidden sm:flex flex-col items-center gap-[12px] sm:gap-[18px] sm:flex-row sm:items-stretch sm:justify-center lg:gap-[24px]">
+            {project.galleryImages.map((image, idx) => {
+              const isCenter = idx === 1;
+              const isVideo = image.src.toLowerCase().endsWith(".mov") || image.src.toLowerCase().endsWith(".mp4");
+
+              return (
+                <FadeUp key={image.alt} delay={0.25 + idx * 0.1}>
+                  <div
+                    className={
+                      isCenter
+                        ? "relative h-[300px] min-[375px]:h-[340px] w-full max-w-[280px] overflow-hidden bg-[#171717] sm:h-[480px] sm:w-[340px] sm:max-w-none"
+                        : "relative h-[260px] min-[375px]:h-[280px] w-full max-w-[240px] overflow-hidden bg-[#171717] sm:h-[360px] sm:w-[280px] lg:h-[480px] lg:w-[330px] sm:max-w-none sm:self-center"
+                    }
+                  >
+                    {isVideo ? (
+                      <LazyVideo
+                        src={image.src}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="none"
+                        className="absolute inset-0 h-full w-full object-cover"
+                        style={{ objectPosition: image.position ?? "center" }}
+                      />
+                    ) : (
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        fill
+                        sizes="(min-width: 1024px) 330px, (min-width: 640px) 45vw, 90vw"
+                        className="object-cover"
+                        style={{ objectPosition: image.position ?? "center" }}
+                      />
+                    )}
+                    {image.overlay ? (
+                      <div className="absolute inset-0 -z-0 bg-[#36023d]/45 mix-blend-multiply" />
+                    ) : null}
+                  </div>
+                </FadeUp>
+              );
+            })}
+          </div>
+        ) : (
+          <div className="mt-[15px] hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-[18px] lg:gap-[20px]">
+            {project.galleryImages.map((image, idx) => (
+              <FadeUp key={image.alt} delay={0.25 + idx * 0.1} className="flex-1">
+                <div className="relative w-full overflow-hidden bg-[#171717] sm:h-[390px] lg:h-[510px]">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    sizes="(min-width: 1024px) 280px, (min-width: 640px) 45vw, 25vw"
+                    className="object-cover"
+                    style={{ objectPosition: image.position ?? "center" }}
+                  />
+                  {image.overlay ? (
+                    <div className="absolute inset-0 -z-0 bg-[#36023d]/45 mix-blend-multiply" />
+                  ) : null}
+                </div>
+              </FadeUp>
+            ))}
+          </div>
+        )}
+
+        <style>{`
+          .project-overview-track {
+            width: max-content;
+            animation: project-overview-marquee 35s linear infinite;
+            will-change: transform;
+          }
+          @keyframes project-overview-marquee {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .project-overview-track {
+              animation: none;
+            }
+          }
+        `}</style>
+      </div>
+    </section>
+  );
+}
+
 export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
   const hasVideo = !!(project.videoSrc || project.videoSrcs);
   const isFlowork = project.slug === "flowork" || project.productName?.toLowerCase() === "flowork";
@@ -179,95 +328,9 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
         </section>
       )}
 
-      {/* ── OVERVIEW / PICTURES SECTION (no-video projects: before main info; with-video: after) ── */}
+      {/* ── OVERVIEW / PICTURES SECTION (no-video projects: before main info) ── */}
       {!hasVideo && !project.hideSocialGridPreview && (
-        <section className="bg-black px-4 min-[375px]:px-5 pb-[40px] pt-[50px] sm:pt-[68px] text-white sm:px-8 sm:pb-[43px] lg:px-12">
-          <div className="mx-auto max-w-[1200px] xl:max-w-[1300px]  text-center">
-            {/* Heading — drops down */}
-            <FadeDown delay={0.1}>
-              <h2 className="font-[var(--font-be-vietnam)] text-[26px] min-[375px]:text-[30px] font-bold lowercase leading-none tracking-[-1.6px] sm:text-[43px]">
-                project{" "}
-                <span className="font-[var(--font-cormorant)] text-[1.15em] font-extralight italic timesFontFamily tracking-[-0.04em]">
-                  overview.
-                </span>
-              </h2>
-            </FadeDown>
-
-            {/* Subtitle — rises up */}
-            <FadeUp delay={0.2}>
-              <p className="mt-[14px] sm:mt-[17px] font-[var(--font-be-vietnam)] text-[11px] min-[375px]:text-[13px] font-light uppercase leading-none tracking-[-0.1px] sm:text-[17px]">
-                {project.overviewSubtitle}
-              </p>
-            </FadeUp>
-
-            {/* Gallery grid — each image staggered up */}
-            {project.galleryLayout === "centerVideo" ? (
-              <div className="mt-[15px] flex flex-col items-center gap-[12px] sm:gap-[18px] sm:flex-row sm:items-stretch sm:justify-center lg:gap-[24px]">
-                {project.galleryImages.map((image, idx) => {
-                  const isCenter = idx === 1;
-                  const isVideo = image.src.toLowerCase().endsWith(".mov") || image.src.toLowerCase().endsWith(".mp4");
-
-                  return (
-                    <FadeUp key={image.alt} delay={0.25 + idx * 0.1}>
-                      <div
-                        className={
-                          isCenter
-                            ? "relative h-[300px] min-[375px]:h-[340px] w-full max-w-[280px] overflow-hidden bg-[#171717] sm:h-[480px] sm:w-[340px] sm:max-w-none"
-                            : "relative h-[260px] min-[375px]:h-[280px] w-full max-w-[240px] overflow-hidden bg-[#171717] sm:h-[360px] sm:w-[280px] lg:h-[480px] lg:w-[330px] sm:max-w-none sm:self-center"
-                        }
-                      >
-                        {isVideo ? (
-                          <LazyVideo
-                            src={image.src}
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                            preload="none"
-                            className="absolute inset-0 h-full w-full object-cover"
-                            style={{ objectPosition: image.position ?? "center" }}
-                          />
-                        ) : (
-                          <Image
-                            src={image.src}
-                            alt={image.alt}
-                            fill
-                            sizes="(min-width: 1024px) 330px, (min-width: 640px) 45vw, 90vw"
-                            className="object-cover"
-                            style={{ objectPosition: image.position ?? "center" }}
-                          />
-                        )}
-                        {image.overlay ? (
-                          <div className="absolute inset-0 -z-0 bg-[#36023d]/45 mix-blend-multiply" />
-                        ) : null}
-                      </div>
-                    </FadeUp>
-                  );
-                })}
-              </div>
-            ) : (
-              <div className="mt-[15px] grid gap-[12px] min-[375px]:gap-[18px] sm:grid-cols-2 lg:grid-cols-4 lg:gap-[20px]">
-                {project.galleryImages.map((image, idx) => (
-                  <FadeUp key={image.alt} delay={0.25 + idx * 0.1}>
-                    <div className="relative h-[260px] min-[375px]:h-[310px] overflow-hidden bg-[#171717] sm:h-[390px] lg:h-[510px]">
-                      <Image
-                        src={image.src}
-                        alt={image.alt}
-                        fill
-                        sizes="(min-width: 1024px) 280px, (min-width: 640px) 45vw, 90vw"
-                        className="object-cover"
-                        style={{ objectPosition: image.position ?? "center" }}
-                      />
-                      {image.overlay ? (
-                        <div className="absolute inset-0 -z-0 bg-[#36023d]/45 mix-blend-multiply" />
-                      ) : null}
-                    </div>
-                  </FadeUp>
-                ))}
-              </div>
-            )}
-          </div>
-        </section>
+        <ProjectOverviewSection project={project} />
       )}
 
       {/* ── GOAL / WORK / OUTCOME SECTION ── */}
@@ -389,88 +452,7 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
 
       {/* ── OVERVIEW / PICTURES SECTION (with-video projects only — appears after main info) ── */}
       {hasVideo && !project.hideSocialGridPreview && (
-        <section className="bg-black px-5 pb-[4px] pt-[68px] text-white sm:px-8 sm:pb-[43px] lg:px-12">
-          <div className="mx-auto max-w-[1200px] xl:max-w-[1300px]  text-center">
-            {/* Heading — drops down */}
-            <FadeDown delay={0.1}>
-              <h2 className="font-[var(--font-be-vietnam)] text-[30px] font-bold lowercase leading-none tracking-[-1.6px] sm:text-[43px]">
-                project{" "}
-                <span className="font-[var(--font-cormorant)] text-[1.15em] font-extralight italic timesFontFamily tracking-[-0.04em]">
-                  overview.
-                </span>
-              </h2>
-            </FadeDown>
-
-            {/* Subtitle — rises up */}
-            <FadeUp delay={0.2}>
-              <p className="mt-[17px] font-[var(--font-be-vietnam)] text-[13px] font-light uppercase leading-none tracking-[-0.1px] sm:text-[17px]">
-                {project.overviewSubtitle}
-              </p>
-            </FadeUp>
-
-            {/* Mobile Carousel Loop (like Brands.tsx) — prevents images from being cut off */}
-            <div className="mt-[20px] mb-[20px] w-full overflow-hidden block sm:hidden">
-              <div className="project-overview-track flex items-center gap-x-3 min-[375px]:gap-x-4">
-                {[...project.galleryImages, ...project.galleryImages, ...project.galleryImages, ...project.galleryImages].map((image, idx) => (
-                  <div
-                    key={`${image.alt}-${idx}`}
-                    className="relative h-[220px] min-[375px]:h-[260px] w-[140px] shrink-0 overflow-hidden rounded-[14px] bg-[#171717]"
-                  >
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      fill
-                      sizes="230px"
-                      className="object-cover"
-                      style={{ objectPosition: image.position ?? "center" }}
-                    />
-                    {image.overlay ? (
-                      <div className="absolute inset-0 -z-0 bg-[#36023d]/45 mix-blend-multiply" />
-                    ) : null}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Desktop Grid — unchanged */}
-            <div className="mt-[15px] hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-[18px] lg:gap-[20px]">
-              {project.galleryImages.map((image, idx) => (
-                <FadeUp key={image.alt} delay={0.25 + idx * 0.1} className="flex-1">
-                  <div className="relative w-full overflow-hidden bg-[#171717] sm:h-[390px] lg:h-[510px]">
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      fill
-                      sizes="(min-width: 1024px) 280px, (min-width: 640px) 45vw, 25vw"
-                      className="object-cover"
-                      style={{ objectPosition: image.position ?? "center" }}
-                    />
-                    {image.overlay ? (
-                      <div className="absolute inset-0 -z-0 bg-[#36023d]/45 mix-blend-multiply" />
-                    ) : null}
-                  </div>
-                </FadeUp>
-              ))}
-            </div>
-
-            <style>{`
-              .project-overview-track {
-                width: max-content;
-                animation: project-overview-marquee 35s linear infinite;
-                will-change: transform;
-              }
-              @keyframes project-overview-marquee {
-                0%   { transform: translateX(0); }
-                100% { transform: translateX(-50%); }
-              }
-              @media (prefers-reduced-motion: reduce) {
-                .project-overview-track {
-                  animation: none;
-                }
-              }
-            `}</style>
-          </div>
-        </section>
+        <ProjectOverviewSection project={project} />
       )}
 
       <Footer />

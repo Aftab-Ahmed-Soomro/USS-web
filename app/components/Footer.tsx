@@ -92,13 +92,13 @@ export function Footer({ showGlobal = true }: { showGlobal?: boolean }) {
         )}
 
         {/* Bottom Section */}
-        <div className="flex flex-col lg:flex-row justify-between gap-10 sm:gap-16 lg:gap-24">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-10 sm:gap-12 lg:gap-16 w-full">
 
-          {/* Left Column */}
-          <div className="flex flex-col w-full lg:w-[420px]">
+          {/* Left Column: Brand & Newsletter */}
+          <div className="flex flex-col w-full lg:w-[380px] xl:w-[420px] shrink-0">
             <div className="flex items-center justify-between mb-4 w-full">
               <h2 className="text-white text-[42px] font-bold tracking-wide">USS</h2>
-              <div className="flex mr-0 sm:mr-10 items-center gap-3 text-white">
+              <div className="flex items-center gap-3 text-white">
                 <a href="https://www.linkedin.com/company/united-strategic-solutions" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF5500] transition-colors"><FaLinkedin className="text-3xl" /></a>
                 <a href="https://www.instagram.com/unitedstrategicsolutions/" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF5500] transition-colors"><FaInstagramSquare className="text-3xl" /></a>
               </div>
@@ -132,10 +132,10 @@ export function Footer({ showGlobal = true }: { showGlobal?: boolean }) {
             </form>
           </div>
 
-          {/* Right Columns Container */}
-          <div className="flex flex-col md:flex-row gap-4 sm:gap-16 lg:gap-24 lg:ml-auto pt-4 w-full">
+          {/* Right Columns Container (Quick Links + Services) */}
+          <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-16 lg:gap-20 w-full lg:w-auto flex-1 lg:max-w-[700px] xl:max-w-[750px]">
             {/* Quick Links */}
-            <div className="mr-0 sm:mr-14 border-b border-white/10 sm:border-none pb-4 sm:pb-0">
+            <div className="border-b border-white/10 sm:border-none pb-4 sm:pb-0 shrink-0">
               <button
                 onClick={() => setIsQuickLinksOpen(!isQuickLinksOpen)}
                 className="flex items-center justify-between w-full sm:pointer-events-none outline-none"
@@ -159,7 +159,7 @@ export function Footer({ showGlobal = true }: { showGlobal?: boolean }) {
             </div>
 
             {/* Services */}
-            <div className="border-b border-white/10 sm:border-none pb-4 sm:pb-0">
+            <div className="border-b border-white/10 sm:border-none pb-4 sm:pb-0 shrink-0">
               <button
                 onClick={() => setIsServicesOpen(!isServicesOpen)}
                 className="flex items-center justify-between w-full sm:pointer-events-none outline-none sm:block"
@@ -238,7 +238,7 @@ export function Footer({ showGlobal = true }: { showGlobal?: boolean }) {
                 </div>
 
                 {/* Desktop View: Original clean 2-column layout */}
-                <div className="hidden sm:flex sm:flex-row sm:gap-10">
+                <div className="hidden sm:flex sm:flex-row sm:gap-10 lg:gap-12">
                   <ul className="flex flex-col gap-[14px]">
                     {servicesCol1.map(service => (
                       <li key={service.name}>

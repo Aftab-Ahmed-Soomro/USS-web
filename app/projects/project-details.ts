@@ -1423,12 +1423,12 @@ export const projectDetails: ProjectDetail[] = [
       {
         "src": "/assets/coshe/2.png",
         "alt": "Coshe Juices membership growth campaign",
-        "position": "50% 50%"
+        "position": "50% 38%"
       },
       {
         "src": "/assets/coshe/3.jpg",
         "alt": "Coshe Juices wellness juice cleanse",
-        "position": "50% 50%"
+        "position": "50% 38%"
       },
       {
         "src": "/assets/coshe/4.png",
