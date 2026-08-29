@@ -172,6 +172,14 @@ const defaultSteps: StepData[] = [
   }
 ];
 
+function preventOrphan(text: string): string {
+  if (!text) return text;
+  const trimmed = text.trim();
+  const lastSpaceIndex = trimmed.lastIndexOf(" ");
+  if (lastSpaceIndex === -1) return text;
+  return trimmed.slice(0, lastSpaceIndex) + "\u00A0" + trimmed.slice(lastSpaceIndex + 1);
+}
+
 export function SixStepSystem({ heading, data = defaultSteps, cardStyle = false }: SixStepSystemProps) {
   const [activeStepId, setActiveStepId] = useState<string | null>(null);
 
@@ -245,8 +253,8 @@ export function SixStepSystem({ heading, data = defaultSteps, cardStyle = false 
                             ))}
                           </div>
                         )}
-                        <p className="font-light text-[#EAEAEA] mb-4 sm:text-[13px] leading-[1.6]">
-                          {step.description}
+                        <p className="font-light text-[#EAEAEA] mb-4 sm:text-[13px] leading-[1.6] [text-wrap:pretty]">
+                          {preventOrphan(step.description)}
                         </p>
                         {step.details && step.details.length > 0 && (
                           <div className="flex flex-col gap-2.5">
@@ -254,13 +262,13 @@ export function SixStepSystem({ heading, data = defaultSteps, cardStyle = false 
                               <div key={idx} className="flex flex-col p-3 rounded-lg bg-white/[0.03] border border-white/5">
                                 <div className="flex items-center gap-2">
                                   <span className="w-1.5 h-1.5 rounded-full bg-[#FF5500] shrink-0" />
-                                  <h4 className="font-semibold text-white text-[13px] leading-[1.3]">
-                                    {detail.title}
+                                  <h4 className="font-semibold text-white text-[13px] leading-[1.3] [text-wrap:pretty]">
+                                    {preventOrphan(detail.title)}
                                   </h4>
                                 </div>
                                 {detail.desc && (
-                                  <p className="font-normal text-[#A0A0A0] text-[13px] leading-[1.45] mt-1 pl-3.5">
-                                    {detail.desc}
+                                  <p className="font-normal text-[#A0A0A0] text-[13px] leading-[1.45] mt-1 pl-3.5 [text-wrap:pretty]">
+                                    {preventOrphan(detail.desc)}
                                   </p>
                                 )}
                               </div>
@@ -282,19 +290,19 @@ export function SixStepSystem({ heading, data = defaultSteps, cardStyle = false 
                             ))}
                           </div>
                         )}
-                        <p className="font-normal text-[#EAEAEA] mb-4 sm:mb-10 text-[13px] leading-[19px]">
-                          {step.description}
+                        <p className="font-normal text-[#EAEAEA] mb-4 sm:mb-10 text-[13px] leading-[19px] [text-wrap:pretty]">
+                          {preventOrphan(step.description)}
                         </p>
                         {step.details && step.details.length > 0 && (
                           <div className="flex flex-col">
                             {step.details.map((detail, idx) => (
                               <div key={idx} className="flex flex-col py-2 sm:py-3 border-t border-[#333333] last:border-b">
-                                <h4 className={`font-semibold text-white text-[13px] leading-[19.5px] ${detail.desc ? 'mb-1' : ''}`}>
-                                  {detail.title}
+                                <h4 className={`font-semibold text-white text-[13px] leading-[19.5px] [text-wrap:pretty] ${detail.desc ? 'mb-1' : ''}`}>
+                                  {preventOrphan(detail.title)}
                                 </h4>
                                 {detail.desc && (
-                                  <p className="font-normal text-[#A0A0A0] text-[13px] leading-[18px]">
-                                    {detail.desc}
+                                  <p className="font-normal text-[#A0A0A0] text-[13px] leading-[18px] [text-wrap:pretty]">
+                                    {preventOrphan(detail.desc)}
                                   </p>
                                 )}
                               </div>
@@ -320,11 +328,11 @@ export function SixStepSystem({ heading, data = defaultSteps, cardStyle = false 
                     {activeStep?.category || (parseInt(activeStep?.id || "1", 10) <= 4 ? "Performance Marketing" : "Creative Marketing")}
                   </span>
                 </div>
-                <h3 className="text-white font-semibold text-[22px] sm:text-[24px] leading-[1.3] mb-3">
-                  {activeStep?.title}
+                <h3 className="text-white font-semibold text-[22px] sm:text-[24px] leading-[1.3] mb-3 [text-wrap:pretty]">
+                  {preventOrphan(activeStep?.title || "")}
                 </h3>
-                <p className="font-light text-[#D4D4D4] text-[13px] sm:text-[18px] leading-[32px] mb-6">
-                  {activeStep?.description}
+                <p className="font-light text-[#D4D4D4] text-[13px] sm:text-[18px] leading-[32px] mb-6 [text-wrap:pretty]">
+                  {preventOrphan(activeStep?.description || "")}
                 </p>
                 {activeStep?.pills && activeStep.pills.length > 0 && (
                   <div className="flex flex-wrap gap-2 mb-6">
@@ -347,13 +355,13 @@ export function SixStepSystem({ heading, data = defaultSteps, cardStyle = false 
                       >
                         <div className="flex items-center gap-2.5">
                           <span className="w-1.5 h-1.5 rounded-full bg-[#FF5500] shrink-0" />
-                          <h4 className="font-semibold text-white text-[14px] leading-[1.3]">
-                            {detail.title}
+                          <h4 className="font-semibold text-white text-[14px] leading-[1.3] [text-wrap:pretty]">
+                            {preventOrphan(detail.title)}
                           </h4>
                         </div>
                         {detail.desc && (
-                          <p className="font-normal text-[#A0A0A0] text-[18px] leading-[32px] mt-1.5 pl-4">
-                            {detail.desc}
+                          <p className="font-normal text-[#A0A0A0] text-[18px] leading-[32px] mt-1.5 pl-4 [text-wrap:pretty]">
+                            {preventOrphan(detail.desc)}
                           </p>
                         )}
                       </div>
@@ -377,19 +385,19 @@ export function SixStepSystem({ heading, data = defaultSteps, cardStyle = false 
                     ))}
                   </div>
                 )}
-                <p className="font-normal text-[#EAEAEA] mb-8 sm:mb-10 max-w-[480px] text-[18px] leading-[32px]">
-                  {activeStep?.description}
+                <p className="font-normal text-[#EAEAEA] mb-8 sm:mb-10 max-w-[480px] text-[18px] leading-[32px] [text-wrap:pretty]">
+                  {preventOrphan(activeStep?.description || "")}
                 </p>
                 {activeStep?.details && activeStep.details.length > 0 && (
                   <div className="flex flex-col">
                     {activeStep.details.map((detail, idx) => (
                       <div key={idx} className="flex flex-col py-3 border-t border-[#333333] last:border-b">
-                        <h4 className={`font-semibold text-white text-[15px] leading-[19.5px] ${detail.desc ? 'mb-1' : ''}`}>
-                          {detail.title}
+                        <h4 className={`font-semibold text-white text-[15px] leading-[19.5px] [text-wrap:pretty] ${detail.desc ? 'mb-1' : ''}`}>
+                          {preventOrphan(detail.title)}
                         </h4>
                         {detail.desc && (
-                          <p className="font-normal text-[#A0A0A0] text-[18px] leading-[32px]">
-                            {detail.desc}
+                          <p className="font-normal text-[#A0A0A0] text-[18px] leading-[32px] [text-wrap:pretty]">
+                            {preventOrphan(detail.desc)}
                           </p>
                         )}
                       </div>

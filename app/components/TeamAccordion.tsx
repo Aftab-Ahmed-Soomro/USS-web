@@ -62,6 +62,14 @@ const defaultTeamData: TeamMember[] = [
   }
 ];
 
+function preventOrphan(text: string): string {
+  if (!text) return text;
+  const trimmed = text.trim();
+  const lastSpaceIndex = trimmed.lastIndexOf(" ");
+  if (lastSpaceIndex === -1) return text;
+  return trimmed.slice(0, lastSpaceIndex) + "\u00A0" + trimmed.slice(lastSpaceIndex + 1);
+}
+
 export default function TeamAccordion({ heading, data = defaultTeamData }: TeamAccordionProps) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(0);
 
@@ -134,8 +142,8 @@ export default function TeamAccordion({ heading, data = defaultTeamData }: TeamA
                             <div className="max-w-[550px] text-[13.5px] sm:text-[17px] leading-[20px] sm:leading-[26px]">
                               <p style={{
                                 fontWeight: 400,
-                              }} className=" text-[#a3a3a3] mb-4">
-                                {item.description}
+                              }} className=" text-[#a3a3a3] mb-4 [text-wrap:pretty]">
+                                {preventOrphan(item.description)}
                               </p>
 
                               {item.responsibilities && item.responsibilities.length > 0 && (

@@ -71,7 +71,7 @@ export function WhatWeDoSection() {
                 <p
                   className="font-medium text-white font-[var(--font-inter)] text-[14px] sm:text-[16px] leading-[1.4] sm:leading-[21.12px]"
                 >
-                  Build and strengthen each creator’s personal brand through positioning, content, digital presence and audience growth.
+                  Build and strengthen each creator’s personal brand through positioning, content, digital presence and <span className="whitespace-nowrap sm:whitespace-normal">audience growth.</span>
                 </p>
               </div>
               <div className="absolute bottom-4 right-4">

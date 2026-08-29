@@ -326,7 +326,7 @@ const MarketingStrategy = () => {
         }
         description={
           <p className="font-normal text-[13px] leading-[24px] lg:text-[18px] lg:leading-[28px] text-white/90 max-w-[600px] mt-2">
-            Professionally designed business documents that strengthen your brand, communicate your value and support every client conversation.
+            Professionally designed business documents that strengthen your brand, communicate your value and support every <span className="whitespace-nowrap sm:whitespace-normal">client conversation.</span>
           </p>
         }
         leftData={brandingLeftData}

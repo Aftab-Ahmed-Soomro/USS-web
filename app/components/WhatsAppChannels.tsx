@@ -119,8 +119,8 @@ export default function WhatsAppChannels() {
           </FadeUp>
 
           <FadeUp delay={0.2}>
-            <p className="mt-5 sm:mt-8 text-[#EBEBEB] font-normal text-[13px]  sm:text-[18px] leading-[1.5] sm:leading-[29.25px] max-w-[680px] mx-auto px-2 sm:px-0">
-              Fast, direct communication that helps businesses respond quicker and stay connected with customers.
+            <p className="mt-5 sm:mt-8 text-[#EBEBEB] font-normal text-[13px] sm:text-[18px] leading-[1.5] sm:leading-[29.25px] max-w-[680px] mx-auto px-2 sm:px-0 [text-wrap:pretty]">
+              {preventOrphan("Fast, direct communication that helps businesses respond quicker and stay connected with customers.")}
             </p>
           </FadeUp>
 
@@ -186,6 +186,14 @@ export default function WhatsAppChannels() {
   );
 }
 
+function preventOrphan(text?: React.ReactNode): React.ReactNode {
+  if (typeof text !== "string") return text;
+  const trimmed = text.trim();
+  const lastSpaceIndex = trimmed.lastIndexOf(" ");
+  if (lastSpaceIndex === -1) return text;
+  return trimmed.slice(0, lastSpaceIndex) + "\u00A0" + trimmed.slice(lastSpaceIndex + 1);
+}
+
 // ─── Subcomponents ─────────────────────────────────────────────────────────────
 
 interface CardProps {
@@ -224,11 +232,11 @@ function Card({ icon, subtitle, title, heading, description, align }: CardProps)
           <span className="text-[9px] font-normal leading-[14px] tracking-[1.5px] uppercase text-[#888888]">
             {subtitle}
           </span>
-          <h4 className="mt-1 text-[13px] font-semibold leading-[18px] text-[#EEEEEE]">
-            {heading}
+          <h4 className="mt-1 text-[13px] font-semibold leading-[18px] text-[#EEEEEE] [text-wrap:pretty]">
+            {preventOrphan(heading)}
           </h4>
-          <p className="mt-0.5 text-[11px] font-normal leading-[16px] text-[#888888]">
-            {description}
+          <p className="mt-0.5 text-[11px] font-normal leading-[16px] text-[#888888] [text-wrap:pretty]">
+            {preventOrphan(description)}
           </p>
         </div>
       </div>
@@ -257,12 +265,12 @@ function Card({ icon, subtitle, title, heading, description, align }: CardProps)
           {title}
         </h3>
 
-        <h4 className="mt-2 text-[18px] font-semibold leading-[28px] text-[#EEEEEE]">
-          {heading}
+        <h4 className="mt-2 text-[18px] font-semibold leading-[28px] text-[#EEEEEE] [text-wrap:pretty]">
+          {preventOrphan(heading)}
         </h4>
 
-        <p className="mt-2 text-[12px] font-normal leading-[22.75px] text-[#888888]">
-          {description}
+        <p className="mt-2 text-[12px] font-normal leading-[22.75px] text-[#888888] [text-wrap:pretty]">
+          {preventOrphan(description)}
         </p>
       </div>
     </>

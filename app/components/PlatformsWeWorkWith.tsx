@@ -43,6 +43,14 @@ const defaultPlatforms: Platform[] = [
   },
 ];
 
+function preventOrphan(text: string): string {
+  if (!text) return text;
+  const trimmed = text.trim();
+  const lastSpaceIndex = trimmed.lastIndexOf(" ");
+  if (lastSpaceIndex === -1) return text;
+  return trimmed.slice(0, lastSpaceIndex) + "\u00A0" + trimmed.slice(lastSpaceIndex + 1);
+}
+
 export default function PlatformsWeWorkWith({
   heading,
   platforms = defaultPlatforms,
@@ -100,9 +108,9 @@ export default function PlatformsWeWorkWith({
                       <div className="absolute bottom-0 left-0 right-0 px-[16px] sm:px-5 py-[16px] sm:py-6">
                         <div className="mt-auto flex flex-col justify-end">
                           <h3
-                            className="text-white font-medium text-[16px] sm:text-[22.64px] leading-[1.2] sm:leading-[35px] tracking-normal transition-transform duration-300"
+                            className="text-white font-medium text-[16px] sm:text-[22.64px] leading-[1.2] sm:leading-[35px] tracking-normal transition-transform duration-300 [text-wrap:pretty]"
                           >
-                            {platform.name}
+                            {preventOrphan(platform.name)}
                           </h3>
                           {platform.description && (
                             <div
@@ -111,9 +119,9 @@ export default function PlatformsWeWorkWith({
                             >
                               <div className="overflow-hidden">
                                 <p
-                                  className="text-neutral-300 font-normal text-[11px] sm:text-[15px] leading-[1.4] sm:leading-[24.38px] tracking-normal"
+                                  className="text-neutral-300 font-normal text-[11px] sm:text-[15px] leading-[1.4] sm:leading-[24.38px] tracking-normal [text-wrap:pretty]"
                                 >
-                                  {platform.description}
+                                  {preventOrphan(platform.description)}
                                 </p>
                               </div>
                             </div>

@@ -262,7 +262,7 @@ export function ContentCreationServices() {
 
             <FadeUp delay={0.3}>
               <p className="font-[var(--font-inter)] font-light text-[14px] sm:text-[18px] leading-[1.6] sm:leading-[29.25px] text-white/90 align-middle mb-[24px] sm:mb-[30px] max-w-[400px]">
-                This is where ideas come to life. From directing talent to capturing every shot, we produce high quality content designed for campaigns, social media and brand storytelling.
+                This is where ideas come to life. From directing talent to capturing every shot, we produce high quality content designed for campaigns, social media and <span className="whitespace-nowrap sm:whitespace-normal">brand storytelling.</span>
               </p>
             </FadeUp>
 

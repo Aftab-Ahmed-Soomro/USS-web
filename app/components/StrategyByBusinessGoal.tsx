@@ -56,6 +56,14 @@ const GOALS = [
   }
 ];
 
+function preventOrphan(text?: React.ReactNode): React.ReactNode {
+  if (typeof text !== "string") return text;
+  const trimmed = text.trim();
+  const lastSpaceIndex = trimmed.lastIndexOf(" ");
+  if (lastSpaceIndex === -1) return text;
+  return trimmed.slice(0, lastSpaceIndex) + "\u00A0" + trimmed.slice(lastSpaceIndex + 1);
+}
+
 export function StrategyByBusinessGoal() {
   const [activeId, setActiveId] = useState<number | null>(null);
 
@@ -125,17 +133,17 @@ export function StrategyByBusinessGoal() {
                     <div className="absolute bottom-0 left-0 w-full p-4 sm:p-6 flex flex-col justify-end h-full pointer-events-none">
                       <div className={`mt-auto transform transition-transform duration-300 lg:group-hover:-translate-y-2 ${isActive ? '-translate-y-2' : ''}`}>
                         <h3
-                          className="text-white font-bold text-[15px] sm:text-[21px] leading-[120%] whitespace-nowrap"
+                          className="text-white font-bold text-[15px] sm:text-[21px] leading-[120%] whitespace-nowrap [text-wrap:pretty]"
                         >
-                          {goal.title}
+                          {preventOrphan(goal.title)}
                         </h3>
 
                         <div className={`grid transition-all duration-300 ease-in-out mt-1.5 sm:mt-2 lg:group-hover:grid-rows-[1fr] lg:group-hover:opacity-100 ${isActive ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
                           <div className="overflow-hidden">
                             <p
-                              className="text-[#FFFFFFB3] font-normal text-[12px] sm:text-[14px] leading-[140%] sm:leading-[150%]"
+                              className="text-[#FFFFFFB3] font-normal text-[12px] sm:text-[14px] leading-[140%] sm:leading-[150%] [text-wrap:pretty]"
                             >
-                              {goal.description}
+                              {preventOrphan(goal.description)}
                             </p>
                           </div>
                         </div>

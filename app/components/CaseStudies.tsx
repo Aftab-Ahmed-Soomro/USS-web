@@ -68,6 +68,14 @@ const rightColumnData = [
   }
 ];
 
+function preventOrphan(text?: React.ReactNode): React.ReactNode {
+  if (typeof text !== "string") return text;
+  const trimmed = text.trim();
+  const lastSpaceIndex = trimmed.lastIndexOf(" ");
+  if (lastSpaceIndex === -1) return text;
+  return trimmed.slice(0, lastSpaceIndex) + "\u00A0" + trimmed.slice(lastSpaceIndex + 1);
+}
+
 const Card = ({ year, category, title, description, image, link, imageClass, imageAspectRatio, index = 0 }: any) => (
   <motion.div
     initial={{ opacity: 0, y: 50 }}
@@ -118,13 +126,13 @@ const Card = ({ year, category, title, description, image, link, imageClass, ima
         </div>
 
         {/* Title */}
-        <h3 className="font-medium text-[24px] leading-[30px] tracking-[-1px] lg:text-[32px] lg:leading-[37.14px] lg:tracking-[-1.34px] text-white transition-colors duration-300 group-hover:text-[#ff5500]">
-          {title}
+        <h3 className="font-medium text-[24px] leading-[30px] tracking-[-1px] lg:text-[32px] lg:leading-[37.14px] lg:tracking-[-1.34px] text-white transition-colors duration-300 group-hover:text-[#ff5500] [text-wrap:pretty]">
+          {preventOrphan(title)}
         </h3>
 
         {/* Description */}
-        <p className="font-normal text-[12px] sm:text-[16px] leading-[22px] text-white/80 group-hover:text-white transition-colors duration-300 max-w-[450px]">
-          {description}
+        <p className="font-normal text-[12px] sm:text-[16px] leading-[22px] text-white/80 group-hover:text-white transition-colors duration-300 max-w-[450px] [text-wrap:pretty]">
+          {preventOrphan(description)}
         </p>
       </div>
     </Link>
@@ -196,8 +204,8 @@ export default function CaseStudies({
       {description !== undefined ? (
         description
       ) : (
-        <p className="font-normal text-[13px] leading-[24px] lg:text-[18px] lg:leading-[28px] text-white/90 whitespace-normal lg:whitespace-nowrap max-w-[600px]">
-          Explore how we've helped brands transform their digital presence.
+        <p className="font-normal text-[13px] leading-[24px] lg:text-[18px] lg:leading-[28px] text-white/90 whitespace-normal lg:whitespace-nowrap max-w-[600px] [text-wrap:pretty]">
+          {preventOrphan("Explore how we've helped brands transform their digital presence.")}
         </p>
       )}
     </motion.div>

@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 // All 37 brand card images
 const ALL_BRAND_CARDS = Array.from(
-  { length: 41 },
+  { length: 43 },
   (_, i) => ({ image: `https://res.cloudinary.com/wda6rtn3/image/upload/f_auto,q_auto,w_400/v1787353020/uss-website/brands/${i + 1}.webp` })
 );
 
@@ -142,7 +142,7 @@ export function Brands() {
         /* ── Brand cards: scroll left continuously ── */
         .brand-cards-track {
           width: max-content;
-          animation: marquee-right 150s linear infinite;
+          animation: marquee-right 120s linear infinite;
           will-change: transform;
           -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);

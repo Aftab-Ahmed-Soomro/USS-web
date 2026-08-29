@@ -52,6 +52,14 @@ const ussPoints: Point[] = [
     },
 ];
 
+function preventOrphan(text: string): string {
+    if (!text) return text;
+    const trimmed = text.trim();
+    const lastSpaceIndex = trimmed.lastIndexOf(" ");
+    if (lastSpaceIndex === -1) return text;
+    return trimmed.slice(0, lastSpaceIndex) + "\u00A0" + trimmed.slice(lastSpaceIndex + 1);
+}
+
 // ─── AbsolutePoint (Desktop) ─────────────────────────────────────────────────
 function AbsolutePoint({ side, x, y, point, index }: { side: 'left' | 'right', x: number, y: number, point: Point, index: number }) {
     const isLeft = side === 'left';
@@ -67,12 +75,12 @@ function AbsolutePoint({ side, x, y, point, index }: { side: 'left' | 'right', x
                     className={`absolute top-0 -translate-y-1/2 w-[320px] ${isLeft ? 'right-[34px]' : 'left-[34px]'}`}
                 >
                     <div className="relative">
-                        <h4 className="absolute bottom-[100%] mb-[8px] pl-[2px] w-[300px] text-left font-[var(--font-inter)] text-[14px] font-semibold text-white">
-                            {point.title}
+                        <h4 className="absolute bottom-[100%] mb-[8px] pl-[2px] w-[300px] text-left font-[var(--font-inter)] text-[14px] font-semibold text-white [text-wrap:pretty]">
+                            {preventOrphan(point.title)}
                         </h4>
                         <div className={`flex h-[70px] w-[320px] items-center justify-center rounded-[40px] bg-[#eef0f2] ${isLeft ? 'px-[24px]' : 'px-[18px]'} py-[8px] shadow-lg`}>
-                            <p className="font-[var(--font-inter)] text-[14px] leading-[1.45] text-[#333]">
-                                {point.description}
+                            <p className="font-[var(--font-inter)] text-[14px] leading-[1.45] text-[#333] [text-wrap:pretty]">
+                                {preventOrphan(point.description)}
                             </p>
                         </div>
                     </div>
@@ -294,8 +302,8 @@ export function WhyEmailFails({
                                             {point.number}
                                         </span>
                                         <div>
-                                            <h4 className="font-[var(--font-inter)] text-[13px] font-bold text-[#141414]">{point.title}</h4>
-                                            <p className="mt-[4px] font-[var(--font-inter)] text-[12px] leading-[1.55] text-[#333]">{point.description}</p>
+                                            <h4 className="font-[var(--font-inter)] text-[13px] font-bold text-[#141414] [text-wrap:pretty]">{preventOrphan(point.title)}</h4>
+                                            <p className="mt-[4px] font-[var(--font-inter)] text-[12px] leading-[1.55] text-[#333] [text-wrap:pretty]">{preventOrphan(point.description)}</p>
                                         </div>
                                     </div>
                                 </StaggerItem>
@@ -332,8 +340,8 @@ export function WhyEmailFails({
                                             {point.number}
                                         </span>
                                         <div>
-                                            <h4 className="font-[var(--font-inter)] text-[13px] font-bold text-[#141414]">{point.title}</h4>
-                                            <p className="mt-[4px] font-[var(--font-inter)] text-[12px] leading-[1.55] text-[#333]">{point.description}</p>
+                                            <h4 className="font-[var(--font-inter)] text-[13px] font-bold text-[#141414] [text-wrap:pretty]">{preventOrphan(point.title)}</h4>
+                                            <p className="mt-[4px] font-[var(--font-inter)] text-[12px] leading-[1.55] text-[#333] [text-wrap:pretty]">{preventOrphan(point.description)}</p>
                                         </div>
                                     </div>
                                 </StaggerItem>

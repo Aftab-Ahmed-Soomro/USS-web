@@ -6,7 +6,7 @@ import StaggerItem from "./Staggeritem";
 
 export function BrandIdentity() {
   return (
-    <section className="bg-black py-16 lg:py-24 px-4 min-[375px]:px-6 w-full flex flex-col items-center">
+    <section className="bg-black py-6 lg:py-24 px-4 min-[375px]:px-6 w-full flex flex-col items-center">
       <div className="w-full max-w-[1350px] flex flex-col items-center">
         <Stagger staggerDelay={0.15} className="flex flex-col items-center w-full">
           

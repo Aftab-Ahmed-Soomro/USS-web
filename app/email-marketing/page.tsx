@@ -179,6 +179,14 @@ function Hero() {
 }
 
 
+function preventOrphan(text?: React.ReactNode): React.ReactNode {
+  if (typeof text !== "string") return text;
+  const trimmed = text.trim();
+  const lastSpaceIndex = trimmed.lastIndexOf(" ");
+  if (lastSpaceIndex === -1) return text;
+  return trimmed.slice(0, lastSpaceIndex) + "\u00A0" + trimmed.slice(lastSpaceIndex + 1);
+}
+
 function EmailOverview() {
   return (
     <section className="relative overflow-hidden bg-black">
@@ -229,11 +237,11 @@ function EmailOverview() {
                   <p className="text-[11px] font-normal leading-5 text-white/90 sm:text-[14px]">
                     {item.number}
                   </p>
-                  <h3 className="mt-[10px] sm:mt-[14px] max-w-[350px] text-[18px] font-semibold leading-[1.3] tracking-[-0.6px] sm:text-[24px] sm:leading-8">
-                    {item.title}
+                  <h3 className="mt-[10px] sm:mt-[14px] max-w-[350px] text-[18px] font-semibold leading-[1.3] tracking-[-0.6px] sm:text-[24px] sm:leading-8 [text-wrap:pretty]">
+                    {preventOrphan(item.title)}
                   </h3>
-                  <p className="mt-[8px] sm:mt-[16px] max-w-[95%] sm:max-w-[300px] text-[14px] font-normal leading-[1.6] text-white/90 sm:text-[16px] sm:leading-7">
-                    {item.copy}
+                  <p className="mt-[8px] sm:mt-[16px] max-w-[95%] sm:max-w-[300px] text-[14px] font-normal leading-[1.6] text-white/90 sm:text-[16px] sm:leading-7 [text-wrap:pretty]">
+                    {preventOrphan(item.copy)}
                   </p>
                 </article>
               </StaggerItem>

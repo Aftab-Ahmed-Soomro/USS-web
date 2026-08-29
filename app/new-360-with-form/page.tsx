@@ -270,7 +270,7 @@ function Hero() {
         <Stagger staggerDelay={0.15}>
 
           <StaggerItem>
-            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold leading-[120%] tracking-[-1px] sm:tracking-[-3px] sm:text-[50px] text-white text-center sm:text-start">
+            <h1 className="mt-[24px] max-w-[700px] font-[var(--font-be-vietnam)] text-[32px] font-bold leading-[60%] sm:leading-[100%] tracking-[-1px] sm:tracking-[-3px] sm:text-[50px] text-white text-center sm:text-start">
               we don’t just {" "}
               <span className="font-[var(--font-cormorant)] text-[42px] sm:text-[64px] lowercase font-normal timesFontFamily italic text-white tracking-[-1px] sm:tracking-[-2.8px]">
                 market,
@@ -310,6 +310,14 @@ function Hero() {
       </div>
     </section>
   );
+}
+
+function preventOrphan(text?: React.ReactNode): React.ReactNode {
+  if (typeof text !== "string") return text;
+  const trimmed = text.trim();
+  const lastSpaceIndex = trimmed.lastIndexOf(" ");
+  if (lastSpaceIndex === -1) return text;
+  return trimmed.slice(0, lastSpaceIndex) + "\u00A0" + trimmed.slice(lastSpaceIndex + 1);
 }
 
 function EmailOverview() {
@@ -361,11 +369,11 @@ function EmailOverview() {
                   <p className="text-[11px] font-normal leading-5 text-white/90 sm:text-[14px]">
                     {item.number}
                   </p>
-                  <h3 className="mt-[10px] sm:mt-[14px] max-w-[350px] text-[18px] font-semibold leading-[1.3] tracking-[-0.6px] sm:text-[24px] sm:leading-8">
-                    {item.title}
+                  <h3 className="mt-[10px] sm:mt-[14px] max-w-[350px] text-[18px] font-semibold leading-[1.3] tracking-[-0.6px] sm:text-[24px] sm:leading-8 [text-wrap:pretty]">
+                    {preventOrphan(item.title)}
                   </h3>
-                  <p className="mt-[8px] sm:mt-[16px] max-w-[95%] sm:max-w-[300px] text-[14px] font-normal leading-[1.6] text-white/90 sm:text-[16px] sm:leading-7">
-                    {item.copy}
+                  <p className="mt-[8px] sm:mt-[16px] max-w-[95%] sm:max-w-[300px] text-[14px] font-normal leading-[1.6] text-white/90 sm:text-[16px] sm:leading-7 [text-wrap:pretty]">
+                    {preventOrphan(item.copy)}
                   </p>
                 </article>
               </StaggerItem>
@@ -743,7 +751,7 @@ function ContentCreationServices() {
 
             <FadeUp delay={0.3}>
               <p className="font-[var(--font-inter)] font-light text-[14px] sm:text-[18px] leading-[1.6] sm:leading-[29.25px] text-white/90 align-middle mb-[24px] sm:mb-[30px] max-w-[400px]">
-                This is where ideas come to life. From directing talent to capturing every shot, we produce high quality content designed for campaigns, social media and brand storytelling.
+                This is where ideas come to life. From directing talent to capturing every shot, we produce high quality content designed for campaigns, social media and <span className="whitespace-nowrap sm:whitespace-normal">brand storytelling.</span>
               </p>
             </FadeUp>
 
@@ -1326,7 +1334,7 @@ export default function New360WithForm() {
           }
           description={
             <p className="font-normal text-[13px] leading-[24px] lg:text-[18px] lg:leading-[28px] text-white/90 max-w-[600px] mt-2">
-              Professionally designed business documents that strengthen your brand, communicate your value and support every client conversation.
+              Professionally designed business documents that strengthen your brand, communicate your value and support every <span className="whitespace-nowrap sm:whitespace-normal">client conversation.</span>
             </p>
           }
           leftData={brandingLeftData}

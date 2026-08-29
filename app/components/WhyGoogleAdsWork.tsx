@@ -21,6 +21,14 @@ interface WhyAdsWorkProps {
   logoClassName?: string;
 }
 
+function preventOrphan(text: string): string {
+  if (!text) return text;
+  const trimmed = text.trim();
+  const lastSpaceIndex = trimmed.lastIndexOf(" ");
+  if (lastSpaceIndex === -1) return text;
+  return trimmed.slice(0, lastSpaceIndex) + "\u00A0" + trimmed.slice(lastSpaceIndex + 1);
+}
+
 export function WhyGoogleAdsWork({
   imageSrc,
   imageAlt = "Side image",
@@ -130,14 +138,14 @@ export function WhyGoogleAdsWork({
 
                         <div className="transition-transform duration-500 group-hover:translate-x-1">
                           <h3
-                            className="text-white transition-colors duration-500 group-hover:text-[#ffaa80] font-[var(--font-inter)] font-bold text-[16px] sm:text-[18px] leading-[1.3] sm:leading-[24.75px] mb-[8px]"
+                            className="text-white transition-colors duration-500 group-hover:text-[#ffaa80] font-[var(--font-inter)] font-bold text-[16px] sm:text-[18px] leading-[1.3] sm:leading-[24.75px] mb-[8px] [text-wrap:pretty]"
                           >
-                            {item.title}
+                            {preventOrphan(item.title)}
                           </h3>
                           <p
-                            className="text-white/70 transition-colors duration-500 group-hover:text-white/95 font-[var(--font-inter)] font-normal text-[14px] sm:text-[15px] leading-[20px] sm:leading-[22.75px]"
+                            className="text-white/70 transition-colors duration-500 group-hover:text-white/95 font-[var(--font-inter)] font-normal text-[14px] sm:text-[15px] leading-[20px] sm:leading-[22.75px] [text-wrap:pretty]"
                           >
-                            {item.description}
+                            {preventOrphan(item.description)}
                           </p>
                         </div>
                       </div>

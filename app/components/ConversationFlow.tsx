@@ -49,6 +49,14 @@ const smsSteps = [
   },
 ];
 
+function preventOrphan(text?: React.ReactNode): React.ReactNode {
+  if (typeof text !== "string") return text;
+  const trimmed = text.trim();
+  const lastSpaceIndex = trimmed.lastIndexOf(" ");
+  if (lastSpaceIndex === -1) return text;
+  return trimmed.slice(0, lastSpaceIndex) + "\u00A0" + trimmed.slice(lastSpaceIndex + 1);
+}
+
 export default function ConversationFlow() {
   return (
     <section className="w-full bg-black pt-14 pb-12 sm:py-20 lg:py-32 px-6 overflow-hidden">
@@ -78,8 +86,8 @@ export default function ConversationFlow() {
               </h2>
             </FadeUp>
             <FadeUp delay={0.4}>
-              <p className="mt-2 sm:mt-4 font-normal text-[11px] sm:text-[15px] md:text-[16px] leading-[1.4] sm:leading-[1.5] text-white/60 max-w-[450px]">
-                Follow the customer journey from their first message to a confirmed booking.
+              <p className="mt-2 sm:mt-4 font-normal text-[11px] sm:text-[15px] md:text-[16px] leading-[1.4] sm:leading-[1.5] text-white/60 max-w-[450px] [text-wrap:pretty]">
+                {preventOrphan("Follow the customer journey from their first message to a confirmed booking.")}
               </p>
             </FadeUp>
           </div>
@@ -122,11 +130,11 @@ export default function ConversationFlow() {
                           {waItem.step}
                         </span>
                       </div>
-                      <h3 className="font-bold text-[13px] min-[375px]:text-[15px] sm:text-[22px] md:text-[26px] leading-[1.2] tracking-[-0.3px] sm:tracking-[-0.5px] text-white mb-1 sm:mb-2">
-                        {waItem.title}
+                      <h3 className="font-bold text-[13px] min-[375px]:text-[15px] sm:text-[22px] md:text-[26px] leading-[1.2] tracking-[-0.3px] sm:tracking-[-0.5px] text-white mb-1 sm:mb-2 [text-wrap:pretty]">
+                        {preventOrphan(waItem.title)}
                       </h3>
-                      <p className="font-normal text-[10px] min-[375px]:text-[11px] sm:text-[14px] md:text-[15px] leading-[1.4] sm:leading-[22px] text-white/55 max-w-[400px]">
-                        {waItem.description}
+                      <p className="font-normal text-[10px] min-[375px]:text-[11px] sm:text-[14px] md:text-[15px] leading-[1.4] sm:leading-[22px] text-white/55 max-w-[400px] [text-wrap:pretty]">
+                        {preventOrphan(waItem.description)}
                       </p>
                     </FadeUp>
                   </div>
@@ -146,11 +154,11 @@ export default function ConversationFlow() {
                           {smsItem.step}
                         </span>
                       </div>
-                      <h3 className="font-bold text-[13px] min-[375px]:text-[15px] sm:text-[22px] md:text-[26px] leading-[1.2] tracking-[-0.3px] sm:tracking-[-0.5px] text-white mb-1 sm:mb-2">
-                        {smsItem.title}
+                      <h3 className="font-bold text-[13px] min-[375px]:text-[15px] sm:text-[22px] md:text-[26px] leading-[1.2] tracking-[-0.3px] sm:tracking-[-0.5px] text-white mb-1 sm:mb-2 [text-wrap:pretty]">
+                        {preventOrphan(smsItem.title)}
                       </h3>
-                      <p className="font-normal text-[10px] min-[375px]:text-[11px] sm:text-[14px] md:text-[15px] leading-[1.4] sm:leading-[22px] text-white/55 max-w-[400px]">
-                        {smsItem.description}
+                      <p className="font-normal text-[10px] min-[375px]:text-[11px] sm:text-[14px] md:text-[15px] leading-[1.4] sm:leading-[22px] text-white/55 max-w-[400px] [text-wrap:pretty]">
+                        {preventOrphan(smsItem.description)}
                       </p>
                     </FadeUp>
                   </div>

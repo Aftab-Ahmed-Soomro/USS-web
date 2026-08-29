@@ -161,6 +161,14 @@ function getPositions(count: number) {
   });
 }
 
+function preventOrphan(text?: React.ReactNode): React.ReactNode {
+  if (typeof text !== "string") return text;
+  const trimmed = text.trim();
+  const lastSpaceIndex = trimmed.lastIndexOf(" ");
+  if (lastSpaceIndex === -1) return text;
+  return trimmed.slice(0, lastSpaceIndex) + "\u00A0" + trimmed.slice(lastSpaceIndex + 1);
+}
+
 export default function TargetRightPeople({
   items: customItems,
   title,
@@ -243,21 +251,21 @@ export default function TargetRightPeople({
                 <span className="text-[#ff5500] font-normal text-[10px] leading-[15px] tracking-[2px] mb-1">
                   {item.number}
                 </span>
-                <h3 className="text-white font-semibold text-[16px] leading-[1.2] mb-1.5">
-                  {item.title}
+                <h3 className="text-white font-semibold text-[16px] leading-[1.2] mb-1.5 [text-wrap:pretty]">
+                  {preventOrphan(item.title)}
                 </h3>
                 {item.points && item.points.length > 0 ? (
                   <ul className="space-y-1 flex flex-col items-start w-full mt-1">
                     {item.points.map((point) => (
-                      <li key={point} className="flex gap-2 text-white/70 text-[13px] leading-[1.4] items-start text-left">
+                      <li key={point} className="flex gap-2 text-white/70 text-[13px] leading-[1.4] items-start text-left [text-wrap:pretty]">
                         <span className="text-[#ff5500] shrink-0 mt-[1px]">·</span>
-                        <span>{point}</span>
+                        <span>{preventOrphan(point)}</span>
                       </li>
                     ))}
                   </ul>
                 ) : (
-                  <p className="text-white/70 font-normal text-[14px] leading-[1.4]">
-                    {item.description}
+                  <p className="text-white/70 font-normal text-[14px] leading-[1.4] [text-wrap:pretty]">
+                    {preventOrphan(item.description)}
                   </p>
                 )}
               </div>
@@ -351,23 +359,23 @@ export default function TargetRightPeople({
                     </div>
 
                     {/* title */}
-                    <h3 className="mt-4 text-white font-semibold text-[15px] leading-[19.5px]">
-                      {item.title}
+                    <h3 className="mt-4 text-white font-semibold text-[15px] leading-[19.5px] [text-wrap:pretty]">
+                      {preventOrphan(item.title)}
                     </h3>
 
                     {/* description or points */}
                     {item.points && item.points.length > 0 ? (
                       <ul className="mt-2 space-y-1 flex flex-col items-start text-left w-full">
                         {item.points.map((point) => (
-                          <li key={point} className="flex gap-1.5 text-white/70 whitespace-nowrap text-[12px] leading-[1.4] items-start">
+                          <li key={point} className="flex gap-1.5 text-white/70 whitespace-nowrap text-[12px] leading-[1.4] items-start [text-wrap:pretty]">
                             <span className="text-[#ff5500] shrink-0 mt-[1px]">·</span>
-                            <span>{point}</span>
+                            <span>{preventOrphan(point)}</span>
                           </li>
                         ))}
                       </ul>
                     ) : (
-                      <p className="mt-2 text-white/80 font-normal max-w-[160px] text-[13px] leading-[1.4]">
-                        {item.description}
+                      <p className="mt-2 text-white/80 font-normal max-w-[160px] text-[13px] leading-[1.4] [text-wrap:pretty]">
+                        {preventOrphan(item.description)}
                       </p>
                     )}
                   </FadeUp>
