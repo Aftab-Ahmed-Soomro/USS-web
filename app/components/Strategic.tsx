@@ -43,8 +43,8 @@ export function Strategic() {
   }, [isAutoplay]);
 
   return (
-    <section className="bg-[#F8F8F7] pb-[40px] pt-[40px] sm:pt-[70px] text-black">
-      <div className="mx-auto max-w-[1200px] xl:max-w-[1300px]  px-4 sm:px-6">
+    <section className="bg-[#F8F8F7] pb-[40px] pt-[40px] sm:pt-[70px] text-black px-6">
+      <div className="mx-auto max-w-[1200px] xl:max-w-[1300px] ">
 
         {/* Section label — drops in from above */}
         <div className="text-center">
@@ -80,8 +80,12 @@ export function Strategic() {
           {process.map((step, index) => (
             <StaggerItem key={step.number} y={50}>
               <article
-                className={`relative px-4 sm:px-6 lg:px-8 md:min-h-[355px] ${
-                  index > 0 ? "md:border-l md:border-black/10" : ""
+                className={`relative md:min-h-[355px] ${
+                  index === 0
+                    ? "pr-4 sm:pr-6 lg:pr-8"
+                    : index === process.length - 1
+                    ? "pl-4 sm:pl-6 lg:pl-8 md:border-l md:border-black/10"
+                    : "px-4 sm:px-6 lg:px-8 md:border-l md:border-black/10"
                 }`}
               >
                 <div className="flex items-center justify-between gap-4">

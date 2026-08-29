@@ -91,8 +91,8 @@ export default function MarketingStrategyPage() {
       <Testimonials />
       <Team />
       <GoodCompanyMap />
-      <FinalCta />
-      <div className="mt-[-120px]">
+      {/* <FinalCta /> */}
+      <div className="sm:mt-[-40px]">
 
         <Footer />
       </div>

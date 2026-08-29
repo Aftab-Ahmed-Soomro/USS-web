@@ -912,7 +912,7 @@ export default function New360WithForm() {
         }
         data={strategyAccordionData}
       />
-      <div className="pb-10 sm:pb-0">
+      <div className="pb-10 pt-8 sm:pb-0 sm:pt-0">
         <LevelsOfFunnel />
       </div>
       <StrategyByBusinessGoal />
@@ -1228,7 +1228,7 @@ export default function New360WithForm() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, margin: "-50px" }}
-        className="relative z-10 w-full flex flex-col justify-center items-center bg-black gap-6 sm:gap-8 -mt-4 sm:-mt-8">
+        className="relative z-10 w-full flex flex-col justify-center items-center bg-black gap-6 sm:gap-8  sm:-mt-8 -mt-10">
         <a
           href="#services-grid"
           onClick={() => window.dispatchEvent(new CustomEvent('switchTab', { detail: 'creative' }))}

@@ -673,7 +673,7 @@ export const projectDetails: ProjectDetail[] = [
   {
     "slug": "flowork",
     "productName": "Flowork",
-    "title": "Launching Flowork in Dubai Hills & Business Bay",
+    "title": "Launching Flowork in\u00A0Dubai Hills & Business\u00A0Bay",
     "description": "Flowork is a modern workspace offering private offices, meeting rooms and podcast studios. We supported the launch of its Dubai Hills and Business Bay locations through Google Ads, Content and Organic Social, building awareness and generating demand before opening, with 80% of office space sold ahead of launch.",
     "heroImage": {
       "src": "/assets/projectsPagePics/flowork.webp",
@@ -1678,7 +1678,7 @@ export const projectDetails: ProjectDetail[] = [
   {
     "slug": "residency-advanced",
     "productName": "Residency Advanced",
-    "title": "Scaling Residency Advanced with Google Ads",
+    "title": "Scaling Residency Advanced with Google\u00A0Ads",
     "description": "Residency Advanced helps individuals and families secure second residency and citizenship through investment programmes. We supported the brand with a focused Google Ads strategy, generating 125 qualified leads in one month through targeted search campaigns.",
     "heroImage": {
       "src": "/assets/residency-advanced/Residency.jpg",

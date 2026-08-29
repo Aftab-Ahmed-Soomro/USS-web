@@ -312,7 +312,13 @@ const whatsappSmsTargetItems = [
     number: "01",
     icon: "Users2",
     title: "New Customers",
-    description: "First time enquiries and new customer introductions",
+    description: (
+      <>
+        First time enquiries and <br className="hidden sm:block" />
+        new customer <br className="hidden sm:block" />
+        introductions
+      </>
+    ),
   },
   {
     number: "02",
@@ -336,7 +342,13 @@ const whatsappSmsTargetItems = [
     number: "04",
     icon: "ShoppingBag",
     title: "Abandoned Carts",
-    description: "Recover lost sales with timely reminder messages",
+    description: (
+      <>
+        Recover lost sales with <br className="hidden sm:block" />
+        timely reminder <br className="hidden sm:block" />
+        messages
+      </>
+    ),
   },
   {
     number: "05",

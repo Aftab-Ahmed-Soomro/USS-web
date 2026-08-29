@@ -79,7 +79,7 @@ function Hero() {
           </StaggerItem>
           <StaggerItem>
             <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[550px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[16px] text-center sm:text-start">
-              We design and develop bespoke websites that combine strategy, performance and user experience to turn visitors into customers.
+              We design and develop bespoke websites that combine strategy, performance and user experience to turn visitors <span className="whitespace-nowrap sm:whitespace-normal">into customers.</span>
             </p>
           </StaggerItem>
           <StaggerItem>
