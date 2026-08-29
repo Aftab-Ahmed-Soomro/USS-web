@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Be_Vietnam_Pro, Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
-import { MaintenancePage } from "./components/MaintenancePage";
-import { KILL_SWITCH_ENABLED } from "./kill-switch.config";
+import { KillSwitchGuard } from "./components/KillSwitchGuard";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -60,7 +59,12 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://calendly.com" />
       </head>
       <body className="min-h-full flex flex-col">
-        {KILL_SWITCH_ENABLED ? <MaintenancePage /> : children}
+        {/*
+         * KillSwitchGuard fetches the GitHub Gist on every page load.
+         * Edit the Gist to instantly suspend or restore the site — no redeploy needed.
+         * Gist: https://gist.github.com/Aftab-Ahmed-Soomro/2a16aa5eb3bc304e5394d005107744de
+         */}
+        <KillSwitchGuard>{children}</KillSwitchGuard>
       </body>
     </html>
   );

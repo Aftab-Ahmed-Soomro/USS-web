@@ -1,15 +1,17 @@
 /**
- * ─── USS Kill Switch ───────────────────────────────────────────────────────
+ * ─── DEPRECATED ──────────────────────────────────────────────────────────────
  *
- * Set ENABLED to true  → visitors see the maintenance page
- * Set ENABLED to false → site works normally
+ * This file is no longer used. The kill switch is now controlled remotely
+ * via a GitHub Gist. See: lib/kill-switch.ts
  *
- * How to activate:
- *   1. Change `false` to `true` below
- *   2. Save the file
- *   3. git add . && git commit -m "chore: enable kill switch" && git push
- *      (your hosting auto-rebuilds and deploys — done!)
+ * To activate/deactivate the site, edit the Gist content at:
+ *   https://gist.github.com/Aftab-Ahmed-Soomro/2a16aa5eb3bc304e5394d005107744de
  *
- * ──────────────────────────────────────────────────────────────────────────
+ * Set: {"status": "deactivated"}  → site suspended
+ * Set: {"status": "active"}       → site live
+ *
+ * ─────────────────────────────────────────────────────────────────────────────
  */
+
+// Kept for reference only — not imported anywhere
 export const KILL_SWITCH_ENABLED = false;
