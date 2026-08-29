@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Be_Vietnam_Pro, Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
+import { MaintenancePage } from "./components/MaintenancePage";
+import { KILL_SWITCH_ENABLED } from "./kill-switch.config";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -57,7 +59,9 @@ export default function RootLayout({
         <link rel="preconnect" href="https://assets.calendly.com" />
         <link rel="dns-prefetch" href="https://calendly.com" />
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {KILL_SWITCH_ENABLED ? <MaintenancePage /> : children}
+      </body>
     </html>
   );
 }

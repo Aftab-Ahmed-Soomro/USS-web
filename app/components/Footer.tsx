@@ -133,7 +133,7 @@ export function Footer({ showGlobal = true }: { showGlobal?: boolean }) {
           </div>
 
           {/* Right Columns Container (Quick Links + Services) */}
-          <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-16 lg:gap-20 w-full lg:w-auto flex-1 lg:max-w-[700px] xl:max-w-[750px]">
+          <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-16 lg:gap-20 w-full lg:w-auto flex-1 lg:max-w-[700px] xl:max-w-[680px]">
             {/* Quick Links */}
             <div className="border-b border-white/10 sm:border-none pb-4 sm:pb-0 shrink-0">
               <button

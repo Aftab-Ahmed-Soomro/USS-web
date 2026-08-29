@@ -244,7 +244,7 @@ export function Header() {
                   </div>
                 </div>
 
-                <div className="md:hidden">
+                <div className="md:hidden py-1">
                   <div className="flex w-full items-center justify-between py-1">
                     <Link
                       href={item.href}
@@ -362,7 +362,7 @@ export function Header() {
             ) : (
               <Link
                 key={item.label}
-                className="py-1 text-[14px] tracking-[0.1em] font-bold uppercase text-white transition hover:text-[#ff6b1f] md:py-0 md:text-[13px] block"
+                className={`py-1 text-[14px] tracking-[0.1em] font-bold uppercase text-white transition hover:text-[#ff6b1f] md:py-0 md:text-[13px] block${item.label === "Our Work" ? " mb-2 md:mb-0" : ""}`}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
               >
