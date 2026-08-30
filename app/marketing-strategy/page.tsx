@@ -306,9 +306,9 @@ export default function MarketingStrategyPage() {
       <GrowthRoadmap />
       <TeamAccordion
         heading={
-          <h2 className="text-[32px] sm:text-[36px] md:text-[64px] lg:text-[75px] leading-[1] tracking-[-1px] lg:tracking-[-3px] font-light lowercase" style={{ fontWeight: 300 }}>
+          <h2 className="text-[32px] sm:text-[36px] md:text-[56px] leading-[1] tracking-[-1px] lg:tracking-[-3px] font-light lowercase" style={{ fontWeight: 300 }}>
 
-            from discovery to <span className="relative inline-block z-10 whitespace-nowrap text-[#ff5500] timesFontFamily italic text-[42px] sm:text-[51px] md:text-[79px] lg:text-[90px]">
+            from discovery to <span className="relative inline-block z-10 whitespace-nowrap text-[#ff5500] timesFontFamily italic text-[42px] sm:text-[51px] md:text-[72px]">
               scale.
 
               {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[115%] h-[135%] bg-[#ff5500]/30 blur-[24px] -z-10 rounded-[100%] pointer-events-none"></div>

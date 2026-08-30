@@ -49,8 +49,10 @@ const Page = () => {
       <GoodCompanyMap />
       <UssDifferentSection />
       <Team />
-      <FinalCta />
-      <Footer />
+        <FinalCta />
+      <div className="sm:[&>footer]:!pt-0 sm:[&_.wag-section]:!pt-14">
+        <Footer />
+      </div>
     </div>
   );
 };

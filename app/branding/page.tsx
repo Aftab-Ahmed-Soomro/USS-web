@@ -242,7 +242,7 @@ function Hero() {
           </StaggerItem>
           <StaggerItem>
             <p className="mt-[24px] min-[375px]:mt-[30px] sm:mt-[50px] max-w-[550px] sm:max-w-[600px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[16px] text-center sm:text-start">
-              A strong brand is more than a logo. We create brand identities, guidelines, business presentations and creative assets that build recognition, consistency and trust across <span className="whitespace-nowrap">every customer touchpoint.</span>
+              A strong brand is more than a logo. We create brand identities, guidelines, business presentations and creative assets that build recognition, consistency and trust across every <span className="whitespace-nowrap">customer touchpoint.</span>
             </p>
           </StaggerItem>
           <StaggerItem>
@@ -309,7 +309,9 @@ const MarketingStrategy = () => {
     <main className="min-h-screen bg-black overflow-hidden">
       <Header />
       <Hero />
-      <Numbers stats={emailStats} />
+      <div className="-mb-13 sm:-mb-0">
+        <Numbers stats={emailStats} />
+      </div>
       <CaseStudies
         heading={
           <h2 className="text-white">

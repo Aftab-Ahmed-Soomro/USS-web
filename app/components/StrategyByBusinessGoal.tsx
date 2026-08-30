@@ -39,7 +39,7 @@ const GOALS = [
   {
     id: 6,
     title: 'Revenue Growth',
-    description: 'Increase sales by identifying new opportunities and improving marketing performance',
+    description: 'Increase sales by identifying new opportunities and improving\u00A0marketing performance',
     image: '/assets/businessGoal/6.webp'
   },
   {

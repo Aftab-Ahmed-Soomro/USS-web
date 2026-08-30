@@ -399,7 +399,9 @@ export default function WhatsappAndSmsPage() {
       <WhyWhatsappWorks />
       <WhatsAppChannels />
       <ConversationFlow />
-      <TargetRightPeople items={whatsappSmsTargetItems} />
+      <div className="sm:-my-15">
+        <TargetRightPeople items={whatsappSmsTargetItems} />
+      </div>
       <RevenueMethod
         heading={
           <>

@@ -238,7 +238,8 @@ export default function WebsitePage() {
       <FadeUp delay={0.1}>
         <IndustriesServed />
       </FadeUp>
-      <RevenueMethod
+      <div className="-mt-12 sm:-mt-0">
+        <RevenueMethod
         heading={<>our website development <br className="hidden sm:block" /><span className="italic text-[#ff5500] font-normal text-[40px] sm:text-[72px] leading-[1.1] sm:leading-[0] tracking-[-3%]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>process</span></>}
         cards={[
           { id: '01', title: 'Discovery & Strategy', description: 'Understand your business, audience and objectives while defining the website structure, user journeys and conversion strategy.', bgImage: '/assets/method1.webp' },
@@ -247,6 +248,7 @@ export default function WebsitePage() {
           { id: '04', title: 'Launch & Optimisation', description: 'Launch, test and continuously optimise your website to improve performance, user experience and conversions.', bgImage: '/assets/method4.webp' },
         ]}
       />
+      </div>
       <Testimonials />
       <Team />
       <GoodCompanyMap />

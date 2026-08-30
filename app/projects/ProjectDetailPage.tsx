@@ -258,7 +258,7 @@ export function ProjectDetailPage({ project }: { project: ProjectDetail }) {
 
             {/* Description — rises up */}
             <FadeUp delay={0.4}>
-              <p className="mt-[10px] sm:mt-[15px] max-w-[490px] font-[var(--font-inter)] text-[12px] font-normal leading-[1.6] sm:leading-[1.72] tracking-[-0.18px] text-[#707070] text-center sm:text-start sm:text-[16px]">
+              <p className="mt-[10px] sm:mt-[15px] max-w-[490px] sm:max-w-[510px] font-[var(--font-inter)] text-[12px] font-normal leading-[1.6] sm:leading-[1.72] tracking-[-0.18px] text-[#707070] text-center sm:text-start sm:text-[16px]">
                 {project.description}
               </p>
             </FadeUp>

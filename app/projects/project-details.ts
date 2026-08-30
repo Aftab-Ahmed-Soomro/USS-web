@@ -223,7 +223,7 @@ export const projectDetails: ProjectDetail[] = [
     "slug": "women-who-thrive",
     "productName": "Women Who Thrive",
     "title": "Increasing Memberships for Women Who Thrive",
-    "description": "Women Who Thrive is a Dubai based networking community bringing women together through business, connection and personal growth. We supported the community through Organic Marketing, growing Instagram from 6K to 22K and tripling membership within 15 months, without relying on\u00a0Paid\u00a0Advertising.",
+    "description": "Women Who Thrive is a Dubai based networking community bringing women together through business, connection and personal growth. We supported the community through Organic Marketing, growing Instagram from 6K to 22K and tripling membership within 15 months, without relying on Paid\u00a0Advertising.",
     "heroImage": {
       "src": "/assets/women/Women.jpg",
       "alt": "Women Who Thrive event portrait with three women",
@@ -394,7 +394,9 @@ export const projectDetails: ProjectDetail[] = [
       "position": "50% 44%"
     },
     "videoSrc": "/assets/picksperience/pick-1.mp4",
+    "socialGridImage": "/assets/Picksperience Grid.png"
       },
+    
   {
     "slug": "supperclub",
     "productName": "SupperClub",
@@ -864,7 +866,7 @@ export const projectDetails: ProjectDetail[] = [
     "title": "Launching Reclaim in the US",
     "description": "Reclaim is a US luggage collection service making travel days easier by collecting bags from homes, hotels and Airbnbs and delivering them to the airport. We support Reclaim across its US marketing, using Meta Ads alongside Email, Content and wider campaign activity to build awareness and grow the customer base across key markets.",
     "heroImage": {
-      "src": "/assets/reclaimMainPic.webp",
+      "src": "/assets/reclaimMainPic2.png",
       "alt": "Reclaim van and luggage collection service",
       "position": "50% 50%"
     },

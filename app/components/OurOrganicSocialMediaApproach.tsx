@@ -3,7 +3,7 @@ import Stagger from "./Stagger";
 import StaggerItem from "./Staggeritem";
 
 const socialVisuals = Array.from({ length: 13 }, (_, i) => ({
-  src: `/assets/socialGrids/${i + 1}.png`,
+  src: `https://res.cloudinary.com/wda6rtn3/image/upload/f_auto,q_auto,w_400/v1788079736/${i + 1}.webp`,
   alt: `Organic Social Grid ${i + 1}`,
 }));
 

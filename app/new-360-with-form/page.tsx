@@ -288,7 +288,7 @@ function Hero() {
               Our 360 marketing approach brings strategy, creative and performance together, creating one connected system that works towards the same goal.
             </p>
             <p className="mt-[24px] max-w-[550px] font-[var(--font-inter)] text-[13px] leading-[1.6] sm:leading-[32px] text-white/90 sm:text-[16px] text-center sm:text-start">
-              Trusted by over 100 businesses across the US, UAE & UK
+              Trusted by over 100 businesses across the US, UAE & UK.
             </p>
           </StaggerItem>
           <StaggerItem>
@@ -901,9 +901,9 @@ export default function New360WithForm() {
       </motion.div>
       <TeamAccordion
         heading={
-          <h2 className="text-[32px] sm:text-[60px] leading-[1] tracking-[-1px] lg:tracking-[-3px] font-light lowercase" style={{ fontWeight: 300 }}>
+          <h2 className="text-[32px] sm:text-[56px] leading-[1] tracking-[-1px] lg:tracking-[-3px] font-light lowercase" style={{ fontWeight: 300 }}>
 
-            from discovery to <span className="relative inline-block z-10 whitespace-nowrap text-[#ff5500] timesFontFamily italic text-[42px] sm:text-[74px]">
+            from discovery to <span className="relative inline-block z-10 whitespace-nowrap text-[#ff5500] timesFontFamily italic text-[42px] sm:text-[72px]">
               scale.
 
 
@@ -1220,7 +1220,7 @@ export default function New360WithForm() {
         <OurOrganicSocialMediaApproach />
       </div>
       <SocialServices />
-      <div className="sm:-mt-20 -mt-18">
+      <div className="sm:-mt-20 -mt-12">
         <SocialMediaRevenueMethod />
       </div>
       <motion.div
