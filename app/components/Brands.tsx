@@ -8,7 +8,7 @@ const T = "f_auto,q_auto:good,w_280,c_limit";
 
 // ─── Brand card URLs (custom order) ─────────────────────────────────────────
 const SPECIAL: Record<number, string> = {
-  8:  `https://res.cloudinary.com/wda6rtn3/image/upload/${T}/v1788023197/8.webp`,
+  8:  `https://res.cloudinary.com/wda6rtn3/image/upload/${T}/v1788197283/8.webp`,
   20: `https://res.cloudinary.com/wda6rtn3/image/upload/${T}/v1788023196/20.webp`,
   26: `https://res.cloudinary.com/wda6rtn3/image/upload/${T}/v1788023196/26.webp`,
   28: `https://res.cloudinary.com/wda6rtn3/image/upload/${T}/v1788023196/28.webp`,
@@ -23,7 +23,7 @@ const SPECIAL: Record<number, string> = {
 };
 
 const ORDER = [
-  1,  2,  3,  4,  5,  6,  7,  8,  9, 10,
+  1,  2,  3,  4,  5,  6,  7, 8,  9, 10,
   11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
   21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
   31, 32, 40, 34, 35, 36, 42, 37, 38, 39,
