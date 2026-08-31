@@ -25,7 +25,7 @@ type NumbersProps = {
 // ─── Default data ─────────────────────────────────────────────────────────────
 
 const defaultStats: NumberStat[] = [
-  { value: "$25M", label: "In Client Revenue" },
+  { value: "$25M+", label: "In Client Revenue" },
   { value: "645k+", label: "Leads Generated for Clients" },
   { value: "50+", label: "Start Ups Turned Profitable" },
   { value: "100+", label: "Brands Worldwide" },
