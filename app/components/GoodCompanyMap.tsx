@@ -13,7 +13,7 @@ export function GoodCompanyMap() {
       mobilePos: "top-[68%] left-[78%]",
       mobileSize: "w-[45px]",
       // Desktop settings (screen >= 640px)
-      desktopPos: "sm:top-[66%] sm:left-[80%]",
+      desktopPos: "sm:top-[66%] sm:left-[81%]",
       desktopSize: "sm:w-[120px] md:w-[140px] lg:w-[155px]",
     },
     {
@@ -28,7 +28,7 @@ export function GoodCompanyMap() {
     },
     {
       src: "/assets/mapLogos/3.webp",
-      alt: "Hiba by Amthakara",
+      alt: "Beyond Performance",
       // Mobile settings
       mobilePos: "top-[58%] left-[32%]",
       mobileSize: "w-[40px]",
@@ -38,19 +38,19 @@ export function GoodCompanyMap() {
     },
     {
       src: "/assets/mapLogos/4.webp",
-      alt: "Beyond Performance",
+      alt: "Hiba by Amthakara",
       // Mobile settings
       mobilePos: "top-[25%] left-[58%]",
       mobileSize: "w-[45px]",
       // Desktop settings
-      desktopPos: "sm:top-[25%]] sm:left-[58%]",
+      desktopPos: "sm:top-[25%] sm:left-[60.3%]",
       desktopSize: "sm:w-[120px] md:w-[140px] lg:w-[155px]",
     },
   ];
 
   return (
     <section className="relative z-10 border-t border-t-black w-full bg-white py-[50px] sm:py-16 md:py-24 px-4 min-[375px]:px-6 overflow-hidden">
-      <div className="w-full max-w-[1200px] xl:max-w-[1300px]  mx-auto flex flex-col items-center ">
+      <div className="w-full max-w-[1200px] mx-auto flex flex-col items-center">
 
         {/* Main heading — fades up */}
         <FadeUp delay={0.1}>
@@ -68,7 +68,7 @@ export function GoodCompanyMap() {
           </p>
         </FadeDown>
 
-        <div className="w-full relative max-w-[1200px] xl:max-w-[1300px] mx-auto  px-0 sm:px-2 pr-4 sm:pr-0 scale-[1.18] sm:scale-100 origin-center">
+        <div className="w-full relative max-w-[1200px] mx-auto  px-0 sm:px-2 pr-4 sm:pr-0 scale-[1.18] sm:scale-100 origin-center">
 
           {/* Background map lines — slides in from left */}
           <FadeLeft delay={0.3}>
@@ -87,9 +87,9 @@ export function GoodCompanyMap() {
           <Image
             src="/assets/map.webp"
             alt="Companies we work with"
-            width={1000}
+            width={1070}
             height={500}
-            className="absolute max-w-[1000px] top-0 left-[6%] sm:left-20 w-[90%] sm:w-full h-auto mx-auto object-contain"
+            className="absolute max-w-[1070px] top-0 left-[6%] sm:left-20 w-[90%] sm:w-full h-auto mx-auto object-contain"
             style={{ padding: "inherit" }}
             sizes="(max-width: 640px) 90vw, 1000px"
           />
