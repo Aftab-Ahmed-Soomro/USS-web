@@ -33,3 +33,13 @@
   # 7. Custom 404 Error Page
   ErrorDocument 404 /404.html
 </IfModule>
+
+# MIME types for videos and modern images (critical for iOS Safari)
+<IfModule mod_mime.c>
+  AddType video/webm .webm
+  AddType video/mp4 .mp4
+  AddType video/ogg .ogv
+  AddType video/quicktime .mov
+  AddType image/webp .webp
+  AddType image/avif .avif
+</IfModule>

@@ -28,9 +28,17 @@ export function HomeHero() {
           loop
           muted
           playsInline
+          controls={false}
           className="hidden sm:block w-full h-full object-cover object-center"
           preload="auto"
           poster="/assets/hero-poster.webp"
+          onLoadedMetadata={(e) => {
+            const v = e.currentTarget;
+            v.muted = true;
+            v.defaultMuted = true;
+            const p = v.play();
+            if (p !== undefined) p.catch(() => {});
+          }}
         >
           <source src="/assets/USS Main Website Showreel.webm" type="video/webm" />
         </video>
@@ -41,9 +49,17 @@ export function HomeHero() {
           loop
           muted
           playsInline
+          controls={false}
           className="sm:hidden w-full h-full object-cover object-center"
           preload="auto"
           poster="/assets/hero-poster.webp"
+          onLoadedMetadata={(e) => {
+            const v = e.currentTarget;
+            v.muted = true;
+            v.defaultMuted = true;
+            const p = v.play();
+            if (p !== undefined) p.catch(() => {});
+          }}
         >
           <source src="/assets/Mobile Video.webm" type="video/webm" />
         </video>

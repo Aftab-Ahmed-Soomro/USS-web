@@ -8,10 +8,12 @@ const VIDEO_PARAMS = "f_auto,q_auto,w_720,c_limit";
 const POSTER_PARAMS = "f_auto,q_auto,so_0,w_720,c_limit";
 
 function optimizeVideoUrl(url: string): string {
-  if (url.includes("/video/upload/") && !url.includes("/video/upload/f_auto")) {
-    return url.replace("/video/upload/", `/video/upload/${VIDEO_PARAMS}/`);
+  let u = url;
+  if (u.includes("/video/upload/") && !u.includes("/video/upload/f_auto")) {
+    u = u.replace("/video/upload/", `/video/upload/${VIDEO_PARAMS}/`);
   }
-  return url;
+  // Convert .webm to .mp4 so iOS Safari gets hardware-accelerated H.264 AVC1
+  return u.replace(/\.(webm|mov)$/i, ".mp4");
 }
 
 function optimizePosterUrl(url: string): string {
@@ -146,6 +148,7 @@ const SequentialVideoPlayer = memo(function SequentialVideoPlayer({
             muted
             loop
             playsInline
+            controls={false}
             preload="auto"
             onError={handleError}
             initial={{ opacity: 0 }}
@@ -153,6 +156,16 @@ const SequentialVideoPlayer = memo(function SequentialVideoPlayer({
             exit={{ opacity: 0, position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
             className="relative z-10 w-full h-full object-cover rounded-xl"
+            onLoadedMetadata={(e) => {
+              const video = e.currentTarget;
+              video.muted = true;
+              video.defaultMuted = true;
+              video.playsInline = true;
+              const playPromise = video.play();
+              if (playPromise !== undefined) {
+                playPromise.catch(() => {});
+              }
+            }}
           />
         </AnimatePresence>
       )}
@@ -165,6 +178,7 @@ const SequentialVideoPlayer = memo(function SequentialVideoPlayer({
           preload="auto"
           muted
           playsInline
+          controls={false}
           className="hidden"
           aria-hidden="true"
         />
