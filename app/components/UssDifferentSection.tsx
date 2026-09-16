@@ -103,11 +103,25 @@ const SequentialVideoPlayer = memo(function SequentialVideoPlayer({
   isInView: boolean;
 }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   // Skip to next video on error (e.g. 404, network failure)
   const handleError = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1) % videos.length);
   }, [videos.length]);
+
+  // Force play whenever section comes into view — fixes middle/right freeze
+  useEffect(() => {
+    if (!isInView) return;
+    const video = videoRef.current;
+    if (!video) return;
+    video.muted = true;
+    video.playsInline = true;
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {});
+    }
+  }, [isInView]);
 
   useEffect(() => {
     if (!isInView) return;
@@ -141,6 +155,7 @@ const SequentialVideoPlayer = memo(function SequentialVideoPlayer({
       {isInView && (
         <AnimatePresence mode="sync">
           <motion.video
+            ref={videoRef}
             key={activeItem.src}
             src={activeItem.src}
             poster={activeItem.poster}
