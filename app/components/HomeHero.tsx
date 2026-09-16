@@ -29,7 +29,7 @@ export function HomeHero() {
           muted
           playsInline
           className="hidden sm:block w-full h-full object-cover object-center"
-          preload="metadata"
+          preload="auto"
           poster="/assets/hero-poster.webp"
         >
           <source src="/assets/USS Main Website Showreel.webm" type="video/webm" />
@@ -42,7 +42,7 @@ export function HomeHero() {
           muted
           playsInline
           className="sm:hidden w-full h-full object-cover object-center"
-          preload="metadata"
+          preload="auto"
           poster="/assets/hero-poster.webp"
         >
           <source src="/assets/Mobile Video.webm" type="video/webm" />

@@ -3,8 +3,9 @@
 import { useState, useEffect, useRef, useCallback, memo } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 
-// ─── Cloudinary video URL optimizer ─────────────────────────────────────────
+// ─── Cloudinary video & poster optimizer ──────────────────────────────────────
 const VIDEO_PARAMS = "f_auto,q_auto,w_720,c_limit";
+const POSTER_PARAMS = "f_auto,q_auto,so_0,w_720,c_limit";
 
 function optimizeVideoUrl(url: string): string {
   if (url.includes("/video/upload/") && !url.includes("/video/upload/f_auto")) {
@@ -13,8 +14,23 @@ function optimizeVideoUrl(url: string): string {
   return url;
 }
 
+function optimizePosterUrl(url: string): string {
+  if (url.includes("/video/upload/")) {
+    const withParams = url.includes("/video/upload/f_auto")
+      ? url.replace(`/video/upload/${VIDEO_PARAMS}/`, `/video/upload/${POSTER_PARAMS}/`)
+      : url.replace("/video/upload/", `/video/upload/${POSTER_PARAMS}/`);
+    return withParams.replace(/\.(webm|mp4|mov)$/i, ".jpg");
+  }
+  return "";
+}
+
 // ─── Video data — precomputed once at module level ───────────────────────────
 const BASE = "https://res.cloudinary.com/wda6rtn3/video/upload/v1787352562/uss-website/360_home";
+
+export interface VideoItem {
+  src: string;
+  poster: string;
+}
 
 const RAW_CARDS = [
   {
@@ -45,13 +61,16 @@ const RAW_CARDS = [
   },
 ];
 
-// Pre-optimize all URLs once — no per-render string ops
+// Pre-optimize all URLs and posters once — zero per-render overhead
 const cards = RAW_CARDS.map((card) => ({
   ...card,
-  videos: card.videos.map(optimizeVideoUrl),
+  videos: card.videos.map((v): VideoItem => ({
+    src: optimizeVideoUrl(v),
+    poster: optimizePosterUrl(v),
+  })),
 }));
 
-// Custom per-video durations — keyed by OPTIMIZED URL for direct O(1) lookup
+// Custom per-video durations — keyed by OPTIMIZED video URL
 const RAW_CUSTOM_DURATIONS: Record<string, number> = {
   [`${BASE}/Whats-new.webm`]:        9_000,
   [`${BASE}/Idea 8 - BTS v2.webm`]: 12_000,
@@ -72,30 +91,13 @@ const PARTICLES = [
   { delay: 0.3, x: "5%",  y: "50%", size: 4 },
 ];
 
-// ─── Hook: detect desktop (lg = 1024px) on client only ───────────────────────
-// Returns null during SSR so neither layout mounts until breakpoint is known,
-// preventing BOTH layouts from loading videos simultaneously.
-function useIsDesktop(): boolean | null {
-  const [isDesktop, setIsDesktop] = useState<boolean | null>(null);
-
-  useEffect(() => {
-    const mq = window.matchMedia("(min-width: 1024px)");
-    setIsDesktop(mq.matches);
-    const handler = (e: MediaQueryListEvent) => setIsDesktop(e.matches);
-    mq.addEventListener("change", handler);
-    return () => mq.removeEventListener("change", handler);
-  }, []);
-
-  return isDesktop;
-}
-
 // ─── Sequential Video Player ─────────────────────────────────────────────────
 // Memoized so it doesn't re-render when parent re-renders
 const SequentialVideoPlayer = memo(function SequentialVideoPlayer({
   videos,
   isInView,
 }: {
-  videos: string[];
+  videos: VideoItem[];
   isInView: boolean;
 }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -107,41 +109,69 @@ const SequentialVideoPlayer = memo(function SequentialVideoPlayer({
 
   useEffect(() => {
     if (!isInView) return;
-    const url = videos[currentIndex];
-    const duration = CUSTOM_DURATIONS[url] ?? 19_000;
+    const item = videos[currentIndex];
+    const duration = CUSTOM_DURATIONS[item.src] ?? 19_000;
     const timer = setTimeout(() => {
       setCurrentIndex((prev) => (prev + 1) % videos.length);
     }, duration);
     return () => clearTimeout(timer);
   }, [currentIndex, videos, isInView]);
 
-  const activeUrl = videos[currentIndex];
+  const activeItem = videos[currentIndex];
+  const nextItem = videos[(currentIndex + 1) % videos.length];
 
   return (
     <div className="relative w-full h-full overflow-hidden bg-[#0d0d0d]">
-      {isInView ? (
+      {/* 
+        Instant sharp poster frame:
+        Always renders immediately so user NEVER sees a black screen while video is loading/buffering.
+      */}
+      {activeItem.poster && (
+        <img
+          src={activeItem.poster}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover rounded-xl select-none pointer-events-none"
+          loading="eager"
+          decoding="async"
+        />
+      )}
+
+      {isInView && (
         <AnimatePresence mode="sync">
           <motion.video
-            key={activeUrl}
-            src={activeUrl}
+            key={activeItem.src}
+            src={activeItem.src}
+            poster={activeItem.poster}
             autoPlay
             muted
             loop
             playsInline
-            preload="none"
+            preload="auto"
             onError={handleError}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
-            className="w-full h-full object-cover rounded-xl"
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="relative z-10 w-full h-full object-cover rounded-xl"
           />
         </AnimatePresence>
-      ) : (
-        <div className="w-full h-full bg-[#111111] rounded-xl" />
       )}
+
+      {/* Hidden preloader for the NEXT video in the playlist to ensure seamless transitions */}
+      {isInView && nextItem && (
+        <video
+          key={`preload-${nextItem.src}`}
+          src={nextItem.src}
+          preload="auto"
+          muted
+          playsInline
+          className="hidden"
+          aria-hidden="true"
+        />
+      )}
+
       {/* Cinematic bottom gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-xl pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-xl pointer-events-none z-20" />
     </div>
   );
 });
@@ -151,10 +181,7 @@ export function UssDifferentSection() {
   const sectionRef  = useRef<HTMLElement>(null);
   const headingRef  = useRef<HTMLDivElement>(null);
   const isHeadingInView = useInView(headingRef, { once: true, margin: "-80px" });
-  const isSectionInView = useInView(sectionRef, { margin: "250px 0px 250px 0px" });
-
-  // Only one layout mounts at a time — prevents duplicate video requests
-  const isDesktop = useIsDesktop();
+  const isSectionInView = useInView(sectionRef, { margin: "500px 0px 500px 0px" });
 
   return (
     <section
@@ -177,7 +204,8 @@ export function UssDifferentSection() {
       ))}
 
       {/* Ambient glow — CSS animation, no JS */}
-      <div className="uss-glow pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] rounded-full blur-[150px]"
+      <div
+        className="uss-glow pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] rounded-full blur-[150px]"
         style={{ background: "radial-gradient(ellipse, rgba(255,85,0,0.08) 0%, transparent 70%)" }}
       />
 
@@ -231,72 +259,51 @@ export function UssDifferentSection() {
           />
         </div>
 
-        {/* ── Desktop layout (lg+) ── rendered only when isDesktop === true */}
-        {isDesktop === true && (
-          <div className="w-full flex flex-row justify-center items-center gap-6 lg:gap-8 mt-4 sm:mt-8">
+        {/* ── Responsive Unified Cards Layout (Instant mount, Zero duplicate loads) ── */}
+        <div className="w-full mt-0 lg:mt-8 px-1 min-[375px]:px-1.5 lg:px-0">
+          <div className="grid grid-cols-3 gap-1 min-[375px]:gap-1.5 lg:flex lg:flex-row lg:justify-center lg:items-center lg:gap-6 xl:gap-8 w-full mx-auto">
             {cards.map((card, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 80, scale: 0.9 }}
+                initial={{ opacity: 0, y: 50, scale: 0.94 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 whileHover={{ y: -14, scale: 1.04 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className="relative w-full max-w-[405px] aspect-[405/700] group cursor-pointer rounded-2xl overflow-hidden"
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+                className="relative w-full lg:max-w-[405px] aspect-[405/700] group cursor-pointer rounded-md min-[375px]:rounded-lg lg:rounded-2xl overflow-hidden shadow-lg"
               >
-                {/* Hover glow border */}
-                <motion.div
-                  className="absolute inset-0 rounded-2xl pointer-events-none z-20"
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                  transition={{ duration: 0.3 }}
-                  style={{ boxShadow: "0 0 30px rgba(255,85,0,0.35), inset 0 0 20px rgba(255,85,0,0.08)", border: "1px solid rgba(255,85,0,0.3)" }}
+                {/* Desktop hover glow border */}
+                <div
+                  className="hidden lg:block absolute inset-0 rounded-2xl pointer-events-none z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  style={{
+                    boxShadow: "0 0 30px rgba(255,85,0,0.35), inset 0 0 20px rgba(255,85,0,0.08)",
+                    border: "1px solid rgba(255,85,0,0.3)",
+                  }}
                 />
 
-                {/* Pulsing corner dots — CSS animation */}
+                {/* Desktop pulsing corner dots — CSS animation */}
                 <span
-                  className="uss-dot absolute top-3 left-3 w-2 h-2 rounded-full bg-[#ff5500] z-30"
+                  className="hidden lg:block uss-dot absolute top-3 left-3 w-2 h-2 rounded-full bg-[#ff5500] z-30"
                   style={{ animationDelay: `${index * 0.5}s` }}
                 />
                 <span
-                  className="uss-dot absolute top-3 right-3 w-2 h-2 rounded-full bg-[#ff5500] z-30"
+                  className="hidden lg:block uss-dot absolute top-3 right-3 w-2 h-2 rounded-full bg-[#ff5500] z-30"
                   style={{ animationDelay: `${index * 0.5 + 0.4}s` }}
                 />
 
-                <div className="w-full h-full transition-transform duration-700 group-hover:scale-[1.03]">
+                {/* Mobile pulsing glow border — CSS animation */}
+                <span
+                  className="lg:hidden uss-pulse-border absolute inset-0 rounded-md min-[375px]:rounded-lg pointer-events-none z-20"
+                  style={{ animationDelay: `${index}s` }}
+                />
+
+                <div className="w-full h-full transition-transform duration-700 lg:group-hover:scale-[1.03]">
                   <SequentialVideoPlayer videos={card.videos} isInView={isSectionInView} />
                 </div>
               </motion.div>
             ))}
           </div>
-        )}
-
-        {/* ── Mobile layout (< lg) ── rendered only when isDesktop === false */}
-        {isDesktop === false && (
-          <div className="w-full mt-0 px-1 min-[375px]:px-1.5">
-            <div className="grid grid-cols-3 gap-1 min-[375px]:gap-1.5 w-full mx-auto">
-              {cards.map((card, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30, scale: 0.92 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  viewport={{ once: true, margin: "-20px" }}
-                  transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-                  className="relative w-full aspect-[405/700] group rounded-md min-[375px]:rounded-lg overflow-hidden shadow-lg"
-                >
-                  {/* Pulsing glow border — CSS animation */}
-                  <span
-                    className="uss-pulse-border absolute inset-0 rounded-md min-[375px]:rounded-lg pointer-events-none z-20"
-                    style={{ animationDelay: `${index}s` }}
-                  />
-                  <div className="w-full h-full">
-                    <SequentialVideoPlayer videos={card.videos} isInView={isSectionInView} />
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        )}
+        </div>
 
       </div>
 

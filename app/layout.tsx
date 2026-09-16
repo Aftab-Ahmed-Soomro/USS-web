@@ -50,6 +50,9 @@ export default function RootLayout({
         {/* Preconnect to video host — hero video is cross-origin, saves ~300ms on DNS */}
         <link rel="preconnect" href="https://unitedstrategicsolutions.com" />
         <link rel="dns-prefetch" href="https://unitedstrategicsolutions.com" />
+        {/* Preconnect to Cloudinary CDN — instant video & poster stream initiation */}
+        <link rel="preconnect" href="https://res.cloudinary.com" />
+        <link rel="dns-prefetch" href="https://res.cloudinary.com" />
         {/* Preconnect to brand logo host — 29 external PNGs in Brands marquee */}
         <link rel="preconnect" href="https://emmanuelcolewilliams.com" />
         <link rel="dns-prefetch" href="https://emmanuelcolewilliams.com" />
