@@ -1495,7 +1495,7 @@ export const projectDetails: ProjectDetail[] = [
       "description": "A USS project overview for Coshe Juices, growing a wellness membership brand through website development, marketing strategy, and Social Media management."
     },
     "hideVideoSection": true,
-    "socialGridImage": "https://res.cloudinary.com/wda6rtn3/image/upload/v1787352143/uss-website/Coshe%20Email.png"
+    "socialGridImage": "https://res.cloudinary.com/odokjwiz/image/upload/v1790007040/uss-website/Coshe%20Email.png"
   },
   {
     "slug": "mn-nail-spa",
