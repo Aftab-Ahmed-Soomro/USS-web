@@ -7,20 +7,8 @@ import FadeUp from "./FadeUp";
 const T = "f_auto,q_auto:good,w_280,c_limit";
 
 // ─── Brand card URLs (custom order) ─────────────────────────────────────────
-const SPECIAL: Record<number, string> = {
-  8:  `https://res.cloudinary.com/wda6rtn3/image/upload/${T}/v1788197283/8.webp`,
-  20: `https://res.cloudinary.com/wda6rtn3/image/upload/${T}/v1788023196/20.webp`,
-  26: `https://res.cloudinary.com/wda6rtn3/image/upload/${T}/v1788023196/26.webp`,
-  28: `https://res.cloudinary.com/wda6rtn3/image/upload/${T}/v1788023196/28.webp`,
-  30: `https://res.cloudinary.com/wda6rtn3/image/upload/${T}/v1788023196/30.webp`,
-  33: `https://res.cloudinary.com/wda6rtn3/image/upload/${T}/v1788023198/33.webp`,
-  35: `https://res.cloudinary.com/wda6rtn3/image/upload/${T}/v1788023198/35.webp`,
-  36: `https://res.cloudinary.com/wda6rtn3/image/upload/${T}/v1788023198/36.webp`,
-  42: `https://res.cloudinary.com/wda6rtn3/image/upload/${T}/v1788023197/42.webp`,
-  43: `https://res.cloudinary.com/wda6rtn3/image/upload/${T}/v1788023197/43.webp`,
-  41: `https://res.cloudinary.com/wda6rtn3/image/upload/${T}/v1788037806/45.webp`,
-  40: `https://res.cloudinary.com/wda6rtn3/image/upload/${T}/v1788037634/44.webp`,
-};
+// All images are now on odokjwiz in uss-website/brands/ — no special cases needed
+const SPECIAL: Record<number, string> = {};
 
 const ORDER = [
   1,  2,  3,  4,  5,  6,  7, 8,  9, 10,
@@ -34,7 +22,7 @@ const ORDER = [
 const BRAND_URLS = ORDER.map(
   (n) =>
     SPECIAL[n] ??
-    `https://res.cloudinary.com/wda6rtn3/image/upload/${T}/v1787353020/uss-website/brands/${n}.webp`
+    `https://res.cloudinary.com/odokjwiz/image/upload/${T}/uss-website/brands/${n}.webp`
 );
 // Duplicate for seamless 0% → -50% loop
 const BRAND_MARQUEE = [...BRAND_URLS, ...BRAND_URLS];

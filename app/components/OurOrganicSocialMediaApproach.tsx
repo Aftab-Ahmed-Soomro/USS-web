@@ -2,11 +2,8 @@ import Image from "next/image";
 import Stagger from "./Stagger";
 import StaggerItem from "./Staggeritem";
 
-const socialVisuals = Array.from({ length: 13 }, (_, i) => ({
-  src:
-    i + 1 === 8
-      ? `https://res.cloudinary.com/wda6rtn3/image/upload/f_auto,q_auto,w_400/v1788197779/v1787352773.webp`
-      : `https://res.cloudinary.com/wda6rtn3/image/upload/f_auto,q_auto,w_400/v1788079736/${i + 1}.webp`,
+const socialVisuals = Array.from({ length: 14 }, (_, i) => ({
+  src: `https://res.cloudinary.com/odokjwiz/image/upload/f_auto,q_auto,w_400/uss-website/socialGrids/${i + 1}.webp`,
   alt: `Organic Social Grid ${i + 1}`,
 }));
 
@@ -66,7 +63,7 @@ export default function OurOrganicSocialMediaApproach() {
       <style>{`
         .social-visuals-track {
           width: max-content;
-          animation: marquee-social-visuals 70s linear infinite;
+          animation: marquee-social-visuals 55s linear infinite;
           will-change: transform;
         }
 

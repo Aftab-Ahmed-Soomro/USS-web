@@ -4,86 +4,87 @@ import StaggerItem from "./Staggeritem";
 
 const emailVisuals = [
   {
-    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/1.png",
+    src: "https://res.cloudinary.com/odokjwiz/image/upload/uss-website/emailGrids/1.webp",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/2.png",
+    src: "https://res.cloudinary.com/odokjwiz/image/upload/uss-website/emailGrids/2.webp",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/3.png",
+    src: "https://res.cloudinary.com/odokjwiz/image/upload/uss-website/emailGrids/3.webp",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/4.png",
+    src: "https://res.cloudinary.com/odokjwiz/image/upload/uss-website/emailGrids/4.webp",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/5.png",
+    src: "https://res.cloudinary.com/odokjwiz/image/upload/uss-website/emailGrids/5.webp",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/6.png",
+    src: "https://res.cloudinary.com/odokjwiz/image/upload/uss-website/emailGrids/6.webp",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/7.png",
+    src: "https://res.cloudinary.com/odokjwiz/image/upload/uss-website/emailGrids/7.webp",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/8.png",
+    src: "https://res.cloudinary.com/odokjwiz/image/upload/uss-website/emailGrids/8.webp",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/9.png",
+    src: "https://res.cloudinary.com/odokjwiz/image/upload/uss-website/emailGrids/9.webp",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/10.png",
+    src: "https://res.cloudinary.com/odokjwiz/image/upload/uss-website/emailGrids/10.webp",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/11.png",
+    src: "https://res.cloudinary.com/odokjwiz/image/upload/uss-website/emailGrids/11.webp",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/12.png",
+    src: "https://res.cloudinary.com/odokjwiz/image/upload/uss-website/emailGrids/12.webp",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/13.png",
+    src: "https://res.cloudinary.com/odokjwiz/image/upload/uss-website/emailGrids/13.webp",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/14.png",
+    src: "https://res.cloudinary.com/odokjwiz/image/upload/uss-website/emailGrids/14.webp",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/15.png",
+    src: "https://res.cloudinary.com/odokjwiz/image/upload/uss-website/emailGrids/15.webp",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
   {
-    src: "https://res.cloudinary.com/wda6rtn3/image/upload/v1787355558/uss-website/emailGrids/16.png",
+    src: "https://res.cloudinary.com/odokjwiz/image/upload/uss-website/emailGrids/16.webp",
     alt: "Restaurant offer email design",
     // widthClass: "lg:w-[192px]",
   },
 ];
+
 
 const optimizeCloudinaryUrl = (url: string, params = "f_auto,q_auto,w_500") => {
   if (url.includes("/image/upload/") && !url.includes("/image/upload/f_auto")) {

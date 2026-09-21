@@ -27,7 +27,7 @@ function optimizePosterUrl(url: string): string {
 }
 
 // ─── Video data — precomputed once at module level ───────────────────────────
-const BASE = "https://res.cloudinary.com/wda6rtn3/video/upload/v1787352562/uss-website/360_home";
+const BASE = "https://res.cloudinary.com/odokjwiz/video/upload/uss-website/360_home";
 
 export interface VideoItem {
   src: string;
@@ -40,7 +40,7 @@ const RAW_CARDS = [
       `${BASE}/GALA BEHIND THE SCENE EDIT.webm`,
       `${BASE}/Agency 8 Event.webm`,
       `${BASE}/3.webm`,
-      `https://res.cloudinary.com/wda6rtn3/video/upload/v1788166725/Interior_Design_Process_for_Vision_Tower.webm`,
+      `${BASE}/Interior_Design_Process_for_Vision_Tower.webm`,
     ],
     alt: "LEFT",
   },
@@ -48,7 +48,7 @@ const RAW_CARDS = [
     videos: [
       `${BASE}/Hot seat 1 updated w_captions.webm`,
       `${BASE}/Whats-new.webm`,
-      `https://res.cloudinary.com/wda6rtn3/video/upload/v1788166082/Shortened_version.webm`,
+      `${BASE}/Shortened_version.webm`,
       `${BASE}/USS-narrator-updated.webm`,
     ],
     alt: "MIDDLE",
