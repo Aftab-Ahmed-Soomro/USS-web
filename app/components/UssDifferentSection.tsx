@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback, memo } from "react";
-import { motion, useInView, AnimatePresence } from "framer-motion";
+import { useState, useEffect, useRef, memo } from "react";
+import { motion, useInView } from "framer-motion";
 
 // ─── Cloudinary video & poster optimizer ──────────────────────────────────────
-const VIDEO_PARAMS = "f_auto,q_auto,w_720,c_limit";
+const VIDEO_PARAMS  = "f_auto,q_auto,w_720,c_limit";
 const POSTER_PARAMS = "f_auto,q_auto,so_0,w_720,c_limit";
 
 function optimizeVideoUrl(url: string): string {
@@ -12,21 +12,21 @@ function optimizeVideoUrl(url: string): string {
   if (u.includes("/video/upload/") && !u.includes("/video/upload/f_auto")) {
     u = u.replace("/video/upload/", `/video/upload/${VIDEO_PARAMS}/`);
   }
-  // Convert .webm to .mp4 so iOS Safari gets hardware-accelerated H.264 AVC1
+  // .webm → .mp4 so iOS Safari gets hardware-accelerated H.264
   return u.replace(/\.(webm|mov)$/i, ".mp4");
 }
 
 function optimizePosterUrl(url: string): string {
   if (url.includes("/video/upload/")) {
-    const withParams = url.includes("/video/upload/f_auto")
+    const base = url.includes("/video/upload/f_auto")
       ? url.replace(`/video/upload/${VIDEO_PARAMS}/`, `/video/upload/${POSTER_PARAMS}/`)
       : url.replace("/video/upload/", `/video/upload/${POSTER_PARAMS}/`);
-    return withParams.replace(/\.(webm|mp4|mov)$/i, ".jpg");
+    return base.replace(/\.(webm|mp4|mov)$/i, ".jpg");
   }
   return "";
 }
 
-// ─── Video data — precomputed once at module level ───────────────────────────
+// ─── Video data ───────────────────────────────────────────────────────────────
 const BASE = "https://res.cloudinary.com/odokjwiz/video/upload/uss-website/360_home";
 
 export interface VideoItem {
@@ -63,7 +63,6 @@ const RAW_CARDS = [
   },
 ];
 
-// Pre-optimize all URLs and posters once — zero per-render overhead
 const cards = RAW_CARDS.map((card) => ({
   ...card,
   videos: card.videos.map((v): VideoItem => ({
@@ -72,7 +71,7 @@ const cards = RAW_CARDS.map((card) => ({
   })),
 }));
 
-// Custom per-video durations — keyed by OPTIMIZED video URL
+// Custom per-video display durations
 const RAW_CUSTOM_DURATIONS: Record<string, number> = {
   [`${BASE}/Whats-new.webm`]:        9_000,
   [`${BASE}/Idea 8 - BTS v2.webm`]: 12_000,
@@ -82,7 +81,7 @@ const CUSTOM_DURATIONS: Record<string, number> = Object.fromEntries(
   Object.entries(RAW_CUSTOM_DURATIONS).map(([k, v]) => [optimizeVideoUrl(k), v])
 );
 
-// ─── Particles — static data at module level, never recreated ────────────────
+// ─── Particles ────────────────────────────────────────────────────────────────
 const PARTICLES = [
   { delay: 0,   x: "10%", y: "20%", size: 3 },
   { delay: 1.5, x: "85%", y: "15%", size: 4 },
@@ -93,8 +92,31 @@ const PARTICLES = [
   { delay: 0.3, x: "5%",  y: "50%", size: 4 },
 ];
 
-// ─── Sequential Video Player ─────────────────────────────────────────────────
-// Memoized so it doesn't re-render when parent re-renders
+// ─── iOS-safe play ────────────────────────────────────────────────────────────
+// Single code path for play(). Never called twice for the same event.
+function iosPlay(video: HTMLVideoElement): void {
+  // These MUST be set imperatively — JSX props are ignored by iOS Safari
+  video.muted        = true;
+  video.defaultMuted = true;
+  (video as HTMLVideoElement & { playsInline: boolean }).playsInline = true;
+  (video as HTMLVideoElement & { webkitPlaysInline: boolean }).webkitPlaysInline = true;
+  video.setAttribute("playsinline",        "");
+  video.setAttribute("webkit-playsinline", "");
+  video.setAttribute("x-webkit-airplay",   "deny");
+
+  // readyState 3 = HAVE_FUTURE_DATA, 4 = HAVE_ENOUGH_DATA
+  // Only defer if we genuinely don't have data yet
+  if (video.readyState >= 3) {
+    video.play().catch(() => {});
+  } else {
+    video.addEventListener("canplay", function cb() {
+      video.removeEventListener("canplay", cb);
+      video.play().catch(() => {});
+    }, { once: true });
+  }
+}
+
+// ─── Sequential Video Player ──────────────────────────────────────────────────
 const SequentialVideoPlayer = memo(function SequentialVideoPlayer({
   videos,
   isInView,
@@ -103,112 +125,157 @@ const SequentialVideoPlayer = memo(function SequentialVideoPlayer({
   isInView: boolean;
 }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  // true = video is rendering frames; poster can be hidden
+  const [videoReady, setVideoReady]     = useState(false);
+  const videoRef  = useRef<HTMLVideoElement>(null);
+  const timerRef  = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // Guard: prevent double play() calls from both useEffect and event handlers
+  const playingRef = useRef(false);
 
-  // Skip to next video on error (e.g. 404, network failure)
-  const handleError = useCallback(() => {
+  const advance = () => {
     setCurrentIndex((prev) => (prev + 1) % videos.length);
-  }, [videos.length]);
+    setVideoReady(false);
+    playingRef.current = false;
+  };
 
-  // Force play whenever section comes into view — fixes middle/right freeze
+  // ── Reset when clip changes ─────────────────────────────────────────────────
   useEffect(() => {
-    if (!isInView) return;
+    setVideoReady(false);
+    playingRef.current = false;
+    if (timerRef.current) clearTimeout(timerRef.current);
+  }, [currentIndex]);
+
+  // ── Play / pause based on visibility ───────────────────────────────────────
+  // VIDEO IS ALWAYS MOUNTED (even when out of view) so it buffers from page load.
+  // We only pause/play, never unmount.
+  useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
-    video.muted = true;
-    video.playsInline = true;
-    const playPromise = video.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {});
-    }
-  }, [isInView]);
 
+    if (isInView) {
+      if (!playingRef.current) {
+        iosPlay(video);
+      }
+    } else {
+      // Pause when scrolled away to save CPU/battery
+      video.pause();
+      playingRef.current = false;
+    }
+  }, [isInView, currentIndex]);
+
+  // ── Rotation timer — only after video is actually playing ───────────────────
   useEffect(() => {
-    if (!isInView) return;
-    const item = videos[currentIndex];
-    const duration = CUSTOM_DURATIONS[item.src] ?? 19_000;
-    const timer = setTimeout(() => {
-      setCurrentIndex((prev) => (prev + 1) % videos.length);
-    }, duration);
-    return () => clearTimeout(timer);
-  }, [currentIndex, videos, isInView]);
+    if (!isInView || !videoReady) return;
+    const duration = CUSTOM_DURATIONS[videos[currentIndex].src] ?? 19_000;
+    timerRef.current = setTimeout(advance, duration);
+    return () => { if (timerRef.current) clearTimeout(timerRef.current); };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentIndex, isInView, videoReady]);
 
   const activeItem = videos[currentIndex];
-  const nextItem = videos[(currentIndex + 1) % videos.length];
+  const nextItem   = videos[(currentIndex + 1) % videos.length];
 
   return (
     <div className="relative w-full h-full overflow-hidden bg-[#0d0d0d]">
-      {/* 
-        Instant sharp poster frame:
-        Always renders immediately so user NEVER sees a black screen while video is loading/buffering.
-      */}
+
+      {/* ── Poster — on top until video is rendering frames ── */}
       {activeItem.poster && (
         <img
           src={activeItem.poster}
           alt=""
           className="absolute inset-0 w-full h-full object-cover rounded-xl select-none pointer-events-none"
+          style={{
+            zIndex: videoReady ? 0 : 5,
+            transition: "opacity 0.5s ease",
+            opacity: videoReady ? 0 : 1,
+          }}
           loading="eager"
           decoding="async"
+          // fetchpriority attr is valid HTML; cast suppresses TS strict mode error
+          {...({ fetchpriority: "high" } as Record<string, string>)}
         />
       )}
 
-      {isInView && (
-        <AnimatePresence mode="sync">
-          <motion.video
-            ref={videoRef}
-            key={activeItem.src}
-            src={activeItem.src}
-            poster={activeItem.poster}
-            autoPlay
-            muted
-            loop
-            playsInline
-            controls={false}
-            preload="auto"
-            onError={handleError}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0, position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="relative z-10 w-full h-full object-cover rounded-xl"
-            onLoadedMetadata={(e) => {
-              const video = e.currentTarget;
-              video.muted = true;
-              video.defaultMuted = true;
-              video.playsInline = true;
-              const playPromise = video.play();
-              if (playPromise !== undefined) {
-                playPromise.catch(() => {});
-              }
-            }}
-          />
-        </AnimatePresence>
-      )}
+      {/*
+        ── Active video — ALWAYS in the DOM (never conditionally mounted) ──
+        Keeping it mounted from page-load means the browser buffers it
+        immediately, so there is no wait when the user scrolls to this section.
+        CSS opacity fades it in once `videoReady` is true.
+      */}
+      <video
+        ref={videoRef}
+        src={activeItem.src}
+        poster={activeItem.poster}
+        autoPlay
+        muted
+        loop
+        playsInline
+        controls={false}
+        preload="auto"
+        style={{
+          position:   "absolute",
+          inset:      0,
+          width:      "100%",
+          height:     "100%",
+          objectFit:  "cover",
+          borderRadius: "inherit",
+          zIndex:     10,
+          opacity:    videoReady ? 1 : 0,
+          transition: "opacity 0.5s ease",
+        }}
+        onLoadedMetadata={(e) => {
+          // Re-apply iOS attributes; Safari sometimes resets them after src change
+          iosPlay(e.currentTarget);
+        }}
+        onCanPlay={(e) => {
+          // Trigger play if not already playing (iOS sometimes needs this)
+          const v = e.currentTarget;
+          if (!playingRef.current) iosPlay(v);
+        }}
+        onPlaying={() => {
+          playingRef.current = true;
+          setVideoReady(true);
+        }}
+        onError={advance}
+      />
 
-      {/* Hidden preloader for the NEXT video in the playlist to ensure seamless transitions */}
-      {isInView && nextItem && (
+      {/*
+        ── Hidden preloader for the NEXT clip ──
+        Only attached after current is playing — avoids bandwidth competition.
+        Uses preload="metadata" (just enough for seamless transition).
+      */}
+      {videoReady && nextItem && (
         <video
-          key={`preload-${nextItem.src}`}
+          key={`pre-${nextItem.src}`}
           src={nextItem.src}
-          preload="auto"
+          preload="metadata"
           muted
           playsInline
           controls={false}
-          className="hidden"
+          style={{ display: "none" }}
           aria-hidden="true"
         />
       )}
 
-      {/* Cinematic bottom gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-xl pointer-events-none z-20" />
+      {/* Cinematic gradient overlay */}
+      <div
+        style={{
+          position:       "absolute",
+          inset:          0,
+          background:     "linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%)",
+          borderRadius:   "inherit",
+          pointerEvents:  "none",
+          zIndex:         20,
+        }}
+      />
     </div>
   );
 });
 
-// ─── Main Component ──────────────────────────────────────────────────────────
+// ─── Main Component ───────────────────────────────────────────────────────────
 export function UssDifferentSection() {
-  const sectionRef  = useRef<HTMLElement>(null);
-  const headingRef  = useRef<HTMLDivElement>(null);
+  const sectionRef      = useRef<HTMLElement>(null);
+  const headingRef      = useRef<HTMLDivElement>(null);
   const isHeadingInView = useInView(headingRef, { once: true, margin: "-80px" });
   const isSectionInView = useInView(sectionRef, { margin: "500px 0px 500px 0px" });
 
@@ -217,22 +284,16 @@ export function UssDifferentSection() {
       ref={sectionRef}
       className="uss-diff-section relative z-10 bg-[#000] text-white overflow-hidden px-4 py-[30px] sm:py-[100px]"
     >
-      {/* Floating particles — pure CSS, zero JS animation overhead */}
+      {/* Floating particles */}
       {PARTICLES.map((p, i) => (
         <span
           key={i}
           className="uss-particle absolute rounded-full bg-[#ff5500] pointer-events-none"
-          style={{
-            left: p.x,
-            top: p.y,
-            width: p.size,
-            height: p.size,
-            animationDelay: `${p.delay}s`,
-          }}
+          style={{ left: p.x, top: p.y, width: p.size, height: p.size, animationDelay: `${p.delay}s` }}
         />
       ))}
 
-      {/* Ambient glow — CSS animation, no JS */}
+      {/* Ambient glow */}
       <div
         className="uss-glow pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] rounded-full blur-[150px]"
         style={{ background: "radial-gradient(ellipse, rgba(255,85,0,0.08) 0%, transparent 70%)" }}
@@ -266,7 +327,6 @@ export function UssDifferentSection() {
                 what makes{" "}
               </motion.span>
               <span className="text-[38px] sm:text-[72px] font-normal timesFontFamily italic tracking-[-0.02em] text-[#ff5500] relative inline-block">
-                {/* Shimmer on accent text */}
                 <motion.span
                   className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 pointer-events-none"
                   initial={{ x: "-100%" }}
@@ -278,7 +338,6 @@ export function UssDifferentSection() {
             </h2>
           </motion.div>
 
-          {/* Animated underline */}
           <motion.div
             className="h-[2px] bg-gradient-to-r from-transparent via-[#ff5500]/60 to-transparent mx-auto mt-3 sm:mt-6"
             initial={{ scaleX: 0, opacity: 0 }}
@@ -288,7 +347,7 @@ export function UssDifferentSection() {
           />
         </div>
 
-        {/* ── Responsive Unified Cards Layout (Instant mount, Zero duplicate loads) ── */}
+        {/* Cards grid */}
         <div className="w-full mt-0 lg:mt-8 px-1 min-[375px]:px-1.5 lg:px-0">
           <div className="grid grid-cols-3 gap-1 min-[375px]:gap-1.5 lg:flex lg:flex-row lg:justify-center lg:items-center lg:gap-6 xl:gap-8 w-full mx-auto">
             {cards.map((card, index) => (
@@ -306,11 +365,11 @@ export function UssDifferentSection() {
                   className="hidden lg:block absolute inset-0 rounded-2xl pointer-events-none z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   style={{
                     boxShadow: "0 0 30px rgba(255,85,0,0.35), inset 0 0 20px rgba(255,85,0,0.08)",
-                    border: "1px solid rgba(255,85,0,0.3)",
+                    border:    "1px solid rgba(255,85,0,0.3)",
                   }}
                 />
 
-                {/* Desktop pulsing corner dots — CSS animation */}
+                {/* Desktop pulsing corner dots */}
                 <span
                   className="hidden lg:block uss-dot absolute top-3 left-3 w-2 h-2 rounded-full bg-[#ff5500] z-30"
                   style={{ animationDelay: `${index * 0.5}s` }}
@@ -320,14 +379,17 @@ export function UssDifferentSection() {
                   style={{ animationDelay: `${index * 0.5 + 0.4}s` }}
                 />
 
-                {/* Mobile pulsing glow border — CSS animation */}
+                {/* Mobile pulse border */}
                 <span
                   className="lg:hidden uss-pulse-border absolute inset-0 rounded-md min-[375px]:rounded-lg pointer-events-none z-20"
                   style={{ animationDelay: `${index}s` }}
                 />
 
                 <div className="w-full h-full transition-transform duration-700 lg:group-hover:scale-[1.03]">
-                  <SequentialVideoPlayer videos={card.videos} isInView={isSectionInView} />
+                  <SequentialVideoPlayer
+                    videos={card.videos}
+                    isInView={isSectionInView}
+                  />
                 </div>
               </motion.div>
             ))}
@@ -347,57 +409,37 @@ export function UssDifferentSection() {
       />
 
       <style>{`
-        /* Background image */
         .uss-diff-section {
           background-image: url('/assets/bgMain.webp');
           background-size: cover;
           background-position: center;
         }
-
-        /* Floating particles — GPU-composited CSS animation, no JS */
         @keyframes uss-float {
-          0%, 100% { transform: translateY(0)   scale(0.5); opacity: 0;   }
+          0%, 100% { transform: translateY(0)     scale(0.5); opacity: 0;   }
           50%       { transform: translateY(-30px) scale(1);   opacity: 0.6; }
         }
-        .uss-particle {
-          animation: uss-float 4s ease-in-out infinite;
-        }
+        .uss-particle { animation: uss-float 4s ease-in-out infinite; }
 
-        /* Ambient glow pulse */
         @keyframes uss-glow-pulse {
-          0%, 100% { transform: translate(-50%, -50%) scale(1);    opacity: 0.5; }
-          50%       { transform: translate(-50%, -50%) scale(1.15); opacity: 0.9; }
+          0%, 100% { transform: translate(-50%,-50%) scale(1);    opacity: 0.5; }
+          50%       { transform: translate(-50%,-50%) scale(1.15); opacity: 0.9; }
         }
-        .uss-glow {
-          animation: uss-glow-pulse 6s ease-in-out infinite;
-        }
+        .uss-glow { animation: uss-glow-pulse 6s ease-in-out infinite; }
 
-        /* Corner dot pulse */
         @keyframes uss-dot-pulse {
           0%, 100% { opacity: 1;   transform: scale(1);   }
           50%       { opacity: 0.3; transform: scale(1.3); }
         }
-        .uss-dot {
-          animation: uss-dot-pulse 2.5s ease-in-out infinite;
-        }
+        .uss-dot { animation: uss-dot-pulse 2.5s ease-in-out infinite; }
 
-        /* Mobile card border pulse */
         @keyframes uss-border-pulse {
-          0%, 100% { box-shadow: 0 0 0px rgba(255,85,0,0);   }
+          0%, 100% { box-shadow: 0 0 0px  rgba(255,85,0,0);   }
           50%       { box-shadow: 0 0 12px rgba(255,85,0,0.3); }
         }
-        .uss-pulse-border {
-          animation: uss-border-pulse 3s ease-in-out infinite;
-        }
+        .uss-pulse-border { animation: uss-border-pulse 3s ease-in-out infinite; }
 
-        /* Respect reduced-motion preference */
         @media (prefers-reduced-motion: reduce) {
-          .uss-particle,
-          .uss-glow,
-          .uss-dot,
-          .uss-pulse-border {
-            animation: none;
-          }
+          .uss-particle, .uss-glow, .uss-dot, .uss-pulse-border { animation: none; }
         }
       `}</style>
     </section>
